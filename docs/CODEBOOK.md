@@ -275,6 +275,55 @@ observed tie.
 Counts by `scope` (`all`, each period, `undated`). Use as a sanity check
 after rebuilding.
 
+## 4b. Per-territory bundles
+
+`python3 src/split_by_country.py` writes one self-contained bundle per
+territory, at two granularities:
+
+    data/by_country/<slug>/    54 territories as the source labels them
+    data/by_region/<slug>/     12 index-page groupings
+
+Each bundle holds `documents.csv`, `affiliations.csv`, `org_affiliations.csv`,
+`company_attributes.csv`, `persons.csv`, `companies.csv`,
+`edges_person_company.csv`, `edges_company_interlock.csv`,
+`edges_company_interlock_by_period.csv` and `company_interlock.graphml` —
+the same columns as the corresponding top-level files, restricted to that
+territory and with nodes and edges recomputed from its ties alone.
+
+**Ties partition; nodes do not.** Every tie carries exactly one territory, so
+bundle tie counts sum to the dataset total (61,136) with none duplicated or
+dropped. Firms and people appear in every bundle where they are observed —
+21% of people and 9% of firms are in more than one country bundle — so
+**node counts must not be added across bundles**.
+
+`person_id` and `company_id` are the *same* identifiers as in the top-level
+files: person resolution is run once globally and then applied to each slice,
+so an individual keeps one id across territories. Resolving per slice would
+have destroyed exactly the transcolonial careers the dataset exists to show.
+
+### `territory_manifest.csv` (one per granularity)
+
+| Variable | Description |
+|---|---|
+| `territory`, `slug` | Label as printed, and its directory name. |
+| `n_documents`, `n_ties`, `n_board_ties` | Volume in this territory. |
+| `n_persons`, `n_companies` | Distinct nodes in this bundle. |
+| `n_two_mode_edges`, `n_interlock_edges`, `n_corporate_ties` | Edge counts. |
+| `first_year`, `last_year` | Range of dated observations. |
+| `n_persons_shared`, `n_companies_shared` | How many of this territory's nodes are also observed in another territory. |
+| `share_persons_shared`, `share_companies_shared` | The same as a proportion — a direct measure of how transcolonial the territory's elite is. |
+
+That last pair is substantive, not bookkeeping. In the country split it ranges
+from ~0.29 (Maroc, Indochine, Madagascar — territories with their own
+business elite) to 0.72 for Sénégal and 0.62 for Côte d'Ivoire, whose boards
+were staffed largely by men also sitting elsewhere.
+
+`Empire (transversal)` is **not** a country: it is the source's grouping for
+firms operating across several colonies, and it is one of the largest buckets.
+It is kept as its own bundle so it is never mistaken for a territory. Nine
+country labels with no attributed ties (Malawi, Gambie, Arménie…) get no
+bundle; the run reports them rather than dropping them silently.
+
 ### `data/graphs/*.graphml`
 
 `two_mode_person_company.graphml` (nodes prefixed `P:`/`C:`, `mode`

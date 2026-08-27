@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="algemeenebelgischjavaschcultuurmaatschappij">
+      <data key="n_label">Algemeene Belgisch Javasch Cultuur Maatschappij</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="belgischnederlandschecultuurmaatschappij">
+      <data key="n_label">Belgisch-Nederlandsche Cultuur Maatschappij</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="caoutchoucsiboga">
+      <data key="n_label">Caoutchouc de Siboga</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="culturefrancojavanaise">
+      <data key="n_label">Société de Culture franco-javanaise</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="culturepacouda">
+      <data key="n_label">Société de culture de Pacouda</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="culturepanoulisan">
+      <data key="n_label">Société de culture de Panou-Lisan</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="easterninternationalrubberproducetrustltd">
+      <data key="n_label">The Eastern International Rubber and Produce Trust Ltd</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="franconeerlandaiseculturecommerce">
+      <data key="n_label">Société Franco-néerlandaise de culture et de commerce</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">31</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="kalitengah">
+      <data key="n_label">Kalitengah</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="nieuwtjisalak">
+      <data key="n_label">Nieuw Tjisalak</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="pacouda">
+      <data key="n_label">Pacouda</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="plantationscaoutchoucsumatra">
+      <data key="n_label">Société des Plantations de caoutchouc de Sumatra</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">24</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="plantationsdjember">
+      <data key="n_label">Plantations de Djember</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="tamiangrubber">
+      <data key="n_label">Tamiang Rubber</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="tapanoelie">
+      <data key="n_label">Tapanoëlie</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">31</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <edge id="e0" source="plantationscaoutchoucsumatra" target="tapanoelie">
+      <data key="e_weight">14</data>
+    </edge>
+    <edge id="e1" source="kalitengah" target="tapanoelie">
+      <data key="e_weight">10</data>
+    </edge>
+    <edge id="e2" source="kalitengah" target="pacouda">
+      <data key="e_weight">9</data>
+    </edge>
+    <edge id="e3" source="kalitengah" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">9</data>
+    </edge>
+    <edge id="e4" source="pacouda" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e5" source="pacouda" target="tapanoelie">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e6" source="culturefrancojavanaise" target="franconeerlandaiseculturecommerce">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e7" source="caoutchoucsiboga" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e8" source="caoutchoucsiboga" target="tapanoelie">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e9" source="algemeenebelgischjavaschcultuurmaatschappij" target="belgischnederlandschecultuurmaatschappij">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e10" source="caoutchoucsiboga" target="kalitengah">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e11" source="caoutchoucsiboga" target="pacouda">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e12" source="culturefrancojavanaise" target="culturepanoulisan">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e13" source="kalitengah" target="nieuwtjisalak">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e14" source="culturefrancojavanaise" target="tapanoelie">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e15" source="nieuwtjisalak" target="pacouda">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e16" source="nieuwtjisalak" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e17" source="nieuwtjisalak" target="tapanoelie">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e18" source="caoutchoucsiboga" target="franconeerlandaiseculturecommerce">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e19" source="culturefrancojavanaise" target="kalitengah">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e20" source="culturefrancojavanaise" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e21" source="caoutchoucsiboga" target="nieuwtjisalak">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e22" source="culturepacouda" target="pacouda">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e23" source="easterninternationalrubberproducetrustltd" target="tamiangrubber">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e24" source="franconeerlandaiseculturecommerce" target="tapanoelie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e25" source="caoutchoucsiboga" target="culturefrancojavanaise">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e26" source="culturefrancojavanaise" target="pacouda">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e27" source="culturepanoulisan" target="franconeerlandaiseculturecommerce">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e28" source="culturepanoulisan" target="pacouda">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e29" source="kalitengah" target="tamiangrubber">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e30" source="plantationscaoutchoucsumatra" target="tamiangrubber">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e31" source="tamiangrubber" target="tapanoelie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e32" source="culturepacouda" target="kalitengah">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e33" source="algemeenebelgischjavaschcultuurmaatschappij" target="plantationsdjember">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e34" source="belgischnederlandschecultuurmaatschappij" target="plantationsdjember">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e35" source="easterninternationalrubberproducetrustltd" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e36" source="caoutchoucsiboga" target="culturepanoulisan">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e37" source="culturepanoulisan" target="kalitengah">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e38" source="culturepanoulisan" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e39" source="culturepanoulisan" target="tapanoelie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e40" source="franconeerlandaiseculturecommerce" target="kalitengah">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e41" source="franconeerlandaiseculturecommerce" target="pacouda">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e42" source="franconeerlandaiseculturecommerce" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e43" source="caoutchoucsiboga" target="tamiangrubber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e44" source="culturefrancojavanaise" target="nieuwtjisalak">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e45" source="culturefrancojavanaise" target="tamiangrubber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e46" source="nieuwtjisalak" target="tamiangrubber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e47" source="pacouda" target="tamiangrubber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e48" source="caoutchoucsiboga" target="culturepacouda">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e49" source="culturepacouda" target="nieuwtjisalak">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e50" source="culturepacouda" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e51" source="culturepacouda" target="tapanoelie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e52" source="culturepacouda" target="culturepanoulisan">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

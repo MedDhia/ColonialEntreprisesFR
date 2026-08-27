@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="agricoleindustrielleafriqueequatoriale">
+      <data key="n_label">Compagnie Agricole et Industrielle de l’Afrique Equatoriale</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="commercialecolonisationcongo">
+      <data key="n_label">Compagnie Commerciale de Colonisation du Congo français</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="commercialecotonniereouhamenanacomouna">
+      <data key="n_label">Cie commerciale et cotonnière de l'Ouhamé-Nana « Comouna »</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="congolaisecaoutchouc">
+      <data key="n_label">Compagnie Congolaise du Caoutchouc</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="kotto">
+      <data key="n_label">La Kotto</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="kouango">
+      <data key="n_label">Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">26</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="miniereintercoloniale">
+      <data key="n_label">Société minière intercoloniale</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="miniereogouelobayeberberati">
+      <data key="n_label">Société Minière Ogoué-Lobaye, Berberati</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <node id="ouhamenana">
+      <data key="n_label">Compagnie française de l'Ouhamé et de la Nana</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
+    <edge id="e0" source="miniereintercoloniale" target="miniereogouelobayeberberati">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e1" source="congolaisecaoutchouc" target="kouango">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e2" source="commercialecotonniereouhamenanacomouna" target="ouhamenana">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e3" source="commercialecolonisationcongo" target="ouhamenana">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e4" source="agricoleindustrielleafriqueequatoriale" target="congolaisecaoutchouc">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e5" source="agricoleindustrielleafriqueequatoriale" target="kouango">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e6" source="kotto" target="kouango">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

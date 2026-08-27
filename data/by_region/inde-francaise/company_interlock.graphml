@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="savana">
+      <data key="n_label">« Savana »</data>
+      <data key="n_sectors">Banque, Filatures; Documents généraux</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Inde francaise</data>
+    </node>
+    <node id="savanafilaturetissagemecanique">
+      <data key="n_label">« Savana », Sté anon. de filature et de tissage mécanique</data>
+      <data key="n_sectors">Banque, Filatures; Documents généraux</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Inde francaise</data>
+    </node>
+    <edge id="e0" source="savana" target="savanafilaturetissagemecanique">
+      <data key="e_weight">4</data>
+    </edge>
+  </graph>
+</graphml>

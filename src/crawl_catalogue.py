@@ -175,7 +175,13 @@ class IndexParser(HTMLParser):
             self._heading_buf = []
             if cls == "pays":
                 self.page_territory = text
-            elif cls == "premierTitrePays":
+            elif cls in {"premierTitrePays", "titrePays"}:
+                # A page covering several territories marks only the *first*
+                # with premierTitrePays; every later one uses titrePays.
+                # Handling only the former silently attributed all of
+                # Madagascar, the Comoros and Reunion to Djibouti, and all of
+                # Guyane, Brazil, Chile and Peru to Guadeloupe-Martinique -
+                # 19 territories across 5 pages.
                 self.country = text
                 self.sector = ""
                 self.group_stack = []
@@ -213,6 +219,23 @@ OCCUPATION_RE = re.compile(
     re.I,
 )
 
+# A gloss that announces monographs on several firms marks the entry as a
+# survey, not a company: "notices sur 26 societes d'Indochine", "28
+# francaises, 17 anglaises. Notices." Treated as a company, such an entry
+# becomes a node that absorbs every board the survey lists - two of them
+# reached 254 and 132 directors, outranking the Banque de l'Indochine.
+#
+# This uses the source's own metadata rather than guessing from titles, and
+# matches exactly two entries in the catalogue. Note that a "par <Author>"
+# test, which looks like the obvious companion rule, must NOT be used: in
+# French addresses "par X" means via X ("Oued-Marsa, par Sidi-Rehane"), so it
+# matches 41 entries of which most are genuine firms.
+SURVEY_GLOSS_RE = re.compile(
+    r"\bnotices?\b(?=.*\bsoci[eé]t[eé]s?\b)|\bnotices?\s+sur\s+\d+|"
+    r"\b\d+\s+soci[eé]t[eé]s\b|\bnotices\b\s*\.",
+    re.I,
+)
+
 # Sectors that hold thematic/archival material rather than single firms.
 SOURCE_DOC_SECTORS = (
     "documents generaux",
@@ -242,6 +265,10 @@ def classify_entry(entry: dict) -> tuple[str, str, str, str, str]:
     sector = entry["sector"].lower()
 
     if any(k in sector for k in SOURCE_DOC_SECTORS):
+        return ("source_document", "", "", "", "")
+
+    # A multi-firm survey is a source document whatever sector it is filed under.
+    if SURVEY_GLOSS_RE.search(entry["note"]) or SURVEY_GLOSS_RE.search(title):
         return ("source_document", "", "", "", "")
 
     # "Surname (Forename)(1846-1916)" - the dominant biographical pattern.

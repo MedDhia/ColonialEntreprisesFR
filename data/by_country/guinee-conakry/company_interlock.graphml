@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="bananeriesafricaines">
+      <data key="n_label">Bananeries africaines</data>
+      <data key="n_sectors">Agro-alimentaire</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="culturesbananeraieskinsan">
+      <data key="n_label">Société des Cultures et bananeraies du Kin-San</data>
+      <data key="n_sectors">Agro-alimentaire</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="exploitationsminieresafriqueoccidentale">
+      <data key="n_label">Exploitations minières en Afrique Occidentale</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="guineennerecherchesexploitationsminieres">
+      <data key="n_label">Société Guinéenne de Recherches et d'exploitations minières</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="lyonnaisegisementsauriferesguinee">
+      <data key="n_label">Compagnie des Lyonnaise des Gisements aurifères en Guinée</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="mineshauteguinee">
+      <data key="n_label">Société des Mines de la Haute-Guinée</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="minessiguiri">
+      <data key="n_label">Compagnie des Mines de Siguiri</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="miniereguinee">
+      <data key="n_label">Compagnie Minière de la Guinée française</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <node id="minierekobabalato">
+      <data key="n_label">Société Minière du Koba de Balato</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
+    <edge id="e0" source="exploitationsminieresafriqueoccidentale" target="guineennerecherchesexploitationsminieres">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e1" source="bananeriesafricaines" target="culturesbananeraieskinsan">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e2" source="lyonnaisegisementsauriferesguinee" target="minierekobabalato">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e3" source="mineshauteguinee" target="minierekobabalato">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e4" source="minessiguiri" target="miniereguinee">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

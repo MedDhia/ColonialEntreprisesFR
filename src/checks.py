@@ -20,6 +20,7 @@ import csv
 import os
 import re
 import sys
+from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -340,12 +341,90 @@ def check_dataset() -> None:
         except Exception as exc:  # noqa: BLE001
             check(f"  {os.path.basename(path)} is well-formed XML", False, str(exc)[:120])
 
+    # Territory labelling. Pages covering several territories mark only the
+    # first with premierTitrePays and the rest with titrePays; handling only
+    # the former put all 189 Madagascar documents under "Djibouti".
+    countries = Counter(d["country"] for d in docs if d["country"])
+    for expected in ["Madagascar", "La Réunion", "Comores", "Guyane française",
+                     "Tahiti (Polynésie)", "Nouvelles-Hébrides (Mélanésie)"]:
+        check(f"  territory {expected!r} is populated", countries.get(expected, 0) > 0,
+              f"{countries.get(expected, 0)} documents")
+    check("  Madagascar outnumbers Djibouti", countries.get("Madagascar", 0) >
+          countries.get("Djibouti", 0),
+          f"Madagascar={countries.get('Madagascar', 0)}, Djibouti={countries.get('Djibouti', 0)}")
+
+    # Multi-firm surveys must not become company nodes: treated as firms, they
+    # absorb every board they list and dominate the degree distribution.
+    firms = {r["name"]: r for r in companies}
+    for title in ["Documentation africaine", "Parlementaires et financiers",
+                  "Sociétés aurifères en Côte-d'Ivoire", "Leroy, Le Caoutchouc",
+                  "Valeurs inscrites à la Cote des banquiers à Paris en 1913"]:
+        check(f"  survey not a company node: {title[:44]!r}", title not in firms)
+    # No firm should have an implausible number of distinct directors. The
+    # genuine maximum here is ~96 (Cie Generale Francaise de Tramways, observed
+    # 1880-1960); the pseudo-firms reached 254 and 286.
+    worst = max(companies, key=lambda r: int(r["n_directors"] or 0), default=None)
+    if worst:
+        check("  no firm has an implausible director count",
+              int(worst["n_directors"]) <= 150,
+              f"{worst['name'][:50]!r} has {worst['n_directors']}")
+
     il = load("edges_company_interlock.csv")
     if il:
         check("  interlock endpoints known",
               all(e["company_id_1"] in cids and e["company_id_2"] in cids for e in il))
         check("  no interlock self-loops",
               all(e["company_id_1"] != e["company_id_2"] for e in il))
+
+
+def check_splits() -> None:
+    """The per-territory bundles must partition ties and stay loadable."""
+    import glob as _glob
+
+    for level in ("country", "region"):
+        root = os.path.join(ROOT, "data", f"by_{level}")
+        manifest_path = os.path.join(root, "territory_manifest.csv")
+        if not os.path.exists(manifest_path):
+            continue
+        print(f"split by {level}", file=sys.stderr)
+        with open(manifest_path, encoding="utf-8", newline="") as fh:
+            manifest = list(csv.DictReader(fh))
+        check(f"  {level}: manifest is non-empty", bool(manifest))
+
+        # Ties carry exactly one territory, so the bundles must partition them
+        # exactly - no tie duplicated into two bundles, none dropped.
+        bundle_ties = 0
+        for f in _glob.glob(os.path.join(root, "*", "affiliations.csv")):
+            with open(f, encoding="utf-8", newline="") as fh:
+                bundle_ties += sum(1 for _ in csv.DictReader(fh))
+        total = sum(int(r["n_ties"]) for r in manifest)
+        eq(f"  {level}: bundle files match manifest tie counts", bundle_ties, total)
+
+        aff = load("affiliations.csv")
+        attributed = sum(1 for r in aff if r["company_key"] and r["person_key"])
+        eq(f"  {level}: ties partition the dataset", total, attributed)
+
+        # Every bundle's GraphML must load, same guard as the main graphs.
+        bad = []
+        for f in _glob.glob(os.path.join(root, "*", "company_interlock.graphml")):
+            try:
+                import xml.etree.ElementTree as ET
+
+                ET.parse(f)
+            except Exception as exc:  # noqa: BLE001
+                bad.append(f"{os.path.basename(os.path.dirname(f))}: {exc}")
+        check(f"  {level}: all bundle graphs are well-formed", not bad, "; ".join(bad[:3]))
+
+        # A bundle must only contain ties from its own territory.
+        field = "country" if level == "country" else "region"
+        leaks = []
+        for f in _glob.glob(os.path.join(root, "*", "affiliations.csv")):
+            slug = os.path.basename(os.path.dirname(f))
+            with open(f, encoding="utf-8", newline="") as fh:
+                vals = {r[field] for r in csv.DictReader(fh)}
+            if len(vals) > 1:
+                leaks.append(f"{slug}: {sorted(vals)[:3]}")
+        check(f"  {level}: no bundle mixes territories", not leaks, "; ".join(leaks[:3]))
 
 
 def main() -> None:
@@ -360,6 +439,7 @@ def main() -> None:
     if not args.unit:
         check_extraction()
         check_dataset()
+        check_splits()
 
     total = CHECKS["passed"] + CHECKS["failed"]
     print(f"\n{CHECKS['passed']}/{total} checks passed", file=sys.stderr)

@@ -41,8 +41,9 @@ Four stages, each resumable, each writing its own outputs:
 3. **`parse_ties.py`** — text → `affiliations.csv`, `org_affiliations.csv`,
    `company_attributes.csv`, `doc_references.csv`.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
+5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 
-`checks.py` validates the parsers and the built dataset (116 assertions).
+`checks.py` validates the parsers and the built dataset (139 assertions).
 
 ### The extraction trap
 
@@ -216,6 +217,54 @@ balance-sheet captions (which sit in tables next to boards) are rejected as
 entities, or "Gazette du Palais" accumulates directorships. Corporate board
 members are routed to `org_affiliations.csv` rather than parsed as people.
 Years outside 1800–2025 are discarded wherever a date is parsed.
+
+## 5b. Splitting by territory
+
+`split_by_country.py` writes one self-contained bundle per territory at two
+granularities (54 countries, 12 index-page regions). Two bugs had to be fixed
+first, both of which would have made a country split actively misleading.
+
+**Territory labels.** A page covering several territories marks only the
+*first* with `h2.premierTitrePays`; every later one uses `h2.titrePays`. The
+crawler collected the latter and then discarded it, so the country label never
+advanced: all 189 Madagascar documents were filed under *Djibouti*, and all of
+Guyane, Brazil, Chile and Peru under *Guadeloupe-Martinique* — 19 territories
+across 5 pages. Splitting on that would have shipped a "Djibouti" bundle
+consisting mostly of Madagascar.
+
+**Multi-firm surveys as firms.** Some dossiers survey many companies at once,
+and their own gloss says so: *"notices sur 26 sociétés d'Indochine"*, *"28
+françaises, 17 anglaises. Notices."* Treated as single firms, they became
+nodes that absorbed every board they listed, reaching 254 and 286 distinct
+directors and outranking the Banque de l'Indochine (92) at the top of the
+degree distribution. They are now classified as source documents on the
+strength of that gloss, which matches exactly two catalogue entries. A
+companion rule that suggests itself — treating `par <Author>` as a
+bibliographic marker — was tested and **rejected**: in French addresses "par
+X" means *via* X (*"Oued-Marsa, par Sidi-Rehane"*), so it matched 41 entries
+of which most are genuine firms. A third candidate, treating a plural
+"Sociétés …" name as a survey, was also rejected: of 151 such entries almost
+all are real firms (*Entreprises Boussiron*, *Comptoirs d'Hippone*).
+
+Three design decisions in the split itself:
+
+- **Ties partition, nodes overlap.** Each tie carries one territory, so bundle
+  tie counts sum to the dataset total. Firms and people appear in every bundle
+  where observed (21% of people, 9% of firms in more than one), so node counts
+  must not be summed. The overlap is reported per territory rather than hidden.
+- **Person resolution is global.** The crosswalk is computed once over the
+  whole dataset and then applied to each slice, so one individual keeps one
+  `person_id` everywhere. Resolving within slices would have given the same
+  person different ids in Morocco and Indochina — destroying precisely the
+  transcolonial careers this dataset is built to expose.
+- **`Empire (transversal)` is kept as its own bundle** and labelled as not a
+  country, since it is the source's grouping for firms spanning several
+  colonies and is one of the largest buckets.
+
+The per-territory share of shared elite is a usable variable in its own right:
+~0.29 in Morocco, Indochina and Madagascar against 0.72 in Senegal and 0.62 in
+Côte d'Ivoire, which is a measurable difference in how far a territory's
+boards were staffed by men also sitting elsewhere.
 
 ## 6. Validity — read this before using the data
 

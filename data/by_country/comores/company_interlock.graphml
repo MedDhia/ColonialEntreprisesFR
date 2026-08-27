@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="civilefomboni">
+      <data key="n_label">Sté civile de Fomboni</data>
+      <data key="n_sectors">Documents généraux</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Comores</data>
+    </node>
+    <node id="colonialebambao">
+      <data key="n_label">Société Coloniale de Bambao, puis Comores-Bambao</data>
+      <data key="n_sectors">Documents généraux; Sociétés</data>
+      <data key="n_n_directors">21</data>
+      <data key="n_territory">Comores</data>
+    </node>
+    <node id="colonialebambaobambao">
+      <data key="n_label">Société coloniale de Bambao, BAMBAO</data>
+      <data key="n_sectors">Documents généraux</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Comores</data>
+    </node>
+    <node id="etablissementsantoinechirisproduitsaromatiqueschimiques">
+      <data key="n_label">Établissements Antoine Chiris (Cie des produits aromatiques chimiques et</data>
+      <data key="n_sectors">Documents généraux</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Comores</data>
+    </node>
+    <node id="grandecomore">
+      <data key="n_label">Grande-Comore</data>
+      <data key="n_sectors">Documents généraux; Sociétés</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Comores</data>
+    </node>
+    <edge id="e0" source="colonialebambao" target="colonialebambaobambao">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e1" source="colonialebambao" target="etablissementsantoinechirisproduitsaromatiqueschimiques">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e2" source="colonialebambao" target="grandecomore">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e3" source="civilefomboni" target="colonialebambao">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e4" source="civilefomboni" target="etablissementsantoinechirisproduitsaromatiqueschimiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e5" source="civilefomboni" target="grandecomore">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e6" source="etablissementsantoinechirisproduitsaromatiqueschimiques" target="grandecomore">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e7" source="colonialebambaobambao" target="etablissementsantoinechirisproduitsaromatiqueschimiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e8" source="colonialebambaobambao" target="grandecomore">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

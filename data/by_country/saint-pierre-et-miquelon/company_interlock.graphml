@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="consortiummoruefrance">
+      <data key="n_label">Consortium de la morue en France</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Saint-Pierre et Miquelon</data>
+    </node>
+    <node id="grandepeche">
+      <data key="n_label">GRANDE-PÉCHE</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Saint-Pierre et Miquelon</data>
+    </node>
+    <node id="moruesecheriesfecamp">
+      <data key="n_label">Morue française et sécheries de Fécamp</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Saint-Pierre et Miquelon</data>
+    </node>
+    <edge id="e0" source="consortiummoruefrance" target="moruesecheriesfecamp">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e1" source="consortiummoruefrance" target="grandepeche">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e2" source="grandepeche" target="moruesecheriesfecamp">
+      <data key="e_weight">3</data>
+    </edge>
+  </graph>
+</graphml>

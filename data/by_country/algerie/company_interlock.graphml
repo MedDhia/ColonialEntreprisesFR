@@ -1,0 +1,2392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="abrifamilialoranais">
+      <data key="n_label">L'Abri familial oranais</data>
+      <data key="n_sectors">Foncières et immobilières</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="acconagealgerien">
+      <data key="n_label">Compagnie d'Acconage algérien</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="acconagecharbonnagejullian">
+      <data key="n_label">Société d'Acconage et de charbonnage Jullian</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="achaque">
+      <data key="n_label">Achaque</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="aeriennefrancealgerie">
+      <data key="n_label">Compagnie Aérienne France-Algerie</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="africainearmement">
+      <data key="n_label">Compagnie Africaine d'Armement</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Transports maritimes et aériens</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="africaineliegealgerhusseindeyazazga">
+      <data key="n_label">Compagnie Africaine du Liège, Alger, Hussein-Dey, Azazga</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="africaineminestransports">
+      <data key="n_label">Société Africaine de Mines et transports</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="africainetravaux">
+      <data key="n_label">Société Africaine de Travaux</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="afriquenord">
+      <data key="n_label">AFRIQUE DU NORD</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">24</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="agricolealgeriennebertagna">
+      <data key="n_label">Société agricole algérienne Bertagna</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">21</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="agricolefinancierealgerie">
+      <data key="n_label">Société Agricole et Financière d'Algérie</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">1</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="airliquide">
+      <data key="n_label">L'Air liquide</data>
+      <data key="n_sectors">Industries chimiques</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="akkaresbelezma">
+      <data key="n_label">Société d'Akkarès, Belezma</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="aldegue">
+      <data key="n_label">ALDÉGUÉ</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">1</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="alfa">
+      <data key="n_label">L'Alfa</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">29</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="alfasocfabricationpatescellulose">
+      <data key="n_label">L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algerienne">
+      <data key="n_label">Compagnie algérienne</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances; Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">43</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algeriennecreditbanque">
+      <data key="n_label">Société nouvelle de la Compagnie algérienne de crédit et de banque</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algerienneeclairageforce">
+      <data key="n_label">Société Algérienne d'éclairage et de force</data>
+      <data key="n_sectors">Eau, gaz, électricité (Utilities)</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algerienneglacehygieniqueentreposagefrigorifique">
+      <data key="n_label">Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algeriennemateriauxconstruction">
+      <data key="n_label">Société Algérienne de matériaux de construction</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algeriennenavigationafriquenord">
+      <data key="n_label">Société algérienne de navigation pour l'Afrique du Nord</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algeriennenavigationafriquenordcharlesschiaffino">
+      <data key="n_label">Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algeriennepetrolesstandard">
+      <data key="n_label">Compagnie Algérienne des Pétroles Standard</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algerienneproduitschimiquesengrais">
+      <data key="n_label">Société Algérienne de produits chimiques et d'engrais</data>
+      <data key="n_sectors">Industries chimiques</data>
+      <data key="n_n_directors">23</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="algeriennesels">
+      <data key="n_label">Compagnie Algérienne des sels</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="ascenseursmontechargeshydrauliquesvillealger">
+      <data key="n_label">Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="banquealgerie">
+      <data key="n_label">BANQUE DE L'ALGERIE</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">76</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="banquealgeriebanquealgerietunisiebanquealgerie">
+      <data key="n_label">Banque de l'Algérie, Banque de l'Algérie et de la Tunisie, Banque de l'Algérie</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="banqueindustrielleafriquenord">
+      <data key="n_label">Banque industrielle de l'Afrique du Nord</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">45</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="benedictinefecamp">
+      <data key="n_label">La Bénédictine, Fécamp</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="brasseriemalteriealgeriennemustaphainferieur">
+      <data key="n_label">Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="caisseagricoletlemcen">
+      <data key="n_label">Caisse agricole de Tlemcen</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="carrieresalgeroises">
+      <data key="n_label">Les Carrières algéroises</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="carrosseriemoderne">
+      <data key="n_label">La Carrosserie moderne</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="cellulosesafriquenord">
+      <data key="n_label">Société des Celluloses de l'Afrique française du Nord</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="cenpasoccentraleusinespapiers">
+      <data key="n_label">CENPA, Soc. Centrale des Usines à Papiers</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">23</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="centralephosphates">
+      <data key="n_label">Cie centrale des PHOSPHATES</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="centralephosphatesbordjrdir">
+      <data key="n_label">Compagnie Centrale des Phosphates à Bordj'R'dir</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="centraleusinespapier">
+      <data key="n_label">Société centrale des usines à papier</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">28</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="chaines">
+      <data key="n_label">CHAÎNES</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="charbonnage">
+      <data key="n_label">CHARBONNAGE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="charbonnierenordafricain">
+      <data key="n_label">Compagnie Charbonnière du Nord-Africain</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="chargeursalgeriensreunis">
+      <data key="n_label">Chargeurs algériens réunis</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="chauxcimentsouedfergoug">
+      <data key="n_label">Chaux et ciments de l'oued Fergoug</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="chauxcimentsrivetalger">
+      <data key="n_label">Chaux et ciments de Rivet-Alger</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="cheddites">
+      <data key="n_label">CHEDDITES</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="cheminfertranssaharien">
+      <data key="n_label">Le Chemin de fer transsaharien</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="cheminsferestalgerien">
+      <data key="n_label">Compagnie des Chemins de fer de l'Est-Algérien</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="cheminsferouestalgerien">
+      <data key="n_label">Compagnie des Chemins de fer de l'Ouest-Algérien</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">42</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="cheminsferroutesalgerie">
+      <data key="n_label">Société des Chemins de fer sur routes d'Algérie</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">41</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="clement">
+      <data key="n_label">CLÉMENT</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="commercialeacconage">
+      <data key="n_label">Société Commerciale d'Acconage</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="commercialearmement">
+      <data key="n_label">Société Commerciale d'Armement</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="commercialeminiereafriquenord">
+      <data key="n_label">Société Commerciale et Minière pour l'Afrique du Nord</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="compagniesregionalesreuniesfabriquesengraisproduitschimiques">
+      <data key="n_label">Compagnies régionales réunies de fabriques d'engrais et de produits chimiques</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="concessionnaireouenza">
+      <data key="n_label">Société concessionnaire d'Ouenza</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="condat">
+      <data key="n_label">CONDAT et Cie</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="constructionelectrique">
+      <data key="n_label">CONSTRUCTION ÉLECTRIQUE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">75</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="creditagricoletlemcen">
+      <data key="n_label">Crédit agricole de Tlemcen</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="creditalgerien">
+      <data key="n_label">Crédit algérien, puis Crédit privé</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">46</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="creditfoncieragricolealgerie">
+      <data key="n_label">Crédit foncier et agricole d'Algérie</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="creditfoncieralgerietunisie">
+      <data key="n_label">Crédit foncier d'Algérie-Tunisie</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">85</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="desage">
+      <data key="n_label">DESAGE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="distilleriebadoilmustapha">
+      <data key="n_label">Distillerie Badoil, Mustapha</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="distributionenergieelectrique">
+      <data key="n_label">Compagnie Générale de Distribution d'énergie électrique</data>
+      <data key="n_sectors">Eau, gaz, électricité (Utilities)</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="docksoran">
+      <data key="n_label">Docks d'Oran</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">1</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="domainechapeaugendarme">
+      <data key="n_label">Domaine du Chapeau de Gendarme</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="domainequatrechemins">
+      <data key="n_label">Domaine des Quatre-Chemins</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="domainesafricains">
+      <data key="n_label">Domaines africains</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="eclairagescommunaux">
+      <data key="n_label">Compagnie des Éclairages communaux</data>
+      <data key="n_sectors">Eau, gaz, électricité (Utilities)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="entreprisealgerienne">
+      <data key="n_label">L'Entreprise algérienne</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="entreprisemaritimecommerciale">
+      <data key="n_label">L'Entreprise maritime et commerciale</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="entreprises">
+      <data key="n_label">ENTREPRISES</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="essur">
+      <data key="n_label">ESSUR</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="etsbertagna">
+      <data key="n_label">Éts Bertagna</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="etudescheminfertransafricain">
+      <data key="n_label">Société d'études du Chemin de fer transafricain</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="etudesminieresindustrielles">
+      <data key="n_label">ÉTUDES MINIÈRES ET INDUSTRIELLES</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="expansionnordafricaine">
+      <data key="n_label">Expansion nord-africaine</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="exploitationforestiereminierepetitekabylie">
+      <data key="n_label">EXPLOITATION FORESTIÈRE et MINIÈRE de la PETITE KABYLIE</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="exploitationsforestieresminierespetitekabylie">
+      <data key="n_label">Société d'Exploitations forestières et minières de la Petite-Kabylie</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="feutresrok">
+      <data key="n_label">FEUTRES ROK</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="fichet">
+      <data key="n_label">FICHET</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">24</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="filtreriefrancoalgerienne">
+      <data key="n_label">Filtrerie franco-algérienne</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="fonciereimmobilierefranceafriquenord">
+      <data key="n_label">Société Foncière et Immobilière de France et de l'Afrique du Nord</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="fonciereimmobilierevillealger">
+      <data key="n_label">Compagnie Foncière et Immobilière de la Ville d'Alger</data>
+      <data key="n_sectors">Foncières et immobilières</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="foncieremediterranee">
+      <data key="n_label">Compagnie Foncière de la Méditerranée</data>
+      <data key="n_sectors">Foncières et immobilières</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="fournituresmilitaires">
+      <data key="n_label">Société générale de Fournitures militaires</data>
+      <data key="n_sectors">Cuirs et textiles</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="francoasiatiquepetrolesalgerie">
+      <data key="n_label">Société Franco-Asiatique des Pétroles d’Algerie</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="fusionneeliegeshamendaspetitekabylie">
+      <data key="n_label">Société fusionnée des Lièges des Hamendas et de Petite-Kabylie</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">1</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="gisementsphosphatiersbordjrdir">
+      <data key="n_label">Société des Gisements phosphatiers de Bordj R’Dir</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="houplain">
+      <data key="n_label">HOUPLAIN</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="hutchinson">
+      <data key="n_label">HUTCHINSON</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="hydrauliqueafrique">
+      <data key="n_label">L'Hydraulique-Afrique</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">21</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="hydroelectriqueafriquenord">
+      <data key="n_label">Société Hydro-électrique de l'Afrique du Nord</data>
+      <data key="n_sectors">Eau, gaz, électricité (Utilities)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="immobilierealgerie">
+      <data key="n_label">Société Immobilière d'Algérie</data>
+      <data key="n_sectors">Foncières et immobilières</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="immobilierebone">
+      <data key="n_label">Société Immobilière de Bône, puis Immobilière et Maritime de l’Afrique du Nord</data>
+      <data key="n_sectors">Foncières et immobilières</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="industriellepetrolesafriquenord">
+      <data key="n_label">Compagnie Industrielle des Pétroles de l'Afrique du Nord</data>
+      <data key="n_sectors">Pétrole et gaz</data>
+      <data key="n_n_directors">27</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="internationalewagonslits">
+      <data key="n_label">Cie internationale des WAGONS-LITS</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="leach">
+      <data key="n_label">LEACH</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="liege">
+      <data key="n_label">Société Française du Liège</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="liegeshamendaspetitekabylie">
+      <data key="n_label">Lièges des Hamendas et de la Petite Kabylie</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="liegesproduitsnordafricainsalgerusinebouchonsbone">
+      <data key="n_label">Lièges et produits nord-africains, Alger. Usine de bouchons à Bône</data>
+      <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="manufacturetabacscigarescigarettes">
+      <data key="n_label">Manufacture de Tabacs, Cigares et Cigarettes</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="manufacturetabacscigarescigarettesbastos">
+      <data key="n_label">Manufacture de Tabacs, Cigares et Cigarettes Bastos</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="manufacturetapisorient">
+      <data key="n_label">Manufacture de tapis d'Orient</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="marmaro">
+      <data key="n_label">Marmaro</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="millaul">
+      <data key="n_label">MILLAUL</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesalgerietunisieomnium">
+      <data key="n_label">MINES D'ALGÉRIE-TUNISIE « OMNIUM »</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesboudjoudoun">
+      <data key="n_label">Société des mines de Boudjoudoun</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesbouthaleb">
+      <data key="n_label">MINES DU BOU-THALEB</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">48</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="mineschabetkohol">
+      <data key="n_label">Compagnie des mines de Chabet-Kohol</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="mineschellala">
+      <data key="n_label">Société des mines du Chellala</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesdjebelforer">
+      <data key="n_label">Société des mines du Djebel-Forer</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesdjebelguendou">
+      <data key="n_label">Société des mines du Djebel-Guendou</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesfer">
+      <data key="n_label">Société Française des mines de fer</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesfermilliana">
+      <data key="n_label">Mines de fer de Milliana</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesferrouina">
+      <data key="n_label">Société des mines de fer Rouina</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesguelma">
+      <data key="n_label">Société des mines de Guelma</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesoranie">
+      <data key="n_label">Société des Mines de l'Oranie</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minesouastamesloula">
+      <data key="n_label">Compagnie des mines de Ouasta et de Mesloula</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">28</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minessidimarouf">
+      <data key="n_label">Société des mines du Sidi Marouf</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minessoumahtafna">
+      <data key="n_label">Société des mines de Soumah et de La Tafna</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="mineszaccar">
+      <data key="n_label">MINES du ZACCAR</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="mineszincguergour">
+      <data key="n_label">Société des mines de zinc du Guergour</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minieredjebelfelten">
+      <data key="n_label">Société minière du Djebel-Felten</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minieredjendli">
+      <data key="n_label">Compagnie minière du Djendli</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minierefrancoafricaine">
+      <data key="n_label">Société Minière Franco-Africaine</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minieremetallurgiquecaronte">
+      <data key="n_label">Compagnie minière et métallurgique de Caronte</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minieremzaita">
+      <data key="n_label">Compagnie minière du M'Zaïta</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minierenordafriquesaintetienne">
+      <data key="n_label">Société Minière du Nord de l'Afrique, Saint-Étienne</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="minoteriereneesclapezrelizane">
+      <data key="n_label">Minoterie René Esclapez &amp; Cie, Relizane</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="mselati">
+      <data key="n_label">MSELATI</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="mullerpasse19261928souscontrolegraengesberg">
+      <data key="n_label">Müller, passé en 1926-1928 sous le contrôle de Graengesberg</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="nordafricaincommercial">
+      <data key="n_label">Nord-africain commercial</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="nordafricainecimentslafarge">
+      <data key="n_label">Nord-Africaine des Ciments de Lafarge</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">24</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="nordafricaineetudesentreprises">
+      <data key="n_label">Société Nord-africaine d'études et d'entreprises</data>
+      <data key="n_sectors">Banques et groupes financiers, assurances</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="omniumminesalgerietunisie">
+      <data key="n_label">Omnium Société générale de mines d'Algérie-Tunisie</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">27</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="omniumminesusines">
+      <data key="n_label">Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="oranaisecharbonnages">
+      <data key="n_label">Oranaise de Charbonnages</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="oranaisechauxcimentsoranarcole">
+      <data key="n_label">Compagnie Oranaise des Chaux et ciments, Oran-Arcole</data>
+      <data key="n_sectors">Bâtiment et travaux publics, matériaux de construction, céramique</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="ouenza">
+      <data key="n_label">Société de l'Ouenza</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">65</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="ouledsellemainsmara">
+      <data key="n_label">Société des Ouled-Sellem, Aïn-Smara</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="palestro">
+      <data key="n_label">Palestro</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">35</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="petolatdijon">
+      <data key="n_label">PÉTOLAT-DIJON</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="petrolestliouanet">
+      <data key="n_label">PÉTROLES de TLIOUANET</data>
+      <data key="n_sectors">Pétrole et gaz</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="pfund">
+      <data key="n_label">PFUND</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="phosphatesconstantine">
+      <data key="n_label">Compagnie des Phosphates de Constantine</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">28</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="phosphatesdjebelonk">
+      <data key="n_label">Phosphates du Djebel-Onk</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="phosphatesdyr">
+      <data key="n_label">Compagnie des Phosphates du Dyr</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="phosphatesmzaita">
+      <data key="n_label">Compagnie des Phosphates du M'Zaïta, puis</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="raffineriessoufrereunies">
+      <data key="n_label">Raffineries de soufre réunies</data>
+      <data key="n_sectors">Industries chimiques</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="regiefoncierevillealger">
+      <data key="n_label">Régie foncière de la ville d'Alger</data>
+      <data key="n_sectors">Foncières et immobilières</data>
+      <data key="n_n_directors">26</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="reseauaerientransafricain">
+      <data key="n_label">Société du Réseau aérien transafricain</data>
+      <data key="n_sectors">Transports maritimes et aériens</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="royaleasturienneminesdirection">
+      <data key="n_label">Cie Royale ASTURIENNE DES MINES, direction générale</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="sanhadja">
+      <data key="n_label">SANHADJA</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="secteurelectriquevoutesalger">
+      <data key="n_label">Secteur électrique des Voûtes d'Alger</data>
+      <data key="n_sectors">Eau, gaz, électricité (Utilities)</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="senellemaubeuge">
+      <data key="n_label">SENELLE-MAUBEUGE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">32</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="sidikamber">
+      <data key="n_label">Sidi-Kamber</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines et carrières</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="tissagesmecaniquesisere">
+      <data key="n_label">TISSAGES MÉCANIQUES DE L'ISÈRE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="tramwaysalgeriens">
+      <data key="n_label">Société des Tramways algériens</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="tramwayselectriquesoran">
+      <data key="n_label">Tramways électriques d'Oran</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">32</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="unioncompagniesregionalesreuniesfabriquesengrais">
+      <data key="n_label">Union française et Compagnies régionales réunies de fabriques d'engrais et de</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="unionelectriquegaziereafriquenord">
+      <data key="n_label">Union électrique et gazière de l'Afrique du Nord</data>
+      <data key="n_sectors">Eau, gaz, électricité (Utilities)</data>
+      <data key="n_n_directors">22</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="n_label">Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="n_label">Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="uniontransafricaine">
+      <data key="n_label">Union transafricaine</data>
+      <data key="n_sectors">Transports terrestres, garages automobiles et agricoles</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="velvetrum">
+      <data key="n_label">VELVET-RUM</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">39</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="vignoblesalgeriens">
+      <data key="n_label">Vignobles algériens</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="vignoblesmediterranee">
+      <data key="n_label">VIGNOBLES DE LA MÉDITERRANÉE</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="vinsmidialgerie">
+      <data key="n_label">Compagnie générale des vins du Midi et d'Algérie</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <node id="zincguergour">
+      <data key="n_label">Zinc du Guergour</data>
+      <data key="n_sectors">Mines et carrières</data>
+      <data key="n_n_directors">22</data>
+      <data key="n_territory">Algérie</data>
+    </node>
+    <edge id="e0" source="constructionelectrique" target="creditfoncieralgerietunisie">
+      <data key="e_weight">26</data>
+    </edge>
+    <edge id="e1" source="banquealgerie" target="banqueindustrielleafriquenord">
+      <data key="e_weight">11</data>
+    </edge>
+    <edge id="e2" source="banquealgerie" target="banquealgeriebanquealgerietunisiebanquealgerie">
+      <data key="e_weight">9</data>
+    </edge>
+    <edge id="e3" source="entreprisealgerienne" target="entreprisemaritimecommerciale">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e4" source="omniumminesalgerietunisie" target="phosphatesconstantine">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e5" source="minesbouthaleb" target="mineschabetkohol">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e6" source="petolatdijon" target="petrolestliouanet">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e7" source="minesbouthaleb" target="mineszincguergour">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e8" source="unioncompagniesregionalesreuniesfabriquesengrais" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e9" source="pfund" target="phosphatesconstantine">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e10" source="minesbouthaleb" target="minesouastamesloula">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e11" source="algerienne" target="clement">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e12" source="algerienneproduitschimiquesengrais" target="creditfoncieralgerietunisie">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e13" source="cheminsferouestalgerien" target="creditalgerien">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e14" source="afriquenord" target="commercialeminiereafriquenord">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e15" source="concessionnaireouenza" target="ouenza">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e16" source="millaul" target="omniumminesalgerietunisie">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e17" source="cheminsferroutesalgerie" target="minesboudjoudoun">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e18" source="algerienne" target="algerienneproduitschimiquesengrais">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e19" source="algerienne" target="algeriennecreditbanque">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e20" source="africaineminestransports" target="ouenza">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e21" source="algerienneeclairageforce" target="creditfoncieralgerietunisie">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e22" source="creditfoncieralgerietunisie" target="regiefoncierevillealger">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e23" source="omniumminesusines" target="phosphatesconstantine">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e24" source="millaul" target="phosphatesconstantine">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e25" source="cenpasoccentraleusinespapiers" target="manufacturetapisorient">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e26" source="constructionelectrique" target="mineschabetkohol">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e27" source="creditfoncieralgerietunisie" target="mineschabetkohol">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e28" source="cheminsferroutesalgerie" target="creditfoncieralgerietunisie">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e29" source="etudesminieresindustrielles" target="exploitationsforestieresminierespetitekabylie">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e30" source="cenpasoccentraleusinespapiers" target="senellemaubeuge">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e31" source="minesalgerietunisieomnium" target="phosphatesconstantine">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e32" source="minesdjebelguendou" target="minesguelma">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e33" source="phosphatesconstantine" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e34" source="algerienne" target="phosphatesdyr">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e35" source="minesbouthaleb" target="mineszaccar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e36" source="mselati" target="nordafricaincommercial">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e37" source="cenpasoccentraleusinespapiers" target="centraleusinespapier">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e38" source="cheminsferroutesalgerie" target="minieredjebelfelten">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e39" source="algerienneproduitschimiquesengrais" target="cheminsferroutesalgerie">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e40" source="creditfoncieralgerietunisie" target="foncieremediterranee">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e41" source="africaineminestransports" target="concessionnaireouenza">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e42" source="alfa" target="alfasocfabricationpatescellulose">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e43" source="algeriennesels" target="mullerpasse19261928souscontrolegraengesberg">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e44" source="algerienneeclairageforce" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e45" source="creditfoncieralgerietunisie" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e46" source="algerienneglacehygieniqueentreposagefrigorifique" target="cheminsferestalgerien">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e47" source="algerienneglacehygieniqueentreposagefrigorifique" target="fonciereimmobilierevillealger">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e48" source="cheminsferestalgerien" target="fonciereimmobilierevillealger">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e49" source="banquealgerie" target="phosphatesconstantine">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e50" source="fonciereimmobilierefranceafriquenord" target="omniumminesusines">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e51" source="omniumminesusines" target="pfund">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e52" source="algeriennemateriauxconstruction" target="nordafricaineetudesentreprises">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e53" source="africainearmement" target="constructionelectrique">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e54" source="africainearmement" target="hutchinson">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e55" source="cenpasoccentraleusinespapiers" target="fichet">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e56" source="chaines" target="fichet">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e57" source="constructionelectrique" target="minesbouthaleb">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e58" source="creditfoncieralgerietunisie" target="minesbouthaleb">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e59" source="cenpasoccentraleusinespapiers" target="feutresrok">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e60" source="feutresrok" target="senellemaubeuge">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e61" source="royaleasturienneminesdirection" target="senellemaubeuge">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e62" source="minesalgerietunisieomnium" target="omniumminesalgerietunisie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e63" source="minesalgerietunisieomnium" target="omniumminesusines">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e64" source="minesalgerietunisieomnium" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e65" source="omniumminesalgerietunisie" target="omniumminesusines">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e66" source="minesbouthaleb" target="minieredjendli">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e67" source="minieredjendli" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e68" source="mineschellala" target="minieredjendli">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e69" source="minesouastamesloula" target="minieredjendli">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e70" source="mineszaccar" target="ouenza">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e71" source="minierefrancoafricaine" target="minieremetallurgiquecaronte">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e72" source="desage" target="minieredjendli">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e73" source="essur" target="exploitationforestiereminierepetitekabylie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e74" source="omniumminesalgerietunisie" target="pfund">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e75" source="minesbouthaleb" target="zincguergour">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e76" source="mineszincguergour" target="zincguergour">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e77" source="domainechapeaugendarme" target="nordafricainecimentslafarge">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e78" source="banquealgerie" target="cheminsferroutesalgerie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e79" source="banqueindustrielleafriquenord" target="cheminsferroutesalgerie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e80" source="banqueindustrielleafriquenord" target="zincguergour">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e81" source="cheminsferroutesalgerie" target="zincguergour">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e82" source="manufacturetabacscigarescigarettes" target="manufacturetabacscigarescigarettesbastos">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e83" source="cheminsferroutesalgerie" target="etudescheminfertransafricain">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e84" source="liegeshamendaspetitekabylie" target="nordafricainecimentslafarge">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e85" source="caisseagricoletlemcen" target="creditagricoletlemcen">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e86" source="minesboudjoudoun" target="minieredjebelfelten">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e87" source="algerienne" target="cheminsferroutesalgerie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e88" source="algerienne" target="minesouastamesloula">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e89" source="vignoblesalgeriens" target="vignoblesmediterranee">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e90" source="vignoblesalgeriens" target="vinsmidialgerie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e91" source="chauxcimentsrivetalger" target="nordafricainecimentslafarge">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e92" source="concessionnaireouenza" target="minessidimarouf">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e93" source="minieredjebelfelten" target="minierenordafriquesaintetienne">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e94" source="domainechapeaugendarme" target="omniumminesalgerietunisie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e95" source="agricolealgeriennebertagna" target="etsbertagna">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e96" source="phosphatesconstantine" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e97" source="abrifamilialoranais" target="minoteriereneesclapezrelizane">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e98" source="acconagealgerien" target="chargeursalgeriensreunis">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e99" source="acconagecharbonnagejullian" target="charbonnierenordafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e100" source="africainetravaux" target="charbonnage">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e101" source="africainetravaux" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e102" source="africainetravaux" target="foncieremediterranee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e103" source="charbonnage" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e104" source="charbonnage" target="foncieremediterranee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e105" source="africainetravaux" target="velvetrum">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e106" source="africaineliegealgerhusseindeyazazga" target="algerienneeclairageforce">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e107" source="africaineminestransports" target="banquealgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e108" source="banquealgerie" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e109" source="airliquide" target="algerienneglacehygieniqueentreposagefrigorifique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e110" source="airliquide" target="distilleriebadoilmustapha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e111" source="airliquide" target="expansionnordafricaine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e112" source="distilleriebadoilmustapha" target="expansionnordafricaine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e113" source="airliquide" target="eclairagescommunaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e114" source="airliquide" target="ascenseursmontechargeshydrauliquesvillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e115" source="akkaresbelezma" target="algerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e116" source="alfa" target="cheddites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e117" source="alfa" target="hydroelectriqueafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e118" source="alfa" target="expansionnordafricaine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e119" source="alfa" target="palestro">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e120" source="alfa" target="algerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e121" source="alfasocfabricationpatescellulose" target="algerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e122" source="alfa" target="liege">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e123" source="aldegue" target="alfasocfabricationpatescellulose">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e124" source="alfasocfabricationpatescellulose" target="algeriennesels">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e125" source="alfasocfabricationpatescellulose" target="mullerpasse19261928souscontrolegraengesberg">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e126" source="achaque" target="alfa">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e127" source="algerienneeclairageforce" target="cheminsferestalgerien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e128" source="algerienneeclairageforce" target="fournituresmilitaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e129" source="cheminsferestalgerien" target="fournituresmilitaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e130" source="algerienneeclairageforce" target="cellulosesafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e131" source="algerienneeclairageforce" target="algeriennenavigationafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e132" source="algerienneeclairageforce" target="constructionelectrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e133" source="algerienneeclairageforce" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e134" source="algeriennenavigationafriquenord" target="constructionelectrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e135" source="algeriennenavigationafriquenord" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e136" source="algeriennenavigationafriquenord" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e137" source="algeriennenavigationafriquenord" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e138" source="constructionelectrique" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e139" source="constructionelectrique" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e140" source="regiefoncierevillealger" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e141" source="algerienneeclairageforce" target="foncieremediterranee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e142" source="algerienneeclairageforce" target="cheminsferroutesalgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e143" source="algerienneglacehygieniqueentreposagefrigorifique" target="mineschabetkohol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e144" source="algerienneglacehygieniqueentreposagefrigorifique" target="creditfoncieragricolealgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e145" source="algerienneglacehygieniqueentreposagefrigorifique" target="distilleriebadoilmustapha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e146" source="creditfoncieragricolealgerie" target="distilleriebadoilmustapha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e147" source="algerienneglacehygieniqueentreposagefrigorifique" target="brasseriemalteriealgeriennemustaphainferieur">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e148" source="algerienneglacehygieniqueentreposagefrigorifique" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e149" source="brasseriemalteriealgeriennemustaphainferieur" target="cheminsferestalgerien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e150" source="brasseriemalteriealgeriennemustaphainferieur" target="fonciereimmobilierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e151" source="brasseriemalteriealgeriennemustaphainferieur" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e152" source="cheminsferestalgerien" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e153" source="fonciereimmobilierevillealger" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e154" source="algeriennenavigationafriquenordcharlesschiaffino" target="docksoran">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e155" source="algeriennenavigationafriquenordcharlesschiaffino" target="banquealgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e156" source="algeriennenavigationafriquenordcharlesschiaffino" target="banqueindustrielleafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e157" source="algeriennenavigationafriquenordcharlesschiaffino" target="compagniesregionalesreuniesfabriquesengraisproduitschimiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e158" source="algeriennenavigationafriquenordcharlesschiaffino" target="fonciereimmobilierefranceafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e159" source="algeriennenavigationafriquenordcharlesschiaffino" target="omniumminesusines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e160" source="algeriennenavigationafriquenordcharlesschiaffino" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e161" source="algeriennenavigationafriquenordcharlesschiaffino" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e162" source="banquealgerie" target="compagniesregionalesreuniesfabriquesengraisproduitschimiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e163" source="banquealgerie" target="fonciereimmobilierefranceafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e164" source="banquealgerie" target="omniumminesusines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e165" source="banquealgerie" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e166" source="banqueindustrielleafriquenord" target="compagniesregionalesreuniesfabriquesengraisproduitschimiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e167" source="banqueindustrielleafriquenord" target="fonciereimmobilierefranceafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e168" source="banqueindustrielleafriquenord" target="omniumminesusines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e169" source="banqueindustrielleafriquenord" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e170" source="banqueindustrielleafriquenord" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e171" source="compagniesregionalesreuniesfabriquesengraisproduitschimiques" target="fonciereimmobilierefranceafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e172" source="compagniesregionalesreuniesfabriquesengraisproduitschimiques" target="omniumminesusines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e173" source="compagniesregionalesreuniesfabriquesengraisproduitschimiques" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e174" source="compagniesregionalesreuniesfabriquesengraisproduitschimiques" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e175" source="fonciereimmobilierefranceafriquenord" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e176" source="fonciereimmobilierefranceafriquenord" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e177" source="algeriennenavigationafriquenord" target="millaul">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e178" source="algeriennenavigationafriquenord" target="omniumminesalgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e179" source="algeriennenavigationafriquenord" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e180" source="algeriennemateriauxconstruction" target="secteurelectriquevoutesalger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e181" source="nordafricaineetudesentreprises" target="secteurelectriquevoutesalger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e182" source="algeriennepetrolesstandard" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e183" source="africainearmement" target="expansionnordafricaine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e184" source="chaines" target="sidikamber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e185" source="cenpasoccentraleusinespapiers" target="chaines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e186" source="chaines" target="manufacturetapisorient">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e187" source="fichet" target="manufacturetapisorient">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e188" source="chaines" target="senellemaubeuge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e189" source="chaines" target="tissagesmecaniquesisere">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e190" source="senellemaubeuge" target="tissagesmecaniquesisere">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e191" source="constructionelectrique" target="etudescheminfertransafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e192" source="constructionelectrique" target="leach">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e193" source="creditfoncieralgerietunisie" target="etudescheminfertransafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e194" source="creditfoncieralgerietunisie" target="leach">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e195" source="etudescheminfertransafricain" target="leach">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e196" source="etudescheminfertransafricain" target="minesbouthaleb">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e197" source="etudescheminfertransafricain" target="mineschabetkohol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e198" source="leach" target="minesbouthaleb">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e199" source="leach" target="mineschabetkohol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e200" source="cheminsferroutesalgerie" target="constructionelectrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e201" source="cheminsferroutesalgerie" target="minesbouthaleb">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e202" source="cheminsferroutesalgerie" target="mineschabetkohol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e203" source="constructionelectrique" target="entreprisealgerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e204" source="constructionelectrique" target="petolatdijon">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e205" source="constructionelectrique" target="petrolestliouanet">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e206" source="constructionelectrique" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e207" source="creditfoncieralgerietunisie" target="entreprisealgerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e208" source="creditfoncieralgerietunisie" target="petolatdijon">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e209" source="creditfoncieralgerietunisie" target="petrolestliouanet">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e210" source="creditfoncieralgerietunisie" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e211" source="entreprisealgerienne" target="mineschabetkohol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e212" source="entreprisealgerienne" target="petolatdijon">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e213" source="entreprisealgerienne" target="petrolestliouanet">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e214" source="entreprisealgerienne" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e215" source="mineschabetkohol" target="petolatdijon">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e216" source="mineschabetkohol" target="petrolestliouanet">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e217" source="mineschabetkohol" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e218" source="petolatdijon" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e219" source="petrolestliouanet" target="raffineriessoufrereunies">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e220" source="constructionelectrique" target="creditfoncieragricolealgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e221" source="constructionelectrique" target="domainequatrechemins">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e222" source="creditfoncieralgerietunisie" target="domainequatrechemins">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e223" source="carrosseriemoderne" target="cellulosesafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e224" source="carrosseriemoderne" target="constructionelectrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e225" source="carrosseriemoderne" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e226" source="cellulosesafriquenord" target="constructionelectrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e227" source="cellulosesafriquenord" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e228" source="cenpasoccentraleusinespapiers" target="houplain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e229" source="feutresrok" target="houplain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e230" source="feutresrok" target="sidikamber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e231" source="feutresrok" target="royaleasturienneminesdirection">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e232" source="cenpasoccentraleusinespapiers" target="tramwaysalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e233" source="feutresrok" target="fichet">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e234" source="feutresrok" target="tramwaysalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e235" source="fichet" target="senellemaubeuge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e236" source="fichet" target="tramwaysalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e237" source="senellemaubeuge" target="tramwaysalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e238" source="fichet" target="velvetrum">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e239" source="houplain" target="manufacturetapisorient">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e240" source="hydroelectriqueafriquenord" target="leach">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e241" source="fonciereimmobilierefranceafriquenord" target="minesalgerietunisieomnium">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e242" source="fonciereimmobilierefranceafriquenord" target="omniumminesalgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e243" source="fonciereimmobilierefranceafriquenord" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e244" source="omniumminesalgerietunisie" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e245" source="omniumminesusines" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e246" source="minesalgerietunisieomnium" target="minesbouthaleb">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e247" source="minesalgerietunisieomnium" target="minieredjendli">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e248" source="minesalgerietunisieomnium" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e249" source="minesbouthaleb" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e250" source="minesbouthaleb" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e251" source="minesbouthaleb" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e252" source="minieredjendli" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e253" source="minieredjendli" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e254" source="pfund" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e255" source="phosphatesconstantine" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e256" source="millaul" target="minesalgerietunisieomnium">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e257" source="minesbouthaleb" target="minesoranie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e258" source="mineschabetkohol" target="minesoranie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e259" source="minesbouthaleb" target="mineschellala">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e260" source="minesbouthaleb" target="minesferrouina">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e261" source="mineschellala" target="minesferrouina">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e262" source="mineschellala" target="minesouastamesloula">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e263" source="minesferrouina" target="minesouastamesloula">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e264" source="minesferrouina" target="minieredjendli">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e265" source="minesdjebelguendou" target="minesoranie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e266" source="minesguelma" target="minesoranie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e267" source="minesouastamesloula" target="mineszaccar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e268" source="minesouastamesloula" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e269" source="petolatdijon" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e270" source="petolatdijon" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e271" source="petrolestliouanet" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e272" source="petrolestliouanet" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e273" source="petolatdijon" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e274" source="petolatdijon" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e275" source="petrolestliouanet" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e276" source="petrolestliouanet" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e277" source="unionelectriquegaziereafriquenord" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e278" source="algerienneproduitschimiquesengrais" target="petolatdijon">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e279" source="banquealgerie" target="centraleusinespapier">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e280" source="banquealgerie" target="sanhadja">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e281" source="centraleusinespapier" target="sanhadja">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e282" source="manufacturetapisorient" target="senellemaubeuge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e283" source="cenpasoccentraleusinespapiers" target="palestro">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e284" source="palestro" target="senellemaubeuge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e285" source="cheddites" target="manufacturetapisorient">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e286" source="cenpasoccentraleusinespapiers" target="sidikamber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e287" source="cenpasoccentraleusinespapiers" target="tissagesmecaniquesisere">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e288" source="manufacturetapisorient" target="sidikamber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e289" source="manufacturetapisorient" target="tissagesmecaniquesisere">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e290" source="sidikamber" target="tissagesmecaniquesisere">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e291" source="tissagesmecaniquesisere" target="tramwaysalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e292" source="minesfer" target="tramwaysalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e293" source="desage" target="tramwaysalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e294" source="palestro" target="velvetrum">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e295" source="etudescheminfertransafricain" target="internationalewagonslits">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e296" source="achaque" target="palestro">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e297" source="achaque" target="sidikamber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e298" source="carrosseriemoderne" target="domainequatrechemins">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e299" source="clement" target="phosphatesdyr">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e300" source="algerienne" target="omniumminesalgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e301" source="algerienne" target="tramwayselectriquesoran">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e302" source="clement" target="omniumminesalgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e303" source="clement" target="tramwayselectriquesoran">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e304" source="omniumminesalgerietunisie" target="tramwayselectriquesoran">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e305" source="condat" target="millaul">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e306" source="entreprisealgerienne" target="etudescheminfertransafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e307" source="entreprisemaritimecommerciale" target="etudescheminfertransafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e308" source="cheminsferroutesalgerie" target="entreprisealgerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e309" source="cheminsferroutesalgerie" target="entreprisemaritimecommerciale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e310" source="entreprisealgerienne" target="ouledsellemainsmara">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e311" source="hydrauliqueafrique" target="manufacturetabacscigarescigarettes">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e312" source="hydrauliqueafrique" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e313" source="manufacturetabacscigarescigarettes" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e314" source="hydrauliqueafrique" target="immobilierebone">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e315" source="millaul" target="pfund">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e316" source="minesbouthaleb" target="minessoumahtafna">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e317" source="minesouastamesloula" target="minessoumahtafna">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e318" source="minesbouthaleb" target="mselati">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e319" source="domainechapeaugendarme" target="mselati">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e320" source="domainechapeaugendarme" target="nordafricaincommercial">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e321" source="mselati" target="nordafricainecimentslafarge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e322" source="nordafricaincommercial" target="nordafricainecimentslafarge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e323" source="concessionnaireouenza" target="mselati">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e324" source="concessionnaireouenza" target="nordafricaincommercial">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e325" source="ascenseursmontechargeshydrauliquesvillealger" target="minierenordafriquesaintetienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e326" source="banquealgerie" target="creditalgerien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e327" source="banquealgerie" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e328" source="banquealgerie" target="manufacturetabacscigarescigarettesbastos">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e329" source="banquealgerie" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e330" source="banqueindustrielleafriquenord" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e331" source="banqueindustrielleafriquenord" target="manufacturetabacscigarescigarettesbastos">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e332" source="cheminsferroutesalgerie" target="manufacturetabacscigarescigarettesbastos">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e333" source="creditfoncieralgerietunisie" target="manufacturetabacscigarescigarettesbastos">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e334" source="creditfoncieralgerietunisie" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e335" source="manufacturetabacscigarescigarettesbastos" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e336" source="aeriennefrancealgerie" target="banquealgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e337" source="aeriennefrancealgerie" target="banqueindustrielleafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e338" source="banquealgerie" target="cheminfertranssaharien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e339" source="algerienneproduitschimiquesengrais" target="manufacturetabacscigarescigarettesbastos">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e340" source="banqueindustrielleafriquenord" target="manufacturetabacscigarescigarettes">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e341" source="manufacturetabacscigarescigarettes" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e342" source="domainechapeaugendarme" target="manufacturetabacscigarescigarettes">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e343" source="manufacturetabacscigarescigarettes" target="nordafricainecimentslafarge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e344" source="benedictinefecamp" target="cheminsferestalgerien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e345" source="banqueindustrielleafriquenord" target="etudescheminfertransafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e346" source="banqueindustrielleafriquenord" target="commercialeminiereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e347" source="banqueindustrielleafriquenord" target="liegeshamendaspetitekabylie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e348" source="banqueindustrielleafriquenord" target="nordafricainecimentslafarge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e349" source="commercialeminiereafriquenord" target="liegeshamendaspetitekabylie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e350" source="commercialeminiereafriquenord" target="nordafricainecimentslafarge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e351" source="banqueindustrielleafriquenord" target="centraleusinespapier">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e352" source="brasseriemalteriealgeriennemustaphainferieur" target="distilleriebadoilmustapha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e353" source="carrieresalgeroises" target="cheminsferroutesalgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e354" source="carrieresalgeroises" target="domainechapeaugendarme">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e355" source="cheminsferroutesalgerie" target="domainechapeaugendarme">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e356" source="carrieresalgeroises" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e357" source="cellulosesafriquenord" target="creditalgerien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e358" source="cellulosesafriquenord" target="gisementsphosphatiersbordjrdir">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e359" source="centraleusinespapier" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e360" source="centraleusinespapier" target="minieredjebelfelten">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e361" source="centralephosphates" target="centralephosphatesbordjrdir">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e362" source="minesboudjoudoun" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e363" source="algerienneproduitschimiquesengrais" target="minesouastamesloula">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e364" source="cheminsferroutesalgerie" target="minesouastamesloula">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e365" source="algerienneproduitschimiquesengrais" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e366" source="cheminsferroutesalgerie" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e367" source="cheminsferroutesalgerie" target="vignoblesalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e368" source="cheminsferroutesalgerie" target="vignoblesmediterranee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e369" source="cheminsferroutesalgerie" target="vinsmidialgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e370" source="minieredjebelfelten" target="vignoblesalgeriens">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e371" source="minieredjebelfelten" target="vignoblesmediterranee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e372" source="minieredjebelfelten" target="vinsmidialgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e373" source="vignoblesmediterranee" target="vinsmidialgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e374" source="algeriennecreditbanque" target="algerienneproduitschimiquesengrais">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e375" source="algeriennecreditbanque" target="cheminsferroutesalgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e376" source="etudescheminfertransafricain" target="phosphatesdjebelonk">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e377" source="etudescheminfertransafricain" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e378" source="phosphatesdjebelonk" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e379" source="charbonnierenordafricain" target="chargeursalgeriensreunis">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e380" source="chargeursalgeriensreunis" target="chauxcimentsouedfergoug">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e381" source="algerienne" target="cheminsferouestalgerien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e382" source="algerienne" target="fournituresmilitaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e383" source="cheminsferouestalgerien" target="fournituresmilitaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e384" source="cheminsferouestalgerien" target="phosphatesdyr">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e385" source="fournituresmilitaires" target="phosphatesdyr">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e386" source="aeriennefrancealgerie" target="reseauaerientransafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e387" source="algerienne" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e388" source="algeriennecreditbanque" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e389" source="foncieremediterranee" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e390" source="commercialeacconage" target="commercialearmement">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e391" source="algerienneproduitschimiquesengrais" target="commercialeacconage">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e392" source="algerienneproduitschimiquesengrais" target="oranaisecharbonnages">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e393" source="commercialeacconage" target="oranaisecharbonnages">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e394" source="algerienne" target="immobilierealgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e395" source="algerienne" target="entreprisemaritimecommerciale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e396" source="concessionnaireouenza" target="mineszaccar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e397" source="creditalgerien" target="minesferrouina">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e398" source="creditalgerien" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e399" source="creditalgerien" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e400" source="creditalgerien" target="industriellepetrolesafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e401" source="creditfoncieragricolealgerie" target="creditfoncieralgerietunisie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e402" source="creditfoncieragricolealgerie" target="fonciereimmobilierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e403" source="creditfoncieralgerietunisie" target="fonciereimmobilierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e404" source="algerienneproduitschimiquesengrais" target="phosphatesdyr">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e405" source="creditfoncieralgerietunisie" target="phosphatesdyr">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e406" source="minesbouthaleb" target="minieredjebelfelten">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e407" source="minesbouthaleb" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e408" source="minieredjebelfelten" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e409" source="domainechapeaugendarme" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e410" source="domainechapeaugendarme" target="industriellepetrolesafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e411" source="domainechapeaugendarme" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e412" source="industriellepetrolesafriquenord" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e413" source="domainechapeaugendarme" target="entreprises">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e414" source="distributionenergieelectrique" target="domainesafricains">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e415" source="entreprisemaritimecommerciale" target="oranaisechauxcimentsoranarcole">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e416" source="agricolealgeriennebertagna" target="filtreriefrancoalgerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e417" source="etsbertagna" target="filtreriefrancoalgerienne">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e418" source="agricolealgeriennebertagna" target="phosphatesconstantine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e419" source="agricolealgeriennebertagna" target="unioncompagniesregionalesreuniesfabriquesengrais">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e420" source="agricolealgeriennebertagna" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e421" source="phosphatesconstantine" target="unioncompagniesregionalesreuniesfabriquesengrais">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e422" source="fonciereimmobilierevillealger" target="francoasiatiquepetrolesalgerie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e423" source="fonciereimmobilierevillealger" target="sidikamber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e424" source="francoasiatiquepetrolesalgerie" target="sidikamber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e425" source="fonciereimmobilierevillealger" target="phosphatesdyr">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e426" source="industriellepetrolesafriquenord" target="liegeshamendaspetitekabylie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e427" source="industriellepetrolesafriquenord" target="nordafricainecimentslafarge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e428" source="industriellepetrolesafriquenord" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e429" source="liegeshamendaspetitekabylie" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e430" source="nordafricainecimentslafarge" target="regiefoncierevillealger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e431" source="fusionneeliegeshamendaspetitekabylie" target="liegesproduitsnordafricainsalgerusinebouchonsbone">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e432" source="minieremzaita" target="phosphatesmzaita">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e433" source="minieremzaita" target="unioncompagniesregionalesreuniesfabriquesengrais">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e434" source="minieremzaita" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e435" source="marmaro" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e436" source="mineschellala" target="minesguelma">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e437" source="mineschellala" target="minesdjebelforer">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e438" source="minesfermilliana" target="minesferrouina">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e439" source="minieredjendli" target="zincguergour">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e440" source="minieredjendli" target="tramwayselectriquesoran">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e441" source="raffineriessoufrereunies" target="vignoblesmediterranee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e442" source="regiefoncierevillealger" target="secteurelectriquevoutesalger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e443" source="regiefoncierevillealger" target="tramwayselectriquesoran">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e444" source="agricolefinancierealgerie" target="uniontransafricaine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e445" source="algerienneproduitschimiquesengrais" target="ouenza">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e446" source="unioncompagniesregionalesreuniesfabriquesengrais" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e447" source="unionelectriquegaziereafriquenord" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

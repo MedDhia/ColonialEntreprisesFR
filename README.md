@@ -73,6 +73,24 @@ best-connected directors, the densest interlocks, sectoral and temporal
 distributions, and a traced provenance chain from one tie back to its source
 citation.
 
+### Working with one territory
+
+`data/by_country/<slug>/` and `data/by_region/<slug>/` hold self-contained
+bundles — same columns as the top-level files, restricted to that territory,
+with nodes and edges recomputed from its ties alone and a ready GraphML:
+
+```python
+mad = pd.read_csv("data/by_country/madagascar/edges_person_company.csv")
+G   = nx.read_graphml("data/by_country/madagascar/company_interlock.graphml")
+```
+
+`person_id` and `company_id` match the top-level files, so bundles are
+directly comparable. Ties partition across bundles; **nodes do not** — 21% of
+people appear in more than one territory, so node counts must not be summed.
+`territory_manifest.csv` reports each territory's counts and how much of its
+elite is shared with others (0.29 for Morocco and Indochina, 0.72 for
+Senegal).
+
 ### Which edge file to use
 
 Start from **`edges_person_company.csv`** — everything else is derived from it.
@@ -91,9 +109,12 @@ src/
   fetch_extract.py     stage 2  PDFs         -> plain text
   parse_ties.py        stage 3  text         -> companies, people, dated ties
   build_network.py     stage 4  ties         -> nodes, edges, projections, GraphML
-  checks.py            116 assertions on the parsers and the built dataset
+  split_by_country.py  stage 5  dataset      -> per-territory bundles
+  checks.py            139 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
+  by_country/          per-country bundles (54 territories)
+  by_region/           per-region bundles (12 index-page groupings)
   reference/           place and forename lists used by the parsers
   graphs/              GraphML exports
   text/                extracted plain text (not versioned; reproducible)
@@ -112,6 +133,7 @@ python3 src/fetch_extract.py                  # ~1.5 h, ~21 GB transferred, resu
 python3 src/fetch_extract.py --retry-failed   # sweep transient network errors
 python3 src/parse_ties.py                     # ~6 min
 python3 src/build_network.py                  # ~3 min
+python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/checks.py                         # must pass
 ```
 

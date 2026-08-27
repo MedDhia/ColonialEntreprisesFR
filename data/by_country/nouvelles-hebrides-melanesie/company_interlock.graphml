@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="agricoleminierenouvelleshebrides">
+      <data key="n_label">Compagnie Agricole et minière des Nouvelles-Hébrides</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="colonialeetablissementsnhagen">
+      <data key="n_label">Compagnie coloniale des Établissements N. Hagen</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="colonialeilesbanks">
+      <data key="n_label">Compagnie Coloniale des îles Banks</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="colonialevate">
+      <data key="n_label">Compagnie Coloniale de Vaté</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="comptoirsnouvelleshebrides">
+      <data key="n_label">Comptoirs français des Nouvelles-Hébrides</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="cotonnierenouvelleshebrides">
+      <data key="n_label">Compagnie Cotonnière des Nouvelles-Hébrides, puis Plantations réunies des Nouvelles-Hébrides</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="francohebridaise">
+      <data key="n_label">Compagnie Générale Franco-hébridaise</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="ilespacifique">
+      <data key="n_label">Société Française des îles du Pacifique</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="nouvelleshebrides">
+      <data key="n_label">Société française des Nouvelles-Hébrides</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="nouvelleshebridesgeneralitesnouvelleshebrides">
+      <data key="n_label">Société Française des Nouvelles-Hébrides . — Généralités sur les Nouvelles-Hébrides</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <node id="soufrieresvanualavailesbanks">
+      <data key="n_label">Société française des Soufrières de Vanua-Lava, îles Banks</data>
+      <data key="n_sectors">Entreprises diverses</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
+    </node>
+    <edge id="e0" source="agricoleminierenouvelleshebrides" target="colonialevate">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e1" source="agricoleminierenouvelleshebrides" target="francohebridaise">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e2" source="colonialevate" target="francohebridaise">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e3" source="colonialeetablissementsnhagen" target="colonialevate">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e4" source="colonialeetablissementsnhagen" target="francohebridaise">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e5" source="colonialeetablissementsnhagen" target="colonialeilesbanks">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e6" source="agricoleminierenouvelleshebrides" target="colonialeilesbanks">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e7" source="colonialeilesbanks" target="colonialevate">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e8" source="comptoirsnouvelleshebrides" target="ilespacifique">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e9" source="agricoleminierenouvelleshebrides" target="colonialeetablissementsnhagen">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e10" source="agricoleminierenouvelleshebrides" target="cotonnierenouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e11" source="colonialevate" target="cotonnierenouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e12" source="cotonnierenouvelleshebrides" target="francohebridaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e13" source="colonialeilesbanks" target="francohebridaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e14" source="colonialeetablissementsnhagen" target="ilespacifique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e15" source="colonialeilesbanks" target="ilespacifique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e16" source="cotonnierenouvelleshebrides" target="ilespacifique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e17" source="cotonnierenouvelleshebrides" target="nouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e18" source="ilespacifique" target="nouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e19" source="nouvelleshebridesgeneralitesnouvelleshebrides" target="soufrieresvanualavailesbanks">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e20" source="nouvelleshebrides" target="nouvelleshebridesgeneralitesnouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="antillaiseculturecommerce">
+      <data key="n_label">Société de Antillaise de Culture et de commerce</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="banqueauxiliairecoloniale">
+      <data key="n_label">Banque auxiliaire coloniale</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="banqueguadeloupe">
+      <data key="n_label">Banque de la Guadeloupe</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="banquemartinique">
+      <data key="n_label">Banque de la Martinique</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="commercialeantillesfrancaisesfredtanon">
+      <data key="n_label">Compagnie Commerciale des Antilles françaises Fréd. Tanon et Cie</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="commercialeantillesfrancaisesftanon">
+      <data key="n_label">Cie commerciale des Antilles françaises F. Tanon et Cie</data>
+      <data key="n_sectors">Divers; Documentation générale</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="desirade">
+      <data key="n_label">Sté de la Désirade</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="electricitefortfrance">
+      <data key="n_label">Cie d'Électricité de Fort-de-France</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="etablissementsdarboussierindustrielleagricolepointepitre">
+      <data key="n_label">Établissements Darboussier Sté industrielle et agricole de la Pointe-à-Pitre</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="felixhubert">
+      <data key="n_label">Félix Hubert</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="francocolonialeantillaise">
+      <data key="n_label">Sté franco-coloniale antillaise</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="guadeloupeennedistributionenergieelectrique">
+      <data key="n_label">Compagnie Guadeloupéenne de distribution d'énergie électrique</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="industrielleagricolepointepitre">
+      <data key="n_label">Société Industrielle et Agricole de La Pointe-à-Pitre</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">29</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="industrielleagricolepointepitreetablissements">
+      <data key="n_label">Société industrielle et agricole de la Pointe-à-Pitre (Établissements</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="martiniquaisedistributionenergieelectrique">
+      <data key="n_label">Compagnie Martiniquaise de distribution d'énergie électrique</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="martiniquaisedistributionenergieelectriquejardin">
+      <data key="n_label">Cie martiniquaise de distribution d'énergie électrique, Jardin</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="terre">
+      <data key="n_label">TERRE</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="unionbananieremartiniquaise">
+      <data key="n_label">Union bananière martiniquaise</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <edge id="e0" source="guadeloupeennedistributionenergieelectrique" target="terre">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e1" source="etablissementsdarboussierindustrielleagricolepointepitre" target="industrielleagricolepointepitre">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e2" source="martiniquaisedistributionenergieelectrique" target="martiniquaisedistributionenergieelectriquejardin">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e3" source="antillaiseculturecommerce" target="desirade">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e4" source="industrielleagricolepointepitre" target="industrielleagricolepointepitreetablissements">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e5" source="guadeloupeennedistributionenergieelectrique" target="martiniquaisedistributionenergieelectrique">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e6" source="guadeloupeennedistributionenergieelectrique" target="martiniquaisedistributionenergieelectriquejardin">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e7" source="martiniquaisedistributionenergieelectrique" target="terre">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e8" source="martiniquaisedistributionenergieelectriquejardin" target="terre">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e9" source="banqueauxiliairecoloniale" target="banqueguadeloupe">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e10" source="commercialeantillesfrancaisesfredtanon" target="commercialeantillesfrancaisesftanon">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e11" source="electricitefortfrance" target="guadeloupeennedistributionenergieelectrique">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e12" source="electricitefortfrance" target="martiniquaisedistributionenergieelectrique">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e13" source="electricitefortfrance" target="martiniquaisedistributionenergieelectriquejardin">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e14" source="electricitefortfrance" target="terre">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e15" source="etablissementsdarboussierindustrielleagricolepointepitre" target="industrielleagricolepointepitreetablissements">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e16" source="banquemartinique" target="francocolonialeantillaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e17" source="felixhubert" target="unionbananieremartiniquaise">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

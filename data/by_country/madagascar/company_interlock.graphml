@@ -1,0 +1,2530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="agricoleindustriellemadagascar">
+      <data key="n_label">Compagnie Agricole et Industrielle de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">29</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="agricoleindustrielleminieremadagascar">
+      <data key="n_label">Compagnie Agricole, Industrielle et Minière de Madagascar</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="agricoleindustrielletextilesmadagascar">
+      <data key="n_label">Société agricole et industrielle des textiles de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="agricolemadagascar">
+      <data key="n_label">Société Agricole de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="agricolesambirano">
+      <data key="n_label">Société Agricole du Sambirano</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="agricolesucrierenossibe">
+      <data key="n_label">Compagnie Agricole et Sucrière de Nossi-Bé</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">51</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="agricultureindustriecoloniales">
+      <data key="n_label">Compagnie d'Agriculture et d’industrie coloniales</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="ambilobe">
+      <data key="n_label">AMBILOBE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="andrelefebvre">
+      <data key="n_label">André Lefebvre</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">66</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="angevinemadagascar">
+      <data key="n_label">Sté angevine de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="ankaratra">
+      <data key="n_label">Société de l'Ankaratra</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="arsenesaupiquet">
+      <data key="n_label">Arsène Saupiquet</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="bachel">
+      <data key="n_label">Bachel</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="banquemadagascarcomores">
+      <data key="n_label">Banque de Madagascar et des Comores</data>
+      <data key="n_sectors">Banques et groupes financiers; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="banquespecialemadagascaroceanindien">
+      <data key="n_label">Banque spéciale pour Madagascar Compagnie de l'océan Indien, puis Banque de l'océan Indien, puis Cie de l'océan Indien</data>
+      <data key="n_sectors">Banques et groupes financiers</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="batelagechargeurstamatave">
+      <data key="n_label">Société de batelage des Chargeurs de Tamatave</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="beryl">
+      <data key="n_label">Compagnie Générale du béryl</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="betsibokaambatoboeni">
+      <data key="n_label">La Betsiboka, Ambato-Boéni</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">21</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="cafesmadagascar">
+      <data key="n_label">Les Cafés de Madagascar, puis Malgache de Gérance et d'exploitation</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="cefrancomalgacheentreprises">
+      <data key="n_label">Ce franco-malgache d'entreprises</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="cellulosespapeteriesmadagascar">
+      <data key="n_label">Société des Celluloses et papeteries de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="chantiersateliersbassin">
+      <data key="n_label">Société des Chantiers et ateliers du Bassin</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="charbonnagebatelagemadagascar">
+      <data key="n_label">Compagnie Française de Charbonnage et de batelage de Madagascar</data>
+      <data key="n_sectors">Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="charbonnagessakoa">
+      <data key="n_label">Société des Charbonnages de la Sakoa</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="civilefomboni">
+      <data key="n_label">Sté civile de Fomboni</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="civilefombonimoheli">
+      <data key="n_label">Société civile de Fomboni, MOHÉLI</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="colonialeagricolecommercialeindustriellesucreriescoloniales">
+      <data key="n_label">Société coloniale, agricole, commerciale et industrielle Sucreries coloniales</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="colonialebambao">
+      <data key="n_label">Société Coloniale de Bambao, puis Comores-Bambao</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="colonialebambaobambao">
+      <data key="n_label">Société coloniale de Bambao, BAMBAO</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="colonialemadagascar">
+      <data key="n_label">Compagnie Coloniale Française de Madagascar</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">21</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commerce">
+      <data key="n_label">Compagnie Générale de commerce</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">42</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commerceexterieur">
+      <data key="n_label">Société générale de commerce extérieur</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commercemadagascar">
+      <data key="n_label">Compagnie Générale de Commerce à Madagascar</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commercenavigationmadagascar">
+      <data key="n_label">Société Française de Commerce et de navigation à Madagascar, puis Française de Commerce à Madagascar</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commercialeelevagemassifambre">
+      <data key="n_label">Sté commerciale d'élevage du Massif d'Ambre</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commercialemadagascar">
+      <data key="n_label">Compagnie Commerciale de Madagascar</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commission">
+      <data key="n_label">COMMISSION</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="commissionconsignationcoloniales">
+      <data key="n_label">Société de commission et de consignation coloniales</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="comptoirnationalescompteparis">
+      <data key="n_label">Comptoir national d'Escompte de Paris</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">21</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="comptoirscoloniauxchiris">
+      <data key="n_label">Comptoirs coloniaux Chiris</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="comptoirsextremeorientpoinsardveyretmaisonachat">
+      <data key="n_label">Comptoirs d'Extrême-Orient Poinsard et Veyret, Maison d'achat</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="conservesalimentairesmontagneambre">
+      <data key="n_label">Société des Conserves alimentaires de la Montagne d’Ambre</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">23</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="constructions">
+      <data key="n_label">CONSTRUCTIONS</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="cotieremadagascar">
+      <data key="n_label">Compagnie Côtière de Madagascar</data>
+      <data key="n_sectors">Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="creditfonciermadagascar">
+      <data key="n_label">Crédit foncier de Madagascar</data>
+      <data key="n_sectors">Banques et groupes financiers; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">33</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="creditfonciermadagascarcreditfonciermadagascarreunion">
+      <data key="n_label">Crédit foncier de Madagascar, Crédit foncier de Madagascar et de la Réunion</data>
+      <data key="n_sectors">Banques et groupes financiers</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="culture">
+      <data key="n_label">CULTURE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="cultureelevagemadagascarnord">
+      <data key="n_label">Société de Culture et d'élevage de Madagascar-Nord</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="culturescoloniales">
+      <data key="n_label">Cie de cultures coloniales</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="domaineankaratrasucrieremahavavy">
+      <data key="n_label">Domaine de l'Ankaratra Société sucrière de la Mahavavy</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="domainesppineltabacsoleagineuxmadagascar">
+      <data key="n_label">Domaines P. Pinel Société des tabacs et oléagineux de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="eauxelectricitemadagascar">
+      <data key="n_label">Compagnie des Eaux et électricité de Madagascar, puis exploitation directe de l'Énergie industrielle</data>
+      <data key="n_sectors">Eau et assainissement, électricité (Utilities)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="electriciteeauxmadagascar">
+      <data key="n_label">Électricité et eaux de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Eau et assainissement, électricité (Utilities)</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="electriciteentreprisesmadagascar">
+      <data key="n_label">Société d'électricité et d'entreprises à Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Eau et assainissement, électricité (Utilities)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="elevagepecheindustriemadagascar">
+      <data key="n_label">Société pour l'Élevage, la pêche et l'industrie à Madagascar</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="emileranarivelo">
+      <data key="n_label">Émile Ranarivelo</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">33</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="emyrne">
+      <data key="n_label">EMYRNE</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="energieindustrielle">
+      <data key="n_label">L'Énergie industrielle</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="entreprisesmaritimesmadagascar">
+      <data key="n_label">Société d'Entreprises Maritimes de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="etablissementscoloniauxrhaugou">
+      <data key="n_label">Établissements coloniaux R. Haugou</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="etablissementsemiledammann">
+      <data key="n_label">Société nouvelle des Établissements Émile Dammann (Ancienne</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="etablissementsgratry">
+      <data key="n_label">Sté anon. des Établissements Gratry</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="exploitationgraphitesmadagascar">
+      <data key="n_label">Société d'Exploitation des graphites de Madagascar</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="exploitationminesorsihanaka">
+      <data key="n_label">Sté anon. d'exploitation des mines d'or de Sihanaka</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="faraonyexploitatonplacersauriferesmadagascar">
+      <data key="n_label">Cie du Faraony pour l'exploitaton de placers aurifères à Madagascar</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="fianarantsoa">
+      <data key="n_label">FIANARANTSOA</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="filaturetissagemadagascar">
+      <data key="n_label">Société de filature et de tissage de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="financieremadagascar">
+      <data key="n_label">Société Financière de Madagascar</data>
+      <data key="n_sectors">Banques et groupes financiers</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="florensorville">
+      <data key="n_label">Florens Orville</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="flottes">
+      <data key="n_label">FLOTTES</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="fonciereindustriellecommercialemadagascar">
+      <data key="n_label">Cie foncière, industrielle et commerciale de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="foncieremadagascar">
+      <data key="n_label">Cie générale de FONCIÈRE. MADAGASCAR</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="fonciereminieremadagascar">
+      <data key="n_label">Compagnie Foncière et Minière de Madagascar, puis Foncière, Industrielle et Commerciale de Madagascar, puis Société malgache d'entreprises industrielles</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="foncieresudmadagascar">
+      <data key="n_label">Société Foncière du Sud de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="forestiereminieremadagascar">
+      <data key="n_label">Compagnie Forestière-Minière à Madagascar</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="francoantankare">
+      <data key="n_label">Société Franco-Antankare</data>
+      <data key="n_sectors">Banques et groupes financiers</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="francomalgache">
+      <data key="n_label">Compagnie Générale Franco-malgache</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="francomalgachecommissionconsignation">
+      <data key="n_label">Société franco-malgache de commission et consignation</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="francomalgacheentreprises">
+      <data key="n_label">Cie Franco-Malgache d'Entreprises</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries</data>
+      <data key="n_n_directors">29</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="gallois">
+      <data key="n_label">Gallois</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="gemmesmadagascar">
+      <data key="n_label">Société des Gemmes de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="gisementsauriferesanasaha">
+      <data key="n_label">Société Gisements aurifères d'Anasaha</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="grandeile">
+      <data key="n_label">Société La Grande Île</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries</data>
+      <data key="n_n_directors">32</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="grandelle">
+      <data key="n_label">Grande lle</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="grandsdomainesmadagascar">
+      <data key="n_label">Les Grands Domaines de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="graphites">
+      <data key="n_label">Société Générale des Graphites</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">28</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="graphitesankaratra">
+      <data key="n_label">Société des Graphites et de l'Ankaratra</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="graphitesmashar">
+      <data key="n_label">Graphites Mashar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="graphitesmaskar">
+      <data key="n_label">« Graphites Maskar »</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="graphitessahanavo">
+      <data key="n_label">Société des Graphites de la Sahanavo, puis Sahanavo, société malgache d'exploitations minières</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">33</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="ileskerguelensaintpaulamsterdam">
+      <data key="n_label">Cie générale des Iles Kerguelen, Saint-Paul et Amsterdam</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="ilesmalgaches">
+      <data key="n_label">Société des Îles malgaches, puis Syndicat des îles malgaches</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">26</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="importationsexportationscommission">
+      <data key="n_label">Société d'importations, d'exportations et de commission</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="industriellecommercialeemyrne">
+      <data key="n_label">Société Industrielle et Commerciale de l'Émyrne</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">30</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="industriellefortdauphin">
+      <data key="n_label">Société industrielle de Fort-Dauphin</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="industrieparfumsproduitschimiques">
+      <data key="n_label">Société pour l'industrie des parfums et des produits chimiques</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="leonkrafit">
+      <data key="n_label">Léon Krafit</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="lyonnaisemadagascar">
+      <data key="n_label">Compagnie Lyonnaise de Madagascar</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">34</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagascar">
+      <data key="n_label">Compagnie Générale de Madagascar, puis Compagnie générale de Madagascar-France</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagascarautomobile">
+      <data key="n_label">Madagascar-automobile</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagascarautomobiletananariverenault">
+      <data key="n_label">Madagascar-Automobile, Tananarive. Renault</data>
+      <data key="n_sectors">Transports terrestres et garages</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagascarnord">
+      <data key="n_label">MADAGASCAR-NORD</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagascaroildevelopmentcoltd">
+      <data key="n_label">Madagascar Oil development Co Ltd</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagascaroildevelopmentcoltd11pancraslanelondresec">
+      <data key="n_label">Madagascar Oil development Co Ltd 11, Pancras Lane, LONDRES E.C</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagaskara">
+      <data key="n_label">Madagaskara</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="madagor">
+      <data key="n_label">Madagor</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="magasinsgenerauxentrepotsmadagascar">
+      <data key="n_label">Société des Magasins généraux et entrepôts de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="mahajamba">
+      <data key="n_label">La Mahajamba</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">21</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="malgachecultures">
+      <data key="n_label">Société Malgache de Cultures</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="malgachefibrestextilesderives">
+      <data key="n_label">Sté malgache de fibres textiles et dérivés</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="marceau">
+      <data key="n_label">Marceau</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="maritimeafriqueorientale">
+      <data key="n_label">Compagnie Maritime de l'Afrique Orientale</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="maritimemajunga">
+      <data key="n_label">Compagnie Maritime de Majunga</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="maritimetransportscoloniaux">
+      <data key="n_label">Compagnie Maritime de Transports coloniaux</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="marseillaisemadagascar">
+      <data key="n_label">Compagnie Marseillaise de Madagascar</data>
+      <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="maximedarrieuxfils">
+      <data key="n_label">Société anon. Maxime Darrieux et Fils</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="messageriesfrancaisesmadagascar">
+      <data key="n_label">Messageries françaises de Madagascar</data>
+      <data key="n_sectors">Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="messageriesmaritimes">
+      <data key="n_label">Société des Messageries maritimes</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="mineraisgrandeile">
+      <data key="n_label">Société des Minerais de la Grande-Île</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="mineraisgrandelle">
+      <data key="n_label">Société des Minerais de la Grande-lle</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minesambatobe">
+      <data key="n_label">Société des mines d'Ambatobé</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minesargentellasyndicatfrancohovareunis">
+      <data key="n_label">Mines d'Argentella et Syndicat franco-hova réunis</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minesitasy">
+      <data key="n_label">Mines de l'Itasy</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minesorandavakoera">
+      <data key="n_label">Société des mines d'or de l'Andavakoera</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">39</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minesorsihanakalythamtsaratanana">
+      <data key="n_label">Mines d'or de Sihanaka, Lytham, Tsaratanana</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minesorsoavinarivo">
+      <data key="n_label">Mines d'or de Soavinarivo</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minierefinancieremadagascar">
+      <data key="n_label">Société Minière et Financière de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minierefoncieremalgache">
+      <data key="n_label">Société Minière et Foncière Malgache</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="minierepetrolesmadagascar">
+      <data key="n_label">Compagnie Minière des Pétroles de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="modrin">
+      <data key="n_label">MODRIN</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="nantaiseculturecoloniale">
+      <data key="n_label">Sté nantaise de culture coloniale</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="nantaiseculturecolonialemananjary">
+      <data key="n_label">Société Nantaise de culture coloniale, Mananjary</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">1</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="nantaisemadagascar">
+      <data key="n_label">Société Nantaise de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="nosybeenneindustriesagricoles">
+      <data key="n_label">Compagnie Nosybéenne d’Industries agricoles</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="occidentalemadagascar">
+      <data key="n_label">Compagnie Occidentale de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="outremer">
+      <data key="n_label">Compagnie Générale d'Outre-mer</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="parfums">
+      <data key="n_label">PARFUMS</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">22</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="parismadagascar">
+      <data key="n_label">Paris-Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="pechesaustrales">
+      <data key="n_label">Les Pêches australes</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="phoceennecommercecolonial">
+      <data key="n_label">Cie phocéenne de commerce colonial</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="plantationsanjouan">
+      <data key="n_label">Société de Plantations d’Anjouan</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="plantationssakarive">
+      <data key="n_label">Sté des plantations de Sakarive</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="plantesparfumsmadagascar">
+      <data key="n_label">Plantes à parfums de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">19</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="poinsardveyretcomptoirsextremeorient">
+      <data key="n_label">Poinsard et Veyret (Comptoirs d'Extrême-Orient</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="porttamatave">
+      <data key="n_label">Port de Tamatave</data>
+      <data key="n_sectors">Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="produitsagricolestropicaux">
+      <data key="n_label">Produits agricoles tropicaux</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="produitsalimentaires">
+      <data key="n_label">Compagnie Générale de produits alimentaires</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="produitsaromatiquesoceanindien">
+      <data key="n_label">Société des Produits aromatiques de l'océan Indien</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="rianile">
+      <data key="n_label">Rianile</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="rochefortaiseproduitsalimentaires">
+      <data key="n_label">Société Rochefortaise de produits alimentaires, puis Rochefortaise S.A.</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="rossignol">
+      <data key="n_label">Rossignol</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">56</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="rweinberger">
+      <data key="n_label">R. Weinberger</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="salinesdiegosuarez">
+      <data key="n_label">Compagnie française des Salines de Diégo-Suarez</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="salinesmadagascar">
+      <data key="n_label">Salines de Madagascar</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="sambiranaise">
+      <data key="n_label">Compagnie Sambiranaise</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Industries agro-alimentaires</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="sambiranaiseambohimenaparambanja">
+      <data key="n_label">Cie Sambiranaise, AMBOHIMENA, par Ambanja</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="sembirano">
+      <data key="n_label">SEMBIRANO</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="sucreriesmarseillaisesmadagascar">
+      <data key="n_label">Sucreries marseillaises de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="n_label">Sucreries marseillaises de Madagascar, Namakia</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="sucrieremahavavy">
+      <data key="n_label">Société Sucrière de la Mahavavy</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="syndicatlyonnaisexplorationmadagascar">
+      <data key="n_label">Syndicat lyonnais d'exploration à Madagascar</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="syndicatlyonnaismadagascar">
+      <data key="n_label">Syndicat lyonnais de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">37</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="tabacsoleagineuxmadagascar">
+      <data key="n_label">Société des Tabacs et oléagineux de Madagascar</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
+      <data key="n_label">Société Tananarivienne de Réfrigération et de boissons gazeuses, Antsirabé, Diégo-Suarez, Tuléar</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="tanneriesmadagascar">
+      <data key="n_label">Tanneries de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="tanninscoloniaux">
+      <data key="n_label">Tannins coloniaux</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="tanninscoloniauxsahambavy">
+      <data key="n_label">Tannins coloniaux, Sahambavy</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="tanninsmadagascar">
+      <data key="n_label">« Tannins de Madagascar »</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="textilestabacsmadagascar">
+      <data key="n_label">Société des Textiles et Tabacs de Madagascar</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="textilestabacsmadagascarparismajungatananarivesuitecivileetudestextilesmadagascarindustrielleagricoletextilesmadagascar">
+      <data key="n_label">Textiles et tabacs de Madagascar, Paris, Majunga, Tananarive. Suite de la Société civile d’études des textiles de Madagascar et de la Société industrielle et agricole des textiles de Madagascar</data>
+      <data key="n_sectors">Industries agro-alimentaires</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="tulear">
+      <data key="n_label">TULÉAR</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="unioncommercialemadagascar">
+      <data key="n_label">Union commerciale de Madagascar</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="uniongraphites">
+      <data key="n_label">L'Union des graphites</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="unionminiereindustrielle">
+      <data key="n_label">Union minière et industrielle, puis Union de mines et industries annexes</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Mines</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <node id="wharftamatave">
+      <data key="n_label">Société Wharf de Tamatave</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens</data>
+      <data key="n_n_directors">26</data>
+      <data key="n_territory">Madagascar</data>
+    </node>
+    <edge id="e0" source="grandeile" target="grandelle">
+      <data key="e_weight">14</data>
+    </edge>
+    <edge id="e1" source="tanninscoloniaux" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">13</data>
+    </edge>
+    <edge id="e2" source="sucreriesmarseillaisesmadagascar" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">12</data>
+    </edge>
+    <edge id="e3" source="graphites" target="graphitessahanavo">
+      <data key="e_weight">12</data>
+    </edge>
+    <edge id="e4" source="creditfonciermadagascar" target="creditfonciermadagascarcreditfonciermadagascarreunion">
+      <data key="e_weight">10</data>
+    </edge>
+    <edge id="e5" source="commerce" target="creditfonciermadagascar">
+      <data key="e_weight">10</data>
+    </edge>
+    <edge id="e6" source="importationsexportationscommission" target="industriellecommercialeemyrne">
+      <data key="e_weight">10</data>
+    </edge>
+    <edge id="e7" source="agricoleindustriellemadagascar" target="marseillaisemadagascar">
+      <data key="e_weight">10</data>
+    </edge>
+    <edge id="e8" source="madagascarautomobile" target="madagascarautomobiletananariverenault">
+      <data key="e_weight">10</data>
+    </edge>
+    <edge id="e9" source="malgachecultures" target="tulear">
+      <data key="e_weight">10</data>
+    </edge>
+    <edge id="e10" source="agricolesucrierenossibe" target="modrin">
+      <data key="e_weight">9</data>
+    </edge>
+    <edge id="e11" source="plantationsanjouan" target="plantationssakarive">
+      <data key="e_weight">9</data>
+    </edge>
+    <edge id="e12" source="creditfonciermadagascar" target="marceau">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e13" source="agricultureindustriecoloniales" target="lyonnaisemadagascar">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e14" source="industriellecommercialeemyrne" target="phoceennecommercecolonial">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e15" source="agricoleindustriellemadagascar" target="madagascarautomobile">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e16" source="agricoleindustriellemadagascar" target="madagascarautomobiletananariverenault">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e17" source="nosybeenneindustriesagricoles" target="sambiranaise">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e18" source="domaineankaratrasucrieremahavavy" target="sucrieremahavavy">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e19" source="mineraisgrandeile" target="mineraisgrandelle">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e20" source="commerce" target="creditfonciermadagascarcreditfonciermadagascarreunion">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e21" source="conservesalimentairesmontagneambre" target="industriellecommercialeemyrne">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e22" source="fonciereindustriellecommercialemadagascar" target="fonciereminieremadagascar">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e23" source="parfums" target="plantesparfumsmadagascar">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e24" source="colonialemadagascar" target="magasinsgenerauxentrepotsmadagascar">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e25" source="agricoleindustriellemadagascar" target="commissionconsignationcoloniales">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e26" source="commissionconsignationcoloniales" target="marseillaisemadagascar">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e27" source="madagascarautomobile" target="marseillaisemadagascar">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e28" source="madagascarautomobiletananariverenault" target="marseillaisemadagascar">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e29" source="grandeile" target="madagor">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e30" source="produitsalimentaires" target="rochefortaiseproduitsalimentaires">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e31" source="emileranarivelo" target="rweinberger">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e32" source="minierepetrolesmadagascar" target="parfums">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e33" source="commerce" target="marceau">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e34" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="marceau">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e35" source="entreprisesmaritimesmadagascar" target="filaturetissagemadagascar">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e36" source="emyrne" target="importationsexportationscommission">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e37" source="emyrne" target="industriellecommercialeemyrne">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e38" source="agricoleindustriellemadagascar" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e39" source="agricolesambirano" target="nosybeenneindustriesagricoles">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e40" source="minesambatobe" target="syndicatlyonnaismadagascar">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e41" source="textilestabacsmadagascar" target="textilestabacsmadagascarparismajungatananarivesuitecivileetudestextilesmadagascarindustrielleagricoletextilesmadagascar">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e42" source="plantationsanjouan" target="rossignol">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e43" source="graphites" target="mineraisgrandeile">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e44" source="malgachecultures" target="plantesparfumsmadagascar">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e45" source="plantesparfumsmadagascar" target="tulear">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e46" source="creditfonciermadagascar" target="maritimeafriqueorientale">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e47" source="lyonnaisemadagascar" target="outremer">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e48" source="commercemadagascar" target="commercenavigationmadagascar">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e49" source="conservesalimentairesmontagneambre" target="importationsexportationscommission">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e50" source="agricoleindustriellemadagascar" target="maritimetransportscoloniaux">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e51" source="maritimetransportscoloniaux" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e52" source="commissionconsignationcoloniales" target="madagascarautomobile">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e53" source="commissionconsignationcoloniales" target="madagascarautomobiletananariverenault">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e54" source="agricolemadagascar" target="graphitesankaratra">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e55" source="gisementsauriferesanasaha" target="syndicatlyonnaisexplorationmadagascar">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e56" source="culturescoloniales" target="nosybeenneindustriesagricoles">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e57" source="culturescoloniales" target="sambiranaise">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e58" source="angevinemadagascar" target="cultureelevagemadagascarnord">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e59" source="conservesalimentairesmontagneambre" target="francomalgachecommissionconsignation">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e60" source="emileranarivelo" target="rossignol">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e61" source="nantaiseculturecoloniale" target="nantaisemadagascar">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e62" source="florensorville" target="rossignol">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e63" source="chantiersateliersbassin" target="francomalgachecommissionconsignation">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e64" source="conservesalimentairesmontagneambre" target="electriciteentreprisesmadagascar">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e65" source="graphites" target="mineraisgrandelle">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e66" source="cefrancomalgacheentreprises" target="francomalgacheentreprises">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e67" source="colonialemadagascar" target="messageriesfrancaisesmadagascar">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e68" source="domainesppineltabacsoleagineuxmadagascar" target="tabacsoleagineuxmadagascar">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e69" source="commerce" target="maritimeafriqueorientale">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e70" source="marceau" target="maritimeafriqueorientale">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e71" source="creditfonciermadagascar" target="grandsdomainesmadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e72" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="grandsdomainesmadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e73" source="grandsdomainesmadagascar" target="unionminiereindustrielle">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e74" source="agricultureindustriecoloniales" target="outremer">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e75" source="agricultureindustriecoloniales" target="entreprisesmaritimesmadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e76" source="agricultureindustriecoloniales" target="filaturetissagemadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e77" source="entreprisesmaritimesmadagascar" target="lyonnaisemadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e78" source="filaturetissagemadagascar" target="lyonnaisemadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e79" source="lyonnaisemadagascar" target="madagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e80" source="conservesalimentairesmontagneambre" target="emyrne">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e81" source="electriciteeauxmadagascar" target="fonciereminieremadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e82" source="agricolesucrierenossibe" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e83" source="agricoleindustriellemadagascar" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e84" source="madagascaroildevelopmentcoltd" target="madagascaroildevelopmentcoltd11pancraslanelondresec">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e85" source="agricolemadagascar" target="exploitationgraphitesmadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e86" source="exploitationgraphitesmadagascar" target="graphitesankaratra">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e87" source="agricolemadagascar" target="ankaratra">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e88" source="ankaratra" target="graphitesankaratra">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e89" source="syndicatlyonnaismadagascar" target="wharftamatave">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e90" source="agricolesucrierenossibe" target="nosybeenneindustriesagricoles">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e91" source="agricolesambirano" target="sembirano">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e92" source="culturescoloniales" target="produitsagricolestropicaux">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e93" source="produitsagricolestropicaux" target="sambiranaise">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e94" source="civilefomboni" target="civilefombonimoheli">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e95" source="colonialebambaobambao" target="comptoirscoloniauxchiris">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e96" source="conservesalimentairesmontagneambre" target="phoceennecommercecolonial">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e97" source="francomalgachecommissionconsignation" target="industriellecommercialeemyrne">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e98" source="francomalgachecommissionconsignation" target="phoceennecommercecolonial">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e99" source="rossignol" target="rweinberger">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e100" source="agricolesucrierenossibe" target="tanninscoloniaux">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e101" source="agricolesucrierenossibe" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e102" source="cotieremadagascar" target="francomalgacheentreprises">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e103" source="agricoleindustrielletextilesmadagascar" target="textilestabacsmadagascarparismajungatananarivesuitecivileetudestextilesmadagascarindustrielleagricoletextilesmadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e104" source="ileskerguelensaintpaulamsterdam" target="pechesaustrales">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e105" source="chantiersateliersbassin" target="conservesalimentairesmontagneambre">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e106" source="gemmesmadagascar" target="mineraisgrandeile">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e107" source="gemmesmadagascar" target="mineraisgrandelle">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e108" source="malgachecultures" target="mineraisgrandeile">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e109" source="mineraisgrandeile" target="plantesparfumsmadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e110" source="mineraisgrandeile" target="tulear">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e111" source="sambiranaise" target="sambiranaiseambohimenaparambanja">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e112" source="cafesmadagascar" target="financieremadagascar">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e113" source="fianarantsoa" target="minierefoncieremalgache">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e114" source="comptoirsextremeorientpoinsardveyretmaisonachat" target="poinsardveyretcomptoirsextremeorient">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e115" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="maritimeafriqueorientale">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e116" source="commerce" target="grandsdomainesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e117" source="commerceexterieur" target="grandsdomainesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e118" source="commerceexterieur" target="unionminiereindustrielle">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e119" source="creditfonciermadagascar" target="unionminiereindustrielle">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e120" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="unionminiereindustrielle">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e121" source="agricultureindustriecoloniales" target="creditfonciermadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e122" source="agricultureindustriecoloniales" target="marceau">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e123" source="commerce" target="maritimemajunga">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e124" source="creditfonciermadagascar" target="entreprisesmaritimesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e125" source="creditfonciermadagascar" target="filaturetissagemadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e126" source="creditfonciermadagascar" target="lyonnaisemadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e127" source="creditfonciermadagascar" target="outremer">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e128" source="entreprisesmaritimesmadagascar" target="marceau">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e129" source="entreprisesmaritimesmadagascar" target="outremer">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e130" source="filaturetissagemadagascar" target="marceau">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e131" source="filaturetissagemadagascar" target="outremer">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e132" source="lyonnaisemadagascar" target="marceau">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e133" source="marceau" target="outremer">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e134" source="agricultureindustriecoloniales" target="madagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e135" source="parismadagascar" target="rianile">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e136" source="betsibokaambatoboeni" target="grandsdomainesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e137" source="electriciteeauxmadagascar" target="energieindustrielle">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e138" source="energieindustrielle" target="fonciereminieremadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e139" source="agricoleindustriellemadagascar" target="agricolesucrierenossibe">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e140" source="agricolesucrierenossibe" target="maritimetransportscoloniaux">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e141" source="commissionconsignationcoloniales" target="maritimetransportscoloniaux">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e142" source="commissionconsignationcoloniales" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e143" source="maritimetransportscoloniaux" target="marseillaisemadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e144" source="marseillaisemadagascar" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e145" source="creditfonciermadagascar" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e146" source="madagascarautomobile" target="maritimetransportscoloniaux">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e147" source="madagascarautomobile" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e148" source="madagascarautomobile" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e149" source="madagascarautomobiletananariverenault" target="maritimetransportscoloniaux">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e150" source="madagascarautomobiletananariverenault" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e151" source="madagascarautomobiletananariverenault" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e152" source="maritimetransportscoloniaux" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e153" source="agricolesucrierenossibe" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e154" source="graphitesmashar" target="graphitesmaskar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e155" source="grandelle" target="madagor">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e156" source="exploitationminesorsihanaka" target="messageriesmaritimes">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e157" source="exploitationminesorsihanaka" target="minesorsihanakalythamtsaratanana">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e158" source="gisementsauriferesanasaha" target="syndicatlyonnaismadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e159" source="grandsdomainesmadagascar" target="marceau">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e160" source="agricolesucrierenossibe" target="banquespecialemadagascaroceanindien">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e161" source="agricolesambirano" target="sambiranaise">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e162" source="culturescoloniales" target="grandeile">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e163" source="grandeile" target="nosybeenneindustriesagricoles">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e164" source="grandeile" target="sambiranaise">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e165" source="nosybeenneindustriesagricoles" target="produitsagricolestropicaux">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e166" source="colonialebambaobambao" target="produitsalimentaires">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e167" source="colonialebambaobambao" target="produitsaromatiquesoceanindien">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e168" source="produitsalimentaires" target="produitsaromatiquesoceanindien">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e169" source="culture" target="cultureelevagemadagascarnord">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e170" source="beryl" target="madagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e171" source="francomalgacheentreprises" target="occidentalemadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e172" source="ilesmalgaches" target="plantesparfumsmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e173" source="ambilobe" target="ankaratra">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e174" source="ankaratra" target="minesitasy">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e175" source="agricolesucrierenossibe" target="foncieresudmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e176" source="foncieresudmadagascar" target="tanninscoloniaux">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e177" source="foncieresudmadagascar" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e178" source="lyonnaisemadagascar" target="rossignol">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e179" source="agricultureindustriecoloniales" target="mahajamba">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e180" source="lyonnaisemadagascar" target="mahajamba">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e181" source="chantiersateliersbassin" target="industriellecommercialeemyrne">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e182" source="chantiersateliersbassin" target="phoceennecommercecolonial">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e183" source="electriciteeauxmadagascar" target="fonciereindustriellecommercialemadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e184" source="gemmesmadagascar" target="graphites">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e185" source="gallois" target="gemmesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e186" source="mineraisgrandeile" target="uniongraphites">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e187" source="mineraisgrandelle" target="uniongraphites">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e188" source="graphites" target="malgachecultures">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e189" source="graphites" target="tulear">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e190" source="betsibokaambatoboeni" target="mahajamba">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e191" source="foncieresudmadagascar" target="graphites">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e192" source="elevagepecheindustriemadagascar" target="produitsalimentaires">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e193" source="elevagepecheindustriemadagascar" target="rochefortaiseproduitsalimentaires">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e194" source="batelagechargeurstamatave" target="porttamatave">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e195" source="maximedarrieuxfils" target="tanneriesmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e196" source="nosybeenneindustriesagricoles" target="sambiranaiseambohimenaparambanja">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e197" source="ilesmalgaches" target="outremer">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e198" source="banquemadagascarcomores" target="colonialemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e199" source="banquemadagascarcomores" target="comptoirnationalescompteparis">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e200" source="banquemadagascarcomores" target="magasinsgenerauxentrepotsmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e201" source="colonialemadagascar" target="comptoirnationalescompteparis">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e202" source="comptoirnationalescompteparis" target="magasinsgenerauxentrepotsmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e203" source="commerce" target="commerceexterieur">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e204" source="commerce" target="unionminiereindustrielle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e205" source="commerceexterieur" target="creditfonciermadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e206" source="commerceexterieur" target="creditfonciermadagascarcreditfonciermadagascarreunion">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e207" source="agricultureindustriecoloniales" target="commerce">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e208" source="agricultureindustriecoloniales" target="maritimeafriqueorientale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e209" source="agricultureindustriecoloniales" target="maritimemajunga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e210" source="commerce" target="entreprisesmaritimesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e211" source="commerce" target="filaturetissagemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e212" source="commerce" target="lyonnaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e213" source="commerce" target="outremer">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e214" source="creditfonciermadagascar" target="maritimemajunga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e215" source="entreprisesmaritimesmadagascar" target="maritimeafriqueorientale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e216" source="entreprisesmaritimesmadagascar" target="maritimemajunga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e217" source="filaturetissagemadagascar" target="maritimeafriqueorientale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e218" source="filaturetissagemadagascar" target="maritimemajunga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e219" source="lyonnaisemadagascar" target="maritimeafriqueorientale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e220" source="lyonnaisemadagascar" target="maritimemajunga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e221" source="marceau" target="maritimemajunga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e222" source="maritimeafriqueorientale" target="maritimemajunga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e223" source="maritimeafriqueorientale" target="outremer">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e224" source="maritimemajunga" target="outremer">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e225" source="agricultureindustriecoloniales" target="arsenesaupiquet">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e226" source="agricultureindustriecoloniales" target="creditfonciermadagascarcreditfonciermadagascarreunion">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e227" source="arsenesaupiquet" target="creditfonciermadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e228" source="arsenesaupiquet" target="creditfonciermadagascarcreditfonciermadagascarreunion">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e229" source="arsenesaupiquet" target="entreprisesmaritimesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e230" source="arsenesaupiquet" target="filaturetissagemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e231" source="arsenesaupiquet" target="lyonnaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e232" source="arsenesaupiquet" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e233" source="arsenesaupiquet" target="marceau">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e234" source="arsenesaupiquet" target="outremer">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e235" source="creditfonciermadagascar" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e236" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="entreprisesmaritimesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e237" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="filaturetissagemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e238" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="lyonnaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e239" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e240" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="outremer">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e241" source="entreprisesmaritimesmadagascar" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e242" source="filaturetissagemadagascar" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e243" source="madagascar" target="marceau">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e244" source="madagascar" target="outremer">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e245" source="betsibokaambatoboeni" target="commerceexterieur">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e246" source="betsibokaambatoboeni" target="unionminiereindustrielle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e247" source="industriellecommercialeemyrne" target="maritimeafriqueorientale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e248" source="emyrne" target="phoceennecommercecolonial">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e249" source="importationsexportationscommission" target="phoceennecommercecolonial">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e250" source="cafesmadagascar" target="electriciteeauxmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e251" source="cafesmadagascar" target="energieindustrielle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e252" source="cafesmadagascar" target="fonciereminieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e253" source="energieindustrielle" target="flottes">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e254" source="energieindustrielle" target="francomalgacheentreprises">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e255" source="flottes" target="fonciereminieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e256" source="flottes" target="francomalgacheentreprises">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e257" source="fonciereminieremadagascar" target="francomalgacheentreprises">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e258" source="eauxelectricitemadagascar" target="fonciereminieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e259" source="agricoleindustriellemadagascar" target="commission">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e260" source="agricolesucrierenossibe" target="commission">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e261" source="agricolesucrierenossibe" target="commissionconsignationcoloniales">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e262" source="agricolesucrierenossibe" target="marseillaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e263" source="commission" target="commissionconsignationcoloniales">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e264" source="commission" target="maritimetransportscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e265" source="commission" target="marseillaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e266" source="commission" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e267" source="cellulosespapeteriesmadagascar" target="maritimetransportscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e268" source="agricoleindustriellemadagascar" target="colonialeagricolecommercialeindustriellesucreriescoloniales">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e269" source="agricoleindustriellemadagascar" target="creditfonciermadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e270" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="creditfonciermadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e271" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="maritimetransportscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e272" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e273" source="creditfonciermadagascar" target="maritimetransportscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e274" source="commissionconsignationcoloniales" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e275" source="marseillaisemadagascar" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e276" source="agricolesucrierenossibe" target="madagascarautomobile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e277" source="agricolesucrierenossibe" target="madagascarautomobiletananariverenault">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e278" source="messageriesmaritimes" target="minesorsihanakalythamtsaratanana">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e279" source="foncieremadagascar" target="graphitesankaratra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e280" source="colonialemadagascar" target="minesorsoavinarivo">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e281" source="magasinsgenerauxentrepotsmadagascar" target="minesorsoavinarivo">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e282" source="syndicatlyonnaisexplorationmadagascar" target="syndicatlyonnaismadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e283" source="marceau" target="unionminiereindustrielle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e284" source="tanneriesmadagascar" target="unionminiereindustrielle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e285" source="agricolemadagascar" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e286" source="ankaratra" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e287" source="agricolemadagascar" target="ambilobe">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e288" source="agricolemadagascar" target="etablissementsgratry">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e289" source="ambilobe" target="etablissementsgratry">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e290" source="agricoleindustriellemadagascar" target="wharftamatave">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e291" source="marseillaisemadagascar" target="wharftamatave">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e292" source="agricolesucrierenossibe" target="charbonnagebatelagemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e293" source="agricolesucrierenossibe" target="messageriesfrancaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e294" source="banquespecialemadagascaroceanindien" target="charbonnagebatelagemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e295" source="banquespecialemadagascaroceanindien" target="messageriesfrancaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e296" source="charbonnagebatelagemadagascar" target="messageriesfrancaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e297" source="agricolesucrierenossibe" target="minesorandavakoera">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e298" source="minesorandavakoera" target="nosybeenneindustriesagricoles">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e299" source="nosybeenneindustriesagricoles" target="sembirano">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e300" source="agricolesucrierenossibe" target="culturescoloniales">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e301" source="agricolesucrierenossibe" target="grandeile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e302" source="agricolesucrierenossibe" target="produitsagricolestropicaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e303" source="agricolesucrierenossibe" target="sambiranaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e304" source="culturescoloniales" target="modrin">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e305" source="grandeile" target="modrin">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e306" source="grandeile" target="produitsagricolestropicaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e307" source="modrin" target="nosybeenneindustriesagricoles">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e308" source="modrin" target="produitsagricolestropicaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e309" source="modrin" target="sambiranaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e310" source="civilefomboni" target="colonialebambao">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e311" source="civilefomboni" target="colonialebambaobambao">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e312" source="civilefomboni" target="comptoirscoloniauxchiris">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e313" source="civilefomboni" target="produitsalimentaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e314" source="civilefomboni" target="produitsaromatiquesoceanindien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e315" source="civilefombonimoheli" target="colonialebambao">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e316" source="civilefombonimoheli" target="colonialebambaobambao">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e317" source="civilefombonimoheli" target="comptoirscoloniauxchiris">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e318" source="civilefombonimoheli" target="produitsalimentaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e319" source="civilefombonimoheli" target="produitsaromatiquesoceanindien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e320" source="colonialebambao" target="colonialebambaobambao">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e321" source="colonialebambao" target="comptoirscoloniauxchiris">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e322" source="colonialebambao" target="produitsalimentaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e323" source="colonialebambao" target="produitsaromatiquesoceanindien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e324" source="comptoirscoloniauxchiris" target="produitsalimentaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e325" source="comptoirscoloniauxchiris" target="produitsaromatiquesoceanindien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e326" source="colonialebambaobambao" target="commerce">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e327" source="commerce" target="comptoirscoloniauxchiris">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e328" source="betsibokaambatoboeni" target="colonialeagricolecommercialeindustriellesucreriescoloniales">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e329" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="grandsdomainesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e330" source="angevinemadagascar" target="francoantankare">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e331" source="cultureelevagemadagascarnord" target="francoantankare">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e332" source="angevinemadagascar" target="culture">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e333" source="nantaiseculturecoloniale" target="nantaiseculturecolonialemananjary">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e334" source="agricoleindustriellemadagascar" target="emileranarivelo">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e335" source="agricoleindustriellemadagascar" target="rossignol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e336" source="agricoleindustriellemadagascar" target="rweinberger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e337" source="emileranarivelo" target="madagascarautomobile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e338" source="emileranarivelo" target="madagascarautomobiletananariverenault">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e339" source="emileranarivelo" target="marseillaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e340" source="madagascarautomobile" target="rossignol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e341" source="madagascarautomobile" target="rweinberger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e342" source="madagascarautomobiletananariverenault" target="rossignol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e343" source="madagascarautomobiletananariverenault" target="rweinberger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e344" source="marseillaisemadagascar" target="rossignol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e345" source="marseillaisemadagascar" target="rweinberger">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e346" source="commercialemadagascar" target="lyonnaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e347" source="foncieremadagascar" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e348" source="commerce" target="etablissementscoloniauxrhaugou">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e349" source="creditfonciermadagascar" target="etablissementscoloniauxrhaugou">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e350" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="etablissementscoloniauxrhaugou">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e351" source="etablissementscoloniauxrhaugou" target="grandsdomainesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e352" source="etablissementscoloniauxrhaugou" target="marceau">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e353" source="bachel" target="etablissementsemiledammann">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e354" source="minesargentellasyndicatfrancohovareunis" target="occidentalemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e355" source="exploitationminesorsihanaka" target="madagascarnord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e356" source="madagascarnord" target="messageriesmaritimes">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e357" source="minesambatobe" target="wharftamatave">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e358" source="banquespecialemadagascaroceanindien" target="wharftamatave">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e359" source="salinesmadagascar" target="tanninsmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e360" source="ambilobe" target="minesitasy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e361" source="banquespecialemadagascaroceanindien" target="foncieresudmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e362" source="banquespecialemadagascaroceanindien" target="tanninscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e363" source="banquespecialemadagascaroceanindien" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e364" source="electriciteeauxmadagascar" target="produitsalimentaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e365" source="electriciteeauxmadagascar" target="rochefortaiseproduitsalimentaires">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e366" source="electriciteeauxmadagascar" target="salinesdiegosuarez">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e367" source="produitsalimentaires" target="salinesdiegosuarez">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e368" source="rochefortaiseproduitsalimentaires" target="salinesdiegosuarez">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e369" source="domaineankaratrasucrieremahavavy" target="grandsdomainesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e370" source="domaineankaratrasucrieremahavavy" target="lyonnaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e371" source="grandsdomainesmadagascar" target="lyonnaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e372" source="grandsdomainesmadagascar" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e373" source="lyonnaisemadagascar" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e374" source="agricolesucrierenossibe" target="grandsdomainesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e375" source="grandsdomainesmadagascar" target="tanninscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e376" source="grandsdomainesmadagascar" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e377" source="commercialeelevagemassifambre" target="salinesdiegosuarez">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e378" source="faraonyexploitatonplacersauriferesmadagascar" target="plantationssakarive">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e379" source="agricoleindustrielletextilesmadagascar" target="entreprisesmaritimesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e380" source="agricoleindustrielletextilesmadagascar" target="textilestabacsmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e381" source="entreprisesmaritimesmadagascar" target="textilestabacsmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e382" source="entreprisesmaritimesmadagascar" target="textilestabacsmadagascarparismajungatananarivesuitecivileetudestextilesmadagascarindustrielleagricoletextilesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e383" source="industrieparfumsproduitschimiques" target="pechesaustrales">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e384" source="bachel" target="batelagechargeurstamatave">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e385" source="constructions" target="florensorville">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e386" source="constructions" target="graphitessahanavo">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e387" source="constructions" target="rossignol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e388" source="florensorville" target="graphitessahanavo">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e389" source="graphitessahanavo" target="rossignol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e390" source="andrelefebvre" target="plantationsanjouan">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e391" source="andrelefebvre" target="rossignol">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e392" source="entreprisesmaritimesmadagascar" target="mahajamba">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e393" source="filaturetissagemadagascar" target="mahajamba">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e394" source="madagascar" target="mahajamba">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e395" source="madagascarautomobile" target="minierefinancieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e396" source="madagascarautomobiletananariverenault" target="minierefinancieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e397" source="agricoleindustriellemadagascar" target="banquemadagascarcomores">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e398" source="banquemadagascarcomores" target="commissionconsignationcoloniales">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e399" source="banquemadagascarcomores" target="madagascarautomobile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e400" source="banquemadagascarcomores" target="madagascarautomobiletananariverenault">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e401" source="banquemadagascarcomores" target="marseillaisemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e402" source="electriciteeauxmadagascar" target="malgachefibrestextilesderives">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e403" source="domaineankaratrasucrieremahavavy" target="gemmesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e404" source="domaineankaratrasucrieremahavavy" target="graphites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e405" source="domaineankaratrasucrieremahavavy" target="mineraisgrandeile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e406" source="domaineankaratrasucrieremahavavy" target="mineraisgrandelle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e407" source="gemmesmadagascar" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e408" source="graphites" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e409" source="mineraisgrandeile" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e410" source="mineraisgrandelle" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e411" source="gemmesmadagascar" target="malgachecultures">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e412" source="gemmesmadagascar" target="tulear">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e413" source="gemmesmadagascar" target="unioncommercialemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e414" source="malgachecultures" target="unioncommercialemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e415" source="tulear" target="unioncommercialemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e416" source="gemmesmadagascar" target="uniongraphites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e417" source="graphitessahanavo" target="maximedarrieuxfils">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e418" source="mineraisgrandeile" target="parfums">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e419" source="graphites" target="uniongraphites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e420" source="malgachecultures" target="mineraisgrandelle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e421" source="malgachecultures" target="uniongraphites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e422" source="mineraisgrandelle" target="tulear">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e423" source="tulear" target="uniongraphites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e424" source="culturescoloniales" target="sambiranaiseambohimenaparambanja">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e425" source="produitsagricolestropicaux" target="sambiranaiseambohimenaparambanja">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e426" source="cefrancomalgacheentreprises" target="cotieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e427" source="mahajamba" target="produitsagricolestropicaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e428" source="mahajamba" target="tanninscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e429" source="mahajamba" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e430" source="colonialemadagascar" target="foncieresudmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e431" source="foncieresudmadagascar" target="messageriesfrancaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e432" source="betsibokaambatoboeni" target="industrieparfumsproduitschimiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e433" source="charbonnagessakoa" target="graphites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e434" source="charbonnagessakoa" target="malgachecultures">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e435" source="charbonnagessakoa" target="mineraisgrandeile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e436" source="charbonnagessakoa" target="plantesparfumsmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e437" source="charbonnagessakoa" target="tulear">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e438" source="graphites" target="plantesparfumsmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e439" source="elevagepecheindustriemadagascar" target="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e440" source="produitsalimentaires" target="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e441" source="rochefortaiseproduitsalimentaires" target="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e442" source="agricolesucrierenossibe" target="creditfonciermadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e443" source="creditfonciermadagascar" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e444" source="domaineankaratrasucrieremahavavy" target="sucreriesmarseillaisesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e445" source="domaineankaratrasucrieremahavavy" target="sucreriesmarseillaisesmadagascarnamakia">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e446" source="sucreriesmarseillaisesmadagascar" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e447" source="sucreriesmarseillaisesmadagascarnamakia" target="sucrieremahavavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e448" source="andrelefebvre" target="florensorville">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e449" source="cafesmadagascar" target="fianarantsoa">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e450" source="cafesmadagascar" target="leonkrafit">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e451" source="cafesmadagascar" target="minierefoncieremalgache">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e452" source="fianarantsoa" target="financieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e453" source="fianarantsoa" target="leonkrafit">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e454" source="financieremadagascar" target="leonkrafit">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e455" source="financieremadagascar" target="minierefoncieremalgache">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e456" source="leonkrafit" target="minierefoncieremalgache">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e457" source="banquemadagascarcomores" target="graphites">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e458" source="banquemadagascarcomores" target="mineraisgrandeile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e459" source="banquemadagascarcomores" target="mineraisgrandelle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e460" source="agricolesucrierenossibe" target="banquemadagascarcomores">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e461" source="banquemadagascarcomores" target="malgachefibrestextilesderives">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e462" source="comptoirnationalescompteparis" target="constructions">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e463" source="agricolesucrierenossibe" target="madagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e464" source="electriciteeauxmadagascar" target="financieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e465" source="agricolesucrierenossibe" target="charbonnagessakoa">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e466" source="filaturetissagemadagascar" target="industriellefortdauphin">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e467" source="industriellefortdauphin" target="tanninscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e468" source="industriellefortdauphin" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e469" source="betsibokaambatoboeni" target="grandeile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e470" source="betsibokaambatoboeni" target="grandelle">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e471" source="domaineankaratrasucrieremahavavy" target="tanninscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e472" source="domaineankaratrasucrieremahavavy" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e473" source="sucrieremahavavy" target="tanninscoloniaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e474" source="sucrieremahavavy" target="tanninscoloniauxsahambavy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e475" source="faraonyexploitatonplacersauriferesmadagascar" target="malgachecultures">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e476" source="faraonyexploitatonplacersauriferesmadagascar" target="minesorandavakoera">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e477" source="malgachecultures" target="minesorandavakoera">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e478" source="francoantankare" target="minesorandavakoera">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e479" source="ilesmalgaches" target="parfums">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e480" source="agricolesucrierenossibe" target="colonialemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e481" source="agricolesucrierenossibe" target="forestiereminieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e482" source="agricolesucrierenossibe" target="occidentalemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e483" source="colonialemadagascar" target="forestiereminieremadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e484" source="colonialemadagascar" target="occidentalemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e485" source="forestiereminieremadagascar" target="occidentalemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e486" source="constructions" target="mineraisgrandeile">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e487" source="agricoleindustrielleminieremadagascar" target="charbonnagebatelagemadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e488" source="francomalgache" target="madagaskara">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e489" source="salinesdiegosuarez" target="salinesmadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>
