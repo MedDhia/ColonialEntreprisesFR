@@ -20,15 +20,16 @@ network can be sliced by period rather than collapsed into one static graph.
 
 | | |
 |---|---|
-| Source documents catalogued | **5,920** (5,270 firms, 240 biographies, 410 thematic) |
+| Source documents catalogued | **5,920** (5,268 firms, 240 biographies, 412 thematic) |
 | Documents with text extracted | **5,874 (99.2%)** — 46 are dead links on the site |
-| Territories | 13 (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
+| Territories | **62** countries / 13 index-page regions (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
 | Economic sectors | 108, as classified by the source |
-| Person → company ties | **63,169** attributed observations, 98.4% carrying a year |
-| Distinct people | **25,420** |
-| Companies | **8,732** (including firms known only from directory entries) |
-| Company interlock edges | **41,067** pooled, 25,225 within period |
-| Corporate directorships | 3,214 directed company → company edges |
+| Person → company ties | **61,136** attributed observations of 79,343 parsed (77.1%) |
+| Two-mode edge rows | **58,125**, 98.7% carrying a year |
+| Distinct people | **24,458** |
+| Companies | **8,493** (including firms known only from directory entries) |
+| Company interlock edges | **39,523** pooled, 24,622 within period |
+| Corporate directorships | 2,954 directed company → company edges |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
 `data/processed/network_stats.csv` holds these figures per period. The
@@ -168,7 +169,7 @@ rules govern them, and they are worth knowing before you trust a number:
   similarity threshold.
 - **A coverage gap beats a fabricated attribution.** Where the parser cannot
   determine which firm a board belongs to, the tie is left unattributed and
-  excluded from the network — **16,174 of 79,343 parsed ties, 20.4%** — instead
+  excluded from the network — **18,207 of 79,343 parsed ties, 22.9%** — instead
   of being credited to the previous firm in the document. They stay in
   `affiliations.csv` with an empty `company_key`, so the gap is inspectable
   rather than hidden.

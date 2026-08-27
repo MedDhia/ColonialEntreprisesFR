@@ -26,7 +26,7 @@ frame for the whole collection.
 |---|---|
 | `doc_id` | Stable id derived from the PDF path (slug + 6-char SHA1). |
 | `pdf_url` | Absolute URL of the source PDF. |
-| `entry_type` | `company` (5,270), `person` (240), or `source_document` (410). See METHODOLOGY §3. |
+| `entry_type` | `company` (5,268), `person` (240), or `source_document` (412). See METHODOLOGY §3. |
 | `name_listed` | The entry title as printed, minus the trailing gloss. |
 | `name_normalised` | Name with the generic head un-inverted: `Africaine de Mines (Société)` → `Société Africaine de Mines`. |
 | `acronym` | All-capitals designation from a parenthesis (`CFSO`, `SAHA`). |
@@ -38,7 +38,7 @@ frame for the whole collection.
 | `person_surname`, `person_given` | Parsed name, for `entry_type = person`. |
 | `birth_year`, `death_year` | Life dates, for `entry_type = person`. Blank where the source gives `?` or omits them. |
 | `region` | Canonical territory index page the document is filed under (13 values). |
-| `country` | Sub-territory heading within that page (e.g. `Chine`, `Siam (Thaïlande)`). |
+| `country` | Territory heading within that page — 62 values (`Madagascar`, `Sénégal`, `Syrie-Liban`, `Chine`…). Pages covering several territories mark the first with `premierTitrePays` and the rest with `titrePays`; both are read. |
 | `sector` | Economic sector heading (108 distinct values, in French, as printed). |
 | `group_path` | Corporate group or lineage from the nested-list hierarchy, `parent > child`. Blank for most entries. |
 | `group_depth` | Nesting depth (0 = not inside a group). |
@@ -49,7 +49,7 @@ frame for the whole collection.
 | `source_page` | Index page(s) the row was read from. |
 | `title_raw` | Verbatim title text. Keep this for any manual re-coding. |
 
-### `document_listings.csv` — one row per (document × classification) (6,390)
+### `document_listings.csv` — one row per (document × classification) (6,391)
 
 Long form of the classification. Use this, not `documents.csv`, when a firm's
 presence in several territories or sectors matters.
@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **Empty for 20.4% of rows** (16,174 of 79,343), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 22.9% of rows** (18,207 of 79,343), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |

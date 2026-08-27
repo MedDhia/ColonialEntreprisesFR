@@ -88,7 +88,7 @@ Getting this wrong in either direction is costly, so the test is explicit
 rather than statistical. An earlier heuristic that simply looked for a
 `(Surname)(dates)` shape classified 1,123 entries as people; most were firms
 whose date parenthesis recorded when they operated. The current rule yields
-240 biographies, 5,270 firms and 410 thematic documents.
+240 biographies, 5,268 firms and 412 thematic documents.
 
 Firms named after a person stay classified as firms — *Ferme de Gazan (Lucien
 Deyme)* is a farm, not a man — but the personal name is recorded in
