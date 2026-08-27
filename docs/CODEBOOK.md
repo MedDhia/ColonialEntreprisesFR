@@ -275,6 +275,72 @@ observed tie.
 Counts by `scope` (`all`, each period, `undated`). Use as a sanity check
 after rebuilding.
 
+## 3b. Positionality coding
+
+`python3 src/code_positionality.py` writes `person_positionality.csv` (one row
+per person), `positionality_by_territory.csv` and `positionality_review.csv`.
+
+> **The only evidence is the name plus the territory.** This is onomastic
+> inference. It supports statements about aggregate composition; it does not
+> establish the origin of any named individual, and must not be reported as
+> though it did. Read `data/reference/positionality_rules.md`, which lists the
+> rules *and the rules that were tested and rejected*.
+
+### `person_positionality.csv`
+
+| Variable | Description |
+|---|---|
+| `person_id` | Matches `persons_resolved.csv`. |
+| `name` | Name used for coding, after recovery (below). |
+| `name_as_parsed` | The name as it came out of the parser, before recovery. |
+| `positionality` | `colonial`, `native`, `intermediate`, `local_non_french_elite`, `unclassified`. |
+| `positionality_group` | Origin group the evidence points to (see below). |
+| `confidence` | `high` (two independent markers), `medium` (one), `low` (residual). |
+| `evidence` | Rules that fired, `;`-joined. `name_recovered` means leading prose was stripped first. |
+| `regions`, `countries` | Territories the person's ties were observed in. |
+| `n_board_companies`, `n_board_ties`, `first_year`, `last_year` | For weighting and period slicing. |
+
+### Values of `positionality`
+
+| Value | n | Meaning |
+|---|---|---|
+| `colonial` | 20,761 (84.9%) | No indigenous marker. **Inference from absence** — in a corpus of French colonial boards an unmarked name is overwhelmingly European, but this is not positive evidence. `confidence = low` throughout. |
+| `unclassified` | 3,492 (14.3%) | The name field holds a parse artefact rather than a name; not coded either way. |
+| `native` | 146 (0.60%) | Indigenous to a territory under French rule. |
+| `local_non_french_elite` | 33 | Ottoman, Egyptian, Turkish, Armenian and Greek names. Egypt and the Ottoman Empire were **not** French colonies, so these are not colonial subjects of France. |
+| `intermediate` | 26 | Maghrebi Jewish names. Algerian Jews became French citizens by the Crémieux decree of 1870 while Muslim Algerians remained subjects; Moroccan and Tunisian Jews did neither. |
+
+`positionality_group` takes: `maghrebi_arab_berber` (89), `vietnamese` (39),
+`ottoman_egyptian` (30), `maghrebi_jewish` (26), `syro_lebanese` (8),
+`chinese_indochinese` (7), `west_african` (6), `malagasy` (0),
+`european_unspecified`, `unusable_name`.
+
+Syro-Lebanese names are `native` under the French mandate and
+`local_non_french_elite` elsewhere — the mandate is the only part of the Near
+East pages that France ruled.
+
+### `positionality_review.csv` — the audit set (205 rows)
+
+Every person coded as other than European, in full. At this scale the coding
+is small enough to read and correct by hand, which is a better guarantee than
+any confidence score. **Check it before using the variable.**
+
+### `positionality_by_territory.csv`
+
+Per territory: `n_board_members`, counts by positionality, `share_native`,
+`share_non_european`, `n_board_ties_native`. Board seats only.
+
+### Name recovery, and the bias it corrects
+
+Indigenous names are over-represented among rows where the parser captured
+leading prose — the honorific register (`S. Exc. Hadj Thami Glaoui`) and the
+directory lines where Moroccan and Jewish merchants appear (`œufs. Meknès.
+David A. Benchimol`) both attract it. Discarding those rows biased the coding
+*downwards* and dropped precisely the best-documented figures, including the
+Pasha of Marrakech and Blaise Diagne. A recovery pass therefore strips leading
+matter before the quality gate; it moved the Maghrebi count from 81 to 89, the
+Vietnamese from 34 to 39, and Senegal from 0 native board members to 2.
+
 ## 4b. Per-territory bundles
 
 `python3 src/split_by_country.py` writes one self-contained bundle per

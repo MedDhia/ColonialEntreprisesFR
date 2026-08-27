@@ -92,6 +92,21 @@ people appear in more than one territory, so node counts must not be summed.
 elite is shared with others (0.29 for Morocco and Indochina, 0.72 for
 Senegal).
 
+### Positionality of individuals
+
+`person_positionality.csv` codes each person `colonial` / `native`, with
+`intermediate` for Maghrebi Jewish names and `local_non_french_elite` for
+Ottoman and Egyptian ones, since neither fits the binary. The evidence is the
+name plus the territory — onomastic inference, good for aggregate composition
+and **not** for claims about named individuals.
+
+The headline result is stark and is the point of the variable: of 24,458
+people, **146 (0.6%) carry an indigenous name**. By territory, board members
+with an indigenous name run at 1.0% in Morocco and Indochina, 0.4% in Algeria,
+and **0.0% in French Equatorial Africa, Gabon, Congo-Brazzaville and New
+Caledonia**. All 205 non-European codings are listed in
+`positionality_review.csv` for hand-checking.
+
 ### Which edge file to use
 
 Start from **`edges_person_company.csv`** — everything else is derived from it.
@@ -111,7 +126,8 @@ src/
   parse_ties.py        stage 3  text         -> companies, people, dated ties
   build_network.py     stage 4  ties         -> nodes, edges, projections, GraphML
   split_by_country.py  stage 5  dataset      -> per-territory bundles
-  checks.py            139 assertions on the parsers and the built dataset
+  code_positionality.py stage 6 people       -> colonial / native coding
+  checks.py            163 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -135,6 +151,7 @@ python3 src/fetch_extract.py --retry-failed   # sweep transient network errors
 python3 src/parse_ties.py                     # ~6 min
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
+python3 src/code_positionality.py             # ~1 min, positionality coding
 python3 src/checks.py                         # must pass
 ```
 

@@ -42,8 +42,9 @@ Four stages, each resumable, each writing its own outputs:
    `company_attributes.csv`, `doc_references.csv`.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
+6. **`code_positionality.py`** — people → colonial/native coding (§5c).
 
-`checks.py` validates the parsers and the built dataset (139 assertions).
+`checks.py` validates the parsers and the built dataset (163 assertions).
 
 ### The extraction trap
 
@@ -265,6 +266,54 @@ The per-territory share of shared elite is a usable variable in its own right:
 ~0.29 in Morocco, Indochina and Madagascar against 0.72 in Senegal and 0.62 in
 Côte d'Ivoire, which is a measurable difference in how far a territory's
 boards were staffed by men also sitting elsewhere.
+
+## 5c. Coding positionality in the colonial order
+
+`code_positionality.py` codes each person `colonial` or `native`, with
+`intermediate` and `local_non_french_elite` for the two groups the binary
+cannot hold. The evidence is the name as printed plus the territory the
+person's ties were observed in — onomastic inference and nothing else.
+
+**Every obvious rule is wrong.** Each was measured against all 24,458 names
+and rejected:
+
+| Rule | Hits | Why it fails |
+|---|---|---|
+| Vietnamese surname `Le` | 124 | All French: *Le Bret*, *Le Play*, *Le Trocquer*. |
+| Vietnamese particle `Van` | 163 | All Dutch: *Van Nierop*, *Van Brée*. |
+| Malagasy prefix `Ra-` | 51 | All French: *Rastoin*, *Rabeau*, every *Raymond* and *Raoul*. |
+| `Bey` / `Pacha` as indigeneity | ~60 | A rank granted to Europeans in Egyptian service: *Boinet Bey*, *H. Naus bey*. |
+| Short-syllable triples as Chinese | 91 | Caught *Max Katz*, *Louis Bovet*, *Paul Blanc*. |
+
+The surviving rules require a conjunction — an indigenous-name pattern *and* a
+plausible territory — and for Vietnamese a full name structure rather than one
+token. Even the Malagasy prefix needed a 4-character stem before *Rabeau*
+stopped matching, a false positive caught by the check suite rather than by
+reading the code.
+
+**The quality gate was itself biased.** Rows where the parser captured leading
+prose were excluded, and indigenous names turned out to be over-represented
+among them: the honorific register (*S. Exc. Hadj Thami Glaoui*, the Pasha of
+Marrakech) and the directory lines listing Moroccan and Jewish merchants
+(*œufs. Meknès. David A. Benchimol*) both attract leading matter. Excluding
+them understated an already tiny figure and discarded the best-documented
+figures, Blaise Diagne among them. A recovery pass now strips leading matter
+before the gate, raising the Maghrebi count from 81 to 89, Vietnamese from 34
+to 39, and Senegal from zero native board members to two.
+
+**What the variable will and will not carry.** It supports aggregate
+composition — "board members with an indigenous name are 1.0% in Morocco and
+0.0% in French Equatorial Africa". It does not establish any individual's
+origin, and `colonial` in particular is inference from absence, not positive
+evidence: it means only that no indigenous marker was found. All 205
+non-European codings are written to `positionality_review.csv` precisely
+because at that scale hand-checking beats any confidence score.
+
+Two further limits. Recall is unknown: a French-transliterated indigenous name
+with no diagnostic marker is coded `colonial` and there is no way to count how
+often that happens, so 0.6% is a **lower bound**. And the same-surname
+same-initial merging described in §4 applies here too — the Hui-Bon-Hoa family
+appears as six nodes, some of which may be one person.
 
 ## 6. Validity — read this before using the data
 

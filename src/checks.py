@@ -377,6 +377,54 @@ def check_dataset() -> None:
               all(e["company_id_1"] != e["company_id_2"] for e in il))
 
 
+def check_positionality() -> None:
+    """Guards on the onomastic coding, all of them lessons from its own output."""
+    rows = load("person_positionality.csv")
+    if not rows:
+        return
+    print("positionality coding", file=sys.stderr)
+    import code_positionality as CP
+
+    # Patterns that look right and are not. Each of these was measured against
+    # the full name list and rejected; see data/reference/positionality_rules.md.
+    for name, regions in [("Le Play", "Indochine"), ("Le Bret", "Indochine"),
+                          ("Van Nierop", "Indochine"), ("Van Brée", "Indochine")]:
+        pos, grp, _, _ = CP.code_person(name, regions, "")
+        eq(f"  {name!r} is not Vietnamese", grp, "european_unspecified")
+    for name in ["Rastoin", "Rabeau", "Raty", "Rabut", "Raymond du Boullay", "André Hermil"]:
+        pos, grp, _, _ = CP.code_person(name, "Madagascar et Djibouti", "Madagascar")
+        eq(f"  {name!r} is not Malagasy", grp, "european_unspecified")
+    # An Ottoman rank was granted to Europeans in Egyptian service.
+    for name in ["Boinet Bey", "H. Naus bey", "Ch. Audebeau bey"]:
+        pos, grp, _, _ = CP.code_person(name, "Proche-Orient", "Égypte")
+        eq(f"  {name!r} is not coded native on its title", pos, "colonial")
+
+    # Names the coder must catch, including ones only reachable after recovery.
+    for raw, want in [("Nguyen Van Vinh", "vietnamese"),
+                      ("S. Exc. Hadj Thami Glaoui", "maghrebi_arab_berber"),
+                      ("œufs. Meknès. David A. Benchimol", "maghrebi_jewish"),
+                      ("Blaise Diagne", "west_african")]:
+        n = CP.recover_name(raw)
+        check(f"  {raw[:34]!r} survives the quality gate", CP.name_is_usable(n), n)
+        _, grp, _, _ = CP.code_person(n, "Maroc; Indochine; Afrique occidentale francaise", "")
+        eq(f"  {raw[:30]!r} group", grp, want)
+
+    # Egypt and the Ottoman Empire were not French colonies.
+    ott = [r for r in rows if r["positionality_group"] == "ottoman_egyptian"]
+    check("  ottoman/egyptian names are not coded native",
+          all(r["positionality"] == "local_non_french_elite" for r in ott),
+          f"{sum(1 for r in ott if r['positionality'] == 'native')} coded native")
+    # Maghrebi Jewish names are intermediate by construction, never native.
+    jw = [r for r in rows if r["positionality_group"] == "maghrebi_jewish"]
+    check("  maghrebi jewish names are intermediate",
+          all(r["positionality"] == "intermediate" for r in jw))
+
+    vals = {r["positionality"] for r in rows}
+    check("  only documented positionality values",
+          vals <= {"colonial", "native", "intermediate", "local_non_french_elite",
+                   "unclassified"}, str(vals))
+
+
 def check_splits() -> None:
     """The per-territory bundles must partition ties and stay loadable."""
     import glob as _glob
@@ -439,6 +487,7 @@ def main() -> None:
     if not args.unit:
         check_extraction()
         check_dataset()
+        check_positionality()
         check_splits()
 
     total = CHECKS["passed"] + CHECKS["failed"]
