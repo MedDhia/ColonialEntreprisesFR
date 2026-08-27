@@ -93,6 +93,32 @@ def tidy_fragment(text: str) -> str:
     return t.strip()
 
 
+# Newspaper and periodical titles. They appear inside the dated source
+# citations, and when a citation is absorbed into a board list the title looks
+# exactly like a member name. They are sources, not entities, so they are
+# rejected outright rather than recorded as companies.
+PUBLICATION_RE = re.compile(
+    r"\b(gazette|journal|journ[eé]e|bulletin|[eé]cho|d[eé]p[eê]che|cote\s+de|annales|"
+    r"revue|presse|informations?|courrier|moniteur|s[eé]maphore|avenir|opinion|"
+    r"tribune|libert[eé]|progr[eè]s|r[eé]veil|vigie|petit\s+\w+|temps|figaro|matin|"
+    r"illustration|illustr[eé]e|hebdomadaire|quotidien|annuaire|palais|"
+    r"recueil|affiches|petites\s+affiches|r[eé]pertoire|almanach|m[eé]morial|"
+    r"dictionnaire|who'?s\s+who|notices?\s+biographiques|catalogue\s+g[eé]n[eé]ral|"
+    r"agence\s+[eé]conomique|documents?\s+politiques)\b",
+    re.I,
+)
+# Balance-sheet and accounting line items, which sit in tables next to boards.
+ACCOUNTING_RE = re.compile(
+    r"^(?:disponibilit[eé]s?|portefeuille|immobilisations?|amortissements?|r[eé]serves?|"
+    r"b[eé]n[eé]fices?|pertes?|provisions?|cr[eé]anciers?|d[eé]biteurs?|cr[eé]diteurs?|"
+    r"esp[eè]ces?|caisse|banques?|stocks?|marchandises?|titres?|participations?|"
+    r"fournisseurs?|clients?|report|solde|totaux?|total|passif|actif|"
+    r"frais\s+\w+|charges?|produits?|recettes?|d[eé]penses?|imp[oô]ts?|"
+    r"exc[eé]dent|dotation|capital\s+\w*)\.?$",
+    re.I,
+)
+
+
 def looks_like_org(name: str) -> bool:
     n = clean_text(name)
     if not n:
@@ -243,9 +269,19 @@ def normalise_org_name(raw: str) -> str:
     return clean_text(n)
 
 
+# A predecessor or former name appended to the current one:
+# "Omnium nord-africain (Anct Bonnaud et Cie)", "Marocaine metallurgique (anc.
+# Ets Bouvier)". The tail names a different firm, so it must not enter the key.
+PREDECESSOR_TAIL_RE = re.compile(
+    r"\s*[\(,]?\s*(?:anct?\.?|ancienne?(?:ment)?|anciens?|ex-?|pr[eé]c[eé]demment|"
+    r"nouvelle\s+d[eé]nomination|puis|devenue?)\b.*$",
+    re.I,
+)
+
+
 def org_key(raw: str) -> str:
     """Matching key for a company name: accent- and stopword-stripped slug."""
-    n = strip_accents(normalise_org_name(raw)).lower()
+    n = strip_accents(PREDECESSOR_TAIL_RE.sub("", normalise_org_name(raw))).lower()
     n = re.sub(r"\b(societe|ste|s|anonyme|anon|an|cie|compagnie|comp|francaise|francais|"
                r"generale|general|nouvelle|nouveau|de|du|des|d|la|le|les|l|et|en|a|au|aux|"
                r"pour|sur|the|of|and)\b", " ", n)

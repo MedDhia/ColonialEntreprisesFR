@@ -359,6 +359,24 @@ def split_title(title: str) -> dict:
     }
 
 
+# The corpus documents French colonial companies from the 1830s to the 1970s,
+# with a few later survivals. Years outside this window come from a regex
+# catching a page number, a capital figure or a legal reference, not a date.
+MIN_PLAUSIBLE_YEAR = 1800
+MAX_PLAUSIBLE_YEAR = 2025
+
+
+def plausible_year(year: str | int | None) -> str:
+    """Return the year as a string if it is a credible date here, else ""."""
+    if year in (None, ""):
+        return ""
+    try:
+        y = int(str(year)[:4])
+    except (TypeError, ValueError):
+        return ""
+    return str(y) if MIN_PLAUSIBLE_YEAR <= y <= MAX_PLAUSIBLE_YEAR else ""
+
+
 def ensure_dir(path: str) -> str:
     os.makedirs(path, exist_ok=True)
     return path

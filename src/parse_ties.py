@@ -48,9 +48,11 @@ from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common import PLACES, clean_text, ensure_dir, strip_accents  # noqa: E402
+from common import PLACES, clean_text, ensure_dir, plausible_year, strip_accents  # noqa: E402
 from names import (  # noqa: E402
+    ACCOUNTING_RE,
     LEADING_MM_RE,
+    PUBLICATION_RE,
     looks_like_org,
     make_person_key,
     normalise_org_name,
@@ -178,9 +180,31 @@ SEPARATOR_RE = re.compile(r"[—–\-_=]{4,}|\n\s*\n")
 
 
 # --- anchors -------------------------------------------------------------
-# A dated press citation: "(La Journee industrielle, 22 mars 1927)".
+MONTH_ALT = (
+    r"janvier|f[eé]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|"
+    r"octobre|novembre|d[eé]cembre"
+)
+# A dated press citation: "(La Journee industrielle, 22 mars 1927)",
+# "(Exposition coloniale internationale de Paris, 1931)".
+#
+# The date structure is required, not merely a comma and a four-digit number.
+# Matching any parenthesis containing a year swept up company-history notes -
+# "(Anciens Ets Salmon, fondes en 1818)", "(Ancienne maison P. Lemoine, fondee
+# en 1867)" - and then carried 1818 forward as the observation year for every
+# board that followed, producing 150-year careers.
 CITATION_RE = re.compile(
-    rf"\(\s*(?P<body>[^()\n]{{4,90}}?,\s*[^()\n]{{0,30}}?(?P<year>{YEAR})[^()\n]{{0,12}}?)\s*\)"
+    rf"\(\s*(?P<body>[^()\n]{{3,70}}?,\s*"
+    rf"(?:(?:\d{{1,2}}(?:er)?\s+)?(?:{MONTH_ALT})(?:\s*[-–]\s*(?:{MONTH_ALT}))?\s+)?"
+    rf"(?P<year>{YEAR})(?:\s*[-–]\s*(?:{YEAR}))?"
+    rf"(?:\s*,\s*(?:p+\.?|nos?\.?)\s*[\d\-–\s]+)?)\s*\)",
+    re.I,
+)
+# Even with the date structure required, a parenthesis that narrates the firm's
+# origins is a history note rather than a source.
+HISTORY_NOTE_RE = re.compile(
+    r"\b(?:fond[eé]e?s?|ancienne?s?|anct|cr[eé][eé]e?s?|constitu[eé]e?s?|"
+    r"a\s+pris\s+la\s+suite|remonte|origine|depuis|absorb[eé]e?|reprise?)\b",
+    re.I,
 )
 # Inline directory entry: "AEC 1922-519 - Ste generale des abattoirs ...".
 AEC_RE = re.compile(
@@ -341,6 +365,8 @@ def find_anchors(text: str, is_annuaire: bool) -> list[Anchor]:
                               clean_anchor_company(m.group("name") or ""), m.group("page") or ""))
     for m in CITATION_RE.finditer(text):
         body = clean_text(m.group("body"))
+        if HISTORY_NOTE_RE.search(body):
+            continue
         anchors.append(Anchor(m.start(), "citation", m.group("year"), body))
     if is_annuaire:
         for m in NUMBERED_ENTRY_RE.finditer(text):
@@ -407,8 +433,9 @@ def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[d
 
     for i, a in enumerate(anchors):
         end = anchors[i + 1].pos if i + 1 < len(anchors) else len(text)
-        if a.year:
-            cur_year = a.year
+        year = plausible_year(a.year)
+        if year:
+            cur_year = year
         if a.source:
             cur_source = a.source
         if a.kind in entry_kinds:
@@ -693,6 +720,10 @@ def _make_member(frag: str, role: str) -> dict | None:
         return None
     if LEGAL_FRAGMENT_RE.match(bare) or GENERIC_FRAGMENT_RE.match(bare):
         return None
+    # Periodical titles are sources, not entities; accounting captions sit in
+    # balance-sheet tables next to the board and look like short names.
+    if PUBLICATION_RE.search(bare) or ACCOUNTING_RE.match(bare):
+        return None
     # A bare place name is a location, not a board member.
     if strip_accents(bare).lower().strip(" .") in PLACES:
         return None
@@ -736,8 +767,10 @@ def parse_attributes(seg_text: str) -> list[tuple[str, str]]:
     m = FOUNDED_RE.search(seg_text)
     if m:
         mo = MONTHS.get(strip_accents(m.group("month")).lower(), 0)
-        iso = f"{m.group('year')}-{mo:02d}-{int(m.group('day')):02d}" if mo else m.group("year")
-        out.append(("founded_date", iso))
+        y = plausible_year(m.group("year"))
+        if y:
+            iso = f"{y}-{mo:02d}-{int(m.group('day')):02d}" if mo else y
+            out.append(("founded_date", iso))
     m = CAPITAL_RE.search(seg_text)
     if m:
         amount = m.group("amount").strip().rstrip(".,")
@@ -809,6 +842,12 @@ def main() -> None:
 
         annuaire = is_annuaire_doc(doc, text[:6000])
         default_company = doc["name_normalised"] or doc["name_listed"]
+        # Some catalogue entries are reference works, not firms ("Recueil des
+        # societes coloniales et maritimes"). Their dossier must not become a
+        # company node; ties inside them count only where an entry anchor names
+        # an actual firm.
+        if PUBLICATION_RE.search(default_company):
+            default_company = ""
         if doc["entry_type"] != "company":
             # Biographies and thematic documents have no single subject firm;
             # ties are only recorded where a segment names one explicitly.
