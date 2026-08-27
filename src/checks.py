@@ -23,7 +23,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common import plausible_year, split_title  # noqa: E402
+from common import encode_url, plausible_year, split_title  # noqa: E402
 from names import looks_like_org, org_key, parse_person_name  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -92,6 +92,35 @@ def check_names() -> None:
         eq(f"  {a[:32]!r} == {b[:32]!r}", org_key(a), org_key(b))
     check("  distinct firms stay distinct",
           org_key("Banque de l'Algérie") != org_key("Banque d'État du Maroc"))
+
+
+def check_urls() -> None:
+    """Non-ASCII PDF filenames must be percent-encoded before the request.
+
+    Many filenames on the site contain characters that are legal in a filename
+    but not in an HTTP request line. Passing them through raw raises
+    UnicodeEncodeError inside urllib, which is indistinguishable from a dead
+    link in the extraction log; 32 documents were lost to this before it was
+    caught. The encoded URL must also be pure ASCII, or the same error recurs.
+    """
+    print("common.encode_url", file=sys.stderr)
+    cases = [
+        ("https://entreprises-coloniales.fr/afrique-du-nord/Banque_Cox_&_C°-Algerie.pdf",
+         "https://entreprises-coloniales.fr/afrique-du-nord/Banque_Cox_&_C%C2%B0-Algerie.pdf"),
+        ("https://entreprises-coloniales.fr/inde-indochine/Amis_de_l_art_Saïgon_1935.pdf",
+         "https://entreprises-coloniales.fr/inde-indochine/Amis_de_l_art_Sa%C3%AFgon_1935.pdf"),
+    ]
+    for raw, want in cases:
+        eq(f"  encodes {raw[-34:]!r}", encode_url(raw), want)
+    for raw, _ in cases:
+        got = encode_url(raw)
+        check(f"  ascii-safe {raw[-28:]!r}", got.isascii(), got)
+    # An already-encoded or plain-ASCII URL must pass through unchanged.
+    for raw in [
+        "https://entreprises-coloniales.fr/empire/Colonial_Trust.pdf",
+        "https://entreprises-coloniales.fr/afrique-du-nord/Banque_Cox_&_C%C2%B0-Algerie.pdf",
+    ]:
+        eq(f"  idempotent {raw[-30:]!r}", encode_url(raw), raw)
 
 
 def check_titles() -> None:
@@ -289,6 +318,28 @@ def check_dataset() -> None:
     check("  few implausible career spans", long_span <= 0.01 * len(persons),
           f"{long_span}/{len(persons)} exceed 70 years")
 
+    # Control characters from the PDF text layer must not reach the outputs.
+    # NUL is legal in a CSV cell but illegal in XML even when escaped, so one
+    # leaking through produced a GraphML file that no parser would load.
+    import glob as _glob
+
+    illegal = bytes(range(0, 9)) + bytes([11, 12]) + bytes(range(14, 32))
+    dirty = []
+    for path in sorted(_glob.glob(os.path.join(PROC_DIR, "*.csv"))):
+        raw = open(path, "rb").read()
+        if any(bytes([c]) in raw for c in illegal):
+            dirty.append(os.path.basename(path))
+    check("  no control characters in any CSV", not dirty, "; ".join(dirty))
+
+    for path in sorted(_glob.glob(os.path.join(ROOT, "data", "graphs", "*.graphml"))):
+        try:
+            import xml.etree.ElementTree as ET
+
+            ET.parse(path)
+            check(f"  {os.path.basename(path)} is well-formed XML", True)
+        except Exception as exc:  # noqa: BLE001
+            check(f"  {os.path.basename(path)} is well-formed XML", False, str(exc)[:120])
+
     il = load("edges_company_interlock.csv")
     if il:
         check("  interlock endpoints known",
@@ -303,6 +354,7 @@ def main() -> None:
     args = ap.parse_args()
 
     check_names()
+    check_urls()
     check_titles()
     check_citations()
     if not args.unit:

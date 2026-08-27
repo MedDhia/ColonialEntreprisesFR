@@ -116,7 +116,10 @@ def extract_one(doc_id: str, pdf_url: str) -> dict:
         doc.close()
         del data
 
-    body = PAGE_SEP.join(pages)
+    # PyMuPDF emits NUL where the embedded font leaves a glyph undefined.
+    # NUL is illegal in XML and meaningless here, so it is dropped at the
+    # source rather than left for every downstream consumer to handle.
+    body = PAGE_SEP.join(pages).replace("\x00", " ")
     row["n_chars"] = len(body)
     row["n_pages_with_text"] = with_text
     # A PDF whose text layer is missing entirely is flagged rather than dropped,
