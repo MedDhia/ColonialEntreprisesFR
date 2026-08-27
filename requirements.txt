@@ -1,0 +1,10 @@
+# Text extraction from the source PDFs.
+# PyMuPDF is required rather than optional: the site's PDFs embed subsetted
+# Type1 fonts with MacRoman encodings that pypdf and pdfminer decode into a
+# substitution cipher, while PyMuPDF resolves them correctly.
+pymupdf>=1.24
+
+# Optional, for the analysis notebooks and the GraphML/GEXF exports.
+# The pipeline itself writes CSV/GraphML with the standard library only.
+networkx>=3.0
+pandas>=2.0
