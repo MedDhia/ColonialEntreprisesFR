@@ -122,6 +122,32 @@ subsidiaries, related firms). `resolved = 1` means the target is in the
 catalogue. These are *the compiler's* judgements of relatedness, not
 observed corporate facts.
 
+### `candidate_ties_from_annotations.csv` — unverified leads, **not** network edges
+
+Board lists carry the compiler's own identification of a director's other
+positions: `A. R. Fontaine (Distill. Indoch.)`, `Paul Philippart [C.I.L.]`.
+That is interlock evidence, but written as abbreviations, so most of it cannot
+be resolved to a company node.
+
+| Variable | Description |
+|---|---|
+| `person_id` | Resolved person the note attaches to. |
+| `annotation_raw` | The note verbatim. |
+| `candidate_company_id`, `candidate_company_name` | Resolved company, where one was found. Blank when unmatched. |
+| `match_method` | `acronym` (a capitals acronym unique in the catalogue), `name` (multi-word name whose key is distinctive), or `unmatched`. |
+| `from_company_id` | The board on which the annotation was observed. |
+| `year`, `source_ref`, `doc_id` | Provenance. |
+| `n_observations` | Times this person/annotation pair was seen. |
+
+Roughly 6% resolve. Ambiguous acronyms are deliberately left unmatched — `BAO`
+is both the Banque de l'Afrique occidentale and a brewery alias in this
+catalogue, and first-wins matching picked the wrong one.
+
+**These rows are excluded from every edge file.** Treat them as leads for
+manual verification, or as material for a better abbreviation-resolution step.
+The `unmatched` rows are the most useful part: they are a ready-made worklist
+of abbreviations the catalogue does not cover.
+
 ### `parse_report.csv` — per-document diagnostics
 
 `doc_id`, `entry_type`, `is_annuaire`, `n_chars`, `n_segments`, `n_ties`,

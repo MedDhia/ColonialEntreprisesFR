@@ -509,7 +509,18 @@ def _fragment_is_namelike(frag: str) -> bool:
     tokens = f.split()
     if not tokens or len(tokens) > 7:
         return False
-    if PROSE_START_RE.match(f) and not looks_like_org(f):
+    # PROSE_START_RE lists French function words, several of which are also the
+    # opening of a perfectly good name: the verb "a" collides with the initial
+    # in "A. R. Fontaine", and "d'", "le", "la", "du", "des" collide with the
+    # particle surnames "D'Aubigny", "Le Bris", "Du Pasquier", "Des Rotours".
+    # A fragment is therefore exempt when it opens like a name - an initial, or
+    # a capitalised word followed by another capitalised word - since running
+    # prose continues in lower case ("Les travaux comme...").
+    opens_like_name = bool(
+        re.match(r"^[A-ZÉÈÀÂÎÔÛÇ]\.", f)
+        or re.match(r"^[A-ZÉÈÀÂÎÔÛÇ][a-zéèêëàâîïôöûüùç]*['’]?\s*[A-ZÉÈÀÂÎÔÛÇ]", f)
+    )
+    if not opens_like_name and PROSE_START_RE.match(f) and not looks_like_org(f):
         return False
     # A full stop inside the fragment means a sentence boundary was swallowed,
     # unless it is an initial or a standard abbreviation ("A. R. Fontaine").

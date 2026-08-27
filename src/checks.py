@@ -73,10 +73,14 @@ def check_names() -> None:
 
     print("names.looks_like_org", file=sys.stderr)
     for raw in ["la Société centrale d'études", "la Banque privée", "Cie générale du Maroc",
-                "Éts Xicoira", "Crédit foncier d'Algérie"]:
+                "Éts Xicoira", "Crédit foncier d'Algérie", "Les Cultures marocaines",
+                "L'Alfa", "LA MANUTENTION MAROCAINE"]:
         check(f"  org {raw!r}", looks_like_org(raw))
-    for raw in ["Georges Despret", "A. R. Fontaine", "baron Carton de Wiart"]:
-        check(f"  person {raw!r}", not looks_like_org(raw))
+    for raw in ["Georges Despret", "A. R. Fontaine", "baron Carton de Wiart",
+                # Prose fragments starting with an article must not be filed as
+                # companies; the article rule is case-sensitive for that reason.
+                "Les travaux comme", "la description qui"]:
+        check(f"  not an org {raw!r}", not looks_like_org(raw))
 
     print("names.org_key", file=sys.stderr)
     same = [
@@ -159,6 +163,25 @@ def check_citations() -> None:
              "Les statuts ont été modifiés en conséquence, sous la condition suspensive "
              "de la réalisation de cette augmentation.")
     check("  prose rejected as a list", not P.looks_like_name_list(prose))
+
+    # PROSE_START_RE lists French function words that also open real names.
+    # These are regression tests for both directions of that collision.
+    for frag in ["A. R. Fontaine", "E. Mirabaud", "D'Aubigny", "Le Bris",
+                 "La Fontaine", "Du Pasquier", "Des Rotours"]:
+        check(f"  name-like {frag!r}", P._fragment_is_namelike(frag))
+    for frag in ["a été décidé que", "la description qui", "des immeubles et",
+                 "le conseil est autorisé", "Les travaux comme"]:
+        check(f"  prose-like {frag!r}", not P._fragment_is_namelike(frag))
+
+    # An initial-led name must survive the whole board-list path, not just the
+    # fragment test: "A." collides with the French verb "a".
+    body = "MM. A. R. Fontaine (Distill. Indoch.), présid.; P(aul) Delorme, admin."
+    members = P.parse_board_list(body, "administrateur")
+    names = {m["name_clean"] for m in members}
+    check("  initial-led name kept", "A. R. Fontaine" in names, str(names))
+    check("  in-place initial expanded", "Paul Delorme" in names, str(names))
+    annots = {m["name_clean"]: m["annotation"] for m in members}
+    eq("  annotation captured", annots.get("A. R. Fontaine"), "Distill. Indoch.")
 
     # Corporate directors are companies, not people.
     body = "MM. Charles Thévenet, président ; la Société centrale d'études, vice-président"

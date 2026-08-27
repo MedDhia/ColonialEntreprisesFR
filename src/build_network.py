@@ -43,7 +43,7 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common import ensure_dir, slugify, strip_accents  # noqa: E402
+from common import PLACES, ensure_dir, slugify, strip_accents  # noqa: E402
 from names import org_key  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -171,6 +171,74 @@ def resolve_persons(affiliations: list[dict]) -> tuple[dict[str, str], list[dict
             )
     crosswalk.sort(key=lambda r: (r["surname"], r["person_key"]))
     return mapping, crosswalk
+
+
+ANNOT_DATE_RE = re.compile(r"^\s*(?:ca\.?\s*)?1[5-9]\d{2}(?:\s*[-–]\s*(?:1[5-9]\d{2}|20\d{2}))?\s*$")
+ANNOT_PARTICLE_START_RE = re.compile(r"^(?:de|d['’]|du|des|le|la|les|[aà]|en|et|=|ex-?|voir)\b", re.I)
+ANNOT_ACRONYM_RE = re.compile(r"^[A-Z][A-Z0-9&.\-]{2,14}$")
+# Short keys collide once legal forms and stopwords are stripped, so a
+# name-based match needs this much surviving signal.
+MIN_ANNOT_KEY_LEN = 8
+
+
+def annotation_candidate_ties(
+    affiliations: list[dict],
+    mapping: dict[str, str],
+    acronym_index: dict[str, str],
+    known_keys: dict[str, str],
+) -> list[dict]:
+    """Resolve the compiler's inline affiliation notes into candidate ties.
+
+    Board lists carry the compiler's own identification of a director's other
+    positions: "A. R. Fontaine (Distill. Indoch.)", "Paul Philippart [C.I.L.]".
+    That is interlock evidence, but as abbreviations rather than names, so only
+    a minority resolve to a company node and naive matching produces nonsense
+    ("de Paris" onto a firm called "A Paris").
+
+    These are therefore emitted as clearly-labelled *candidates* and are not
+    part of the network. Guards: no bare dates or place names, no fragments
+    opening with a particle, and either an all-capitals acronym present in the
+    catalogue or a multi-word name whose key retains enough signal to be
+    distinctive.
+    """
+    out: dict[tuple, dict] = {}
+    for r in affiliations:
+        if not r["annotation"] or not r["person_key"]:
+            continue
+        pid = mapping.get(r["person_key"], r["person_key"])
+        for piece in (p.strip(" .,;=") for p in r["annotation"].split(";")):
+            if len(piece) < 3 or ANNOT_DATE_RE.match(piece):
+                continue
+            if ANNOT_PARTICLE_START_RE.match(piece):
+                continue
+            if strip_accents(piece).lower() in PLACES:
+                continue
+            target, method = "", ""
+            if ANNOT_ACRONYM_RE.match(piece) and piece.upper() in acronym_index:
+                target, method = acronym_index[piece.upper()], "acronym"
+            else:
+                k = org_key(piece)
+                if len(piece.split()) >= 2 and len(k) >= MIN_ANNOT_KEY_LEN and k in known_keys:
+                    target, method = k, "name"
+            key = (pid, piece.lower(), target)
+            if key in out:
+                out[key]["n_observations"] += 1
+                continue
+            out[key] = {
+                "person_id": pid,
+                "annotation_raw": piece,
+                "candidate_company_id": target,
+                "candidate_company_name": known_keys.get(target, ""),
+                "match_method": method or "unmatched",
+                "from_company_id": r["company_key"],
+                "year": r["year"],
+                "source_ref": r["source_ref"],
+                "doc_id": r["doc_id"],
+                "n_observations": 1,
+            }
+    rows = sorted(out.values(), key=lambda r: (r["match_method"] == "unmatched",
+                                               -r["n_observations"]))
+    return rows
 
 
 def company_duplicate_candidates(companies: dict[str, dict]) -> list[dict]:
@@ -458,6 +526,33 @@ def main() -> None:
                "founded_date_observed", "capital_observed", "capital_year",
                "head_office_observed", "n_ties", "n_board_ties", "n_directors",
                "first_year_observed", "last_year_observed"])
+
+    # The compiler's inline affiliation notes, resolved where possible. Not
+    # part of the network - see the docstring on annotation_candidate_ties.
+    acronym_owners: dict[str, set[str]] = defaultdict(set)
+    for d in documents:
+        if d["entry_type"] != "company":
+            continue
+        k = org_key(d["name_normalised"] or d["name_listed"])
+        if not k:
+            continue
+        for a in [d["acronym"], *d["alias"].split("; ")]:
+            a = a.strip()
+            if len(a) >= 3:
+                acronym_owners[a.upper()].add(k)
+    # An acronym claimed by more than one firm identifies nothing: "BAO" is
+    # both the Banque de l'Afrique occidentale and a brewery alias, and
+    # first-wins matching silently picked the wrong one.
+    acronym_index = {a: next(iter(ks)) for a, ks in acronym_owners.items() if len(ks) == 1}
+    ambiguous_acronyms = sum(1 for ks in acronym_owners.values() if len(ks) > 1)
+    print(f"acronym index: {len(acronym_index)} unique, "
+          f"{ambiguous_acronyms} ambiguous and unused", file=sys.stderr)
+    known_keys = {k: c["name"] for k, c in companies.items()}
+    cand = annotation_candidate_ties(affiliations, mapping, acronym_index, known_keys)
+    write_csv("candidate_ties_from_annotations.csv", cand,
+              ["person_id", "annotation_raw", "candidate_company_id",
+               "candidate_company_name", "match_method", "from_company_id",
+               "year", "source_ref", "doc_id", "n_observations"])
 
     dupes = company_duplicate_candidates(companies)
     write_csv("company_duplicate_candidates.csv", dupes,

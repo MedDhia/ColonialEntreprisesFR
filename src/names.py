@@ -55,8 +55,13 @@ ORG_MARKERS = re.compile(
     r"chambre de commerce|coop[eé]rative|mutuelle|assurances?)\b",
     re.I,
 )
-# A leading article is the giveaway for a corporate director: "la Banque privee".
-ORG_ARTICLE_RE = re.compile(r"^(?:la|le|les|l['’])\s+", re.I)
+# A leading article is the giveaway for a corporate director: "la Banque
+# privee", "la Societe centrale d'etudes". The following word must be
+# capitalised, or the rule also swallows ordinary prose fragments such as
+# "Les travaux comme..." and files them as companies.
+# Deliberately NOT re.I: the flag would make the uppercase class match lower
+# case as well, which is exactly the distinction being drawn here.
+ORG_ARTICLE_RE = re.compile(r"^(?:[Ll]a|[Ll]e|[Ll]es|[Ll]['’]|LA|LE|LES)\s*[A-ZÉÈÀÂÎÔÛÇ]")
 
 # Occupational or descriptive tails that follow a name and are not part of it.
 DESCRIPTOR_RE = re.compile(
@@ -125,8 +130,11 @@ def looks_like_org(name: str) -> bool:
         return False
     if ORG_MARKERS.search(n):
         return True
-    if ORG_ARTICLE_RE.match(n) and len(n.split()) >= 2:
-        return True
+    if ORG_ARTICLE_RE.match(n):
+        # Two tokens for the spaced form ("la Banque privee"); an elided
+        # article fuses into one token but is still a company ("L'Alfa").
+        if len(n.split()) >= 2 or n[1:2] in {"'", "’"}:
+            return True
     return False
 
 
