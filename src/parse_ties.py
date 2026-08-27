@@ -54,7 +54,6 @@ from names import (  # noqa: E402
     LEADING_MM_RE,
     PUBLICATION_RE,
     looks_like_org,
-    make_person_key,
     normalise_org_name,
     org_key,
     parse_person_name,
@@ -90,12 +89,6 @@ ROLE_RULES: list[tuple[str, str]] = [
     (r"ing[eé]nieur[s]?[- ]conseil", "ingenieur_conseil"),
 ]
 ROLE_RES = [(re.compile(p, re.I), canon) for p, canon in ROLE_RULES]
-# A role phrase sitting at the end of a segment: "Georges Despret, presid."
-ROLE_TAIL_RE = re.compile(
-    r",\s*(?P<role>(?:vice-?|adjoint|honoraire|d[eé]l[eé]gu[eé]|g[eé]n[eé]ral|"
-    r"[a-z[eé]éèêA-Z.\-]{3,}){0,4}[^,;]{0,40})\s*$",
-    re.I,
-)
 
 
 def canonical_role(text: str) -> str:
@@ -315,9 +308,9 @@ XREF_RE = re.compile(r"(?:https?://)?(?:www\.)?entreprises-coloniales\.fr/(?P<pa
 
 # Company attribute observations.
 CAPITAL_RE = re.compile(
-    rf"capital(?:\s+social)?(?:\s+(?:de|est\s+de|port[eé]\s+[aà]|fix[eé]\s+[aà]))?\s*:?\s*"
-    rf"(?P<amount>\d[\d .,]{{2,20}})\s*(?P<unit>millions?|milliards?|MF)?\s*(?:de\s+)?"
-    rf"(?P<currency>francs?|fr\.?|piastres?|\$)",
+    r"capital(?:\s+social)?(?:\s+(?:de|est\s+de|port[eé]\s+[aà]|fix[eé]\s+[aà]))?\s*:?\s*"
+    r"(?P<amount>\d[\d .,]{2,20})\s*(?P<unit>millions?|milliards?|MF)?\s*(?:de\s+)?"
+    r"(?P<currency>francs?|fr\.?|piastres?|\$)",
     re.I,
 )
 FOUNDED_RE = re.compile(

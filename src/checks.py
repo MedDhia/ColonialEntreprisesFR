@@ -199,12 +199,12 @@ def check_citations() -> None:
 def check_extraction() -> None:
     """Assert the PDF backend decodes the site's font encodings correctly."""
     print("PDF extraction backend", file=sys.stderr)
-    try:
-        import pymupdf  # noqa: F401
-    except ImportError:
-        check("  pymupdf importable", False, "pip install pymupdf")
+    import importlib.util
+
+    check("  pymupdf importable", importlib.util.find_spec("pymupdf") is not None,
+          "pip install pymupdf")
+    if importlib.util.find_spec("pymupdf") is None:
         return
-    check("  pymupdf importable", True)
 
     import glob
     import gzip

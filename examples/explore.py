@@ -75,7 +75,6 @@ def main() -> None:
         rows = sorted(by_period.get(per, []), key=lambda r: -int(r["weight"]))
         if not rows:
             continue
-        top = rows[0]
         names = {f["company_id"]: f["name"] for f in firms}
         print(f"\n  {per}  ({len(rows):,} edges)")
         for e in rows[:3]:

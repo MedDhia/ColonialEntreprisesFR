@@ -367,7 +367,6 @@ def main() -> None:
     args = ap.parse_args()
 
     documents = read_csv("documents.csv")
-    listings = read_csv("document_listings.csv")
     affiliations = [r for r in read_csv("affiliations.csv") if r["company_key"] and r["person_key"]]
     org_aff = [r for r in read_csv("org_affiliations.csv") if r["company_key"] and r["member_key"]]
     attributes = read_csv("company_attributes.csv")

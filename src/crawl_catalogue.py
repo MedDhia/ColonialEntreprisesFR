@@ -46,7 +46,6 @@ OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 CACHE_DIR = os.environ.get("EC_CACHE", "/tmp/ec_cache")
 
 HEADING_CLASSES = {"pays", "premierTitrePays", "titreRubrique", "titrePays"}
-LIST_CLASSES = {"LD", "DL", "SDL"}
 
 
 class IndexParser(HTMLParser):
