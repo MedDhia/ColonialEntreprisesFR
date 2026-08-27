@@ -284,12 +284,21 @@ def clean_anchor_company(raw: str) -> str:
         return ""
     n = NAME_TAIL_SPLIT_RE.split(n, maxsplit=1)[0]
     n = re.sub(r"\s*[:;]\s*.*$", "", n)
+    # Editorial brackets leak into names: "Bongola-Lokundji [sic".
+    n = re.sub(r"\s*\[.*$", "", n)
+    # A renaming records two firms; keep the first as the display name. The
+    # matching key drops the tail too (see names.PREDECESSOR_TAIL_RE).
+    n = re.sub(r"\s*,?\s*\b(?:puis|devenue?|renomm[eé]e?)\b.*$", "", n, flags=re.I)
     n = n.strip(" .,;:—–-*")
     if len(n) < 4 or len(re.findall(r"[A-Za-zÀ-ÿ]", n)) < 3:
         return ""
     if not re.match(r"^[A-ZÉÈÀÂÎÔÛÇ«\"'0-9]", n):
         return ""
     if ANCHOR_NOT_A_NAME_RE.match(n) or ANCHOR_STOPWORD_ONLY_RE.match(n):
+        return ""
+    # A balance-sheet caption or a periodical title is not a firm. Both sit
+    # close to boards in the text and otherwise become company nodes.
+    if ACCOUNTING_RE.match(n) or PUBLICATION_RE.search(n):
         return ""
     # Un-invert "X (Societe des)" into "Societe des X", as in the catalogue.
     from common import split_title

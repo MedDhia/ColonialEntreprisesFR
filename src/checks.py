@@ -1,0 +1,299 @@
+"""Validation suite for the pipeline and the built dataset.
+
+Run after any change to the parsers, and after a full rebuild:
+
+    python3 src/checks.py            # unit checks + dataset integrity
+    python3 src/checks.py --unit     # parser checks only (no data needed)
+
+The extraction check matters most. The source PDFs embed subsetted Type1
+fonts with MacRoman encodings, and several PDF libraries decode them into a
+monotonic substitution cipher instead of failing loudly: "Publie le 19
+janvier" comes out as "«uelieHleHYeHjenvier". A silent switch of extraction
+backend would therefore produce a dataset of plausible-looking garbage. The
+check asserts that ordinary French words survive extraction.
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import os
+import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from common import plausible_year, split_title  # noqa: E402
+from names import looks_like_org, org_key, parse_person_name  # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROC_DIR = os.path.join(ROOT, "data", "processed")
+
+FAILURES: list[str] = []
+CHECKS = {"passed": 0, "failed": 0}
+
+
+def check(label: str, condition: bool, detail: str = "") -> None:
+    if condition:
+        CHECKS["passed"] += 1
+    else:
+        CHECKS["failed"] += 1
+        FAILURES.append(f"{label}{': ' + detail if detail else ''}")
+        print(f"  FAIL  {label} {detail}", file=sys.stderr)
+
+
+def eq(label: str, got, want) -> None:
+    check(label, got == want, f"got {got!r}, want {want!r}")
+
+
+# --- parser unit checks --------------------------------------------------
+def check_names() -> None:
+    print("names.parse_person_name", file=sys.stderr)
+    cases = [
+        # raw, given, surname
+        ("Georges Despret", "Georges", "Despret"),
+        ("A. R. Fontaine", "A. R.", "Fontaine"),
+        ("J. de Margerie", "J.", "de Margerie"),
+        ("Henry de Sieyès", "Henry", "de Sieyès"),
+        ("André Laurent-Atthalin", "André", "Laurent-Atthalin"),
+        ("Dr H.-A. Van Nierop", "H.-A.", "Van Nierop"),
+        # A compound surname behind an honorific must not lose its first word.
+        ("baron Carton de Wiart", "", "Carton de Wiart"),
+        # Surname-first, with and without parentheses.
+        ("PHILIPPAR (Edmond)", "Edmond", "Philippar"),
+        ("Chabert Pierre", "Pierre", "Chabert"),
+        # The sources expand an initial in place.
+        ("P(aul) Delorme", "Paul", "Delorme"),
+        ("L(éonard) Fontaine", "Léonard", "Fontaine"),
+    ]
+    for raw, given, surname in cases:
+        p = parse_person_name(raw)
+        eq(f"  {raw!r} given", p["given"], given)
+        eq(f"  {raw!r} surname", p["surname"], surname)
+
+    print("names.looks_like_org", file=sys.stderr)
+    for raw in ["la Société centrale d'études", "la Banque privée", "Cie générale du Maroc",
+                "Éts Xicoira", "Crédit foncier d'Algérie"]:
+        check(f"  org {raw!r}", looks_like_org(raw))
+    for raw in ["Georges Despret", "A. R. Fontaine", "baron Carton de Wiart"]:
+        check(f"  person {raw!r}", not looks_like_org(raw))
+
+    print("names.org_key", file=sys.stderr)
+    same = [
+        ("Compagnie des Chemins de fer du Maroc", "Cie des chemins de fer du Maroc"),
+        ("Omnium nord-africain", "Omnium nord-africain (Anct Bonnaud et Cie)"),
+        ("Société Africaine de Distilleries", "Africaine de distilleries"),
+    ]
+    for a, b in same:
+        eq(f"  {a[:32]!r} == {b[:32]!r}", org_key(a), org_key(b))
+    check("  distinct firms stay distinct",
+          org_key("Banque de l'Algérie") != org_key("Banque d'État du Maroc"))
+
+
+def check_titles() -> None:
+    print("common.split_title", file=sys.stderr)
+    p = split_title("Abattoirs municipaux et industriels au Maroc (Société générale des), Casablanca : une")
+    eq("  head un-inverted", p["name_normalised"],
+       "Société générale des Abattoirs municipaux et industriels au Maroc")
+    eq("  place split off", p["place_listed"], "Casablanca")
+
+    p = split_title("Africaine de Mines (Société)(1900-1903) : mines de l'Ouenza")
+    eq("  operating period start", p["year_start"], "1900")
+    eq("  operating period end", p["year_end"], "1903")
+    check("  generic head is not a forename", not p["first_paren_is_forename"])
+
+    p = split_title("Jourdan (Adolphe)(1846-1916), Alger : imprimeur")
+    check("  forename detected", p["first_paren_is_forename"])
+    eq("  place", p["place_listed"], "Alger")
+
+    p = split_title("Agricole, Financière Industrielle et Minière de l'Indochine (Société)(Safimic), Hanoï")
+    eq("  alias captured", p["alias"], "Safimic")
+    eq("  place", p["place_listed"], "Hanoï")
+
+
+def check_citations() -> None:
+    import parse_ties as P
+
+    print("parse_ties.CITATION_RE", file=sys.stderr)
+    should_match = [
+        ("(La Journée industrielle, 22 mars 1927)", "1927"),
+        ("(Les Annales coloniales, 10 août 1921)", "1921"),
+        ("(La Cote de la Bourse et de la banque, 26 décembre 1920)", "1920"),
+        ("(Indochine, février-mars 1929)", "1929"),
+        ("(Exposition coloniale internationale de Paris, 1931)", "1931"),
+    ]
+    for text, year in should_match:
+        m = P.CITATION_RE.search(text)
+        check(f"  matches {text[:44]!r}", bool(m))
+        if m:
+            eq(f"  year of {text[:34]!r}", m.group("year"), year)
+            check(f"  not a history note {text[:34]!r}",
+                  not P.HISTORY_NOTE_RE.search(m.group("body")))
+
+    # Company-history notes must not be read as dated sources: doing so used to
+    # date a whole run of boards to the firm's founding year.
+    should_not = [
+        "(Anciens Éts Salmon, fondés en 1818)",
+        "(Ancienne maison P. Lemoine, fondée en 1867)",
+        "(A pris la suite de la société Maurel frères, fondée en 1849)",
+    ]
+    for text in should_not:
+        m = P.CITATION_RE.search(text)
+        rejected = (m is None) or bool(P.HISTORY_NOTE_RE.search(m.group("body")))
+        check(f"  rejects history note {text[:44]!r}", rejected)
+
+    print("parse_ties board lists", file=sys.stderr)
+    body = ("MM. Georges Despret, présid. ; Wladimir Archawski, admin.-dél. ; "
+            "Mathieu Angelini, Victor Berti, Paul Eonnet, administrateurs.")
+    check("  list recognised", P.looks_like_name_list(body))
+    members = P.parse_board_list(body, "administrateur")
+    names = [m["name_clean"] for m in members]
+    roles = {m["name_clean"]: m["role"] for m in members}
+    eq("  member count", len(members), 5)
+    eq("  president identified", roles.get("Georges Despret"), "president")
+    eq("  delegate identified", roles.get("Wladimir Archawski"), "administrateur_delegue")
+    check("  plain administrator", roles.get("Victor Berti") == "administrateur", str(roles))
+
+    # Narrative prose must not be mined for names.
+    prose = ("est autorisé à émettre des obligations jusqu'à concurrence de 800.000 fr. "
+             "Les statuts ont été modifiés en conséquence, sous la condition suspensive "
+             "de la réalisation de cette augmentation.")
+    check("  prose rejected as a list", not P.looks_like_name_list(prose))
+
+    # Corporate directors are companies, not people.
+    body = "MM. Charles Thévenet, président ; la Société centrale d'études, vice-président"
+    members = P.parse_board_list(body, "administrateur")
+    types = {m["name_clean"]: m["member_type"] for m in members}
+    check("  corporate director typed as organisation",
+          any(v == "organisation" for v in types.values()), str(types))
+
+    print("common.plausible_year", file=sys.stderr)
+    eq("  rejects 1677", plausible_year("1677"), "")
+    eq("  accepts 1920", plausible_year("1920"), "1920")
+    eq("  rejects empty", plausible_year(""), "")
+
+
+def check_extraction() -> None:
+    """Assert the PDF backend decodes the site's font encodings correctly."""
+    print("PDF extraction backend", file=sys.stderr)
+    try:
+        import pymupdf  # noqa: F401
+    except ImportError:
+        check("  pymupdf importable", False, "pip install pymupdf")
+        return
+    check("  pymupdf importable", True)
+
+    import glob
+    import gzip
+
+    files = sorted(glob.glob(os.path.join(ROOT, "data", "text", "*.txt.gz")))
+    if not files:
+        print("  (no extracted text yet - skipping decode check)", file=sys.stderr)
+        return
+    sample = files[: min(40, len(files))]
+    # Ordinary French function words. Under the cipher these come out as
+    # "le" -> "lï", "de" -> "îï", "et" -> "ït", so their absence across dozens
+    # of documents means the text layer was mis-decoded.
+    probes = (" le ", " la ", " de ", " et ", " des ", " société", "capital")
+    clean = 0
+    for f in sample:
+        t = gzip.open(f, "rt", encoding="utf-8").read().lower()
+        if any(p in t for p in probes):
+            clean += 1
+    check("  French text decodes correctly",
+          clean >= 0.8 * len(sample), f"{clean}/{len(sample)} documents contain French stopwords")
+    # The cipher's signature: 'H' standing in for the space character.
+    ciphered = 0
+    for f in sample:
+        t = gzip.open(f, "rt", encoding="utf-8").read()
+        if re.search(r"[a-zé]H[a-zé]{2,}H[a-zé]{2,}H", t):
+            ciphered += 1
+    check("  no substitution-cipher signature", ciphered == 0, f"{ciphered} documents look ciphered")
+
+
+# --- dataset integrity --------------------------------------------------
+def load(name: str) -> list[dict]:
+    path = os.path.join(PROC_DIR, name)
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8", newline="") as fh:
+        return list(csv.DictReader(fh))
+
+
+def check_dataset() -> None:
+    print("dataset integrity", file=sys.stderr)
+    docs = load("documents.csv")
+    check("  documents.csv present", bool(docs))
+    if not docs:
+        return
+    ids = [r["doc_id"] for r in docs]
+    eq("  doc_id unique", len(set(ids)), len(ids))
+    check("  every document has a URL", all(r["pdf_url"].startswith("http") for r in docs))
+
+    companies = load("companies.csv")
+    persons = load("persons_resolved.csv")
+    edges = load("edges_person_company.csv")
+    if not (companies and persons and edges):
+        print("  (network not built yet - skipping edge checks)", file=sys.stderr)
+        return
+
+    cids = {r["company_id"] for r in companies}
+    pids = {r["person_id"] for r in persons}
+    eq("  company_id unique", len(cids), len(companies))
+    eq("  person_id unique", len(pids), len(persons))
+
+    dangling_c = {e["company_id"] for e in edges} - cids
+    dangling_p = {e["person_id"] for e in edges} - pids
+    eq("  no dangling company references", len(dangling_c), 0)
+    eq("  no dangling person references", len(dangling_p), 0)
+
+    check("  no empty endpoints",
+          all(e["company_id"] and e["person_id"] for e in edges))
+
+    bad_years = [e["year"] for e in edges if e["year"] and not plausible_year(e["year"])]
+    eq("  all edge years plausible", len(bad_years), 0)
+
+    dated = sum(1 for e in edges if e["year"])
+    check("  most edges are dated", dated >= 0.9 * len(edges),
+          f"{dated}/{len(edges)}")
+
+    # An implausibly long career signals two namesakes merged into one node.
+    long_span = 0
+    for r in persons:
+        if r["first_year"] and r["last_year"]:
+            if int(r["last_year"]) - int(r["first_year"]) > 70:
+                long_span += 1
+    check("  few implausible career spans", long_span <= 0.01 * len(persons),
+          f"{long_span}/{len(persons)} exceed 70 years")
+
+    il = load("edges_company_interlock.csv")
+    if il:
+        check("  interlock endpoints known",
+              all(e["company_id_1"] in cids and e["company_id_2"] in cids for e in il))
+        check("  no interlock self-loops",
+              all(e["company_id_1"] != e["company_id_2"] for e in il))
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--unit", action="store_true", help="parser checks only")
+    args = ap.parse_args()
+
+    check_names()
+    check_titles()
+    check_citations()
+    if not args.unit:
+        check_extraction()
+        check_dataset()
+
+    total = CHECKS["passed"] + CHECKS["failed"]
+    print(f"\n{CHECKS['passed']}/{total} checks passed", file=sys.stderr)
+    if FAILURES:
+        print("\nfailures:", file=sys.stderr)
+        for f in FAILURES:
+            print(f"  - {f}", file=sys.stderr)
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()
