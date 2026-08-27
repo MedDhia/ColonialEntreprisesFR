@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+# Local caches: fetched HTML, downloaded PDFs and the extracted plain text.
+# These are large (~45 GB of PDFs, ~500 MB of text) and fully reproducible
+# from the pipeline, so only the derived datasets are versioned.
+/cache/
+/data/text/
+/data/pdf/
+*.pdf
