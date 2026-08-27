@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **May be empty** — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 20.4% of rows** (16,174 of 79,343), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |
@@ -139,7 +139,7 @@ be resolved to a company node.
 | `year`, `source_ref`, `doc_id` | Provenance. |
 | `n_observations` | Times this person/annotation pair was seen. |
 
-Roughly 6% resolve. Ambiguous acronyms are deliberately left unmatched — `BAO`
+About 6% resolve (398 of 6,641). Ambiguous acronyms are deliberately left unmatched — `BAO`
 is both the Banque de l'Afrique occidentale and a brewery alias in this
 catalogue, and first-wins matching picked the wrong one.
 

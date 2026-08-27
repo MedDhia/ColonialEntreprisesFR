@@ -1,6 +1,6 @@
 """Stage 2 - download each catalogued PDF and extract its text layer.
 
-The PDFs are large (~45 GB in total, up to 44 MB each) because they embed
+The PDFs are large (~21 GB in total, up to 44 MB each) because they embed
 scanned page images alongside the publisher's keyed transcription. Only the
 text is needed, so each PDF is streamed into memory, decoded, and discarded
 without ever being written to disk. The extracted text is stored gzipped

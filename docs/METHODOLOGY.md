@@ -42,7 +42,7 @@ Four stages, each resumable, each writing its own outputs:
    `company_attributes.csv`, `doc_references.csv`.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 
-`checks.py` validates the parsers and the built dataset (87 assertions).
+`checks.py` validates the parsers and the built dataset (116 assertions).
 
 ### The extraction trap
 
@@ -59,7 +59,7 @@ function words survive extraction and that the cipher's signature (a literal
 `H` where spaces belong) is absent. **Do not swap the extraction backend
 without running that check.**
 
-PDFs are streamed into memory and discarded after extraction; the ~45 GB of
+PDFs are streamed into memory and discarded after extraction; the ~21 GB of
 source material never touches disk. Extracted text is ~10× smaller gzipped
 and is not versioned, being fully reproducible.
 
@@ -276,12 +276,18 @@ materially improve the person nodes and is the highest-value extension.
 
 ```bash
 pip install -r requirements.txt
-python3 src/crawl_catalogue.py     # ~1 min
-python3 src/fetch_extract.py       # ~1.5 h, ~45 GB transferred, resumable
-python3 src/parse_ties.py          # ~3 min
-python3 src/build_network.py       # ~1 min
-python3 src/checks.py              # must pass
+python3 src/crawl_catalogue.py                  # ~1 min
+python3 src/fetch_extract.py                    # ~1.5 h, ~21 GB transferred, resumable
+python3 src/fetch_extract.py --retry-failed     # sweep transient network errors
+python3 src/parse_ties.py                       # ~6 min
+python3 src/build_network.py                    # ~3 min
+python3 src/checks.py                           # must pass
 ```
+
+Extraction reaches 5,874 of 5,920 documents (99.2%): 5,867 with a text layer
+and 7 that are image-only, recorded as `no_text_layer`. The remaining 46 are
+dead links on the site, returning HTTP 404, and are recorded as `fetch_error`
+in `text_extraction.csv` rather than dropped.
 
 Stage 2 is resumable: rerunning skips documents already extracted. Stages 3
 and 4 are pure functions of the text cache and can be rerun freely — the
