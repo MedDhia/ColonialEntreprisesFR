@@ -862,9 +862,16 @@ def main() -> None:
         if PUBLICATION_RE.search(default_company):
             default_company = ""
         if doc["entry_type"] != "company":
-            # Biographies and thematic documents have no single subject firm;
-            # ties are only recorded where a segment names one explicitly.
-            default_company = "" if annuaire else default_company
+            # A thematic or archival document has no single subject firm, so its
+            # own title must never stand in for one. Previously this only
+            # applied to documents detected as annuaires, so multi-firm surveys
+            # that the annuaire test missed - "Parlementaires et financiers",
+            # "Valeurs inscrites a la Cote des banquiers a Paris en 1913" -
+            # became company nodes that absorbed every board they listed,
+            # reaching 162 and 179 directors and outranking the Banque de
+            # l'Indochine. Ties in these documents now count only where an
+            # entry anchor names an actual firm.
+            default_company = ""
 
         segments = build_segments(text, annuaire, default_company)
 

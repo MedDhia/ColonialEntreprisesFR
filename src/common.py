@@ -58,9 +58,25 @@ REGION_LABELS = {
 }
 
 
+def encode_url(url: str) -> str:
+    """Percent-encode the non-ASCII parts of a URL.
+
+    Many of the site's PDF filenames contain characters that are legal in a
+    filename but not in a raw HTTP request line: "Banque_Cox_&_C°-Algerie.pdf",
+    "Société_indochinoise.pdf". Passing those through unencoded raises
+    UnicodeEncodeError inside urllib, which looks exactly like a dead link.
+    Already-encoded sequences are preserved (%% is in the safe set).
+    """
+    parts = urllib.parse.urlsplit(url)
+    path = urllib.parse.quote(parts.path, safe="/%:@&=+$,~*!'()[]")
+    query = urllib.parse.quote(parts.query, safe="/%:@&=+$,~*!'()[]?")
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, query, parts.fragment))
+
+
 def fetch(url: str, retries: int = 4, timeout: int = 180, delay: float = 0.0) -> bytes:
     """GET a URL with exponential backoff. Returns raw bytes."""
     last = None
+    url = encode_url(url)
     for attempt in range(retries + 1):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -69,7 +85,17 @@ def fetch(url: str, retries: int = 4, timeout: int = 180, delay: float = 0.0) ->
             if delay:
                 time.sleep(delay)
             return data
-        except Exception as exc:  # noqa: BLE001 - network layer, retry everything
+        except urllib.error.HTTPError as exc:
+            # A 4xx will not become a 200 on retry. Retrying the site's dead
+            # links spent ~30s each in backoff for nothing; 429 and 408 are the
+            # exceptions, being explicitly about trying again later.
+            if exc.code in {408, 429} or exc.code >= 500:
+                last = exc
+                if attempt < retries:
+                    time.sleep((2**attempt) + random.random())
+                continue
+            raise RuntimeError(f"failed to fetch {url}: HTTP {exc.code} {exc.reason}") from exc
+        except Exception as exc:  # noqa: BLE001 - transport errors are worth retrying
             last = exc
             if attempt < retries:
                 time.sleep((2**attempt) + random.random())
@@ -103,9 +129,17 @@ def doc_id_from_url(pdf_url: str) -> str:
 
 WS_RE = re.compile(r"[\s ]+")
 
+# Characters that XML 1.0 forbids even in escaped form. PyMuPDF emits NUL for
+# glyphs the embedded font leaves undefined, and 496 documents contain them -
+# typically standing in for a narrow no-break space inside guillemets, as in
+# "«NUL Savana NUL»". Left in place they reach company names and produce
+# GraphML that no XML parser will load, so they are folded to a space here,
+# where every name and title already passes through.
+XML_ILLEGAL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+
 
 def clean_text(text: str) -> str:
-    text = text.replace(" ", " ")
+    text = XML_ILLEGAL_RE.sub(" ", text)
     return WS_RE.sub(" ", text).strip()
 
 

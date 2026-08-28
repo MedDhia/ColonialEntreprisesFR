@@ -26,7 +26,7 @@ frame for the whole collection.
 |---|---|
 | `doc_id` | Stable id derived from the PDF path (slug + 6-char SHA1). |
 | `pdf_url` | Absolute URL of the source PDF. |
-| `entry_type` | `company` (5,270), `person` (240), or `source_document` (410). See METHODOLOGY §3. |
+| `entry_type` | `company` (5,268), `person` (240), or `source_document` (412). See METHODOLOGY §3. |
 | `name_listed` | The entry title as printed, minus the trailing gloss. |
 | `name_normalised` | Name with the generic head un-inverted: `Africaine de Mines (Société)` → `Société Africaine de Mines`. |
 | `acronym` | All-capitals designation from a parenthesis (`CFSO`, `SAHA`). |
@@ -38,7 +38,7 @@ frame for the whole collection.
 | `person_surname`, `person_given` | Parsed name, for `entry_type = person`. |
 | `birth_year`, `death_year` | Life dates, for `entry_type = person`. Blank where the source gives `?` or omits them. |
 | `region` | Canonical territory index page the document is filed under (13 values). |
-| `country` | Sub-territory heading within that page (e.g. `Chine`, `Siam (Thaïlande)`). |
+| `country` | Territory heading within that page — 62 values (`Madagascar`, `Sénégal`, `Syrie-Liban`, `Chine`…). Pages covering several territories mark the first with `premierTitrePays` and the rest with `titrePays`; both are read. |
 | `sector` | Economic sector heading (108 distinct values, in French, as printed). |
 | `group_path` | Corporate group or lineage from the nested-list hierarchy, `parent > child`. Blank for most entries. |
 | `group_depth` | Nesting depth (0 = not inside a group). |
@@ -49,7 +49,7 @@ frame for the whole collection.
 | `source_page` | Index page(s) the row was read from. |
 | `title_raw` | Verbatim title text. Keep this for any manual re-coding. |
 
-### `document_listings.csv` — one row per (document × classification) (6,390)
+### `document_listings.csv` — one row per (document × classification) (6,391)
 
 Long form of the classification. Use this, not `documents.csv`, when a firm's
 presence in several territories or sectors matters.
@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **May be empty** — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 22.9% of rows** (18,207 of 79,343), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |
@@ -139,7 +139,7 @@ be resolved to a company node.
 | `year`, `source_ref`, `doc_id` | Provenance. |
 | `n_observations` | Times this person/annotation pair was seen. |
 
-Roughly 6% resolve. Ambiguous acronyms are deliberately left unmatched — `BAO`
+About 6% resolve (398 of 6,641). Ambiguous acronyms are deliberately left unmatched — `BAO`
 is both the Banque de l'Afrique occidentale and a brewery alias in this
 catalogue, and first-wins matching picked the wrong one.
 
@@ -275,12 +275,171 @@ observed tie.
 Counts by `scope` (`all`, each period, `undated`). Use as a sanity check
 after rebuilding.
 
+## 3b. Positionality coding
+
+`python3 src/code_positionality.py` writes `person_positionality.csv` (one row
+per person), `positionality_by_territory.csv` and `positionality_review.csv`.
+
+> **The only evidence is the name plus the territory.** This is onomastic
+> inference. It supports statements about aggregate composition; it does not
+> establish the origin of any named individual, and must not be reported as
+> though it did. Read `data/reference/positionality_rules.md`, which lists the
+> rules *and the rules that were tested and rejected*.
+
+### `person_positionality.csv`
+
+| Variable | Description |
+|---|---|
+| `person_id` | Matches `persons_resolved.csv`. |
+| `name` | Name used for coding, after recovery (below). |
+| `name_as_parsed` | The name as it came out of the parser, before recovery. |
+| `positionality` | `colonial`, `native`, `intermediate`, `local_non_french_elite`, `unclassified`. |
+| `positionality_group` | Origin group the evidence points to (see below). |
+| `confidence` | `high` (two independent markers), `medium` (one), `low` (residual). |
+| `evidence` | Rules that fired, `;`-joined. `name_recovered` means leading prose was stripped first. |
+| `regions`, `countries` | Territories the person's ties were observed in. |
+| `n_board_companies`, `n_board_ties`, `first_year`, `last_year` | For weighting and period slicing. |
+
+### Values of `positionality`
+
+| Value | n | Meaning |
+|---|---|---|
+| `colonial` | 20,761 (84.9%) | No indigenous marker. **Inference from absence** — in a corpus of French colonial boards an unmarked name is overwhelmingly European, but this is not positive evidence. `confidence = low` throughout. |
+| `unclassified` | 3,492 (14.3%) | The name field holds a parse artefact rather than a name; not coded either way. |
+| `native` | 146 (0.60%) | Indigenous to a territory under French rule. |
+| `local_non_french_elite` | 33 | Ottoman, Egyptian, Turkish, Armenian and Greek names. Egypt and the Ottoman Empire were **not** French colonies, so these are not colonial subjects of France. |
+| `intermediate` | 26 | Maghrebi Jewish names. Algerian Jews became French citizens by the Crémieux decree of 1870 while Muslim Algerians remained subjects; Moroccan and Tunisian Jews did neither. |
+
+`positionality_group` takes: `maghrebi_arab_berber` (89), `vietnamese` (39),
+`ottoman_egyptian` (30), `maghrebi_jewish` (26), `syro_lebanese` (8),
+`chinese_indochinese` (7), `west_african` (6), `malagasy` (0),
+`european_unspecified`, `unusable_name`.
+
+Syro-Lebanese names are `native` under the French mandate and
+`local_non_french_elite` elsewhere — the mandate is the only part of the Near
+East pages that France ruled.
+
+### `positionality_review.csv` — the audit set (205 rows)
+
+Every person coded as other than European, in full. At this scale the coding
+is small enough to read and correct by hand, which is a better guarantee than
+any confidence score. **Check it before using the variable.**
+
+### `positionality_by_territory.csv`
+
+Per territory: `n_board_members`, counts by positionality, `share_native`,
+`share_non_european`, `n_board_ties_native`. Board seats only.
+
+### Name recovery, and the bias it corrects
+
+Indigenous names are over-represented among rows where the parser captured
+leading prose — the honorific register (`S. Exc. Hadj Thami Glaoui`) and the
+directory lines where Moroccan and Jewish merchants appear (`œufs. Meknès.
+David A. Benchimol`) both attract it. Discarding those rows biased the coding
+*downwards* and dropped precisely the best-documented figures, including the
+Pasha of Marrakech and Blaise Diagne. A recovery pass therefore strips leading
+matter before the quality gate; it moved the Maghrebi count from 81 to 89, the
+Vietnamese from 34 to 39, and Senegal from 0 native board members to 2.
+
+## 4b. Per-territory bundles
+
+`python3 src/split_by_country.py` writes one self-contained bundle per
+territory, at two granularities:
+
+    data/by_country/<slug>/    54 territories as the source labels them
+    data/by_region/<slug>/     12 index-page groupings
+
+Each bundle holds `documents.csv`, `affiliations.csv`, `org_affiliations.csv`,
+`company_attributes.csv`, `persons.csv`, `companies.csv`,
+`edges_person_company.csv`, `edges_company_interlock.csv`,
+`edges_company_interlock_by_period.csv` and `company_interlock.graphml` —
+the same columns as the corresponding top-level files, restricted to that
+territory and with nodes and edges recomputed from its ties alone.
+
+**Ties partition; nodes do not.** Every tie carries exactly one territory, so
+bundle tie counts sum to the dataset total (61,136) with none duplicated or
+dropped. Firms and people appear in every bundle where they are observed —
+21% of people and 9% of firms are in more than one country bundle — so
+**node counts must not be added across bundles**.
+
+`person_id` and `company_id` are the *same* identifiers as in the top-level
+files: person resolution is run once globally and then applied to each slice,
+so an individual keeps one id across territories. Resolving per slice would
+have destroyed exactly the transcolonial careers the dataset exists to show.
+
+### `territory_manifest.csv` (one per granularity)
+
+| Variable | Description |
+|---|---|
+| `territory`, `slug` | Label as printed, and its directory name. |
+| `n_documents`, `n_ties`, `n_board_ties` | Volume in this territory. |
+| `n_persons`, `n_companies` | Distinct nodes in this bundle. |
+| `n_two_mode_edges`, `n_interlock_edges`, `n_corporate_ties` | Edge counts. |
+| `first_year`, `last_year` | Range of dated observations. |
+| `n_persons_shared`, `n_companies_shared` | How many of this territory's nodes are also observed in another territory. |
+| `share_persons_shared`, `share_companies_shared` | The same as a proportion — a direct measure of how transcolonial the territory's elite is. |
+
+That last pair is substantive, not bookkeeping. In the country split it ranges
+from ~0.29 (Maroc, Indochine, Madagascar — territories with their own
+business elite) to 0.72 for Sénégal and 0.62 for Côte d'Ivoire, whose boards
+were staffed largely by men also sitting elsewhere.
+
+`Empire (transversal)` is **not** a country: it is the source's grouping for
+firms operating across several colonies, and it is one of the largest buckets.
+It is kept as its own bundle so it is never mistaken for a territory. Nine
+country labels with no attributed ties (Malawi, Gambie, Arménie…) get no
+bundle; the run reports them rather than dropping them silently.
+
 ### `data/graphs/*.graphml`
 
 `two_mode_person_company.graphml` (nodes prefixed `P:`/`C:`, `mode`
 attribute) and `company_interlock.graphml`. Load in Gephi, igraph,
 NetworkX or Cytoscape. Both are regenerated by stage 4 and are skipped
 above `--graphml-max-nodes`.
+
+---
+
+## 4c. Figures
+
+`src/make_figures.py` (stage 7) writes `figures/`. Nothing downstream reads
+them; they are outputs, regenerated from `data/processed/` in about a minute.
+
+| File | Contents |
+|---|---|
+| `interlock_network.html` | All three figures in one self-contained page — no network access, no build step. Hover tooltips on every node, a sortable table view of the 170 core firms, and a light/dark pair that follows the reader's system setting. |
+| `fig1_core_interlocks.svg` | Figure 1, standalone, light mode. |
+| `fig2_by_period.svg` | Figure 2, standalone, light mode. |
+| `fig3_ego_indochine.svg` | Figure 3, standalone, light mode. |
+
+**Figure 1 — the core interlock network.** 170 firms and 1,162 interlocks:
+`edges_company_interlock.csv` filtered to `weight >= 2` (two or more shared
+directors), largest component, top 170 by weighted degree. Node area is
+weighted degree, edge opacity and width are the number of shared directors,
+colour is the firm's first territory folded to the three largest — Indochine,
+Maroc, Afrique occidentale française — plus a recessive grey "Other" that is
+not a category. The fourteen largest nodes are labelled in the side margins
+with leader lines.
+
+**Figure 2 — small multiples by period.** One panel per `PERIODS` value, from
+`edges_company_interlock_by_period.csv` at the same `weight >= 2`: pre-1914
+299 ties, 1914–1929 1,764, 1930–1944 1,621, 1945–1962 681, post-1962 116. All
+five panels share one layout and one size scale, so position is comparable
+across panels and panel density tracks the tie counts printed beneath.
+
+**Figure 3 — an ego network.** The interlock neighbourhood of one firm,
+`--ego "Banque de l'Indochine"` by default; the focal firm is coloured, its
+neighbours grey.
+
+```bash
+python3 src/make_figures.py                     # defaults
+python3 src/make_figures.py --top 250 --min-weight 3 --ego "Compagnie du Niger"
+```
+
+`--top` sets the node count in figure 1, `--min-weight` the shared-director
+threshold everywhere, `--ego` the focal firm of figure 3 (matched on
+`companies.csv` name). Layout seeds are fixed, so the same arguments give the
+same figure. See METHODOLOGY §5d for why the subset, the three-colour cap and
+the shared layout are what they are.
 
 ---
 

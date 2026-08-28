@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="colonialeagricoleminiere">
+      <data key="n_label">Société Coloniale Agricole et Minière</data>
+      <data key="n_sectors">Documentation générale; Mines et placers</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="colonialeproduitstannants">
+      <data key="n_label">Compagnie Coloniale des Produits tannants</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="colonialetonnellerie">
+      <data key="n_label">Compagnie Coloniale de Tonnellerie</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="commercialeantillesfrancaisesftanon">
+      <data key="n_label">Cie commerciale des Antilles françaises F. Tanon et Cie</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="comptoirsgenerauxguyane">
+      <data key="n_label">Comptoirs généraux de la Guyane, puis Comptoirs généraux des colonies</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="cotonniereguyane">
+      <data key="n_label">Société cotonnière de la Guyane</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="exploitationsminieresinini">
+      <data key="n_label">Société d'Exploitations minières de l'Inini</data>
+      <data key="n_sectors">Documentation générale; Mines et placers</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="forestiereguyane">
+      <data key="n_label">Société Forestière de la Guyane française</data>
+      <data key="n_sectors">Divers; Documentation générale</data>
+      <data key="n_n_directors">31</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="franceguyane">
+      <data key="n_label">Société France-Guyane</data>
+      <data key="n_sectors">Divers; Documentation générale</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="gisementsordieumerci">
+      <data key="n_label">Société des Gisements d'or de Dieu-Merci</data>
+      <data key="n_sectors">Mines et placers</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="gisementsorsaintelie">
+      <data key="n_label">Gisements d'or de Saint-Élie</data>
+      <data key="n_sectors">Mines et placers</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="mataroni">
+      <data key="n_label">Cie Française du Mataroni, puis Cie des mines d'or de la Guyane française</data>
+      <data key="n_sectors">Documentation générale; Mines et placers</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="minesorguyane">
+      <data key="n_label">Compagnie des Mines d'or de la Guyane française</data>
+      <data key="n_sectors">Documentation générale; Mines et placers</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="miniereroura">
+      <data key="n_label">Compagnie Minière de Roura</data>
+      <data key="n_sectors">Documentation générale; Mines et placers</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="representationcoloniale">
+      <data key="n_label">Représentation coloniale</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="saintelie">
+      <data key="n_label">Saint-Élie</data>
+      <data key="n_sectors">Mines et placers</data>
+      <data key="n_n_directors">40</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="saintelieadieuvat">
+      <data key="n_label">Société nouvelle Saint-Élie et Adieu-Vat</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">2</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="stelieadieuvat">
+      <data key="n_label">Société nouvelle de St-Élie et Adieu-Vat</data>
+      <data key="n_sectors">Documentation générale; Mines et placers</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="sucriereagricoleguyane">
+      <data key="n_label">Société Sucrière et agricole de la Guyane française</data>
+      <data key="n_sectors">Divers; Documentation générale</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="theresia">
+      <data key="n_label">« La Thérésia »</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <node id="unionminierehautemana">
+      <data key="n_label">Union minière de la Haute-Mana</data>
+      <data key="n_sectors">Documentation générale; Mines et placers</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
+    <edge id="e0" source="gisementsorsaintelie" target="saintelie">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e1" source="commercialeantillesfrancaisesftanon" target="representationcoloniale">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e2" source="colonialeproduitstannants" target="colonialetonnellerie">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e3" source="colonialeproduitstannants" target="theresia">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e4" source="colonialetonnellerie" target="theresia">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e5" source="mataroni" target="minesorguyane">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e6" source="franceguyane" target="miniereroura">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e7" source="saintelieadieuvat" target="stelieadieuvat">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e8" source="cotonniereguyane" target="franceguyane">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e9" source="cotonniereguyane" target="miniereroura">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e10" source="colonialeproduitstannants" target="miniereroura">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e11" source="colonialetonnellerie" target="miniereroura">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e12" source="miniereroura" target="theresia">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e13" source="cotonniereguyane" target="sucriereagricoleguyane">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e14" source="colonialeagricoleminiere" target="saintelieadieuvat">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e15" source="colonialeagricoleminiere" target="stelieadieuvat">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e16" source="colonialeagricoleminiere" target="unionminierehautemana">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e17" source="exploitationsminieresinini" target="forestiereguyane">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e18" source="comptoirsgenerauxguyane" target="sucriereagricoleguyane">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e19" source="gisementsordieumerci" target="saintelie">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

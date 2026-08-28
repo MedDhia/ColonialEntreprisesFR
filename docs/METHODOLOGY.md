@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Four stages, each resumable, each writing its own outputs:
+Seven stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -41,8 +41,11 @@ Four stages, each resumable, each writing its own outputs:
 3. **`parse_ties.py`** — text → `affiliations.csv`, `org_affiliations.csv`,
    `company_attributes.csv`, `doc_references.csv`.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
+5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
+6. **`code_positionality.py`** — people → colonial/native coding (§5c).
+7. **`make_figures.py`** — network → `figures/`, HTML and SVG (§5d).
 
-`checks.py` validates the parsers and the built dataset (87 assertions).
+`checks.py` validates the parsers and the built dataset (188 assertions).
 
 ### The extraction trap
 
@@ -59,7 +62,7 @@ function words survive extraction and that the cipher's signature (a literal
 `H` where spaces belong) is absent. **Do not swap the extraction backend
 without running that check.**
 
-PDFs are streamed into memory and discarded after extraction; the ~45 GB of
+PDFs are streamed into memory and discarded after extraction; the ~21 GB of
 source material never touches disk. Extracted text is ~10× smaller gzipped
 and is not versioned, being fully reproducible.
 
@@ -87,7 +90,7 @@ Getting this wrong in either direction is costly, so the test is explicit
 rather than statistical. An earlier heuristic that simply looked for a
 `(Surname)(dates)` shape classified 1,123 entries as people; most were firms
 whose date parenthesis recorded when they operated. The current rule yields
-240 biographies, 5,270 firms and 410 thematic documents.
+240 biographies, 5,268 firms and 412 thematic documents.
 
 Firms named after a person stay classified as firms — *Ferme de Gazan (Lucien
 Deyme)* is a farm, not a man — but the personal name is recorded in
@@ -217,6 +220,149 @@ entities, or "Gazette du Palais" accumulates directorships. Corporate board
 members are routed to `org_affiliations.csv` rather than parsed as people.
 Years outside 1800–2025 are discarded wherever a date is parsed.
 
+## 5b. Splitting by territory
+
+`split_by_country.py` writes one self-contained bundle per territory at two
+granularities (54 countries, 12 index-page regions). Two bugs had to be fixed
+first, both of which would have made a country split actively misleading.
+
+**Territory labels.** A page covering several territories marks only the
+*first* with `h2.premierTitrePays`; every later one uses `h2.titrePays`. The
+crawler collected the latter and then discarded it, so the country label never
+advanced: all 189 Madagascar documents were filed under *Djibouti*, and all of
+Guyane, Brazil, Chile and Peru under *Guadeloupe-Martinique* — 19 territories
+across 5 pages. Splitting on that would have shipped a "Djibouti" bundle
+consisting mostly of Madagascar.
+
+**Multi-firm surveys as firms.** Some dossiers survey many companies at once,
+and their own gloss says so: *"notices sur 26 sociétés d'Indochine"*, *"28
+françaises, 17 anglaises. Notices."* Treated as single firms, they became
+nodes that absorbed every board they listed, reaching 254 and 286 distinct
+directors and outranking the Banque de l'Indochine (92) at the top of the
+degree distribution. They are now classified as source documents on the
+strength of that gloss, which matches exactly two catalogue entries. A
+companion rule that suggests itself — treating `par <Author>` as a
+bibliographic marker — was tested and **rejected**: in French addresses "par
+X" means *via* X (*"Oued-Marsa, par Sidi-Rehane"*), so it matched 41 entries
+of which most are genuine firms. A third candidate, treating a plural
+"Sociétés …" name as a survey, was also rejected: of 151 such entries almost
+all are real firms (*Entreprises Boussiron*, *Comptoirs d'Hippone*).
+
+Three design decisions in the split itself:
+
+- **Ties partition, nodes overlap.** Each tie carries one territory, so bundle
+  tie counts sum to the dataset total. Firms and people appear in every bundle
+  where observed (21% of people, 9% of firms in more than one), so node counts
+  must not be summed. The overlap is reported per territory rather than hidden.
+- **Person resolution is global.** The crosswalk is computed once over the
+  whole dataset and then applied to each slice, so one individual keeps one
+  `person_id` everywhere. Resolving within slices would have given the same
+  person different ids in Morocco and Indochina — destroying precisely the
+  transcolonial careers this dataset is built to expose.
+- **`Empire (transversal)` is kept as its own bundle** and labelled as not a
+  country, since it is the source's grouping for firms spanning several
+  colonies and is one of the largest buckets.
+
+The per-territory share of shared elite is a usable variable in its own right:
+~0.29 in Morocco, Indochina and Madagascar against 0.72 in Senegal and 0.62 in
+Côte d'Ivoire, which is a measurable difference in how far a territory's
+boards were staffed by men also sitting elsewhere.
+
+## 5c. Coding positionality in the colonial order
+
+`code_positionality.py` codes each person `colonial` or `native`, with
+`intermediate` and `local_non_french_elite` for the two groups the binary
+cannot hold. The evidence is the name as printed plus the territory the
+person's ties were observed in — onomastic inference and nothing else.
+
+**Every obvious rule is wrong.** Each was measured against all 24,458 names
+and rejected:
+
+| Rule | Hits | Why it fails |
+|---|---|---|
+| Vietnamese surname `Le` | 124 | All French: *Le Bret*, *Le Play*, *Le Trocquer*. |
+| Vietnamese particle `Van` | 163 | All Dutch: *Van Nierop*, *Van Brée*. |
+| Malagasy prefix `Ra-` | 51 | All French: *Rastoin*, *Rabeau*, every *Raymond* and *Raoul*. |
+| `Bey` / `Pacha` as indigeneity | ~60 | A rank granted to Europeans in Egyptian service: *Boinet Bey*, *H. Naus bey*. |
+| Short-syllable triples as Chinese | 91 | Caught *Max Katz*, *Louis Bovet*, *Paul Blanc*. |
+
+The surviving rules require a conjunction — an indigenous-name pattern *and* a
+plausible territory — and for Vietnamese a full name structure rather than one
+token. Even the Malagasy prefix needed a 4-character stem before *Rabeau*
+stopped matching, a false positive caught by the check suite rather than by
+reading the code.
+
+**The quality gate was itself biased.** Rows where the parser captured leading
+prose were excluded, and indigenous names turned out to be over-represented
+among them: the honorific register (*S. Exc. Hadj Thami Glaoui*, the Pasha of
+Marrakech) and the directory lines listing Moroccan and Jewish merchants
+(*œufs. Meknès. David A. Benchimol*) both attract leading matter. Excluding
+them understated an already tiny figure and discarded the best-documented
+figures, Blaise Diagne among them. A recovery pass now strips leading matter
+before the gate, raising the Maghrebi count from 81 to 89, Vietnamese from 34
+to 39, and Senegal from zero native board members to two.
+
+**What the variable will and will not carry.** It supports aggregate
+composition — "board members with an indigenous name are 1.0% in Morocco and
+0.0% in French Equatorial Africa". It does not establish any individual's
+origin, and `colonial` in particular is inference from absence, not positive
+evidence: it means only that no indigenous marker was found. All 205
+non-European codings are written to `positionality_review.csv` precisely
+because at that scale hand-checking beats any confidence score.
+
+Two further limits. Recall is unknown: a French-transliterated indigenous name
+with no diagnostic marker is coded `colonial` and there is no way to count how
+often that happens, so 0.6% is a **lower bound**. And the same-surname
+same-initial merging described in §4 applies here too — the Hui-Bon-Hoa family
+appears as six nodes, some of which may be one person.
+
+## 5d. Drawing the network
+
+`src/make_figures.py` writes `figures/`. Three decisions there are analytical
+rather than cosmetic, and each of them can distort a reading of the data.
+
+**The whole graph is never drawn.** At `weight >= 1` the interlock network is
+3,085 firms and 39,523 edges: rendered as a node-link diagram it is a solid
+disc that shows only that the ink is dense. Every figure is an explicit
+subset, and the subset rule is printed with the figure. Figure 1 raises the
+threshold to two shared directors, takes the largest component, and keeps the
+170 firms of highest weighted degree — 1,162 interlocks. Reading a *global*
+property such as density or centralisation off that picture is a mistake; the
+figure is a map of the core, and the numbers for the whole graph are in
+`network_stats.csv`.
+
+**Colour is capped at three territories, not eight.** In a bar chart any two
+categorical colours are adjacent only along the axis; in a node-link diagram
+any two nodes can end up touching, so the palette must survive an all-pairs
+separation test rather than an adjacent-pairs one. That caps the categorical
+slots at three. Firms are coloured by their first territory, folded to
+Indochine, Maroc and Afrique occidentale française — the three largest in the
+core — with everything else a recessive grey that is *not* a fourth category
+and must not be read as one. The palette is checked with the validator, in
+both light and dark surfaces, rather than judged by eye; light-mode aqua sits
+below 3:1 on the surface, so the figure ships direct labels on the largest
+nodes and a full table view rather than relying on the hue alone.
+
+**Small multiples share one layout, computed once.** Figure 2 draws one panel
+per period. The obvious implementation — lay out and normalise each period's
+subgraph independently — rescales every panel to fill its box, which made the
+1914–1929 panel (1,764 interlocks) look *smaller* than pre-1914 (299): the
+visual encoding then contradicts the data. The layout is instead computed
+once on the union of all periods and each panel draws its own edges at those
+fixed coordinates, with one size scale throughout. A firm therefore sits in
+the same place in every panel and the panels are directly comparable. The
+normalisation also fits to a central percentile band rather than the extremes,
+because a spring layout throws one or two nodes far out and scaling to the
+true min/max squashes everything else into a dot; the outliers are clamped to
+the frame, which is why a panel occasionally shows a node pinned at a corner.
+
+An empty region of a period panel means no *recorded* shared directorship
+then, which is a statement about the collection and not about the firms — the
+same caveat as §6, and the reason the panels carry their tie counts as text.
+Layouts use a fixed seed, so the figures are reproducible; a spring layout has
+no meaningful axes and distance between unconnected nodes carries no
+information.
+
 ## 6. Validity — read this before using the data
 
 **It is a sample of statements, not a census of boards.** A firm's absence
@@ -276,12 +422,21 @@ materially improve the person nodes and is the highest-value extension.
 
 ```bash
 pip install -r requirements.txt
-python3 src/crawl_catalogue.py     # ~1 min
-python3 src/fetch_extract.py       # ~1.5 h, ~45 GB transferred, resumable
-python3 src/parse_ties.py          # ~3 min
-python3 src/build_network.py       # ~1 min
-python3 src/checks.py              # must pass
+python3 src/crawl_catalogue.py                  # ~1 min
+python3 src/fetch_extract.py                    # ~1.5 h, ~21 GB transferred, resumable
+python3 src/fetch_extract.py --retry-failed     # sweep transient network errors
+python3 src/parse_ties.py                       # ~6 min
+python3 src/build_network.py                    # ~3 min
+python3 src/split_by_country.py                 # ~2 min, per-territory bundles
+python3 src/code_positionality.py               # ~1 min, positionality coding
+python3 src/make_figures.py                     # ~1 min, figures/
+python3 src/checks.py                           # must pass
 ```
+
+Extraction reaches 5,874 of 5,920 documents (99.2%): 5,867 with a text layer
+and 7 that are image-only, recorded as `no_text_layer`. The remaining 46 are
+dead links on the site, returning HTTP 404, and are recorded as `fetch_error`
+in `text_extraction.csv` rather than dropped.
 
 Stage 2 is resumable: rerunning skips documents already extracted. Stages 3
 and 4 are pure functions of the text cache and can be rerun freely — the

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="immobiliereindustriellebatiment">
+      <data key="n_label">Compagnie immobilière et industrielle du bâtiment</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Macédoine</data>
+    </node>
+    <node id="immobiliereregieterrainssalonique">
+      <data key="n_label">Compagnie Immobilière et de Régie de terrains à Salonique</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Macédoine</data>
+    </node>
+    <node id="portsaloniqueottomaneconstruction">
+      <data key="n_label">Port de Salonique (Société ottomane de construction, puis d'exploitation du)</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Macédoine</data>
+    </node>
+    <edge id="e0" source="immobiliereindustriellebatiment" target="immobiliereregieterrainssalonique">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e1" source="immobiliereregieterrainssalonique" target="portsaloniqueottomaneconstruction">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e2" source="immobiliereindustriellebatiment" target="portsaloniqueottomaneconstruction">
+      <data key="e_weight">2</data>
+    </edge>
+  </graph>
+</graphml>

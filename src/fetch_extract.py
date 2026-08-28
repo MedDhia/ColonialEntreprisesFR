@@ -1,6 +1,6 @@
 """Stage 2 - download each catalogued PDF and extract its text layer.
 
-The PDFs are large (~45 GB in total, up to 44 MB each) because they embed
+The PDFs are large (~21 GB in total, up to 44 MB each) because they embed
 scanned page images alongside the publisher's keyed transcription. Only the
 text is needed, so each PDF is streamed into memory, decoded, and discarded
 without ever being written to disk. The extracted text is stored gzipped
@@ -116,7 +116,10 @@ def extract_one(doc_id: str, pdf_url: str) -> dict:
         doc.close()
         del data
 
-    body = PAGE_SEP.join(pages)
+    # PyMuPDF emits NUL where the embedded font leaves a glyph undefined.
+    # NUL is illegal in XML and meaningless here, so it is dropped at the
+    # source rather than left for every downstream consumer to handle.
+    body = PAGE_SEP.join(pages).replace("\x00", " ")
     row["n_chars"] = len(body)
     row["n_pages_with_text"] = with_text
     # A PDF whose text layer is missing entirely is flagged rather than dropped,

@@ -20,10 +20,11 @@ import csv
 import os
 import re
 import sys
+from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common import plausible_year, split_title  # noqa: E402
+from common import encode_url, plausible_year, split_title  # noqa: E402
 from names import looks_like_org, org_key, parse_person_name  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -92,6 +93,35 @@ def check_names() -> None:
         eq(f"  {a[:32]!r} == {b[:32]!r}", org_key(a), org_key(b))
     check("  distinct firms stay distinct",
           org_key("Banque de l'Algérie") != org_key("Banque d'État du Maroc"))
+
+
+def check_urls() -> None:
+    """Non-ASCII PDF filenames must be percent-encoded before the request.
+
+    Many filenames on the site contain characters that are legal in a filename
+    but not in an HTTP request line. Passing them through raw raises
+    UnicodeEncodeError inside urllib, which is indistinguishable from a dead
+    link in the extraction log; 32 documents were lost to this before it was
+    caught. The encoded URL must also be pure ASCII, or the same error recurs.
+    """
+    print("common.encode_url", file=sys.stderr)
+    cases = [
+        ("https://entreprises-coloniales.fr/afrique-du-nord/Banque_Cox_&_C°-Algerie.pdf",
+         "https://entreprises-coloniales.fr/afrique-du-nord/Banque_Cox_&_C%C2%B0-Algerie.pdf"),
+        ("https://entreprises-coloniales.fr/inde-indochine/Amis_de_l_art_Saïgon_1935.pdf",
+         "https://entreprises-coloniales.fr/inde-indochine/Amis_de_l_art_Sa%C3%AFgon_1935.pdf"),
+    ]
+    for raw, want in cases:
+        eq(f"  encodes {raw[-34:]!r}", encode_url(raw), want)
+    for raw, _ in cases:
+        got = encode_url(raw)
+        check(f"  ascii-safe {raw[-28:]!r}", got.isascii(), got)
+    # An already-encoded or plain-ASCII URL must pass through unchanged.
+    for raw in [
+        "https://entreprises-coloniales.fr/empire/Colonial_Trust.pdf",
+        "https://entreprises-coloniales.fr/afrique-du-nord/Banque_Cox_&_C%C2%B0-Algerie.pdf",
+    ]:
+        eq(f"  idempotent {raw[-30:]!r}", encode_url(raw), raw)
 
 
 def check_titles() -> None:
@@ -289,6 +319,56 @@ def check_dataset() -> None:
     check("  few implausible career spans", long_span <= 0.01 * len(persons),
           f"{long_span}/{len(persons)} exceed 70 years")
 
+    # Control characters from the PDF text layer must not reach the outputs.
+    # NUL is legal in a CSV cell but illegal in XML even when escaped, so one
+    # leaking through produced a GraphML file that no parser would load.
+    import glob as _glob
+
+    illegal = bytes(range(0, 9)) + bytes([11, 12]) + bytes(range(14, 32))
+    dirty = []
+    for path in sorted(_glob.glob(os.path.join(PROC_DIR, "*.csv"))):
+        raw = open(path, "rb").read()
+        if any(bytes([c]) in raw for c in illegal):
+            dirty.append(os.path.basename(path))
+    check("  no control characters in any CSV", not dirty, "; ".join(dirty))
+
+    for path in sorted(_glob.glob(os.path.join(ROOT, "data", "graphs", "*.graphml"))):
+        try:
+            import xml.etree.ElementTree as ET
+
+            ET.parse(path)
+            check(f"  {os.path.basename(path)} is well-formed XML", True)
+        except Exception as exc:  # noqa: BLE001
+            check(f"  {os.path.basename(path)} is well-formed XML", False, str(exc)[:120])
+
+    # Territory labelling. Pages covering several territories mark only the
+    # first with premierTitrePays and the rest with titrePays; handling only
+    # the former put all 189 Madagascar documents under "Djibouti".
+    countries = Counter(d["country"] for d in docs if d["country"])
+    for expected in ["Madagascar", "La Réunion", "Comores", "Guyane française",
+                     "Tahiti (Polynésie)", "Nouvelles-Hébrides (Mélanésie)"]:
+        check(f"  territory {expected!r} is populated", countries.get(expected, 0) > 0,
+              f"{countries.get(expected, 0)} documents")
+    check("  Madagascar outnumbers Djibouti", countries.get("Madagascar", 0) >
+          countries.get("Djibouti", 0),
+          f"Madagascar={countries.get('Madagascar', 0)}, Djibouti={countries.get('Djibouti', 0)}")
+
+    # Multi-firm surveys must not become company nodes: treated as firms, they
+    # absorb every board they list and dominate the degree distribution.
+    firms = {r["name"]: r for r in companies}
+    for title in ["Documentation africaine", "Parlementaires et financiers",
+                  "Sociétés aurifères en Côte-d'Ivoire", "Leroy, Le Caoutchouc",
+                  "Valeurs inscrites à la Cote des banquiers à Paris en 1913"]:
+        check(f"  survey not a company node: {title[:44]!r}", title not in firms)
+    # No firm should have an implausible number of distinct directors. The
+    # genuine maximum here is ~96 (Cie Generale Francaise de Tramways, observed
+    # 1880-1960); the pseudo-firms reached 254 and 286.
+    worst = max(companies, key=lambda r: int(r["n_directors"] or 0), default=None)
+    if worst:
+        check("  no firm has an implausible director count",
+              int(worst["n_directors"]) <= 150,
+              f"{worst['name'][:50]!r} has {worst['n_directors']}")
+
     il = load("edges_company_interlock.csv")
     if il:
         check("  interlock endpoints known",
@@ -297,17 +377,248 @@ def check_dataset() -> None:
               all(e["company_id_1"] != e["company_id_2"] for e in il))
 
 
+def check_positionality() -> None:
+    """Guards on the onomastic coding, all of them lessons from its own output."""
+    rows = load("person_positionality.csv")
+    if not rows:
+        return
+    print("positionality coding", file=sys.stderr)
+    import code_positionality as CP
+
+    # Patterns that look right and are not. Each of these was measured against
+    # the full name list and rejected; see data/reference/positionality_rules.md.
+    for name, regions in [("Le Play", "Indochine"), ("Le Bret", "Indochine"),
+                          ("Van Nierop", "Indochine"), ("Van Brée", "Indochine")]:
+        pos, grp, _, _ = CP.code_person(name, regions, "")
+        eq(f"  {name!r} is not Vietnamese", grp, "european_unspecified")
+    for name in ["Rastoin", "Rabeau", "Raty", "Rabut", "Raymond du Boullay", "André Hermil"]:
+        pos, grp, _, _ = CP.code_person(name, "Madagascar et Djibouti", "Madagascar")
+        eq(f"  {name!r} is not Malagasy", grp, "european_unspecified")
+    # An Ottoman rank was granted to Europeans in Egyptian service.
+    for name in ["Boinet Bey", "H. Naus bey", "Ch. Audebeau bey"]:
+        pos, grp, _, _ = CP.code_person(name, "Proche-Orient", "Égypte")
+        eq(f"  {name!r} is not coded native on its title", pos, "colonial")
+
+    # Names the coder must catch, including ones only reachable after recovery.
+    for raw, want in [("Nguyen Van Vinh", "vietnamese"),
+                      ("S. Exc. Hadj Thami Glaoui", "maghrebi_arab_berber"),
+                      ("œufs. Meknès. David A. Benchimol", "maghrebi_jewish"),
+                      ("Blaise Diagne", "west_african")]:
+        n = CP.recover_name(raw)
+        check(f"  {raw[:34]!r} survives the quality gate", CP.name_is_usable(n), n)
+        _, grp, _, _ = CP.code_person(n, "Maroc; Indochine; Afrique occidentale francaise", "")
+        eq(f"  {raw[:30]!r} group", grp, want)
+
+    # Egypt and the Ottoman Empire were not French colonies.
+    ott = [r for r in rows if r["positionality_group"] == "ottoman_egyptian"]
+    check("  ottoman/egyptian names are not coded native",
+          all(r["positionality"] == "local_non_french_elite" for r in ott),
+          f"{sum(1 for r in ott if r['positionality'] == 'native')} coded native")
+    # Maghrebi Jewish names are intermediate by construction, never native.
+    jw = [r for r in rows if r["positionality_group"] == "maghrebi_jewish"]
+    check("  maghrebi jewish names are intermediate",
+          all(r["positionality"] == "intermediate" for r in jw))
+
+    vals = {r["positionality"] for r in rows}
+    check("  only documented positionality values",
+          vals <= {"colonial", "native", "intermediate", "local_non_french_elite",
+                   "unclassified"}, str(vals))
+
+
+def check_splits() -> None:
+    """The per-territory bundles must partition ties and stay loadable."""
+    import glob as _glob
+
+    for level in ("country", "region"):
+        root = os.path.join(ROOT, "data", f"by_{level}")
+        manifest_path = os.path.join(root, "territory_manifest.csv")
+        if not os.path.exists(manifest_path):
+            continue
+        print(f"split by {level}", file=sys.stderr)
+        with open(manifest_path, encoding="utf-8", newline="") as fh:
+            manifest = list(csv.DictReader(fh))
+        check(f"  {level}: manifest is non-empty", bool(manifest))
+
+        # Ties carry exactly one territory, so the bundles must partition them
+        # exactly - no tie duplicated into two bundles, none dropped.
+        bundle_ties = 0
+        for f in _glob.glob(os.path.join(root, "*", "affiliations.csv")):
+            with open(f, encoding="utf-8", newline="") as fh:
+                bundle_ties += sum(1 for _ in csv.DictReader(fh))
+        total = sum(int(r["n_ties"]) for r in manifest)
+        eq(f"  {level}: bundle files match manifest tie counts", bundle_ties, total)
+
+        aff = load("affiliations.csv")
+        attributed = sum(1 for r in aff if r["company_key"] and r["person_key"])
+        eq(f"  {level}: ties partition the dataset", total, attributed)
+
+        # Every bundle's GraphML must load, same guard as the main graphs.
+        bad = []
+        for f in _glob.glob(os.path.join(root, "*", "company_interlock.graphml")):
+            try:
+                import xml.etree.ElementTree as ET
+
+                ET.parse(f)
+            except Exception as exc:  # noqa: BLE001
+                bad.append(f"{os.path.basename(os.path.dirname(f))}: {exc}")
+        check(f"  {level}: all bundle graphs are well-formed", not bad, "; ".join(bad[:3]))
+
+        # A bundle must only contain ties from its own territory.
+        field = "country" if level == "country" else "region"
+        leaks = []
+        for f in _glob.glob(os.path.join(root, "*", "affiliations.csv")):
+            slug = os.path.basename(os.path.dirname(f))
+            with open(f, encoding="utf-8", newline="") as fh:
+                vals = {r[field] for r in csv.DictReader(fh)}
+            if len(vals) > 1:
+                leaks.append(f"{slug}: {sorted(vals)[:3]}")
+        check(f"  {level}: no bundle mixes territories", not leaks, "; ".join(leaks[:3]))
+
+
+def check_layout() -> None:
+    """Unit checks on the figure geometry, no data needed.
+
+    Both guard bugs that made a figure lie rather than crash: an outlier that
+    squashed every other node into a dot, and labels drawn off the canvas.
+    """
+    print("make_figures geometry", file=sys.stderr)
+    from make_figures import _text_width, normalise, radius
+
+    # A spring layout typically throws one node far out. Fitting to the true
+    # extremes then collapses the rest; the robust fit must not.
+    pos = {f"n{i}": (i / 100.0, i / 100.0) for i in range(40)}
+    pos["far"] = (60.0, 60.0)
+    naive = normalise(pos, 300, 300, pad=10)
+    robust = normalise(pos, 300, 300, pad=10, robust=0.03)
+
+    def spread(p):
+        xs = [v[0] for k, v in p.items() if k != "far"]
+        return max(xs) - min(xs)
+
+    check("  naive fit collapses the body of the layout", spread(naive) < 10,
+          f"spread {spread(naive):.1f}")
+    check("  robust fit keeps the body spread out", spread(robust) > 200,
+          f"spread {spread(robust):.1f}")
+    # Clamping keeps the outlier on the canvas rather than off it.
+    for name, p in (("naive", naive), ("robust", robust)):
+        inside = all(0 <= x <= 300 and 0 <= y <= 300 for x, y in p.values())
+        check(f"  {name} fit leaves every node on the canvas", inside)
+
+    # Area-proportional sizing: four times the degree is twice the radius,
+    # net of the floor. Never a linear radius, which over-reads big nodes.
+    r_lo, r_mid, r_hi = radius(0, 0, 100), radius(25, 0, 100), radius(100, 0, 100)
+    check("  radius is area-proportional",
+          abs((r_mid - r_lo) * 2 - (r_hi - r_lo)) < 0.01,
+          f"{r_lo:.2f} {r_mid:.2f} {r_hi:.2f}")
+    check("  text width estimate grows with the string",
+          _text_width("Banque de l'Indochine", 11) > _text_width("Banque", 11) > 0)
+
+
+def check_figures() -> None:
+    """The rendered figures must be well-formed, on-canvas and comparable."""
+    import xml.etree.ElementTree as ET
+
+    fig_dir = os.path.join(ROOT, "figures")
+    if not os.path.isdir(fig_dir):
+        return
+    print("figures", file=sys.stderr)
+    from make_figures import PALETTE, _text_width
+
+    svgs = ["fig1_core_interlocks.svg", "fig2_by_period.svg", "fig3_ego_indochine.svg"]
+    for name in svgs:
+        path = os.path.join(fig_dir, name)
+        if not os.path.exists(path):
+            check(f"  {name} exists", False)
+            continue
+        try:
+            root = ET.parse(path).getroot()
+        except Exception as exc:  # noqa: BLE001
+            check(f"  {name} is well-formed XML", False, str(exc))
+            continue
+        check(f"  {name} is well-formed XML", True)
+        w, h = (float(v) for v in root.get("viewBox").split()[2:])
+        ns = "{http://www.w3.org/2000/svg}"
+
+        # Nodes on the canvas. A node drawn outside the viewBox is invisible
+        # and silently drops a firm from the figure.
+        off = [
+            (c.get("cx"), c.get("cy"))
+            for c in root.iter(f"{ns}circle")
+            if not (0 <= float(c.get("cx")) <= w and 0 <= float(c.get("cy")) <= h)
+        ]
+        check(f"  {name}: every node is inside the canvas", not off, str(off[:3]))
+
+        # Labels on the canvas, measured the way the renderer measures them.
+        # Margin labels used to run off the right edge and get clipped.
+        clipped = []
+        for t in root.iter(f"{ns}text"):
+            x = float(t.get("x", 0))
+            size = float(t.get("font-size", 11))
+            tw = _text_width("".join(t.itertext()), size)
+            x0 = x - tw if t.get("text-anchor") == "end" else x
+            if x0 < -0.5 or x0 + tw > w + 0.5:
+                clipped.append(("".join(t.itertext())[:24], round(x0), round(x0 + tw)))
+        check(f"  {name}: no label is clipped by the canvas", not clipped,
+              str(clipped[:3]))
+
+        # The all-pairs cap: at most three categorical hues, plus grey.
+        allowed = set(PALETTE["light"]["series"]) | {
+            PALETTE["light"]["other"], PALETTE["light"]["surface"],
+            PALETTE["light"]["edge"], "none",
+        }
+        extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - allowed
+        check(f"  {name}: no colour outside the validated palette", not extra,
+              str(sorted(extra)[:3]))
+
+    # Small multiples must share one coordinate frame, or a reader comparing
+    # panels is comparing two different maps.
+    path = os.path.join(fig_dir, "fig2_by_period.svg")
+    if os.path.exists(path):
+        root = ET.parse(path).getroot()
+        ns = "{http://www.w3.org/2000/svg}"
+        seen: dict[str, set] = {}
+        for g in root.iter(f"{ns}g"):
+            for c in g.iter(f"{ns}circle"):
+                cid = c.get("data-id")
+                if cid:
+                    seen.setdefault(cid, set()).add((c.get("cx"), c.get("cy")))
+        moved = {k: v for k, v in seen.items() if len(v) > 1}
+        check("  fig2: a firm sits at the same point in every panel", not moved,
+              str(list(moved)[:3]))
+        check("  fig2: panels share firms to compare",
+              any(len(v) >= 1 for v in seen.values()) and len(seen) > 20,
+              f"{len(seen)} firms")
+
+    page = os.path.join(fig_dir, "interlock_network.html")
+    if os.path.exists(page):
+        with open(page, encoding="utf-8") as fh:
+            html_text = fh.read()
+        # Identity must never be colour-alone: a legend and a table view ship
+        # with the figure, and light-mode aqua's contrast WARN obliges them.
+        for token in ('<table', 'class="legend"', 'class="tooltip"',
+                      "prefers-color-scheme"):
+            check(f"  page carries {token}", token in html_text)
+        check("  page is self-contained (no external fetch)",
+              "http://" not in html_text.replace("http://www.w3.org", ""),
+              "external URL in page")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--unit", action="store_true", help="parser checks only")
     args = ap.parse_args()
 
     check_names()
+    check_urls()
     check_titles()
     check_citations()
+    check_layout()
     if not args.unit:
         check_extraction()
         check_dataset()
+        check_positionality()
+        check_splits()
+        check_figures()
 
     total = CHECKS["passed"] + CHECKS["failed"]
     print(f"\n{CHECKS['passed']}/{total} checks passed", file=sys.stderr)

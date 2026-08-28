@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="actionjouissance">
+      <data key="n_label">ACTION DE JOUISSANCE</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="africainefinanciereagricole">
+      <data key="n_label">Société africaine financière et agricole</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="agricoleafricaine">
+      <data key="n_label">Société Agricole Africaine</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="agricolecommercialeafriqueoccidentale">
+      <data key="n_label">Agricole et Commerciale de l'Afrique occidentale française</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="agricolecommercialeindustriellebadikahacacib">
+      <data key="n_label">Compagnie Agricole, Commerciale et Industrielle de Badikaha CACIB)</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="agricolecoteivoire">
+      <data key="n_label">Société Agricole de la Côte d'Ivoire</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="alsaciennecoteivoire">
+      <data key="n_label">Société Alsacienne de la Côte d’Ivoire</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="anyama">
+      <data key="n_label">Société d'Anyama</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="boiscoteivoire">
+      <data key="n_label">Compagnie des Bois de la Côte-d'Ivoire</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="boissassandra">
+      <data key="n_label">Société des Bois de Sassandra</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="brasseriescoteivoire">
+      <data key="n_label">Société des Brasseries de la Côte-d'Ivoire</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="cafesproduitscoloniauxcapro">
+      <data key="n_label">« Cafés et produits coloniaux français » CAPRO</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="colonialebandama">
+      <data key="n_label">Compagnie Coloniale du Bandama</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="colonialecoteivoire">
+      <data key="n_label">Compagnie Coloniale de la Côte-d’Ivoire</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="commercialeafrique">
+      <data key="n_label">La Commerciale de l'Afrique française</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="commercialeindustrielleagricolepalmeraiesafricaines">
+      <data key="n_label">Société commerciale, industrielle et agricole des Palmeraies africaines</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="commercialeindustriellepalmeraiesafricaines">
+      <data key="n_label">Société commerciale et industrielle des palmeraies africaines</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="comptoirimportationboisafricains">
+      <data key="n_label">Comptoir d'importation des bois africains</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="consolidatedgoldfieldsivorycoast">
+      <data key="n_label">The Consolidated Goldfields of the Ivory Coast</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="culturesextremeorient">
+      <data key="n_label">Cie française des cultures d'Extrême-Orient</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="culturesextremeorientafrique">
+      <data key="n_label">Cie française des Cultures d'Extrême-Orient et d'Afrique, puis Compagnie générale africaine</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="domainekokumbo">
+      <data key="n_label">Compagnie du Domaine de Kokumbo</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="etablissementscharlesperinaud">
+      <data key="n_label">Établissements Charles Périnaud</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="etablissementsrobertgonfreville">
+      <data key="n_label">Établissements Robert Gonfreville</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="exploitationscommercialesafricaines">
+      <data key="n_label">Compagnie d'Exploitations commerciales africaines</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="exploitationsforestieresagricolescoteivoire">
+      <data key="n_label">Exploitations forestières et agricoles de la Côte d’Ivoire</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="explorationexploitationminieresafrique">
+      <data key="n_label">Société d'Exploration et d'exploitation minières de l’Afrique française, puis Essika</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="exportationcoloniale">
+      <data key="n_label">Société d'exportation coloniale</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="forestiereafrique">
+      <data key="n_label">Compagnie Forestière de l'Afrique française</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">33</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="forestiereequatoriale">
+      <data key="n_label">Compagnie Forestière équatoriale</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="forestiereindenie">
+      <data key="n_label">Compagnie Forestière de l'Indénié</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="forestieresassandra">
+      <data key="n_label">Compagnie Forestière de Sassandra</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="huileriesafricaines">
+      <data key="n_label">Huileries africaines</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="huileriesafricainesdrewin">
+      <data key="n_label">Société des Huileries africaines, Drewin</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="huileriesplantationscoteivoire">
+      <data key="n_label">Société française des Huileries et plantations de la Côte-d’Ivoire</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="importationboisexotiques">
+      <data key="n_label">Société d'Importation de bois exotiques</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="industrielleagricolecommercialeafriqueoccidentaleafriquemetropole">
+      <data key="n_label">Société Industrielle, Agricole et Commerciale de l'Afrique occidentale française « Afrique et métropole »</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="ivorycoastgoldfields">
+      <data key="n_label">Ivory Coast Goldfields</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="jeanweber">
+      <data key="n_label">Jean Weber</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="kokumbocoltd">
+      <data key="n_label">Kokumbo Co. Ltd</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="kong">
+      <data key="n_label">Compagnie française de Kong</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">30</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="lorrainecoteivoirenancy">
+      <data key="n_label">Société Lorraine de la Côte d'Ivoire, Nancy</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="minesorindenie">
+      <data key="n_label">Société des Mines d’or de l'Indénié</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="miniereafema">
+      <data key="n_label">Compagnie Minière de l’Afema</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="miniereafriqueoccidentale">
+      <data key="n_label">Société Minière de l'Afrique occidentale</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="miniereagricolemarcory">
+      <data key="n_label">Société Minière et Agricole de Marcory, puis Minière et Agricole de la Côte-d'Ivoire</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="minierealangouacoteivoire">
+      <data key="n_label">Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="minierebassanwicoteivoire">
+      <data key="n_label">Compagnie Minière du Bas-Sanwi et de la Côte-d’Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="minierebondoukoucoteivoire">
+      <data key="n_label">Compagnie Minière du Bondoukou et de la Côte-d'Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="minierecoteivoire">
+      <data key="n_label">Société Minière de la Côte-d'Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="minierefoncierebandama">
+      <data key="n_label">Société minière et foncière du Bandama</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">24</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="miniereindeniecoteivoire">
+      <data key="n_label">Compagnie Minière de l’Indénié et de la Côte-d’Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="miniereindustrielleimmobilierecoteivoire">
+      <data key="n_label">Minière, Industrielle et Immobilière de la Côte-d'Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="miniereouestafricaineaboisso">
+      <data key="n_label">Compagnie Minière ouest-africaine, Aboisso</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="minieresanwicoteivoire">
+      <data key="n_label">Société Minière du Sanwi et de la Côte-d'Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="occidentaleafricaine">
+      <data key="n_label">L'Occidentale Africaine</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">23</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="ouestafricain">
+      <data key="n_label">Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français]</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="plantationselima">
+      <data key="n_label">Plantations d'Élima</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="plantationshuileriesbingerville">
+      <data key="n_label">Société des Plantations et huileries de Bingerville</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="plantationsreuniesouestafricain">
+      <data key="n_label">Plantations réunies de l'Ouest-Africain</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="plantationsreuniesouestafricainp">
+      <data key="n_label">Plantations réunies de l'Ouest-Africain (P</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="plantationssorotona">
+      <data key="n_label">Société des Plantations de Sorotona</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="plantationstanoe">
+      <data key="n_label">Société des plantations de la Tanoé</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">22</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="plantationstanoecafeiers">
+      <data key="n_label">Plantations de la Tanoé, caféiers</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="prospectioncoteivoire">
+      <data key="n_label">Société de Prospection de la Côte-d’Ivoire</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="renegastondreyfus">
+      <data key="n_label">René Gaston-Dreyfus</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="scieriesafricaines">
+      <data key="n_label">Compagnie des Scieries africaines</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">32</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="transitgrandlahou">
+      <data key="n_label">Société de Transit de Grand-Lahou</data>
+      <data key="n_sectors">Transports</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="unioncolonialeelectricite">
+      <data key="n_label">Union coloniale d'électricité</data>
+      <data key="n_sectors">Industries</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <node id="uniontropicaleplantations">
+      <data key="n_label">Union tropicale de plantations</data>
+      <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
+      <data key="n_n_directors">23</data>
+      <data key="n_territory">Côte d'Ivoire</data>
+    </node>
+    <edge id="e0" source="occidentaleafricaine" target="scieriesafricaines">
+      <data key="e_weight">19</data>
+    </edge>
+    <edge id="e1" source="alsaciennecoteivoire" target="occidentaleafricaine">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e2" source="brasseriescoteivoire" target="renegastondreyfus">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e3" source="alsaciennecoteivoire" target="scieriesafricaines">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e4" source="forestiereequatoriale" target="uniontropicaleplantations">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e5" source="actionjouissance" target="importationboisexotiques">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e6" source="etablissementscharlesperinaud" target="exportationcoloniale">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e7" source="huileriesafricaines" target="huileriesafricainesdrewin">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e8" source="boiscoteivoire" target="transitgrandlahou">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e9" source="forestiereindenie" target="transitgrandlahou">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e10" source="colonialebandama" target="plantationssorotona">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e11" source="africainefinanciereagricole" target="uniontropicaleplantations">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e12" source="jeanweber" target="plantationstanoe">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e13" source="culturesextremeorient" target="culturesextremeorientafrique">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e14" source="boiscoteivoire" target="kong">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e15" source="boiscoteivoire" target="forestiereindenie">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e16" source="forestiereindenie" target="plantationshuileriesbingerville">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e17" source="actionjouissance" target="kong">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e18" source="forestiereindenie" target="kong">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e19" source="forestiereindenie" target="plantationsreuniesouestafricain">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e20" source="importationboisexotiques" target="kong">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e21" source="kong" target="plantationsreuniesouestafricain">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e22" source="kong" target="transitgrandlahou">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e23" source="forestieresassandra" target="transitgrandlahou">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e24" source="minierealangouacoteivoire" target="minieresanwicoteivoire">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e25" source="forestiereafrique" target="occidentaleafricaine">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e26" source="forestiereafrique" target="scieriesafricaines">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e27" source="cafesproduitscoloniauxcapro" target="forestiereindenie">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e28" source="commercialeafrique" target="exploitationscommercialesafricaines">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e29" source="commercialeafrique" target="importationboisexotiques">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e30" source="boiscoteivoire" target="plantationshuileriesbingerville">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e31" source="plantationshuileriesbingerville" target="transitgrandlahou">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e32" source="actionjouissance" target="boiscoteivoire">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e33" source="actionjouissance" target="transitgrandlahou">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e34" source="boiscoteivoire" target="importationboisexotiques">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e35" source="importationboisexotiques" target="transitgrandlahou">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e36" source="plantationsreuniesouestafricain" target="transitgrandlahou">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e37" source="kong" target="minierefoncierebandama">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e38" source="kong" target="plantationshuileriesbingerville">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e39" source="consolidatedgoldfieldsivorycoast" target="minierebondoukoucoteivoire">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e40" source="minierebondoukoucoteivoire" target="miniereindeniecoteivoire">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e41" source="cafesproduitscoloniauxcapro" target="plantationshuileriesbingerville">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e42" source="huileriesafricaines" target="uniontropicaleplantations">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e43" source="huileriesafricaines" target="huileriesplantationscoteivoire">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e44" source="kokumbocoltd" target="minierefoncierebandama">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e45" source="kokumbocoltd" target="kong">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e46" source="plantationshuileriesbingerville" target="plantationsreuniesouestafricain">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e47" source="exploitationscommercialesafricaines" target="plantationstanoe">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e48" source="commercialeafrique" target="etablissementsrobertgonfreville">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e49" source="etablissementsrobertgonfreville" target="exploitationscommercialesafricaines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e50" source="etablissementsrobertgonfreville" target="importationboisexotiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e51" source="exploitationscommercialesafricaines" target="importationboisexotiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e52" source="agricolecommercialeafriqueoccidentale" target="industrielleagricolecommercialeafriqueoccidentaleafriquemetropole">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e53" source="agricolecoteivoire" target="lorrainecoteivoirenancy">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e54" source="actionjouissance" target="forestiereindenie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e55" source="actionjouissance" target="plantationsreuniesouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e56" source="boiscoteivoire" target="plantationsreuniesouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e57" source="forestiereindenie" target="importationboisexotiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e58" source="importationboisexotiques" target="plantationsreuniesouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e59" source="actionjouissance" target="minierefoncierebandama">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e60" source="actionjouissance" target="plantationshuileriesbingerville">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e61" source="boiscoteivoire" target="minierefoncierebandama">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e62" source="importationboisexotiques" target="minierefoncierebandama">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e63" source="importationboisexotiques" target="plantationshuileriesbingerville">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e64" source="minierefoncierebandama" target="plantationshuileriesbingerville">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e65" source="minierefoncierebandama" target="transitgrandlahou">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e66" source="boissassandra" target="occidentaleafricaine">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e67" source="boissassandra" target="scieriesafricaines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e68" source="agricolecommercialeindustriellebadikahacacib" target="colonialecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e69" source="agricoleafricaine" target="etablissementscharlesperinaud">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e70" source="agricoleafricaine" target="exportationcoloniale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e71" source="forestiereindenie" target="forestieresassandra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e72" source="forestieresassandra" target="kong">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e73" source="forestieresassandra" target="plantationsreuniesouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e74" source="africainefinanciereagricole" target="miniereafema">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e75" source="africainefinanciereagricole" target="miniereouestafricaineaboisso">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e76" source="miniereafema" target="miniereouestafricaineaboisso">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e77" source="domainekokumbo" target="miniereouestafricaineaboisso">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e78" source="commercialeafrique" target="miniereouestafricaineaboisso">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e79" source="importationboisexotiques" target="miniereouestafricaineaboisso">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e80" source="consolidatedgoldfieldsivorycoast" target="explorationexploitationminieresafrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e81" source="consolidatedgoldfieldsivorycoast" target="minierebassanwicoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e82" source="consolidatedgoldfieldsivorycoast" target="miniereindeniecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e83" source="consolidatedgoldfieldsivorycoast" target="ouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e84" source="explorationexploitationminieresafrique" target="minierebassanwicoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e85" source="explorationexploitationminieresafrique" target="minierebondoukoucoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e86" source="explorationexploitationminieresafrique" target="miniereindeniecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e87" source="explorationexploitationminieresafrique" target="ouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e88" source="minierebassanwicoteivoire" target="minierebondoukoucoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e89" source="minierebassanwicoteivoire" target="miniereindeniecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e90" source="minierebassanwicoteivoire" target="ouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e91" source="minierebondoukoucoteivoire" target="ouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e92" source="miniereindeniecoteivoire" target="ouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e93" source="consolidatedgoldfieldsivorycoast" target="minierealangouacoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e94" source="consolidatedgoldfieldsivorycoast" target="minieresanwicoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e95" source="domainekokumbo" target="miniereindustrielleimmobilierecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e96" source="exploitationsforestieresagricolescoteivoire" target="forestiereindenie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e97" source="forestiereafrique" target="unioncolonialeelectricite">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e98" source="occidentaleafricaine" target="unioncolonialeelectricite">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e99" source="scieriesafricaines" target="unioncolonialeelectricite">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e100" source="alsaciennecoteivoire" target="forestiereafrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e101" source="africainefinanciereagricole" target="forestiereequatoriale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e102" source="cafesproduitscoloniauxcapro" target="plantationselima">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e103" source="forestiereindenie" target="plantationselima">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e104" source="huileriesafricainesdrewin" target="uniontropicaleplantations">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e105" source="importationboisexotiques" target="ouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e106" source="comptoirimportationboisafricains" target="importationboisexotiques">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e107" source="ivorycoastgoldfields" target="minierecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e108" source="ivorycoastgoldfields" target="minesorindenie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e109" source="kokumbocoltd" target="miniereafriqueoccidentale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e110" source="kong" target="plantationselima">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e111" source="minierefoncierebandama" target="miniereindustrielleimmobilierecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e112" source="minesorindenie" target="ouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e113" source="minierealangouacoteivoire" target="minierebondoukoucoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e114" source="minierealangouacoteivoire" target="miniereindeniecoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e115" source="minierebondoukoucoteivoire" target="minieresanwicoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e116" source="miniereindeniecoteivoire" target="minieresanwicoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e117" source="miniereindeniecoteivoire" target="prospectioncoteivoire">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e118" source="kong" target="plantationsreuniesouestafricainp">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e119" source="plantationshuileriesbingerville" target="plantationsreuniesouestafricainp">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e120" source="plantationsreuniesouestafricain" target="plantationsreuniesouestafricainp">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e121" source="commercialeindustrielleagricolepalmeraiesafricaines" target="jeanweber">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e122" source="commercialeindustrielleagricolepalmeraiesafricaines" target="plantationstanoe">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e123" source="commercialeindustrielleagricolepalmeraiesafricaines" target="commercialeindustriellepalmeraiesafricaines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e124" source="commercialeindustriellepalmeraiesafricaines" target="plantationstanoecafeiers">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e125" source="anyama" target="commercialeindustriellepalmeraiesafricaines">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e126" source="plantationselima" target="plantationsreuniesouestafricainp">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e127" source="jeanweber" target="plantationstanoecafeiers">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e128" source="plantationstanoe" target="plantationstanoecafeiers">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e129" source="agricoleafricaine" target="plantationstanoe">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e130" source="miniereagricolemarcory" target="plantationsreuniesouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

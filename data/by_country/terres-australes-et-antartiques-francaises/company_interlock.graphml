@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="ileskerguelensaintpaulamsterdamfreresrenehenrybossiere">
+      <data key="n_label">Compagnie Générale des îles Kerguelen, Saint-Paul et Amsterdam . Les frères Réné et Henry Bossière</data>
+      <data key="n_sectors">Sociétés diverses</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Terres australes et antartiques françaises</data>
+    </node>
+    <node id="ileskerguelenstpaulamsterdam">
+      <data key="n_label">Cie générale des îles Kerguelen, St-Paul et Amsterdam</data>
+      <data key="n_sectors">Sociétés diverses</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Terres australes et antartiques françaises</data>
+    </node>
+    <node id="pechesaustrales">
+      <data key="n_label">Les Pêches australes</data>
+      <data key="n_sectors">Sociétés diverses</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Terres australes et antartiques françaises</data>
+    </node>
+    <edge id="e0" source="ileskerguelenstpaulamsterdam" target="pechesaustrales">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e1" source="ileskerguelensaintpaulamsterdamfreresrenehenrybossiere" target="ileskerguelenstpaulamsterdam">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e2" source="ileskerguelensaintpaulamsterdamfreresrenehenrybossiere" target="pechesaustrales">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

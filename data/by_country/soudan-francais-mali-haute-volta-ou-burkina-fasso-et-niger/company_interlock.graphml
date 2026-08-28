@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="n_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="n_sectors" for="node" attr.name="sectors" attr.type="string"/>
+  <key id="n_n_directors" for="node" attr.name="n_directors" attr.type="long"/>
+  <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
+  <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="agricoleindustriellesoudan">
+      <data key="n_label">Compagnie Agricole et Industrielle du Soudan, puis Agricole et Industrielle de l'Ouest africain</data>
+      <data key="n_sectors">Industrie</data>
+      <data key="n_n_directors">20</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <node id="culturecotonniereniger">
+      <data key="n_label">Compagnie de Culture cotonnière du Niger, puis Compagnie générale du Niger</data>
+      <data key="n_sectors">Industrie</data>
+      <data key="n_n_directors">28</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <node id="culturesdiakandape">
+      <data key="n_label">Cultures de Diakandapé</data>
+      <data key="n_sectors">Industrie</data>
+      <data key="n_n_directors">29</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <node id="elevagenigerdire">
+      <data key="n_label">Compagnie d'Élevage du Niger, Diré</data>
+      <data key="n_sectors">Industrie</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <node id="etudesexplorationsoudan">
+      <data key="n_label">Société d'Études et d’exploration du Soudan</data>
+      <data key="n_sectors">Industrie</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <node id="minieresoudan">
+      <data key="n_label">Société Minière du Soudan français</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <node id="plantationsambidedisisal">
+      <data key="n_label">Société des Plantations d'Ambidedi, sisal</data>
+      <data key="n_sectors">Industrie</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <node id="plantationshautevoltasisal">
+      <data key="n_label">Société des Plantations de la Haute-Volta, sisal</data>
+      <data key="n_sectors">Industrie</data>
+      <data key="n_n_directors">10</data>
+      <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
+    </node>
+    <edge id="e0" source="agricoleindustriellesoudan" target="culturecotonniereniger">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e1" source="culturesdiakandape" target="plantationsambidedisisal">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e2" source="agricoleindustriellesoudan" target="elevagenigerdire">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e3" source="agricoleindustriellesoudan" target="culturesdiakandape">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e4" source="culturesdiakandape" target="plantationshautevoltasisal">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e5" source="plantationsambidedisisal" target="plantationshautevoltasisal">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e6" source="culturecotonniereniger" target="elevagenigerdire">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e7" source="agricoleindustriellesoudan" target="plantationsambidedisisal">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e8" source="agricoleindustriellesoudan" target="plantationshautevoltasisal">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e9" source="culturecotonniereniger" target="culturesdiakandape">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e10" source="etudesexplorationsoudan" target="minieresoudan">
+      <data key="e_weight">1</data>
+    </edge>
+  </graph>
+</graphml>

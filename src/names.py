@@ -108,6 +108,7 @@ PUBLICATION_RE = re.compile(
     r"tribune|libert[eé]|progr[eè]s|r[eé]veil|vigie|petit\s+\w+|temps|figaro|matin|"
     r"illustration|illustr[eé]e|hebdomadaire|quotidien|annuaire|palais|"
     r"recueil|affiches|petites\s+affiches|r[eé]pertoire|almanach|m[eé]morial|"
+    r"documentation|valeurs\s+inscrites|cote\s+des\s+banquiers|"
     r"dictionnaire|who'?s\s+who|notices?\s+biographiques|catalogue\s+g[eé]n[eé]ral|"
     r"agence\s+[eé]conomique|documents?\s+politiques)\b",
     re.I,

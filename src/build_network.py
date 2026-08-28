@@ -43,7 +43,7 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common import PLACES, ensure_dir, slugify, strip_accents  # noqa: E402
+from common import PLACES, XML_ILLEGAL_RE, ensure_dir, slugify, strip_accents  # noqa: E402
 from names import org_key  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -299,9 +299,17 @@ def company_duplicate_candidates(companies: dict[str, dict]) -> list[dict]:
 
 # --- GraphML -------------------------------------------------------------
 def _xml_escape(v: str) -> str:
+    """Escape a value for XML, dropping characters XML 1.0 cannot carry.
+
+    Escaping alone is not enough: control characters such as NUL are illegal
+    in XML even as entities, and the PDF text layer contains them. Emitting one
+    produces a GraphML file that no parser will load, which is a broken
+    deliverable rather than a visible error, so they are stripped here as well
+    as in common.clean_text.
+    """
+    s = XML_ILLEGAL_RE.sub(" ", str(v))
     return (
-        str(v)
-        .replace("&", "&amp;")
+        s.replace("&", "&amp;")
         .replace("<", "&lt;")
         .replace(">", "&gt;")
         .replace('"', "&quot;")
@@ -362,7 +370,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-interlock-weight", type=int, default=1,
                     help="drop interlock edges below this many shared directors")
-    ap.add_argument("--graphml-max-nodes", type=int, default=20000,
+    ap.add_argument("--graphml-max-nodes", type=int, default=200000,
                     help="skip GraphML export above this node count")
     args = ap.parse_args()
 
