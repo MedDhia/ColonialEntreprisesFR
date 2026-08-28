@@ -131,6 +131,20 @@ compiler gloss (`107 (dga BAO)`) matches the name the numbered key gives. It
 runs at **0.97**; `checks.py` fails below 0.90, because a misaligned numbering
 would otherwise yield a large, plausible, entirely wrong dataset.
 
+### `affiliations_prose.csv` — boards reported in running prose (14,251)
+
+Written by `src/parse_prose.py` (stage 3c). Same columns as
+`affiliations.csv`, plus `source_genre = "prose"`. `trigger` records which
+prose construction matched: `prose_role_after` (11,148),
+`prose_appointed_after` (2,556), `prose_nomination`, `prose_appointed_before`,
+`prose_outgoing`, `prose_presidency`.
+
+**Not in the default network.** Hand-audited precision is near 90%, below the
+structured parser's; `build_network.py --with-prose` includes it. 8,421 of its
+person-firm pairs appear nowhere else, and 23% of its rows corroborate a pair
+the structured parser found independently. See METHODOLOGY §4d for the audit
+and the seven failure classes it fixed.
+
 ### `org_affiliations.csv` — company → company board ties as observed
 
 Same shape, for board members that are companies rather than people

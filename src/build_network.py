@@ -374,6 +374,10 @@ def main() -> None:
                     help="skip GraphML export above this node count")
     ap.add_argument("--no-person-index", action="store_true",
                     help="exclude stage 3b (the annuaire indexes) from the network")
+    ap.add_argument("--with-prose", action="store_true",
+                    help="include stage 3c (prose-reported boards). Off by "
+                         "default: hand-audited precision is ~90%%, below the "
+                         "structured parser's, so it is opt-in.")
     args = ap.parse_args()
 
     documents = read_csv("documents.csv")
@@ -397,6 +401,17 @@ def main() -> None:
         n_index = sum(1 for r in idx if r["company_key"]
                       and (r.get("person_key") or r.get("member_key")))
         print(f"person-index rows merged: {n_index:,}", file=sys.stderr)
+    # Stage 3c: boards reported in running prose. Opt-in, because a hand audit
+    # of random samples puts precision near 90% against the structured
+    # parser's high nineties. Every row is tagged `prose`, so including it and
+    # filtering later is equivalent to excluding it here.
+    if args.with_prose:
+        pr = read_csv("affiliations_prose.csv")
+        for r in pr:
+            r.setdefault("source_genre", "prose")
+        affiliations += [r for r in pr if r["company_key"] and r.get("person_key")]
+        print(f"prose rows merged: {len(pr):,}", file=sys.stderr)
+
     for r in affiliations + org_aff:
         r.setdefault("source_genre", "dossier")
     attributes = read_csv("company_attributes.csv")

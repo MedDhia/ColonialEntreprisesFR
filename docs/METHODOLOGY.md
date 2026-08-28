@@ -42,6 +42,7 @@ Ten stages, each resumable, each writing its own outputs:
    `company_attributes.csv`, `doc_references.csv`.
 3b. **`parse_person_index.py`** — inverted indexes → person → company ties
    the dossier parser cannot see (§2b).
+3c. **`parse_prose.py`** — boards reported in running prose (§4d). Opt-in.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
@@ -61,7 +62,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (766 assertions).
+`checks.py` validates the parsers and the built dataset (778 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -319,6 +320,54 @@ where that slug is *itself* only a legal form ("Société"), which stays
 unkeyed rather than becoming a node several unrelated observations pile into.
 Twenty company identifiers changed, all of them corrections; 36 previously
 unkeyable firms now resolve.
+
+## 4d. Boards reported in prose
+
+Most of this collection is press extracts, and the press reports boards in
+sentences, not lists:
+
+> Les administrateurs sortants, MM. le comte de Germiny, J. Stewart,
+> G. Alberti, J. Alexander, ont été réélus.
+
+`parse_ties.py` will not touch that, by design — an early version triggered on
+the bare phrase *conseil d'administration* wherever it appeared and produced
+thousands of directors out of ordinary sentences. `parse_prose.py` reads the
+prose with three conditions required together: an explicit person marker
+(`MM.`, `M.`, or an appointment verb), an explicit role word in the same
+clause, and every candidate name passing the same shape test the structured
+parser uses. It yields **14,251 ties over 2,521 firms**, of which 8,421
+person-firm pairs are new.
+
+**Attribution was never the hard part.** For a firm dossier the subject
+company is the catalogue title, which the segmenter already carries. The
+missing piece was only finding the people.
+
+**Precision is the hard part, and it is measured rather than assumed.** Random
+samples were hand-checked against their source context, in three rounds. The
+first scored roughly 70%, the second 75%, the third around 90%. Each round
+named a specific failure, and each is now a regression test:
+
+| Failure | Example | Fix |
+|---|---|---|
+| Singular role applied to a whole run | "MM. Meunier, Guibal, Godard, Billiard, président" made four presidents | A singular role binds the last name only; a plural one binds the run |
+| Non-compete clause read as appointment | "s'interdisent de diriger comme gérants, directeurs" | Negated clauses reject the match |
+| Decoration read as a person | "M. Nunzi, commandeur de la Légion d'honneur" | Honours vocabulary rejected |
+| Address read as a person | "demeurant à Paris, 10, rue de Laborde" | Street vocabulary rejected |
+| Meeting chair read as board president | "sous la présidence de M. Louis Martin, maire" | Requires "président du conseil" |
+| Occupation between name and role | "M. Willot, inspecteur général des Postes, président" | An occupation in the run rejects the match |
+| Truncated names | "sous la présidence de M. Albert Thomas" yielded "Alb" | Lazy quantifiers given explicit terminators |
+
+Two caveats on that figure. It comes from samples of twenty, so it locates the
+right order of magnitude and not a second decimal place. And "correct" was
+judged against the surrounding sentence, which establishes that the text says
+what the parser recorded — not that the source was right.
+
+**Because ~90% is below the structured parser, this stage is opt-in.**
+`build_network.py --with-prose` includes it; the default network does not.
+Every row is tagged `source_genre = "prose"`, so including it and filtering
+later is equivalent. That 23% of its rows independently corroborate a pair the
+structured parser already found is a useful signal: noise would not
+concentrate on pairs another method also produced.
 
 ## 5. Dating and attributing ties
 

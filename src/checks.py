@@ -683,6 +683,67 @@ def check_person_index() -> None:
               int(r["n_key_companies"]) > 500, r["n_key_companies"])
 
 
+def check_prose_parser() -> None:
+    """Stage 3c. Each case is an error the hand audit actually found."""
+    from parse_prose import extract, names_from
+
+    print("prose parser", file=sys.stderr)
+
+    def people(text, company="Société des Mines de Zellidja"):
+        out = []
+        for names, role, trigger, _ in extract(text, company, []):
+            out += [(n, role) for n in names]
+        return out
+
+    # Works at all.
+    got = people("MM. Georges Thomas et Dal Piaz ont été réélus administrateurs.")
+    eq("  reads an appointment in prose", sorted(n for n, _ in got),
+       ["Dal Piaz", "Georges Thomas"])
+
+    # A *singular* role after a run names only the last person. Reading it as
+    # the whole run made eleven presidents of one company.
+    got = people("MM. Meunier, Guibal, Godard, Billiard, président.")
+    eq("  a singular role after a list binds the last name only",
+       [n for n, _ in got], ["Billiard"])
+    got = people("MM. Lutscher et Vigouroux, administrateurs.")
+    eq("  a plural role binds the whole list", len(got), 2)
+
+    # A non-compete clause uses the role words in the negative.
+    eq("  a non-compete clause appoints nobody",
+       people("M. Borgeaud s'interdit de diriger comme gérant, directeur."), [])
+
+    # Decorations and addresses sit exactly where a name sits.
+    check("  a decoration is not a person",
+          "commandeur de la Légion d'honneur" not in names_from(
+              "M. Antoine Nunzi, commandeur de la Légion d'honneur"))
+    check("  a street address is not a person",
+          not any("rue" in n.lower() for n in names_from(
+              "M. Joseph de Traversay, demeurant à Paris, 10, rue de Laborde")))
+
+    # Presiding a meeting is not holding a board seat.
+    eq("  a mayor chairing a meeting is not the board president",
+       people("sous la présidence de M. Louis Martin, maire"), [])
+    check("  a chairman of the board is kept",
+          any(r == "president" for _, r in people(
+              "sous la présidence de M. Guynet, président du conseil "
+              "d'administration")))
+
+    # An occupation between the name and the role means the role is not held
+    # at this firm.
+    eq("  an occupation between name and role rejects the match",
+       people("M. Willot, inspecteur général des Postes, président"), [])
+
+    path = os.path.join(PROC_DIR, "affiliations_prose.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_prose.csv")
+    check("  prose file is substantial", len(rows) > 5000, str(len(rows)))
+    bad = [r for r in rows if not r["company_key"] or not r["person_key"]]
+    check("  every prose row is fully attributed", not bad, str(len(bad)))
+    eq("  every prose row is tagged",
+       {r["source_genre"] for r in rows}, {"prose"})
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -967,6 +1028,7 @@ def main() -> None:
         check_positionality()
         check_splits()
         check_person_index()
+        check_prose_parser()
         check_geocoding()
         check_figures()
 

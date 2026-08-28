@@ -23,6 +23,15 @@ network can be sliced by period rather than collapsed into one static graph.
 > §2b of the methodology quantifies what is left on the table. Absence of a
 > firm from the network is not evidence that it had no board.
 >
+> **Boards reported in prose are extracted but not merged by default.** Most
+> of this collection is press extracts, which report board changes in running
+> text rather than in lists. `parse_prose.py` reads them — 14,251 ties, 8,421
+> person-firm pairs the structured parser never saw — into
+> `affiliations_prose.csv`. It is **opt-in** (`build_network.py --with-prose`)
+> because hand-auditing random samples puts its precision near 90%, against
+> the structured parser's high nineties. 23% of its rows independently
+> corroborate a pair the structured parser already found.
+>
 > **The network includes the Paris Bourse.** A large share of colonial firms
 > were publicly quoted, so `Annuaire Desfossés 1956` is a colonial source; it
 > contributes 16,131 ties and 1,889 firms, of which 11% also have dossier
@@ -218,6 +227,7 @@ src/
   fetch_extract.py     stage 2  PDFs         -> plain text
   parse_ties.py        stage 3  text         -> companies, people, dated ties
   parse_person_index.py stage 3b inverted indexes -> person -> company ties
+  parse_prose.py       stage 3c prose      -> boards reported in running text
   build_network.py     stage 4  ties         -> nodes, edges, projections, GraphML
   split_by_country.py  stage 5  dataset      -> per-territory bundles
   code_positionality.py stage 6 people       -> colonial / native coding
@@ -229,7 +239,7 @@ src/
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            766 assertions on the parsers and the built dataset
+  checks.py            778 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -258,6 +268,7 @@ python3 src/fetch_extract.py                  # ~1.5 h, ~21 GB transferred, resu
 python3 src/fetch_extract.py --retry-failed   # sweep transient network errors
 python3 src/parse_ties.py                     # ~6 min
 python3 src/parse_person_index.py             # ~1 min, person-indexed annuaires
+python3 src/parse_prose.py                    # ~4 min, prose-reported boards
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
