@@ -43,6 +43,7 @@ Nine stages, each resumable, each writing its own outputs:
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
+6b. **`centrality.py`** — interlock graph → exact betweenness per firm (§5e).
 7. **`make_figures.py`** — network → the core figures, HTML and SVG (§5d).
 8. **`make_territory_figures.py`** — network → the whole-empire figure, the
    territory matrix and one figure per territory (§5d).
@@ -56,7 +57,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (687 assertions).
+`checks.py` validates the parsers and the built dataset (697 assertions).
 
 ### The extraction trap
 
@@ -420,6 +421,47 @@ quarter of the frame. Twelve territories get no figure because no two of their
 firms share a director — recorded and listed on the page rather than omitted,
 since that is a fact about the collection's coverage, not about the territory.
 
+## 5e. Betweenness, and what it is measuring here
+
+`src/centrality.py` writes `company_centrality.csv`. Degree counts how many
+firms a firm shares directors with. Betweenness counts how often it lies on
+the shortest path between two firms that share no director of their own — so
+it picks out **brokers** rather than hubs, and a firm with a modest board can
+score highly if it is the only thing joining two blocs. Figure 6 draws it on
+figure 1's node set and layout, so the two can be read against each other.
+
+Three decisions determine the numbers.
+
+**Computed on the whole graph, displayed on a slice.** Betweenness is a global
+property: the shortest paths that matter run through firms outside any core
+one might draw. It is computed on the giant component of the interlock graph
+at `weight >= 1` (3,039 firms, 39,497 ties) and then displayed on whatever
+subset a figure shows. Recomputing it on the 170 drawn firms would yield a
+different quantity wearing the same name, and would systematically flatter
+firms that happen to sit in the middle of that particular selection.
+
+**Exact, not sampled.** `networkx` will estimate betweenness from *k* pivot
+nodes in a few seconds; the exact Brandes computation takes about a minute at
+this size, which is affordable. Nothing in the file is an estimate, so no
+sampling error needs reporting.
+
+**Unweighted.** Edge weight in this graph is the number of shared directors —
+a measure of tie *strength*. Shortest-path algorithms read weights as
+*distances*, so passing the weight through unchanged would make the most
+heavily interlocked pairs of firms count as the furthest apart, exactly
+inverting the intended meaning. Inverting the weight (`1/w`) is defensible and
+would give a different, also-defensible ranking; the binary graph is the
+standard treatment in the interlocking-directorate literature and is what is
+used here. Anyone wanting the weighted variant has the edge list.
+
+**The caveats from §6 carry over, and one is sharpened.** Betweenness is more
+sensitive to missing data than degree is: a single unobserved tie can reroute
+many shortest paths, so a firm's score depends on ties this collection happens
+to record. It also inherits the entity-resolution limits of §4 — an unmerged
+duplicate splits a firm's brokerage across two nodes, and a wrongly merged
+surname invents brokerage that no one exercised. Read the ranking as a
+description of this network, not of the colonial economy.
+
 ## 6. Validity — read this before using the data
 
 **It is a sample of statements, not a census of boards.** A firm's absence
@@ -486,6 +528,7 @@ python3 src/parse_ties.py                       # ~6 min
 python3 src/build_network.py                    # ~3 min
 python3 src/split_by_country.py                 # ~2 min, per-territory bundles
 python3 src/code_positionality.py               # ~1 min, positionality coding
+python3 src/centrality.py                       # ~1 min, exact betweenness
 python3 src/make_figures.py                     # ~1 min, core figures
 python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
 python3 src/make_figures.py --lang en            # English label set

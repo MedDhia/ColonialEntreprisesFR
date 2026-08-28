@@ -120,6 +120,7 @@ versioned as a standalone SVG for papers.
 | `fig1_core_interlocks.svg` | The core interlock network: 170 firms, 1,162 ties at two or more shared directors, coloured by territory and sized by weighted degree. |
 | `fig2_by_period.svg` | The same network by period, five panels on one shared layout — 299 ties before 1914, 1,764 in 1914–1929, 116 after 1962. |
 | `fig3_ego_indochine.svg` | The interlock neighbourhood of a single firm, the Banque de l'Indochine by default. |
+| `fig6_core_betweenness.svg` | The same 170 firms and the same layout as figure 1, sized by **betweenness centrality** instead of shared directorships — so the difference between the two figures is the finding. |
 
 **`figures/territory_networks.html`** — the whole empire, and every territory.
 
@@ -193,8 +194,9 @@ src/
   make_territory_figures.py
                        stage 8  network      -> empire and per-territory figures
   render_png.py        stage 9  figures      -> PNG, one network per file
+  centrality.py        stage 6b betweenness -> company_centrality.csv
   labels.py            English labels for the French category vocabulary
-  checks.py            687 assertions on the parsers and the built dataset
+  checks.py            697 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -225,6 +227,7 @@ python3 src/parse_ties.py                     # ~6 min
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
+python3 src/centrality.py                     # ~1 min, exact betweenness
 python3 src/make_figures.py                   # ~1 min, core figures
 python3 src/make_territory_figures.py         # ~1 min, empire + per-territory
 python3 src/make_figures.py --lang en          # English label set

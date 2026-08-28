@@ -441,6 +441,39 @@ threshold everywhere, `--ego` the focal firm of figure 3 (matched on
 same figure. See METHODOLOGY §5d for why the subset, the three-colour cap and
 the shared layout are what they are.
 
+### `company_centrality.csv` — betweenness on the interlock network
+
+Written by `src/centrality.py` (stage 6b), one row per firm in the interlock
+graph (3,085).
+
+| Variable | Description |
+|---|---|
+| `company_id`, `name` | Firm, matching `companies.csv`. |
+| `in_giant` | 1 if in the giant component (3,039 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
+| `degree` | Firms it shares at least one director with. |
+| `weighted_degree` | Sum of shared-director counts over those ties. |
+| `betweenness` | Normalised betweenness centrality, **exact and unweighted**, computed on the giant component. |
+| `betweenness_rank`, `degree_rank` | 1 = highest. |
+| `broker_gap` | `degree_rank − betweenness_rank`. Positive means the firm is more central to the flow of the network than its board size suggests — a broker rather than a hub. |
+
+Three choices behind the numbers, each of which would change them:
+
+- **Computed on the whole graph.** Betweenness is global: the shortest paths
+  that matter run through firms outside any core you draw. Figures display a
+  slice of these scores; they do not recompute on the slice, which would be a
+  different quantity under the same name.
+- **Exact, not sampled.** `networkx` will estimate from *k* pivots in seconds;
+  the exact Brandes run takes about a minute, so nothing here is an estimate.
+- **Unweighted.** Edge weight is a count of shared directors — a strength, not
+  a distance. Passing it to a shortest-path algorithm would make the most
+  heavily interlocked pairs count as furthest apart. The binary graph is the
+  standard treatment for interlock networks.
+
+Top by betweenness: Compagnie du Port de Fedhala (0.0215), Compagnie de
+Navigation Sud-Atlantique (0.0200), Banque de l'Indochine (0.0187). Note the
+first two are *not* the highest-degree firms — that is the point of the
+variable.
+
 ### The whole empire, and every territory
 
 `src/make_territory_figures.py` (stage 8) writes the rest of `figures/`.
@@ -451,6 +484,12 @@ the shared layout are what they are.
 | `fig4_empire_network.svg` | Figure 4, standalone, light mode. |
 | `fig5_territory_matrix.svg` | Figure 5, standalone, light mode. |
 | `by_country/<slug>.svg` | One per territory, light mode; slugs match `data/by_country/`. |
+
+**Figure 6 — the core, sized by brokerage.** `fig6_core_betweenness.svg`.
+The same 170 firms and the same coordinates as figure 1, with node area given
+by `betweenness` instead of weighted degree. Holding the node set and layout
+fixed is the whole design: the difference between figures 1 and 6 is the
+finding, and a fresh layout would let neither be read against the other.
 
 **Figure 4 — every firm, every interlock.** All 3,085 firms in
 `edges_company_interlock.csv` at `weight >= 1` and all 39,523 interlocks
