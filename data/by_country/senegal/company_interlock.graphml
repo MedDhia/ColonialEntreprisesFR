@@ -63,7 +63,7 @@
     <node id="colonialechauxcimentsof">
       <data key="n_label">Société coloniale des chaux et ciments de l'A.-O. F</data>
       <data key="n_sectors">Industries</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="colonialesac">
@@ -81,13 +81,13 @@
     <node id="commercialeafricaine">
       <data key="n_label">Commerciale Africaine</data>
       <data key="n_sectors">Commerce</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="commercialeafricainesuitepascalbuhan">
       <data key="n_label">Nouvelle Société commerciale africaine, suite de Pascal Buhan et Cie</data>
       <data key="n_sectors">Commerce</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">4</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="commercialeindustrielleoutremer">
@@ -171,7 +171,7 @@
     <node id="huileriesrizeriesouestafricaines">
       <data key="n_label">Société des Huileries et rizeries ouest-africaines</data>
       <data key="n_sectors">Industries agro-alimentaires</data>
-      <data key="n_n_directors">14</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="huileriessavonneriesouestafricainsuitealminko">
@@ -231,7 +231,7 @@
     <node id="minesfalemegambie">
       <data key="n_label">Compagnie des Mines de Falémé-Gambie</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">38</data>
+      <data key="n_n_directors">37</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="minessenegambie">
@@ -255,7 +255,7 @@
     <node id="salinssinesaloum">
       <data key="n_label">Salins du Sine Saloum</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">42</data>
+      <data key="n_n_directors">41</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="senegal">
@@ -309,25 +309,25 @@
     <edge id="e4" source="huileriesrizeriesouestafricaines" target="silicocalcaireafricaine">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e5" source="banquecommercialeafricaine" target="creditfoncierouestafricain">
+    <edge id="e5" source="commercialeafricaine" target="commercialeafricainesuitepascalbuhan">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e6" source="banquecommercialeafricaine" target="creditfoncierouestafricain">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e6" source="banqueafriqueoccidentale" target="messageriesafricaines">
+    <edge id="e7" source="banqueafriqueoccidentale" target="messageriesafricaines">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e7" source="electricitesenegal" target="messageriesafricaines">
+    <edge id="e8" source="electricitesenegal" target="messageriesafricaines">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e8" source="brasseriesouestafricain" target="hoteliereouestafricainchoa">
+    <edge id="e9" source="brasseriesouestafricain" target="hoteliereouestafricainchoa">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e9" source="creditfoncierafrique" target="foncierecoteafrique">
+    <edge id="e10" source="creditfoncierafrique" target="foncierecoteafrique">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e10" source="messageriesafricaines" target="messageriessenegal">
-      <data key="e_weight">3</data>
-    </edge>
-    <edge id="e11" source="commercialeafricaine" target="commercialeafricainesuitepascalbuhan">
+    <edge id="e11" source="messageriesafricaines" target="messageriessenegal">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e12" source="banquecommercialeafricaine" target="creditfoncierafriqueequatorialebrazzaville">

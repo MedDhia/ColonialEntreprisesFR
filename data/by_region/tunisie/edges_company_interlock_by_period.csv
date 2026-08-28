@@ -1,11 +1,12 @@
 company_id_1,company_id_2,period,weight,shared_directors
-mineszaghouan,minieredjebellorbeus,1914_1929,10,clerc-l; damour-a; desforges-adm-ac-rombas-p; dreux-a; gerini-d; michel-c; nicou-p; pdt-nanceienne-cic; riollot-j; tricon-m
+djebeldjerissa,socdjebeldjerissa,1914_1929,10,bordet-l; de-dietrich-a; de-joannis-e; de-nervo-l; heurteau; mallet; mokta; pdt-bone-guelma-t; pres-tunis; puerari
 gafsa,phosphatescheminsfergafsa,1914_1929,7,ascherson-c; boissonnas-j; mauclere-e; mirabaud-a; mirabaud-e; pelle-m; walewski-a
 atelierschantiersmaritimestunisie,commercialetunisienne,1914_1929,6,bouffe-g; fossorier-r; marceron-m; savon; savon-a; savon-r
 atelierschantiersmaritimestunisie,foncierafricain,1914_1929,6,bouffe-g; fossorier-r; marceron-m; savon-a; savon-h; savon-r
+huileriessaheltunisien,socgenhuileriessaheltunisien,1914_1929,6,cottet-b; guis-h; jouve-g; querry-p; sonnery-j; sonnery-r
 commercialetunisienne,foncierafricain,1914_1929,5,bouffe-g; fossorier-r; marceron-m; savon-a; savon-r
 salinesdjibouti,salinesdjiboutisfaxmadagascar,1914_1929,5,guesde-p; homberg-o; jambon-c; mingois-g; radziwill-l
-africainearmement,atelierschantiersmaritimestunisie,1914_1929,4,bouffe-g; caltagirone-f; marceron-m; savon-a
+minesdjebelressas,socminesdjebelressas,1914_1929,4,cambefort-c; chalupt-c; ledoux-f; urruty-f
 commercialeafricaine,olivettesmaiana,1914_1929,4,jullien-de-pommerol-f; martin-a; martinier; renoux-h
 djimla,ruraletunisienne,1914_1929,4,baizeau-l; marcille-r; martin-a; rte-de-l-ariana
 olivettesmaiana,omniumimmobiliertunisien,1914_1929,4,jullien-de-pommerol-f; martin-a; renoux-h; usannaz-joris-m
@@ -13,8 +14,6 @@ francotunisienneimmobiliereagricolecommerciale,sidichemmak,1914_1929,4,maurice-e
 gazregiecointeresseeeauxtunis,immobilieretunisienne,1914_1929,4,flury-herard-r; hackenberger-p; petsche-a; siegler-j
 salinesdjibouti,salinesdjiboutimadagascar,1914_1929,4,guesde-p; homberg-o; jambon-c; mingois-g
 salinesdjiboutimadagascar,salinesdjiboutisfaxmadagascar,1914_1929,4,guesde-p; homberg-o; jambon-c; mingois-g
-africainearmement,commercialetunisienne,1914_1929,3,bouffe-g; marceron-m; savon-a
-africainearmement,foncierafricain,1914_1929,3,bouffe-g; marceron-m; savon-a
 centresud,omniumimmobiliertunisien,1914_1929,3,baizeau-l; martin-a; superieur-b
 commercialeafricaine,omniumimmobiliertunisien,1914_1929,3,jullien-de-pommerol-f; martin-a; renoux-h
 djimla,olivettesmaiana,1914_1929,3,jullien-de-pommerol-f; martin-a; rte-de-l-ariana
@@ -28,14 +27,15 @@ djebeldjerissa,minesferkroumirienefzas,1914_1929,3,beigbeder-d; milius-j; nervo-
 mines,minesgarnalfaya,1914_1929,3,achalme-p; grandidier-g; rodocanachi-e
 fermiereminessidibouaouane,sidibouaouane,1914_1929,3,biver; boissier; bousquet
 agricoleimmobilieretunisienne,olivettessudtunisien,1914_1929,2,carrier-c; delarue-a
-mineszaghouan,mineszincainnouba,1914_1929,2,duceux-o; duval-f
-etablissementsluchaire,fichet,1914_1929,2,naples; sofia
+mineszincainnouba,socnouvmineszaghouan,1914_1929,2,duceux-o; duval-f
+etablissementsluchaire,socalsaciennefilaturetissagejute,1914_1929,2,naples; sofia
 1911djebelhallouf,metallurgiquetunisie,1914_1929,2,gittens-w; michenot-e
-1911djebelhallouf,minesalgerietunisieomnium,1914_1929,2,bourdillon-l; gittens-w
+1911djebelhallouf,socfrseminesdjebelhallouf,1914_1929,2,bourdillon-l; gittens-w
 1911djebelhallouf,tunisiennefonciereagricole,1914_1929,2,gittens-w; zafiropulo-g
 metallurgiquetunisie,tunisiennefonciereagricole,1914_1929,2,gittens-w; valenza-f
-minesalgerietunisieomnium,minesdjebelhallouf,1914_1929,2,adm-mm-e-michenot; bourdillon-l
+minesdjebelhallouf,socfrseminesdjebelhallouf,1914_1929,2,bourdillon-l; e-michenot
 foncieretunisie,fonderiesmegrinefilialemetallgeselschaft,1914_1929,2,bellay-r; urruty-f
+boujaber,minieredjebellorbeus,1914_1929,2,arlet-j; paris-m
 auxiliairecommerceagriculture,commercialeafriquenord,1914_1929,2,cittanova; cittanova-j
 auxiliairecommerceagriculture,maritimetunisienne,1914_1929,2,cittanova; cittanova-j
 commercialeafriquenord,maritimetunisienne,1914_1929,2,cittanova; cittanova-j
@@ -62,7 +62,6 @@ comptoirminesgrandstravaux,etablissementsschwichbaizeau,1914_1929,2,delcroix-e; 
 etablissementsschwichbaizeau,morellivet,1914_1929,2,jullien-de-pommerol-f; martinier
 morellivet,olivettesmaiana,1914_1929,2,jullien-de-pommerol-f; martinier
 fermierecheminsfertunisiens,tunisiennephosphatesdjebelmdilla,1914_1929,2,philippar-e; trelat-m
-boujaber,minieredjebellorbeus,1914_1929,2,arlet-j; paris-m
 energieelectriquevillebizerte,portbizerte,1914_1929,2,hersent-g; thomas-g
 foncierefrancotunisienne,immobilierenordafricaineferryville,1914_1929,2,moret-e; pepin-de-bonnerive-e
 immeubleslyonnaisferryville,immobilierenordafricaineferryville,1914_1929,2,moret-e; pepin-a
@@ -73,27 +72,29 @@ acconagecharbonstunisie,maritimetunisienne,1914_1929,1,pico-j
 acconagecharbonstunisie,huileriesraffineriesafricaines,1914_1929,1,boccara-e
 agricoleimmobilieretunisienne,moulinebbaksour,1914_1929,1,delarue-a
 moulinebbaksour,olivettessudtunisien,1914_1929,1,delarue-a
-africainearmement,djebeldjerissa,1914_1929,1,gorchs-chacou-f
-boujaber,immeubleslyonnaisferryville,1914_1929,1,gerard-a
-boujaber,fonciereagricole,1914_1929,1,asnieres
-boujaber,velvetrum,1914_1929,1,gerard-p
+atelierschantiersmaritimestunisie,djebeldjerissa,1914_1929,1,gorchs-chacou-f
+boulonneriesbognybraux,immeubleslyonnaisferryville,1914_1929,1,gerard-a
+boulonneriesbognybraux,fonciereagricole,1914_1929,1,asnieres
+boulonneriesbognybraux,socvelvetrum,1914_1929,1,gerard-p
 djebeldjerissa,gafsa,1914_1929,1,bordet-l
-feutresrok,fichet,1914_1929,1,mulhouse
-fichet,nebida,1914_1929,1,liege
-fichet,velvetrum,1914_1929,1,alexandrie
+gafsa,socdjebeldjerissa,1914_1929,1,bordet-l
+socalsaciennefilaturetissagejute,socfeutresrok,1914_1929,1,mulhouse
+nebida,socalsaciennefilaturetissagejute,1914_1929,1,liege
+socalsaciennefilaturetissagejute,socvelvetrum,1914_1929,1,alexandrie
 minesalgerietunisieomnium,minesgarnalfaya,1914_1929,1,juge-a
-metallurgiquetunisie,minesalgerietunisieomnium,1914_1929,1,gittens-w
-minesalgerietunisieomnium,tunisiennefonciereagricole,1914_1929,1,gittens-w
+socfrseminesdjebelhallouf,tunisiennephosphatesdjebelmdilla,1914_1929,1,zafiropulo-d
+metallurgiquetunisie,socfrseminesdjebelhallouf,1914_1929,1,gittens-w
+socfrseminesdjebelhallouf,tunisiennefonciereagricole,1914_1929,1,gittens-w
 1911djebelhallouf,minesdjebelhallouf,1914_1929,1,bourdillon-l
 djebeldjerissa,minesdjebelressas,1914_1929,1,cambefort-c
+djebeldjerissa,socminesdjebelressas,1914_1929,1,cambefort-c
 foncieretunisie,minesdjebelressas,1914_1929,1,urruty-f
+foncieretunisie,socminesdjebelressas,1914_1929,1,urruty-f
 fonderiesmegrinefilialemetallgeselschaft,minesdjebelressas,1914_1929,1,urruty-f
-michenot,tunisienneminieremetallurgique,1914_1929,1,pacquement-a
-mineszaghouan,phosphatestunisiens,1914_1929,1,michel-c
+fonderiesmegrinefilialemetallgeselschaft,socminesdjebelressas,1914_1929,1,urruty-f
+syndicatminesdjebeltrozzadjebelserdj,tunisienneminieremetallurgique,1914_1929,1,pacquement-a
 minieredjebellorbeus,phosphatestunisiens,1914_1929,1,michel-c
-mineszaghouan,tunisiennecultures,1914_1929,1,clerc-l
 minieredjebellorbeus,tunisiennecultures,1914_1929,1,clerc-l
-mineszaghouan,minierekanguet,1914_1929,1,riollot-j
 minieredjebellorbeus,minierekanguet,1914_1929,1,riollot-j
 banquetunisie,minesfedjeladoum,1914_1929,1,faure
 banquetunisie,minierekanguet,1914_1929,1,faure
@@ -173,52 +174,41 @@ phosphatesouartane,tunisiennepetroles,1914_1929,1,legrand
 fermiereminessidibouaouane,minessidibouaouane,1914_1929,1,biver
 minessidibouaouane,sidibouaouane,1914_1929,1,biver
 cheminsfertunisiens,fermierecheminsfertunisiens,1930_1944,11,boulle-l; brugere-j; fouquet-j; herscher-e; jurien-de-la-graviere-p; lacour-gayet-j; lorieux; philippar-e; saint-romas-j; thureau; trelat-m
-phosphates,tunisiennephosphatesdjebelmdilla,1930_1944,9,adm-mm-ch-bouillot-mines; c-heuzey; c-vairon; e-carnot; e-davis; e-fitoussi; e-philippar; p-germain-mines; pres-m-d-zafiropulo
-auget,bazina,1930_1944,6,a-walewski; adm-mm-champin; e-weiss; f-robellaz; heurteau-c; mine-de-plomb-au-djebel-bazina
-phosphatestunisiens,portstunissoussesfax,1930_1944,5,berengier-m; boulle-l; dollfus-j; exploitation-des-ports-de-tunis; loutrel-j
-auget,banquetunisie,1930_1944,5,adm-mm-j-faure; bloch; hackenberger-p; halphen-h; manoach-i
-kohol,minesplombzinckohol,1930_1944,5,duriez-h; pasquier; reveilhac-l; schnerb-h; titos-d
-minesdouaria,tabourin,1930_1944,5,adm-mm-dr-chailley-bert; combeau-e; p-harth; pres-m-a-vincent; vincent-l
+batiment,bazina,1930_1944,7,a-walewski; champin; e-weiss; f-robellaz; heurteau-c; mine-de-plomb-au-djebel-bazina; w-d-eichthal
+minesplombzinckohol,socminesplombzinckohol,1930_1944,5,duriez-h; pasquier; reveilhac-l; schnerb-h; titos-d
 huileriefrancotunisienne,huileriessaheltunisien,1930_1944,4,cottet-b; fould-j; guis-h; querry-p
+minesdouaria,syndicatminesdjebeltrozzadjebelserdj,1930_1944,4,chailley-bert-p; combeau-e; p-harth; vincent-l
+minesfedjeladoum,socminesfedjeladoum,1930_1944,4,choppin-de-janvry-j; f-faure; faure-j; h-chabert
 djebeldjerissa,gafsa,1930_1944,4,basset-f; boulogne-g; bouruet-aubertot-h; mauclere-e
 salinesdjiboutimadagascar,salinesdjiboutisfaxmadagascar,1930_1944,4,dehecq; guesde-p; jambon-c; plion-a
-milazzo,minesdjebelressas,1930_1944,3,adm-mm-andre-boscher; f-ledoux; f-urruty
-minesfedjeladoum,tabourin,1930_1944,3,adm-mm-h-chabert; choppin-de-janvry-j; f-faure
-escande,menzeldjemil,1930_1944,2,gittens-w; zafiropulo-d
-escande,metallurgiquetunisie,1930_1944,2,gittens-w; zafiropulo-d
-escande,phosphatescheminfergafsa,1930_1944,2,davis-e; zafiropulo-d
-menzeldjemil,metallurgiquetunisie,1930_1944,2,gittens-w; zafiropulo-d
+minesdjebelressas,socminesdjebelressas,1930_1944,3,boscher-a; f-ledoux; f-urruty
+beniniguez,metallurgiquetunisie,1930_1944,2,gittens-w; zafiropulo-d
+beniniguez,tunisiennephosphatesdjebelmdilla,1930_1944,2,davis-e; zafiropulo-d
+commercialetunisienne,tunisiennephosphatesdjebelmdilla,1930_1944,2,philippar-e; zafiropulo-d
 cheminsfertunisiens,commercialetunisienne,1930_1944,2,loisy-x; philippar-e
-phosphatescheminfergafsa,phosphatestunisiens,1930_1944,2,berengier-m; exploitation-des-ports-de-tunis
-phosphatescheminfergafsa,portstunissoussesfax,1930_1944,2,berengier-m; exploitation-des-ports-de-tunis
-djebelhalloufsocfes,escande,1930_1944,2,gittens-w; zafiropulo-g
-energieelectriquevillebizerte,phosphatestunisiens,1930_1944,2,hersent-g; hersent-j
+bazina,gafsa,1930_1944,2,champin; mirabaud-p
+beniniguez,djebelhalloufsocfes,1930_1944,2,gittens-w; zafiropulo-g
+energieelectriquevillebizerte,portbizerte,1930_1944,2,hersent-g; hersent-j
 cheminsfertunisiens,tramwaystunis,1930_1944,2,boulle-l; brugere-j
 fermierecheminsfertunisiens,tramwaystunis,1930_1944,2,boulle-l; brugere-j
-bazina,gafsa,1930_1944,2,champin; mirabaud-p
 fermiereminessidibouaouane,minierekanguet,1930_1944,1,boissier
 fermiereminessidibouaouane,sidibouaouane,1930_1944,1,boissier
 minierekanguet,sidibouaouane,1930_1944,1,boissier
-menzeldjemil,phosphatescheminfergafsa,1930_1944,1,zafiropulo-d
-metallurgiquetunisie,phosphatescheminfergafsa,1930_1944,1,zafiropulo-d
-cheminsfertunisiens,phosphatescheminfergafsa,1930_1944,1,philippar-e
+beniniguez,commercialetunisienne,1930_1944,1,zafiropulo-d
+commercialetunisienne,metallurgiquetunisie,1930_1944,1,zafiropulo-d
+metallurgiquetunisie,tunisiennephosphatesdjebelmdilla,1930_1944,1,zafiropulo-d
+cheminsfertunisiens,tunisiennephosphatesdjebelmdilla,1930_1944,1,philippar-e
 commercialetunisienne,fermierecheminsfertunisiens,1930_1944,1,philippar-e
-commercialetunisienne,phosphatescheminfergafsa,1930_1944,1,philippar-e
-fermierecheminsfertunisiens,phosphatescheminfergafsa,1930_1944,1,philippar-e
-afriquenord,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,1930_1944,1,savon
-auget,gazregiecointeresseeeauxtunis,1930_1944,1,hackenberger-p
+fermierecheminsfertunisiens,tunisiennephosphatesdjebelmdilla,1930_1944,1,philippar-e
+atelierschantiersmaritimestunisie,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,1930_1944,1,savon
 banquetunisie,gazregiecointeresseeeauxtunis,1930_1944,1,hackenberger-p
-escande,gazregiecointeresseeeauxtunis,1930_1944,1,s-propper
-djebelhalloufsocfes,menzeldjemil,1930_1944,1,gittens-w
+batiment,gafsa,1930_1944,1,champin
 djebelhalloufsocfes,metallurgiquetunisie,1930_1944,1,gittens-w
 minesgarnalfaya,minierefrancotunisienne,1930_1944,1,pouquet
-cheminsfertunisiens,phosphatestunisiens,1930_1944,1,boulle-l
 cheminsfertunisiens,portstunissoussesfax,1930_1944,1,boulle-l
-fermierecheminsfertunisiens,phosphatestunisiens,1930_1944,1,boulle-l
 fermierecheminsfertunisiens,portstunissoussesfax,1930_1944,1,boulle-l
-phosphatestunisiens,tramwaystunis,1930_1944,1,boulle-l
 portstunissoussesfax,tramwaystunis,1930_1944,1,boulle-l
-groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,sibelhassen,1930_1944,1,baizeau-l
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,socsibelhassen,1930_1944,1,baizeau-l
 cheminsfertunisiens,djebeldjerissa,1930_1944,1,trelat-m
 djebeldjerissa,fermierecheminsfertunisiens,1930_1944,1,trelat-m
 cheminsfertunisiens,energieelectriquevillebizerte,1930_1944,1,brugere-j

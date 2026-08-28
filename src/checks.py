@@ -188,6 +188,78 @@ def check_citations() -> None:
     eq("  delegate identified", roles.get("Wladimir Archawski"), "administrateur_delegue")
     check("  plain administrator", roles.get("Victor Berti") == "administrateur", str(roles))
 
+    print("parse_ties entry anchors", file=sys.stderr)
+    # The Annuaire industriel alphabetises on a keyword and parenthesises the
+    # rest of the name. Reading the head whole, and putting it back in the right
+    # order, is what keeps one notice from collecting the next one's board.
+    heads = [
+        ("ALLUMETTES (Soc. indo-chinoise forestière et des), 41, bd de Magenta,",
+         "Soc. indo-chinoise forestière et des ALLUMETTES"),
+        # No parenthetical, two particles between the capitals. This is the case
+        # CAPS_ENTRY_RE could not see, and its board went to the notice above.
+        ("BANQUE de l'INDOCHINE, 96, bd Haussmann, Paris, 8e. T. Europe 48-00",
+         "BANQUE de l'INDOCHINE"),
+        # The keyword itself contains commas; cutting at the first one named
+        # this firm "Forges".
+        ("FORGES, ATELIERS et CHANTIERS d'INDOCHINE, Bureau : 119, bd Haussmann,",
+         "FORGES, ATELIERS et CHANTIERS d'INDOCHINE"),
+        ("CULTURES TROPICALES (Soc. Indochinoise des), 51. r. d'Anjou, Paris, 8e.",
+         "Soc. Indochinoise des CULTURES TROPICALES"),
+        ("AGRICOLE de THANH-TUY-HA (Société). 53, cours Pierre-Puget, Marseille",
+         "Société AGRICOLE de THANH-TUY-HA"),
+        # A parenthetical ending in an apostrophe joins with no space.
+        ("ACCONAGE (Soc. Nord-Africaine d'), Alger.",
+         "Soc. Nord-Africaine d'ACCONAGE"),
+    ]
+    for text, want in heads:
+        m = P.ANNUAIRE_INDUS_ENTRY_RE.match(text)
+        check(f"  head matches {text[:34]!r}", bool(m))
+        if m:
+            eq(f"  head rebuilt {text[:26]!r}",
+               P.annuaire_indus_name(m.group("kw"), m.group("paren")), want)
+
+    # All three ways the compiler writes an AEC page reference. Only the first
+    # was matched, so 17 entries across 11 documents anchored nowhere.
+    for text in ("AEC 1922-519 - Sté générale des abattoirs, PARIS",
+                 "AEC 1922. — 489 — Cie du port de Fedhala, 60, rue de Londres",
+                 "AEC 1922. 495 — Manufacture marocaine de calorifuges"):
+        check(f"  AEC entry matches {text[:26]!r}", bool(P.AEC_RE.search(text)))
+
+    # Once the listing is running the prefix is dropped and only the page is
+    # printed. Three digits, because the annuaire runs to 800-1,200 pages and
+    # the short numbers are enumerated clauses in legal prose.
+    for text in ("509 — Sté des briqueteries de Fedhala, 60, rue de Londres",
+                 "35 [= 64] — Sté d'études marocaines pour le commerce"):
+        check(f"  bare page matches {text[:28]!r}",
+              bool(P.AEC_BARE_PAGE_RE.search(text)))
+    for text in ("3 — Modifications diverses aux articles 4, 8 12, 13, 15",
+                 "5 — Que l'imprimeur a estimé que l'auteur, en tant que",
+                 "1877-Démissionnaire le 16 mai 1877.",
+                 "1894-Sainte-Adresse, Seine-Inférieure, 1919), fille d'un"):
+        check(f"  bare page rejects {text[:28]!r}",
+              not P.AEC_BARE_PAGE_RE.search(text))
+
+    print("parse_ties member labels", file=sys.stderr)
+    # A swallowed role label hides a real name; strip it rather than lose the
+    # tie. What is left after the strip must contain no colon.
+    for text, want in [("Adm.: MM. Henri Girche", "Henri Girche"),
+                       ("prés.:M. J. Bardoux", "J. Bardoux"),
+                       ("Prés:. M. J. Garcin", "J. Garcin"),
+                       ("Direct.: M. Patrick O'Quin", "Patrick O'Quin"),
+                       ("Fondé de pouvoirs: Marcel Pénicaud", "Marcel Pénicaud")]:
+        got = P.MEMBER_LABEL_PREFIX_RE.sub("", text)
+        from names import LEADING_MM_RE
+
+        got = LEADING_MM_RE.sub("", got).strip(" .,;:")
+        eq(f"  label stripped from {text[:24]!r}", got, want)
+    for text in ("comptoirs: Bordeaux", "Imp.: sucre",
+                 "personnalités bien connues: Joanny Peytel"):
+        got = P.MEMBER_LABEL_PREFIX_RE.sub("", text)
+        check(f"  field value still rejected {text[:24]!r}", ":" in got)
+    # An ordinary name must survive both rules untouched.
+    for text in ("Pierre Barris", "Ed. Bousquet", "A. R. Fontaine"):
+        eq(f"  name untouched {text!r}", P.MEMBER_LABEL_PREFIX_RE.sub("", text), text)
+
     # Narrative prose must not be mined for names.
     prose = ("est autorisé à émettre des obligations jusqu'à concurrence de 800.000 fr. "
              "Les statuts ont été modifiés en conséquence, sous la condition suspensive "
@@ -379,18 +451,30 @@ def check_dataset() -> None:
 
     # A pseudo-firm absorbs a whole survey at once, so the sharper test is
     # directors in a *single* firm-year: a real board, even a large founding
-    # list, does not run to hundreds. The observed maximum is 90 (Compagnie du
-    # Port de Fedhala, 1921 - plausibly a constitution list rather than a
-    # board; see METHODOLOGY §5). 200 catches the 254/286 pattern and clears
-    # every real firm by a wide margin.
+    # list, does not run to hundreds.
+    #
+    # This ceiling was 200, chosen when the observed maximum was 83 (Compagnie
+    # du Port de Fedhala, 1921) and read as a possible constitution list. It was
+    # not: the Fedhala dossier reprints AEC entries for a dozen *other* firms
+    # under shorthand heads that no anchor matched, so one firm collected a
+    # dozen boards. With those heads anchored the maximum is 52, and the ceiling
+    # comes down to 90 to keep the gain. Loosening it again should mean a real
+    # large board was found, not a re-run of that bug.
     per_year: Counter = Counter()
     for e in load("edges_person_company.csv"):
         if e["is_board_seat"] == "1" and e["year"]:
             per_year[(e["company_id"], e["year"])] += 1
     if per_year:
         (cid, yr), n = per_year.most_common(1)[0]
-        check("  no firm-year has an implausible director count", n <= 200,
+        check("  no firm-year has an implausible director count", n <= 90,
               f"{cid} in {yr} has {n}")
+
+    # No person's name contains a colon. Every such row was a swallowed field
+    # label; the recoverable ones ("Adm.: MM. Henri Girche") are stripped back
+    # to the name and the rest rejected, so none should survive.
+    colon = [a for a in load("affiliations.csv") if ":" in a["name_clean"]]
+    check("  no member name carries a field label", not colon,
+          f"{len(colon)} do, e.g. {colon[0]['name_clean'][:40]!r}" if colon else "")
 
     il = load("edges_company_interlock.csv")
     if il:

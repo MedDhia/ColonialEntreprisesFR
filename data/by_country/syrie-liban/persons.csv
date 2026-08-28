@@ -1,5 +1,5 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
-berard,Bérard,Berard; Bérard,8,8,12,administrateur,1923,1945,"Banques et sociétés financières; Documents généraux; Sociétés diverses; Transports maritimes, ports et docks; Transports terrestres"
+berard,Bérard,Berard; Bérard,7,7,12,administrateur,1923,1945,"Banques et sociétés financières; Documents généraux; Sociétés diverses; Transports maritimes, ports et docks; Transports terrestres"
 blanche-p,Blanche,P. Blanche; Paul Blanche,5,5,12,administrateur,1899,1945,"Transports maritimes, ports et docks; Transports terrestres"
 michon-coster-j,Michon- Coster,J. Michon- Coster; J. Michon-Coster,5,5,11,administrateur,1914,1948,"Transports maritimes, ports et docks; Transports terrestres"
 roudy-a,Roudy,A. Roudy; Athanase Roudy; Roudy,4,4,8,administrateur,1922,1948,Banques et sociétés financières; Documents généraux; Transports terrestres
@@ -7,48 +7,41 @@ henry-a,Henry,A. Henry,4,4,8,administrateur,1912,1929,"Transports maritimes, por
 berard-m,Bérard,Maurice Bérard; Maurice-Robert Bérard,4,4,4,administrateur,1920,1929,"Sociétés diverses; Transports maritimes, ports et docks"
 boissiere-g,Boissière,G. Boissière; Gustave Boissière,3,3,8,administrateur,1922,1948,Documents généraux; Transports terrestres
 saint-rene-taillandier-g,Saint-René Taillandier,G. Saint-René Taillandier; G. Saint-René Taillandier. 18; Saint-René Taillandier,3,3,6,administrateur,1920,1933,"Banques et sociétés financières; Transports maritimes, ports et docks"
+chabrieres-m,Chabrières,Chabrières; Maurice Chabrières,3,3,5,administrateur,1920,1940,"Banques et sociétés financières; Documents généraux; Transports maritimes, ports et docks"
+pirard-a,Pirard,A. Pirard; Albert Pirard,3,3,5,administrateur,1922,1933,Documents généraux; Transports terrestres
 chiha,Chiha,Chiha,3,3,5,administrateur,1927,1940,Banques et sociétés financières; Transports terrestres
-chabrieres-m,Chabrières,Chabrières; Maurice Chabrières,3,3,4,administrateur,1920,1940,"Banques et sociétés financières; Transports maritimes, ports et docks"
 bey-p,Bey,Pangiris Bey,3,3,4,administrateur,1912,1920,"Transports maritimes, ports et docks"
 misk-n,Misk,N. Misk; Nasry Misk,3,3,3,administrateur,1909,1914,"Eaux, électricité (utilities)"
 sabbag-e,Sabbag,E. Sabbag; Elias Sabbag,3,3,3,administrateur,1909,1914,"Eaux, électricité (utilities)"
 habert-g,Habert,G. Habert; Gustave Habert,3,3,3,administrateur,1892,1912,"Transports maritimes, ports et docks; Transports terrestres"
 marbeau,Marbeau,Marbeau,2,2,9,administrateur,1937,1953,Banques et sociétés financières; Transports terrestres
+bousquet-h,Bousquet,H. Bousquet; Henri Bousquet,2,2,5,administrateur,1924,1938,Documents généraux; Sociétés diverses
 salem,Salem,Salem,2,2,5,administrateur,1914,1933,Banques et sociétés financières; Transports terrestres
 bourgeois-d,Bourgeois,D. Bourgeois,2,2,5,administrateur,1933,1948,Transports terrestres
 passelecq-m,Passelecq,Passelecq; Passelecq9,2,2,5,administrateur,1925,1937,"Eaux, électricité (utilities); Transports terrestres"
 adjouri-v,Adjouri,Adjouri; Victor Adjouri,2,2,5,administrateur,1922,1937,"Eaux, électricité (utilities); Sociétés diverses"
+briere-p,Brière,P. Brière,2,2,4,administrateur,1929,1938,Banques et sociétés financières; Documents généraux; Transports terrestres
+homsy-a,Homsy,A. Homsy,2,2,4,president,1937,1940,Banques et sociétés financières; Documents généraux
+amidieu-du-clos-a,Amidieu du Clos,A. Amidieu du Clos; Amidieu du Clos,2,2,4,administrateur,1927,1933,Documents généraux; Transports terrestres
 garreta-h,Garreta,H. Garreta,2,2,4,administrateur,1923,1933,"Transports maritimes, ports et docks"
-pirard-a,Pirard,A. Pirard; Albert Pirard,2,2,4,administrateur,1922,1933,Transports terrestres
-beyrouth,Beyrouth,Beyrouth,3,2,3,president,,,Documents généraux
 guibert-l,Guibert,Léonce Guibert,2,2,3,administrateur,1922,1925,Documents généraux; Transports terrestres
 lion-l,Lion,Louis Lion,2,2,3,administrateur,1922,1925,Documents généraux; Transports terrestres
 cerjat-c,Cerjat,Charles Cerjat,2,2,3,administrateur,1922,1925,Documents généraux; Transports terrestres
 vitali-g,Vitali,Georges Vitali,2,2,3,administrateur,1922,1925,Documents généraux; Transports terrestres
-girardeau-e,Girardeau,E. Girardeau,2,2,3,vice_president,1938,1948,Documents généraux; Sociétés diverses
-pillet-will-f,Pillet-Will,F. Pillet-Will; Frédéric Pillet-Will,2,2,3,administrateur,1925,1938,Documents généraux; Sociétés diverses
-wibratte-l,Wibratte,L. Wibratte; Louis Wibratte,2,2,3,administrateur,1924,1938,Documents généraux; Sociétés diverses
-homsy-a,Homsy,A. Homsy,2,2,3,administrateur,1937,1940,Banques et sociétés financières
+de-cerjat-c,de Cerjat,Ch de Cerjat; Charles de Cerjat,2,2,3,president,1906,1938,"Banques et sociétés financières; Documents généraux; Transports maritimes, ports et docks"
+r-mallet,R Mallet,R Mallet,2,2,3,president,1933,1938,"Banques et sociétés financières; Documents généraux; Transports maritimes, ports et docks"
 ferasson-l,Férasson,L. Ferasson; L. Férasson; Louis-Henri Férasson,2,2,3,administrateur,1929,1948,"Sociétés diverses; Transports maritimes, ports et docks"
 sallandrouze-de-lamornaix-c,Sallandrouze de Lamornaix,Charles Sallandrouze de Lamornaix,2,2,2,administrateur,1925,1925,Documents généraux; Transports terrestres
 rebuffel-c,Rebuffel,Charles Rebuffel,2,2,2,administrateur,1925,1925,Documents généraux; Transports terrestres
 barcelone,Barcelone,Barcelone,2,2,2,administrateur,,,Documents généraux
 athenes,Athènes,6. Athènes; Athènes,2,2,2,administrateur,,,Documents généraux
 gendre-e,Gendre,Gendre; Édouard Gendre,2,2,2,president,1929,1929,Documents généraux; Sociétés diverses
-pres-m-h-bousquet,Prés.: M. H. Bousquet,Prés.: M. H. Bousquet,2,2,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
-adm-mm-a-atthalin,Adm.: MM. A. Atthalin,Adm.: MM. A. Atthalin; Adm: MM. A. Atthalin,2,2,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
-hanemoglou,Hanemoglou,Hanemoglou,2,2,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
-marechal-h,Maréchal,H. Maréchal,2,2,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
-pietri-n,Pietri,N. Pietri; Nicolas Piétri,2,2,2,administrateur,1925,1925,Documents généraux; Sociétés diverses
-d-emission-edifiee-a-khaide-s,d'émission: édifiée à Khaidé,Station d'émission: édifiée à KhaIdé; Station d'émission: édifiée à Khaidé,2,2,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
 bey-el-mouayad-b,Bey el Mouayad,Bedi Bey el Mouayad,2,2,2,administrateur,1937,1940,Banques et sociétés financières
 boissonnas-j,Boissonnas,J. Boissonnas,2,2,2,administrateur,1937,1940,Banques et sociétés financières
 bey-daouk-o,Bey Daouk,Omar Bey Daouk,2,2,2,administrateur,1937,1940,Banques et sociétés financières
 h-hottinguer,H Hottinguer,H Hottinguer,2,2,2,administrateur,1937,1940,Banques et sociétés financières
 bey-beyhum-o,Bey Beyhum,Omar Bey Beyhum,2,2,2,administrateur,1937,1940,Banques et sociétés financières
 ed-vernes,Ed. Vernes,Ed. Vernes,2,2,2,administrateur,1937,1940,Banques et sociétés financières
-de-cerjat-c,de Cerjat,Ch de Cerjat; Charles de Cerjat,2,2,2,president,1906,1938,"Banques et sociétés financières; Transports maritimes, ports et docks"
-r-mallet,R Mallet,R Mallet,2,2,2,president,1933,1938,"Banques et sociétés financières; Transports maritimes, ports et docks"
 chaussees,Chaussées,Chaussées,2,2,2,administrateur,1922,1922,Banques et sociétés financières; Transports terrestres
 mahou-l,Mahoû,L. Mahoû; Mahoû,2,2,2,administrateur,1892,1937,Transports terrestres
 revoil-p,Révoil,P. Révoil,2,2,2,administrateur,1914,1914,"Transports maritimes, ports et docks; Transports terrestres"
@@ -82,6 +75,10 @@ lewandowski-m,Lewandowski,Lewandowski,1,1,4,administrateur,1929,1940,Transports 
 jourdanne,Jourdanne,Jourdanne,1,1,4,administrateur,1925,1937,"Eaux, électricité (utilities)"
 maggiar-g,Maggiar,G. Maggiar,1,1,4,administrateur,1940,1953,Banques et sociétés financières
 poinet,Poinet,Poinet,3,1,4,commissaire_aux_comptes,1937,1948,"Transports maritimes, ports et docks"
+ing-ecp,ing. E.C.P,ing. E.C.P; ing. E.CP,1,1,3,administrateur,,,Documents généraux
+girardeau-e,Girardeau,E. Girardeau,1,1,3,vice_president,1938,1948,Documents généraux; Sociétés diverses
+pillet-will-f,Pillet-Will,F. Pillet-Will; Frédéric Pillet-Will,1,1,3,administrateur,1925,1938,Documents généraux; Sociétés diverses
+wibratte-l,Wibratte,L. Wibratte; Louis Wibratte,1,1,3,administrateur,1924,1938,Documents généraux; Sociétés diverses
 saade-e,Saadé,E. Saadé,1,1,3,administrateur,1931,1940,Sociétés diverses
 carraby-c,Carraby,Calixte Carraby; Carraby,1,1,3,administrateur,1909,1920,Transports terrestres
 delaunay-f,Delaunay,F. Delaunay,1,1,3,administrateur,1914,1929,Transports terrestres
@@ -97,8 +94,25 @@ van-hoegaerden-j,Van Hoegaerden,J. Van Hoegaerden,1,1,3,administrateur,1927,1933
 soubret-e,Soubret,E. Soubret,1,1,3,administrateur,1927,1933,Transports terrestres
 thonet-c,Thonet,Ch. Thonet,1,1,3,administrateur,1927,1933,Transports terrestres
 lamarche-a,Lamarche,A. Lamarche,1,1,3,administrateur,1927,1933,Transports terrestres
-amidieu-du-clos-a,Amidieu du Clos,A. Amidieu du Clos,1,1,3,administrateur,1927,1933,Transports terrestres
-tissus-pour-l-orient,tissus pour l'Orient,tissus pour l'Orient,1,1,2,president,,,Documents généraux
+beyrouth,Beyrouth,Beyrouth,2,1,2,administrateur,,,Documents généraux
+charpentier-j,Charpentier,J.-C. Charpentier,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+leblanc-l,Leblanc,L. Leblanc,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+misrachi-a,Misrachi,A. Misrachi,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+salem-e,Salem,E. Salem,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+taffineau-e,Taffineau,E. Taffineau,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+bader-gruber-j,Bader-Grüber,J. Bader-Grüber,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+f-vernes,F Vernes,F Vernes,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+bassoul-a,Bassoul,A. Bassoul,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+j-boissonnas,J Boissonnas,J Boissonnas,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+ezzeddine,Ezzeddine,Ezzeddine,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+h-finaly,H Finaly,H Finaly,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+h-giraud,H Giraud,H Giraud,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+r-lehideux,R Lehideux,R Lehideux,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+meyer-borel-c,Meyer- Borel,C. A. Meyer- Borel; C. A. Meyer-Borel,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+atthalin-a,Atthalin,A. Atthalin,1,1,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
+hanemoglou,Hanemoglou,Hanemoglou,1,1,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
+marechal-h,Maréchal,H. Maréchal,1,1,2,administrateur,1938,1938,Documents généraux; Sociétés diverses
+pietri-n,Pietri,N. Pietri; Nicolas Piétri,1,1,2,administrateur,1925,1925,Documents généraux; Sociétés diverses
 meguerditchian-l,Meguerditchian,L. Meguerditchian,1,1,2,administrateur,1929,1931,Sociétés diverses
 rodocanachi-v,Rodocanachi,V. Rodocanachi,1,1,2,administrateur,1929,1931,Sociétés diverses
 schneider-g,Schneider,G. Schneider,1,1,2,administrateur,1929,1931,Sociétés diverses
@@ -106,7 +120,6 @@ shakour-pacha-m,Shakour Pacha,Mansour Shakour Pacha,1,1,2,administrateur,1929,19
 vieu-c,Vieu,C. Vieu,1,1,2,administrateur,1937,1940,Sociétés diverses
 youssouf-navon-effendi,4° Youssouf Navon Effendi,4° Youssouf Navon Effendi; Youssouf-Navon Effendi,1,1,2,administrateur,1892,1937,Transports terrestres
 bey-r,Bey,Razi Bey,1,1,2,administrateur,1914,1920,Transports terrestres
-briere-p,Brière,P. Brière,1,1,2,administrateur,1929,1933,Transports terrestres
 auboyneau-j,Auboyneau,J. Auboyneau,1,1,2,administrateur,1937,1940,Transports terrestres
 de-bouthillier-chavigny,de Bouthillier- Chavigny,de Bouthillier- Chavigny; de Bouthillier-Chavigny,1,1,2,administrateur,1937,1940,Transports terrestres
 emm-salem,Emm. Salem,Emm. Salem,1,1,2,administrateur,1937,1940,Transports terrestres
@@ -131,7 +144,6 @@ wiener,Wiener. 16,Wiener; Wiener. 16,1,1,2,administrateur,1917,1920,"Transports 
 bey-melhame-h,bey Melhamé,Halim bey Melhamé,1,1,2,president,1945,1948,"Transports maritimes, ports et docks"
 hersent-g,Hersent,G. Hersent,1,1,2,administrateur,1945,1948,"Transports maritimes, ports et docks"
 p-lassus-saint-genies,P Lassus-Saint-Geniès,P Lassus-Saint-Geniès,1,1,2,administrateur,1945,1948,"Transports maritimes, ports et docks"
-bousquet-h,Bousquet,Henri Bousquet,1,1,2,administrateur,1924,1925,Sociétés diverses
 de-vendeuvre,de Vendeuvre,de Vendeuvre,1,1,2,administrateur,1906,1922,Transports terrestres
 goffin-a,Goffin,A. Goffin,1,1,2,administrateur,1931,1933,Transports terrestres
 mathon-e,Mathon,E. Mathon,1,1,1,president,1927,1927,Sociétés diverses
@@ -155,14 +167,11 @@ philippar-g,Philippar,Georges Philippar,1,1,1,administrateur,1927,1927,Transport
 renault-l,Renault,Louis Renault,1,1,1,administrateur,1927,1927,Transports aériens
 et-ernest-roume,et Ernest Roume,et Ernest Roume,1,1,1,administrateur,1927,1927,Transports aériens
 bourdillon,Bourdillon,Bourdillon,1,1,1,president,,,Documents généraux
-adm-delegue-m-p-nabonne,Adm.-Délégué: M. P. Nabonne,Adm.-Délégué: M. P. Nabonne,1,1,1,president,,,Documents généraux
-adm-mm-j-nabonne,Adm.: MM. J. Nabonne,Adm.: MM. J. Nabonne,1,1,1,president,,,Documents généraux
+nabonne-j,Nabonne,J. Nabonne,1,1,1,president,,,Documents généraux
 gavoty-c,Gavoty,Ch. Gavoty,1,1,1,president,,,Documents généraux
 alexandrette,Alexandrette,Alexandrette,1,1,1,president,,,Documents généraux
 mersina,Mersina,Mersina,1,1,1,president,,,Documents généraux
 lataquie,Lataquie,Lataquie,1,1,1,president,,,Documents généraux
-manchester,Manchester,Manchester,1,1,1,president,,,Documents généraux
-armures-bernard-et-bernay,armures.. BERNARD ET BERNAY,armures.. BERNARD ET BERNAY,1,1,1,president,,,Documents généraux
 becq-a,Becq,A. Becq,1,1,1,administrateur,,,Documents généraux
 guillemot-a,Guillemot,A. Guillemot,1,1,1,administrateur,,,Documents généraux
 posth-j,Posth,J. Posth,1,1,1,administrateur,,,Documents généraux
@@ -180,39 +189,59 @@ mexico,Mexico,Mexico,1,1,1,administrateur,,,Documents généraux
 buenos-aires,Buenos-Aires,Buenos-Aires,1,1,1,administrateur,,,Documents généraux
 batavia,Batavia,Batavia,1,1,1,administrateur,,,Documents généraux
 andre-r,André,Robert André,1,1,1,president,,,Documents généraux
-adm-del-m-robert-poulain,Adm.-dél.: M. Robert Poulain,Adm.-dél.: M. Robert Poulain,1,1,1,president,,,Documents généraux
-adm-mm-serge-andre,Adm.: MM. Serge André,Adm.: MM. Serge André,1,1,1,president,,,Documents généraux
+serge-a,Serge,André Serge,1,1,1,president,,,Documents généraux
 alcan-p,Alcan,Pierre Alcan,1,1,1,president,,,Documents généraux
 muraton-g,Muraton,Gaston Muraton,1,1,1,president,,,Documents généraux
-importes-en-france-plantes-fibreuses-p,importés en France: plantes fibreuses,Produits importés en France: plantes fibreuses,1,1,1,president,,,Documents généraux
 gerard-g,Gérard,Gabriel Gérard,1,1,1,president,,,Documents généraux
-adm-delegue-m-emile-thiebaud,Adm.-délégué: M. Émile Thiébaud,Adm.-délégué: M. Émile Thiébaud,1,1,1,president,,,Documents généraux
-adm-mm-marie-louis-gassier,Adm.: MM. Marie-Louis Gassier,Adm.: MM. Marie-Louis Gassier,1,1,1,president,,,Documents généraux
+gassier-m,Gassier,Marie-Louis Gassier,1,1,1,president,,,Documents généraux
 gerard-p,Gérard,Paul Gérard,1,1,1,president,,,Documents généraux
 magnan-g,Magnan,Gabriel Magnan,1,1,1,president,,,Documents généraux
 gazan-j,Gazan,Joseph Gazan,1,1,1,president,,,Documents généraux
 berenger-l,Bérenger,Léopold Bérenger,1,1,1,president,,,Documents généraux
 damian-j,Damian,Jules Damian,1,1,1,president,,,Documents généraux
-representants-mm-bertrand,représentants: MM. Bertrand,représentants: MM. Bertrand,1,1,1,president,,,Documents généraux
+bertrand,Bertrand,Bertrand,1,1,1,president,,,Documents généraux
 falque,Falque,Falque,1,1,1,president,,,Documents généraux
 crovetto,Crovetto,Crovetto,1,1,1,president,,,Documents généraux
 bianconi,Bianconi,Bianconi,1,1,1,president,,,Documents généraux
+homberg-a,Homberg,A. Homberg,1,1,1,administrateur,,,Documents généraux
+simon-j,Simon,J. Simon,1,1,1,administrateur,,,Documents généraux
+verstraete-g,Verstraete,G. Verstraete,1,1,1,administrateur,,,Documents généraux
+anciennement-jacout,anciennement Jacout,anciennement Jacout,1,1,1,president,,,Documents généraux
+freres-b,frères,Breton frères,1,1,1,president,,,Documents généraux
+en-angleterre-r,en Angleterre,Représentants en Angleterre,1,1,1,president,,,Documents généraux
+belgique,Belgique,Belgique,1,1,1,president,,,Documents généraux
+hollande-j,Hollande,Hollande,1,1,1,president,,,Documents généraux
+italie,Italie,Italie,1,1,1,president,,,Documents généraux
+roumanie,Roumanie,Roumanie,1,1,1,president,,,Documents généraux
+yougoslavie,Yougoslavie,Yougoslavie,1,1,1,president,,,Documents généraux
+bulgarie,Bulgarie,Bulgarie,1,1,1,president,,,Documents généraux
+grece,Grèce,Grèce,1,1,1,president,,,Documents généraux
+turquie,Turquie,Turquie,1,1,1,president,,,Documents généraux
+syrie,Syrie,Syrie,1,1,1,president,,,Documents généraux
+egypte,Egypte,Egypte,1,1,1,president,,,Documents généraux
+bresil,Brésil,Brésil,1,1,1,president,,,Documents généraux
+chili,Chili,Chili,1,1,1,president,,,Documents généraux
+portugal,Portugal,Portugal,1,1,1,president,,,Documents généraux
+espagne,Espagne,Espagne,1,1,1,president,,,Documents généraux
+mariage-a,Mariage,Mariage,1,1,1,administrateur,,,Documents généraux
+esteve,Estève,Estève,1,1,1,administrateur,,,Documents généraux
+dedons-de-pierrefeu-e,Dedons de Pierrefeu,Emmanuel Dedons de Pierrefeu,1,1,1,administrateur,,,Documents généraux
+masmonteil-a,Masmonteil,A. Masmonteil,1,1,1,administrateur,,,Documents généraux
+grandchamps-g,Grandchamps,G. Grandchamps,1,1,1,administrateur,,,Documents généraux
+fabrique-de-parquets-a-chalons-sur-marne,fabrique de parquets à Châlons-sur-Marne,fabrique de parquets à Châlons-sur-Marne,1,1,1,administrateur,,,Documents généraux
+soissons,Soissons,Soissons,1,1,1,administrateur,,,Documents généraux
 simonin-h,Simonin,H. Simonin,1,1,1,president,,,Documents généraux
-adm-delegue-m-pierre-kern,Adm.-délégué: M. Pierre Kern,Adm.-délégué: M. Pierre Kern,1,1,1,president,,,Documents généraux
-adm-mm,Adm.: MM,Adm.: MM,1,1,1,president,,,Documents généraux
 desplats-j,Desplats,Desplats,1,1,1,president,,,Documents généraux
 joachim,Joachim,Joachim,1,1,1,president,,,Documents généraux
 michel,Michel,Michel,1,1,1,president,,,Documents généraux
 pernin,Pernin,Pernin,1,1,1,president,,,Documents généraux
 schmitt-a,Schmitt,A. Schmitt,1,1,1,president,,,Documents généraux
-representants-felix-sfez,Représentants: Félix Sfez,Représentants: Félix Sfez,1,1,1,president,,,Documents généraux
+sfez-f,Sfez,Félix Sfez,1,1,1,president,,,Documents généraux
 cassir-g,Cassir,G. Cassir,1,1,1,president,,,Documents généraux
 ormieres-p,Ormières,P. Ormières,1,1,1,president,,,Documents généraux
 grasse,Grasse,Grasse,1,1,1,president,,,Documents généraux
 representants,Représentants,Représentants,1,1,1,administrateur,,,Documents généraux
 seine,Seine,Seine,1,1,1,administrateur,,,Documents généraux
-seine-et-oise-m-e-ledure,Seine-et-Oise: M. E. Ledure,Seine-et-Oise: M. E. Ledure,1,1,1,administrateur,,,Documents généraux
-nord-m-raymond-bonnechere,Nord: M. Raymond Bonnechère,Nord: M. Raymond Bonnechère,1,1,1,administrateur,,,Documents généraux
 fourmies,Fourmies,Fourmies,1,1,1,administrateur,,,Documents généraux
 vosges,Vosges,Vosges,1,1,1,administrateur,,,Documents généraux
 meurthe-et-moselle,Meurthe-et-Moselle,Meurthe-et-Moselle,1,1,1,administrateur,,,Documents généraux
@@ -220,29 +249,19 @@ hte-saone,Hte-Saône,Hte-Saône,1,1,1,administrateur,,,Documents généraux
 territ-de-belfort,Territ.- de-Belfort,Territ.- de-Belfort,1,1,1,administrateur,,,Documents généraux
 doubs,Doubs,Doubs,1,1,1,administrateur,,,Documents généraux
 jura,Jura,Jura,1,1,1,administrateur,,,Documents généraux
-cote-d-or-m-j-depierre,Côte-d'Or: M. J. Dépierre,Côte-d'Or: M. J. Dépierre,1,1,1,administrateur,,,Documents généraux
 imp-maldoyenne,imp. Maldoyenne,imp. Maldoyenne,1,1,1,administrateur,,,Documents généraux
 remiremont,Remiremont,Remiremont,1,1,1,administrateur,,,Documents généraux
 ht-rhin,Ht-Rhin,Ht-Rhin,1,1,1,administrateur,,,Documents généraux
-bas-rhin-mma-caquelin,Bas-Rhin: MM.A. Caquelin,Bas-Rhin: MM.A. Caquelin,1,1,1,administrateur,,,Documents généraux
 mulhouse,Mulhouse,Mulhouse,1,1,1,administrateur,,,Documents généraux
-seine-inferieure-m-l-beaumont,Seine-Inférieure: M. L. Beaumont,Seine-Inférieure: M. L. Beaumont,1,1,1,administrateur,,,Documents généraux
 pyreneenne-r,pyrénéenne,Région pyrénéenne,1,1,1,administrateur,,,Documents généraux
 lisibach,Lisibach,Lisibach,1,1,1,administrateur,,,Documents généraux
 orthez,Orthez,Orthez,1,1,1,administrateur,,,Documents généraux
-mediterraneenne-m-andre-laporte-r,méditerranéenne: M. André Laporte,Région méditerranéenne: M. André Laporte,1,1,1,administrateur,,,Documents généraux
 ganges,Ganges,Ganges,1,1,1,administrateur,,,Documents généraux
-belgique-a-a-huttert,Belgique: A. A. Huttert,Belgique: A. A. Huttert,1,1,1,administrateur,,,Documents généraux
 gand,Gand,Gand,1,1,1,administrateur,,,Documents généraux
-espagne-m-augusto-ferrer-dalmau,Espagne: M. Augusto Ferrer Dalmau,Espagne: M. Augusto Ferrer Dalmau,1,1,1,administrateur,,,Documents généraux
 san-pedro-r,San Pedro,Ronda San Pedro,1,1,1,administrateur,,,Documents généraux
-italie-m-giacomo-jucker,Italie: M. Giacomo Jucker,Italie: M. Giacomo Jucker,1,1,1,administrateur,,,Documents généraux
 via-mauro-macchi,via Mauro Macchi,via Mauro Macchi,1,1,1,administrateur,,,Documents généraux
 milan,Milan,Milan,1,1,1,administrateur,,,Documents généraux
-grece-m-germain,Grèce: M. Germain,Grèce: M. Germain,1,1,1,administrateur,,,Documents généraux
 santoroza,Santoroza,Santoroza,1,1,1,administrateur,,,Documents généraux
-egypte-m-antoine-s-chacour,Égypte: M. Antoine S. Chacour,Égypte: M. Antoine S. Chacour,1,1,1,administrateur,,,Documents généraux
-syrie-m-michel-chacour,Syrie: M. Michel Chacour,Syrie: M. Michel Chacour,1,1,1,administrateur,,,Documents généraux
 d-alauzier,d'Alauzier,d'Alauzier,1,1,1,administrateur,1931,1931,Sociétés diverses
 zafiropulo,Zafiropulo,Zafiropulo,1,1,1,administrateur,1931,1931,Sociétés diverses
 macaux-h,Macaux,H. Macaux,1,1,1,president,1937,1937,Sociétés diverses
@@ -267,26 +286,9 @@ immeubles-de-france,Immeubles de France,Immeubles de France,1,1,1,administrateur
 fonciere-i,foncière,Industrielle foncière,1,1,1,administrateur,1929,1929,Banques et sociétés financières
 mines-du-chabet-kohol,Mines du. Chabet-Kohol,Mines du. Chabet-Kohol,1,1,1,administrateur,1929,1929,Banques et sociétés financières
 parisienne-i,Parisienne,Immobilière Parisienne,1,1,1,administrateur,1929,1929,Banques et sociétés financières
-pres-a-homberg,Prés.: A Homberg,Prés.: A Homberg,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-adm-del-e-laville,Adm.-dél.: E. Laville,Adm.-dél.: E. Laville,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-adm-mm-p-briere,Adm.: MM. P. Brière,Adm.: MM. P. Brière,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-charpentier-j,Charpentier,J.-C. Charpentier,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-leblanc-l,Leblanc,L. Leblanc,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-misrachi-a,Misrachi,A. Misrachi,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-salem-e,Salem,E. Salem,1,1,1,administrateur,1938,1938,Banques et sociétés financières
 j-simon,J Simon,J Simon,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-taffineau-e,Taffineau,E. Taffineau,1,1,1,administrateur,1938,1938,Banques et sociétés financières
 g-verstraete-juriste,G Verstraete [juriste,G Verstraete [juriste,1,1,1,administrateur,1938,1938,Banques et sociétés financières
-bader-gruber-j,Bader-Grüber,J. Bader-Grüber,1,1,1,administrateur,1938,1938,Banques et sociétés financières
 poincare-r,Poincaré,Raymond Poincaré,1,1,1,president,1922,1922,Banques et sociétés financières
-f-vernes,F Vernes,F Vernes,1,1,1,president,1938,1938,Banques et sociétés financières
-adm-mm-a-bassoul,Adm.: MM. A. Bassoul,Adm.: MM. A. Bassoul,1,1,1,president,1938,1938,Banques et sociétés financières
-j-boissonnas,J Boissonnas,J Boissonnas,1,1,1,president,1938,1938,Banques et sociétés financières
-ezzeddine,Ezzeddine,Ezzeddine,1,1,1,president,1938,1938,Banques et sociétés financières
-h-finaly,H Finaly,H Finaly,1,1,1,president,1938,1938,Banques et sociétés financières
-h-giraud,H Giraud,H Giraud,1,1,1,president,1938,1938,Banques et sociétés financières
-r-lehideux,R Lehideux,R Lehideux,1,1,1,president,1938,1938,Banques et sociétés financières
-meyer-borel-c,Meyer-Borel,C. A. Meyer-Borel,1,1,1,president,1938,1938,Banques et sociétés financières
 de-neuflize,de Neuflize,de Neuflize,1,1,1,president,1938,1938,Banques et sociétés financières
 bechmann,Bechmann,Bechmann,1,1,1,administrateur,1940,1940,Banques et sociétés financières
 pahlawan-j,Pahlawan,J. Pahlawan,1,1,1,administrateur,1940,1940,Banques et sociétés financières
@@ -454,7 +456,6 @@ vivier,Vivier,Vivier,2,0,2,commissaire_aux_comptes,1937,1940,"Transports maritim
 corbin-de-mangoux-a,Corbin de Mangoux,A. Corbin de Mangoux,1,0,1,directeur,,,Documents généraux
 ing-i-c-n,ing. I. C. N,ing. I. C. N,1,0,1,directeur,,,Documents généraux
 fain-j,Fain,Jean Fain,1,0,1,directeur,,,Documents généraux
-rua-buenos-aires-sous-agences-a-porto-alegre,rua Buenos-Aires). Sous-agences à: Porto-Alegre,rua Buenos-Aires). Sous-agences à: Porto-Alegre,1,0,1,directeur,,,Documents généraux
 curityba,Curityba,Curityba,1,0,1,directeur,,,Documents généraux
 campos,Campos,Campos,1,0,1,directeur,,,Documents généraux
 bahia,Bahia,Bahia,1,0,1,directeur,,,Documents généraux
@@ -469,6 +470,8 @@ safi,Safi,Safi,1,0,1,directeur,,,Documents généraux
 smyrne,Smyrne,Smyrne,1,0,1,directeur,,,Documents généraux
 genes,Gênes,Gênes,1,0,1,directeur,,,Documents généraux
 etc-importation,etc. Importation,etc. Importation,1,0,1,directeur,,,Documents généraux
+jacout-p,Jacout,Pierre Jacout,1,0,1,gerant,,,Documents généraux
+breton-m,Breton,Marcel Breton,1,0,1,gerant,,,Documents généraux
 marchai-v,MarchaI,V. H. MarchaI,1,0,1,gerant,,,Documents généraux
 barrioulet-p,Barrioulet,P. Barrioulet,1,0,1,commissaire_aux_comptes,1940,1940,Banques et sociétés financières
 ch-h-renard,Ch.-H. Renard,Ch.-H. Renard,1,0,1,commissaire_aux_comptes,1937,1937,"Eaux, électricité (utilities)"

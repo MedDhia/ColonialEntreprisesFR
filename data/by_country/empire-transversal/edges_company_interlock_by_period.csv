@@ -1,9 +1,9 @@
 company_id_1,company_id_2,period,weight,shared_directors
 tramway,tramways,1914_1929,11,ancion-a; aug-collignon; boulle-l; burrell-c; goury-du-roslan-l; guary-l; janssen; pavie-g; renaud; rostand-j; soclet-a
+industriellematerieltransport,industriellematerieltransportcimt,1914_1929,9,bauwens-m; carde-g; carde-p; delvallee-g; fremaux-p; ganne-m; laurain-h; metayer-m; tiranty-p
 centraleenergieelectrique,centraleenergieelectriquerouenchateauroux,1914_1929,9,allard-j; boulle-l; getten; homberg-o; lienart-p; poirier-h; schwob-g; teissier-du-cros-e; walch-e
-industriellematerieltransport,industriellematerieltransportcimt,1914_1929,8,carde-g; carde-p; delvallee-g; fremaux-p; ganne-m; laurain-h; metayer-m; tiranty-p
+constructions,eieditionsdocumentairesindustriellessoccap,1914_1929,9,abel-h; bancel-h; camus-h; gensel-h; pate-h; poire-a; richou-g; thirion-c; walter-j
 acomptedividendeimpot,tramways,1914_1929,8,ancion-van-put-a; boulle-l; cordier-g; goury-du-roslan-l; guary-l; monmerque-a; pavie-g; rostand-j
-constructions,eieditionsdocumentairesindustriellessoccap,1914_1929,8,abel-h; camus-h; gensel-h; pate-h; poire-a; richou-g; thirion-c; walter-j
 huelvacoppersulfurmines,huelvacoppersulfurminesltd,1914_1929,7,bondonneau-h; chanlaire-g; dyckhoff-g; gaillochet-h; l-donnet; ph-lyttelton-gell; roux-brahic-j
 havraisepeninsulairenavigationvapeur,navigationtransoceanique,1914_1929,7,babin-chevaye-j; dislere-p; gueugnier-l; guillet-de-la-brosse-e; imbert-p; pamard-l; vallee-c
 cheminsfertramwaysvargard,tramway,1914_1929,6,ancion-a; boulle-l; goury-du-roslan-l; guary-l; pavie-g; renaud
@@ -37,6 +37,7 @@ consortiumnord,financierecimentsindustrie,1914_1929,3,baudon-r; devilder-j; dupl
 francowyomingoilcy,huelvacoppersulfurminesltd,1914_1929,3,bondonneau-h; fontaine-e; gaillochet-h
 unionindustriellecredit,unionindustriellecreditreconstitution,1914_1929,3,beghin-j; griffiths-t; louppe-a
 havraisepeninsulairenavigationvapeur,havraisepeninsulairenavigatonvapeur,1914_1929,3,latham-e; perier-f; tricot-l
+charbonnages,produitschimiquescharbonnages,1914_1929,3,e-bonnet; gaudet-r; p-audy
 produitschimiquescharbonnages,universelleexplosifsproduitschimiques,1914_1929,3,audy-p; gaudet-r; mauselin
 navigationsudatlantique,transportsmaritimesvapeur,1914_1929,2,breton-g; giraud-h
 coteafrique,fraissinetmarseillaisenavigationvapeur,1914_1929,2,fraissinet-a; fraissinet-j
@@ -54,6 +55,7 @@ aerienne,phosphatescierp,1914_1929,2,gros; gros-f
 azote,explosifsminelite,1914_1929,2,bouchardy-f; gros-f
 electroentreprise,phosphatescierp,1914_1929,2,gros-f; guerin-p
 banquemutuelleetudes,electroentreprise,1914_1929,2,liouville-a; treboul-g
+eieditionsdocumentairesindustriellessoccap,mwalteradministrateurdelegue,1914_1929,2,bancel-h; walter-j
 centraleenergieelectriquerouenchateauroux,cheminsfertramwaysvargard,1914_1929,2,boulle-l; renaud
 centraleenergieelectriquerouenchateauroux,tramway,1914_1929,2,boulle-l; renaud
 centraleenergieelectriquerouenchateauroux,tramways,1914_1929,2,boulle-l; renaud
@@ -79,7 +81,6 @@ miniereribeira,minierevalburatmarignac,1914_1929,2,achalme-j; achalme-p
 grandemaisonblanc,grandstravauxbetonarme,1914_1929,2,michel-c; worms-e
 omniumlyonnais,trustimmobilierfrance,1914_1929,2,barth-e; stockhammer-a
 orosdiback,tabacsorientoutremer,1914_1929,2,dutasta-p; ricois-e
-charbonnages,produitschimiquescharbonnages,1914_1929,2,e-bonnet; gaudet-r
 unionindustriellecreditreconstitution,unionmines,1914_1929,2,courtin; descamps
 airunion,navigationpaquet,1914_1929,1,giraud-h
 airunion,navigationsudatlantique,1914_1929,1,giraud-h
@@ -103,7 +104,6 @@ auxiliaireafricainedeveloppementcommerce,bordeaux,1914_1929,1,maurel-l
 auxiliaireafricainedeveloppementcommerce,etablissementsmaurelhprom,1914_1929,1,maurel-l
 bordeaux,etablissementsmaurelhprom,1914_1929,1,maurel-l
 etablissementsmaurelhprom,navigationsudatlantique,1914_1929,1,prom-l
-etablissementsmaurelhprom,peyrissaccolonialeafrique,1914_1929,1,guinee-kankan
 anciensetablissementschpeyrissac,peyrissaccolonialeafrique,1914_1929,1,peyrissac-l
 anciensetablissementschpeyrissaccoloniale,auxiliaireafricainedeveloppementcommerce,1914_1929,1,e-casteincau
 auxiliaireafricainedeveloppementcommerce,peyrissaccolonialeafrique,1914_1929,1,e-casteincau
@@ -196,6 +196,7 @@ grandemaisonblanc,usinesmetallurgiquesbasseloire,1914_1929,1,bernard-l
 miniereribeira,usinesmetallurgiquesbasseloire,1914_1929,1,bernard-l
 benardjarislovsky,commercialeouestafricain,1914_1929,1,francois-marsal-f
 benardjarislovsky,constructions,1914_1929,1,bancel-h
+benardjarislovsky,eieditionsdocumentairesindustriellessoccap,1914_1929,1,bancel-h
 benardjarislovsky,mwalteradministrateurdelegue,1914_1929,1,bancel-h
 benardjarislovsky,candlot,1914_1929,1,loi
 benardjarislovsky,etsquillery,1914_1929,1,loi
@@ -353,6 +354,7 @@ etudesentreprisescoloniales,financierepalmeraies,1914_1929,1,devisscher-j
 etudesentreprisescoloniales,salrem,1914_1929,1,fonderies-de-pont-a-mousson
 etudesentreprisescoloniales,manufacturetapiscouvertures,1914_1929,1,vandier-p
 etudesentreprisescoloniales,tabacs,1914_1929,1,d-anthouard-a
+exploitationselectriques,soieriesfducharne,1914_1929,1,cambefort
 exploitationselectriques,exploitationsminieresindustrielles,1914_1929,1,acieries-du-nord
 constructionmachinestanneriecorroieriemegisserie,financiereexploitationsindustrielles,1914_1929,1,colas-e
 financierecimentsindustrie,polietchausson,1914_1929,1,chausson-l
@@ -384,7 +386,6 @@ grandstravauxbetonarme,rouff,1914_1929,1,worms-e
 deville,guet,1914_1929,1,jaunez-m
 guet,navigationsudatlantique,1914_1929,1,robert
 havraisepeninsulairenavigatonvapeur,navigationtransoceanique,1914_1929,1,grosos-a
-eieditionsdocumentairesindustriellessoccap,mwalteradministrateurdelegue,1914_1929,1,walter-j
 acierieslongwy,transportsmaritimesvapeur,1914_1929,1,oppermann-a
 lillebonnierescolombes,lorraine,1914_1929,1,de-steenhault-l
 magasinsmodernesfilialecommunenouvellesgaleriesparisfrance,unioncharbonnieremetallurgiquecomptoirsminiersnordafricainsreunis,1914_1929,1,compose-de-a-membres
@@ -392,6 +393,7 @@ minesfermouriere,navigationsudatlantique,1914_1929,1,fould
 moktaelhadid,navigationsudatlantique,1914_1929,1,perouse-d
 industrielleplatine,mobiliereparisiennecoloniale,1914_1929,1,van-hoegaerden-j
 fonderiesemailleriesdonchery,orosdiback,1914_1929,1,orosdi-l
+commissionimportationexportation,papeterievaldorfontainevaucluse,1914_1929,1,lucas-a
 parisiennecomptoirscoloniaux,unionbanquebanquedepotsgarantis,1914_1929,1,belgique
 procedesindustrielscharbonsactifs,roumanobelgepetrole,1914_1929,1,urbain-e
 charbonnages,universelleexplosifsproduitschimiques,1914_1929,1,gaudet-r
@@ -403,15 +405,15 @@ auxiliaireafricaine,unionindustriellecredit,1914_1929,1,mathon-e
 auxiliaireafricaine,navaleouest,1914_1929,1,mallet
 associationpetroliere,ateliersreparationsmaritimesbeliardcrighton,1914_1929,1,crighton
 unionindustriellecreditreconstitution,unionsyndicalefinanciere,1914_1929,1,mathon
-transportsmaritimesvapeur,tronquegauche,1930_1944,8,brenier-g; breton-g; daher-p; dufay-h; giraud-h; nunzi-a; oppermann-a; robert
+transportsmaritimesvapeur,tronquegauche,1930_1944,9,bazin-j; brenier-g; breton-g; daher-p; dufay-h; giraud-h; nunzi-a; oppermann-a; robert
+energieelectrique,pyreneenneenergieelectrique,1930_1944,7,baudon-de-mony-l; de-solages; girod-de-l-ain; lacretelle-g; reille-x; rene-bazin-n; vadon-j
 centraleenergieelectrique,centraleenergieelectriquerouenchateauroux,1930_1944,6,boulle-l; homberg-o; janlet-l; poirier-h; rosenwald-g; schwob-d-hericourt-g
-energieelectrique,pyreneenneenergieelectrique,1930_1944,6,baudon-de-mony-l; de-solages; girod-de-l-ain; lacretelle-g; reille-x; vadon-j
+centraleindustrieelectrique,industrieelectrique,1930_1944,6,benac-a; heineman-d; laurent-c; pesson-didion; r-hecker; walch-e
 acieriesnord,forgesacieriesnordest,1930_1944,5,bernard-j; canard-j; goudchaux-m; joubert-j; metayer-m
 messageriesmaritimes,servicescontractuelsmessageriesmaritimes,1930_1944,5,carnot-e; lacaze-l; manceron-f; philippar-g; pilliard-m
 messageriesfluvialescochinchine,saigonnaisenavigationtransport,1930_1944,5,bernard-f; guesde-p; lancelin-g; pfeiffer-e; rueff-g
 creditfoncieralgerietunisie,creditfonciersyrie,1930_1944,5,dumas-j; jourdanne-a; lebon-a; regnault-e; saint-rene-taillandier-g
 banquealgerie,banqueindustrielleafriquenord,1930_1944,5,boyer-p; escallier-l; galicier-a; moatti-m; sabatier-e
-centraleindustrieelectrique,industrieelectrique,1930_1944,5,heineman-d; laurent-c; pesson-didion; r-hecker; walch-e
 bateauxvapeurnord,gerancearmement,1930_1944,4,javary-f; masset-e; peyronnet-a; waage-n
 commercialeindustriellecoteafrique,navigationfraissinet,1930_1944,4,arnoux-j; chabrieres-m; fraissinet; fraissinet-j
 fiduciaireindochine,unionfinanciereextremeorient,1930_1944,4,agabriel-l; boudon-r; denis-e; hadengue-y
@@ -424,6 +426,7 @@ financierecoloniale,sffc,1930_1944,4,aubert-c; bernard-p; bouvier-r; giscard-d-e
 creditfonciercongo,financierecongo,1930_1944,4,beuque-j; henriquez-a; henriquez-g; herve-le-grand
 unionindustriellecredit,unionmines,1930_1944,4,celier-a; delloye-j; descamps-a; parent-p
 centraleenergieelectriquerouenchateauroux,centraleindustrieelectrique,1930_1944,4,boulle-l; homberg-o; poirier-h; walch-e
+betonarme,grandstravauxbetonarme,1930_1944,4,michel-c; rebuffel-c; tricon; tricon-j
 havraisepeninsulairenavigationvapeur,navigationtransoceanique,1930_1944,4,babin-chevaye-j; belot-g; guillet-de-la-brosse-e; imbert-p
 acieriesnord,industriellematerieltransportcimt,1930_1944,3,goudchaux-m; joubert-j; metayer-m
 forgesacieriesnordest,industriellematerieltransportcimt,1930_1944,3,goudchaux-m; joubert-j; metayer-m
@@ -474,6 +477,7 @@ airfrance,minierecoloniale,1930_1944,2,barnaud-j; baudouin-p
 banquemadagascar,unionovinecoloniale,1930_1944,2,capet-g; saurin-h
 caissepretsimmobiliersmaroc,creditfonciersyrie,1930_1944,2,gendre-e; jourdanne-a
 marseillaisecreditindustrielcommercialdepots,transportsmaritimesvapeur,1930_1944,2,bazin-j; oppermann-a
+marseillaisecreditindustrielcommercialdepots,tronquegauche,1930_1944,2,bazin-j; oppermann-a
 centraleindustrieelectrique,creditcolonial,1930_1944,2,brizon-g; laurent-c
 banquefrancochinoisecommerceindustrie,creditfonciersyrie,1930_1944,2,le-gallen-m; regnault-e
 airfrance,banqueindochine,1930_1944,2,baudouin-p; roume-e
@@ -486,6 +490,7 @@ banquealgerie,banqueindochine,1930_1944,2,boyer-p; brincard-g
 banquealgerie,comptoirnationalescompteparis,1930_1944,2,boyer-p; picard-p
 banqueindochine,comptoirnationalescompteparis,1930_1944,2,boyer-p; celier-a
 centraleenergieelectriquerouenchateauroux,commerceaveccoloniesetranger,1930_1944,2,schwob-d-hericourt-g; schwob-g
+banquetransatlantique,banquetunisie,1930_1944,2,archawski-w; despret-g
 creditfoncierouestafricain,creditmobilierindochinoisexploitationmonts,1930_1944,2,de-tarde-g; goury-du-roslan-r
 colonialecommerceindustrie,financierecongo,1930_1944,2,henriquez-a; henriquez-g
 banquemadagascar,creditcolonial,1930_1944,2,chaudun-p; saurin-h
@@ -498,9 +503,9 @@ algerienne,creditcolonial,1930_1944,2,boissonnas-j; marlio-l
 banquesyriegrandliban,creditcolonial,1930_1944,2,boissonnas-j; de-neuflize-j
 banquesyrie,favoriserdeveloppementindustrie,1930_1944,2,simon-j; taffineau-e
 centraleindustrieelectrique,favoriserdeveloppementindustrie,1930_1944,2,benac-a; poirier-h
+creditfonciercolonial,creditfonciercolonialbanque,1930_1944,2,buzon-j; devies
 banquefrancochinoisecommerceindustrie,financiereindochine,1930_1944,2,carrere-g; grammont-m
 creditmobilierindochinoisexploitationmonts,unionfinanciereextremeorient,1930_1944,2,agabriel-l; boudon-r
-betonarme,grandstravauxbetonarme,1930_1944,2,michel-c; rebuffel-c
 auxiliaireafricaine,auxiliaireafricainedeveloppementcommerce,1930_1944,2,delmas-p; o-quin-p
 auxiliaireafricaine,delmassuccessivementphilippelafarguephilippelafarguejosephlarrieuphilippelafarguejeananselmedelmasdelmasclastresphilippedelmas,1930_1944,2,delmas-p; o-quin-p
 auxiliaireafricainedeveloppementcommerce,delmassuccessivementphilippelafarguephilippelafarguejosephlarrieuphilippelafarguejeananselmedelmasdelmasclastresphilippedelmas,1930_1944,2,delmas-p; o-quin-p
@@ -660,7 +665,6 @@ banquemadagascar,havraisepeninsulairenavigation,1930_1944,1,capet-g
 havraisepeninsulairenavigation,unionovinecoloniale,1930_1944,1,capet-g
 caissepretsimmobiliersmaroc,havraisepeninsulairenavigation,1930_1944,1,gendre-e
 creditfonciersyrie,havraisepeninsulairenavigation,1930_1944,1,gendre-e
-marseillaisecreditindustrielcommercialdepots,tronquegauche,1930_1944,1,oppermann-a
 maritimenationale,transportsmaritimesvapeur,1930_1944,1,zafiropulo-d
 creditcolonial,maritimenationale,1930_1944,1,brizon-g
 fraissinetmarseillaisenavigationvapeur,maritimenationale,1930_1944,1,tillier-p
@@ -711,7 +715,6 @@ creditfoncierouestafricain,unionovinecoloniale,1930_1944,1,nouvion-h
 banquecommercialeafricaine,colonies,1930_1944,1,josse-a
 banquecommercialeafricaine,banquetransatlantique,1930_1944,1,archawski-w
 banquecommercialeafricaine,banquetunisie,1930_1944,1,archawski-w
-banquetransatlantique,banquetunisie,1930_1944,1,archawski-w
 banquecommercialeafricaine,financierecoloniale,1930_1944,1,bouvier-r
 banquecommercialeafricaine,sffc,1930_1944,1,bouvier-r
 creditalgerien,creditfoncierindochine,1930_1944,1,rousseau-e
@@ -757,7 +760,12 @@ banquefrancochinoisecommerceindustrie,creditfoncieralgerietunisie,1930_1944,1,re
 banquesyriegrandliban,creditfoncieralgerietunisie,1930_1944,1,notice-no-v
 creditmaghreb,delmassuccessivementphilippelafarguephilippelafarguejosephlarrieuphilippelafarguejeananselmedelmasdelmasclastresphilippedelmas,1930_1944,1,delmas-r
 banqueindochine,favoriserdeveloppementindustrie,1930_1944,1,homberg-a
+banqueindochine,fraissinetmarseillaisenavigationvapeur,1930_1944,1,homberg-a
+favoriserdeveloppementindustrie,fraissinetmarseillaisenavigationvapeur,1930_1944,1,homberg-a
+favoriserdeveloppementindustrie,industrieelectrique,1930_1944,1,benac-a
 colonies,favoriserdeveloppementindustrie,1930_1944,1,charpentier-j
+charbonnagesfaulquemont,favoriserdeveloppementindustrie,1930_1944,1,th-laurent
+charbonnagesfaulquemont,forgesacieriesnordest,1930_1944,1,th-laurent
 favoriserdeveloppementindustrie,forgesacieriesnordest,1930_1944,1,th-laurent
 banquefrancochinoisecommerceindustrie,banquenationalecommerceexterieur,1930_1944,1,poirier-h
 banquefrancochinoisecommerceindustrie,centraleenergieelectrique,1930_1944,1,poirier-h
@@ -798,6 +806,7 @@ banquecotonniere,banquenationalecommerceexterieur,1930_1944,1,jacques-a
 banquecotonniere,banqueproduitsalimentairescoloniaux,1930_1944,1,jacques-a
 banquenationalecommerceexterieur,banqueproduitsalimentairescoloniaux,1930_1944,1,jacques-a
 banquenationalecommerceexterieur,bonmarche,1930_1944,1,baudet-a
+banquenationalecommerceexterieur,rateaudirectionbureaux,1930_1944,1,champin-m
 francocolonialeentreprises,unionfrancocolonialepaysoutremer,1930_1944,1,joubert-a
 betonarme,colonies,1930_1944,1,rebuffel-c
 betonarme,entrepriseshydrauliquestravauxpublics,1930_1944,1,rebuffel-c
@@ -805,6 +814,8 @@ colonies,entrepriseshydrauliquestravauxpublics,1930_1944,1,rebuffel-c
 colonies,grandstravauxbetonarme,1930_1944,1,rebuffel-c
 entrepriseshydrauliquestravauxpublics,grandstravauxbetonarme,1930_1944,1,rebuffel-c
 creditcolonial,industrieelectrique,1930_1944,1,laurent-c
+entrepriseshydrauliquestravauxpublics,financierecoloniale,1930_1944,1,aubert-c
+entrepriseshydrauliquestravauxpublics,sffc,1930_1944,1,aubert-c
 banqueindustriescoloniales,garantiegestion,1930_1944,1,courty-l
 industrielleplatine,minesorpek,1930_1944,1,bonnardel-j
 industrielleplatine,unionfinanciereextremeorient,1930_1944,1,bonnardel-j
@@ -850,7 +861,6 @@ industrielle,uniontrust,1930_1944,1,boemare-l
 energieelectrique,industrielle,1930_1944,1,reille-x
 bazacle,pyreneenneenergieelectrique,1930_1944,1,lacretelle-g
 bazacle,etablissementspolietchausson,1930_1944,1,j-maroger
-bazacle,entreprisesgrandstravauxhydrauliques,1930_1944,1,grenoble
 bazacle,forgesacieriesnordest,1930_1944,1,thouzellier-e
 forgesacieriesnordest,minierecoloniale,1930_1944,1,paris
 aguilas,unionfrancocolonialepaysoutremer,1930_1944,1,tallon-p
@@ -859,7 +869,7 @@ constructionafricaine,exploitationselectriques,1930_1944,1,caudrelier-e
 constructionafricaine,unionelectriquerurale,1930_1944,1,charpentier
 auxiliaireafricaine,creditcolonial,1930_1944,1,moitessier-a
 decauvilleaine,unionindustriellecredit,1930_1944,1,cahen
-entreprisesgrandstravauxhydrauliques,industriellefonciere,1930_1944,1,pres-m-j-clos
+entreprisesgrandstravauxhydrauliques,industriellefonciere,1930_1944,1,clos-j
 cheddites,entrepriseshydrauliquestravauxpublics,1930_1944,1,bouchayer-h
 entrepriseshydrauliquestravauxpublics,explosifs,1930_1944,1,bouchayer-h
 electroentreprise,nationaleexplosifs,1930_1944,1,mascart-l
@@ -872,10 +882,15 @@ halleboissaintcloud,minesproduitschimiques,1930_1944,1,aubert
 lillebonnierescolombes,portefeuille,1930_1944,1,palliez-a
 lillebonnierescolombes,manufacturetapiscouvertures,1930_1944,1,rasson-e
 lillebonnierescolombes,navaleouest,1930_1944,1,mallet
+aeronautique,lorraine,1930_1944,1,barbarou-m
 aeronautique,lorraineluneville,1930_1944,1,barbarou-m
+lorraine,lorraineluneville,1930_1944,1,barbarou-m
+lorraine,moteursautomobileslorraine,1930_1944,1,barbarou-m
 lorraineluneville,moteursautomobileslorraine,1930_1944,1,barbarou-m
 mineslucette,unionmines,1930_1944,1,portier-h
-etablissementspolietchausson,minesfermouriere,1930_1944,1,adm-mm-j-aguillon
+etablissementspolietchausson,minesfermouriere,1930_1944,1,aguillon-j
+etablissementspolietchausson,unionmines,1930_1944,1,aguillon-j
+minesfermouriere,unionmines,1930_1944,1,aguillon-j
 miniereribeira,redevancesminieresparticipations,1930_1944,1,cottavoz-j
 navigationsudatlantique,omniumlyonnais,1930_1944,1,robert
 navigationsudatlantique,tronquegauche,1930_1944,1,robert
@@ -902,12 +917,12 @@ centraleenergieelectrique,centraleindustrieelectrique,1945_1962,2,lorain-m; walc
 tramways,tramwayssaintquentin,1945_1962,2,autin-j; mechin-a
 forgesacieriesnordest,unionmines,1945_1962,2,esteve-h; le-blan-j
 colonies,unionindustriellecredit,1945_1962,2,beaupere-l; bouis-c
-holdingcoloniale,metauxproduitschimiques,1945_1962,2,chauffour-j; nenard-r
+grandshotelsmarocains,holdingcoloniale,1945_1962,2,chauffour-j; nenard-r
 lorraineluneville,moteursautomobileslorraine,1945_1962,2,giscard-d-estaing-e; potez-h
 bateauxvapeurnord,navaleouest,1945_1962,1,cangardel-h
 commerceaveccoloniesetranger,etablissementsmaurelprom,1945_1962,1,gradis-g
 acieriesnord,etablissementsdecauvilleaine,1945_1962,1,carrier-p
-africaineagricoleminiere,metauxproduitschimiques,1945_1962,1,peretti-a
+africaineagricoleminiere,minieregundafa,1945_1962,1,peretti-a
 associationminiere,mineslaurium,1945_1962,1,talis-r
 associationminiere,baronnervopdtdirgen,1945_1962,1,lafond-h
 associationminiere,creditfonciercolonialbanque,1945_1962,1,vernes-g
@@ -921,6 +936,8 @@ creditfonciercolonialbanque,lorraineluneville,1945_1962,1,fayol-h
 peinturesastralcelluco,produitschimiquesterresrares,1945_1962,1,appell-p
 forgesacieriesnordest,mineslaurium,1945_1962,1,massenet-a
 commercialeouestafricain,saga,1945_1962,1,retail-l
+grandshotelsmarocains,minieregundafa,1945_1962,1,nenard-r
+holdingcoloniale,minieregundafa,1945_1962,1,nenard-r
 holdingcoloniale,industriellefonciere,1945_1962,1,bouvier-j
 holdingcoloniale,peninsulaireetains,1945_1962,1,wattinne-a
 industriellefonciere,industriellefonciereroutiere,1945_1962,1,rumilly-a

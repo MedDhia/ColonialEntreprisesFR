@@ -5,8 +5,10 @@ mizraki-m,Mizraki,Maurice Mizraki; Mizraki,4,4,10,administrateur,1921,1948,Agro-
 pecqueur-w,Pecqueur,W. Pecqueur; William Pecqueur,4,4,6,administrateur,1929,1951,Industrie
 fondere,Fondère,Fondère,4,4,4,administrateur,1909,1920,Agro-alimentaire; Industrie
 zafiropulo,ZAFIROPULO,ZAFIROPULO; Zafiropulo,4,4,4,administrateur,1912,1951,Agro-alimentaire; Industrie; Sociétés commerciales
+enjalbert-p,Enjalbert,P. Enjalbert,3,3,6,administrateur,1909,1938,Industrie
 vergnes-a,Vergnes,Auguste Vergnes; Vergnes,3,3,5,administrateur,1909,1938,Industrie; Sociétés commerciales
 vacheret-c,Vacheret,Ch. Vacheret; Charles Vacheret,3,3,4,administrateur,1921,1951,Agro-alimentaire; Industrie
+meyer-a,Meyer,A. Meyer; Alfred Meyer,3,3,4,administrateur,1919,1928,Agro-alimentaire; Industrie
 superville-m,Superville,Maurice Superville; Superville,3,3,3,administrateur,1916,1926,Agro-alimentaire; Industrie
 schmidt-m,Schmidt,Max Schmidt; Max-Roger Schmidt,3,3,3,administrateur,1924,1936,Industrie
 videau-j,Videau,Jean Videau,3,3,3,president,1929,1931,Industrie
@@ -18,7 +20,6 @@ lavril-m,Lavril,Lavril; Max Lavril,2,2,6,administrateur,1945,1953,Agro-alimentai
 pila-j,Pila,J. Pila; Jacques Pila,2,2,5,administrateur,1948,1953,Agro-alimentaire; Industrie
 barre-o,Barré,O. Barré,2,2,5,administrateur,1909,1926,Industrie
 denfert-rochereau-a,Denfert-Rochereau,A. Denfert-Rochereau; Aristide Denfert-Rochereau,2,2,5,administrateur,1909,1925,Industrie
-enjalbert-p,Enjalbert,P. Enjalbert,2,2,5,administrateur,1909,1925,Industrie
 boissonnas-j,Boissonnas,J. Boissonnas; Jean Boissonnas,2,2,5,administrateur,1923,1940,Industrie
 blancou-j,Blancou,Blancou; J. Blancou,2,2,4,administrateur,1951,1953,Agro-alimentaire; Industrie
 gerdret-g,Gerdret. 9,G. Gerdret; Gabriel Gerdret; Gerdret; Gerdret. 9,2,2,4,administrateur,1922,1938,Agro-alimentaire; Sociétés commerciales
@@ -27,11 +28,11 @@ durand-reville-l,Durand-Reville,L. Durand-Reville; Luc Durand-Reville,2,2,4,admi
 raoul-duval-j,Raoul-Duval,J. Raoul-Duval; Jean Raoul-Duval,2,2,4,administrateur,1938,1948,Industrie
 weber-j,Weber,J. Weber; Jean Weber,2,2,3,administrateur,1922,1928,Agro-alimentaire; Industrie
 chassedieu,Chassedieu,Chassedieu,2,2,3,administrateur,1948,1959,Agro-alimentaire; Industrie
+debionne,Debionne,Debionne,2,2,3,president,1922,1938,Sociétés commerciales
 hayere-a,Hayère,André Hayère,2,2,3,administrateur_delegue,1929,1936,Industrie
 couriol-l,Couriol,Louis Couriol,2,2,3,administrateur,1936,1948,Industrie
 labat-r,Labat,René Labat,2,2,3,administrateur,1921,1934,Industrie
 sterlin-y,Sterlin,Y. Sterlin; Yves Sterlin,2,2,3,administrateur,1928,1934,Agro-alimentaire; Industrie
-meyer-a,Meyer,A. Meyer; Alfred Meyer,2,2,3,administrateur,1919,1928,Agro-alimentaire
 e-terquem,E Terquem,E Terquem,2,2,3,president,1921,1938,Industrie
 barre-h,Barré,H. Barré,2,2,3,administrateur,1925,1938,Industrie
 chabrieres-m,Chabrières,Chabrières; Maurice Chabrières,2,2,3,administrateur,1938,1940,Industrie
@@ -44,7 +45,6 @@ widhoff-a,Widhoff,A. Widhoff,2,2,2,administrateur,1948,1951,Agro-alimentaire; In
 douzamy-j,Douzamy,J. Douzamy; Jean Douzamy,2,2,2,administrateur,1959,1959,Agro-alimentaire; Industrie
 braillard-e,Braillard,Braillard; E. Braillard,2,2,2,administrateur,1900,1909,Agro-alimentaire
 deves,Devès,Devès,2,2,2,administrateur,1899,1900,Agro-alimentaire; Sociétés commerciales
-adm-mm-debionne,Adm.: MM. Debionne,Adm.: MM. Debionne,2,2,2,president,1925,1938,Sociétés commerciales
 etc-commerce-d-importation,etc. Commerce d'importation,etc. Commerce d'importation,2,2,2,president,1925,1938,Sociétés commerciales
 gaboriaud-l,Gaboriaud,Gaboriaud; L.-A. Gaboriaud,2,2,2,administrateur,1918,1922,Industrie; Sociétés commerciales
 j-weber,J Weber,J Weber,2,2,2,president,1918,1922,Industrie; Sociétés commerciales
@@ -74,6 +74,7 @@ mols-a,Mols,Alexis Mols,1,1,3,administrateur,1899,1903,Sociétés commerciales
 fleury-p,Fleury,P. Fleury; Paul Fleury,1,1,3,administrateur,1920,1925,Industrie
 pihouee-m,Pihouée,Maurice Pihouée; Pihouée,1,1,3,administrateur,1920,1925,Industrie
 tassy,Tassy,Tassy,1,1,3,administrateur,1920,1925,Industrie
+baitry-f,Baitry,Baitry; Florimond Baitry,1,1,3,administrateur,1920,1925,Industrie
 biltz-a,Biltz,A. Biltz; André Biltz; Biltz,1,1,3,president,1920,1925,Industrie
 guegan-p,Guegan,Guegan,1,1,3,administrateur,1952,1959,Agro-alimentaire
 coquelle-f,Coquelle,F. Coquelle,1,1,3,administrateur,1923,1925,Industrie
@@ -97,7 +98,6 @@ izambert-a,Izambert,Alexandre Izambert; Izambert,1,1,2,administrateur,1899,1900,
 caze-e,Caze,Edmond Caze,1,1,2,administrateur,1899,1899,Agro-alimentaire
 ducas-e,Ducas,Ernest Ducas,1,1,2,administrateur,1899,1903,Sociétés commerciales
 levy-e,Lévy,Edmond Lévy,1,1,2,administrateur,1920,1925,Industrie
-baitry-f,Baitry,Baitry; Florimond Baitry,1,1,2,administrateur,1920,1922,Industrie
 lallemand,Lallemand,Lallemand,1,1,2,administrateur,1920,1922,Industrie
 masson-c,Masson,Ch. Masson; Charles Masson,1,1,2,administrateur,1936,1953,Industrie
 parmentier-j,Parmentier,J. Parmentier; Jules Parmentier,1,1,2,administrateur,1916,1919,Agro-alimentaire
@@ -130,7 +130,6 @@ beiggeider-o,Beiggeider,O. Beiggeider,1,1,1,administrateur,1910,1910,Agro-alimen
 kchlin-l,Kœchlin,L. Kœchlin,1,1,1,administrateur,1910,1910,Agro-alimentaire
 lde-seynes,L.de Seynes,L.de Seynes,1,1,1,administrateur,1910,1910,Agro-alimentaire
 latune-c,Latune,C. Latune,1,1,1,administrateur,1910,1910,Agro-alimentaire
-o-beidgbeder-sic-beigbeder,O Beidgbeder [sic: Beigbeder,O Beidgbeder [sic: Beigbeder,1,1,1,president,1936,1936,Agro-alimentaire
 l-de-seynes,L de Seynes,L de Seynes,1,1,1,administrateur,1936,1936,Agro-alimentaire
 bungener,Bungener,Bungener,1,1,1,administrateur,1934,1934,Agro-alimentaire
 ledoux,Ledoux,Ledoux,1,1,1,administrateur,1934,1934,Agro-alimentaire
@@ -192,7 +191,6 @@ reveliere-de-la-reveliere,Revelière de la Revelière,Revelière de la Revelièr
 wegimont,Wégimont,Wégimont,1,1,1,administrateur,1899,1899,Sociétés commerciales
 ruffy,Ruffy,Ruffy,1,1,1,administrateur,1899,1899,Sociétés commerciales
 e-du-vivier-de-streel,E du Vivier de Streel,E du Vivier de Streel,1,1,1,president,1922,1922,Sociétés commerciales
-debionne,Debionne,Debionne,1,1,1,administrateur,1922,1922,Sociétés commerciales
 desouches-b,Desouches,Bernard Desouches,1,1,1,president,1937,1937,Sociétés commerciales
 martin-s,Martin,Simon Martin,1,1,1,administrateur,1937,1937,Sociétés commerciales
 desouches-p,Desouches,P. B. Desouches,1,1,1,administrateur,1937,1937,Sociétés commerciales
@@ -206,7 +204,6 @@ danon-j,Danon,Danon,1,1,1,administrateur,1918,1918,Industrie
 chaigneau,Chaigneau,Chaigneau,1,1,1,administrateur,1918,1918,Industrie
 cerf-s,Cerf,Simon Cerf,1,1,1,administrateur,1918,1918,Industrie
 armand-a,Armand,A. Armand,1,1,1,administrateur,1900,1900,Agro-alimentaire
-objet-exploitation,Objet: Exploitation,Objet: Exploitation,1,1,1,administrateur,1900,1900,Agro-alimentaire
 et-de-victoria-raineaux-sur-de-firmin,et de Victoria Raineaux (sœur de Firmin,et de Victoria Raineaux (sœur de Firmin,1,1,1,administrateur,1900,1900,Agro-alimentaire
 representant-de-schneider-au-port-de-rosario,représentant de Schneider au Port de Rosario,représentant de Schneider au Port de Rosario,1,1,1,administrateur,1900,1900,Agro-alimentaire
 blanchet,Blanchet,Blanchet,1,1,1,administrateur,1930,1930,Industrie
@@ -218,7 +215,6 @@ wenzinger,Wenzinger,Wenzinger,1,1,1,administrateur,1930,1930,Industrie
 otlet,Otlet,Otlet,1,1,1,administrateur,1899,1899,Agro-alimentaire
 edm-caze,Edm. Caze,Edm. Caze,1,1,1,administrateur,1900,1900,Agro-alimentaire
 plasse-j,Plasse,J. Plasse,1,1,1,administrateur,1900,1900,Agro-alimentaire
-objet-mise-en-valeur,Objet: Mise en valeur,Objet: Mise en valeur,1,1,1,administrateur,1900,1900,Agro-alimentaire
 obtenue-par-m-izambert,obtenue par M. Izambert,obtenue par M. Izambert,1,1,1,administrateur,1900,1900,Agro-alimentaire
 ovigui,Ovigui,Ovigui,1,1,1,administrateur,1900,1900,Agro-alimentaire
 schulz-j,Schulz,Jean Schulz,1,1,1,administrateur,1899,1899,Sociétés commerciales
@@ -226,8 +222,6 @@ stein,Stein. 8,Stein. 8,1,1,1,administrateur,1899,1899,Sociétés commerciales
 gazengel-l,Gazengel,Lucien Gazengel,1,1,1,administrateur,1899,1899,Sociétés commerciales
 de-saint-didier,de Saint-Didier,de Saint-Didier,1,1,1,administrateur,1899,1899,Sociétés commerciales
 schulz-a-paris-j,Schulz à Paris,Jean Schulz à Paris,1,1,1,administrateur,1899,1899,Sociétés commerciales
-concessions-voir-carte-no,Concessions: Voir carte no 11,Concessions: Voir carte no 11,1,1,1,administrateur,1899,1899,Sociétés commerciales
-redevances-a-ans,Redevances: à ans,Redevances: à ans,1,1,1,administrateur,1899,1899,Sociétés commerciales
 lambin,Lambin,Lambin,1,1,1,administrateur,1923,1923,Sociétés commerciales
 schotsmans,Schotsmans,Schotsmans,1,1,1,administrateur,1923,1923,Sociétés commerciales
 guillemaud,Guillemaud,Guillemaud,1,1,1,administrateur,1923,1923,Sociétés commerciales
@@ -270,13 +264,11 @@ foucher-a,Foucher,Foucher,1,1,1,administrateur,1922,1922,Industrie
 sicaf-en-indoch,SICAF en Indoch,SICAF en Indoch,1,1,1,administrateur,1922,1922,Industrie
 ed-r-gaston-dreyfus,Ed. R. Gaston-Dreyfus,Ed. R. Gaston-Dreyfus,1,1,1,administrateur,1922,1922,Industrie
 homberg-o,Homberg,Octave Homberg,1,1,1,vice_president,1925,1925,Industrie
-adm-mm-florimond-baitry,Adm.: MM. Florimond Baitry,Adm.: MM. Florimond Baitry,1,1,1,president,1925,1925,Industrie
 dreyfus-g,Dreyfus,Georges Dreyfus,1,1,1,president,1925,1925,Industrie
 lambert-e,Lambert,Émile Lambert,1,1,1,president,1925,1925,Industrie
 rocca,Rocca,Rocca,1,1,1,president,1925,1925,Industrie
 rocca-j,Rocca,J.-B. Rocca,1,1,1,president,1925,1925,Industrie
 voirin-j,Voirin,Jules Voirin,1,1,1,president,1925,1925,Industrie
-direct-general-m-a-veyrat,direct.-général: M. A. Veyrat,direct.-général: M. A. Veyrat,1,1,1,president,1925,1925,Industrie
 ing-a,ing. A,ing. A,1,1,1,president,1925,1925,Industrie
 de-caplane-a-neuilly-sur-seine-p,de Caplane à Neuilly-sur-Seine,Pierre-Eugène de Caplane à Neuilly-sur-Seine,1,1,1,administrateur,1924,1924,Industrie
 girodias-l,Girodias,Léon Girodias,1,1,1,president,1936,1936,Industrie
@@ -291,7 +283,6 @@ ou-son-fils-h,[ou son fils,Henrotte [ou son fils,1,1,1,president,1922,1922,Soci�
 henrotte-ii-h,Henrotte II ?],Hubert Henrotte II ?],1,1,1,president,1922,1922,Sociétés commerciales
 mimerel,Mimerel,Mimerel,1,1,1,administrateur,1922,1922,Sociétés commerciales
 henrotte,Henrotte,Henrotte,1,1,1,president,1925,1925,Sociétés commerciales
-adm-direct-m-l-a-gaboriaud,Adm.-direct.: M. L.-A. Gaboriaud,Adm.-direct.: M. L.-A. Gaboriaud,1,1,1,president,1925,1925,Sociétés commerciales
 w-guynet,W.. Guynet,W.. Guynet,1,1,1,administrateur,1916,1916,Agro-alimentaire
 paris,Paris. 2,Paris. 2,1,1,1,administrateur,1916,1916,Agro-alimentaire
 meyer-e,Meyer,Émile Meyer,1,1,1,administrateur,1919,1919,Agro-alimentaire
@@ -326,11 +317,9 @@ bourutet-aubertot-j,Bourutet-Aubertot,J. Bourutet-Aubertot,1,1,1,administrateur,
 x-b,1,Braillard 1,1,1,1,administrateur,1900,1900,Agro-alimentaire
 burot,Burot,Burot,1,1,1,administrateur,1900,1900,Agro-alimentaire
 fabron,Fabron,Fabron,1,1,1,administrateur,1900,1900,Agro-alimentaire
-objet-exploitation-agricole,Objet: Exploitation agricole,Objet: Exploitation agricole,1,1,1,administrateur,1900,1900,Agro-alimentaire
 commerciale-des-terrains-situes-a-aschouka,commerciale des terrains situés à Aschouka,commerciale des terrains situés à Aschouka,1,1,1,administrateur,1900,1900,Agro-alimentaire
 ogoue-b,Ogoué,Bas Ogoué,1,1,1,administrateur,1900,1900,Agro-alimentaire
 situee-dans-le-bas-ogoue,située dans le Bas-Ogoué,située dans le Bas-Ogoué,1,1,1,administrateur,1900,1900,Agro-alimentaire
-charges-cautionnement,Charges: Cautionnement,Charges: Cautionnement,1,1,1,administrateur,1900,1900,Agro-alimentaire
 delor,Delor,Delor,1,1,1,administrateur,1912,1912,Agro-alimentaire
 thiriaux,Thiriaux,Thiriaux,1,1,1,administrateur,1912,1912,Agro-alimentaire
 lambert,Lambert,Lambert,1,1,1,administrateur,1912,1912,Agro-alimentaire
@@ -344,7 +333,6 @@ bousquet-h,BOUSQUET,Henri BOUSQUET,1,1,1,administrateur,1899,1899,Agro-alimentai
 bousquet,Bousquet,Bousquet,1,1,1,administrateur,1900,1900,Agro-alimentaire
 g-pelletier,G Pelletier,G Pelletier,1,1,1,administrateur,1900,1900,Agro-alimentaire
 scellier-g,Scellier,G. Scellier,1,1,1,administrateur,1900,1900,Agro-alimentaire
-concession-voir-carte-no,Concession: voir carte no 22,Concession: voir carte no 22,1,1,1,administrateur,1900,1900,Agro-alimentaire
 muller-e,Muller,Édouard Muller,1,1,1,administrateur,1926,1926,Industrie
 beraud-m,Béraud,Médard Béraud,1,1,1,administrateur,1926,1926,Industrie
 honore-e,Honoré,Eugène Honoré,1,1,1,administrateur,1926,1926,Industrie
@@ -354,8 +342,7 @@ adm-kokumbo,adm. Kokumbo,adm. Kokumbo,1,1,1,administrateur,1921,1921,Industrie
 pdt-miniere,pdt Minière,pdt Minière,1,1,1,administrateur,1921,1921,Industrie
 fonciere-du-bandama,foncière du Bandama],foncière du Bandama],1,1,1,administrateur,1921,1921,Industrie
 p-enjalbert,P Enjalbert,P Enjalbert,1,1,1,administrateur_delegue,1925,1925,Industrie
-adm-mm-j-halphen,Adm.: MM. J Halphen,Adm.: MM. J Halphen,1,1,1,president,1925,1925,Industrie
-adm-mm-p-enjalbert,Adm.: MM. P. Enjalbert,Adm.: MM. P. Enjalbert,1,1,1,president,1938,1938,Industrie
+j-halphen,J Halphen,J Halphen,1,1,1,president,1925,1925,Industrie
 r-seyrig,R Seyrig,R Seyrig,1,1,1,president,1938,1938,Industrie
 generales-a-st-louis-a,générales à St-Louis,Agences générales à St-Louis,1,1,1,president,1938,1938,Industrie
 duala,Duala,Duala,1,1,1,president,1938,1938,Industrie

@@ -1,10 +1,11 @@
 company_id_1,company_id_2,period,weight,shared_directors
 occidentaleafricaine,scieriesafricaines,1914_1929,12,bernheim-l; cassagnac-j; chevallier-du-buisson-r; et-paul-paillet; experton-p; fouque-j; gast-a; haas-a; klotz-e; vizioz-d; vizioz-g; vizioz-j
 huileriesrizeriesouestafricaines,huileriesrizeriesouestafricainesh,1914_1929,11,boutal-f; fourneau-l; gaudart-r; guy-c; legrand-j; legrand-r; loisy-x; muller-v; oudot-l; petersen-g; vezia
-messageriesafricaines,minesfalemegambie,1914_1929,10,charbonnel-h; de-rouvre-c; duchesne-fournet-p; gimon-c; haute-volta; legrand-g; michel-cote-c; roulleaux-dugage-h; soudan; watel-p
-hortala,huileriesafricaines,1914_1929,8,adm-mm-a-hallet; delsaux-p; nouvion-h; pernotte-j; pres-m-e-mathon; rosa-e; toulemonde-l; van-de-velde-w
+commerceinternationalcolonial,comptoircommercialfrancoafricain,1914_1929,9,a-huile-p; bingerville; boileau-h; cacaoyers; culture-du-cacaoyer; fribourg-j; fribourg-r; guinee-e; monteux-m
+hortala,huileriesafricaines,1914_1929,8,delsaux-p; hallet-a; mathon-e; nouvion-h; pernotte-j; rosa-e; toulemonde-l; van-de-velde-w
+salinssinesaloum,socsalinssinesaloum,1914_1929,8,de-rivaud-o; de-rivaud-r; delmas-p; desachy-p; dubigeon-r; favreul-a; mathon-e; maurel-l
 anciensetablissementschpeyrissaccolonialeafrique,salinscapvert,1914_1929,7,casteincau-e; davillier-j; gorgeu-m; gorgeu-s; guignard-e; matignon-j; peyrissac-l
-coteafrique,culturecotonniereniger,1914_1929,6,audebeau-bey-c; e-level; hermann-du-pasquier; hirsch-l; hirsch-m; loisy-x
+frsekong,kong,1914_1929,6,bretigniere-m; g-levy; galula-j; katz-m; mizraki-m; t-callot
 huileriesrizeriesguinee,huileriesrizeriesouestafricaines,1914_1929,6,boutal-f; fourneau-l; legrand-j; legrand-r; loisy-x; oudot-l
 huileriesrizeriesguinee,huileriesrizeriesouestafricainesh,1914_1929,6,boutal-f; fourneau-l; legrand-j; legrand-r; loisy-x; oudot-l
 cheminferdakarsaintlouis,cheminferdakarstlouis,1914_1929,6,deves-p; guilliot-c; lorieux-l; pouyer-m; roland-gosselin-j; vieuxtemps
@@ -26,7 +27,9 @@ unionforestiereafricaine,usinagebois,1914_1929,5,bernheim-l; fouque-j; gast-a; h
 commercialeouestafricain,ouestafricain,1914_1929,5,angoulvant-g; fatio-h; fontaine-l; gaisman-a; jacquier-f
 africaine,plantationsafriqueoccidentaleeloka,1914_1929,5,berton-a; brussel-j; dromel-p; ricroch-c; thureau-dangin-p
 comptoirsreunisouestafricainc,raymondbuurmans,1914_1929,5,caplain-e; fourie-h; planty-a; sicard-u; sicault-l
+morosini,soccolonialeentreprisemorosini,1914_1929,5,blaise-a; foucault; lescop-p; morosini-s; paris-j
 kokumbocoltd,minierefoncierebandama,1914_1929,5,frot-h; h-frot; j-halphen; oppenheim-s; simonnet-g
+etablissementssalagna,socetablsalagna,1914_1929,5,lauga-j; motelay-p; privat-a; soucail-p; weill-m
 anciensetablissementscarpotafricaineelectricite,anciensetablissementschpeyrissaccolonialeafrique,1914_1929,4,casteincau-e; gorgeu-m; guignard-e; peyrissac-l
 anciensetablissementscarpotafricaineelectricite,colonialebia,1914_1929,4,casteincau-e; gorgeu-m; guignard-e; peyrissac-l
 anciensetablissementschpeyrissaccolonialeafrique,colonialebia,1914_1929,4,casteincau-e; gorgeu-m; guignard-e; peyrissac-l
@@ -38,19 +41,18 @@ forestiereindenie,kong,1914_1929,4,calcat-f; callot-t; levy-g; mizraki-m
 kong,plantationselimacafeiersaboisso,1914_1929,4,bretigniere-m; calcat-f; levy-g; mizraki-m
 boiscoteivoire,forestiereindenie,1914_1929,4,levy-g; martin-e; mizraki-m; plagelat-l
 boiscoteivoire,transitgrandlahou,1914_1929,4,levy-g; martin-e; mizraki-m; plagelat-l
-industrielleafricaine,kong,1914_1929,4,g-levy; galula-j; katz-m; mizraki-m
 bamako,culturecotonniereniger,1914_1929,4,cahen-fuzier-e; hirsch-h; hirsch-m; villars-r
 huileriesrizeriesguinee,silicocalcaireafricaine,1914_1929,4,fourneau-l; legrand-j; legrand-r; oudot-l
 forestiereafrique,scieriesafricaines,1914_1929,4,cassagnac-j; experton-p; vizioz-g; vizioz-j
-commercialeindustriellecoteafrique,coteafrique,1914_1929,4,fouque-j; fraissinet-a; fraissinet-j; magnan-a
+commercialeindustriellecoteafrique,soccommercialeindustriellecoteafrique,1914_1929,4,fouque-j; fraissinet-a; fraissinet-j; magnan-a
 plantationsexploitationscoloniales,plantationsexploitationscolonialesbingerville,1914_1929,4,bour-a; deschamps-p; pelissier-e; thibout
-commercialeafricaine,nigerguinee,1914_1929,4,adm-direction; buhan-p; thube-a; thube-fils-g
 jeanweber,plantationstanoe,1914_1929,4,allibaud-j; crivelli; legourd-a; weber
+africaineentreprises,morosini,1914_1929,4,blaise-a; lescop-p; morosini-s; paris-j
+africaineentreprises,soccolonialeentreprisemorosini,1914_1929,4,blaise-a; lescop-p; morosini-s; paris-j
 minesfaleme,minesfalemegambie,1914_1929,4,de-batz-r; duchesne-fournet-p; legrand-g; martin-j
 briqueteriesbamako,immobilierethies,1914_1929,4,froment-guieysse-g; guieysse-p; schurr-a; you-e
 cotonniereouestafricaincotoa,cotonniereouestafricaine,1914_1929,4,cohen-a; froment-guieysse-g; leverdier-g; tenthorey-v
 fonciereouestafricain,immobilierethies,1914_1929,4,froment-guieysse-g; leme-r; picot-h; poinsinet-de-sivry-g
-etablissementssalagna,salagna,1914_1929,4,lauga-j; motelay-p; soucail-p; weill-m
 colonialebandama,plantationssorotona,1914_1929,4,baye-l; cayron-g; eliautou-e; mandel-a
 comptoirafriqueoccidentale,industrielleproduitscoloniaux,1914_1929,3,cochez-l; rouvrais-f; sustra-f
 africainecommerce,bordelaisecomptoirsafricains,1914_1929,3,delmas-p; frere-m; ph-delmas
@@ -63,7 +65,7 @@ bordelaisecomptoirsafricains,electricitesenegal,1914_1929,3,delmas-p; frere-m; p
 chauxcimentssenegal,etablissementsmaurelprom,1914_1929,3,lavigne-d; maurel-j; maurel-l
 electricitesenegal,messageriesafricaines,1914_1929,3,delmas-p; maurel-l; robert-m
 africaine,afriquecongo,1914_1929,3,lutscher-f; pierre-c; vigouroux-l
-anciensetablissementschpeyrissaccolonialeafrique,cochez,1914_1929,3,e-guignard; gorgeu-m; peyrissac-l
+anciensetablissementschpeyrissaccolonialeafrique,leoncochez,1914_1929,3,e-guignard; gorgeu-m; peyrissac-l
 bordelaisecomptoirsafricains,cotonafricain,1914_1929,3,calcat-f; delmas-p; levy-g
 bordelaisecomptoirsafricains,kong,1914_1929,3,calcat-f; katz-m; levy-g
 comptoirsafricains,plantationselimacafeiersaboisso,1914_1929,3,calcat-f; levy-g; mizraki-m
@@ -81,15 +83,16 @@ actionjouissance,kong,1914_1929,3,levy-g; mizraki-m; vivier-e
 actionjouissance,plantationselimacafeiersaboisso,1914_1929,3,levy-g; merle; mizraki-m
 boiscoteivoire,kong,1914_1929,3,levy-g; mizraki-m; picanon-e
 constructionafricaine,silicocalcaireafricaine,1914_1929,3,berengier-m; legrand-r; superville-m
-coteafrique,coteivoire,1914_1929,3,dessau; estier-f; jerichow
+culturesdiakandape,socculturesdiakandape,1914_1929,3,begouen-m; chaumet-g; deves-p
 alsaciennecoteivoire,senegalaisevoieseconomiques,1914_1929,3,bernard-f; bonfils-e; eug-schneider
 plantations,plantationsexploitationscoloniales,1914_1929,3,bour-a; pelissier-e; thibout
 plantations,plantationsexploitationscolonialesbingerville,1914_1929,3,bour-a; pelissier-e; thibout
+huileriesafricaines,salinssinesaloum,1914_1929,3,de-rivaud-o; e-mathon; mathon-e
 bordeauxdirectionnantes,commercialeafricaine,1914_1929,3,buhan-p; thube-a; thube-fils-g
-bordeauxdirectionnantes,nigerguinee,1914_1929,3,buhan-p; thube-a; thube-fils-g
-africaineentreprises,morosini,1914_1929,3,blaise-a; morosini-s; paris-j
-cochez,ouestafricain,1914_1929,3,mopti; segou; siguiri
-coteafrique,ouestafricain,1914_1929,3,anecho; atakpame; dabou
+bordeauxdirectionnantes,socminierenigerguinee,1914_1929,3,buhan-p; thube-a; thube-fils-g
+commercialeafricaine,socminierenigerguinee,1914_1929,3,buhan-p; thube-a; thube-fils-g
+leoncochez,ouestafricain,1914_1929,3,mopti; segou; siguiri
+ouestafricain,soccommercialeindustriellecoteafrique,1914_1929,3,anecho; atakpame; dabou
 financierepalmeraies,huileriesafricaines,1914_1929,2,giraud-r; hallet-a
 comptoirafriqueoccidentale,comptoirssenegalais,1914_1929,2,cochez-l; rouvrais-f
 comptoirssenegalais,industrielleproduitscoloniaux,1914_1929,2,cochez-l; rouvrais-f
@@ -102,13 +105,15 @@ auxiliaireafricainedeveloppementcommerceindustrie,huileriesafricaines,1914_1929,
 banqueafriqueoccidentale,electricitesenegal,1914_1929,2,maurel-l; prom-l
 chauxcimentssenegal,messageriesafricaines,1914_1929,2,maurel-j; maurel-l
 electricitesenegal,salinssinesaloum,1914_1929,2,delmas-p; maurel-l
+electricitesenegal,socsalinssinesaloum,1914_1929,2,delmas-p; maurel-l
 etablissementsmaurelprom,messageriesafricaines,1914_1929,2,maurel-j; maurel-l
 messageriesafricaines,salinssinesaloum,1914_1929,2,delmas-p; maurel-l
+messageriesafricaines,socsalinssinesaloum,1914_1929,2,delmas-p; maurel-l
 auxiliaireafricainedeveloppementcommerceindustrie,comptoirsafricains,1914_1929,2,paulin-c; vezia-f
 comptoirsafricains,salinssinesaloum,1914_1929,2,delmas-p; vezia-f
-anciensetablissementscarpotafricaineelectricite,cochez,1914_1929,2,gorgeu-m; peyrissac-l
-cochez,colonialebia,1914_1929,2,gorgeu-m; peyrissac-l
-cochez,salinscapvert,1914_1929,2,gorgeu-m; peyrissac-l
+anciensetablissementscarpotafricaineelectricite,leoncochez,1914_1929,2,gorgeu-m; peyrissac-l
+colonialebia,leoncochez,1914_1929,2,gorgeu-m; peyrissac-l
+leoncochez,salinscapvert,1914_1929,2,gorgeu-m; peyrissac-l
 afrique,anciensetablissementschpeyrissaccolonialeafrique,1914_1929,2,davillier-j; gorgeu-m
 afrique,salinscapvert,1914_1929,2,davillier-j; gorgeu-m
 bordelaisecomptoirsafricains,forestiereindenie,1914_1929,2,calcat-f; levy-g
@@ -127,42 +132,38 @@ actionjouissance,transitgrandlahou,1914_1929,2,levy-g; mizraki-m
 boiscoteivoire,comptoirsafricains,1914_1929,2,levy-g; mizraki-m
 boiscoteivoire,cotonafricain,1914_1929,2,levy-g; mizraki-m
 boiscoteivoire,plantationselimacafeiersaboisso,1914_1929,2,levy-g; mizraki-m
-bordelaisecomptoirsafricains,industrielleafricaine,1914_1929,2,delmas-p; katz-m
-commercialecoteafrique,consignatairesreunis,1914_1929,2,claverie-g; romanet-b
-comptoirsafricains,industrielleafricaine,1914_1929,2,delmas-p; mizraki-m
+frsekong,plantationselimacafeiersaboisso,1914_1929,2,bretigniere-m; mizraki-m
 comptoirsafricains,minierefoncierebandama,1914_1929,2,menasche-a; mizraki-m
-cotonafricain,industrielleafricaine,1914_1929,2,delmas-p; mizraki-m
 africainecommerce,comptoirsafricains,1914_1929,2,delmas; delmas-p
 cotonafricain,messageriesafricaines,1914_1929,2,begouen-m; delmas-p
 industrielleafricaine,messageriesafricaines,1914_1929,2,delmas-p; philippart-f
 industrielleafricaine,salinssinesaloum,1914_1929,2,delmas-p; mathon-e
+industrielleafricaine,socsalinssinesaloum,1914_1929,2,delmas-p; mathon-e
 africaine,commercialeindustriellepalmeraiesafricaines,1914_1929,2,guynet-w; weber-j
 commercialeindustriellepalmeraiesafricaines,plantationstanoe,1914_1929,2,allibaud-j; weber-j
 plantationstanoe,plantationstanoecafeiers,1914_1929,2,legourd-a; weber-j
-coteafrique,scieriesafricaines,1914_1929,2,fouque-j; loisy-x
 alsaciennecoteivoire,forestiereafrique,1914_1929,2,bonfils-e; vizioz-g
 alsaciennecoteivoire,occidentaleafricaine,1914_1929,2,bonfils-e; vizioz-g
 culturesdiakandape,messageriesafricaines,1914_1929,2,begouen-m; deves-p
-coteafrique,culturesdiakandape,1914_1929,2,adm-mm-gaston-chaumet; begouen-m
+messageriesafricaines,socculturesdiakandape,1914_1929,2,begouen-m; deves-p
 culturesdiakandape,plantationshautevoltasisal,1914_1929,2,begouen-m; thams-c
 etablemilehubert,etablissementsemilehubert,1914_1929,2,cavadia-j; reboul-h
 banquecommercialeafricaine,commercialeouestafricain,1914_1929,2,angoulvant-g; francois-marsal-f
 omniumfrancoafricain,senegalaisevoieseconomiques,1914_1929,2,giraud; giraud-a
+huileriesafricaines,socsalinssinesaloum,1914_1929,2,de-rivaud-o; mathon-e
 comptoirsreunisouestafricain,comptoirsreunisouestafricainc,1914_1929,2,caplain-e; fourie-h
 comptoirsreunisouestafricain,raymondbuurmans,1914_1929,2,caplain-e; fourie-h
 bordeauxdirectionnantes,commercialeafricainesuitepascalbuhan,1914_1929,2,buhan-p; thube-a
 commercialeafricaine,commercialeafricainesuitepascalbuhan,1914_1929,2,buhan-p; thube-a
-commercialeafricainesuitepascalbuhan,nigerguinee,1914_1929,2,buhan-p; thube-a
-messageriesafricaines,minesfaleme,1914_1929,2,duchesne-fournet-p; legrand-g
+commercialeafricainesuitepascalbuhan,socminierenigerguinee,1914_1929,2,buhan-p; thube-a
 minessiguiri,miniereguinee,1914_1929,2,c-drosso; drosso-c
 marcelsimon,miniereguinee,1914_1929,2,burrage-r; garnier-g
-huileriesafricaines,salinssinesaloum,1914_1929,2,de-rivaud-o; e-mathon
 chauxcimentssenegal,fonciereouestafricain,1914_1929,2,froment-guieysse-g; picot-h
 chauxcimentssenegal,immobilierethies,1914_1929,2,froment-guieysse-g; picot-h
 industriellegrandepeche,ouestafricainecabotage,1914_1929,2,barris-p; corbin-p
-banqueafriqueoccidentale,macinaniger,1914_1929,2,maurel-e; prom-l
-industrielleafricaine,ouestafricain,1914_1929,2,dabou; dimbokro
-etablissementspozzodiborgo,ouestafricain,1914_1929,2,cote-d-ivoire-grand-bassam; dabou
+banqueafriqueoccidentale,socfranccolonisationmacinaniger,1914_1929,2,maurel-e; prom-l
+frsekong,ouestafricain,1914_1929,2,dabou; dimbokro
+financierepalmeraies,hortala,1914_1929,1,hallet-a
 comptoirafriqueoccidentale,francoafricaineetudesparticipations,1914_1929,1,cochez-l
 comptoirssenegalais,francoafricaineetudesparticipations,1914_1929,1,cochez-l
 francoafricaineetudesparticipations,industrielleproduitscoloniaux,1914_1929,1,cochez-l
@@ -184,13 +185,17 @@ commercialeindustrielleoutremer,electricitesenegal,1914_1929,1,frere-m
 auxiliaireafricainedeveloppementcommerceindustrie,chauxcimentssenegal,1914_1929,1,maurel-l
 auxiliaireafricainedeveloppementcommerceindustrie,etablissementsmaurelprom,1914_1929,1,maurel-l
 auxiliaireafricainedeveloppementcommerceindustrie,messageriesafricaines,1914_1929,1,maurel-l
+auxiliaireafricainedeveloppementcommerceindustrie,socsalinssinesaloum,1914_1929,1,maurel-l
 banqueafriqueoccidentale,chauxcimentssenegal,1914_1929,1,maurel-l
 banqueafriqueoccidentale,etablissementsmaurelprom,1914_1929,1,maurel-l
 banqueafriqueoccidentale,messageriesafricaines,1914_1929,1,maurel-l
+banqueafriqueoccidentale,socsalinssinesaloum,1914_1929,1,maurel-l
 chauxcimentssenegal,electricitesenegal,1914_1929,1,maurel-l
 chauxcimentssenegal,salinssinesaloum,1914_1929,1,maurel-l
+chauxcimentssenegal,socsalinssinesaloum,1914_1929,1,maurel-l
 electricitesenegal,etablissementsmaurelprom,1914_1929,1,maurel-l
 etablissementsmaurelprom,salinssinesaloum,1914_1929,1,maurel-l
+etablissementsmaurelprom,socsalinssinesaloum,1914_1929,1,maurel-l
 auxiliaireafricainedeveloppementcommerceindustrie,cheminsferdahomey,1914_1929,1,nouvion-h
 auxiliaireafricainedeveloppementcommerceindustrie,hortala,1914_1929,1,nouvion-h
 banqueafriqueoccidentale,cheminsferdahomey,1914_1929,1,nouvion-h
@@ -204,13 +209,14 @@ africaine,bankbritishwestafricalimited,1914_1929,1,stuart-m
 africaneasterntradecorporationltdroyalliverbuildingliverpool,bankbritishwestafricalimited,1914_1929,1,stuart-m
 afriquecongo,intercontinentaleentreprisesreunies,1914_1929,1,vigouroux-l
 afrique,anciensetablissementscarpotafricaineelectricite,1914_1929,1,gorgeu-m
-afrique,cochez,1914_1929,1,gorgeu-m
 afrique,colonialebia,1914_1929,1,gorgeu-m
+afrique,leoncochez,1914_1929,1,gorgeu-m
 africainecommerce,commercialeindustriellepalmeraiesafricaines,1914_1929,1,benard-m
 actionjouissance,bordelaisecomptoirsafricains,1914_1929,1,levy-g
 actionjouissance,plantationsreuniesouestafricain,1914_1929,1,levy-g
 boiscoteivoire,bordelaisecomptoirsafricains,1914_1929,1,levy-g
 boiscoteivoire,plantationsreuniesouestafricain,1914_1929,1,levy-g
+bordelaisecomptoirsafricains,frsekong,1914_1929,1,katz-m
 bordelaisecomptoirsafricains,constructionafricaine,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,entreprisesafricaines,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,silicocalcaireafricaine,1914_1929,1,superville-m
@@ -218,16 +224,17 @@ constructionafricaine,entreprisesafricaines,1914_1929,1,superville-m
 entreprisesafricaines,silicocalcaireafricaine,1914_1929,1,superville-m
 afriqueoccidentale,banqueafriqueoccidentale,1914_1929,1,le-cesne-j
 coteivoire,cotelvoire,1914_1929,1,lind-j
-actionjouissance,industrielleafricaine,1914_1929,1,mizraki-m
+actionjouissance,frsekong,1914_1929,1,mizraki-m
 actionjouissance,minierefoncierebandama,1914_1929,1,mizraki-m
-boiscoteivoire,industrielleafricaine,1914_1929,1,mizraki-m
+boiscoteivoire,frsekong,1914_1929,1,mizraki-m
 boiscoteivoire,minierefoncierebandama,1914_1929,1,mizraki-m
+comptoirsafricains,frsekong,1914_1929,1,mizraki-m
+cotonafricain,frsekong,1914_1929,1,mizraki-m
 cotonafricain,minierefoncierebandama,1914_1929,1,mizraki-m
-forestiereindenie,industrielleafricaine,1914_1929,1,mizraki-m
+forestiereindenie,frsekong,1914_1929,1,mizraki-m
 forestiereindenie,minierefoncierebandama,1914_1929,1,mizraki-m
-industrielleafricaine,minierefoncierebandama,1914_1929,1,mizraki-m
-industrielleafricaine,plantationselimacafeiersaboisso,1914_1929,1,mizraki-m
-industrielleafricaine,transitgrandlahou,1914_1929,1,mizraki-m
+frsekong,minierefoncierebandama,1914_1929,1,mizraki-m
+frsekong,transitgrandlahou,1914_1929,1,mizraki-m
 kong,minierefoncierebandama,1914_1929,1,mizraki-m
 minierefoncierebandama,plantationselimacafeiersaboisso,1914_1929,1,mizraki-m
 minierefoncierebandama,transitgrandlahou,1914_1929,1,mizraki-m
@@ -238,20 +245,27 @@ africainecommerce,cotonafricain,1914_1929,1,delmas-p
 africainecommerce,industrielleafricaine,1914_1929,1,delmas-p
 africainecommerce,messageriesafricaines,1914_1929,1,delmas-p
 africainecommerce,senegal,1914_1929,1,delmas-p
+africainecommerce,socsalinssinesaloum,1914_1929,1,delmas-p
+bordelaisecomptoirsafricains,industrielleafricaine,1914_1929,1,delmas-p
 bordelaisecomptoirsafricains,messageriesafricaines,1914_1929,1,delmas-p
 bordelaisecomptoirsafricains,senegal,1914_1929,1,delmas-p
+bordelaisecomptoirsafricains,socsalinssinesaloum,1914_1929,1,delmas-p
 comptoirsafricains,electricitesenegal,1914_1929,1,delmas-p
+comptoirsafricains,industrielleafricaine,1914_1929,1,delmas-p
 comptoirsafricains,messageriesafricaines,1914_1929,1,delmas-p
 comptoirsafricains,senegal,1914_1929,1,delmas-p
+comptoirsafricains,socsalinssinesaloum,1914_1929,1,delmas-p
 cotonafricain,electricitesenegal,1914_1929,1,delmas-p
+cotonafricain,industrielleafricaine,1914_1929,1,delmas-p
 cotonafricain,salinssinesaloum,1914_1929,1,delmas-p
 cotonafricain,senegal,1914_1929,1,delmas-p
+cotonafricain,socsalinssinesaloum,1914_1929,1,delmas-p
 electricitesenegal,industrielleafricaine,1914_1929,1,delmas-p
 electricitesenegal,senegal,1914_1929,1,delmas-p
 industrielleafricaine,senegal,1914_1929,1,delmas-p
 messageriesafricaines,senegal,1914_1929,1,delmas-p
 salinssinesaloum,senegal,1914_1929,1,delmas-p
-commerceindustrieparisservice,messageriesafricaines,1914_1929,1,charbonnel-h
+senegal,socsalinssinesaloum,1914_1929,1,delmas-p
 commerceindustrieparisservice,minesfalemegambie,1914_1929,1,charbonnel-h
 africainecommerce,associationcotonnierecoloniale,1914_1929,1,delmas
 associationcotonnierecoloniale,comptoirsafricains,1914_1929,1,delmas
@@ -273,10 +287,6 @@ commercialeindustriellepalmeraiesafricaines,plantationstanoecafeiers,1914_1929,1
 commercialeindustriellepalmeraiesafricaines,raymondbuurmans,1914_1929,1,weber-j
 plantationstanoe,raymondbuurmans,1914_1929,1,weber-j
 plantationstanoecafeiers,raymondbuurmans,1914_1929,1,weber-j
-bamako,coteafrique,1914_1929,1,hirsch-m
-coteafrique,huileriesrizeriesguinee,1914_1929,1,loisy-x
-coteafrique,huileriesrizeriesouestafricaines,1914_1929,1,loisy-x
-coteafrique,huileriesrizeriesouestafricainesh,1914_1929,1,loisy-x
 culturecotonniereniger,huileriesrizeriesguinee,1914_1929,1,loisy-x
 culturecotonniereniger,huileriesrizeriesouestafricaines,1914_1929,1,loisy-x
 culturecotonniereniger,huileriesrizeriesouestafricainesh,1914_1929,1,loisy-x
@@ -300,25 +310,27 @@ alsaciennecoteivoire,scieriesafricaines,1914_1929,1,vizioz-g
 banqueafriqueoccidentale,scieriesafricaines,1914_1929,1,schwob-g
 cheminferdakarsaintlouis,culturesdiakandape,1914_1929,1,deves-p
 cheminferdakarsaintlouis,messageriesafricaines,1914_1929,1,deves-p
+cheminferdakarsaintlouis,socculturesdiakandape,1914_1929,1,deves-p
 cheminferdakarstlouis,culturesdiakandape,1914_1929,1,deves-p
 cheminferdakarstlouis,messageriesafricaines,1914_1929,1,deves-p
-coteafrique,cotonafricain,1914_1929,1,begouen-m
-coteafrique,messageriesafricaines,1914_1929,1,begouen-m
-coteafrique,plantationshautevoltasisal,1914_1929,1,begouen-m
+cheminferdakarstlouis,socculturesdiakandape,1914_1929,1,deves-p
 cotonafricain,culturesdiakandape,1914_1929,1,begouen-m
 cotonafricain,plantationshautevoltasisal,1914_1929,1,begouen-m
+cotonafricain,socculturesdiakandape,1914_1929,1,begouen-m
 messageriesafricaines,plantationshautevoltasisal,1914_1929,1,begouen-m
+plantationshautevoltasisal,socculturesdiakandape,1914_1929,1,begouen-m
 actionjouissance,importationboisexotiques,1914_1929,1,marguet-a
 commercialeindustriellecoteafrique,occidentaleafricaine,1914_1929,1,fouque-j
 commercialeindustriellecoteafrique,scieriesafricaines,1914_1929,1,fouque-j
 commercialeindustriellecoteafrique,unionforestiereafricaine,1914_1929,1,fouque-j
 commercialeindustriellecoteafrique,usinagebois,1914_1929,1,fouque-j
-coteafrique,occidentaleafricaine,1914_1929,1,fouque-j
-coteafrique,unionforestiereafricaine,1914_1929,1,fouque-j
-coteafrique,usinagebois,1914_1929,1,fouque-j
+occidentaleafricaine,soccommercialeindustriellecoteafrique,1914_1929,1,fouque-j
+scieriesafricaines,soccommercialeindustriellecoteafrique,1914_1929,1,fouque-j
+soccommercialeindustriellecoteafrique,unionforestiereafricaine,1914_1929,1,fouque-j
+soccommercialeindustriellecoteafrique,usinagebois,1914_1929,1,fouque-j
 forestiereafrique,senegalaisevoieseconomiques,1914_1929,1,bonfils-e
 occidentaleafricaine,senegalaisevoieseconomiques,1914_1929,1,bonfils-e
-commercecolonial,nationalecommerce,1914_1929,1,maroc
+commercecolonial,comptoirindustrielagricolefrancecolonies,1914_1929,1,maroc
 banquecommercialeafricaine,comptoirssenegalais,1914_1929,1,angoulvant-g
 banquecommercialeafricaine,ouestafricain,1914_1929,1,angoulvant-g
 banquecommercialeafricaine,silicocalcaireafricaine,1914_1929,1,angoulvant-g
@@ -330,22 +342,30 @@ ouestafricain,silicocalcaireafricaine,1914_1929,1,angoulvant-g
 huileriesafricainesdrewin,omniumfrancoafricain,1914_1929,1,giraud
 huileriesafricainesdrewin,senegalaisevoieseconomiques,1914_1929,1,giraud
 etablissementsbartheslesieur,senegalaisevoieseconomiques,1914_1929,1,barthes-j
-cochez,senegalaisevoieseconomiques,1914_1929,1,thies
+leoncochez,senegalaisevoieseconomiques,1914_1929,1,thies
 comptoircommercialfrancoafricain,ouestafricainecabotage,1914_1929,1,culture
 comptoircommercialfrancoafricain,senegalaisevoieseconomiques,1914_1929,1,culture
 ouestafricainecabotage,senegalaisevoieseconomiques,1914_1929,1,culture
 senegalaisevoieseconomiques,transitgrandlahou,1914_1929,1,vialle-j
 commercialeindustriellepalmeraiesafricaines,intercontinentaleentreprisesreunies,1914_1929,1,guynet-w
 anciensetablissementschpeyrissaccolonialeafrique,salinssinesaloum,1914_1929,1,clanis-g
+anciensetablissementschpeyrissaccolonialeafrique,socetablsalagna,1914_1929,1,salagna-e
 colonialebia,commerceinternationalcolonial,1914_1929,1,lorin-h
+afriqueoccidentale,hortala,1914_1929,1,mathon-e
+afriqueoccidentale,huileriesafricaines,1914_1929,1,mathon-e
 afriqueoccidentale,industrielleafricaine,1914_1929,1,mathon-e
 afriqueoccidentale,salinssinesaloum,1914_1929,1,mathon-e
+afriqueoccidentale,socsalinssinesaloum,1914_1929,1,mathon-e
+hortala,industrielleafricaine,1914_1929,1,mathon-e
+hortala,salinssinesaloum,1914_1929,1,mathon-e
+hortala,socsalinssinesaloum,1914_1929,1,mathon-e
+huileriesafricaines,industrielleafricaine,1914_1929,1,mathon-e
 commerceinternationalcolonial,figafrica,1914_1929,1,tricot-g
 comptoirscoloniaux,etablissementsvincentgoux,1914_1929,1,potton-a
 comptoirsfrancoafricains,comptoirssenegalais,1914_1929,1,capdeville-e
-chauxcimentssenegal,macinaniger,1914_1929,1,maurel-j
-etablissementsmaurelprom,macinaniger,1914_1929,1,maurel-j
-macinaniger,messageriesafricaines,1914_1929,1,maurel-j
+chauxcimentssenegal,socfranccolonisationmacinaniger,1914_1929,1,maurel-j
+etablissementsmaurelprom,socfranccolonisationmacinaniger,1914_1929,1,maurel-j
+messageriesafricaines,socfranccolonisationmacinaniger,1914_1929,1,maurel-j
 commercialeafricaineexportationimportation,omniumcommercialafricain,1914_1929,1,girard-m
 commercialeindustrielleoutremer,marcelsimon,1914_1929,1,gaudart
 commercialeindustriellepalmeraiesafricaines,jeanweber,1914_1929,1,allibaud-j
@@ -368,28 +388,32 @@ huileriesrizeriesouestafricaines,plantationsreuniesouestafricain,1914_1929,1,guy
 huileriesrizeriesouestafricainesh,plantationsreuniesouestafricain,1914_1929,1,guy-c
 comptoirsafricains,huileriesrizeriesouestafricaines,1914_1929,1,vezia
 comptoirsafricains,huileriesrizeriesouestafricainesh,1914_1929,1,vezia
-grandepeche,industriellegrandepeche,1914_1929,1,corbin-p
-grandepeche,ouestafricainecabotage,1914_1929,1,corbin-p
+comptoirindustrielagricolefrancecolonies,immobilierethies,1914_1929,1,richard-m
+industriellegrandepeche,socindustriellegrandepeche,1914_1929,1,corbin-p
+ouestafricainecabotage,socindustriellegrandepeche,1914_1929,1,corbin-p
+commerceinternationalcolonial,culturestropicalesafrique,1914_1929,1,monteux-m
 comptoircommercialfrancoafricain,culturestropicalesafrique,1914_1929,1,monteux-m
 jeanweber,plantationstanoecafeiers,1914_1929,1,legourd-a
 nigeragricole,senegalaisevoieseconomiques,1914_1929,1,dalleau
 ouestafricain,ouestafricainecabotage,1914_1929,1,tombouctou
 comptoircommercialfrancoafricain,culturesbananeraieskinsan,1914_1929,1,kyriacopoulos
-comptoircommercialfrancoafricain,industrielleafricaine,1914_1929,1,tiassale
-comptoircommercialfrancoafricain,salagna,1914_1929,1,tiassale
-industrielleafricaine,salagna,1914_1929,1,tiassale
+comptoircommercialfrancoafricain,frsekong,1914_1929,1,tiassale
+comptoircommercialfrancoafricain,socetablsalagna,1914_1929,1,tiassale
+frsekong,socetablsalagna,1914_1929,1,tiassale
 africainecommerce,commercialeindustrielleagricolepalmeraiesafricaines,1914_1929,1,benard
-bordelaisecomptoirsafricains,macinaniger,1914_1929,1,prom-l
-electricitesenegal,macinaniger,1914_1929,1,prom-l
-consignatairesreunis,industrielleafricaine,1914_1929,1,dimbokro
-consignatairesreunis,ouestafricain,1914_1929,1,dimbokro
-coteafrique,etablissementspozzodiborgo,1914_1929,1,dabou
-coteafrique,industrielleafricaine,1914_1929,1,dabou
-etablissementspozzodiborgo,industrielleafricaine,1914_1929,1,dabou
+bordelaisecomptoirsafricains,socfranccolonisationmacinaniger,1914_1929,1,prom-l
+electricitesenegal,socfranccolonisationmacinaniger,1914_1929,1,prom-l
+commercialecoteafrique,frsekong,1914_1929,1,dimbokro
+commercialecoteafrique,ouestafricain,1914_1929,1,dimbokro
+etablissementspozzodiborgo,frsekong,1914_1929,1,dabou
+etablissementspozzodiborgo,ouestafricain,1914_1929,1,dabou
+etablissementspozzodiborgo,soccommercialeindustriellecoteafrique,1914_1929,1,dabou
+frsekong,soccommercialeindustriellecoteafrique,1914_1929,1,dabou
+hautogooue,minierefoncierebandama,1914_1929,1,halphen-j
 hortala,huileriesafricainesdrewin,1914_1929,1,van-de-velde-w
 huileriesafricaines,huileriesafricainesdrewin,1914_1929,1,van-de-velde-w
 commercialeafricaine,ouestafricain,1914_1929,1,bissao
-ouestafricain,salagna,1914_1929,1,bafata
+ouestafricain,socetablsalagna,1914_1929,1,bafata
 bananeriesafricaines,miniereagricolemarcory,1914_1929,1,p-forveille-imprimeur-de-titres-paris-rodez
 bananeriesafricaines,plantationsreuniesouestafricain,1914_1929,1,p-forveille-imprimeur-de-titres-paris-rodez
 miniereagricolemarcory,plantationsreuniesouestafricain,1914_1929,1,p-forveille-imprimeur-de-titres-paris-rodez
@@ -410,6 +434,7 @@ granddrewin,uniontropicaleplantations,1930_1944,7,daudier-e; de-beaumont-j; de-r
 elevagenigerdire,tambacuunda,1930_1944,6,cahen-fuzier-e; hermann-du-pasquier; hirsch-a; hirsch-h; knig-f; villars-r
 alsaciennecoteivoire,culturesdiakandape,1930_1944,6,bedouet-j; begouen-m; calvet-g; godet-r; massena-prince-d-essling-a; renoux-l
 alsaciennecoteivoire,plantationsambidedisisal,1930_1944,6,begouen-m; calvet-g; godet-r; guy-de-lestapis; massena-prince-d-essling-a; renoux-l
+culturesdiakandape,etablissementsdeveschaumet,1930_1944,6,begouen; begouen-m; chaumet-g; de-lestapis-r; deves-p; gradis-g
 plantationshautevolta,plantationshautevoltasisal,1930_1944,6,begouen-m; demachy-r; helbronner-h; massena-prince-d-essling-a; philippson-j; renoux-l
 africaine,plantationsafriqueoccidentaleeloka,1930_1944,6,berton-a; brussel-j; dromel-p; lehideux-j; lehideux-p; thureau-dangin-p
 banquecommercialeafricaine,immobilierefinanciereafricaine,1930_1944,6,archawski-w; bouvier-r; furiet-c; guillaume-r; lavagne-d-ortigue-j; sellier-p
@@ -417,15 +442,12 @@ agricolecommercialeindustriellebadikaha,agricolecommercialeindustriellebadikahac
 bobodioulasso,omniumroutierouestafricain,1930_1944,5,barasse-a; bouyssou-j; doumic-j; marguin-j; simon-g
 agricoleindustriellesoudan,culturecotonniereniger,1930_1944,5,bedouet-j; cahen-fuzier-e; hermann-du-pasquier; hirsch-h; villars-r
 agricoleindustriellesoudan,elevagenigerdire,1930_1944,5,cahen-fuzier-e; hermann-du-pasquier; hirsch-a; hirsch-h; villars-r
-agricoleindustriellesoudan,messageriesafricaines,1930_1944,5,begouen-m; cahen-fuzier-e; hirsch-h; renoux-l; villars-r
 agricoleindustriellesoudan,tambacuunda,1930_1944,5,cahen-fuzier-e; hermann-du-pasquier; hirsch-a; hirsch-h; villars-r
 bamako,elevagenigerdire,1930_1944,5,cahen-fuzier-e; frank-de-latour-dejean; hirsch-h; level-e; villars-r
 bamako,messageriesafricaines,1930_1944,5,cahen-fuzier-e; decron-c; hirsch-h; monnet-h; villars-r
 culturecotonniereniger,elevagenigerdire,1930_1944,5,cahen-fuzier-e; hermann-du-pasquier; hirsch-h; level-e; villars-r
 alsaciennecoteivoire,colonialegeranceetudes,1930_1944,5,bedouet-j; begouen-m; demachy-r; massena-prince-d-essling-a; renoux-l
 colonialegeranceetudes,culturesdiakandape,1930_1944,5,bedouet-j; begouen-m; de-lestapis-r; massena-prince-d-essling-a; renoux-l
-culturesdiakandape,etablissementsdeveschaumet,1930_1944,5,begouen-m; chaumet-g; de-lestapis-r; deves-p; gradis-g
-commercialeafricainesuitepascalbuhan,navigationpaquet,1930_1944,5,adm-mm-g-thube-fils; buhan-p; direction; exportation-au-senegal; thube-a
 africaine,eloka,1930_1944,5,berton-a; brussel-j; dromel-p; lehideux-j; lehideux-p
 eloka,messageriesafricaines,1930_1944,5,berton-a; brussel-j; d-eudeville-h; dromel-p; lehideux-p
 messageriesafricaines,plantationsafriqueoccidentaleeloka,1930_1944,5,berton-a; brussel-j; d-eudeville-h; dromel-p; lehideux-p
@@ -439,6 +461,7 @@ minesfaleme,minesfalemegambie,1930_1944,5,charlier-a; de-la-mazeliere-o; duchesn
 sonolet,unioncolonialeafriqueoccidentale,1930_1944,5,callens-g; deleplanque-p; grenouilleau-m; haechler-j; ode-l
 yoniakolente,yoniakolentekolente,1930_1944,5,carnot-l; froissart-l; guy-de-la-touanne; herve-de-pommereau; le-bret-r
 culturecotonniereniger,messageriesafricaines,1930_1944,4,cahen-fuzier-e; carde-j; hirsch-h; villars-r
+agricoleindustriellesoudan,messageriesafricaines,1930_1944,4,begouen-m; cahen-fuzier-e; hirsch-h; villars-r
 bamako,culturecotonniereniger,1930_1944,4,cahen-fuzier-e; hirsch-h; level-e; villars-r
 culturecotonniereniger,tambacuunda,1930_1944,4,cahen-fuzier-e; hermann-du-pasquier; hirsch-h; villars-r
 agricoleindustriellesoudan,alsaciennecoteivoire,1930_1944,4,bedouet-j; begouen-m; godet-r; renoux-l
@@ -450,14 +473,16 @@ colonialegeranceetudes,plantationshautevolta,1930_1944,4,begouen-m; demachy-r; m
 colonialegeranceetudes,plantationshautevoltasisal,1930_1944,4,begouen-m; demachy-r; massena-prince-d-essling-a; renoux-l
 culturesdiakandape,plantationshautevolta,1930_1944,4,begouen-m; helbronner-h; massena-prince-d-essling-a; renoux-l
 culturesdiakandape,plantationshautevoltasisal,1930_1944,4,begouen-m; helbronner-h; massena-prince-d-essling-a; renoux-l
+commercialeafricainesuitepascalbuhan,navigationpaquet,1930_1944,4,buhan-p; exportation-au-senegal; thube-a; thube-fils-g
 coteivoire,niger,1930_1944,4,deveaud-p; faure-a; leibosis-l; thube-a
 africaine,messageriesafricaines,1930_1944,4,berton-a; brussel-j; dromel-p; lehideux-p
 etablissementsjdelmasafricaineimportation,manutentionafricaine,1930_1944,4,delmas-p; delmas-r; o-quin-p; rodel-a
-delmas,etablissementsdeveschaumet,1930_1944,4,begouen-j; chaumet-g; deves-p; sorbe-e
+koba,scieriesafricaines,1930_1944,4,allegre-l; bricard-l; fourn-g; fousse-p
+occidentaleafricaine,scieriesafricaines,1930_1944,4,allegre-l; bricard-l; fourn-g; fousse-p
+banqueafriqueoccidentale,socbriqueteriesbamako,1930_1944,4,boyer-p; maurel-l; schwob-g; simon-s
 etablissementsroucharde,rouchard,1930_1944,4,alcan; claude-a; cremieu-alcan-e; levis-h
 automobilescoteafrique,briqueteriesbamako,1930_1944,4,daroussin-j; guieysse-p; mollard-j; you-e
 briqueteriesbamako,senegalaisetransportscommun,1930_1944,4,daroussin-j; dujardin-e; guieysse-p; mollard-j
-messageriesafricaines,minesfaleme,1930_1944,4,lederlin-h; martin-j; paulis-a; renoux-l
 plantationsexploitationscoloniales,plantationsexploitationscolonialesbingerville,1930_1944,4,bour-a; deschamps-p; pelissier-e; thibout
 diourbel,guineennerecherchesexploitationsminieres,1930_1944,4,baer-e; bryce-doyle-d; de-breteuil-c; faye-j
 africainesisal,africainesisaloyenbamparrufisque,1930_1944,4,dutheil-de-la-rochere-m; halna-du-fretay-c; herve-le-grand; jacques-r-doumic
@@ -474,7 +499,6 @@ agricoleindustriellesoudan,plantationshuileriesbingerville,1930_1944,3,bedouet-j
 alsaciennecoteivoire,plantationshuileriesbingerville,1930_1944,3,bedouet-j; begouen-m; godet-r
 colonialegeranceetudes,plantationsambidedisisal,1930_1944,3,begouen-m; massena-prince-d-essling-a; renoux-l
 colonialegeranceetudes,plantationscasamance,1930_1944,3,begouen-m; demachy-r; renoux-l
-culturesdiakandape,messageriesafricaines,1930_1944,3,begouen; begouen-m; renoux-l
 culturesdiakandape,plantationshuileriesbingerville,1930_1944,3,bedouet-j; begouen-m; godet-r
 messageriesafricaines,plantationshuileriesbingerville,1930_1944,3,begouen-m; lehideux-p; schreder-m
 plantationsambidedisisal,plantationshautevolta,1930_1944,3,begouen-m; massena-prince-d-essling-a; renoux-l
@@ -483,7 +507,6 @@ plantationscasamance,plantationshautevolta,1930_1944,3,begouen-m; demachy-r; ren
 plantationscasamance,plantationshautevoltasisal,1930_1944,3,begouen-m; demachy-r; renoux-l
 dakarsoutes,senegalapprovisionnement,1930_1944,3,fossorier-r; lemaignen-r; olivier-m
 messageriesafricaines,portscoloniauxboitepostale233,1930_1944,3,du-moulin-de-labarthete-h; lemaignen-r; marceron-m
-etablissementsmaurelprom,messageriesafricaines,1930_1944,3,durand-reville-l; maurel-j; maurel-r
 aboisso,commercialeafricaine,1930_1944,3,deveaud-p; faure-a; thube-a
 aboisso,coteivoire,1930_1944,3,deveaud-p; faure-a; thube-a
 aboisso,miniereniger,1930_1944,3,deveaud-p; faure-a; thube-a
@@ -500,7 +523,6 @@ assinie,importationboisexotiques,1930_1944,3,joubert-j; plagelat-l; ratheau-m
 bananeriesafricaines,etablissementsjdelmasafricaineimportation,1930_1944,3,delmas-p; delmas-r; o-quin-p
 bananeriesafricaines,manutentionafricaine,1930_1944,3,delmas-p; delmas-r; o-quin-p
 bananeriesafricaines,techniqueexploitationbananiere,1930_1944,3,delmas-p; loste-h; o-quin-p
-culturesdiakandape,delmas,1930_1944,3,begouen; chaumet-g; deves-p
 alsaciennecoteivoire,bordelaiseforestiere,1930_1944,3,bricard-l; fourn-g; fousse-p
 alsaciennecoteivoire,koba,1930_1944,3,bricard-l; fourn-g; fousse-p
 alsaciennecoteivoire,occidentaleafricaine,1930_1944,3,bricard-l; fourn-g; fousse-p
@@ -508,12 +530,10 @@ alsaciennecoteivoire,scieriesafricaines,1930_1944,3,bricard-l; fourn-g; fousse-p
 bordelaiseforestiere,koba,1930_1944,3,bricard-l; fourn-g; fousse-p
 bordelaiseforestiere,occidentaleafricaine,1930_1944,3,bricard-l; fourn-g; fousse-p
 bordelaiseforestiere,scieriesafricaines,1930_1944,3,bricard-l; fourn-g; fousse-p
-koba,scieriesafricaines,1930_1944,3,bricard-l; fourn-g; fousse-p
-occidentaleafricaine,scieriesafricaines,1930_1944,3,bricard-l; fourn-g; fousse-p
 agboville,importationboisexotiques,1930_1944,3,levy-g; mizraki-m; plagelat-l
 forestiereindenie,plantationshuileriesbingerville,1930_1944,3,lemaitre-r; plagelat-l; pognon-l
 automobilescoteafrique,senegalaisetransportscommun,1930_1944,3,daroussin-j; guieysse-p; mollard-j
-commercialeindustriellecoteafrique,coteafrique,1930_1944,3,dufay-c; fraissinet-j; magnan-f
+commercialeindustriellecoteafrique,soccommercialeindustriellecoteafrique,1930_1944,3,dufay-c; fraissinet-j; magnan-f
 diogue,ilmenitediogue,1930_1944,3,leyrat; schuhmann-a; schuhmann-p
 exploitationportservicespublicsportetiennesuivirezzousportetienne,portetienne,1930_1944,3,barris-p; corbin-p; robert-a
 diourbel,exploitationsminieresafriqueoccidentale,1930_1944,3,baer-e; bryce-doyle-d; de-breteuil-c
@@ -526,22 +546,16 @@ colonialerepresentation,culturecotonniereniger,1930_1944,2,hirsch-h; hirsch-p
 agricoleindustriellesoudan,plantationscasamance,1930_1944,2,begouen-m; renoux-l
 agricoleindustriellesoudan,plantationshautevolta,1930_1944,2,begouen-m; renoux-l
 agricoleindustriellesoudan,plantationshautevoltasisal,1930_1944,2,begouen-m; renoux-l
-alsaciennecoteivoire,messageriesafricaines,1930_1944,2,begouen-m; renoux-l
 colonialegeranceetudes,etablissementsdeveschaumet,1930_1944,2,begouen-m; de-lestapis-r
-colonialegeranceetudes,messageriesafricaines,1930_1944,2,begouen-m; renoux-l
 colonialegeranceetudes,plantationshuileriesbingerville,1930_1944,2,bedouet-j; begouen-m
 culturesdiakandape,plantationscasamance,1930_1944,2,begouen-m; renoux-l
-etablissementsdeveschaumet,messageriesafricaines,1930_1944,2,begouen-j; begouen-m
 etablissementsdeveschaumet,plantationsambidedisisal,1930_1944,2,begouen-m; gradis-g
-messageriesafricaines,plantationsambidedisisal,1930_1944,2,begouen-m; renoux-l
-messageriesafricaines,plantationscasamance,1930_1944,2,begouen-m; renoux-l
-messageriesafricaines,plantationshautevolta,1930_1944,2,begouen-m; renoux-l
-messageriesafricaines,plantationshautevoltasisal,1930_1944,2,begouen-m; renoux-l
 plantationsambidedisisal,plantationscasamance,1930_1944,2,begouen-m; renoux-l
 plantationsambidedisisal,plantationshuileriesbingerville,1930_1944,2,begouen-m; godet-r
 commercialefruitscoloniaux,messageriesafricaines,1930_1944,2,decron-c; thube-a
 messageriesafricaines,senegalapprovisionnement,1930_1944,2,lemaignen-r; marceron-m
 portscoloniauxboitepostale233,senegalapprovisionnement,1930_1944,2,lemaignen-r; marceron-m
+etablissementsmaurelprom,messageriesafricaines,1930_1944,2,durand-reville-l; maurel-r
 agricoleindustriellesoudan,plantationsguineesanankoroni,1930_1944,2,bedouet-j; villars-r
 charbonniereouestafricain,commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons,1930_1944,2,bouffe-g; marceron-m
 charbonniereouestafricain,senegalapprovisionnement,1930_1944,2,fossorier-r; marceron-m
@@ -558,11 +572,11 @@ etablissementsjdelmasafricaineimportation,techniqueexploitationbananiere,1930_19
 manutentionafricaine,salinssinesaloum,1930_1944,2,delmas-p; o-quin-p
 manutentionafricaine,techniqueexploitationbananiere,1930_1944,2,delmas-p; o-quin-p
 salinssinesaloum,techniqueexploitationbananiere,1930_1944,2,delmas-p; o-quin-p
-delmas,messageriesafricaines,1930_1944,2,begouen; begouen-j
+etablissementsdeveschaumet,socmessageriesafricaines,1930_1944,2,begouen; begouen-j
 banqueafriqueoccidentale,etablissementsmaurelprom,1930_1944,2,gradis-g; maurel-j
 banqueafriqueoccidentale,maurelfreres,1930_1944,2,maurel-j; maurel-l
-banqueafriqueoccidentale,messageriesafricaines,1930_1944,2,maurel-j; maurel-l
-maurelfreres,messageriesafricaines,1930_1944,2,maurel-j; maurel-l
+banqueafriqueoccidentale,socmessageriesafricaines,1930_1944,2,maurel-j; maurel-l
+maurelfreres,socmessageriesafricaines,1930_1944,2,maurel-j; maurel-l
 etablissementscharlesperinaud,exportationcoloniale,1930_1944,2,jacquin-j; perrin-o
 agboville,plantationshuileriesbingerville,1930_1944,2,mizraki-m; plagelat-l
 importationboisexotiques,plantationselimacafeiersaboisso,1930_1944,2,merle; mizraki-m
@@ -573,17 +587,15 @@ africainefinanciereagricole,granddrewin,1930_1944,2,hallet-r; schoofs-m
 africainefinanciereagricole,uniontropicaleplantations,1930_1944,2,hallet-r; schoofs-m
 agencehavre,assinie,1930_1944,2,plagelat-l; ratheau-m
 agencehavre,importationboisexotiques,1930_1944,2,plagelat-l; ratheau-m
-africainearmement,automobilescoteafrique,1930_1944,2,daroussin-j; you-e
-africainearmement,briqueteriesbamako,1930_1944,2,daroussin-j; you-e
 brasseriesouestafricain,hoteliereouestafricain,1930_1944,2,lorfevre-j; orcel-j
 brasseriesouestafricain,hoteliereouestafricainchoa,1930_1944,2,lorfevre-j; orcel-j
-messageriesafricaines,minesfalemegambie,1930_1944,2,lederlin-h; martin-j
 forceshydrauliquesguinee,miniereguinee,1930_1944,2,burrage-r; garnier-g
 auxiliaireartisanatcolonial,briqueteriesbamako,1930_1944,2,dujardin-e; ferre-p
 industriellecoloniale,portetienne,1930_1944,2,barris-p; lessault-s
 kokumbo,miniereindustrielleimmobilierecoteivoire,1930_1944,2,berger; tezier-h
 cafescoteivoire,forestiereindenie,1930_1944,2,deloffre-g; lemaitre-r
 aboisso,cafescoteivoire,1930_1944,2,deloffre-g; guibert-g
+banqueafriqueoccidentale,scieriesafricaines,1930_1944,2,fourn-g; schwob-d-hericourt-g
 commercialeindustriellepalmeraiesafricaines,comptoirsreunisouestafricain,1930_1944,2,desouches-b; weber-j
 forestierebandama,grandlahou,1930_1944,2,noel-a; noel-l
 agboville,bordelaisecomptoirsafricains,1930_1944,2,calcat-f; levy-g
@@ -611,10 +623,18 @@ colonialerepresentation,messageriesafricaines,1930_1944,1,hirsch-h
 colonialerepresentation,tambacuunda,1930_1944,1,hirsch-h
 agricoleindustriellesoudan,etablissementsdeveschaumet,1930_1944,1,begouen-m
 alsaciennecoteivoire,etablissementsdeveschaumet,1930_1944,1,begouen-m
+alsaciennecoteivoire,messageriesafricaines,1930_1944,1,begouen-m
+colonialegeranceetudes,messageriesafricaines,1930_1944,1,begouen-m
+culturesdiakandape,messageriesafricaines,1930_1944,1,begouen-m
+etablissementsdeveschaumet,messageriesafricaines,1930_1944,1,begouen-m
 etablissementsdeveschaumet,plantationscasamance,1930_1944,1,begouen-m
 etablissementsdeveschaumet,plantationshautevolta,1930_1944,1,begouen-m
 etablissementsdeveschaumet,plantationshautevoltasisal,1930_1944,1,begouen-m
 etablissementsdeveschaumet,plantationshuileriesbingerville,1930_1944,1,begouen-m
+messageriesafricaines,plantationsambidedisisal,1930_1944,1,begouen-m
+messageriesafricaines,plantationscasamance,1930_1944,1,begouen-m
+messageriesafricaines,plantationshautevolta,1930_1944,1,begouen-m
+messageriesafricaines,plantationshautevoltasisal,1930_1944,1,begouen-m
 plantationscasamance,plantationshuileriesbingerville,1930_1944,1,begouen-m
 plantationshautevolta,plantationshuileriesbingerville,1930_1944,1,begouen-m
 plantationshautevoltasisal,plantationshuileriesbingerville,1930_1944,1,begouen-m
@@ -691,13 +711,12 @@ importationboisexotiques,soudanaise,1930_1944,1,joubert-j
 domainekokumbo,miniereouestafricaine,1930_1944,1,gerard-r
 domainekokumbo,miniereouestafricaineaboisso,1930_1944,1,gerard-r
 domainekokumbo,soudanaise,1930_1944,1,gerard-r
-bananeriesafricaines,messageriesafricaines,1930_1944,1,delmas-p
-etablissementsjdelmasafricaineimportation,messageriesafricaines,1930_1944,1,delmas-p
-manutentionafricaine,messageriesafricaines,1930_1944,1,delmas-p
-messageriesafricaines,salinssinesaloum,1930_1944,1,delmas-p
-messageriesafricaines,techniqueexploitationbananiere,1930_1944,1,delmas-p
+bananeriesafricaines,socmessageriesafricaines,1930_1944,1,delmas-p
+etablissementsjdelmasafricaineimportation,socmessageriesafricaines,1930_1944,1,delmas-p
+manutentionafricaine,socmessageriesafricaines,1930_1944,1,delmas-p
+salinssinesaloum,socmessageriesafricaines,1930_1944,1,delmas-p
+socmessageriesafricaines,techniqueexploitationbananiere,1930_1944,1,delmas-p
 cheminferdakarsaintlouis,culturesdiakandape,1930_1944,1,deves-p
-cheminferdakarsaintlouis,delmas,1930_1944,1,deves-p
 cheminferdakarsaintlouis,etablissementsdeveschaumet,1930_1944,1,deves-p
 brasseriesouestafricain,colonialegeranceetudes,1930_1944,1,de-lestapis-r
 brasseriesouestafricain,culturesdiakandape,1930_1944,1,de-lestapis-r
@@ -719,8 +738,11 @@ etablissementsmaurelprom,koba,1930_1944,1,fousse-p
 etablissementsmaurelprom,occidentaleafricaine,1930_1944,1,fousse-p
 etablissementsmaurelprom,scieriesafricaines,1930_1944,1,fousse-p
 etablissementsmaurelprom,maurelfreres,1930_1944,1,maurel-j
+etablissementsmaurelprom,socmessageriesafricaines,1930_1944,1,maurel-j
 bordelaisecomptoirsafricains,etablissementsvezia,1930_1944,1,vezia-f
 airof,cffabre,1930_1944,1,fabre-p
+maurelfreres,socbriqueteriesbamako,1930_1944,1,maurel-l
+socbriqueteriesbamako,socmessageriesafricaines,1930_1944,1,maurel-l
 brasseriesouestafricain,maurelfreres,1930_1944,1,maurel-h
 agboville,maurelfreres,1930_1944,1,mizraki-m
 agboville,pecheralcharpentiertiassale,1930_1944,1,mizraki-m
@@ -764,7 +786,6 @@ agencehavre,plantationshuileriesbingerville,1930_1944,1,plagelat-l
 assinie,forestiereindenie,1930_1944,1,plagelat-l
 assinie,plantationshuileriesbingerville,1930_1944,1,plagelat-l
 forestiereindenie,importationboisexotiques,1930_1944,1,plagelat-l
-africainearmement,senegalaisetransportscommun,1930_1944,1,daroussin-j
 commercialefruitscoloniaux,sotorra,1930_1944,1,chavanel-e
 bananeriesafricaines,entreprisesafricaines,1930_1944,1,loste-h
 bananeriesafricaines,immobilierefinanciereafricaine,1930_1944,1,loste-h
@@ -784,7 +805,6 @@ direction,sisaleraiescarburantsafricains,1930_1944,1,thomasset-a
 eauxelectriciteouestafricain,sisaleraiescarburantsafricains,1930_1944,1,thomasset-a
 creditfoncierouestafricain,eauxelectriciteouestafricain,1930_1944,1,davillier-j
 diourbel,fonciereafrique,1930_1944,1,jean-duclos-j
-bobodioulasso,messageriesafricaines,1930_1944,1,lederlin-h
 bobodioulasso,minesfaleme,1930_1944,1,lederlin-h
 bobodioulasso,minesfalemegambie,1930_1944,1,lederlin-h
 auxiliaireartisanatcolonial,senegalaisetransportscommun,1930_1944,1,dujardin-e
@@ -831,7 +851,6 @@ alsaciennecoteivoire,banqueafriqueoccidentale,1930_1944,1,fourn-g
 banqueafriqueoccidentale,bordelaiseforestiere,1930_1944,1,fourn-g
 banqueafriqueoccidentale,koba,1930_1944,1,fourn-g
 banqueafriqueoccidentale,occidentaleafricaine,1930_1944,1,fourn-g
-banqueafriqueoccidentale,scieriesafricaines,1930_1944,1,fourn-g
 aboisso,pecheralcharpentiertiassale,1930_1944,1,guibert-g
 cafescoteivoire,pecheralcharpentiertiassale,1930_1944,1,guibert-g
 cafescoteivoire,plantationselima,1930_1944,1,guibert-g
@@ -849,8 +868,8 @@ banquecommercialeafricaine,commercialeindustriellepalmeraiesafricaines,1930_1944
 banquecommercialeafricaine,comptoirsreunisouestafricain,1930_1944,1,weber-j
 commercialeindustriellepalmeraiesafricaines,plantationstanoe,1930_1944,1,desouches-b
 comptoirsreunisouestafricain,plantationstanoe,1930_1944,1,desouches-b
-granddrewin,huileriesafricaines,1930_1944,1,rosa-e
-huileriesafricaines,uniontropicaleplantations,1930_1944,1,rosa-e
+granddrewin,sochuileriesafricaines,1930_1944,1,rosa-e
+sochuileriesafricaines,uniontropicaleplantations,1930_1944,1,rosa-e
 agboville,portetienne,1930_1944,1,cafe-r
 agboville,sisaleraiescarburantsafricains,1930_1944,1,calcat-f
 bordelaisecomptoirsafricains,forestieresassandra,1930_1944,1,calcat-f
@@ -860,13 +879,11 @@ bordelaisecomptoirsafricains,importationboisexotiques,1930_1944,1,levy-g
 agboville,colonialeautomobile,1930_1944,1,camoin-p
 oreinach,palme,1930_1944,1,agricole-du-ht-ogooue
 africainesisaloyenbamparrufisque,unioncolonialeelectricite,1930_1944,1,froment-guieysse-g
-frseafriqueoccidentale,macinaniger,1930_1944,1,kaolack
-africainearmement,banqueafriqueoccidentale,1930_1944,1,schwob-g
-coteafrique,culturecotonniereniger,1930_1944,1,hirsch-l
-dondain,messageriesafricaines,1930_1944,1,paulis-a
-dondain,minesfaleme,1930_1944,1,paulis-a
-elevagenigerdire,huileriesafricaines,1930_1944,1,mathon-e
-huileriesafricaines,kong,1930_1944,1,exportation-a-la-cote-d-ivoire-huile
+etablissementsmaurelprom,frseafriqueoccidentale,1930_1944,1,kaolack
+culturesdiakandape,socmessageriesafricaines,1930_1944,1,begouen
+auxiliaireentreprisescolonialesminieresindustrielles,minesfaleme,1930_1944,1,paulis-a
+elevagenigerdire,sochuileriesafricaines,1930_1944,1,mathon-e
+frsekong,kong,1930_1944,1,e-picanon
 banqueafriqueoccidentale,creditfoncierouestafricain,1930_1944,1,nouvion-h
 agricoleafricaine,banquecommercialeafricaine,1930_1944,1,angoulvant-g
 minierefoncierebandama,miniereindustrielleimmobilierecoteivoire,1930_1944,1,frot-h
@@ -1065,6 +1082,7 @@ industrielleafricaine,messageriesafricaines,post_1962,2,delmas-p; philippart-f
 salinssinesaloum,unionremorqueursdakar,post_1962,2,delmas-p; moreau-neret-a
 minessiguiri,miniereguinee,post_1962,2,c-drosso; officier-d-artillerie-v
 forceshydrauliquesguinee,miniereguinee,post_1962,2,burrage-r; garnier-g
+financierecolonies,huileriesafricaines,post_1962,2,de-rivaud-o; hallet-a
 huileriesafricaines,salinssinesaloum,post_1962,2,de-rivaud-o; e-mathon
 kokumbocoltd,minierefoncierebandama,post_1962,2,h-frot; sho
 culturesdiakandape,etudesgestionecoloniales,post_1962,2,begouen-m; massena-a
@@ -1128,7 +1146,7 @@ salinssinesaloum,unionsenegalaiseindustriesmaritimes,post_1962,1,delmas-p
 senegal10,unionremorqueursdakar,post_1962,1,delmas-p
 senegal10,unionsenegalaiseindustriesmaritimes,post_1962,1,delmas-p
 unionremorqueursdakar,unionsenegalaiseindustriesmaritimes,post_1962,1,delmas-p
-financierecolonies,huileriesafricaines,post_1962,1,hallet-a
+financierecolonies,salinssinesaloum,post_1962,1,de-rivaud-o
 africaineassurancesf,colonialesac,post_1962,1,petersen-v
 africaineassurancesf,huilerieouestafricain,post_1962,1,petersen-v
 colonialesac,huilerieouestafricain,post_1962,1,petersen-v

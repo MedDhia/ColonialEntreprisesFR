@@ -21,7 +21,7 @@
     <node id="colonialeagricolecommercialeindustriellesucreriescoloniales">
       <data key="n_label">Société coloniale, agricole, commerciale et industrielle Sucreries coloniales</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">57</data>
+      <data key="n_n_directors">52</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="creditfonciercolonial">
@@ -81,7 +81,7 @@
     <node id="sucreriescolonialescolonialeagricolecommerciale">
       <data key="n_label">Sucreries coloniales (Société coloniale, agricole, commerciale et</data>
       <data key="n_sectors">Sociétés diverses</data>
-      <data key="n_n_directors">14</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <edge id="e0" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="sucreriescoloniales">
@@ -100,10 +100,10 @@
       <data key="e_weight">6</data>
     </edge>
     <edge id="e5" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="creditfonciercolonial">
-      <data key="e_weight">5</data>
+      <data key="e_weight">6</data>
     </edge>
     <edge id="e6" source="creditfonciercolonial" target="sucreriescoloniales">
-      <data key="e_weight">5</data>
+      <data key="e_weight">6</data>
     </edge>
     <edge id="e7" source="creditfonciercolonial" target="sucreriescolonialescolonialeagricolecommerciale">
       <data key="e_weight">5</data>
@@ -112,7 +112,7 @@
       <data key="e_weight">4</data>
     </edge>
     <edge id="e9" source="creditfonciercolonial" target="rhumspurs">
-      <data key="e_weight">3</data>
+      <data key="e_weight">4</data>
     </edge>
     <edge id="e10" source="parisbourbondeveloppementrelationsentre" target="parisbourbondeveloppementrelationsentrefrance">
       <data key="e_weight">2</data>

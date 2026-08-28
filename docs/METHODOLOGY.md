@@ -69,19 +69,19 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (804 assertions).
+`checks.py` validates the parsers and the built dataset (837 assertions).
 
 ## 2b. What is *not* extracted
 
 Extraction of the PDFs is near-complete: 5,867 of 5,920 documents (99.2%), the
-rest dead links. Turning that text into ties is not. **3,594 of the 5,867
-(61%) yield at least one tie**; the other 2,273 hold 26% of the extracted
+rest dead links. Turning that text into ties is not. **3,592 of the 5,867
+(61%) yield at least one tie**; the other 2,271 hold 26% of the extracted
 characters. When only the dossier parser existed those figures were 2,482
 (42%) and 47% — stages 3b–3e, below, are what closed the gap. This section
 says what is still in the residue, because a reader is otherwise entitled to
 assume the pipeline saw everything.
 
-Sorting the 2,273 zero-tie documents by how much board vocabulary they
+Sorting the 2,271 zero-tie documents by how much board vocabulary they
 contain (the same counting rule as before, so the rows are comparable):
 
 | Role words in the text | Documents | Was | Reading |
@@ -105,7 +105,7 @@ The last row is the real gap, and it is not one thing:
   et colon", "vétérinaire à Oran". Correctly excluded; counting them would
   inflate the network with ties that do not exist.
 
-One further gap is quantified elsewhere: **9,567 parsed ties (12.9%)** are
+One further gap is quantified elsewhere: **9,078 parsed ties (12.4%)** are
 dropped for want of an identifiable firm (§5). The compiler's annotation leads
 are now resolved as far as they go (§4e).
 
@@ -345,7 +345,7 @@ thousands of directors out of ordinary sentences. `parse_prose.py` reads the
 prose with three conditions required together: an explicit person marker
 (`MM.`, `M.`, or an appointment verb), an explicit role word in the same
 clause, and every candidate name passing the same shape test the structured
-parser uses. It yields **14,251 ties over 2,521 firms**, of which 8,421
+parser uses. It yields **14,253 ties over 2,520 firms**, of which 8,421
 person-firm pairs are new.
 
 **Attribution was never the hard part.** For a firm dossier the subject
@@ -387,15 +387,15 @@ produced.
 
 Board lists carry the compiler's identification of a director's *other* seats,
 beside the name: `A. R. Fontaine (Distill. Indoch.)`. That is interlock
-evidence stated by the source. Stage 4 emits 20,208 of these as candidates but
-resolves only 2,523 — exact names and catalogue acronyms — because the note is
+evidence stated by the source. Stage 4 emits 21,904 of these as candidates and resolves 3,680 of them
+(16.8%) directly — exact names and catalogue acronyms — because the note is
 abbreviated where the company name is not.
 
 `resolve_annotations.py` matches by **token prefix, in order**: every note
 token must prefix a name token, and in sequence. "Cotonn. St-Quentin" resolves
 to *Cotonnière de Saint-Quentin*; "Bq de Madagascar" to *Banque de
 Madagascar*. Prefix matching needs no list of abbreviations, which matters
-because the compiler invents them freely. Result: **1,692 ties over 498 firms**,
+because the compiler invents them freely. Result: **1,674 ties over 499 firms**,
 hand-audited at roughly 94%.
 
 Three refusals do most of the work for precision. A note matching several
@@ -415,8 +415,8 @@ meant to catch lowercase openings rejected *every* company name in the file,
 including the Banque de l'Indochine. `checks.py` now pins five real names
 against it.
 
-Why only 8% of the 20,554 candidate notes resolve: 4,204 name the firm the
-observation already belongs to, and 8,285 name a company absent from this
+Why only 8% of the 20,354 candidate notes resolve: 4,218 name the firm the
+observation already belongs to, and 8,238 name a company absent from this
 corpus — many are
 metropolitan firms the collection never covers. Neither is recoverable by
 better matching.
@@ -439,7 +439,7 @@ is the entry header and is never named again.
 What stage 3e adds is **person-scoped segmentation**: the document is split at
 the capitalised surname headers, and every role construction inside an entry is
 attributed to that entry's person. Company names are resolved with the prefix
-matcher from §4e. **3,060 ties over 719 firms and 687 people**, hand-audited
+matcher from §4e. **3,089 ties over 719 firms and 689 people**, hand-audited
 at roughly 93%.
 
 Two guards were added from the audit. A capitalised *headline* has exactly the
@@ -463,11 +463,16 @@ A document is split at **anchors** — points that fix a date, a source, or a
 company. Text between one anchor and the next inherits that anchor's
 attributes. Anchors are dated press citations, inline directory entries
 (`AEC 1922-519 —`, `Annuaire Desfossés, 1945`), numbered directory entries,
-capitalised *Annuaire industriel* headings, and the "local companies"
-register. Board lists inside a segment are then found by explicit list
-markers and parsed into person/role pairs.
+*Annuaire industriel* notice heads, capitalised headings, and the "local
+companies" register. Board lists inside a segment are then found by explicit
+list markers and parsed into person/role pairs.
 
-Three failure modes were found by inspecting output rather than code, and each
+Two anchors can match the same position, so each has a precedence: a dated
+source beats an undated entry head, and a genre-specific entry pattern beats
+the generic capitals one. Without it the weaker name won and a zero-length
+segment was inserted between them.
+
+Four failure modes were found by inspecting output rather than code, and each
 one shaped the design:
 
 **Prose read as lists.** A case-insensitive `conseil d'administration` trigger
@@ -499,6 +504,73 @@ misattribution into a visible coverage gap, which is why **~10% of parsed
 person-ties carry no `company_key`** and are excluded from the network. That
 gap is the price of not fabricating attributions, and it is recorded rather
 than hidden.
+
+**An unread entry head, and the mega-board it builds.** Some firm-years held
+40 to 90 directors. The methodology used to guess that these were constitution
+or subscriber lists — a plausible reading, and wrong. Reading the source for
+the worst case, *Compagnie du Port de Fedhala* with 83 directors in 1921,
+showed a dossier that reprints the AEC 1922 entries for a dozen *other* firms
+under a heading the compiler wrote as `ET UNE KYRIELLE DE SOCIÉTÉS…`. None of
+those entry heads matched an anchor, so a cork factory's board, a metalwork
+shop's board and ten more all landed on the port company. The same shape
+explains the *Annuaire industriel* cases, for a different reason: that
+publication alphabetises each notice on a keyword and puts the rest of the
+legal name in parentheses —
+
+```
+ALLUMETTES (Soc. indo-chinoise forestière et des), 41, bd de Magenta, Paris…
+BANQUE de l'INDOCHINE, 96, bd Haussmann, Paris, 8e…
+FORGES, ATELIERS et CHANTIERS d'INDOCHINE, Bureau : 119, bd Haussmann…
+```
+
+— and the anchor for it required the parenthetical, so the second notice never
+anchored and the Banque de l'Indochine's board was credited to a match factory.
+Three separate reading errors had to be fixed together: the parenthetical is
+optional; particles chain, so `de l'` is one link and not two; and the keyword
+itself may contain commas, so cutting at the first one named the third firm
+*Forges*. The name is then rebuilt by inversion — parenthetical first, keyword
+second — which recovers *Société indo-chinoise forestière et des allumettes*
+and, for 42% of heads, a firm already in the dataset. Casing is left as the
+annuaire printed it, because lowering `COTONNIÈRE de TOLGA` correctly needs to
+know that one word is a descriptor and the other a place, and `org_key` folds
+case anyway.
+
+Two smaller reading errors in the same family: the AEC page reference is
+written three ways (`AEC 1922-519 —`, `AEC 1922. — 489 —`, `AEC 1922. 495 —`)
+and only the first was matched; and once a listing is running the compiler
+drops the prefix and prints the page alone (`509 — Sté des briqueteries de
+Fedhala`). The bare-page form needs a guard, because short numbers are
+enumerated clauses in legal prose — *"3 — Modifications diverses aux articles
+4, 8, 12"*. Requiring three digits, which every real reference has since the
+annuaire runs to 800–1,200 pages, took a hand-checked sample from 44 matches at
+roughly 60% precision to 19 at 19 of 19.
+
+The largest firm-year the dossier parser produces falls from 83 directors to
+52, and the ceiling in `checks.py` from 200 to 90. One firm-year in the
+*merged* network still reaches 82, and it has a different cause worth stating
+rather than smoothing: the annuaire's own numbered key sometimes gives one
+entry to several firms at once, joined with a plus sign —
+`Houillères du bassin de la Loire + Houillères des Cévennes… du Dauphiné`.
+Those 82 people are the boards of three nationalised coal undertakings pooled
+into one pseudo-firm. **22 companies have such a combined name, carrying 185
+of 90,860 two-mode edges (0.20%).** They are left as the source wrote them:
+splitting a name on a plus sign would also cut the ones where it separates a
+firm from its depot rather than from another firm, and the affected share is
+too small to justify guessing. Filter on a `+` in `name` to drop them.
+
+The lesson is the one this section keeps repeating: an implausible number is a
+parsing report before it is a historical finding, and the cheapest way to tell
+them apart is to read the source.
+
+**A role label read as a person.** 1,514 parsed members contained a colon —
+`Adm.: MM. Henri Girche`, `Direct.: M. Patrick O'Quin`, `Imp.: sucre`. Every
+hand-checked one was a swallowed directory field label, but they split in two:
+most hide a real name behind the label, and some are a field *value* and no
+person at all. Discarding all 1,514 would have thrown away real ties, so the
+label is stripped and the name kept; a colon surviving the strip means a label
+this rule does not know, and no name in the corpus contains one, so the row is
+rejected. `checks.py` asserts that no member name carries a colon, and that
+`Ed. Bousquet` and `A. R. Fontaine` pass through untouched.
 
 Related filters: periodical titles (which sit inside citations) and
 balance-sheet captions (which sit in tables next to boards) are rejected as
@@ -561,7 +633,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 35,158 names
+**Every obvious rule is wrong.** Each was measured against all 34,240 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -608,11 +680,11 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-5,839 firms and 79,897 edges: rendered as a node-link diagram it is a solid
+5,882 firms and 79,826 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
-170 firms of highest weighted degree — 1,162 interlocks. Reading a *global*
+170 firms of highest weighted degree — 1,448 interlocks. Reading a *global*
 property such as density or centralisation off that picture is a mistake; the
 figure is a map of the core, and the numbers for the whole graph are in
 `network_stats.csv`.
@@ -632,7 +704,7 @@ nodes and a full table view rather than relying on the hue alone.
 **Small multiples share one layout, computed once.** Figure 2 draws one panel
 per period. The obvious implementation — lay out and normalise each period's
 subgraph independently — rescales every panel to fill its box, which made the
-1914–1929 panel (1,764 interlocks) look *smaller* than pre-1914 (299): the
+1914–1929 panel (2,730 interlocks) look *smaller* than pre-1914 (440): the
 visual encoding then contradicts the data. The layout is instead computed
 once on the union of all periods and each panel draws its own edges at those
 fixed coordinates, with one size scale throughout. A firm therefore sits in
@@ -655,14 +727,14 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 5,839 firms and 79,897 interlocks.** At that density a
+**Figure 4 draws all 5,882 firms and 79,826 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
 territory folded to the three largest, and the answer the figure gives is
 "both" — Indochine, Maroc and AOF each hold a visibly distinct lobe, joined
 through a dense mixed core. Node radii are 42% of the core figure's and edge
-ink 42% of its opacity, because the settings tuned for 170 nodes render 3,085
+ink 42% of its opacity, because the settings tuned for 170 nodes render 3,531
 as a solid disc.
 
 **Nothing is dropped to make the picture tidy.** 98.5% of the firms sit in one
@@ -674,15 +746,15 @@ graph's, for figure 4 and for each of the 42 territory figures, so the claim
 is enforced rather than merely intended.
 
 **Figure 5 is a matrix, not a node-link diagram.** Aggregated to territories
-the graph is small (53 nodes) and nearly complete (713 of 1,378 possible pairs
+the graph is small (54 nodes) and nearly complete (863 of 1,431 possible pairs
 share at least one director), which is exactly the regime where a node-link
 diagram degenerates into a scribble and a matrix becomes readable. The cell is
 the count of directors holding board seats in both territories; rows and
 columns are ordered by size, which is what makes the core-periphery structure
 legible. Two things to know before reading it: the shading steps by **rank,
 not linearly**, because the counts are heavily skewed and a linear ramp would
-put everything but the top two pairs — Maroc–Algérie at 1,086 shared
-directors and Maroc–Indochine at 1,024 — in the palest step; and a firm listed in two territories contributes its whole board to
+put everything but the top two pairs — Maroc–Algérie at 4,635 shared
+directors and Maroc–Indochine at 4,570 — in the palest step; and a firm listed in two territories contributes its whole board to
 both, which is the tie being counted rather than an artefact — a
 Paris-registered firm operating in Morocco and Indochina genuinely links them.
 
@@ -709,7 +781,7 @@ Three decisions determine the numbers.
 **Computed on the whole graph, displayed on a slice.** Betweenness is a global
 property: the shortest paths that matter run through firms outside any core
 one might draw. It is computed on the giant component of the interlock graph
-at `weight >= 1` (5,758 firms, 39,497 ties) and then displayed on whatever
+at `weight >= 1` (5,798 firms, 79,826 ties) and then displayed on whatever
 subset a figure shows. Recomputing it on the 170 drawn firms would yield a
 different quantity wearing the same name, and would systematically flatter
 firms that happen to sit in the middle of that particular selection.
@@ -746,9 +818,9 @@ interlock network over it, with position meaning location rather than
 connection.
 
 **Two fields, in order of trust.** `place_listed` comes from the catalogue
-title and is a clean city name (1,692 firms). `head_office_observed` is
+title and is a clean city name (1,581 firms). `head_office_observed` is
 transcribed prose — *"Paris, 1, rue de Stockholm. Tél. : LAB. 18-34"* — and
-covers 3,970. The first is preferred; the second is parsed only where the
+covers 1,589. The first is preferred; the second is parsed only where the
 first is absent, and `source_field` records which was used so the weaker half
 can be dropped.
 
@@ -766,9 +838,9 @@ hand-built because the names are historical — Bône not Annaba, Tourane not Da
 Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
 reliably. It is an input: editing it changes the output.
 
-**Coverage: 3,138 of 10,705 firms (37%), and 1,393 of the 5,839 in the
-interlock graph (45%).** The map draws those. It is not a map of the empire's
-firms but of the ones whose address survived, and the unplaced 55% are absent
+**Coverage: 3,170 of 10,625 firms (30%), and 1,956 of the 5,882 in the
+interlock graph (33%).** The map draws those. It is not a map of the empire's
+firms but of the ones whose address survived, and the unplaced 67% are absent
 rather than assumed.
 
 **Three readings the figure would otherwise invite, and why they are wrong.**
@@ -776,14 +848,15 @@ A head office is not an operation: a rubber plantation in Cochinchina run from
 a Paris office appears at Paris, which is a true fact about control and a
 false one about production. A city's size on the map is firms *recorded* there,
 inheriting all of §6's coverage unevenness. And ties within a single city
-cannot be drawn — an edge from Paris to Paris is a dot — so the 3,275
+cannot be drawn — an edge from Paris to Paris is a dot — so the 5,146
 within-city interlocks appear as a table column rather than on the map, against
-7,808 drawn between cities; a reader who counts only the lines undercounts the
-network by nearly a third.
+1,133 drawn city pairs; a reader who counts only the lines undercounts the
+network badly.
 
-The headline result survives all three: 41% of placed firms in the interlock
-graph were run from Paris, more than the next 21 cities combined, and the
-heaviest lines radiate from Paris rather than running between colonies.
+The headline result survives all three: 37% of placed firms in the interlock
+graph were run from Paris, more than the next eleven cities combined (Alger
+147, Saïgon 135, Casablanca 127, Hanoï 56, Tunis 52 against Paris's 732), and
+the heaviest lines radiate from Paris rather than running between colonies.
 
 ## 6. Validity — read this before using the data
 

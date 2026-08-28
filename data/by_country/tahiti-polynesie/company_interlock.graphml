@@ -15,7 +15,7 @@
     <node id="comptoirsoceanie">
       <data key="n_label">Comptoirs français d’Océanie</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">20</data>
+      <data key="n_n_directors">19</data>
       <data key="n_territory">Tahiti (Polynésie)</data>
     </node>
     <node id="concessionnaireportpapeete">
@@ -33,13 +33,13 @@
     <node id="francotahitienne">
       <data key="n_label">Compagnie Franco-Tahitienne</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">19</data>
+      <data key="n_n_directors">18</data>
       <data key="n_territory">Tahiti (Polynésie)</data>
     </node>
     <node id="frsephosphatesoceanie">
       <data key="n_label">Cie frse des PHOSPHATES de l'OCÉANIE</data>
       <data key="n_sectors">Sociétés</data>
-      <data key="n_n_directors">23</data>
+      <data key="n_n_directors">21</data>
       <data key="n_territory">Tahiti (Polynésie)</data>
     </node>
     <node id="ilesmarquises">
@@ -81,11 +81,11 @@
     <node id="tahiti">
       <data key="n_label">Compagnie Française de Tahiti</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">16</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Tahiti (Polynésie)</data>
     </node>
     <edge id="e0" source="frsephosphatesoceanie" target="phosphatesoceanie">
-      <data key="e_weight">11</data>
+      <data key="e_weight">12</data>
     </edge>
     <edge id="e1" source="comptoirsoceanie" target="cotonniereetablissementsoceanie">
       <data key="e_weight">8</data>

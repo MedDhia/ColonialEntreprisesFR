@@ -17,7 +17,6 @@ developpementcasablanca,electricitesafi,Société générale pour le développem
 lyonnaiseeaux,electricitesafi,Société lyonnaise des eaux,Société d'électricité de Safi,5,1926,1969,administrateur:3; president:2
 marocainedistributioneau,electricitesafi,Société marocaine de distribution d'eau,Société d'électricité de Safi,5,1926,1969,administrateur:5
 manganese,minesbouarfa,Société du Manganèse,Société anon. des mines de Bou-Arfa,5,1937,1969,administrateur:5
-banqueindustriellechine,expansionextremeorient,Banque industrielle de Chine,Société d'expansion française en Extrême-Orient,5,1915,1922,administrateur:5
 creditfoncierextremeorient,credithypothecaireindochine,Crédit foncier d'Extrême-Orient,Crédit hypothécaire de l'Indochine,5,1942,1956,administrateur:5
 commercialeindochine,rizeriesextremeorient,Société commerciale française de l'Indochine,Rizeries d'Extrême-Orient,5,1937,1993,administrateur:5
 gallen,agricolethescafeskontum,Gallen,Compagnie agricole des thés et cafés du Kontum,5,1937,1948,president:5
@@ -30,6 +29,7 @@ afrique,transportsoubanguicameroun,Société Afrique,Société de transports Oub
 commissairegouvernement,credithypothecaireindochine,commissaire du Gouvernement,Crédit hypothécaire de l'Indochine,4,1937,1951,administrateur:4
 nationale,acomptedividendeimpot,Nationale,Acompte sur dividende et impôt,4,1929,1929,administrateur:4
 banquetransatlantique,grandstravauxbetonarme,Banque transatlantique,Grands Travaux en béton armé,4,1937,1948,administrateur:3; commissaire_aux_comptes:1
+banqueindustriellechine,expansionextremeorient,Banque industrielle de Chine,Société d'expansion française en Extrême-Orient,4,1915,1922,administrateur:4
 commerce,laquesindochinoises,Cie de commerce,Société des laques indochinoises,4,1890,1929,administrateur:4
 cotonnieretonkin,laquesindochinoises,Société cotonnière du Tonkin,Société des laques indochinoises,4,1890,1929,administrateur:4
 distilleriesindochine,laquesindochinoises,Société des distilleries de l'Indochine,Société des laques indochinoises,4,1890,1929,administrateur:4
@@ -45,6 +45,7 @@ mineraisgrandeile,gemmesmadagascar,Société des minerais de la Grande Ile,Soci�
 syndicatlyonnaismadagascar,minesambatobe,Syndicat lyonnais de Madagascar,Société des mines d'Ambatobé,4,1948,1956,administrateur:4
 malgachecultures,foncieresudmadagascar,Société malgache de cultures,Société foncière du Sud de Madagascar,4,1934,1973,administrateur:2; directeur:2
 etablissementsballande,ilespacifique,Société Établissements Ballande,Société des îles au Pacifique,4,1930,1951,vice_president:4
+omniumlyonnais,minieremaroc,Omnium lyonnais,Sté minière française au Maroc,3,1938,1958,administrateur:3
 algerienne,materieltravauxagricoles,Compagnie Algérienne,Cie de matériel et de travaux agricoles,3,1922,1926,administrateur:3
 banquecolonialeetudes,sudmarocain,Banque coloniale d'études,Cie du Sud-Marocain,3,1923,1926,administrateur:3
 moktaelhadid,cherifienneetudesminieres,Compagnie de Mokta-el- Hadid,Société anonyme chérifienne d'Études minières,3,1937,1969,administrateur:2; administrateur_delegue:1
@@ -62,7 +63,6 @@ maroc,habitationsmaroc,Cie générale du Maroc,Société d'habitations au Maroc,
 centraleenergieelectrique,algerienneeclairageforce,Compagnie centrale d'énergie électrique,Société algérienne d'éclairage et de force,3,1937,1945,president:3
 laffontraymond,allianceafricaineassurancesreassurances,LAFFONT (Raymond),"Alliance africaine, Compagnie française d'assurances et de réassurances",3,1922,1926,administrateur:3
 havane,etablissementsluchaire,Havane,Établissements LUCHAIRE,3,1925,1925,administrateur:3
-manaosmarocagencecasablanca40,safti,Manaos. Maroc: Agence générale: Casablanca (40,SAFTI,3,1921,1925,directeur:3
 bourdaistouches,cheminsferouestalgerien,Bourdais des Touches,Chemins de fer de l'Ouest-Algérien,3,1912,1929,administrateur:3
 cheminsferplm,energieelectriquemaroc,Cie des chemins de fer PLM,ÉNERGIE ÉLECTRIQUE DU MAROC,3,1937,1948,administrateur:3
 cheminferparisorleans,energieelectriquemaroc,Cie du chemin de fer Paris-Orléans,ÉNERGIE ÉLECTRIQUE DU MAROC,3,1937,1948,administrateur:3
@@ -106,6 +106,7 @@ eaux,unionelectriqueindochine,Cie des eaux,Union électrique d'Indochine,3,1942,
 colonies,unionelectriqueindochine,Cie générale des colonies,Union électrique d'Indochine,3,1942,1971,administrateur:3
 indochinoiseequipementindustriel,brasseriesglacieresindochine,Compagnie indochinoise d'équipement industriel,Brasseries et glacières de l'Indochine,3,1928,1931,administrateur:3
 fiduciaireindochine,brasseriesglacieresindochine,Société fiduciaire d'Indochine,Brasseries et glacières de l'Indochine,3,1940,1948,administrateur:3
+banqueindustriellechine,laquesindochinoises,… Banque industrielle de Chine,Sté des laques indochinoises,3,1922,1929,administrateur:3
 gallen,etainsindochine,Gallen,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",3,1915,1955,administrateur:3
 maritimeafriqueorientale,approvisionnementsgenerauxdjibouti,Cie maritime de l'Afrique orientale,Sté des approvisionnements généraux à Djibouti,3,1921,1926,administrateur:3
 honmauricemartin,colonialeindustriellecommerciale,l'Hon. Maurice Martin,"Cie coloniale, industrielle et commerciale",3,1922,1926,administrateur:3
@@ -129,7 +130,6 @@ admetudesafrique,agricolecommercialeindustriellemarocaine,adm. Cie d'études en 
 bqetatmaroc,cheminsfermaroc,Bq d'État du Maroc],Cie des chemins de fer du Maroc,2,1913,1922,administrateur:2
 bqnatcredit,minesmaroc,Bq Nat. Crédit…],Sté française des mines du Maroc,2,1878,1927,president:2
 bourgeois,marocainescieriesatlas,Bourgeois,Sté marocaine des scieries de l'Atlas,2,1922,1958,administrateur:2
-omniumlyonnais,minieremaroc,Omnium lyonnais,Sté minière française au Maroc,2,1938,1958,administrateur:2
 fdevisevpdtmarseillaisecredit,unionfinanciereconstructionmaroc,F. Devise [v.-pdt Marseillaise de Crédit,Union financière pour la construction au Maroc,2,1916,1958,administrateur:2
 ctegmoustier,elevagemeknes,Cte G de Moustier,Sté d'élevage de Meknès,2,1958,1958,administrateur:2
 ctepomereu,elevagemeknes,Cte A de Pomereu,Sté d'élevage de Meknès,2,1958,1958,administrateur:2
@@ -175,20 +175,15 @@ omniumouledharris,marocainebenimtir,Omnium des Ouled Harris,Société marocaine 
 entreprisesmaroc,habitationsmaroc,Société générale d'entreprises au Maroc,Société d'habitations au Maroc,2,1932,1952,administrateur:2
 cheminsfermaroc,habitationsmaroc,Cie des chemins de fer du Maroc,Société d'habitations au Maroc,2,1932,1952,administrateur:2
 coloniale,allianceafricaineassurancesreassurances,COLONIALE,"Alliance africaine, Compagnie française d'assurances et de réassurances",2,1924,1926,administrateur:2
-administration,daumas,Administration,DAUMAS,2,1925,1925,directeur_general:2
+usinesgraville,corderiesseine,Cie. ] Usines à Graville,CORDERIES DE LA SEINE,2,1925,1925,administrateur:2
+alba,creditfoncieralgerietunisie,l'Alba,CRÉDIT FONCIER D'ALGÉRIE ET DE TUNISIE,2,1925,1925,administrateur:2
+administration,edaumas,Administration,E DAUMAS,2,1925,1925,directeur_general:2
 tunisie,auxiliairenavigation,Tunisie,Cie auxiliaire de NAVIGATION,2,1925,1944,commissaire_aux_comptes:2
 espagne,auxiliairenavigation,l'Espagne,Cie auxiliaire de NAVIGATION,2,1925,1944,commissaire_aux_comptes:2
 havrelignesregulieresalgerie,havraisepeninsulairenavigationvapeur,Havre. Lignes régulières sur l'Algérie,Cie havraise péninsulaire de NAVIGATION A VAPEUR,2,1925,1925,directeur_general:2
 reunion,havraisepeninsulairenavigationvapeur,Réunion,Cie havraise péninsulaire de NAVIGATION A VAPEUR,2,1925,1925,directeur_general:2
-gastondrappierpdtaguilas,ouenza,Gaston Drappier [pdt Cie d'Aguilas,OUENZA,2,1925,1925,president:2
-etiennesiryadmdircompteurs,tramwaysalgeriens,Étienne Siry [adm.-dir. Cie des compteurs,TRAMWAYS ALGÉRIENS,2,1919,1925,president:2
-gabrielchamonadmdircompteurs,tramwaysalgeriens,Gabriel Chamon [adm.-dir. Cie des compteurs,TRAMWAYS ALGÉRIENS,2,1919,1925,president:2
-comptoircentralvoiesferrees,tramwaysalgeriens,Comptoir central des voies ferrées…],TRAMWAYS ALGÉRIENS,2,1919,1925,president:2
-soleil,tramwaysalgeriens,Soleil,TRAMWAYS ALGÉRIENS,2,1919,1925,president:2
 marrakechindustrielle,marocaine,Marrakech. Société industrielle,Compagnie MAROCAINE,2,1925,1925,president:2
-ethomasentreprisecanalisationeau,afriquenord,E Thomas. Entreprise de canalisation d'eau,AFRIQUE DU NORD,2,1938,1938,administrateur:2
-usines,cheddites,Usines à,CHEDDITES,2,1938,1938,president:2
-haye,ouenza,Haye],OUENZA,2,1910,1938,president:2
+puisdgacharbonnagestonkin,minieremaroc,puis dga Charbonnages du Tonkin],Société MINIÈRE FRANÇAISE au MAROC,2,1938,1938,administrateur:2
 etudes,bazina,Société française d'études,Société française du Bazina,2,1945,1948,administrateur:2
 commissairegouvernement,banqueindustrielleafriquenord,commissaire du Gouvernement,Banque industrielle de l'Afrique du Nord,2,1937,1950,administrateur:2
 langloisgeorges,caveschateau,LANGLOIS (Georges),Caves du Château,2,1924,1926,administrateur:2
@@ -215,7 +210,7 @@ aydes,phosphatesmzaita,Aydes,"Compagnie des Phosphates du M'Zaïta, puis",2,1922
 seigliere,manufacturecrinvegetalfedhala,Seiglière,Manufacture de crin végétal de Fédhala,2,1926,1926,administrateur:2
 brosseeugene,marocaineainsikh,BROSSE (Eugène de),Societe marocaine d Aïn-Sikh,2,1924,1926,administrateur:2
 haye,minesbouarfa,Haye,Société des Mines de Bou-Arfa,2,1922,1922,administrateur:2
-manganesecommissairecomptesnoyau,minesbouarfa,Société du Manganèse. Commissaire des comptes: Noyau,Mines de Bou-Arfa,2,1948,1948,administrateur:2
+francomarocainefedala,portfedala,Cie franco-marocaine de Fédala,Cie du port de Fédala,2,1951,1951,administrateur:2
 omniumentreprises,portsmarocains,de l'Omnium d'entreprises],Ports marocains,2,1921,1921,administrateur:2
 algeriennemines,agricolefinancierealgerie,de la Société algérienne des mines,Société Agricole et Financière d'Algérie,2,1928,1928,directeur_general:2
 etablissementsmulsant,etudestravauxartmaroc,Société des Établissements Mulsant,Société d'Études et de Travaux d'art du Maroc,2,1920,1921,administrateur:2
@@ -276,10 +271,10 @@ forestiereindenie,forestierecommercialeafricaine,Cie forestière de l'Indénié,
 travauxafricains,forestierecommercialeafricaine,Société générale de travaux africains,Société forestière et commerciale africaine,2,1949,1963,administrateur:2
 etsdeves,messageriesafricaines,Éts Devès,Messageries africaines,2,1949,1951,administrateur:2
 niger,messageriesafricaines,Cie du Niger français,Messageries africaines,2,1949,1951,administrateur:2
-commissairesgouvernementmmjeanvollant,creditfoncierouestafricain,Commissaires du Gouvernement: MM. Jean Vollant,Crédit foncier de l'Ouest africain,2,1951,1951,administrateur:2
 immobiliereiafriqueoccidentale,immobilierefinanciereafricaine,Société immobilière de I'Afrique Occidentale,Société immobilière et financière africaine,2,1950,1951,administrateur:2
 anciensetablissementschpeyrissac,auxiliaireafricainedeveloppementcommerce,Anciens Établissements Ch. Peyrissac,"Société auxiliaire africaine pour le développement du commerce, de",2,1937,1951,administrateur:2
 forestier,coteivoire,Forestier,Cie française de la Côte-d'Ivoire,2,1941,1951,administrateur:2
+officetechniqueassurances,africaineassurancesf,Office technique d'assurances S. A.°,Société africaine d'assurances (S.A.F,2,1963,1963,administrateur:2
 afriqueocccid,palme,Cie française de l'Afrique occcid,Société « Palme »,2,1942,1955,administrateur:2
 niger,palme,Cie du Niger français,Société « Palme »,2,1942,1955,administrateur:2
 patersonzochoniscoltd,palme,Paterson-Zochonis and Co Ltd,Société « Palme »,2,1942,1955,administrateur:2
@@ -300,7 +295,6 @@ financiere,creditfoncierouestafricain,Société financière française,Crédit f
 banquecommercialeafricaine,creditfoncierouestafricain,Banque commerciale africaine,Crédit foncier de l'Ouest-Africain,2,1931,1931,administrateur:2
 creditfoncierindochine,creditfoncierouestafricain,Crédit foncier de l'Indochine,Crédit foncier de l'Ouest-Africain,2,1931,1931,administrateur:2
 commercialeouestafricain,creditfoncierouestafricain,Société commerciale de l'Ouest-Africain,Crédit foncier de l'Ouest-Africain,2,1931,1931,administrateur:2
-fmarbeaucommissairegouvernementjvollant,creditfoncierouestafricain,F. Marbeau. Commissaire du gouvernement: J. Vollant,Crédit foncier de l'Ouest-Africain,2,1945,1948,administrateur:2
 maritime,dahomey,et la Société Maritime,Société Française du Dahomey,2,1920,1920,administrateur:2
 caissecentralefranceoutremer,forestiereguyane,Caisse centrale de la France d'outre-mer,Société forestière de la Guyane française,2,1951,1951,administrateur:2
 agentagencealbina,minesorguyanehollandaise,agent général. Agence à Albina,Cie des MINES D'OR DE LA GUYANE HOLLANDAISE,2,1925,1925,administrateur:2
@@ -312,7 +306,6 @@ mobiliere,sucreriescoloniales,et la Société Mobilière,Sucreries coloniales,2,
 banqueafrique,sucreriescoloniales,Banque française de l'Afrique,Sucreries coloniales,2,1927,1929,administrateur:2
 denisfreresindochine,cotiereannam,Société Denis frères d'Indochine,Cie côtière de l'Annam,2,1937,1938,administrateur:1; administrateur_delegue:1
 gouvernementindochine,airfrance,Gouvernement général de l'Indochine,Cie Air-France,2,1933,1937,administrateur:2
-administrateurscommissairegouvernementmlafont,banquefrancochinoisecommerceindustrie,administrateurs. Commissaire du gouvernement: M. Lafont,Banque franco-chinoise pour le commerce et l'industrie,2,1937,1937,administrateur:2
 foncieresaigonnaise,creditmobilierindochinoisexploitationmonts,Société foncière saïgonnaise,"Crédit mobilier indochinois, Société d'exploitation des Monts-de",2,1937,1937,administrateur:2
 censeur,assurancefinanciere,censeur à la Société Générale,L'Assurance financière,2,1880,1880,administrateur:2
 bourdaistouches,banqueprivee,Bourdais des Touches,Banque privée,2,1917,1920,administrateur:2
@@ -328,7 +321,6 @@ banquechevignard,etablissementsbeccatdoulaincourtmusseycorbiebonneville,Banque C
 forges,forgesacieriesnordest,de la Société des forges,Forges et aciéries du Nord et de l'Est,2,1912,1953,administrateur:2
 drachalme,outremer,Dr Achalme,Cie générale d'Outre-Mer,2,1922,1922,administrateur:2
 creditmobilier,tabacs,du Crédit mobilier français,Compagnie Générale des Tabacs,2,1923,1923,directeur_general:1; administrateur:1
-transfertsmarseillaisecredit,grandstravauxbetonarme,transferts: Société Marseillaise de Crédit,Grands Travaux en béton armé,2,1945,1948,commissaire_aux_comptes:1; administrateur:1
 miniere,industrieminessuite,Compagnie minière,Société Française pour l'Industrie et les Mines et suite,2,1929,1929,administrateur:2
 pallice,lillebonnierescolombes,Pallice,LILLE-BONNIÈRES et COLOMBES,2,1925,1938,president:1; administrateur:1
 laveaufrederic,magasinsmodernesfilialecommunenouvellesgaleriesparisfrance,LAVEAU (Frédéric),"Magasins modernes, filiale commune des Nouvelles Galeries et de Paris-France",2,1924,1926,administrateur:2
@@ -398,9 +390,10 @@ couronne,indochinoiseculturesplantationsterresrouges,Couronne*],Société Indoch
 officegestion,agricoleindustrielletourcham,Office de Gestion,Société agricole et industrielle de Tourcham,2,1951,1953,administrateur:2
 caoutchoucsindochine,caoutchoucsextremeorient,Société des Caoutchoucs de l'Indochine,Société des caoutchoucs d'Extrême-Orient,2,1953,1953,administrateur:2
 plantationsmalaisiennesfauconnierposth,indochinoiseculturestropicales,des plantations malaisiennes Fauconnier-Posth],Société indochinoise des cultures tropicales,2,1951,1954,administrateur:2
-francoismangeusineshanoi,allumettes,François Mange. Usines à Hanoï,ALLUMETTES,2,1925,1925,president:2
-miniere,frigorifiqueslittoral,Cie Minière,FRIGORIFIQUES DU LITTORAL,2,1955,1955,president:2
-usinehanoi,tabacsindochine,usine à Hanoï,TABACS DE L'INDO-CHINE,2,1925,1955,president:2
+peindreexploitationplantationscaoutchoucs,agricolethanhtuyha,Peindre. Exploitation de plantations de caoutchoucs,Société AGRICOLE de THANH-TUY-HA,2,1925,1925,administrateur:2
+miniere,socfrigorifiqueslittoral,Cie Minière,Soc. an FRIGORIFIQUES DU LITTORAL,2,1955,1955,president:2
+venteleursproduitseuropeusine,rizeriesindochinoises,vente de leurs produits en Europe. Usine,RIZERIES INDOCHINOISES,2,1925,1955,administrateur:2
+yunnanfoutoutesoperationsbanque,banqueindochine,Yunnanfou. Toutes opérations de banque,BANQUE de l'INDOCHINE,2,1938,1938,president:2
 participationsindustrielles,asiatiqueafricaine,Société de participations Industrielles,Cie asiatique et africaine,2,1953,1954,administrateur:2
 ravines,blotdavidphuoc,Ravines,Blot-David à An-Phuoc,2,1937,1937,gerant:2
 paris,banqueindochine,Cie de Paris,Banque de l'Indochine,2,1887,1889,administrateur:2
@@ -413,8 +406,6 @@ financiere,creditfoncieragricoleindochine,Société financière française,Créd
 banqueindochine,creditfoncieragricoleindochine,Banque de l'Indochine,Crédit foncier agricole de l'Indochine,2,1929,1929,administrateur:2
 foncieresaigonnaise,creditmobilierindochinois,Société foncière saïgonnaise,Crédit mobilier indochinois,2,1931,1942,administrateur:2
 gallen,foncierecambodge,Gallen,Société Foncière du Cambodge,2,1927,1930,administrateur:2
-ernestoutreycommissairescomptesfiduciaire,plantationsheveasxuanloc,Ernest Outrey. Commissaires aux comptes: Société fiduciaire,Plantations d'hévéas de Xuân-Lôc,2,1937,1940,administrateur:2
-banqueindustriellechine,laquesindochinoises,Banque industrielle de Chine,Société des laques indochinoises,2,1922,1929,administrateur:2
 banqueindochine,minesortchepone,et la Banque de l'Indo-Chine,Mines d'or de Tchépone,2,1928,1928,administrateur:2
 banqueafrique,nieuwtjisalak,Banque française de l'Afrique,Nieuw Tjisalak,2,1927,1933,administrateur:2
 fiduciaireindochine,plantationsindochinoises,Société fiduciaire d'Indochine,Plantations indochinoises de Thé,2,1945,1948,administrateur:2
@@ -432,14 +423,19 @@ financierefrance,gemmesmadagascar,Société financière pour la France,Société
 financierefrance,graphites,Société financière pour la France,Société générale des graphites,2,1951,1956,administrateur:2
 paysoutremer,graphites,Pays d'outre-mer,Société générale des graphites,2,1951,1956,administrateur:2
 produitsagricolestropicaux,nosybeenneindustriesagricoles,Société Produits agricoles tropicaux,Cie nosybéenne d'industries agricoles,2,1951,1973,administrateur:2
-lyonnaisemadagascar,mahajamba,Cie Lyonnaise de Madagascar,Mahajamba,2,1941,1973,administrateur:2
+lyonnaisemadagascar,mahajamba,Cie Lyonnaise de Madagascar,Mahajamba,2,1951,1973,administrateur:2
 financierepiafrance,foncieresudmadagascar,Société financière p. Ia France,Société foncière du Sud de Madagascar,2,1934,1973,administrateur:2
 paysoutremer,foncieresudmadagascar,Pays d'outre-mer,Société foncière du Sud de Madagascar,2,1934,1973,administrateur:2
+raffineriessucresaintlouis,domaineankaratrasucrieremahavavy,Société des Raffineries de sucre de Saint-Louis,Domaine de l'Ankaratra Société sucrière de la Mahavavy,2,1951,1973,administrateur:2
+sucrieremarocaine,domaineankaratrasucrieremahavavy,Cie sucrière marocaine,Domaine de l'Ankaratra Société sucrière de la Mahavavy,2,1951,1973,administrateur:2
+sucreriesmarseillaisesmadagascar,domaineankaratrasucrieremahavavy,Société des sucreries marseillaises de Madagascar,Domaine de l'Ankaratra Société sucrière de la Mahavavy,2,1951,1973,administrateur:2
+fiveslille,domaineankaratrasucrieremahavavy,Cie de Fives-Lille,Domaine de l'Ankaratra Société sucrière de la Mahavavy,2,1951,1973,administrateur:2
+africaineparticipation,domaineankaratrasucrieremahavavy,Société africaine de participation,Domaine de l'Ankaratra Société sucrière de la Mahavavy,2,1951,1973,administrateur:2
+admbanque,creditfonciermadagascar,adm. Banque,CRÉDIT FONCIER DE MADAGASCAR,2,1925,1925,administrateur:2
 prevoyanceouest,banquespecialemadagascaroceanindien,Prévoyance de l'Ouest,"Banque spéciale pour Madagascar Compagnie de l'océan Indien, puis Banque de l'océan Indien, puis Cie de l'océan Indien",2,1930,1930,administrateur:2
 participationsindustrielles,colonialebambao,Société de participations industrielles,Société coloniale de Bambao,2,1948,1953,administrateur:2
 financiere,malgachecultures,Société financière française,Société Malgache de Cultures,2,1930,1936,administrateur:2
 marseillaisemadagascar,maritimemajunga,Cie marseillaise de Madagascar,Cie maritime de Majunga,2,1937,1951,administrateur:2
-raffineriessucresaintlouis,sucrieremahavavy,Société des Raffineries de sucre de Saint-Louis,Société Sucrière de la Mahavavy,2,1949,1958,administrateur:2
 admagadir,nickel,adm. Cie d'Agadir,« Le Nickel »,2,1922,1922,administrateur:2
 sucreriescoloniales,cotonnierenouvelleshebrides,Société des sucreries coloniales,Cie cotonnière des Nouvelles-Hébrides,2,1926,1926,administrateur:2
 participation,agricolemopelia,Société de participation,Société agricole de Mopélia,2,1923,1926,administrateur:2
@@ -449,8 +445,8 @@ nickel,caledonickel,Société « Le Nickel »,Caledonickel,2,1937,1964,administr
 chrome,nouvelleshebrides,Société « Le Chrome »,Société française des Nouvelles-Hébrides,2,1951,1951,administrateur:2
 banquecolonialeetudes,immobiliereagricoleoceanie,et la Banque coloniale d'études,Compagnie Immobilière et Agricole de l'Océanie,2,1928,1938,administrateur:1; vice_president:1
 eraoulduval,colonialeetablissementsnhagen,et la Société E. Raoul Duval,Compagnie coloniale des Établissements N. Hagen,2,1927,1927,administrateur:2
-levant,asieoccidentale,Levant,ASIE OCCIDENTALE,2,,,president:2
 societegenerale,banquesyrie,Société générale,Banque française de Syrie,2,1929,1929,administrateur:2
+creditnational,banquesyrie,Crédit national,Banque française de Syrie,2,1929,1929,administrateur:2
 banquefrancojaponaise,banquesyrie,Banque franco-japonaise,Banque française de Syrie,2,1929,1929,administrateur:2
 creditfoncieregyptien,banquesyrie,du Crédit foncier égyptien,Banque française de Syrie,2,1929,1929,administrateur:2
 reginaldturrellrapportconseiladministration,orientalcarpetmanufacturersltd,Reginald Turrell. RAPPORT DU CONSEIL D'ADMINISTRATION,"Oriental Carpet Manufacturers, Ltd",2,1912,1913,administrateur:1; commissaire_aux_comptes:1
@@ -516,7 +512,6 @@ foncieremarococcidental,transportsmazeres,Société foncière du Maroc occidenta
 industrielle,transportsmazeres,Société industrielle,Transports Mazères,1,1926,1926,administrateur:1
 flittardifrigorifiquesnord,transportsmazeres,F. Littardi. Cie des Frigorifiques du Nord,Transports Mazères,1,1926,1926,administrateur:1
 viandegroupemarocainetudes,transportsmazeres,de viande. Groupe marocain d'études,Transports Mazères,1,1926,1926,administrateur:1
-conseilmassena,transportsmazeres,Conseil: Société A. Masséna,Transports Mazères,1,1926,1926,administrateur:1
 jeandantonconservesfedhala,transportsmazeres,Jean Danton. Société de conserves de Fédhala,Transports Mazères,1,1926,1926,administrateur:1
 gilberthersentetudes,transportsmazeres,Gilbert Hersent. Société d'études,Transports Mazères,1,1926,1926,administrateur:1
 robertmussardimmobilierekenitra,industriellecommercialeadoursebou,Robert Mussard. Société immobilière de Kénitra,Société industrielle et commerciale Adour-Sebou,1,1926,1926,administrateur:1
@@ -638,7 +633,6 @@ casablancaurbainemarocaine,taourelfreres,Casablanca. Société urbaine marocaine
 hmeyerminiere,unioncommercialemarocaine,H. Meyer. Société anon. Minière,Union commerciale marocaine,1,1930,1930,administrateur:1
 nordafricaincommercial,unionimmobilieremarocaine,Nord Africain Commercial,Union immobilière marocaine,1,1930,1930,administrateur:1
 commercialemercasia,vulcanisationmoderne,Société commerciale Mercasia,Vulcanisation moderne,1,1930,1930,administrateur:1
-conseilmassena,vulcanisationmoderne,Conseil: Société A. Masséna,Vulcanisation moderne,1,1930,1930,administrateur:1
 esorbemanufacturemarocainecalorifuges,vulcanisationmoderne,E. Sorbe. Manufacture marocaine de calorifuges,Vulcanisation moderne,1,1930,1930,administrateur:1
 conservesmarocainesbom,salinesfedala,Société des Conserves marocaines (B. O. M,Salines de Fédala,1,1930,1930,administrateur:1
 creditfoncieralgerietunisiebom,salinesfedala,Crédit foncier d'Algérie-Tunisie (B. O. M,Salines de Fédala,1,1930,1930,administrateur:1
@@ -685,7 +679,6 @@ jacqueline,fruitsprimeursmaroc,Jacqueline,Fruits et primeurs du Maroc,1,1933,193
 tangermarocaineaeronautique,omniumimmobiliermaroc,Tanger. Société marocaine pour l'aéronautique,Omnium immobilier du Maroc,1,1933,1933,directeur:1
 marrakechmedinaagricole,omniumimmobiliermaroc,Marrakech-Medina). Société agricole,Omnium immobilier du Maroc,1,1933,1933,administrateur:1
 plantationsarbres,omniumimmobiliermaroc,Plantations d'arbres,Omnium immobilier du Maroc,1,1933,1933,administrateur:1
-conseilnavigpaquet,transportsautomobilessouss,Conseil: Cie de navig. Paquet,Société anon. des transports automobiles du Souss,1,1933,1933,administrateur:1
 cherifiennearmements,transportsautomobilessouss,Cie chérifienne d'armements,Société anon. des transports automobiles du Souss,1,1933,1933,administrateur:1
 cherifienneremorquage,transportsautomobilessouss,Société chérifienne de remorquage,Société anon. des transports automobiles du Souss,1,1933,1933,administrateur:1
 docks,transportsautomobilessouss,Cie des docks,Société anon. des transports automobiles du Souss,1,1933,1933,administrateur:1
@@ -737,7 +730,6 @@ caissehypothecaireegypte,banquenationalecommerceindustrie,de la Caisse hypothéc
 creditfoncierorient,banquenationalecommerceindustrie,du Crédit foncier d'Orient,Banque nationale pour le commerce et l'industrie,1,1952,1952,directeur_general:1
 banquefoncierefrancomarocaine,banquenationalecommerceindustrie,de la Banque foncière franco- marocaine,Banque nationale pour le commerce et l'industrie,1,1952,1952,directeur_general:1
 patronunionelectricite,banquenationalecommerceindustrie,patron de l'Union d'électricité,Banque nationale pour le commerce et l'industrie,1,1952,1952,directeur_general:1
-adminpierreandredircreditmaghreb,creditmaghreb,admin. [Pierre André: dir. Crédit du Maghreb,Crédit du Maghreb°,1,1952,1952,administrateur:1
 priveemarocaine,nordafricainefinancementparticipations,Cie privée marocaine,Société nord-africaine de financement et de participations,1,1952,1952,administrateur:1
 creditmarocain,nordafricainefinancementparticipations,Crédit marocain,Société nord-africaine de financement et de participations,1,1952,1952,administrateur:1
 auxiliaireinvestissements,unionmetropolitaineafricaine,Cie auxiliaire d'investissements,Union métropolitaine et africaine,1,1952,1952,administrateur:1
@@ -795,7 +787,6 @@ omniumouledharris,marocainebeniahsen,Omnium des Ouled Harris,Société marocaine
 kerguenunioncommercialeindochinoise,transitrapidemarocain,A. Kerguen. Union commerciale indochinoise,Transit rapide marocain,1,1952,1952,administrateur:1
 viandes,cherifentrepriseselectr,Cie des viandes,Cie chérif. d'entreprises électr,1,1952,1952,administrateur:1
 industriellemarocaineentrepriseselectriques,cherifentrepriseselectr,industrielle. Cie marocaine d'entreprises électriques,Cie chérif. d'entreprises électr,1,1952,1952,administrateur:1
-gentreprises,cherifentrepriseselectr,G.: la Cie d'entreprises,Cie chérif. d'entreprises électr,1,1952,1952,administrateur:1
 marocainedistributioneau,entrepriseelectriquezenatasfedala,Société marocaine de distribution d'eau,Entreprise électrique des Zenatas-Fédala,1,1952,1952,administrateur:1
 energieelectriquemaroc,entrepriseelectriquezenatasfedala,Société Énergie électrique du Maroc,Entreprise électrique des Zenatas-Fédala,1,1952,1952,administrateur:1
 alexburyminiere,minieremoghreb,Alex. Bury. Cie minière,Cie minière du Moghreb,1,1966,1966,administrateur:1
@@ -860,110 +851,85 @@ banquecolonialeetudes,algerienneexploitationliege,Banque coloniale d'études,Soc
 nordafricaineetudes,algerienneexploitationliege,Société nord-africaine d'études,Société Algérienne pour l'Exploitation du liège,1,1927,1927,administrateur:1
 laguerreandre,allianceafricaineassurancesreassurances,LAGUERRE (André),"Alliance africaine, Compagnie française d'assurances et de réassurances",1,1922,1922,administrateur:1
 lauriolalbert,allianceafricaineassurancesreassurances,LAURIOL (Albert),"Alliance africaine, Compagnie française d'assurances et de réassurances",1,1926,1926,administrateur:1
-voirplusbas,africainearmement,Cie. Voir plus bas,Cie africaine d'ARMEMENT,1,1925,1925,administrateur:1
-devignyusinecharenton,chaines,Devigny. Usine à Charenton,CHAÎNES,1,1925,1925,administrateur:1
-usinesgraville,constructionelectrique,Cie. ] Usines à Graville,CONSTRUCTION ÉLECTRIQUE,1,1925,1925,administrateur:1
-alba,constructionelectrique,l'Alba,CONSTRUCTION ÉLECTRIQUE,1,1925,1925,administrateur:1
-kefmahdia,constructionelectrique,Kef Mahdia,CONSTRUCTION ÉLECTRIQUE,1,1925,1925,administrateur:1
-marcellebonconseiladministrationmmherbette,leach,Marcel Lebon. Conseil d'administration: MM. Herbette,LEACH,1,1925,1925,president:1
-presboneminesferainoudrer,minesfer,près Bône.. MINES de FER d'AIN-OUDRER,MINES DE FER,1,1925,1925,president:1
-fdeviseomniumlyonnais,voorhouthaye,F. Devise [Omnium lyonnais,"Voorhout, à La Haye",1,1925,1925,directeur:1
-vpdtmarseillaisecredit,voorhouthaye,v.-pdt Marseillaise de crédit,"Voorhout, à La Haye",1,1925,1925,directeur:1
-parmartigesexploitationmineschalchopyrite,minierefrancoafricaine,par Martiges. Exploitation de mines de chalchopyrite,MINIÈRE FRANCO-AFRICAINE,1,1925,1925,president:1
+voirplusbas,ateliersreparationsmaritimesbeliard,Cie. Voir plus bas,ATELIERS DE RÉPARATIONS MARITIMES BELIARD,1,1925,1925,administrateur:1
+devignyusinecharenton,socchaines,Devigny. Usine à Charenton,Soc. française des CHAÎNES,1,1925,1925,administrateur:1
+presboneminesferainoudrer,socfrancminesfer,près Bône.. MINES de FER d'AIN-OUDRER,Soc. franç. de MINES DE FER,1,1925,1925,president:1
+fdeviseomniumlyonnais,socmineszincguergour,F. Devise [Omnium lyonnais,Soc. des MINES de ZINC du GUERGOUR,1,1925,1925,administrateur:1
+vpdtmarseillaisecredit,socmineszincguergour,v.-pdt Marseillaise de crédit,Soc. des MINES de ZINC du GUERGOUR,1,1925,1925,administrateur:1
+parmartigesexploitationmineschalchopyrite,socminierefrancoafricaine,par Martiges. Exploitation de mines de chalchopyrite,Soc MINIÈRE FRANCO-AFRICAINE,1,1925,1925,president:1
+gastondrappierpdtaguilas,socouenza,Gaston Drappier [pdt Cie d'Aguilas,Soc. de l'OUENZA,1,1925,1925,president:1
 comptoirest,sanhadja,Comptoir de l'Est,SANHADJA,1,1928,1928,administrateur:1
 jguenin,sanhadja,Société J.-L. Guénin,SANHADJA,1,1928,1928,administrateur:1
 indiajutecy,sanhadja,Société India-Jute Cy,SANHADJA,1,1928,1928,administrateur:1
 filsmpignol,sanhadja,Société les fils de M. Pignol,SANHADJA,1,1928,1928,administrateur:1
-haye,senellemaubeuge,Haye,SENELLE-MAUBEUGE,1,1921,1921,administrateur:1
-minesjanonterrenoire,manufacturetapisorient,des Mines de Janon-Terrenoire,Manufacture de TAPIS D'ORIENT,1,1919,1919,president:1
-carlinfilsusinesvoiron,tissagesmecaniquesisere,Carlin fils. Usines à Voiron,TISSAGES MÉCANIQUES DE L'ISÈRE,1,1919,1919,administrateur:1
-ciesassurancesaigle,tramwaysalgeriens,des Cies d'assurances L'Aigle,TRAMWAYS ALGÉRIENS,1,1919,1919,president:1
-commerce,velvetrum,Cie de commerce,VELVET-RUM,1,1919,1919,administrateur:1
+minesjanonterrenoire,socindustrielletelephones,des Mines de Janon-Terrenoire,Soc. Industrielle des TÉLÉPHONES,1,1919,1919,president:1
+carlinfilsusinesvoiron,soctissagesmecaniquesisere,Carlin fils. Usines à Voiron,Soc. des TISSAGES MÉCANIQUES DE L'ISÈRE,1,1919,1919,administrateur:1
+etiennesiryadmdircompteurs,soctramwaysalgeriens,Étienne Siry [adm.-dir. Cie des compteurs,Soc. des TRAMWAYS ALGÉRIENS,1,1919,1919,president:1
+gabrielchamonadmdircompteurs,soctramwaysalgeriens,Gabriel Chamon [adm.-dir. Cie des compteurs,Soc. des TRAMWAYS ALGÉRIENS,1,1919,1919,president:1
+comptoircentralvoiesferrees,soctramwaysalgeriens,Comptoir central des voies ferrées…],Soc. des TRAMWAYS ALGÉRIENS,1,1919,1919,president:1
+ciesassurancesaigle,soctramwaysalgeriens,des Cies d'assurances L'Aigle,Soc. des TRAMWAYS ALGÉRIENS,1,1919,1919,president:1
+soleil,soctramwaysalgeriens,Soleil,Soc. des TRAMWAYS ALGÉRIENS,1,1919,1919,president:1
 holdingcherifienbanqueparis,afrique,holding chérifien de la Banque de Paris,Cie générale de l'AFRIQUE FRANÇAISE,1,1925,1925,president:1
 belgiqueetablissementssilvatico,aguilas,Belgique des Etablissements Silvatico,Cie d'AGUILAS,1,1925,1925,president:1
-algerie,consignatairesreunis,l'Algérie,CONSIGNATAIRES RÉUNIS,1,1925,1925,administrateur:1
-maroccoteafrique,consignatairesreunis,Maroc.. CÔTE d'AFRIQUE,CONSIGNATAIRES RÉUNIS,1,1925,1925,administrateur:1
-guerinusineslavardac,liegeslasserens,A. Guérin. Usines à Lavardac,LIÈGES DE LASSERENS,1,1925,1925,administrateur:1
-usinemarseillefabricationliegesagglomeres,liegeslasserens,Usine à Marseille. Fabrication de lièges agglomérés,LIÈGES DE LASSERENS,1,1925,1925,administrateur:1
-agenceindustrielle,outremer,Agence industrielle,Cie Générale d'OUTRE-MER,1,1925,1925,administrateur:1
-exportationpatheconsortiumcinemasiegesocial67,outremer,exportation. PATHÉ-CONSORTIUM-CINÉMA. Siège social: 67,Cie Générale d'OUTRE-MER,1,1925,1925,administrateur:1
+guerinusineslavardac,socliegeslasserens,A. Guérin. Usines à Lavardac,Soc. an. des LIÈGES DE LASSERENS,1,1925,1925,administrateur:1
+usinemarseillefabricationliegesagglomeres,socliegeslasserens,Usine à Marseille. Fabrication de lièges agglomérés,Soc. an. des LIÈGES DE LASSERENS,1,1925,1925,administrateur:1
 coltd7,fsepetrolesmaroc,CO Ltd. 7,Cie Fse des PÉTROLES DU MAROC,1,1925,1925,administrateur:1
-lacetsstchamond,sudmarocain,LACETS de St-CHAMOND,Cie du SUD MAROCAIN,1,1925,1925,administrateur:1
-isere,sudmarocain,l'Isère,Cie du SUD MAROCAIN,1,1925,1925,administrateur:1
-loire,sudmarocain,Loire,Cie du SUD MAROCAIN,1,1925,1925,administrateur:1
-saoneloiremaison19,sudmarocain,Saône-et-Loire. Maison: 19,Cie du SUD MAROCAIN,1,1925,1925,administrateur:1
-usinesgraville,unionfrancosyriennecomptoirsmediterraneens,Cie. ] Usines à Graville,Union franco-syrienne COMPTOIRS FRANÇAIS MÉDITERRANÉENS,1,1925,1925,administrateur:1
-newyorkmanufacturerasoirsfins,etablissementsluchaire,New-York. Manufacture de rasoirs fins,Établissements LUCHAIRE,1,1925,1925,administrateur:1
-calamineminesdouariasiegesocial47,michenot,calamine.. MINES de DOUARIA. Siège social: 47,Michenot,1,1925,1925,president:1
-banquechopy,michenot,Banque Chopy,Michenot,1,1925,1925,president:1
-usinestunisiemineszinc,mineszaghouan,usines en Tunisie. Mines de zinc,MINES DE ZAGHOUAN,1,1925,1925,administrateur:1
+lacetsstchamond,soctravauxpublicsconstructionscimentarme,LACETS de St-CHAMOND,Soc. de TRAVAUX PUBLICS et de CONSTRUCTIONS en CIMENT ARMÉ,1,1925,1925,administrateur:1
+camillesuelusinesdansrhone,soctravauxpublicsconstructionscimentarme,Camille Suel. Usines dans le Rhône,Soc. de TRAVAUX PUBLICS et de CONSTRUCTIONS en CIMENT ARMÉ,1,1925,1925,administrateur:1
+isere,soctravauxpublicsconstructionscimentarme,l'Isère,Soc. de TRAVAUX PUBLICS et de CONSTRUCTIONS en CIMENT ARMÉ,1,1925,1925,administrateur:1
+loire,soctravauxpublicsconstructionscimentarme,Loire,Soc. de TRAVAUX PUBLICS et de CONSTRUCTIONS en CIMENT ARMÉ,1,1925,1925,administrateur:1
+banquechopy,syndicatminesdjebeltrozzadjebelserdj,Banque Chopy,Syndicat des MINES du DJEBEL-TROZZA et DJEBEL SERDJ,1,1925,1925,president:1
+usinestunisiemineszinc,socnouvmineszaghouan,usines en Tunisie. Mines de zinc,Soc. nouv. anon. des MINES DE ZAGHOUAN,1,1925,1925,administrateur:1
 unionminiere,minierekanguet,de l'Union minière,MINIÈRE DU KANGUET,1,1944,1944,administrateur:1
-puisasiatique,phosphatescheminfergafsa,puis à la Cie asiatique,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,1944,1944,secretaire:1
-colonialebambao,phosphatescheminfergafsa,de la Société coloniale de Bambao,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,1944,1944,secretaire:1
-grandecomore,phosphatescheminfergafsa,de la Société de la Grande- Comore,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,1944,1944,secretaire:1
-tmorinalgerienne,phosphatescheminfergafsa,T Morin [Cie algérienne,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,1944,1944,president:1
-bqunionparisienne,phosphatescheminfergafsa,Bq de l'union parisienne…],Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,1944,1944,president:1
-coltd7,phosphatescheminfergafsa,CO Ltd. 7,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,1944,1944,president:1
-comptoirest,produitschimiquesengrais,Comptoir de l'Est,PRODUITS CHIMIQUES ET D'ENGRAIS,1,1944,1944,administrateur:1
-jguenin,produitschimiquesengrais,Société J.-L. Guénin,PRODUITS CHIMIQUES ET D'ENGRAIS,1,1944,1944,administrateur:1
-indiajutecy,produitschimiquesengrais,Société India-Jute Cy,PRODUITS CHIMIQUES ET D'ENGRAIS,1,1944,1944,administrateur:1
-filsmpignol,produitschimiquesengrais,Société les fils de M. Pignol,PRODUITS CHIMIQUES ET D'ENGRAIS,1,1944,1944,administrateur:1
-mineslaurium,aldegue,Mines de Laurium…],ALDÉGUÉ,1,1938,1938,directeur:1
+puisasiatique,tunisiennephosphatesdjebelmdilla,puis à la Cie asiatique,Cie tunisienne des PHOSPHATES du DJEBEL M'DILLA,1,1944,1944,secretaire:1
+colonialebambao,tunisiennephosphatesdjebelmdilla,de la Société coloniale de Bambao,Cie tunisienne des PHOSPHATES du DJEBEL M'DILLA,1,1944,1944,secretaire:1
+grandecomore,tunisiennephosphatesdjebelmdilla,de la Société de la Grande- Comore,Cie tunisienne des PHOSPHATES du DJEBEL M'DILLA,1,1944,1944,secretaire:1
+tmorinalgerienne,phosphatesdyr,T Morin [Cie algérienne,Cie des PHOSPHATES du DYR,1,1944,1944,president:1
+bqunionparisienne,phosphatesdyr,Bq de l'union parisienne…],Cie des PHOSPHATES du DYR,1,1944,1944,president:1
+coltd7,phosphatesdyr,CO Ltd. 7,Cie des PHOSPHATES du DYR,1,1944,1944,president:1
+comptoirest,sacunion,Comptoir de l'Est,SAC-UNION,1,1944,1944,administrateur:1
+jguenin,sacunion,Société J.-L. Guénin,SAC-UNION,1,1944,1944,administrateur:1
+indiajutecy,sacunion,Société India-Jute Cy,SAC-UNION,1,1944,1944,administrateur:1
+filsmpignol,sacunion,Société les fils de M. Pignol,SAC-UNION,1,1944,1944,administrateur:1
+ethomasentreprisecanalisationeau,soccommercialeafriquenord,E Thomas. Entreprise de canalisation d'eau,Soc. Commerciale de l'AFRIQUE DU NORD,1,1938,1938,administrateur:1
+mineslaurium,alfa,Mines de Laurium…],L'ALFA,1,1938,1938,directeur:1
 ventetousengrais,carrosseriemoderne,VENTE de tous ENGRAIS,CARROSSERIE MODERNE,1,1938,1938,president:1
-usineeucalyptus,carrosseriemoderne,Usine: aux Eucalyptus,CARROSSERIE MODERNE,1,1938,1938,president:1
-algercomptoirindustrieletirage,clement,Alger COMPTOIR INDUSTRIEL d'ÉTIRAGE,CLÉMENT,1,1938,1938,administrateur:1
-gboulognetoutesoperationsbanque,condat,G Boulogne. Toutes opérations de banque,CONDAT et Cie,1,1938,1938,administrateur:1
-usines15,desage,Usines:15,DESAGE,1,1938,1938,administrateur:1
-deuxusinesmaisonsalfort,desage,Deux usines: à Maisons-Alfort,DESAGE,1,1938,1938,administrateur:1
+usines,socgenexplosifscheddites,Usines à,Soc. gén. d'explosifs CHEDDITES,1,1938,1938,president:1
+gboulognetoutesoperationsbanque,corvinomenny,G Boulogne. Toutes opérations de banque,CORVINO et MENNY,1,1938,1938,administrateur:1
 entreprisedistributioneau,hydrauliqueafrique,Entreprise de distribution d'eau,L'HYDRAULIQUE-AFRIQUE,1,1910,1910,president:1
-perpignanusinesmoulasse,hydrauliqueafrique,Perpignan. Usines: La Moulasse,L'HYDRAULIQUE-AFRIQUE,1,1910,1910,president:1
-arial,hydrauliqueafrique,l'Arial,L'HYDRAULIQUE-AFRIQUE,1,1910,1910,president:1
-portefer,hydrauliqueafrique,Porte de Fer,L'HYDRAULIQUE-AFRIQUE,1,1910,1910,president:1
-agence10,hydrauliqueafrique,Agence: 10,L'HYDRAULIQUE-AFRIQUE,1,1910,1910,president:1
-planconentreprisetransportsmetallurgique,mengual,A. Plançon. Entreprise de transports. MÉTALLURGIQUE,MENGUAL,1,1910,1910,administrateur_delegue:1
-electriquenord,millaul,Cie électrique du Nord],MILLAUL,1,1910,1910,president:1
-plombminesrarelmaden,minesbouthaleb,de plomb.. MINES de RAR-EL-MADEN,MINES DU BOU-THALEB,1,1910,1910,administrateur:1
-gdrappierpdtaguilas,minesbouthaleb,G Drappier [pdt Cie d'Aguilas,MINES DU BOU-THALEB,1,1910,1910,administrateur_delegue:1
-mmercierminesguerrouma,palestro,M. Mercier.- Mines de Guerrouma,PALESTRO,1,1910,1910,administrateur_delegue:1
-nadorchairexploitationmineszinc,palestro,Nador-Chaïr. Exploitation de mines de zinc,PALESTRO,1,1910,1910,administrateur_delegue:1
-aeriennefrse,palestro,Cie aérienne frse,PALESTRO,1,1910,1910,administrateur:1
-usinesvilleneuve,palestro,Usines à Villeneuve,PALESTRO,1,1910,1910,administrateur:1
-mans,sidikamber,Mans,SIDI KAMBER,1,1910,1910,president:1
-usinerouteoran,sonnati,Usine: route d'Oran,SONNATI,1,1910,1910,president:1
+planconentreprisetransports,socmessagerieslittoral,A. Plançon. Entreprise de transports,Soc. des MESSAGERIES du LITTORAL,1,1910,1910,administrateur_delegue:1
+electriquenord,mineraisfermagnetiquemoktaelhadid,Cie électrique du Nord],Cie des MINERAIS de FER MAGNÉTIQUE de MOKTA-EL-HADID,1,1910,1910,president:1
+gdrappierpdtaguilas,minesrarelmaden,G Drappier [pdt Cie d'Aguilas,Cie des MINES de RAR-EL-MADEN,1,1910,1910,administrateur_delegue:1
+haye,socouenza,Haye],Soc. de l'OUENZA,1,1910,1910,president:1
+mmercierminesguerrouma,socminespalestro,M. Mercier.- Mines de Guerrouma,Soc. an. des Mines de PALESTRO,1,1910,1910,administrateur_delegue:1
+nadorchairexploitationmineszinc,socminespalestro,Nador-Chaïr. Exploitation de mines de zinc,Soc. an. des Mines de PALESTRO,1,1910,1910,administrateur_delegue:1
+aeriennefrse,papeteriesnavarre,Cie aérienne frse,PAPETERIES NAVARRE,1,1910,1910,administrateur:1
+usinesvilleneuve,papeteriesnavarre,Usines à Villeneuve,PAPETERIES NAVARRE,1,1910,1910,administrateur:1
+mans,socminessidikamber,Mans,Soc. an. des Mines de SIDI KAMBER,1,1910,1910,president:1
 usinehusseindeyvinaigresvins,valeretarsot,Usine à Hussein-Dey. Vinaigres de vins,VALÈRE et TARSOT,1,1910,1910,gerant:1
-16eagencesmaroceclairage,afrique,16e. Agences: … Maroc: Cie d'éclairage,Cie générale de l'AFRIQUE FRANÇAISE,1,1938,1938,president:1
-exploitationusinesagglomeresaffretementstransports,chaouiamaroc,exploitation d'usines d'agglomérés. Affrètements. Transports,CHAOUIA et MAROC,1,1938,1938,president:1
-fderochenavigationmaritimechaux,chargeurs,F. Déroche. Cie de navigation maritime.. CHAUX,CHARGEURS FRANÇAIS,1,1938,1938,president:1
-usines,chargeurs,Usines,CHARGEURS FRANÇAIS,1,1938,1938,president:1
-usinerabatcharpentes,constructionsmetalliques,Usine à Rabat. Charpentes,CONSTRUCTIONS MÉTALLIQUES,1,1938,1938,president:1
+fderochenavigationmaritime,cechargeurs,F. Déroche. Cie de navigation maritime,Ce des CHARGEURS FRANÇAIS,1,1938,1938,president:1
+usines,socchauxcimentsmateriauxconstructionmaroc,Usines,"Soc. an. des CHAUX, CIMENTS et MATÉRIAUX de CONSTRUCTION au MAROC",1,1938,1938,administrateur:1
+usinerabatcharpentes,socmarocaineconstructionsmetalliques,Usine à Rabat. Charpentes,Soc. marocaine de CONSTRUCTIONS MÉTALLIQUES,1,1938,1938,president:1
 privesmarocimmobiliere,francomarocainefedhala,privés au Maroc.— Société immobilière,Cie franco-marocaine de FÉDHALA,1,1938,1938,administrateur_delegue:1
-usineslavardac,roulement,Usines à Lavardac,ROULEMENT,1,1938,1938,president:1
-puisdgacharbonnagestonkin,comptoirmines,puis dga Charbonnages du Tonkin],Comptoir des MINES,1,1938,1938,administrateur:1
-omniumlyonnais,comptoirmines,Omnium lyonnais…],Comptoir des MINES,1,1938,1938,administrateur:1
-usinesmeknes,frsenordmarocain,Usines à: Meknès,Cie frse du NORD-MAROCAIN,1,1944,1944,administrateur:1
-delnorteafricano,marocaineasiatiquepetroles,Cie Del Norte Africano,Cie marocaine et asiatique des PÉTROLES,1,1944,1944,administrateur:1
-gaucher,sebou,Général Gaucher,SEBOU,1,1944,1944,president:1
-mans,sebou,Mans,SEBOU,1,1944,1944,president:1
-usineslamarchesaone,cheddites,Usines à Lamarche-sur- Saône,CHEDDITES,1,1938,1938,administrateur:1
+usineslavardac,socliegeslasserens,Usines à Lavardac,Soc. an. des LIÈGES de LASSERENS,1,1938,1938,president:1
+marquisnoephosphates,socetudesrecherchestraitementphosphatesmaroc,Marquis de Noé. Phosphates,Soc. d'études et de recherches du traitement des PHOSPHATES au MAROC,1,1944,1944,administrateur_delegue:1
+delnorteafricano,socporttanger,Cie Del Norte Africano,Soc. du PORT de TANGER,1,1944,1944,administrateur:1
+gaucher,siemensfrance,Général Gaucher,SIEMENS-FRANCE,1,1944,1944,president:1
+mans,siemensfrance,Mans,SIEMENS-FRANCE,1,1944,1944,president:1
+usineslamarchesaone,socgenexplosifscheddites,Usines à Lamarche-sur- Saône,Soc. gén. d'explosifs CHEDDITES,1,1938,1938,administrateur:1
 gboulognetoutesoperationsbanque,commercialetunisienne,G. Boulogne. Toutes opérations de banque,Société COMMERCIALE TUNISIENNE,1,1938,1938,administrateur:1
-pantinusinepantin,escande,Pantin. Usine à Pantin,ESCANDE,1,1938,1938,administrateur_delegue:1
-casablancamanufacturelingerie,escande,Casablanca. Manufacture de lingerie,ESCANDE,1,1938,1938,president:1
-morinalgerienne,escande,Morin [Cie algérienne,ESCANDE,1,1938,1938,administrateur:1
-bqunionparisienne,escande,Bq de l'union parisienne…],ESCANDE,1,1938,1938,administrateur:1
+morinalgerienne,beniniguez,Morin [Cie algérienne,Benini GUEZ,1,1938,1938,administrateur:1
+bqunionparisienne,beniniguez,Bq de l'union parisienne…],Benini GUEZ,1,1938,1938,administrateur:1
 usinessousse,huileriefrancotunisienne,Usines à Sousse,Société HUILERIE FRANCO-TUNISIENNE,1,1938,1938,administrateur:1
-agence10,industrielle,Agence: 10,INDUSTRIELLE,1,1938,1938,administrateur:1
-phackenbergerbanquetunsiie,tabourin,P. Hackenberger [Banque de Tunsiie,Tabourin,1,1938,1938,administrateur:1
-usinestunisiemineszinc,tabourin,usines en Tunisie. Mines de zinc,Tabourin,1,1938,1938,administrateur:1
-lieegroupehersent,phosphatestunisiens,liée au groupe Hersent,PHOSPHATES TUNISIENS,1,1938,1938,administrateur_delegue:1
+phackenbergerbanquetunsiie,socminesfedjeladoum,P. Hackenberger [Banque de Tunsiie,Soc. des MINES de FEDJ-EL-ADOUM,1,1938,1938,president:1
+lieegroupehersent,portbizerte,liée au groupe Hersent,Cie du PORT de BIZERTE,1,1938,1938,administrateur_delegue:1
 lejalcharles,liegesarmstrong,LEJAL (Charles),Cie des Lièges Armstrong,1,1926,1926,administrateur:1
 algertouscreditindustrielalgerien,ascenseursmontechargeshydrauliquesvillealger,Alger. * Tous du Crédit industriel algérien,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",1,1926,1926,administrateur:1
-elgrefaagenceventeparister,royaleasturienneminesdirection,El-Grefa. Agence de vente à Paris: ter,"Cie Royale ASTURIENNE DES MINES, direction générale",1,1925,1925,president:1
 actionnairesmmgorchschacou,atelierschantiersmaritimestunisie,et actionnaires de la société. MM. GORCHS-CHACOU,Ateliers et chantiers maritimes de Tunisie,1,1922,1922,administrateur:1
 actionnairesbouffe,atelierschantiersmaritimestunisie,et actionnaires de la société. BOUFFÉ,Ateliers et chantiers maritimes de Tunisie,1,1926,1926,administrateur:1
 notammentgroupeepinattransports,autohall,notamment du groupe Épinat (Transports,Auto-Hall,1,1926,1926,administrateur:1
 larrenedouard,autobusamperebehagle,LARREN (Édouard),Autobus d'Ampère et Béhagle,1,1926,1926,administrateur:1
 bourdaistouches,banquealgerie,Bourdais des Touches,Banque de l'Algérie,1,1931,1931,administrateur:1
-tunisconstitution,banquealgerie,Tunis. CONSTITUTION: Société anonyme française,Banque de l'Algérie,1,1948,1948,censeur:1
 parvotre,banquetunisie,par votre Société,Banque de Tunisie,1,1886,1886,administrateur:1
 mobilierdssonagencetunis,banquetunisie,mobilier ds son agence de Tunis,Banque de Tunisie,1,1886,1886,administrateur:1
 mineszincguergour,banquetunisie,Mines de zinc de Guergour,Banque de Tunisie,1,1922,1922,administrateur:1
@@ -994,11 +960,7 @@ lallemandeugene,banqueindustrielleafriquenord,LALLEMAND (Eugène),Banque industr
 lalliercoudrayandre,banqueindustrielleafriquenord,LALLIER DU COUDRAY (André),Banque industrielle de l'Afrique du Nord,1,1926,1926,administrateur:1
 algercommissairegouvernementernestpicard,banqueindustrielleafriquenord,Alger. COMMISSAIRE DU GOUVERNEMENT ERNEST-PICARD,Banque industrielle de l'Afrique du Nord,1,1926,1926,administrateur:1
 tunisiemaroclaboubee,banqueindustrielleafriquenord,TUNISIE ET LE MAROC LABOUBÉE,Banque industrielle de l'Afrique du Nord,1,1926,1926,administrateur:1
-benardcommissairegouvernementpernestpicard,banqueindustrielleafriquenord,L. Bénard. Commissaire du gouvernement: P. Ernest-Picard,Banque industrielle de l'Afrique du Nord,1,1931,1931,administrateur:1
 cherifienneparticipations6,carrieresmarocaines,Société chérifienne de participations. 6,Société des Carrières marocaines,1,1929,1929,administrateur:1
-papierkraftusinesbegles,cenpasoccentraleusinespapiers,Papier kraft: usines de Bègles,"CENPA, Soc. Centrale des Usines à Papiers",1,1938,1938,administrateur:1
-pochettesusinebagnolet,cenpasoccentraleusinespapiers,pochettes: Usine de Bagnolet,"CENPA, Soc. Centrale des Usines à Papiers",1,1938,1938,administrateur:1
-etcusinebegles,cenpasoccentraleusinespapiers,etc.: usine de Bègles,"CENPA, Soc. Centrale des Usines à Papiers",1,1938,1938,administrateur:1
 emilevanespencette,centralephosphatesbordjrdir,Émile Van Espen. Cette société,Compagnie Centrale des Phosphates à Bordj'R'dir,1,1902,1902,administrateur:1
 cheminsferpm,cheminsfermaroc,Cie des chemins de fer P.-L.-M,Chemins de fer du Maroc,1,1948,1948,administrateur:1
 galemaroc,cheminsfermaroc,Cie gale du Maroc… ],Cie des chemins de fer du Maroc,1,1951,1951,administrateur:1
@@ -1042,7 +1004,6 @@ lemoigneemile,sudmarocain,LEMOIGNE (Émile),Compagnie du Sud-Marocain,1,1926,192
 banquecolonialeetudesentreprisesmutuelles,sudmarocain,BANQUE COLONIALE D'ÉTUDES ET D'ENTREPRISES MUTUELLES,Compagnie du Sud-Marocain,1,1926,1926,administrateur:1
 monnot,colonialeafriquenorddjamaa,Société Monnot,"Compagnie Coloniale de l'Afrique du Nord, Djamaa",1,1925,1925,administrateur:1
 mornag,colonisationouedramel,Mornag,Société de Colonisation de l'Oued Ramel,1,1926,1926,administrateur:1
-demarestadministrationcentralemmtarbesablons,algerienne,Démarest. Administration centrale: MM. Tarbé des Sablons,Compagnie algérienne,1,1880,1880,administrateur:1
 algerienneproduitschimiques,algerienne,de la Société algérienne de produits chimiques,Compagnie algérienne,1,1922,1922,administrateur:1
 filsgeorgesbraunschwig,souelah,société Les Fils de Georges Braunschwig,Compagnie de Souelah,1,1931,1931,administrateur:1
 puissecretairebanqueottomane,marocaine,puis secrétaire général de la Banque ottomane,Compagnie marocaine,1,1921,1921,administrateur:1
@@ -1063,7 +1024,6 @@ omniumimmobiliertunisien,cooperativeagricoleagrumesfruitslegumesmitidjaelaffroun
 colonisationouedramel,cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,de la Société de colonisation de l'Oued-Ramel,"Cooperative agricole des agrumes, fruits et légumes de la Mitidja, El Affroun. — Confiturerie de Boufarik",1,1926,1926,administrateur:1
 ruisseau,creditalgerien,Ruisseau,"Crédit algérien, puis Crédit privé",1,1926,1926,administrateur:1
 chsteinbrennertoutesoperationsbanque,creditalgerienfavoriserdeveloppementagricolecommercial,Ch. Steinbrenner. Toutes opérations de banque,"CRÉDIT ALGÉRIEN pour FAVORISER le DÉVELOPPEMENT AGRICOLE, COMMERCIAL",1,1938,1938,administrateur:1
-alba,creditfoncieralgerietunisie,l'Alba,CRÉDIT FONCIER D'ALGÉRIE ET DE TUNISIE,1,1925,1925,administrateur:1
 gboulognetoutesoperationsbanque,creditfoncieralgerietunisie,G Boulogne. Toutes opérations de banque,Crédit foncier d'Algérie et de Tunisie,1,1938,1938,administrateur:1
 anciennementdenommeecreditfoncier,creditfoncieralgerietunisie,anciennement dénommée Crédit foncier,Crédit foncier d'Algérie et de Tunisie,1,1953,1953,commissaire_aux_comptes:1
 admlyonnaisemadagascar,creditfonciermarocain,adm. Cie Lyonnaise de Madagascar,Crédit foncier marocain,1,1922,1922,administrateur:1
@@ -1079,7 +1039,6 @@ priveemarocaine,creditmarocain,Cie Privée marocaine,Crédit marocain,1,,,admini
 marocaineechanges,creditmarocain,Société marocaine d'échanges,Crédit marocain,1,,,administrateur:1
 miniere,creditmarocain,Cie minière,Crédit marocain,1,,,administrateur:1
 marocaine,creditmarocain,Cie marocaine,Crédit marocain,1,,,administrateur:1
-cetsmoch,creditmarocain,C.: Éts Moch,Crédit marocain,1,,,administrateur:1
 bozelmaletra,dalmatienne,Société Bozel Malétra,Dalmatienne,1,1940,1940,administrateur:1
 uneexpeditionstatuts,distilleriebadoilmustapha,Une expédition des statuts de la société,"Distillerie Badoil, Mustapha",1,1888,1888,administrateur:1
 holdingcoloniale,minieredjebelfelten,Holding Coloniale,Société minière du Djebel-Felten,1,1953,1953,administrateur:1
@@ -1206,7 +1165,6 @@ larochejoubertedmond,fusionneeliegeshamendaspetitekabylie,LAROCHE-JOUBERT (Edmon
 grange,fusionneeliegeshamendaspetitekabylie,GRANGE,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,1,1922,1922,administrateur:1
 pierreboissieuusinesbessombourg,liegeshamendaspetitekabylie,Pierre de Boissieu. Usines à Bessombourg,LIÈGES DES HAMENDAS ET DE LA PETITE KABYLIE,1,1925,1925,administrateur:1
 usinesbessombourg,liegeshamendaspetitekabylie,Usines à Bessombourg,LIÈGES des HAMENDAS et de la PETITE KABYLIE,1,1938,1938,directeur:1
-algeriennecommissairescompteshpuech,liegeshamendaspetitekabylie,Compagnie algérienne. Commissaires des comptes: H. Puech,Lièges des Hamendas et de la Petite Kabylie,1,1953,1953,administrateur:1
 lechauxcommissairescomptesbaldy,lucienborgeaud,LECHAUX. COMMISSAIRES AUX COMPTES BALDY,Lucien Borgeaud & Cie,1,1926,1926,administrateur:1
 lemoigneemile,magasinsgenerauxwarrantsmaroc,LEMOIGNE (Émile),Société des Magasins généraux et warrants du Maroc,1,1922,1922,administrateur:1
 creditfoncieralgerie,makanghia,du Crédit foncier d'Algérie,Makanghia,1,1928,1928,administrateur:1
@@ -1227,7 +1185,6 @@ forges,metallurgiqueminierefrancomarocaine,de la Société des Forges,Compagnie 
 buffetnanceiennecredit,metallurgiqueminierefrancomarocaine,Buffet de la Société nancéienne de Crédit,Compagnie Métallurgique et minière franco-marocaine,1,1912,1912,administrateur:1
 parisexploitationminesfer,metallurgiqueminierefrancomarocaine,Paris. Exploitation de mines de fer,Compagnie MÉTALLURGIQUE et MINIÈRE FRANCO-MAROCAINE,1,1925,1925,president:1
 brunvirloy,mineraisfermagnetiquecollo,Brun de Virloy,Compagnie des minerais de fer magnétique de Collo,1,1877,1877,administrateur:1
-manganesecommissairecompteslemesle,minesbouarfa,Société du Manganèse. Commissaire des comptes: Lemesle,Mines de Bou-Arfa,1,1945,1945,administrateur:1
 minesissougri,minesbouskour,Sté des mines de l'Issougri,Société des Mines de Bou-Skour,1,1951,1951,administrateur:1
 louishalmagrandminesissougri,minesbouskour,Louis Halmagrand [Mines de l'Issougri,Société des Mines de Bou-Skour,1,1951,1951,administrateur:1
 unionimmobilieremoghreb,minesbouskour,Union immobilière du Moghreb],Société des Mines de Bou-Skour,1,1951,1951,administrateur:1
@@ -1258,7 +1215,6 @@ parminieregundafaimmeubles,minieregundafa,par la Société minière des Gundafa.
 miniere,minierebramrane,de la Société minière,Société Minière du Bramrane,1,1929,1929,administrateur:1
 minerais,minierebramrane,et de la Société minerais,Société Minière du Bramrane,1,1929,1929,administrateur:1
 foiretadmdircompteurs,minierekanguet,Foiret [adm.-dir Cie des compteurs,"Société minière du Kanguet, puis Société nouvelle du Kanguet",1,1922,1922,administrateur:1
-puisdgacharbonnagestonkin,minieremaroc,puis dga Charbonnages du Tonkin],Société Minière française au Maroc,1,1938,1938,administrateur:1
 administrateursminesgarnalfaya,minierenordafriquesaintetienne,administrateurs des Mines de Garn-Alfaya,"Société Minière du Nord de l'Afrique, Saint-Étienne",1,1901,1901,administrateur:1
 minieredjebelfelten,minierenordafriquesaintetienne,de la Société minière du Djebel-Felten,"Société Minière du Nord de l'Afrique, Saint-Étienne",1,1901,1901,administrateur:1
 minoteriemarocaineetablissementsperez,minoterieatlasboujab,Minoterie Marocaine. Etablissements Perez,"Minoterie de l'Atlas à Boujab, puis Société nouvelle des minoteries de l'Atlas",1,1935,1935,administrateur:1
@@ -1273,7 +1229,6 @@ bateauxvapeurnord,nordafricaineentreprisesmaritimesalgerorannemours,Cie des bate
 lallourmichel,nordafricainetonte,LALLOUR (Michel),Société Nord-Africaine de Tonte,1,1926,1926,administrateur:1
 lainelucien,nordafricainetonte,LAINÉ (Lucien),Société Nord-Africaine de Tonte,1,1926,1926,administrateur:1
 anciennebanqueverleydecroix,nordafricaineventespubliques,Ancienne banque Verley-Decroix,Société Nord-Africaine de Ventes publiques,1,1926,1926,administrateur:1
-plaques,oasisnordafricain,Cie: plaques,Societe des Oasis du Nord-Africain,1,1922,1922,administrateur:1
 belvedere,olivettesmaiana,Belvédère,Société des Olivettes du Maïana,1,1926,1926,administrateur:1
 sousdirecteur,omniumminesalgerietunisie,sous-directeur de la Société générale,Omnium Société générale de mines d'Algérie-Tunisie,1,1906,1906,administrateur:1
 attache,omniumminesalgerietunisie,attaché à la Société générale,Omnium Société générale de mines d'Algérie-Tunisie,1,1906,1906,administrateur:1
@@ -1303,7 +1258,12 @@ fondateurparis,phosphatesouartane,fondateur de la société à Paris,Compagnie d
 leudetmaurice,phosphatesouartane,LEUDET (Maurice),Compagnie des Phosphates des Ouartane,1,1922,1922,administrateur:1
 saintgobain,phosphatesdyr,Compagnie de Saint-Gobain,Compagnie des Phosphates du Dyr,1,1912,1912,administrateur:1
 trocqueryves,phosphatestunisiens,TROCQUER (Yves),"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte",1,1926,1926,administrateur:1
-fininduscommissairescomptesmmlafollye,phosphatestunisiens,Société Finindus. Commissaires aux comptes: MM..Lafollye,Phosphates Tunisiens,1,1948,1948,administrateur:1
+couvreuxcreditfonciercolonial,portfedala,Couvreux [Crédit foncier colonial,Cie du port de Fédala,1,1951,1951,administrateur:1
+omniumintercontinentalcasa,portfedala,Omnium intercontinental à Casa],Cie du port de Fédala,1,1951,1951,administrateur:1
+creditfonciercolonial,portfedala,Crédit foncier colonial,Cie du port de Fédala,1,1951,1951,administrateur:1
+creditfoncieralgerietunisierecherches,portfedala,Crédit foncier d'Algérie-Tunisie. Sté de recherches,Cie du port de Fédala,1,1951,1951,administrateur:1
+bouchonneriesfedala,entrepotsfrigorifiquesafriquenord,Bouchonneries de Fédala,Société des Entrepôts frigorifiques de l'Afrique du Nord,1,1922,1922,administrateur:1
+tingitane,entrepotsfrigorifiquesafriquenord,Tingitane S. A,Société des Entrepôts frigorifiques de l'Afrique du Nord,1,1922,1922,administrateur:1
 charbonnagesnordafricains,extensionportnemours,Société Charbonnages nord-africains,Société pour l'extension du Port de Nemours,1,1952,1952,administrateur:1
 asturiennemines,extensionportnemours,Compagnie Asturienne des Mines,Société pour l'extension du Port de Nemours,1,1952,1952,administrateur:1
 gerance,extensionportnemours,Société anonyme de gérance,Société pour l'extension du Port de Nemours,1,1952,1952,administrateur:1
@@ -1354,9 +1314,12 @@ banquemaroc,africainepetroles,Banque française du Maroc,Société Africaine des
 creditfonciercolonial,africainepetroles,Crédit foncier colonial,Société Africaine des Pétroles,1,1930,1930,administrateur:1
 mornag,djimla,Mornag,Société de Djimla,1,1926,1926,administrateur:1
 bardo,ouenza,Bardo,Société de l'Ouenza,1,1922,1922,administrateur:1
+gastondrappierpdtaguilas,ouenza,Gaston Drappier [pdt Cie d'Aguilas,OUENZA,1,1925,1925,president:1
+haye,ouenza,Haye],Société de l'Ouenza,1,1938,1938,president:1
 concessionnaireminesouenza,ouenza,Société concessionnaire des Mines d'Ouenza,Société de l'Ouenza,1,1940,1940,administrateur:1
 banquepaysnord,foncieremarocaine,de la Banque des Pays du Nord,Société Foncière Marocaine,1,1911,1911,vice_president:1
 sogema,minierealgerienne,Société Sogema,Société Minière Algérienne,1,1945,1945,administrateur:1
+ethomasentreprisecanalisationeau,afriquenord,E Thomas. Entreprise de canalisation d'eau,AFRIQUE du NORD,1,1938,1938,administrateur:1
 minesbouarfa,afriquenord,Mines de Bou Arfa,AFRIQUE du NORD,1,1938,1938,administrateur:1
 fedalienne,financieretransafricaine,Fédalienne,Société Financière Transafricaine,1,1952,1952,administrateur:1
 entreprisecampenonbernard,financieretransafricaine,Entreprise Campenon-Bernard,Société Financière Transafricaine,1,1952,1952,administrateur:1
@@ -1366,6 +1329,10 @@ president,stationcentraleelectricitemascara,Président,Station centrale d'élect
 pdtsyndicathotelier,voyageshotelsnordafricains,pdt du Syndicat hôtelier],Société des voyages et hôtels nord-africains,1,1925,1925,administrateur:1
 lacourgayetjacques,voyageshotelsnordafricains,LACOUR-GAYET (Jacques),Société des voyages et hôtels nord-africains,1,1926,1926,administrateur:1
 censeurcreditfoncier,tachet,censeur du Crédit foncier. …………,Tachet,1,1888,1888,administrateur:1
+etiennesiryadmdircompteurs,tramwaysalgeriens,Étienne Siry [adm.-dir. Cie des compteurs,Société des Tramways algériens,1,1925,1925,president:1
+gabrielchamonadmdircompteurs,tramwaysalgeriens,Gabriel Chamon [adm.-dir. Cie des compteurs,Société des Tramways algériens,1,1925,1925,president:1
+comptoircentralvoiesferrees,tramwaysalgeriens,Comptoir central des voies ferrées…],Société des Tramways algériens,1,1925,1925,president:1
+soleil,tramwaysalgeriens,Soleil,Société des Tramways algériens,1,1925,1925,president:1
 galemaroc,tramwaysautobuscasablanca,Cie gale du Maroc],Compagnie des tramways et autobus de Casablanca,1,1951,1951,administrateur:1
 lellouchehenri,tramwayselectriquesconstantine,LELLOUCHE (Henri),Tramways électriques de Constantine,1,1926,1926,administrateur:1
 bonnettousalgerienne,transportsmazeres,Bonnet. * Tous de la Compagnie algérienne,Transports Mazères,1,1922,1922,administrateur:1
@@ -1385,7 +1352,6 @@ secretairecivilezayana,vignobleszayana,secrétaire de la Société civile de Zay
 creditfoncierfrance,vignobleszayana,Crédit foncier de France,Société des Vignobles de Zayana,1,1929,1929,administrateur:1
 assurancesphenixincendie,vignobleszayana,Assurances Le Phénix-Incendie,Société des Vignobles de Zayana,1,1929,1929,administrateur:1
 phenixvie,vignobleszayana,Phénix-Vie,Société des Vignobles de Zayana,1,1929,1929,administrateur:1
-phenixaccidentsapporteurvignobleszayana,vignobleszayana,Phénix-Accidents. Apporteur: Vignobles de Zayana,Société des Vignobles de Zayana,1,1929,1929,administrateur:1
 francoismarsalbanqueunionparisienne,vignoblesmediterraneedomainemonvilleduzerville,FRANÇOIS-MARSAL [Banque de l'union parisienne,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",1,1922,1922,administrateur:1
 banqueunionparisienne,vignoblesmediterraneedomainemonvilleduzerville,de la Banque de l'Union Parisienne,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",1,1925,1925,administrateur:1
 rochefoucauldgabriel,vignoblesmediterraneedomainemonvilleduzerville,ROCHEFOUCAULD (Gabriel de),"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",1,1926,1926,administrateur:1
@@ -1409,7 +1375,6 @@ georgesvailleindustrielle,sanghalikouala,Georges Vaille. Cie industrielle,Cie g�
 corre,africaineforestiere,Corre,Société africaine forestière,1,1937,1937,administrateur:1
 corre,agricoleforestiereafricaine,Corre,Société agricole et forestière Africaine,1,1937,1937,administrateur:1
 comptoircameroun,commercialeindustrielleagricolehautogooue,comptoir au Cameroun,"Société commerciale, industrielle et agricole du Haut-Ogooué",1,1937,1937,administrateur_delegue:1
-lugagnerepresentantspariscommerciale,plantationskandjia,Lugagne. Représentants à Paris: Société commerciale,Société des Plantations de la Kandjia,1,1937,1937,gerant:1
 equatorialemines,recherchesminieresoubangui,Cie équatoriale de mines,Cie générale de recherches minières de l'Oubangui,1,1937,1937,administrateur:1
 exploitationsminieresoubangui,recherchesminieresoubangui,Société d'exploitations minières de l'Oubangui,Cie générale de recherches minières de l'Oubangui,1,1937,1937,administrateur:1
 paccalyagricole,africaineentreprises,L. Paccaly. Société agricole,Société africaine d'entreprises,1,1937,1937,administrateur:1
@@ -1431,7 +1396,6 @@ menengotengindustrielle,entreprisesagricolesplantations,Menengoteng. Cie industr
 fvanoutryveplantationsfoumban,entreprisesagricolesplantations,F. Vanoutryve. Société des plantations de Foumban,ENTREPRISES AGRICOLES PLANTATIONS,1,1937,1937,administrateur:1
 koutiplantationssanaga,entreprisesagricolesplantations,Kouti. Société des plantations de la Sanaga,ENTREPRISES AGRICOLES PLANTATIONS,1,1937,1937,administrateur:1
 nomcollectif,entreprisesagricolesplantations,Société en nom collectif,ENTREPRISES AGRICOLES PLANTATIONS,1,1937,1937,administrateur:1
-plantationscafeiersrobustaviossat,entreprisesagricolesplantations,Plantations: caféiers robusta. A. Viossat,ENTREPRISES AGRICOLES PLANTATIONS,1,1937,1937,administrateur:1
 freletequateur,entreprisesagricolesplantations,Frelet. Cie générale de l'Equateur,ENTREPRISES AGRICOLES PLANTATIONS,1,1937,1937,gerant:1
 esekaexploitationsforestieresafricaines,entreprisesagricolesplantations,Eséka. Société des Exploitations forestières africaines,ENTREPRISES AGRICOLES PLANTATIONS,1,1937,1937,gerant:1
 kribiforestiere,entreprisesagricolesplantations,Kribi. Société forestière,ENTREPRISES AGRICOLES PLANTATIONS,1,1937,1937,gerant:1
@@ -1519,7 +1483,6 @@ omniumfinanciermarocaincommerce,tchadafriqueequatorialeentrepriseschemin,Omnium 
 oremac,tchadafriqueequatorialeentrepriseschemin,Société Oremac,Société du Tchad et d'Afrique équatoriale des Entreprises Chemin,1,1949,1949,administrateur:1
 representantfrancecongo,transportscongooubanguitchad,représentant la Nouvelle Société France-Congo,Transports Congo-Oubangui-Tchad,1,1949,1949,administrateur:1
 miniereogoouelobaye,unionminiereafricaineberberati,Société minière Ogooué-Lobaye,"Union minière africaine, BERBERATI",1,1949,1949,administrateur:1
-usinesstrasbourgatelrepar,unionroutierecentreafricaine,USINES: STRASBOURG: Atel de répar,"Union routière centre-africaine, Anct",1,1949,1949,administrateur:1
 commcongolaisetransports,altex,comm.. Société congolaise de transports,Société Altex,1,1949,1949,administrateur:1
 tardifelevage,altex,Tardif. Société d'élevage,Société Altex,1,1949,1949,administrateur:1
 horvilleentreprisescongolaises,altex,A. Horville. Société d'entreprises congolaises,Société Altex,1,1949,1949,administrateur:1
@@ -1528,9 +1491,7 @@ grangeexploitationscommerciales,altex,de la Grange. Société d'exploitations co
 pbouchonindustrielle,altex,P. Bouchon. Société industrielle,Société Altex,1,1949,1949,administrateur:1
 jeanvigoureuxforestieremayombe,forestieregabonaise,Jean Vigoureux. Société Forestière du Mayombe,Cie forestière gabonaise,1,1949,1949,administrateur:1
 produitslaitierscommercialembomou,socoma,Produits laitiers. Société commerciale de M'Bomou,SOCOMA,1,1939,1939,administrateur:1
-cphanariotiscommercialeoubanguioriental,socoma,C.: Phanariotis. Société commerciale de l'Oubangui oriental,SOCOMA,1,1939,1939,administrateur:1
 oswaddurandetablsamure,socoma,Oswad Durand. Société des Établ. Sa-Muré,SOCOMA,1,1939,1939,administrateur:1
-gtuccianigerancesindustrielles,socoma,Gt: D. Ucciani. Société de gérances industrielles,SOCOMA,1,1939,1939,administrateur:1
 kembedissoute,socoma,Kembé (Société dissoute,SOCOMA,1,1939,1939,administrateur:1
 orafricainemines,socoma,Or. Cie africaine de mines,SOCOMA,1,1939,1939,administrateur:1
 mauricederouetbanquevernes,colonialedistributionenergieelectrique,Maurice Derouet [de la Banque Vernes,Cie coloniale de distribution d'énergie électrique,1,1947,1947,administrateur:1
@@ -1551,15 +1512,13 @@ consortiumindustriel,tropicaledroguerie,Consortium industriel,Société tropical
 exploitationsforestieresafricaines,africaineplacagesportgentil,Cie d'exploitations forestières africaines,"Cie Africaine de placages, PORT-GENTIL, A",1,1951,1951,administrateur:1
 rapportconseiladministration,afriquecongo,Rapport du conseil d'administration,Afrique et Congo,1,1913,1913,administrateur:1
 caisseafrique,afriquecongo,Caisse d'Afrique,Afrique et Congo,1,1915,1915,administrateur:1
-afriquenoirecommissairesmmradiguet,afriquecongo,Compagnie de l'Afrique Noire. Commissaires: MM. Radiguet,Afrique et Congo,1,1953,1953,administrateur:1
 pierreboissieumaroc,afriqueminiereequatoriale,Pierre de Boissieu [Cie du Maroc,Afrique minière équatoriale,1,1922,1922,administrateur:1
-pierreboissieumaroc,afrique,Pierre de Boissieu [Cie du Maroc,Cie générale de l'AFRIQUE FRANÇAISE,1,1925,1925,administrateur:1
-banquelambert,basogooue,de la Banque A. Lambert,BAS-OGOOUÉ,1,1925,1925,president:1
+banquelambert,socindbasogooue,de la Banque A. Lambert,Soc. an. ind. du BAS-OGOOUÉ,1,1925,1925,president:1
 etsrocca,boiscoloniaux,des Éts Rocca,Cie générale des BOIS COLONIAUX,1,1925,1925,administrateur:1
 dahomey,boiscoloniaux,de la Société française du Dahomey,Cie générale des BOIS COLONIAUX,1,1925,1925,administrateur:1
 entreprisesindustrielles,bordelaisecomptoirsafricains,Entreprises industrielles,Cie bordelaise des COMPTOIRS AFRICAINS,1,1925,1925,president:1
 frseentreprisesindochine,hautogooue,Cie frse d'entreprises en Indo-Chine],HAUT-OGOOUÉ,1,1925,1925,president:1
-plantationesekaexploitationforetstraverses,cameroun,plantation à Eséka Exploitation de forêts. Traverses,CAMEROUN,1,1938,1938,administrateur:1
+plantationesekaexploitationforetstraverses,socnationalecameroun,plantation à Eséka Exploitation de forêts. Traverses,Soc. Nationale du CAMEROUN,1,1938,1938,administrateur:1
 drpachalme,minierecongo,Dr P Achalme,Cie MINIÈRE DU CONGO FRANÇAIS,1,1938,1938,president:1
 loi,boiscoloniaux,Loi,Compagnie générale des Bois coloniaux,1,1922,1922,administrateur:1
 admminesferfillols,boiscoloniaux,adm. Mines de fer de Fillols,Compagnie générale des BOIS COLONIAUX,1,1925,1925,administrateur:1
@@ -1590,7 +1549,6 @@ miniereoubanghioriental,transportafrique,Cie minière de l'Oubanghi Oriental,Com
 comptoirsimportation,congooccidental,et la Société des Comptoirs d'importation,Compagnie du Congo Occidental,1,1929,1929,administrateur:1
 oubanghi,congo,l'Oubanghi,Compagnie Française du Congo,1,1900,1900,administrateur:1
 depuis,gabon,Cie. Depuis,Compagnie Française du Gabon,1,1903,1903,administrateur:1
-imprimeriespecialebanque,minierecongo,? Imprimerie spéciale de banque ———,Cie Minière du Congo français,1,1950,1950,administrateur:1
 employebanquelevel,miniereoubanghioriental,employé à la banque Level,Compagnie Minière de l'Oubanghi oriental,1,1930,1930,administrateur:1
 associemaisonbanquechaillet,miniereoubanghioriental,associé de la maison de banque Chaillet,Compagnie Minière de l'Oubanghi oriental,1,1930,1930,administrateur:1
 mines,miniereoubanghioriental,Compagnie générale des mines,Compagnie minière de l'Oubanghi oriental,1,1948,1948,administrateur:1
@@ -1600,7 +1558,6 @@ etudes,miniereoubanghioriental,Société d'études,Compagnie minière de l'Ouban
 afriquenoire,miniereoubanghioriental,Compagnie de l'Afrique Noire,Compagnie minière de l'Oubanghi oriental,1,1953,1953,administrateur:1
 courtage,boismayumbe,Société de Courtage,Compagnie des Bois du Mayumbé,1,,,administrateur:1
 monteeparpetitebanqueparisiennelamonta,colonialefernanvaz,montée par la petite banque parisienne Lamonta,Cie Coloniale du Fernan-Vaz,1,1899,1899,administrateur:1
-conseiladministrationmmbarbozamagalhses,companhiamossamedesoumossamedes,Conseil d'administration: MM. Barboza de Magalhses,Companhia de Mossamedes ou Compagnie de Mossamédès,1,1902,1902,directeur:1
 cassingaconcessioncy,companhiamossamedesoumossamedes,Cassinga Concession Cy,Companhia de Mossamedes ou Compagnie de Mossamédès,1,1902,1902,commissaire_aux_comptes:1
 afriqueminiereequatoriale,consortiumminiercongoniari,L'Afrique minière équatoriale,Consortium minier Congo-Niari,1,1929,1929,administrateur:1
 minierecongo,consortiumminiercongoniari,Compagnie minière du Congo Français,Consortium minier Congo-Niari,1,1929,1929,administrateur:1
@@ -1639,7 +1596,6 @@ kadeisangha,messageriesfluvialescongo,Compagnie de la Kadéi-Sangha,Messageries 
 ekelasangha,messageriesfluvialescongo,Compagnie de l'Ekéla-Sangha,Messageries fluviales du Congo,1,1915,1915,administrateur:1
 caoutchoucs,messageriesfluvialescongo,Compagnie des caoutchoucs,Messageries fluviales du Congo,1,1915,1915,administrateur:1
 oubanghiombelladepuislors,messageriesfluvialescongo,Compagnie de l'Oubanghi-Ombella. Depuis lors,Messageries fluviales du Congo,1,1915,1915,administrateur:1
-societesconcessionnairesekelakadeisangha,messageriesfluvialescongo,sociétés concessionnaires: Compagnie de l'Ekela-Kadei-Sangha,Messageries fluviales du Congo,1,1911,1911,administrateur:1
 hautesangha,messageriesfluvialescongo,Compagnie de la Haute-Sangha,Messageries fluviales du Congo,1,1911,1911,administrateur:1
 compagniedes,messageriesfluvialescongo,Compagnie des,Messageries fluviales du Congo,1,1911,1911,administrateur:1
 danspetrolescongo,messageriesfluvialescongo,dans la Société des pétroles du Congo,Messageries fluviales du Congo,1,1914,1914,administrateur:1
@@ -1657,7 +1613,6 @@ africaineculturesindustrielles,palmeraiescameroun,Compagnie africaine de culture
 bunge,groupebungeplantationskomono,SOCIÉTÉ FRANÇAISE BUNGE,groupe Bunge Plantations de Komono,1,1954,1954,administrateur:1
 constructionsmecaniques,proprietairekouilouniari,de la Société française de constructions mécaniques,Compagnie Propriétaire du Kouilou-Niari,1,1902,1902,administrateur:1
 rochelle,africaineforestiereagricole,Rochelle],Société africaine forestière et agricole,1,1951,1951,administrateur:1
-objettoutesoperationscommerciales,commercialeindustriellecongo,Objet de la société: Toutes opérations commerciales,Société Commerciale et Industrielle du Congo français,1,1899,1899,commissaire_aux_comptes:1
 concessionsetudes,commercialeindustriellecongo,concessions de la Société d'études,Société Commerciale et Industrielle du Congo français,1,1899,1899,commissaire_aux_comptes:1
 techniqueetudesindustrielles,etudesgestionafriquenoire,de la Société technique d'études industrielles,Société d'Études et de gestion de l'Afrique noire,1,,,administrateur:1
 union,etudesgestionafriquenoire,de l'Union française,Société d'Études et de gestion de l'Afrique noire,1,,,administrateur:1
@@ -1671,7 +1626,6 @@ puispresidentalgerienne,commercialeindustrielleagricolehautogooue,puis présiden
 minesbor,commercialeindustrielleagricolehautogooue,des Mines de Bor,"Société commerciale, industrielle et agricole du Haut-Ogooué",1,1921,1921,administrateur:1
 creditnational,commercialeindustrielleagricolehautogooue,du Crédit national,"Société commerciale, industrielle et agricole du Haut-Ogooué",1,1921,1921,administrateur:1
 jboissonnaspresidentalgerienne,hautogooue,J Boissonnas [président de la Cie algérienne,HAUT-OGOOUÉ,1,1938,1938,president:1
-secretaireassembleemcottignies,hautogooue,Cie. Secrétaire de l'assemblée: M. Cottignies,HAUT-OGOOUÉ,1,1938,1938,administrateur:1
 soformaforestieremayombe,forestieremayombedimonikamvouti,Soforma [Société forestière de Mayombe,"Société Forestière de Mayombe, Dimonika-M'Vouti",1,,,administrateur:1
 banqueitalobelge,tabacscameroun,Banque italo-belge,"Cie des Tabacs du Cameroun, puis Tabacs et plantations du Cameroun, puis Plantations de Nyombé-Penja",1,1929,1929,administrateur:1
 petroles,tabacscameroun,Compagnie française des Pétroles,"Cie des Tabacs du Cameroun, puis Tabacs et plantations du Cameroun, puis Plantations de Nyombé-Penja",1,1929,1929,administrateur:1
@@ -1746,9 +1700,7 @@ elevageniger,tambacuunda,Compagnie d'élevage du Niger,TAMBACUUNDA,1,1932,1932,a
 financiere,tambacuunda,Compagnie financière,TAMBACUUNDA,1,1932,1932,administrateur:1
 togo,forestieresassandra,Compagnie générale du Togo,Compagnie forestière de Sassandra,1,1932,1932,administrateur:1
 meierplantationcafeiers,exploitationsforestieresagricolescoteivoire,Meier. Plantation de caféiers,Exploitations forestières et agricoles de la Côte-d'Ivoire (Anciens,1,1932,1932,administrateur:1
-ferkessedougouagence20,alsaciennecoteivoire,FERKESSEDOUGOU. Agence: 20,Société alsacienne de la Côte-d'Ivoire,1,1932,1932,administrateur:1
 plantationsambidedi,alsaciennecoteivoire,Société anonyme des Plantations d'Ambidédi,Société alsacienne de la Côte-d'Ivoire,1,1932,1932,administrateur:1
-agentfrancecolonialegerance,alsaciennecoteivoire,Agent en France: Société coloniale de gérance,Société alsacienne de la Côte-d'Ivoire,1,1932,1932,administrateur:1
 marocainepaystropicaux,plantationshautevolta,Société Marocaine des Pays tropicaux,Société anonyme des Plantations de Haute-Volta,1,1932,1932,president:1
 bananeraieskoutaya,bananeraiesguineennes,Société des bananeraies de Koutaya,Société des bananeraies guinéennes,1,1932,1932,gerant:1
 marocainepaystropicauxnb,culturesdiakandape,Société Marocaine des Pays Tropicaux. N. B,Société des cultures de Diakandapé,1,1932,1932,administrateur:1
@@ -1785,7 +1737,6 @@ grandbassamexploitationacajous,oreinach,Grand-Bassam. Société d'exploitation d
 bassamexploitationproduitscoloniaux,oreinach,Bassam. Société d'exploitation de produits coloniaux,O. Reinach,1,1931,1931,gerant:1
 garagisteentrepriseherbelin,oreinach,Garagiste. Entreprise L. Herbelin,O. Reinach,1,1931,1931,gerant:1
 agencechevroletnicoue,oreinach,Agence Chevrolet. A. Nicoué,O. Reinach,1,1931,1931,gerant:1
-conseilafriqueoccidentale,oreinach,Conseil: Compagnie française de l'Afrique Occidentale,O. Reinach,1,1931,1931,administrateur:1
 comm,oreinach,Société comm,O. Reinach,1,1931,1931,administrateur:1
 plemerlecomptoirtogo,oreinach,P. Lemerle. Comptoir du Togo,O. Reinach,1,1931,1931,administrateur:1
 africainemagasinage,colonialeagricoleindustrielle,Société africaine de magasinage,Société coloniale agricole et industrielle des Anciens Établissements R,1,1949,1949,president:1
@@ -1807,8 +1758,6 @@ charbonnagesdakar,senegal,Cie Française des Charbonnages de Dakar,« Sénégal 
 commerceafricain,africaineassurancesf,Commerce Africain. S.A,Société africaine d'assurances (S.A.F,1,1963,1963,administrateur:1
 banqueiafriqueoccidentale,africaineassurancesf,Banque de I'Afrique Occidentale S. A,Société africaine d'assurances (S.A.F,1,1963,1963,administrateur:1
 soudanaise,africaineassurancesf,Compagnie Soudanaise,Société africaine d'assurances (S.A.F,1,1963,1963,administrateur:1
-officetechniqueassurances,africaineassurancesf,Office technique d'assurances S. A.°,Société africaine d'assurances (S.A.F,1,1963,1963,administrateur:1
-adminofficetechniqueassurances,africaineassurancesf,admin.: Office Technique d'Assurances,Société africaine d'assurances (S.A.F,1,1963,1963,administrateur:1
 lucienpirletafricainemagasinage,africainefinanciereagricole,Lucien Pirlet. Société africaine de magasinage,Société africaine financière et agricole,1,1963,1963,administrateur:1
 transitafricainepublicite,africainefinanciereagricole,transit.. Société africaine de Publicité,Société africaine financière et agricole,1,1963,1963,administrateur:1
 galeniger,auxiliairecommerceafricain,Cie Gale du Niger],Société auxiliaire de commerce africain,1,1963,1963,president:1
@@ -1827,7 +1776,6 @@ iunionafricaineagricole,africaineforestiereallumettes,I'Union africaine agricole
 andrelaugaagricole,africainetransportsautomobiles,André Lauga. Cie agricole,Cie africaine de transports automobiles,1,1943,1943,gerant:1
 industriellebadikahausinesfilature,africainetransportsautomobiles,industrielle de Badikaha. Usines de filature,Cie africaine de transports automobiles,1,1943,1943,gerant:1
 afriqueoccidentale,electrificationafricaine,Cie française de l'Afrique Occidentale,Électrification africaine,1,1953,1953,administrateur:1
-commissairegouvernementmfaivrearcier,energiemers,Commissaire du gouvernement: M. Faivre d'Arcier,« Énergie des mers »,1,1953,1953,administrateur:1
 adminconstructionsciviles,entreprisecentreafrique,admin. La Société de constructions civiles,Entreprise du Centre-Afrique,1,1953,1953,administrateur:1
 dakar,jheudebert,Cie » Dakar,J. Heudebert et Cie,1,1953,1953,administrateur:1
 eauxetranger,africaineentrepriseshydrauliques,Cie générale des eaux pour l'étranger,Société africaine d'entreprises hydrauliques,1,1963,1963,administrateur:1
@@ -1874,26 +1822,20 @@ mauriceperrinplantationmoukarim,constantinfrere,Maurice Perrin. Plantation Mouka
 coyahplantationssaintyves,constantinfrere,Coyah. Plantations Saint-Yves,Constantin et frère,1,1951,1951,gerant:1
 pierreclastresplantationsamaya,constantinfrere,Pierre Clastres°. Plantation de la Samaya,Constantin et frère,1,1951,1951,gerant:1
 bananeraieplantationssoutisougueta,constantinfrere,Bananeraie. Plantations de Sou Ti à Sougueta,Constantin et frère,1,1951,1951,gerant:1
-mans,nationalecommerce,Mans,Cie Nationale de COMMERCE,1,1925,1925,administrateur:1
-assuranceexportationquincaillerie,fontaineetabl,assurance. Exportation: quincaillerie,FONTAINE (Les Établ. L,1,1925,1925,administrateur:1
+mans,comptoirindustrielagricolefrancecolonies,Mans,COMPTOIR INDUSTRIEL ET AGRICOLE DE FRANCE ET DES COLONIES,1,1925,1925,administrateur:1
 gmarieusine,hortala,G. Ste-Marie. Usine,HORTALA,1,1925,1925,administrateur:1
 comptoirgranddrewinexploitationpalmeraies,hortala,comptoir à Grand-Drewin. Exploitation de palmeraies,HORTALA,1,1925,1925,administrateur:1
 emilerastoinusinerufisque,industrielleafricaine,Émile Rastoin. Usine à Rufisque,Société INDUSTRIELLE AFRICAINE,1,1925,1925,president:1
-exportationcoteivoireplantationcafe,industrielleafricaine,exportation à la Côte-d'Ivoire. Plantation de café,Société INDUSTRIELLE AFRICAINE,1,1925,1925,administrateur:1
-sousdirecteurmaritimenationale,macinaniger,sous-directeur de la Société maritime nationale,MACINA-NIGER,1,1925,1925,administrateur:1
-scrutateurassembleeunionindochinoise,macinaniger,scrutateur à l'assemblée générale de l'Union indochinoise,MACINA-NIGER,1,1925,1925,administrateur:1
-kotonouentreprisetravauxpublicsquaisport,morosini,Kotonou. Entreprise de travauxpublics. Quais de port,MOROSINI,1,1925,1925,president:1
+exportationcoteivoireplantationcafe,frsekong,exportation à la Côte-d'Ivoire. Plantation de café,Nouvelle Cie frse de KONG,1,1925,1925,administrateur:1
+sousdirecteurmaritimenationale,socfranccolonisationmacinaniger,sous-directeur de la Société maritime nationale,Soc. an. Franç. de Colonisation MACINA-NIGER,1,1925,1925,administrateur:1
+scrutateurassembleeunionindochinoise,socfranccolonisationmacinaniger,scrutateur à l'assemblée générale de l'Union indochinoise,Soc. an. Franç. de Colonisation MACINA-NIGER,1,1925,1925,administrateur:1
+kotonouentreprisetravauxpublicsquaisport,soccolonialeentreprisemorosini,Kotonou. Entreprise de travauxpublics. Quais de port,Soc. an. coloniale de l'entreprise MOROSINI,1,1925,1925,president:1
 boisplantationstance5,plantations,bois.. PLANTATIONS de la TANCÉ. 5,PLANTATIONS,1,1925,1925,president:1
-banquecoloniale,africainearmement,Banque Coloniale,Cie Africaine d'ARMEMENT,1,1938,1938,president:1
-usinebamakobriques,africainearmement,Usine à Bamako. Briques,Cie Africaine d'ARMEMENT,1,1938,1938,president:1
-phdelmasbanquebia,africainearmement,Ph. Delmas. Banque.. BIA,Cie Africaine d'ARMEMENT,1,1938,1938,president:1
-fveziausinequainorddocks,fontaine,F. Vézia.— Usine: quai Nord des Docks,FONTAINE,1,1938,1938,administrateur:1
-agence17,messageriesafricaines,Agence: 17,MESSAGERIES AFRICAINES,1,1938,1938,administrateur:1
-marchandisesminesfalemegambie,messageriesafricaines,de marchandises. MINES de FALÉMÉ-GAMBIE,MESSAGERIES AFRICAINES,1,1938,1938,administrateur:1
-minesnamkok,messageriesafricaines,Mines de Nam-Kok,MESSAGERIES AFRICAINES,1,1938,1938,administrateur:1
-guineeplantationsimperie,navigationpaquet,en Guinée.. PLANTATIONS d'IMPÉRIÉ,Cie de NAVIGATION PAQUET,1,1938,1938,president:1
+phdelmasbanquebia,socbriqueteriesbamako,Ph. Delmas. Banque.. BIA,Soc. des Briqueteries de BAMAKO,1,1938,1938,president:1
+comptoirgranddrewinexploitationpalmeraies,sochuileriesafricaines,comptoir à Grand-Drewin. Exploitation de palmeraies,Soc. des HUILERIES AFRICAINES,1,1938,1938,administrateur:1
 nosplantationslonguiceteffet,culturesbananeraieskinsan,nos plantations de Longui. À cet effet,Société des Cultures et bananeraies du Kin-San,1,1930,1930,administrateur:1
 hnouvioncommissairegouvernement,banqueafriqueoccidentale,H. Nouvion. Commissaire du gouvernement,Banque de l'Afrique occidentale,1,1907,1907,administrateur:1
+plantationsbananiersmaneahblachon,commerceinternationalcolonial,plantations de bananiers à Manéah. Blachon,Cie française de commerce international et colonial,1,1926,1926,administrateur:1
 cherifienneparticipations,renegastondreyfus,Société chérifienne de participations,René Gaston-Dreyfus,1,1958,1958,administrateur:1
 brasseries,renegastondreyfus,Société des Brasseries,René Gaston-Dreyfus,1,1958,1958,administrateur:1
 assigneetablissementsmahamansanikarimou,brasserieboissonsgazeusesnigerniamey,assigné les ÉTABLISSEMENTS MAHAMAN SANI KARIMOU,"Société de Brasserie et de boissons gazeuses du Niger, Niamey",1,2015,2015,directeur_general:1
@@ -1904,7 +1846,6 @@ sonibank,brasserieboissonsgazeusesnigerniamey,SONIBANK,"Société de Brasserie e
 banquecoloniale,briqueteriesbamako,Banque coloniale,Briqueteries de Bamako,1,1929,1929,administrateur:1
 banquejacquesgunzburg,agriculturecommerceindustrieafrique,de la Banque Jacques Gunzburg],"Cie d'Agriculture, de commerce et d'industrie d'Afrique",1,1922,1922,administrateur:1
 colonialegerance,agricoleindustriellesoudan,de la Société coloniale de gérance,"Compagnie Agricole et Industrielle du Soudan, puis Agricole et Industrielle de l'Ouest africain",1,1930,1930,administrateur:1
-objetplantation,plantationscaoutchoucriocompony,Objet: La plantation,Société de Plantations de caoutchouc du Rio-Compony,1,1900,1900,administrateur:1
 etspoliet,chauxcimentssenegal,Ets Poliet,Chaux et ciments du Sénégal,1,1929,1929,administrateur:1
 avecetablissementsdayde,cheminsferdahomeyoucentraldahomeen,avec les Établissements Daydé,Compagnie française de Chemins de fer au Dahomey ou Central-Dahoméen,1,1912,1912,administrateur:1
 etspierreflipo,elevagenigerdire,Éts Pierre Flipo,"Compagnie d'Élevage du Niger, Diré",1,1930,1930,administrateur:1
@@ -1922,24 +1863,20 @@ banquecolonialeetudes,comptoirshuileriesdahomey,et de la Banque coloniale d'étu
 banquecolonialeetudes,cotonniereouestafricaine,et la Banque coloniale d'études,Compagnie cotonnière ouest-africaine,1,1925,1925,administrateur:1
 afriqueoccidentale,creditfoncierouestafricain,Cie française de l'Afrique occidentale,Crédit foncier de l'Ouest-Africain,1,1931,1931,administrateur:1
 idemmoinscommercialeouestafricain,creditfoncierouestafricain,idem moins la Société commerciale de l'Ouest-Africain,Crédit foncier de l'Ouest-Africain,1,1933,1933,administrateur:1
-bduboiscommissairesgouvernementjvollant,creditfoncierouestafricain,B. Dubois. Commissaires du gouvernement: J. Vollant,Crédit foncier de l'Ouest-Africain,1,1937,1937,administrateur:1
 marocaineproduitstropicaux,culturesdiakandape,Société marocaine des produits tropicaux,Cultures de Diakandapé,1,1933,1933,administrateur:1
 marocainepaystropicaux,culturesdiakandape,Société marocaine des pays tropicaux,Cultures de Diakandapé,1,1945,1945,administrateur:1
 pacifique,dahomey,de la Société du Pacifique,Société Française du Dahomey,1,1921,1921,administrateur:1
-marseilleconstitution,huileriessavonneriesouestafricainsuitealminko,Marseille. CONSTITUTION: Société anonyme française,"Huileries et savonneries de l'Ouest-africain, suite d'Alminko",1,1947,1947,commissaire_aux_comptes:1
 loi,huileriesafricainesdrewin,Loi,"Société des Huileries africaines, Drewin",1,1920,1920,administrateur:1
 gmarieusine,huileriesafricaines,G Ste-Marie. Usine,HUILERIES AFRICAINES,1,1925,1925,administrateur:1
 comptoirgranddrewinexploitationpalmeraies,huileriesafricaines,comptoir à Grand-Drewin. Exploitation de palmeraies,HUILERIES AFRICAINES,1,1925,1925,administrateur:1
 lyonnaisemadagascar,huileriesrizeriesouestafricaines,Cie lyonnaise de Madagascar,Société des Huileries et rizeries ouest-africaines,1,1929,1929,president:1
 creditfonciermadagascar,huileriesrizeriesouestafricaines,Crédit foncier de Madagascar],Société des Huileries et rizeries ouest-africaines,1,1929,1929,president:1
 charronnagesousegideusinesragheno,maurelprom,de charronnage sous l'égide des Usines Ragheno,Maurel et Prom,1,1919,1919,administrateur:1
-senegalexportationtissus,etablissementsmaurelhprom,Sénégal. Exportation: tissus,Etablissements MAUREL et H. PROM,1,1925,1925,administrateur:1
 messageriesafricaines,messageriessenegal,Société des Messageries Africaines,Messageries du Sénégal,1,,,administrateur:1
 gerance,miniereindustrielleimmobilierecoteivoire,Société de Gérance,"Minière, Industrielle et Immobilière de la Côte-d'Ivoire",1,1937,1937,administrateur:1
 londresbanqueunionparisienne,exploitationsminieresafriqueoccidentale,Londres. BANQUE DE L'UNION PARISIENNE,Exploitations minières en Afrique Occidentale,1,1935,1935,administrateur:1
 parisminierecoloniale,exploitationsminieresafriqueoccidentale,Paris. COMPAGNIE MINIÈRE COLONIALE,Exploitations minières en Afrique Occidentale,1,1935,1935,administrateur:1
 domaines,minesorindenie,des Domaines,Société des Mines d'or de l'Indénié,1,1903,1903,administrateur:1
-denominationminiere,minierecolonialeouestafricain,Dénomination: Société minière,Société Minière et coloniale de l'Ouest-Africain,1,1913,1913,administrateur:1
 gouvernementof,minieredahomey,Gouvernement général de l'A.-O. F,"Société Minière du Dahomey, puis du Dahomey-Niger",1,1949,1949,administrateur:1
 gouvernementniger,minieredahomey,Gouvernement du Niger,"Société Minière du Dahomey, puis du Dahomey-Niger",1,1949,1949,administrateur:1
 jacquesansaultcommissairegouvernement,minieredahomey,Jacques Ansault. Commissaire du gouvernement,"Société Minière du Dahomey, puis du Dahomey-Niger",1,1949,1949,secretaire:1
@@ -1994,7 +1931,6 @@ unionminierehautemana,miniereorapu,Union minière de la Haute-Mana,Cie minière 
 cooperativeproductionguyanaise,miniereorapu,Coopérative de production guyanaise,Cie minière de l'Orapu,1,1951,1951,administrateur:1
 ebenedicminoubanghioriental,exploitationsminieresinini,É Bénédic [Cie min. Oubanghi oriental,Société d'exploitations minières de l'Inini,1,1951,1951,administrateur:1
 minesornamkok,stelieadieuvat,Société des mines d'or de Nam-Kok,Société nouvelle de St-Élie et Adieu-Vat,1,1951,1951,administrateur:1
-jeanlaboriausinescayenne,chouanard,Jean Laboria. Usines: Cayenne,CHOUANARD,1,,,directeur:1
 franceguyane,colonialetonnellerie,Société France-Guyane,Compagnie Coloniale de Tonnellerie,1,1931,1931,administrateur:1
 sucriere,comptoirsgenerauxguyane,et la Société sucrière,"Comptoirs généraux de la Guyane, puis Comptoirs généraux des colonies",1,1927,1927,administrateur:1
 bourdaistouches,creditfoncierbresilameriquesud,Bourdais des Touches,Crédit foncier du Brésil et de l'Amérique du Sud,1,1917,1917,administrateur:1
@@ -2007,7 +1943,6 @@ assurancesnationale,mineshuaron,des Assurances La Nationale,Compagnie des Mines 
 exploitationperouminescuivre,mineshuaron,Exploitation au Pérou. Mines de cuivre,Cie des mines de HUARON,1,1938,1938,president:1
 assuranceexploitationminescuivre,minescuivrenaltagua,assurance. Exploitation de mines de cuivre,MINES DE CUIVRE DE NALTAGUA,1,1925,1925,directeur:1
 franceguyane,colonialeproduitstannants,Société France-Guyane,Compagnie Coloniale des Produits tannants,1,1933,1933,administrateur:1
-servicefinanciercreditfonciercolonial,rhumspurs,Service financier: Société de crédit foncier colonial,Compagnie des Rhums purs,1,1931,1931,administrateur:1
 banquiers,saintelie,Cie banquiers,Saint-Élie,1,1879,1879,administrateur:1
 usineschanaralvoirencadre,saintelie,usines de Chanaral. Voir encadré,Saint-Élie,1,1879,1879,administrateur:1
 blond,forestiereguyane,Blond,Société Forestière de la Guyane française,1,1919,1919,administrateur:1
@@ -2029,7 +1964,6 @@ lyonnaisemadagascar,batelagecoteouestmadagascar,Cie Lyonnaise de Madagascar,Cie 
 marseillaisemadagascar,batelagecoteouestmadagascar,Cie Marseillaise de Madagascar,Cie de batelage de la Côte Ouest de Madagascar,1,1937,1937,administrateur:1
 louetoutsonmateriel,batelagecoteouestmadagascar,Compagnie a loué tout son matériel,Cie de batelage de la Côte Ouest de Madagascar,1,1937,1937,administrateur:1
 comptoirsafricains,fluvialemaritimeouestafricain,Cie générale des Comptoirs Africains,Cie fluviale et maritime de l'Ouest Africain,1,1937,1937,administrateur:1
-fraissinetvoirnavigationfraissinet,fluvialemaritimeouestafricain,Cie Fraissinet. (Voir: Cie de navigation Fraissinet,Cie fluviale et maritime de l'Ouest Africain,1,1937,1937,administrateur:1
 bec,servicescontractuelsmessageriesmaritimes,Bec,Société des services contractuels des Messageries maritimes,1,1937,1937,administrateur:1
 havraisecaledonienne,tourcotes,Société Havraise calédonienne,Société du Tour de Côtes,1,1937,1937,president:1
 hagenfreres,tourcotes,Société Hagen frères,Société du Tour de Côtes,1,1937,1937,administrateur:1
@@ -2043,7 +1977,6 @@ gabrielfaurefinancierefrancomarocaine,fiduciairefrancoalgerienne,Gabriel Faure. 
 etablissementsdansinde,banqueilessaintpierremiquelon,Établissements français dans l'Inde,Banque des îles Saint-Pierre-et-Miquelon,1,1937,1937,administrateur:1
 administrateursalgerienneagencesbeyrouth,banquesyriegrandliban,administrateurs. Compagnie Algérienne. Agences à Beyrouth,Banque de Syrie et du Grand-Liban,1,1937,1937,administrateur:1
 voirnotice96creditfoncieralgerie,banquesyriegrandliban,Voir notice 96. Crédit foncier d'Algérie,Banque de Syrie et du Grand-Liban,1,1937,1937,administrateur:1
-commissairesgouvernementmmwbaumgartner,banquenationalecommerceexterieur,Commissaires du Gouvernement: MM. W. Baumgartner,Banque nationale française du commerce extérieur,1,1937,1937,administrateur:1
 drbbord,cafesproduitscoloniauxcapro,Dr B. Bord,« Cafés et produits coloniaux français » CAPRO,1,1937,1937,administrateur:1
 theselephant,etablissementsemiledammann,Société des Thés de l'Éléphant,Société nouvelle des Établissements Émile Dammann (Ancienne,1,1937,1937,administrateur:1
 commercialeindochine,moulinsentrepotscoloniaux,Société commerciale française de l'Indochine,Moulins et entrepôts coloniaux,1,1937,1937,administrateur:1
@@ -2061,7 +1994,6 @@ fondateurassurancefinancierebonnemains,assurancefinanciere,fondateur de l'Assura
 censeurejapy,assurancefinanciere,censeur à la Société Générale. É Japy,L'Assurance financière,1,1880,1880,administrateur:1
 francemaroc,bonmarche,Société France-Maroc,Au Bon Marché,1,1948,1948,administrateur:1
 pauljorrandmanufacturetapistissagemecanique,fabriquesaubusson,Paul Jorrand. Manufacture de tapis. Tissage mécanique,« AUX FABRIQUES D'AUBUSSON »,1,1925,1925,administrateur:1
-servicefinancierbanqueintermediaireparis,fabriquesaubusson,Service financier: Banque intermédiaire de Paris,« AUX FABRIQUES D'AUBUSSON »,1,1931,1931,administrateur:1
 delegueauxiliairecredit,auxiliairecredit,délégué de la Sté Auxiliaire de Crédit,Société Auxiliaire de crédit,1,1911,1911,administrateur:1
 reverend,azote,Révérend,L'Azote français,1,1932,1932,administrateur:1
 actionscharbonnagesekaterine,banquecontinentaleparis,— actions Charbonnages d'Ekatérine,Banque continentale de Paris,1,1914,1914,administrateur:1
@@ -2137,15 +2069,11 @@ etablissementstiranty,industriellematerieltransportcimt,des Établissements Tira
 concessionnaireatelierspo,industriellematerieltransportcimt,concessionnaire des ateliers de la Cie P.-O,"Cie industrielle de MATÉRIEL de TRANSPORT, C.I.M.T",1,1938,1938,president:1
 drernstgoldsmidt,colonialefrancoallemande,Dr Ernst Goldsmidt,Société Coloniale Franco-Allemande,1,1930,1930,president:1
 drwertherrudolf,colonialefrancoallemande,Dr Werther Rudolf,Société Coloniale Franco-Allemande,1,1930,1930,administrateur_delegue:1
-conseiladministrationmmgeorgesbejot,aguilas,Conseil d'administration: MM. Georges Béjot,Compagnie d'Aguilas,1,1907,1907,president:1
-servicefinanciercreditindustriel,aguilas,Service financier: Crédit industriel,Compagnie d'Aguilas,1,1931,1931,administrateur:1
 commercialcreditcommercialfrance,aguilas,commercial. Crédit commercial de France,Compagnie d'Aguilas,1,1931,1931,administrateur:1
 denisfreres,bordeaux,société Denis Frères,Compagnie de Bordeaux,1,1926,1926,administrateur:1
 deves,bordeaux,Société Devès,Compagnie de Bordeaux,1,1926,1926,administrateur:1
 maurelfreres,bordeaux,société Maurel Frères,Compagnie de Bordeaux,1,1926,1926,administrateur:1
 etablissementsmaurel,bordeaux,et les Établissements Maurel,Compagnie de Bordeaux,1,1926,1926,administrateur:1
-marcellebonconseiladministrationmmherbette,lebon,Marcel Lebon. Conseil d'administration: MM. Herbette,LEBON et Cie,1,1925,1925,president:1
-chatelainconstitution,consortiumnord,Châtelain. CONSTITUTION: Société anonyme française,Consortium du Nord,1,1953,1953,commissaire_aux_comptes:1
 banqueafriqueequatoriale,constructionafricaine,Banque Française de l'Afrique Equatoriale,Construction africaine,1,1922,1922,administrateur:1
 creditfoncierfrance,creditfonciercolonial,Crédit foncier de France,Crédit foncier colonial,1,1929,1929,administrateur:1
 banquemadagascar,creditfonciercolonial,Banque de Madagascar,Crédit foncier colonial,1,1929,1929,administrateur:1
@@ -2160,7 +2088,6 @@ gazlyon,creditfonciercolonial,Compagnie du Gaz de Lyon,Crédit foncier colonial,
 petroles,creditfonciercolonial,Compagnie française des pétroles,Crédit foncier colonial,1,1929,1929,administrateur:1
 etudesextensionhalles,creditfonciercolonial,Société d'études pour l'extension des Halles,Crédit foncier colonial,1,1929,1929,administrateur:1
 anciensetablissementskraussrichemond,creditfonciercolonial,Anciens Établissements Krauss. RICHEMOND,Crédit foncier colonial,1,1929,1929,administrateur:1
-pierreadministrateurbanquenationalecredit,creditfonciercolonial,Pierre Administrateur: Banque nationale de crédit,Crédit foncier colonial,1,1929,1929,administrateur:1
 caissefoncierecredit,creditfonciercolonial,Caisse foncière de crédit,Crédit foncier colonial,1,1929,1929,administrateur:1
 comptoirlogementeconomique,creditfonciercolonial,Comptoir général du logement économique,Crédit foncier colonial,1,1929,1929,administrateur:1
 comptoirlyonalemand,creditfonciercolonial,Comptoir Lyon-Alemand,Crédit foncier colonial,1,1929,1929,administrateur:1
@@ -2179,7 +2106,6 @@ avecimportantsgroupesfinanciers,credit,Cie avec d'importants groupes financiers,
 banqueinternationale,creditmobilier,de la Banque internationale,Crédit mobilier français,1,1902,1902,administrateur:1
 financierearmement,transportsmaritimesafriqueoccidentale,Société financière de l'Armement,Compagnie de Transports maritimes de l'Afrique occidentale française,1,1936,1936,administrateur:1
 belge,decauvilleaineetablissements,Société belge,"Decauville aîné, Société, Société nouvelle des Établissements)",1,1895,1895,administrateur:1
-commissairescomptesmmbouvier,etablissementsdecauvilleaine,Cie. Commissaires aux comptes: MM. Bouvier,Société Nouvelle des Établissements Decauville aîné,1,1948,1948,administrateur:1
 banquemeyer,etablissements1807deveschaumetbordeauxdakar,de la banque Meyer,"Établissements, 1807 Devès et Chaumet, Bordeaux-Dakar",1,1927,1927,administrateur:1
 frindoch,etablissements1807deveschaumetbordeauxdakar,Cie fr.-Indoch. ],"Établissements, 1807 Devès et Chaumet, Bordeaux-Dakar",1,1950,1950,administrateur:1
 entreprisesnord,entreprisesgrandstravauxhydrauliques,Entreprises du Nord,Entreprises de grands travaux hydrauliques,1,1920,1920,administrateur:1
@@ -2192,7 +2118,6 @@ glacehygienique,energieindustrielle,de la Compagnie générale de glace hygiéni
 parisienneforcemotrice,energieindustrielle,de la Cie parisienne de force motrice,L'Énergie industrielle,1,1922,1922,administrateur:1
 electricitesaintgermainlaye,energieindustrielle,de la Société d'électricité de Saint-Germain-en-Laye,L'Énergie industrielle,1,1922,1922,administrateur:1
 phonographes,energieindustrielle,de la Compagnie générale de phonographes,L'Énergie industrielle,1,1922,1922,administrateur:1
-usinesthermiquesdax,energieindustrielle,usines thermiques: Dax,L'ÉNERGIE INDUSTRIELLE,1,1925,1925,administrateur:1
 usineshydrauliquesbort,energieindustrielle,Usines hydrauliques à Bort,L'ÉNERGIE INDUSTRIELLE,1,1938,1938,president:1
 usinesthermiquesmenton,energieindustrielle,Usines thermiques à Menton,L'ÉNERGIE INDUSTRIELLE,1,1938,1938,president:1
 banquecharpenay,etablissementsbeccatdoulaincourtmusseycorbiebonneville,Banque Charpenay,"Établissements Beccat, Doulaincourt et Mussey, Corbie, Bonneville",1,1922,1922,administrateur:1
@@ -2209,7 +2134,6 @@ constructionsindustrielles,etudesentreprisescoloniales,Compagnie française de c
 alsaciennecreditindustriel,etudesentreprisescoloniales,et Société alsacienne de crédit industriel,Compagnie française d'Études et entreprises coloniales,1,1921,1921,administrateur:1
 patronetsjbmartin,etudesentreprisescoloniales,patron des Éts J.-B. Martin,Compagnie française d'Études et entreprises coloniales,1,1921,1921,administrateur:1
 cotonnierebonoise,etudesentreprisescoloniales,de la Société cotonnière bônoise,Compagnie française d'Études et entreprises coloniales,1,1921,1921,administrateur:1
-louisgossesousdirecteurbanquecommerciale,exploitationselectriques,Louis Gossé: sous-directeur de la Banque commerciale,"Exploitations électriques, puis Exploitations électriques et industrielles",1,1911,1911,administrateur:1
 eaux,exploitationselectriques,de la Cie générale des eaux,"Exploitations électriques, puis Exploitations électriques et industrielles",1,1911,1911,administrateur:1
 minesrochemoliere,exploitationselectriques,des Mines de Roche-la-Molière,"Exploitations électriques, puis Exploitations électriques et industrielles",1,1911,1911,administrateur:1
 exploitationtramways,exploitationselectriques,de la Compagnie d'exploitation des tramways,"Exploitations électriques, puis Exploitations électriques et industrielles",1,1911,1911,administrateur:1
@@ -2218,27 +2142,19 @@ etablissementsdelignon,exploitationselectriques,Société des Établissements L.
 banqueparis,exploitationselectriques,de la Banque de Paris,EXPLOITATIONS ÉLECTRIQUES,1,1925,1925,president:1
 usinesmetallurgiquesbasseloire,exploitationsminieresindustrielles,des Usines métallurgiques de la Basse-Loire,Société d'Exploitations minières et industrielles,1,1919,1919,administrateur:1
 minesfersegre,exploitationsminieresindustrielles,des Mines de fer de Segré,Société d'Exploitations minières et industrielles,1,1919,1919,administrateur:1
-augfevreusinesusineslorraine,fevrecarrieresscieriesbourgogne,Aug. Fèvre. Usines: usines en Lorraine,FËVRE et Cie. Carrières et Scieries de Bourgogne,1,1925,1925,gerant:1
-carrieresgroupelorraineeuville,fevrecarrieresscieriesbourgogne,Carrières: Groupe de Lorraine: Euville,"FÈVRE et Cie, Carrières et Scieries de Bourgogne",1,1938,1938,gerant:1
-groupebourgognecorgoloin,fevrecarrieresscieriesbourgogne,Groupe de Bourgogne: Corgoloin,"FÈVRE et Cie, Carrières et Scieries de Bourgogne",1,1938,1938,gerant:1
-groupedauphinecorentville,fevrecarrieresscieriesbourgogne,Groupe du Dauphiné: Corentville,"FÈVRE et Cie, Carrières et Scieries de Bourgogne",1,1938,1938,gerant:1
 groupecharentes,fevrecarrieresscieriesbourgogne,Groupe Charentes,"FÈVRE et Cie, Carrières et Scieries de Bourgogne",1,1938,1938,gerant:1
-groupeilefrancelaigneville,fevrecarrieresscieriesbourgogne,Groupe de l'Ile-de- France: Laigneville,"FÈVRE et Cie, Carrières et Scieries de Bourgogne",1,1938,1938,gerant:1
 plantationsreuniesmimot,financiereexploitationsindustrielles,des Plantations réunies de Mimot,Société financière d'exploitations industrielles,1,1953,1953,commissaire_aux_comptes:1
 manufactureindochinoisecigarettes,financiereexploitationsindustrielles,de la Manufacture indochinoise de cigarettes,Société financière d'exploitations industrielles,1,1953,1953,commissaire_aux_comptes:1
 plantationskratie,financiereexploitationsindustrielles,des Plantations de Kratié,Société financière d'exploitations industrielles,1,1953,1953,commissaire_aux_comptes:1
 plantationsreuniesouestafricain,financiereexploitationsindustrielles,des Plantations réunies de l'Ouest-Africain,Société financière d'exploitations industrielles,1,1953,1953,commissaire_aux_comptes:1
 pommeraie,financierecimentsindustrie,Pommeraie,"Financière des Ciments et de l'industrie, puis Compagnie industrielle des ciments",1,1928,1928,administrateur:1
 concessionminescharboncampine,forgesacieriesnordest,concession de mines de charbon en Campine,Forges et aciéries du Nord et de l'Est,1,1908,1908,administrateur:1
-minesferpienne,forgesacieriesnordest,Mines de fer: à Pienne,FORGES et ACIÉRIES du NORD et de l'EST,1,1938,1938,president:1
-concessionsminesferstprivat,nordlorraine,Concessions de mines de fer: St-Privat,NORD et LORRAINE,1,1938,1938,administrateur:1
 ateliersensembleexpeditionsnotre,mineslaurium,ateliers. L'ensemble des expéditions de notre Compagnie,Compagnie française des Mines du Laurium,1,1886,1886,administrateur:1
 victorrapportconseiladministrationmessieurs,mineslaurium,Victor. RAPPORT DU CONSEIL ADMINISTRATION Messieurs,Compagnie française des Mines du Laurium,1,1893,1893,administrateur:1
 usineraismeslocomotives,francobelgematerielcheminsfer,Usine à Raismes Locomotives,Société FRANCO-BELGE de MATÉRIEL de CHEMINS de FER,1,1938,1938,administrateur:1
 massabuaurapportconseiladministration,francowyomingoilcy,Massabuau. RAPPORT DU CONSEIL D'ADMINISTRATION,Franco-Wyoming Oil Cy,1,1908,1908,administrateur:1
 creditmobilierfrssg,colonies,Crédit mobilier frs > SG,Compagnie Générale des colonies,1,1922,1922,administrateur:1
 lebonandre,colonies,LEBON (André),Compagnie Générale des colonies,1,1926,1926,administrateur:1
-plantationscamerounxavierloisypolytechnicien,tabacs,plantations du Cameroun. Xavier Loisy: polytechnicien,Compagnie Générale des Tabacs,1,1919,1919,administrateur:1
 puispresidentcreditfoncieralgerie,tabacs,puis président du Crédit foncier d'Algérie,Compagnie Générale des Tabacs,1,1919,1919,administrateur:1
 puisadministrateurcreditmobilier,tabacs,puis ] Administrateur du Crédit mobilier français,Compagnie Générale des Tabacs,1,1923,1923,directeur_general:1
 creditfoncierbresil,tabacs,du Crédit foncier du Brésil,Compagnie Générale des Tabacs,1,1923,1923,directeur_general:1
@@ -2250,12 +2166,11 @@ industrieminiereekaterinovka,tabacs,Société d'industrie minière d'Ekaterinovk
 sanmiguelcoppermineslimited,tabacs,The San Miguel Copper Mines Limited,Compagnie Générale des Tabacs,1,1923,1923,administrateur:1
 industrielleplatine,tabacs,Compagnie industrielle du platine,Compagnie Générale des Tabacs,1,1923,1923,administrateur:1
 nationalematierescolorantesreille16,tabacs,Compagnie nationale des matières colorantes.] REILLE. 16,Compagnie Générale des Tabacs,1,1923,1923,administrateur:1
+usines,cheddites,Usines à,CHEDDITES,1,1938,1938,president:1
 unionmetropolitaine,geranceparisienneprivee,l'Union métropolitaine,Gérance parisienne privée,1,1947,1947,administrateur:1
 grandemaison,grandemaisonblanc,et de la société La Grande Maison,Grande Maison de Blanc,1,1926,1926,administrateur:1
 maximekatzcette,grandemaisonblanc,Maxime Katz. Cette société,Grande Maison de Blanc,1,1930,1930,administrateur:1
 cateau,grandstravauxbetonarme,Cateau,Société des Grands Travaux en BÉTON ARMÉ,1,1925,1925,administrateur:1
-berengierservicefinanciermarseillaisecredit,grandstravauxbetonarme,Bérengier. Service financier: Société Marseillaise de Crédit,Société des Grands Travaux en béton armé,1,1931,1931,administrateur:1
-vpdtservicefinanciermarseillaisecredit,grandstravauxbetonarme,v.-pdt. Service financier: Société Marseillaise de Crédit,Grands Travaux en béton armé,1,1933,1933,administrateur:1
 loi,guet,Loi,"Guët & Cie, puis Guët, Raffard & Cie",1,1920,1920,administrateur:1
 societesforges,guet,Sociétés Forges,"Guët & Cie, puis Guët, Raffard & Cie",1,1920,1920,administrateur:1
 banquemulhouse,guet,Banque de Mulhouse,"Guët & Cie, puis Guët, Raffard & Cie",1,1920,1920,administrateur:1
@@ -2271,8 +2186,8 @@ cinematographesforains,havraisepeninsulairenavigatonvapeur,Société des Cinéma
 nom,havraisepeninsulairenavigatonvapeur,au nom de la Compagnie,Compagnie Havraise Péninsulaire de Navigaton à vapeur,1,1909,1909,administrateur:1
 havrelignesregulieresalgerie,comitecentralarmateursfrance,Havre. Lignes régulières sur l'Algérie,COMITÉ CENTRAL DES ARMATEURS DE FRANCE,1,1925,1925,directeur_general:1
 reunion,comitecentralarmateursfrance,Réunion,COMITÉ CENTRAL DES ARMATEURS DE FRANCE,1,1925,1925,directeur_general:1
-tapiaminieremoghreb,metauxproduitschimiques,A. Tapia. Cie minière du Moghreb,Métaux et produits chimiques,1,1951,1951,administrateur:1
-holdingcoloniale,metauxproduitschimiques,Holding coloniale,Métaux et produits chimiques,1,1951,1951,administrateur:1
+tapiaminieremoghreb,grandshotelsmarocains,A. Tapia. Cie minière du Moghreb,Grands Hôtels marocains,1,1951,1951,administrateur:1
+holdingcoloniale,grandshotelsmarocains,Holding coloniale,Grands Hôtels marocains,1,1951,1951,administrateur:1
 banquenationalecredit,industrieminessuite,Banque nationale de crédit,Société Française pour l'Industrie et les Mines et suite,1,1929,1929,administrateur:1
 charbonnagesdongtrieu,industrieminessuite,Charbonnages du Dong-Trieu,Société Française pour l'Industrie et les Mines et suite,1,1929,1929,administrateur:1
 miniereguinee,industrieminessuite,Compagnie minière de Guinée,Société Française pour l'Industrie et les Mines et suite,1,1929,1929,administrateur:1
@@ -2304,20 +2219,16 @@ omniumfinancierindustrie,industriellefonciere,Omnium financier de l'industrie,L'
 representantetablissementsjosephparis,etablissementsjosephparis,représentant les Établissements Joseph Paris…,"Établissements Joseph Paris, puis, Nantes-Chantenay",1,1933,1933,administrateur:1
 constructions,acierieslongwy,Compagnie générale de constructions,Société des Aciéries de Longwy,1,1920,1920,administrateur:1
 etablissementssamuels,rouff,Établissements Samuels,Société L. Rouff,1,1929,1929,administrateur:1
-commissairescomptesmmpape,rouff,Cie. Commissaires des comptes: MM. Pape,Société L. Rouff,1,1929,1929,administrateur:1
 deuxcharentessousoccupation,indesirables,Deux Charentes sous l'Occupation,Indésirables,1,1944,1944,gerant:1
 liberationdeuxcharentes,indesirables,Libération des deux Charentes,Indésirables,1,1944,1944,gerant:1
 confolentaisdanssecondeguerremondiale,indesirables,Confolentais dans la Seconde Guerre mondiale,Indésirables,1,1944,1944,gerant:1
 dromedurantsecondeguerremondiale,indesirables,Drôme durant la Seconde Guerre mondiale,Indésirables,1,1944,1944,gerant:1
 penseeuniverselle,indesirables,Pensée universelle,Indésirables,1,1944,1944,gerant:1
-usinesrouencolombes,lillebonnierescolombes,Usines: Rouen:Colombes,LILLE-BONNIÈRES et COLOMBES,1,1925,1925,president:1
-mnagelmackersusinesrouen,lillebonnierescolombes,M Nagelmackers. Usines: Rouen,LILLE-BONNIÈRES et COLOMBES,1,1938,1938,administrateur:1
 fiduciairefrancosuisse,lorraine,Société fiduciaire franco-suisse,"Lorraine des Anciens Éts de Dietrich, Lunéville, Argenteuil, Bagnères-de-Bigorre",1,1937,1937,commissaire_aux_comptes:1
 wallergroupeparisfrance,magasinsmodernesfilialecommunenouvellesgaleriesparisfrance,WALLER [du groupe Paris-France,"Magasins modernes, filiale commune des Nouvelles Galeries et de Paris-France",1,1926,1926,administrateur:1
 etudes,mediterraneenneminieremetallurgiquecommerciale,Société française d'études,"Société Méditerranéenne, Minière, Métallurgique et Commerciale",1,1938,1938,administrateur:1
 armandbehic,messageriesmaritimes,l'Armand-Béhic et,Société des Messageries maritimes,1,1893,1893,administrateur:1
 france,manufacturetapiscouvertures,France,Manufacture française de tapis et couvertures,1,1931,1931,administrateur:1
-douzeusinesbeauvais,manufacturetapiscouvertures,Douze usines: Beauvais,MANUFACTURE FRANÇAISE de TAPIS et COUVERTURES,1,1938,1938,administrateur:1
 agentminescourrieresparis,mineslucette,agent des Mines de Courrières à Paris,Société nouvelle des mines de La Lucette,1,1905,1905,president:1
 minessardaigne,malfidano,pour les mines de Sardaigne,Malfidano,1,1899,1899,administrateur:1
 plantationskantroy,minesminerais,des Plantations de Kantroy,Compagnie de Mines et minerais,1,1928,1928,administrateur:1
@@ -2325,13 +2236,9 @@ miniere,minesminerais,de la Société minière,Compagnie de Mines et minerais,1,
 uniondiamantifere,minesminerais,de l'Union diamantifère,Compagnie de Mines et minerais,1,1928,1928,administrateur:1
 filialesmines,minesminerais,filiales de la Compagnie de mines,Compagnie de Mines et minerais,1,1928,1928,administrateur:1
 mamora,minesminerais,de la Compagnie de la Mamora…,Compagnie de Mines et minerais,1,1928,1928,administrateur:1
-servicefinanciergestionfinanciere,minesminerais,Service financier: Société de gestion financière,Compagnie de Mines et minerais,1,1931,1931,administrateur:1
-servicefinancierparisgestionfinanciere,minesminerais,Service financier: Paris: Société de gestion financière,Compagnie de Mines et minerais,1,1932,1932,administrateur:1
-telliereexploitationsminesmayorne,minesproduitschimiques,A. Tellière. Exploitations: Mines de May-sur-Orne,MINES et de PRODUITS CHIMIQUES,1,1938,1938,president:1
 omniumfinancier,minesorpek,de l'Omnium financier,Cie française des Mines d'or du Pek,1,1933,1933,administrateur:1
 haeberlinltd,minierealmagrera,Haeberlin Ltd,MINIÈRE D'ALMAGRERA,1,1925,1925,administrateur:1
 uniontres,minierealmagrera,Union de Tres,MINIÈRE D'ALMAGRERA,1,1925,1925,administrateur:1
-sixminessierraalmagrerasanagustin,minierealmagrera,six mines de la Sierra-Almagrera: San-Agustin,MINIÈRE D'ALMAGRERA,1,1925,1925,administrateur:1
 unionprimera,minierealmagrera,Union Primera,MINIÈRE D'ALMAGRERA,1,1925,1925,administrateur:1
 paquitaminesplombarg,minierealmagrera,Paquita (Mines de plomb arg,MINIÈRE D'ALMAGRERA,1,1925,1925,administrateur:1
 drpachalme,miniereribeira,Dr. P Achalme,Compagnie minière de la Ribeira,1,1929,1929,administrateur:1
@@ -2350,7 +2257,6 @@ banqueprivee,omniumentreprises,Banque privée,OMNIUM d'ENTREPRISES,1,1930,1930,a
 banquerenauld,omniumentreprises,Banque Renauld,OMNIUM d'ENTREPRISES,1,1930,1930,administrateur:1
 usineschauxhydrauliquexeuilly,omniumentreprises,Usines de chaux hydraulique de Xeuilly,OMNIUM d'ENTREPRISES,1,1930,1930,administrateur:1
 heron,fonderiesemailleriesdonchery,Héron,FONDERIES et ÉMAILLERIES de DONCHERY,1,1925,1925,administrateur:1
-charlespfeifferusineslafontaine,papeterievaldorfontainevaucluse,Charles Pfeiffer. Usines: Lafontaine,"Société nouvelle Papeterie du Valdor, Fontaine-de-Vaucluse",1,1925,1925,directeur_general:1
 constructionfer,josephpaganonfigurecommeingenieurchimiste,Société de construction en fer,Joseph Paganon figure comme ingénieur chimiste,1,1925,1925,administrateur:1
 editionsdocumentairesindustrielles,josephpaganonfigurecommeingenieurchimiste,Société d'éditions documentaires industrielles,Joseph Paganon figure comme ingénieur chimiste,1,1925,1925,administrateur:1
 rey,josephpaganonfigurecommeingenieurchimiste,Société Rey,Joseph Paganon figure comme ingénieur chimiste,1,1925,1925,administrateur:1
@@ -2365,11 +2271,8 @@ mineshouilleblanzy,josephpaganonfigurecommeingenieurchimiste,Mines de houille de
 houilleresarre,josephpaganonfigurecommeingenieurchimiste,Société houillère de Sarre,Joseph Paganon figure comme ingénieur chimiste,1,1927,1927,administrateur:1
 vpdtcreditmobilierfrs,industrielleplatine,v.-pdt Crédit mobilier frs,Cie industrielle du platine,1,1938,1938,president:1
 goaster,polietchausson,Goaster,Poliet et Chausson,1,1923,1923,administrateur:1
-usinespontaillersaone,poudressurete,Usines: Pontailler-sur-Saône,POUDRES de SÛRETÉ,1,1938,1938,administrateur:1
 travancoremineralscyltd,produitschimiquesterresrares,Travancore Minerals Cy Ltd,Société de Produits chimiques des terres rares,1,1919,1919,administrateur:1
 industrielle,produitschimiquesterresrares,Cie Industrielle,Société de Produits chimiques des terres rares,1,1940,1940,administrateur:1
-cbreillacusineshydrauliquesorlu,energieelectrique,C. Breillac.— Usines hydrauliques à: Orlu,ÉNERGIE ELECTRIQUE,1,1938,1938,directeur:1
-usinesrrateau,rateaudirectionbureaux,Usines: r. Rateau,Société RATEAU. Direction et bureaux,1,1938,1938,president:1
 courneuve,rateaudirectionbureaux,Courneuve,Société RATEAU. Direction et bureaux,1,1938,1938,president:1
 presaintgervais,rateaudirectionbureaux,Pré-Saint- Gervais,Société RATEAU. Direction et bureaux,1,1938,1938,president:1
 miniere,roumanobelgepetrole,de la Compagnie minière,Roumano-Belge de Pétrole,1,1925,1925,administrateur:1
@@ -2379,7 +2282,6 @@ exploitersesusinesalgerie,rochefortaiseproduitsalimentaires,exploiter ses usines
 pvittinietudestechniques,etudestechniquesfinancieres,P Vittini. La Société d'études techniques,Société d'Études techniques et financières,1,1913,1913,administrateur:1
 creditfoncier,etudestechniquesfinancieres,du Crédit foncier,Société d'Études techniques et financières,1,1913,1913,administrateur:1
 industrieminierecarmencita,etudestechniquesfinancieres,de la Société d'industrie minière Carmencita,Société d'Études techniques et financières,1,1913,1913,administrateur:1
-fixomachinestimbresposte,etudestechniquesfinancieres,de la Société Fixo: machines pour timbres-poste,Société d'Études techniques et financières,1,1913,1913,administrateur:1
 industrieminieregalena,etudestechniquesfinancieres,de la Société d'industrie minière de Galena,Société d'Études techniques et financières,1,1913,1913,administrateur:1
 etudestechniques,etudestechniquesfinancieres,Société d'études techniques,Société d'Études techniques et financières,1,1920,1920,administrateur:1
 francequiavaitparu,sffc,France qui avait paru,SFFC,1,1931,1931,administrateur:1
@@ -2399,7 +2301,6 @@ puiscenseurcomptoirescompteparis,transportsmaritimesvapeur,puis censeur du Compt
 delasocietegenerale,transportsmaritimesvapeur,de la Société générale,Société générale de transports maritimes à vapeur,1,1865,1865,administrateur:1
 transportsmaritimes,transportsmaritimesvapeur,de la Société générale de transports maritimes,Société générale de transports maritimes à vapeur,1,1865,1865,administrateur:1
 gardierejean,transportsmaritimesvapeur,GARDIÈRE (Jean de),Société générale de transports maritimes à vapeur,1,1926,1926,administrateur:1
-conseiladministrationmmedmondgiscardestaing,aeronautique,Conseil d'administration: MM. Edmond Giscard d'Estaing,"Société générale aéronautique, puis Moteurs et automobiles Lorraine",1,1936,1936,president:1
 loi,auxiliaireafricaine,Loi,Société AUXILIAIRE AFRICAINE,1,1925,1925,administrateur:1
 anciensetablissementschpeyrissac,auxiliaireafricaine,Anciens Établissements Ch. Peyrissac,Société AUXILIAIRE AFRICAINE,1,1938,1938,administrateur:1
 usinepersantravauxgrossechaudronnerie,constructions,Usine à Persan. Travaux de grosse chaudronnerie,CONSTRUCTIONS,1,1938,1938,administrateur:1
@@ -2425,10 +2326,8 @@ administrationchateaudunmachines,constructionmachinestanneriecorroieriemegisseri
 banquecharpenay,travauxhydrauliquesentreprisesgenerales,Banque Charpenay,Travaux hydrauliques et entreprises générales,1,1922,1922,administrateur:1
 banquechevignard,travauxhydrauliquesentreprisesgenerales,Banque Chevignard,Travaux hydrauliques et entreprises générales,1,1922,1922,administrateur:1
 travauxhydrauliques,travauxhydrauliquesentreprisesgenerales,Société des Travaux hydrauliques,Travaux hydrauliques et entreprises générales,1,1922,1922,administrateur:1
-parisservicefinancierunionsyndicalefinanciere,trustimmobilierfrance,Paris. Service financier: Union Syndicale Financière,Trust immobilier de France,1,1929,1929,administrateur:1
 pierardminescourrieres,unionmines,L Piérard [Mines de Courrières,Union des mines,1,1929,1929,vice_president:1
 banquenord,unionmines,Banque générale du Nord],Union des mines,1,1929,1929,vice_president:1
-hestevecommissairegouvernementplatour,unionmines,H. Estève. Commissaire du gouvernement: P. Latour,Union des mines,1,1948,1948,administrateur:1
 nommemonsieurjeantarant,unionfinanciereparis,Cie. Nommé monsieur Jean Tarant,Union financière de Paris,1,1925,1925,administrateur:1
 usinesvilleneuve,unionpapeteries,Usines à Villeneuve,Union française de papeteries,1,1925,1925,administrateur:1
 comptoirnationalescompteparis,unionindustriellecredit,Comptoir national d'escompte de Paris…,Union industrielle de crédit,1,1929,1929,administrateur:1
@@ -2509,7 +2408,6 @@ unionminiereindochinoise,unionelectriqueindochine,Union minière indochinoise,Un
 gallen,unionelectriqueindochine,Gallen,Union électrique d'Indochine,1,1929,1929,president:1
 produitsaromatiques,indochinoiseplantations,Cie des Produits aromatiques,Cie Indochinoise de plantations,1,1929,1929,administrateur:1
 participations,indochinoiseplantations,Société des participations,Cie Indochinoise de plantations,1,1929,1929,administrateur:1
-saigoncorrespondantfinancierecaoutchoucs,plantationsindochinoises,SAIGON. Correspondant: Société financière des caoutchoucs,Plantations Indochinoises de thé,1,1929,1929,administrateur:1
 commerce,agricoleindustrielletourcham,Cie de commerce,Société agricole et industrielle de Tourcham,1,1929,1929,administrateur:1
 indochinoisedarlac,indochinoiseculturestropicales,Société indochinoise du Darlac,Société indochinoise des cultures tropicales,1,1929,1929,administrateur:1
 indochinoiseplantationsheveas,indochinoiseculturestropicales,Société indochinoise de plantations d'hévéas,Société indochinoise des cultures tropicales,1,1929,1929,administrateur:1
@@ -2526,10 +2424,8 @@ exportimportltddavant,boisindochine,Société anon. Export and Import Ltd. Davan
 hiephoafonciere,plantationsboygambar,Hiep-hoa. Société foncière,Plantations des Boygambar,1,1932,1932,administrateur:1
 financiereindochine,fonciererizicolesoctrang,Société financière d'Indochine,Société foncière et rizicole de Soctrang,1,1932,1932,administrateur:1
 tayninhplantationscaoutchoucalcan,thidoirizieresindochine,Tayninh. Plantations de caoutchouc Alcan,« Thi Doi » Société de rizières en Indochine,1,1932,1932,administrateur:1
-ballousplantationlochung,thidoirizieresindochine,Ballous: plantation de Lôc-hung,« Thi Doi » Société de rizières en Indochine,1,1932,1932,administrateur:1
 plantationschcampifcanque,thidoirizieresindochine,plantations Ch. Campi. F. Canque,« Thi Doi » Société de rizières en Indochine,1,1932,1932,administrateur:1
 plantationscanque,thidoirizieresindochine,plantations Canque,« Thi Doi » Société de rizières en Indochine,1,1932,1932,administrateur:1
-saigonplantationchocauforterre,caoutchoutieregianhan,Saïgon: plantation de Cho-Cau. Forterre,Cie caoutchoutière de Gia-nhan,1,1932,1932,administrateur:1
 plantationsforterre,caoutchoutieregianhan,plantations Forterre,Cie caoutchoutière de Gia-nhan,1,1932,1932,administrateur:1
 plantationsthaibinhthuong,caoutchoutieregianhan,plantations de Thaï-Binh-thuong,Cie caoutchoutière de Gia-nhan,1,1932,1932,administrateur:1
 plantationphuocbinhboitepostale10,caoutchoutieregianhan,plantation de Phuoc-binh (Boîte postale 10,Cie caoutchoutière de Gia-nhan,1,1932,1932,administrateur:1
@@ -2571,7 +2467,6 @@ admasiatique,brasseriesglacieresindochine,adm. Cie asiatique,Brasseries et glaci
 usinecontreplaques,brasseriesglacieresindochine,Usine de contreplaqués,Brasseries et glacières de l'Indochine,1,1971,1971,administrateur:1
 eaux,hydrauliqueasie232,Cie des Eaux,L'Hydraulique-Asie 232,1,1971,1971,administrateur:1
 secretairebanquemadagascar,indochinefilmscinemas,secrétaire général de la Banque de Madagascar,Indochine Films et Cinémas,1,1971,1971,administrateur:1
-voirindochinoisematerielmecanique,chalandageremorquageindochine,Voir: Société Indochinoise de matériel mécanique,Société anon. de chalandage et de remorquage de l'Indochine,1,1971,1971,administrateur:1
 denisfreres,auxiliaireindustrieindochine,Société Denis frères,Société auxiliaire pour l'industrie en Indochine,1,1971,1971,gerant:1
 bneufvilleetsdollfus,cimentsportlandartificielsindochine,B de Neufville [Ets Dollfus,Sté des ciments Portland artificiels de l'Indochine,1,1971,1971,administrateur:1
 henrivienneindustrielle,etudesexploitationsminieresindochine,Henri de Vienne [Cie générale industrielle,Société d'études et d'exploitations minières de l'Indochine,1,1971,1971,president:1
@@ -2609,43 +2504,33 @@ denisfreresindochine,algerienneindochinoisetabacs,Société Denis Frères d'Indo
 cigarettesmelia,algerienneindochinoisetabacs,Société anonyme des cigarettes Mélia,Société Algérienne et Indochinoise des Tabacs,1,1932,1932,administrateur:1
 tabacs,algerienneindochinoisetabacs,Société anonyme des Tabacs,Société Algérienne et Indochinoise des Tabacs,1,1932,1932,administrateur:1
 cigarettesnationales,algerienneindochinoisetabacs,Société des Cigarettes Nationales,Société Algérienne et Indochinoise des Tabacs,1,1932,1932,administrateur:1
-cambodgeplantationcaoutchouc,boissonsindigenes,au Cambodge. Plantation de caoutchouc,BOISSONS INDIGÈNES,1,1925,1925,administrateur:1
-jeanlaboriausinescayenne,colonisationannamtonkin,Jean Laboria. Usines: Cayenne,COLONISATION EN ANNAM-TONKIN,1,1925,1925,directeur:1
-uneteinturerietonkinusinesnamdinh,constructionsmecaniques,d'une teinturerie au Tonkin. Usines à Namdinh,CONSTRUCTIONS MÉCANIQUES,1,1925,1925,administrateur:1
+francoismangeusineshanoi,socindochinoiseforestiereallumettes,François Mange. Usines à Hanoï,Soc. indo-chinoise forestière et des ALLUMETTES,1,1925,1925,president:1
+cambodgeplantationcaoutchouc,socasiatiqueboissonsindigenes,au Cambodge. Plantation de caoutchouc,Soc. asiatique des BOISSONS INDIGÈNES,1,1925,1925,administrateur:1
+uneteinturerietonkinusinesnamdinh,cotonnieretonkin,d'une teinturerie au Tonkin. Usines à Namdinh,Société COTONNIÈRE du TONKIN,1,1925,1925,administrateur:1
 minesjanonterrenoire,dragages,Mines de Janon-Terrenoire … ],DRAGAGES,1,1925,1925,administrateur:1
-ghermenierdeuxusineshanoi,electricite,G Hermenier. Deux usines à: Hanoï,ÉLECTRICITÉ,1,1925,1925,president:1
 comptoirhaiphongtoutesoperationscommerciales,entreprisesindochine,Comptoir à Haïphong. Toutes opérations commerciales,Cie française d'ENTREPRISES EN INDOCHINE,1,1925,1925,administrateur:1
-syndicatminierextremeorient,frigorifiqueslittoral,syndicat minier d'Extrême-Orient,FRIGORIFIQUES DU LITTORAL,1,1955,1955,president:1
-agenceradio,frigorifiqueslittoral,Agence Radio,FRIGORIFIQUES DU LITTORAL,1,1955,1955,president:1
-cordlex,frigorifiqueslittoral,Société Cordlex,FRIGORIFIQUES DU LITTORAL,1,1955,1955,president:1
-usinehaiphonghuilescomestibles,honquan,Usine à Haïphong. Huiles comestibles,HONQUAN,1,1955,1955,president:1
-bernardbanquejulesbernardmathieugoudchaux,phuquoc,L Bernard [banque Jules Bernard-Mathieu Goudchaux,PHU-QUOC,1,1955,1955,president:1
-venteleursproduitseuropeusine,phuquoc,vente de leurs produits en Europe. Usine,PHU-QUOC,1,1955,1955,administrateur:1
-centraleindustrieelectrique,tabacsindochine,de la Société centrale pour l'industrie électrique,TABACS DE L'INDO-CHINE,1,1955,1955,president:1
+syndicatminierextremeorient,socfrigorifiqueslittoral,syndicat minier d'Extrême-Orient,Soc. an FRIGORIFIQUES DU LITTORAL,1,1955,1955,president:1
+agenceradio,socfrigorifiqueslittoral,Agence Radio,Soc. an FRIGORIFIQUES DU LITTORAL,1,1955,1955,president:1
+cordlex,socfrigorifiqueslittoral,Société Cordlex,Soc. an FRIGORIFIQUES DU LITTORAL,1,1955,1955,president:1
+usinehaiphonghuilescomestibles,sochonquan,Usine à Haïphong. Huiles comestibles,Soc. d'HONQUAN,1,1955,1955,president:1
+bernardbanquejulesbernardmathieugoudchaux,poinsardveyret,L Bernard [banque Jules Bernard-Mathieu Goudchaux,POINSARD et VEYRET,1,1955,1955,administrateur:1
+centraleindustrieelectrique,soctabacsindochine,de la Société centrale pour l'industrie électrique,Soc. des TABACS DE L'INDO-CHINE,1,1955,1955,president:1
+usinehanoi,soctabacsindochine,usine à Hanoï,Soc. des TABACS DE L'INDO-CHINE,1,1955,1955,president:1
 canebiere,aerienne,Canebière,Compagnie AÉRIENNE FRANÇAISE,1,1938,1938,vice_president:1
-peindreplantationsarbrescaoutchouc,aerienne,Peindre. Plantations d'arbres à caoutchouc,Compagnie AÉRIENNE FRANÇAISE,1,1938,1938,vice_president:1
-admagricsudindoch,allumettes,adm. Cie agric. Sud-Indoch.],ALLUMETTES,1,1938,1938,president:1
-usineshanoi,allumettes,Usines à Hanoï,ALLUMETTES,1,1938,1938,president:1
-pierrelarozegouverneurcreditfoncier,allumettes,Pierre Laroze [gouverneur du Crédit Foncier,ALLUMETTES,1,1938,1938,president:1
-commissairegouvernementmandreyou,allumettes,Commissaire du Gouvernement:M. André You,ALLUMETTES,1,1938,1938,president:1
+peindreplantationsarbrescaoutchouc,agricolethanhtuyha,Peindre. Plantations d'arbres à caoutchouc,Société AGRICOLE de THANH-TUY-HA,1,1938,1938,administrateur:1
+admagricsudindoch,socindochinoiseforestiereallumettes,adm. Cie agric. Sud-Indoch.],Soc. indo-chinoise forestière et des ALLUMETTES,1,1938,1938,president:1
+usineshanoi,socindochinoiseforestiereallumettes,Usines à Hanoï,Soc. indo-chinoise forestière et des ALLUMETTES,1,1938,1938,president:1
+pierrelarozegouverneurcreditfoncier,banqueindochine,Pierre Laroze [gouverneur du Crédit Foncier,BANQUE de l'INDOCHINE,1,1938,1938,president:1
 fluviauxcharbonnagesdeidanh,chalandage,fluviaux. CHARBONNAGES de DEI-DANH,CHALANDAGE,1,1938,1938,president:1
 langhitcharbonnages,charbonnages,Lang-Hit Charbonnages,CHARBONNAGES,1,1938,1938,president:1
-mineszinccharbonnagestonkin,charbonnages,mines de zinc.. CHARBONNAGES du TONKIN,CHARBONNAGES,1,1938,1938,president:1
-camphaagencehongkongcharbonnagestuyenquang,charbonnages,Campha. Agence à Hongkong.. CHARBONNAGES de TUYEN-QUANG,CHARBONNAGES,1,1938,1938,president:1
-usineshaiphongcimentsportlandartificiels,chauxhydrauliqueslangtho,Usines à Haïphong. Ciments Portland artificiels,CHAUX HYDRAULIQUES DU LANG-THO,1,1938,1938,president:1
-etccomptoirindustriel,comte,etc.. COMPTOIR INDUSTRIEL,COMTE,1,1938,1938,president:1
-paruneagencepropresaigon,constructionsmecaniques,par une agence en propre à Saïgon,CONSTRUCTIONS MÉCANIQUES,1,1938,1938,administrateur:1
-saigonplantationscochinchinexacat,culturestropicales,Saïgon. Plantations: Cochinchine: Xacat,CULTURES TROPICALES,1,1938,1938,administrateur:1
-usinesnamdinh,fontaine,usines: Nam-Dinh,FONTAINE,1,1938,1938,administrateur:1
+paruneagencepropresaigon,socgenconstructionsmecaniques,par une agence en propre à Saïgon,Soc. gén. de CONSTRUCTIONS MÉCANIQUES,1,1938,1938,administrateur:1
 entreprisedistributioneau,hydrauliqueasie,Entreprise de distribution d'eau,L'HYDRAULIQUE-ASIE,1,1938,1938,president:1
-agence2,maritimeindochinoise,Agence: 2,Cie Maritime INDOCHINOISE,1,1938,1938,administrateur:1
 usineblancmesnil,marcillac,Usine à Blanc-Mesnil,MARCILLAC,1,1932,1932,president:1
 gallen,navigationvapeurfranceindochine,Gallen,NAVIGATION A VAPEUR FRANCE-INDOCHINE,1,1932,1932,administrateur:1
-equatorialesmines,oxygene,Cie équatoriales de mines],OXYGÈNE,1,1932,1932,administrateur:1
-usinepatevietri,oxygene,Usine de pâte à Viétri,OXYGÈNE,1,1932,1932,administrateur:1
-pdtindochinoisecharbonnages,oxygene,pdt Indochinoise de charbonnages,OXYGÈNE,1,1932,1932,administrateur:1
-usinehaiphongphosphatesplantationsheveas,oxygene,Usine à Haïphong. Phosphates.. PLANTATIONS d'HÉVÉAS,OXYGÈNE,1,1932,1932,administrateur:1
-cafeplantationsterresrouges,oxygene,de café.. PLANTATIONS des TERRES ROUGES,OXYGÈNE,1,1932,1932,administrateur:1
+equatorialesmines,socpapeteriesindochine,Cie équatoriales de mines],Soc. an. des PAPETERIES de l'INDO-CHINE,1,1932,1932,administrateur:1
+usinepatevietri,socpapeteriesindochine,Usine de pâte à Viétri,Soc. an. des PAPETERIES de l'INDO-CHINE,1,1932,1932,administrateur:1
+pdtindochinoisecharbonnages,socphosphatestonkin,pdt Indochinoise de charbonnages,Soc. nouvelle des PHOSPHATES du TONKIN,1,1932,1932,president:1
+usinehaiphongphosphates,socphosphatestonkin,Usine à Haïphong. Phosphates,Soc. nouvelle des PHOSPHATES du TONKIN,1,1932,1932,president:1
 radioelectrique,agenceradiotelegraphiqueindochinepacifique,de la Société française radio- électrique,Agence radiotélégraphique de l'Indochine et du Pacifique,1,1924,1924,administrateur:1
 particip,asiatiqueafricaine,Société de particip,Cie asiatique et africaine,1,1951,1951,administrateur:1
 asiatique,asiatiqueafricaine,en « Compagnie Asiatique,Cie asiatique et africaine,1,1954,1954,administrateur:1
@@ -2670,12 +2555,9 @@ chine,banqueindochine,Chine,Banque de l'Indochine,1,1889,1889,administrateur:1
 inde,banqueindochine,l'Inde,Banque de l'Indochine,1,1889,1889,administrateur:1
 amerique,banqueindochine,l'Amérique,Banque de l'Indochine,1,1889,1889,administrateur:1
 australie,banqueindochine,l'Australie,Banque de l'Indochine,1,1889,1889,administrateur:1
-commissairegouvernementmbillecocq,banqueindochine,Commissaire du Gouvernement: M. Billecocq,Banque de l'Indochine,1,1901,1901,administrateur:1
 sousgouverneurhonorairebanquefrance,banqueindochine,sous-gouverneur honoraire de Banque de France,Banque de l'Indochine,1,1922,1922,administrateur:1
 secretaireministereinterieur,banqueindochine,secrétaire général du ministère de l'Intérieur,Banque de l'Indochine,1,1931,1931,administrateur:1
 domaines,banqueindochine,des Domaines,Banque de l'Indochine,1,1931,1931,administrateur:1
-commissairegouvernementmandreyou,banqueindochine,Commissaire du Gouvernement: M. André You,Banque de l'Indochine,1,1938,1938,president:1
-yunnanfoutoutesoperationsbanque,banqueindochine,Yunnanfou. Toutes opérations de banque,Banque de l'Indochine,1,1938,1938,president:1
 bignanfrezouls,banqueindustriellechine,Bignan. FREZOULS,Banque industrielle de Chine,1,1920,1920,administrateur:1
 banqueparis,banqueindustriellechine,Banque de Paris,Banque industrielle de Chine,1,1920,1920,administrateur:1
 universellecanalmaritimesuez,banqueindustriellechine,Cie universelle du canal maritime de Suez,Banque industrielle de Chine,1,1920,1920,administrateur:1
@@ -2726,12 +2608,10 @@ representantchinebanquefrancoasiatique,foncieretonkinannam,représentant en Chin
 berthet,forestiereindochinoise,Société Berthet,Compagnie Forestière indochinoise,1,1930,1930,administrateur:1
 franconeerlandaiseculture,franconeerlandaiseculturecommerce,de la Société franco-néerlandaise de culture,Société Franco-néerlandaise de culture et de commerce,1,1910,1910,administrateur:1
 poivresplantationssoekaoentoeng,franconeerlandaiseexploitationscoloniales,poivres. Plantations de Soeka-Oentoeng,Société Franco-néerlandaise d'exploitations coloniales,1,,,administrateur:1
-servicefinanciercreditnord,ghmumm,Service financier: Crédit du Nord,G.-H. Mumm,1,1931,1931,administrateur:1
 banquenationalecredit,ghmumm,Banque Nationale de Crédit,G.-H. Mumm,1,1931,1931,administrateur:1
 societegenerale,ghmumm,Société Générale,G.-H. Mumm,1,1931,1931,administrateur:1
 entretienplantations,plantationsheveascaukhoi,Entretien des plantations,"Société des plantations d'hévéas de Caukhoï, puis Caukhoï. Témoignage de Robert Vinet",1,1936,1936,administrateur:1
 recolteentretienplantationsetepoursuivi,plantationsheveascaukhoi,Récolte L'entretien des plantations a été poursuivi,"Société des plantations d'hévéas de Caukhoï, puis Caukhoï. Témoignage de Robert Vinet",1,1936,1936,administrateur:1
-merciercommissairescomptesfiduciaire,plantationsheveasxuanloc,A. Mercier Commissaires aux comptes: Société fiduciaire,Plantations d'hévéas de Xuân-Lôc,1,1945,1945,administrateur:1
 2,plantationsheveastanthanhdong,Cie. 2,Société nouvelle des plantations d'hévéas de Tân-thanh-Dông,1,1914,1914,administrateur:1
 internationalwaterco,hydrauliqueasie,l'International Water Co,L'Hydraulique-Asie,1,1931,1931,administrateur:1
 laynefrance,hydrauliqueasie,Layne France Compagnie,L'Hydraulique-Asie,1,1931,1931,administrateur:1
@@ -2763,7 +2643,6 @@ plantationbrelinhbudop,liste1050plantationsheveasindochine,plantation Brélinh �
 banquelippens,unioncommercialeindochinoiseafricaine,de la Banque Lippens,L'Union commerciale indochinoise et africaine,1,1919,1919,administrateur:1
 lacazemaurice,unioncommercialeindochinoiseafricaine,LACAZE (Maurice),L'Union commerciale indochinoise et africaine,1,1926,1926,administrateur:1
 lecatpaul,unioncommercialeindochinoiseafricaine,LECAT (Paul),L'Union commerciale indochinoise et africaine,1,1926,1926,administrateur:1
-lyonusines27,maiseriesmediterranee,Lyon. Usines: 27,MAÏSERIES de la MÉDITERRANÉE,1,1925,1925,president:1
 messageriesmaritimes,maritimeindochinoise,Cie des Messageries maritimes,Compagnie Maritime Indochinoise,1,1927,1927,administrateur:1
 affreteursindochinois,maritimeindochinoise,Société des Affréteurs indochinois,Compagnie Maritime Indochinoise,1,1927,1927,administrateur:1
 borysewiczministereinstructionpublique,messageriesfluvialescochinchine,L. Borysewicz. Ministère de l'instruction publique,Messageries fluviales de Cochinchine,1,1912,1912,administrateur:1
@@ -2773,10 +2652,8 @@ minescuivrerivierenoire,metallurgiqueminiereindochine,mines de cuivre de la rivi
 minescharbonhoanhmo,metallurgiqueminiereindochine,mines de charbon de Hoanhmo,Société Métallurgique et minière de l'Indo-Chine,1,1901,1901,administrateur:1
 minesmanganesephulien,metallurgiqueminiereindochine,mines de manganèse de Phu-lien,Société Métallurgique et minière de l'Indo-Chine,1,1901,1901,administrateur:1
 bqnatcredit,minieremetallurgiqueindochinemineschodienfonderiezincquangyen,Bq Nat. Crédit,"Cie Minière et métallurgique de l'Indochine, mines à Cho-Diên, fonderie de zinc à Quang-Yên",1,1922,1922,administrateur:1
-objetrecherches,minesorbongmiu,Objet de la société: Recherches,"Société des Mines d'or de Bông-Miû, puis Société indochinoise d'exploitations minières et agricoles",1,1894,1894,administrateur:1
 alsacienne,minesornamkok,de la Société Société alsacienne,Société des Mines d'or de Nam-Kok,1,1929,1929,administrateur:1
 parbanquerenauld,minesornamkok,par la Banque Renauld,Société des Mines d'or de Nam-Kok,1,1929,1929,administrateur:1
-unionminiereindochinoisecommissairescomptesfie,minesornamkok,Union minière indochinoise. Commissaires aux comptes: Fié,Mines d'or de Nam-Kok,1,1937,1937,administrateur:1
 faivre,minesornamkok,Faivre,Mines d'or de Nam-Kok,1,1940,1940,administrateur:1
 hvienneindustrielle,minesorlitchofilialetcheponeassociationminiere,H de Vienne [Cie générale industrielle,"Société des mines d'or de Litcho, filiale de Tchépone et de l'Association minière",1,1934,1934,administrateur:1
 chesnay,minesortchepone,Chesnay,Mines d'or de Tchépone,1,1928,1928,administrateur:1
@@ -2824,7 +2701,6 @@ rizindochinedenisfreres,rizeriesaigonnaise,Société des Riz d'Indochine Denis F
 denisfreresindochine,rizeriesaigonnaise,Société Denis Frères d'Indochine,Rizerie saïgonnaise,1,1927,1927,administrateur:1
 bret,rizeriesaigonnaise,Bret,Rizerie saïgonnaise,1,1927,1927,administrateur:1
 5,rizeriesmekong,Cie. 5,Rizeries du Mékong,1,1928,1928,administrateur:1
-venteleursproduitseuropeusine,rizeriesindochinoises,vente de leurs produits en Europe. Usine,RIZERIES INDOCHINOISES,1,1925,1925,administrateur:1
 francoindochinoise,rizeriesmeridionales,Compagnie Franco-Indochinoise,Rizeries méridionales,1,1924,1924,administrateur:1
 officeriz,rizicolebattambangourizicolebattambang,DE L' « OFFICE DU RIZ »,Société rizicole de Battambang ou Rizicole de Battambang,1,1930,1930,administrateur:1
 financiereindochine,rizicolebattambangourizicolebattambang,Société financière d'Indochine,Société rizicole de Battambang ou Rizicole de Battambang,1,1937,1937,administrateur:1
@@ -2843,8 +2719,7 @@ banquepaysnord,sicaf,Banque des pays du Nord,SICAF,1,1929,1929,administrateur:1
 banquepaysorient,sicaf,Banque française des pays d'Orient,SICAF,1,1929,1929,administrateur:1
 fonciere,sicaf,Société foncière,SICAF,1,1929,1929,administrateur:1
 portriograndedosul,sicaf,Compagnie française du Port de Rio-Grande-do-Sul,SICAF,1,1929,1929,administrateur:1
-agence2,sicaf,Agence: 2,SICAF,1,1938,1938,administrateur:1
-saigonplantationscochinchinexacat,indochinoiseculturestropicales,Saïgon. Plantations: Cochinchine: Xacat,Société Indochinoise des Cultures tropicales,1,1938,1938,administrateur:1
+francoismangeusineshanoi,allumettes,François Mange. Usines à Hanoï,ALLUMETTES,1,1925,1925,president:1
 denisfreres,sifa,Société Denis frères,SIFA,1,1948,1948,administrateur:1
 denisfreresindochine,indochinoiseeauxelectriciteannam,société Denis frères d'Indochine,Société indochinoise pour les eaux et l'électricité en Annam,1,1943,1943,administrateur:1
 eaux,indochinoiseeauxielectriciteannam,Cie des eaux,Société indochinoise pour les eaux et I'électricité en Annam,1,1951,1951,vice_president:1
@@ -2868,12 +2743,11 @@ banqueunionparisienne,plantationscaoutchoucsumatra,de la Banque de l'Union paris
 denisfreresindochine,tabacsindochine,société Denis frères d'Indochine,Tabacs d'Indochine,1,1927,1927,administrateur:1
 cotiereannam,tabacsindochine,Compagnie côtière de l'Annam,Tabacs d'Indochine,1,1927,1927,administrateur:1
 weylplantationstabacskimxuyen,tabacsindochine,Weyl. Plantations de tabacs à Kim-Xuyen,TABACS DE L'INDO-CHINE,1,1925,1925,president:1
-langkatsumatrarubcolinggiplantations,tandjongmalimrubbercoutanjongmalimrubberc,Langkat Sumatra Rub.Co: Linggi Plantations,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,1910,1910,administrateur:1
+usinehanoi,tabacsindochine,usine à Hanoï,TABACS DE L'INDO-CHINE,1,1925,1925,president:1
 perakrubberplantations,tandjongmalimrubbercoutanjongmalimrubberc,Perak Rubber plantations,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,1910,1910,administrateur:1
 sumatrapararabplantations,tandjongmalimrubbercoutanjongmalimrubberc,Sumatra Para Rab. Plantations,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,1910,1910,administrateur:1
 usinedebaltzevo,tapanoelie,de l'Usine de Debaltzévo,Tapanoëlie,1,1917,1917,administrateur:1
 syndicatagricolecochinchine,agricolethanhtuyha,Syndicat agricole de Cochinchine,Société agricole de Thanh-Tuy-Ha,1,1911,1911,administrateur:1
-peindreexploitationplantationscaoutchoucs,agricolethanhtuyha,Peindre. Exploitation de plantations de caoutchoucs,Société AGRICOLE de THANH-TUY-HA,1,1925,1925,administrateur:1
 poinsard,thesselectionnesindochine,Société Poinsard,Thés sélectionnés d'Indochine,1,1937,1937,administrateur:1
 puispresidentcreditfoncieralgerie,ufeo,puis président du Crédit foncier d'Algérie,UFEO,1,1930,1930,administrateur:1
 banqueinterets,unionfinancierefrancoindochinoise,Banque des intérêts français,Union financière franco-indochinoise,1,1927,1927,administrateur:1
@@ -2959,14 +2833,12 @@ financiere,tulear,Société Financière française,TULÉAR,1,1937,1937,administr
 messageriesmaritimes,rweinberger,Cie des Messageries Maritimes,R. Weinberger,1,1937,1937,administrateur:1
 havraisepeninsulaire,rweinberger,Cie Havraise péninsulaire,R. Weinberger,1,1937,1937,administrateur:1
 marseillaisemadagascar,rweinberger,Cie Marseillaise de Madagascar,R. Weinberger,1,1937,1937,administrateur:1
-particuliersbetonarmeentreprisetravauxpublics,rweinberger,particuliers: béton armé. Entreprise de travaux publics,R. Weinberger,1,1937,1937,administrateur:1
 havraisepeninsulaire,batelagechargeurstamatave,Cie Havraise péninsulaire,Société de batelage des Chargeurs de Tamatave,1,1937,1937,administrateur:1
 commercemadagascar,batelagechargeurstamatave,Société française de commerce à Madagascar,Société de batelage des Chargeurs de Tamatave,1,1937,1937,administrateur:1
 graphiteusinestananarive,arnoult,graphite. Usines à Tananarive,Arnoult,1,1937,1937,gerant:1
 usinesgraphiteteilliet,florensorville,Usines de graphite. L. Teilliet,Florens Orville,1,1937,1937,administrateur:1
 usineriz,florensorville,Usine à riz,Florens Orville,1,1937,1937,administrateur:1
 moutelsyndicatilesmalgaches,florensorville,Moutel. Syndicat des îles malgaches,Florens Orville,1,1937,1937,gerant:1
-concessionnairediegosuarezelectricite,florensorville,concessionnaire. Diégo-Suarez: Société d'électricité,Florens Orville,1,1937,1937,gerant:1
 usinesmarovitsika,feculeriesmangoro,Usines à Marovitsika,Féculeries du Mangoro,1,1937,1937,gerant:1
 feculefeculeriesampangabe,feculeriesmangoro,fécule. Société des féculeries d'Ampangabe,Féculeries du Mangoro,1,1937,1937,gerant:1
 tapiocausinessucreagricole,feculeriesmangoro,tapioca. Usines à sucre. Cie agricole,Féculeries du Mangoro,1,1937,1937,gerant:1
@@ -3010,38 +2882,25 @@ seillerfonciereindustrielle,developpementagricultureelevagemadagascar,Seiller. C
 culturescoloniales,sambiranaiseambohimenaparambanja,Cie de Cultures coloniales,"Cie Sambiranaise, AMBOHIMENA, par Ambanja",1,1973,1973,administrateur:1
 financierefrance,tulear,Société financière pour la France,TULÉAR,1,1973,1973,administrateur:1
 paysoutremer,tulear,Pays d'outre-mer,TULÉAR,1,1973,1973,administrateur:1
-raffineriessucresaintlouis,domaineankaratrasucrieremahavavy,Société des Raffineries de sucre de Saint-Louis,Domaine de l'Ankaratra Société sucrière de la Mahavavy,1,1973,1973,administrateur:1
-sucrieremarocaine,domaineankaratrasucrieremahavavy,Cie sucrière marocaine,Domaine de l'Ankaratra Société sucrière de la Mahavavy,1,1973,1973,administrateur:1
-sucreriesmarseillaisesmadagascar,domaineankaratrasucrieremahavavy,Société des sucreries marseillaises de Madagascar,Domaine de l'Ankaratra Société sucrière de la Mahavavy,1,1973,1973,administrateur:1
-fiveslille,domaineankaratrasucrieremahavavy,Cie de Fives-Lille,Domaine de l'Ankaratra Société sucrière de la Mahavavy,1,1973,1973,administrateur:1
-africaineparticipation,domaineankaratrasucrieremahavavy,Société africaine de participation,Domaine de l'Ankaratra Société sucrière de la Mahavavy,1,1973,1973,administrateur:1
 renecatalaplantationstabacmalaimbandy,andrelefebvre,René Catala. Plantations de tabac de Malaimbandy,André Lefebvre,1,1963,1963,administrateur:1
 plantation,andrelefebvre,Plantation,André Lefebvre,1,1963,1963,administrateur:1
 andredesbiefpreservatriceassurances,parisbourbondeveloppementrelationsentrefrance,André Desbief. La Préservatrice. Assurances,Paris-Bourbon (Sté anon. pour le développement des relations entre la France,1,1951,1951,administrateur:1
 agriculture,agricultureindustriecoloniales,Cie d'agriculture,Compagnie d'Agriculture et d'industrie coloniales,1,1955,1955,president:1
 minesitasy,ankaratra,Société des Mines de l'Itasy),Société de l'Ankaratra,1,1913,1913,administrateur:1
-jeanlaboriausinescayenne,commerce,Jean Laboria. Usines: Cayenne,COMMERCE,1,1925,1925,directeur:1
-usinesmolsheim,commerce,Usines à: Molsheim,COMMERCE,1,1925,1925,administrateur:1
-admbanque,commerce,adm. Banque,COMMERCE,1,1925,1925,administrateur:1
-grosactionnairecreditlyonnais,commerce,gros actionnaire du Crédit lyonnais,COMMERCE,1,1925,1925,administrateur:1
-egalementgrosactionnairecreditlyonnaisdirecteur,commerce,également gros actionnaire du Crédit lyonnais. Directeur,COMMERCE,1,1925,1925,administrateur:1
-sousdirecteuretudesfinancierescreditlyonnais,commerce,sous-directeur des Études financières du Crédit lyonnais,COMMERCE,1,1925,1925,administrateur:1
-ouestafricain,agricolesucrierenossibe,de la Cie de l'Ouest-Africain français,Cie agricole et sucrière de NOSSI-BÉ,1,1925,1925,president:1
-lieberusines,parfums,Liéber. Usines,PARFUMS,1,1925,1925,administrateur:1
+grosactionnairecreditlyonnais,creditfonciermadagascar,gros actionnaire du Crédit lyonnais,CRÉDIT FONCIER DE MADAGASCAR,1,1925,1925,administrateur:1
+egalementgrosactionnairecreditlyonnaisdirecteur,creditfonciermadagascar,également gros actionnaire du Crédit lyonnais. Directeur,CRÉDIT FONCIER DE MADAGASCAR,1,1925,1925,administrateur:1
+sousdirecteuretudesfinancierescreditlyonnais,creditfonciermadagascar,sous-directeur des Études financières du Crédit lyonnais,CRÉDIT FONCIER DE MADAGASCAR,1,1925,1925,administrateur:1
+ouestafricain,nosybeenneindustriesagricoles,de la Cie de l'Ouest-Africain français,Cie NOSYBÉENNE d'INDUSTRIES AGRICOLES,1,1925,1925,president:1
 futuradministrateurminesouenza,syndicatlyonnaismadagascar,futur administrateur des Mines de l'Ouenza,Syndicat lyonnais de MADAGASCAR,1,1925,1925,president:1
-ephilipparbanque,marceau,E Philippar. Banque,Marceau,1,1938,1938,administrateur:1
-uniongraphites,gallois,Union des graphites,GALLOIS,1,1938,1938,administrateur:1
-pdtindochinoisecharbonnages,gallois,pdt Indochinoise de charbonnages,GALLOIS,1,1938,1938,administrateur:1
-mineszincguergour,graphites,des Mines de zinc de Guergour,GRAPHITES,1,1938,1938,president:1
-pantinusinepantin,graphites,Pantin. Usine à Pantin,GRAPHITES,1,1938,1938,president:1
-usinevalentigneylaminoir,parfums,Usine à Valentigney: laminoir,PARFUMS,1,1938,1938,president:1
-usineterreblancheforges,parfums,Usine à Terre-Blanche: forges,PARFUMS,1,1938,1938,president:1
-plantations,produitsalimentaires,Plantations,PRODUITS ALIMENTAIRES,1,1938,1938,administrateur:1
-usinesnossibeplantationsvanille,produitsalimentaires,usines: à Nossi-Bé. Plantations de: vanille,PRODUITS ALIMENTAIRES,1,1938,1938,administrateur:1
-etsrocca,produitsalimentaires,des Éts Rocca,PRODUITS ALIMENTAIRES,1,1938,1938,administrateur:1
-dahomey,produitsalimentaires,de la Société française du Dahomey,PRODUITS ALIMENTAIRES,1,1938,1938,administrateur:1
-industriellebasogooue,produitsalimentaires,de la Société industrielle du Bas-Ogooué,PRODUITS ALIMENTAIRES,1,1938,1938,administrateur:1
-objetetude,auxiliairecolonisationmadagascar,Objet de la Société: L'étude,Société Auxiliaire de la Colonisation française à Madagascar,1,1898,1898,administrateur:1
+ephilipparbanque,creditfonciermadagascar,E Philippar. Banque,CRÉDIT FONCIER de MADAGASCAR,1,1938,1938,administrateur:1
+uniongraphites,socgemmesmadagascar,Union des graphites,Soc. des GEMMES de MADAGASCAR,1,1938,1938,administrateur:1
+pdtindochinoisecharbonnages,socgemmesmadagascar,pdt Indochinoise de charbonnages,Soc. des GEMMES de MADAGASCAR,1,1938,1938,administrateur:1
+mineszincguergour,socgraphitessahanavo,des Mines de zinc de Guergour,Soc. des GRAPHITES de la SAHANAVO,1,1938,1938,president:1
+pantinusinepantin,socgraphitessahanavo,Pantin. Usine à Pantin,Soc. des GRAPHITES de la SAHANAVO,1,1938,1938,president:1
+plantations,socproduitsaromatiquesoceanindien,Plantations,Soc. des PRODUITS AROMATIQUES de l'OCÉAN INDIEN,1,1938,1938,administrateur:1
+etsrocca,socproduitsaromatiquesoceanindien,des Éts Rocca,Soc. des PRODUITS AROMATIQUES de l'OCÉAN INDIEN,1,1938,1938,administrateur:1
+dahomey,socproduitsaromatiquesoceanindien,de la Société française du Dahomey,Soc. des PRODUITS AROMATIQUES de l'OCÉAN INDIEN,1,1938,1938,administrateur:1
+industriellebasogooue,socproduitsaromatiquesoceanindien,de la Société industrielle du Bas-Ogooué,Soc. des PRODUITS AROMATIQUES de l'OCÉAN INDIEN,1,1938,1938,administrateur:1
 banqueoceanindien,banquespecialemadagascaroceanindien,Banque de l'océan Indien,"Banque spéciale pour Madagascar Compagnie de l'océan Indien, puis Banque de l'océan Indien, puis Cie de l'océan Indien",1,1930,1930,administrateur:1
 vapeurscharbonniers,banquespecialemadagascaroceanindien,Compagnie des vapeurs charbonniers,"Banque spéciale pour Madagascar Compagnie de l'océan Indien, puis Banque de l'océan Indien, puis Cie de l'océan Indien",1,1930,1930,administrateur:1
 havraisepeninsulairenavigationvapeur,banquespecialemadagascaroceanindien,Compagnie havraise péninsulaire de navigation à vapeur,"Banque spéciale pour Madagascar Compagnie de l'océan Indien, puis Banque de l'océan Indien, puis Cie de l'océan Indien",1,1930,1930,administrateur:1
@@ -3052,20 +2911,17 @@ armement,banquespecialemadagascaroceanindien,Société générale d'armement,"Ba
 navigationtransoceanique,banquespecialemadagascaroceanindien,Société de navigation transocéanique,"Banque spéciale pour Madagascar Compagnie de l'océan Indien, puis Banque de l'océan Indien, puis Cie de l'océan Indien",1,1930,1930,administrateur:1
 attachebanqueparis,cheminferfrancoethiopiendjiboutiaddisabeba,attaché à la Banque de Paris,Chemin de fer franco-éthiopien de Djibouti à Addis-Abeba,1,1933,1933,commissaire_aux_comptes:1
 drsuberbie,charbonnagebatelagemadagascar,Dr Suberbie,Compagnie Française de Charbonnage et de batelage de Madagascar,1,1901,1901,administrateur:1
-havretelegkerguelhavre,ileskerguelenstpaulamsterdam,HAVRE. Télég.: Kerguel-Le Havre,"Cie générale des îles Kerguelen, St-Paul et Amsterdam",1,1923,1923,directeur:1
 chefneuxapportentpresente,imperialecheminsferethiopiens,Chefneux apportent à la présente société,Compagnie Impériale des Chemins de fer éthiopiens,1,1898,1898,administrateur:1
 aouachecesetudesontetecontinuees,imperialecheminsferethiopiens,l'Aouache. Ces études ont été continuées,Compagnie Impériale des Chemins de fer éthiopiens,1,1906,1906,administrateur:1
 aouachemodifications,imperialecheminsferethiopiens,l'Aouache. Les modifications,Compagnie Impériale des Chemins de fer éthiopiens,1,1906,1906,administrateur:1
 participations,colonialebambao,Société de participations,Société coloniale de Bambao,1,1950,1950,administrateur:1
 fondepouvoirscreditlyonnais,commercialetransvaalmadagascar,fondé de pouvoirs du Crédit Lyonnais,"Cie Commerciale du Transvaal et de Madagascar, puis Commerciale de Madagascar, puis Commerciale et Minière de Madagascar",1,1893,1893,administrateur:1
 culturescoloniales,sambiranaise,Cie de Cultures coloniales,Compagnie Sambiranaise,1,1949,1949,administrateur:1
-plantationsdattiersexportationarmes,comptoirdjibouti,plantations de dattiers. Exportation: armes,Comptoir de Djibouti,1,1925,1925,administrateur:1
 syndicatprofessionnelentrepreneurstravauxpublics,miniereconcessionsprassoabyssinie,Syndicat professionnel des entrepreneurs de travaux publics,Société Minière des concessions Prasso en Abyssinie,1,1936,1936,administrateur:1
 travauxpublicsmadagascar,miniereconcessionsprassoabyssinie,Compagnie française des travaux publics à Madagascar,Société Minière des concessions Prasso en Abyssinie,1,1936,1936,administrateur:1
 etablissementslieutard,miniereconcessionsprassoabyssinie,Établissements Lieutard,Société Minière des concessions Prasso en Abyssinie,1,1936,1936,administrateur:1
 canalverdon,miniereconcessionsprassoabyssinie,Compagnie du canal du Verdon,Société Minière des concessions Prasso en Abyssinie,1,1936,1936,administrateur:1
 exploitationetablissementscommerciauxdjibouti,cotesomalis,exploitation d'établissements commerciaux à Djibouti,Compagnie française de la Côte des Somalis,1,1925,1925,administrateur:1
-admbanque,creditfonciermadagascar,adm. Banque,CRÉDIT FONCIER DE MADAGASCAR,1,1925,1925,administrateur:1
 gallen,creditfonciermadagascar,Gallen,Crédit foncier de Madagascar,1,1937,1937,administrateur:1
 ephilipparbanque,creditfonciermadagascarcreditfonciermadagascarreunion,E. Philippar. Banque,"Crédit foncier de Madagascar, Crédit foncier de Madagascar et de la Réunion",1,1938,1938,administrateur:1
 adminprincipalesscieriesmecaniquesfonciere,fonciereminieremadagascar,admin. Principales scieries mécaniques. Cie foncière,"Compagnie Foncière et Minière de Madagascar, puis Foncière, Industrielle et Commerciale de Madagascar, puis Société malgache d'entreprises industrielles",1,1950,1950,administrateur:1
@@ -3086,19 +2942,11 @@ maritimeafriqueorientalediegosuarez,maritimeafriqueorientale,Compagnie maritime 
 maritimemajunga,maritimeafriqueorientale,Compagnie maritime de Majunga,Compagnie Maritime de l'Afrique Orientale,1,1936,1936,administrateur:1
 maritimeafriqueorientalediegosuarez,maritimemajunga,Compagnie maritime de l'Afrique orientale de Diego-Suarez,Compagnie Maritime de Majunga,1,1936,1936,administrateur:1
 afriqueorientale,maritimemajunga,Cie de l'Afrique Orientale,Cie maritime de Majunga,1,1951,1951,administrateur:1
-transfertsbanqueunionlyonnaise,minesambatobe,transferts: Banque de l'union lyonnaise,Société des mines d'Ambatobé,1,1953,1953,administrateur:1
 liquidationeventuelle,minesorvahinambo,Liquidation éventuelle de la Société,Mines d'or de Vahinambo,1,1921,1921,administrateur:1
 groupebourdillon,nosybeenneindustriesagricoles,groupe Bourdillon,Compagnie nosybéenne d'industries agricoles,1,1968,1968,administrateur:1
 marquand,plantationsanjouan,Marquand,Société de Plantations d'Anjouan,1,1900,1900,administrateur:1
 commercemadagascar,porttamatave,Société française de commerce à Madagascar,Port de Tamatave,1,1934,1934,vice_president:1
 plantations,produitsaromatiquesoceanindien,Plantations,Société des Produits aromatiques de l'océan Indien,1,1938,1938,administrateur:1
-usinesnossibeplantationsvanille,produitsaromatiquesoceanindien,usines: à Nossi-Bé. Plantations de: vanille,Société des Produits aromatiques de l'océan Indien,1,1938,1938,administrateur:1
-sucrieremarocaine,sucrieremahavavy,Cie sucrière marocaine,Société Sucrière de la Mahavavy,1,1949,1949,administrateur:1
-sucreriesmarseillaisesmadagascar,sucrieremahavavy,Société des sucreries marseillaises de Madagascar,Société Sucrière de la Mahavavy,1,1949,1949,administrateur:1
-fiveslille,sucrieremahavavy,Cie de Fives-Lille,Société Sucrière de la Mahavavy,1,1949,1949,administrateur:1
-africaineparticipation,sucrieremahavavy,Société africaine de participation,Société Sucrière de la Mahavavy,1,1949,1949,administrateur:1
-sucriere,sucrieremahavavy,Cie sucrière,Société Sucrière de la Mahavavy,1,1958,1958,administrateur:1
-2,sucrieremahavavy,Cie (2,Société Sucrière de la Mahavavy,1,1958,1958,administrateur:1
 syndicat,syndicatlyonnaisexplorationmadagascar,au Syndicat,Syndicat lyonnais d'exploration à Madagascar,1,1906,1906,administrateur:1
 usinestraitementgraphitesparlavages,syndicatlyonnaismadagascar,Usines de traitement des graphites par lavages,Syndicat lyonnais de MADAGASCAR,1,1939,1939,administrateur:1
 hautsfourneaux,unionminiereindustrielle,Société des Hauts-Fourneaux,L'Union minière et industrielle,1,1923,1923,administrateur:1
@@ -3108,7 +2956,6 @@ dydahomey,ilesmarquises,de la Société française dy Dahomey,Sté française de
 industriellebasogooue,ilesmarquises,de la Société industrielle du Bas-Ogooué,Sté française des îles Marquises,1,1922,1922,administrateur:1
 nickel,immobilierenouvelleshebrides,Société Le Nickel,Cie française immobilière des Nouvelles-Hébrides,1,1926,1926,administrateur:1
 cooperativemutuellecolonisationneocaledonienne,comptoirsnouvelleshebrides,Coopérative mutuelle de colonisation Néo-Calédonienne,Comptoirs français des Nouvelles-Hébrides,1,1926,1926,administrateur:1
-ileaobacalonne,frigorifiquecaledonienne,Cie. Ile d'Aoba: Calonne,Sté frigorifique calédonienne,1,1926,1926,administrateur:1
 rocca,agricolemopelia,Société Rocca,Société agricole de Mopélia,1,1926,1926,administrateur:1
 caledonickel,nouvelleshebrides,Société Calédonickel,Société française des Nouvelles-Hébrides,1,1937,1937,administrateur:1
 syndicatcolonsnouvelleshebrides,nouvelleshebrides,Syndicat des colons français des Nouvelles-Hébrides,Société française des Nouvelles-Hébrides,1,1937,1937,administrateur:1
@@ -3120,7 +2967,6 @@ etablisspeyrollescafe,kerrmy,Société des Établiss. Peyrolles (café,Société
 wright,kerrmy,Société Wright,Société Kerr-My,1,1932,1932,administrateur:1
 cacao,kerrmy,Cie (cacao,Société Kerr-My,1,1932,1932,administrateur:1
 admingroupementassurances,etablissementsballande,admin. Groupement français d'assurances,Établissements Ballande,1,1951,1951,administrateur:1
-parisagenceunionmetropolitaine,etablissementsballande,PARIS Agence: Union métropolitaine,Établissements Ballande,1,1951,1951,administrateur:1
 nacrebdonaldltd,petrolesshellilesfrancaisespacifique,nacre. A.-B. Donald Ltd,Société des pétroles Shell des îles françaises du Pacifique,1,1951,1951,administrateur:1
 cotonnierenouvelleshebrides,agricoleminierenouvelleshebrides,de la Société Cotonnière des Nouvelles- Hébrides,Compagnie Agricole et minière des Nouvelles-Hébrides,1,1926,1926,administrateur:1
 nouvelleshebrides,agricoleminierenouvelleshebrides,de la Société française des Nouvelles-Hébrides,Compagnie Agricole et minière des Nouvelles-Hébrides,1,1926,1926,administrateur:1
@@ -3130,7 +2976,6 @@ francohebridaise,agricoleminierenouvelleshebrides,de la Cie générale franco-h�
 comptoirsoceanie,agricolemopelia,Comptoirs français d'Océanie,Société agricole de Mopélia,1,1923,1923,administrateur:1
 domaines,immobiliereagricoleoceanie,Domaines,Compagnie Immobilière et Agricole de l'Océanie,1,1938,1938,vice_president:1
 villetamatave,francotahitienne,Ville de Tamatave,Cie franco-tahitienne,1,1923,1923,administrateur:1
-pasnomsservicefinancierbanquefrancochinoise,navalecommercialeoceanie,pas de noms. Service financier: Banque franco-chinoise,Compagnie navale et commerciale de l'Océanie,1,1929,1929,administrateur:1
 etablissementsballande,colonialeilesbanks,Établissements Ballande,Compagnie coloniale des îles Banks,1,1940,1940,administrateur:1
 nouvelleshebrides,colonialevate,de la Société française des Nouvelles-Hébrides,Compagnie Coloniale de Vaté,1,1927,1927,administrateur:1
 agricole,colonialevate,de la Compagnie agricole,Compagnie Coloniale de Vaté,1,1927,1927,administrateur:1
@@ -3150,10 +2995,7 @@ creditfoncierargentin,phosphatesoceanie,Crédit foncier argentin,Phosphates de l
 maroc,phosphatesoceanie,Compagnie générale du Maroc,Phosphates de l'Océanie,1,1929,1929,administrateur:1
 vpendantmarocaine,nickel,v.-pendant Cie marocaine,« Le Nickel »,1,1922,1922,administrateur:1
 usinecaledonie,nickel,usine en Nouvelle-Calédonie,NICKEL,1,1938,1938,administrateur:1
-indesnouveautesunies,asieoccidentale,Indes. Nouveautés unies,ASIE OCCIDENTALE,1,,,president:1
-indestissuslourdsteintspieces,asieoccidentale,Indes. Tissus lourds teints en pièces,ASIE OCCIDENTALE,1,,,president:1
-agence10,bourbeaupoitiers,Agence: 10,"Bourbeau, Poitiers",1,,,president:1
-usinesgrasse,bourbeaupoitiers,usines à Grasse,"Bourbeau, Poitiers",1,,,president:1
+usinesgrasse,etablissementskern,usines à Grasse,Établissements KERN,1,,,president:1
 creditmobilier,banquesyrie,Crédit mobilier français,Banque française de Syrie,1,1929,1929,administrateur:1
 creditfrancoegyptien,banquesyrie,Crédit franco-égyptien,Banque française de Syrie,1,1929,1929,administrateur:1
 colonies,banquesyrie,Compagnie générale des colonies,Banque française de Syrie,1,1929,1929,administrateur:1
@@ -3162,7 +3004,6 @@ henriadministrateur,banquesyrie,Henri Administrateur Société générale,Banque
 banqueindochine,banquesyrie,Banque de l'Indochine,Banque française de Syrie,1,1929,1929,administrateur:1
 banqueetatmaroc,banquesyrie,Banque d'État du Maroc,Banque française de Syrie,1,1929,1929,administrateur:1
 financierevaleursindustrielles,banquesyrie,Société financière des valeurs industrielles,Banque française de Syrie,1,1929,1929,administrateur:1
-creditnational,banquesyrie,du Crédit national,Banque française de Syrie,1,1929,1929,administrateur:1
 creditfonciermadagascar,banquesyrie,Crédit foncier de Madagascar,Banque française de Syrie,1,1929,1929,administrateur:1
 creditfoncier,banquesyrie,Crédit foncier,Banque française de Syrie,1,1929,1929,administrateur:1
 creditfoncierorient,banquesyrie,Crédit foncier d'Orient,Banque française de Syrie,1,1929,1929,administrateur:1
@@ -3180,7 +3021,6 @@ socitebanque,banquesyrie,Socité française de banque,Banque française de Syrie
 angleterre,banquesyrieliban,l'Angleterre,Banque de Syrie et du Liban,1,1922,1922,administrateur:1
 epine,banquepaysorient,l'Epine,Banque française des pays d'Orient,1,1938,1938,administrateur:1
 banquepriveelyonmarseille,caissehypothecaireegypte,de la Banque privée Lyon-Marseille,Caisse hypothécaire d'Égypte,1,1904,1904,administrateur:1
-longuerueclairesconstitutionbelge,caissehypothecaireegypte,Longue-Rue des Claires. CONSTITUTION: Société anonyme belge,Caisse hypothécaire d'Égypte,1,1953,1953,commissaire_aux_comptes:1
 banqueimperialeottomane,exploitaitoncheminfercilicie,de la Banque impériale ottomane,Société d'exploitaiton Chemin de fer de Cilicie,1,1922,1922,administrateur:1
 banqueparis,exploitaitoncheminfercilicie,de la Banque de Paris,Société d'exploitaiton Chemin de fer de Cilicie,1,1922,1922,administrateur:1
 banqueunionparisienne,exploitaitoncheminfercilicie,de la Banque de l'Union Parisienne,Société d'exploitaiton Chemin de fer de Cilicie,1,1922,1922,administrateur:1
@@ -3188,6 +3028,7 @@ entreprises,exploitaitoncheminfercilicie,de la Société française d'Entreprise
 portalexandrette,exploitaitoncheminfercilicie,de la Société française du port d'Alexandrette,Société d'exploitaiton Chemin de fer de Cilicie,1,1922,1922,administrateur:1
 banquenationalecreditassocie,exploitationcheminsferorientaux,Banque nationale de Crédit. Associé,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
 animateurbanquegunzburg,exploitationcheminsferorientaux,animateur de la Banque de Gunzburg,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
+banquecommerce,exploitationcheminsferorientaux,Banque française pour le commerce,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
 banqueafriquesud,exploitationcheminsferorientaux,Banque de l'Afrique du Sud,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
 banquefrancojaponaise,exploitationcheminsferorientaux,Banque franco-japonaise,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
 banquerussoasiatique,exploitationcheminsferorientaux,Banque russo-asiatique,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
@@ -3208,7 +3049,6 @@ colonies,exploitationcheminsferorientaux,Compagnie générale des colonies,Compa
 marocaineexploitationsagricoles,exploitationcheminsferorientaux,Société marocaine d'exploitations agricoles,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
 produitschimiquesmidi,exploitationcheminsferorientaux,Compagnie générale des produits chimiques du Midi,Compagnie d'exploitation des chemins de fer orientaux,1,1929,1929,administrateur:1
 begue,cheminferottomanjaffajerusalemprolongements,Bègue,Société du Chemin de fer ottoman de Jaffa à Jérusalem et prolongements,1,1937,1937,administrateur:1
-president,ottomanecheminfersmyrnecassabaprolongement,DE LA SOCIÉTÉ: LE PRÉSIDENT,Société ottomane du Chemin de fer Smyrne-Cassaba et prolongement,1,1921,1921,administrateur:1
 fuente,ottomaneheraclee,Fuente,"Société ottomane d'Héraclée, puis Société française d'Héraclée",1,1897,1897,administrateur:1
 parheraclee,heraclee,par la Société française d'Héraclée,Société française d'Héraclée,1,1943,1943,censeur:1
 capital,consortiumconstantinople,Capital français,Consortium de Constantinople,1,1911,1911,administrateur:1
@@ -3220,7 +3060,6 @@ masquelierfils,cotonnieresyrieidlib,Société Anonyme Masquelier fils,"Société
 creditfoncieralgerie,cotonnieresyrieidlib,Crédit foncier d'Algérie,"Société Cotonnière de Syrie, Idlib",1,1929,1929,administrateur:1
 pespagnoyimprimeriespecialebanque,cheminferdamashamahprolongements,P. Espagnoy Imprimerie spéciale de banque,Chemin de fer Damas-Hamah et prolongements,1,1953,1953,administrateur:1
 creditfoncieralgerie,electricitealep,du Crédit foncier d'Algérie,Électricité d'Alep,1,1925,1925,administrateur:1
-edmondphilipparunadministrationimprchaix,electricitealep,Edmond Philippar Un administration: ? Impr. Chaix,Électricité d'Alep,1,1930,1930,administrateur:1
 auxiliairemines,exploitationsminieresserbie,Société auxiliaire des Mines,Société d'Exploitations minières en Serbie,1,1907,1907,administrateur:1
 banqueimperialeottomane,exploitationsminieresserbie,Banque Impériale ottomane,Société d'Exploitations minières en Serbie,1,1907,1907,administrateur:1
 internationalewagonslits,grandshotelslevant,Compagnie internationale des Wagons-Lits,Grands Hôtels du Levant,1,1929,1929,administrateur:1

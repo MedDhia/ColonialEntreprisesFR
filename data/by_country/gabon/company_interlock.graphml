@@ -21,13 +21,13 @@
     <node id="agricolecommercialebasogoue">
       <data key="n_label">Société Agricole et Commerciale du Bas-Ogoué</data>
       <data key="n_sectors">Agro-alimentaire</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Gabon</data>
     </node>
     <node id="agricolecommercialesettecama">
       <data key="n_label">Société Agricole et Commerciale du Setté Cama</data>
       <data key="n_sectors">Agro-alimentaire</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Gabon</data>
     </node>
     <node id="agricoleforestiereindustrielleafrique">
@@ -51,7 +51,7 @@
     <node id="colonialegabon">
       <data key="n_label">Compagnie Coloniale du Gabon</data>
       <data key="n_sectors">Agro-alimentaire</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Gabon</data>
     </node>
     <node id="commercialeafriqueequatoriale">
@@ -75,7 +75,7 @@
     <node id="exploitationsforestieresafricaines">
       <data key="n_label">Compagnie Exploitations forestières africaines</data>
       <data key="n_sectors">Industrie</data>
-      <data key="n_n_directors">39</data>
+      <data key="n_n_directors">40</data>
       <data key="n_territory">Gabon</data>
     </node>
     <node id="fermiereogoue">
@@ -111,7 +111,7 @@
     <node id="frsecongocameroun">
       <data key="n_label">Cie frse des CONGO-CAMEROUN</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">4</data>
+      <data key="n_n_directors">3</data>
       <data key="n_territory">Gabon</data>
     </node>
     <node id="gabon">
@@ -135,7 +135,7 @@
     <node id="hautengounie">
       <data key="n_label">Compagnie de la Haute-N'Gounié</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">23</data>
+      <data key="n_n_directors">22</data>
       <data key="n_territory">Gabon</data>
     </node>
     <node id="hautengounle">
@@ -187,10 +187,10 @@
       <data key="n_territory">Gabon</data>
     </node>
     <edge id="e0" source="exploitationsforestieresafricaines" target="plantationspalmeraiesogooue">
-      <data key="e_weight">10</data>
+      <data key="e_weight">11</data>
     </edge>
     <edge id="e1" source="commercialeindustrielleagricolehautogooue" target="hautogooue">
-      <data key="e_weight">10</data>
+      <data key="e_weight">11</data>
     </edge>
     <edge id="e2" source="africaine" target="equatoriale">
       <data key="e_weight">5</data>
@@ -237,118 +237,121 @@
     <edge id="e16" source="agricoleforestiereindustrielleafrique" target="exploitationsforestieresafricaines">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e17" source="agricoleforestiereindustrielleafrique" target="hautengounie">
+    <edge id="e17" source="exploitationsforestieresafricaines" target="plantationsogooue">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e18" source="forestiereabanga" target="hautebokoue">
+    <edge id="e18" source="agricoleforestiereindustrielleafrique" target="hautengounie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e19" source="forestiereabanga" target="plantationspalmeraiesogooue">
+    <edge id="e19" source="forestiereabanga" target="hautebokoue">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e20" source="plantationspalmeraiesogooue" target="unionforestiereafricaine">
+    <edge id="e20" source="forestiereabanga" target="plantationspalmeraiesogooue">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e21" source="colonialecommerceindustrie" target="ngokosangha">
+    <edge id="e21" source="plantationspalmeraiesogooue" target="unionforestiereafricaine">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e22" source="agricolecommercialebasogoue" target="colonialegabon">
+    <edge id="e22" source="colonialecommerceindustrie" target="ngokosangha">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e23" source="frsecongocameroun" target="ngokosangha">
+    <edge id="e23" source="agricolecommercialebasogoue" target="colonialegabon">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e24" source="africaineplacagesportgentil" target="exploitationsforestieresafricaines">
+    <edge id="e24" source="frsecongocameroun" target="ngokosangha">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e25" source="africaineplacagesportgentil" target="exploitationsforestieresafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e25" source="agricolegabon" target="unionforestiereafricaine">
+    <edge id="e26" source="agricolegabon" target="unionforestiereafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e26" source="agricoleforestiereindustrielleafrique" target="commercialeafriqueequatoriale">
+    <edge id="e27" source="agricoleforestiereindustrielleafrique" target="commercialeafriqueequatoriale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e27" source="agricoleforestiereindustrielleafrique" target="plantationsogooue">
+    <edge id="e28" source="agricoleforestiereindustrielleafrique" target="plantationsogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e28" source="commercialeafriqueequatoriale" target="plantationsogooue">
+    <edge id="e29" source="commercialeafriqueequatoriale" target="plantationsogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e29" source="agricoleforestiereindustrielleafrique" target="colonialecommerceindustrie">
+    <edge id="e30" source="agricoleforestiereindustrielleafrique" target="colonialecommerceindustrie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e30" source="agricoleforestiereindustrielleafrique" target="gabon">
+    <edge id="e31" source="agricoleforestiereindustrielleafrique" target="gabon">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e31" source="colonialecommerceindustrie" target="exploitationsforestieresafricaines">
+    <edge id="e32" source="colonialecommerceindustrie" target="exploitationsforestieresafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e32" source="colonialecommerceindustrie" target="gabon">
+    <edge id="e33" source="colonialecommerceindustrie" target="gabon">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e33" source="exploitationsforestieresafricaines" target="gabon">
+    <edge id="e34" source="exploitationsforestieresafricaines" target="gabon">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e34" source="exploitationsforestieresafricaines" target="plantationsogooue">
+    <edge id="e35" source="plantationsogooue" target="plantationspalmeraiesogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e35" source="agricoleforestiereindustrielleafrique" target="plantationspalmeraiesogooue">
+    <edge id="e36" source="agricoleforestiereindustrielleafrique" target="plantationspalmeraiesogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e36" source="exploitationsforestieresafricaines" target="hautengounie">
+    <edge id="e37" source="exploitationsforestieresafricaines" target="hautengounie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e37" source="hautengounie" target="plantationspalmeraiesogooue">
+    <edge id="e38" source="hautengounie" target="plantationspalmeraiesogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e38" source="colonialegabon" target="exploitationsforestieresafricaines">
+    <edge id="e39" source="colonialegabon" target="exploitationsforestieresafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e39" source="colonialegabon" target="forestiereabanga">
+    <edge id="e40" source="colonialegabon" target="forestiereabanga">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e40" source="colonialegabon" target="hautebokoue">
+    <edge id="e41" source="colonialegabon" target="hautebokoue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e41" source="colonialegabon" target="plantationspalmeraiesogooue">
+    <edge id="e42" source="colonialegabon" target="plantationspalmeraiesogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e42" source="colonialegabon" target="unionforestiereafricaine">
+    <edge id="e43" source="colonialegabon" target="unionforestiereafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e43" source="exploitationsforestieresafricaines" target="forestiereabanga">
+    <edge id="e44" source="exploitationsforestieresafricaines" target="forestiereabanga">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e44" source="exploitationsforestieresafricaines" target="hautebokoue">
+    <edge id="e45" source="exploitationsforestieresafricaines" target="hautebokoue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e45" source="exploitationsforestieresafricaines" target="unionforestiereafricaine">
+    <edge id="e46" source="exploitationsforestieresafricaines" target="unionforestiereafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e46" source="colonialegabon" target="fermiereogoue">
+    <edge id="e47" source="colonialegabon" target="fermiereogoue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e47" source="gabon" target="hautengounie">
+    <edge id="e48" source="gabon" target="hautengounie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e48" source="gabon" target="hautengounle">
+    <edge id="e49" source="gabon" target="hautengounle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e49" source="agricolecommercialesettecama" target="hautengounie">
+    <edge id="e50" source="agricolecommercialesettecama" target="hautengounie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e50" source="forestierelittoralgabonaisekuata" target="forestierelittoralgabonnais">
+    <edge id="e51" source="forestierelittoralgabonaisekuata" target="forestierelittoralgabonnais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e51" source="forestierelittoralgabonnais" target="multiplex">
+    <edge id="e52" source="forestierelittoralgabonnais" target="multiplex">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e52" source="unioncolonialeagricoleforestiere" target="unionforestiereafricaine">
+    <edge id="e53" source="unioncolonialeagricoleforestiere" target="unionforestiereafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e53" source="multiplex" target="plantationspalmeraiesogooue">
+    <edge id="e54" source="gabonaiseentreprisestransports" target="hautogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e54" source="plantationsogooue" target="plantationspalmeraiesogooue">
+    <edge id="e55" source="multiplex" target="plantationspalmeraiesogooue">
       <data key="e_weight">1</data>
     </edge>
   </graph>

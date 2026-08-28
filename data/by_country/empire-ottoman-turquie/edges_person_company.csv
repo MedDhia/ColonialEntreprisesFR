@@ -1,8 +1,7 @@
 person_id,company_id,n_observations,first_year,last_year,top_role,is_board_seat
-adm-mm-d-agache,banquepaysorient,1,1925,1925,president,1
-adm-mm-e-level,banquepaysorient,1,1938,1938,administrateur,1
 c-petit,banquepaysorient,1,1925,1925,vice_president,1
 carpentier-e,banquepaysorient,1,1925,1925,president,1
+d-agache,banquepaysorient,1,1925,1925,president,1
 delpech-j,banquepaysorient,2,1925,1938,president,1
 devies,banquepaysorient,2,1925,1938,president,1
 e-chauvy,banquepaysorient,1,1938,1938,administrateur,1
@@ -14,14 +13,13 @@ j-lorthiois,banquepaysorient,1,1925,1925,president,1
 l-epine-m,banquepaysorient,1,1925,1925,president,1
 l-orosdi,banquepaysorient,1,1925,1925,president,1
 leroy-p,banquepaysorient,1,1938,1938,administrateur,1
+level-e,banquepaysorient,1,1938,1938,administrateur,1
 lorthiois-j,banquepaysorient,1,1938,1938,administrateur,1
 menasche-j,banquepaysorient,1,1938,1938,administrateur,1
 petit-c,banquepaysorient,1,1938,1938,administrateur,1
-pres-m-r-boudon,banquepaysorient,1,1938,1938,administrateur,1
 r-boudon,banquepaysorient,1,1925,1925,president,1
-v-pres-mm-a-luquet,banquepaysorient,1,1938,1938,administrateur,1
 allemands,consortiumconstantinople,1,1911,1911,administrateur,1
-francais,consortiumconstantinople,1,1911,1911,administrateur,1
+francais-c,consortiumconstantinople,1,1911,1911,administrateur,1
 ou-hongrois-b,consortiumconstantinople,1,1911,1911,administrateur,1
 boussac,cotonniereadana,1,1920,1920,administrateur,1
 loisy,cotonniereadana,1,1920,1920,administrateur,1
@@ -38,7 +36,6 @@ l-intendant-general-fernand-bonnier,etudesreconstructionsmyrne,1,1923,1923,admin
 londres-e,etudesreconstructionsmyrne,1,1923,1923,administrateur,1
 sadi-bey-r,etudesreconstructionsmyrne,1,1923,1923,administrateur,1
 abegg-arter-c,exploitationcheminsferorientaux,1,1912,1912,administrateur,1
-adm-ch-schrader-president-du-salonique-monastir,exploitationcheminsferorientaux,1,1906,1906,administrateur,1
 aubanel-l,exploitationcheminsferorientaux,3,1929,1933,administrateur,1
 barbiere-c,exploitationcheminsferorientaux,2,1931,1933,administrateur,1
 barriere-c,exploitationcheminsferorientaux,1,1929,1929,administrateur,1
@@ -99,7 +96,6 @@ lefranc,financiereorient,1,1898,1898,secretaire,0
 mirabaud-a,financiereorient,1,1909,1909,administrateur,1
 nagelmackers,financiereorient,2,1896,1898,administrateur,1
 naville,financiereorient,2,1896,1898,president,1
-objet-operations-financieres,financiereorient,1,1898,1898,administrateur,1
 p-naville,financiereorient,1,1909,1909,administrateur,1
 ruiz-a,financiereorient,1,1909,1909,administrateur,1
 spitzer-a,financiereorient,2,1896,1898,administrateur,1
@@ -240,8 +236,6 @@ pappadopoulo,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,
 paris-l,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
 portu,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
 pulman,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
-savoir-mm-john-arachtingi,orientalcarpetmanufacturersltd,1,1912,1912,commissaire_aux_comptes,0
-signe-john-boscovich,orientalcarpetmanufacturersltd,1,1914,1914,president,1
 smyrne,orientalcarpetmanufacturersltd,7,1914,1914,commissaire_aux_comptes,1
 solaro,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
 spartali-t,orientalcarpetmanufacturersltd,1,1912,1912,administrateur,1
@@ -250,7 +244,6 @@ sykes,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
 tanqueray-g,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
 vienne,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
 york-n,orientalcarpetmanufacturersltd,1,1914,1914,commissaire_aux_comptes,0
-adm-censeurs-des-comptes-mm-a-josse,ottomanecheminfersmyrnecassabaprolongement,1,1909,1909,administrateur,1
 auboyneau-g,ottomanecheminfersmyrnecassabaprolongement,1,1909,1909,president,1
 bourlon-de-sarty-p,ottomanecheminfersmyrnecassabaprolongement,1,1909,1909,administrateur,1
 deffes-j,ottomanecheminfersmyrnecassabaprolongement,1,1909,1909,administrateur,1

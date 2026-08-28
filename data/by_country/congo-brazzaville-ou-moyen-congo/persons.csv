@@ -1,11 +1,10 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
-redevances-a-ans,Redevances: à ans,Redevances: à ans,5,5,5,administrateur,1899,1915,Agro-alimentaire; Sociétés commerciales
 desbriere,Desbrière,Desbrière,4,4,6,administrateur,1899,1900,Sociétés commerciales
+david,David,David,4,4,5,administrateur,1899,1938,Agro-alimentaire; Sociétés commerciales
 nicol,Nicol,Nicol,4,4,5,administrateur,1899,1900,Sociétés commerciales
 jacta-g,Jacta,G. Jacta; Jacta,3,3,5,administrateur_delegue,1899,1925,Agro-alimentaire; Sociétés commerciales
 decourcelle-e,Decourcelle,Decourcelle,3,3,4,administrateur,1899,1925,Agro-alimentaire; Sociétés commerciales
 serviere-l,Servière,Louis Servière,3,3,4,administrateur,1930,1938,Agro-alimentaire; Sociétés diverses
-david,David,David,3,3,3,administrateur,1899,1915,Agro-alimentaire; Sociétés commerciales
 guynet-w,Guynet,Willam Guynet; William Guynet,3,3,3,administrateur,1899,1930,Sociétés commerciales
 ponche-e,Ponche,E. Ponche; Émile Ponche,2,2,6,administrateur,1900,1922,Sociétés commerciales
 remond-j,Rémond,J. Rémond; Joseph Rémond,2,2,6,administrateur,1900,1922,Sociétés commerciales
@@ -17,7 +16,7 @@ gillain-p,Gillain,Gillain; Paul Gillain,2,2,4,administrateur,1899,1938,Agro-alim
 trechot-f,Tréchot,F. Tréchot; François Tréchot,2,2,4,administrateur,1900,1922,Sociétés commerciales
 beulque-g,Beulque,G. Beulque; Gabriel Beulque,2,2,4,administrateur,1904,1925,Mines; Sociétés commerciales
 raynal-g,Raynal,Gaston Raynal,2,2,3,administrateur_delegue,1930,1938,Agro-alimentaire; Sociétés diverses
-enders-a,Enders,A. Enders; Albert Enders,2,2,3,administrateur,1928,1936,Mines
+enders-a,Enders,A. Enders; Albert Enders,2,2,3,administrateur,1928,1951,Mines
 cousin-a,Cousin,Albert Cousin,2,2,3,president,1899,1903,Sociétés commerciales
 bonnet-brodart-p,Bonnet- Brodart,P. Bonnet-Brodart; Pierre Bonnet- Brodart; Pierre-Ferdinand Bonnet- Brodart,2,2,3,administrateur,1928,1928,Mines
 trechot-l,Tréchot,Louis Tréchot,2,2,3,administrateur,1922,1933,Sociétés commerciales; Sociétés diverses
@@ -25,14 +24,13 @@ francois,François,François,2,2,3,administrateur,1902,1933,Sociétés commercia
 modiano-a,Modiano,A. Modiano; Albert Modiano,2,2,3,administrateur,1939,1953,Mines; Sociétés diverses
 gervot-g,Gervot,G. Gervot; Gérald Gervot,2,2,3,administrateur,1949,1953,Sociétés commerciales; Sociétés diverses
 arnold-p,Arnold,Paul Arnold,2,2,3,administrateur,1901,1907,Sociétés commerciales
-adm-mm-david,Adm.: MM. David,Adm.: MM. David,2,2,2,president,1925,1938,Agro-alimentaire
 etc-exportation-de-tous-articles,etc. Exportation de tous articles,etc. Exportation de tous articles,2,2,2,president,1925,1938,Agro-alimentaire
 boussenot-g,Boussenot,Georges Boussenot,2,2,2,president,1930,1936,Agro-alimentaire; Sociétés diverses
 rolin-j,Rolin,Jean Rolin,2,2,2,administrateur,1930,1936,Agro-alimentaire; Sociétés diverses
 eastwick-j,Eastwick,Eastwick; J.-P. Eastwick,2,2,2,administrateur,1937,1938,Agro-alimentaire
 antoine-l,Antoine,Léon Antoine,2,2,2,administrateur,1937,1938,Agro-alimentaire
 van-den-nest,Van den Nest,Van Den Nest; Van den Nest,2,2,2,administrateur,1900,1900,Sociétés commerciales
-lion-p,Lion,Pierre Lion,2,2,2,administrateur,1932,1936,Mines
+lion-p,Lion,Pierre Lion,2,2,2,administrateur,1932,1951,Mines
 merlin-m,Merlin,Marius Merlin; Martial Merlin,2,2,2,administrateur,1922,1929,Sociétés commerciales; Sociétés diverses
 martin-e,Martin,Émile Martin,2,2,2,administrateur,1899,1903,Sociétés commerciales
 ritaine-descamps-g,Ritaine-Descamps,G. Ritaine-Descamps; Ritaine-Descamps,2,2,2,administrateur,1899,1902,Sociétés commerciales
@@ -59,10 +57,10 @@ david-e,David,E.-N. David,1,1,2,administrateur,1903,1903,Agro-alimentaire
 decoupelle-e,Decoupelle,E. Decoupelle,1,1,2,administrateur,1903,1903,Agro-alimentaire
 boutelleau-g,Boutelleau,Boutelleau,1,1,2,administrateur,1900,1900,Sociétés commerciales
 pelletier-g,Pelletier,Pelletier,1,1,2,commissaire_aux_comptes,1900,1900,Sociétés commerciales
-guynet-d,Guynet,D. Guynet; Daniel Guynet,1,1,2,administrateur,1936,1951,Mines
-letondot-c,Letondot,Ch. Letondot; Charles Letondot,1,1,2,administrateur,1936,1951,Mines
-sengier-e,Sengier,E. Sengier; Edgar Sengier,1,1,2,administrateur,1936,1951,Mines
-darde-a,Darde,André Darde,1,1,2,secretaire,1936,1951,Mines
+guynet-d,Guynet,D. Guynet; Daniel Guynet,1,1,2,administrateur,1951,1951,Mines
+letondot-c,Letondot,Ch. Letondot; Charles Letondot,1,1,2,administrateur,1951,1951,Mines
+sengier-e,Sengier,E. Sengier; Edgar Sengier,1,1,2,administrateur,1951,1951,Mines
+darde-a,Darde,André Darde,1,1,2,secretaire,1951,1951,Mines
 fautrel-g,Fautrel,Georges Fautrel,1,1,2,administrateur,1899,1899,Sociétés commerciales
 de-lapeyrouse-g,de Lapeyrouse,Gabriel de Lapeyrouse,1,1,2,administrateur,1899,1899,Sociétés commerciales
 riviere-a,Rivière. 3,A. Rivière; Adrien Rivière. 3,1,1,2,administrateur,1899,1899,Sociétés commerciales
@@ -122,7 +120,6 @@ pierre-c,Pierre,Charles Pierre,1,1,1,administrateur,1922,1922,Mines
 coosemans,Coosemans,Coosemans,1,1,1,administrateur,1915,1915,Agro-alimentaire
 sud-ouest-de-la-concession,Sud-Ouest de la concession,Sud-Ouest de la concession,1,1,1,administrateur,1903,1903,Agro-alimentaire
 lux-p,Lux,P. Lux,1,1,1,president,1938,1938,Agro-alimentaire
-adm-delegue-m-h-vacherot,adm.-délégué: M. H. Vacherot,adm.-délégué: M. H. Vacherot,1,1,1,president,1938,1938,Agro-alimentaire
 vanbourzeix,Vanbourzeix,Vanbourzeix,1,1,1,president,1938,1938,Agro-alimentaire
 dumortier-a,Dumortier,Albert Dumortier,1,1,1,administrateur_delegue,1936,1936,Agro-alimentaire
 de-laveleye-y,de Laveleye,Yves de Laveleye,1,1,1,administrateur,1936,1936,Agro-alimentaire
@@ -132,7 +129,6 @@ e-harmel,É Harmel,É Harmel,1,1,1,administrateur,1938,1938,Agro-alimentaire
 motte-bossut-l,Motte-Bossut,Léon Motte-Bossut,1,1,1,administrateur,1899,1899,Sociétés commerciales
 grisar-e,Grisar,Ernest Grisar,1,1,1,administrateur,1899,1899,Sociétés commerciales
 cauvez-i,Cauvez,Ignace Cauvez,1,1,1,administrateur,1899,1899,Sociétés commerciales
-concession-albert-motte,Concession: Albert Motte,Concession: Albert Motte,1,1,1,administrateur,1899,1899,Sociétés commerciales
 d-almeida-pinto-a,d'Almeida Pinto,Antonio d'Almeida Pinto,1,1,1,administrateur,1929,1929,Sociétés commerciales
 d-almeida-pinto-v,d'Almeida Pinto,Victor d'Almeida Pinto,1,1,1,administrateur,1929,1929,Sociétés commerciales
 costa-s,Costa,Sébastiao Costa,1,1,1,administrateur,1929,1929,Sociétés commerciales
@@ -147,9 +143,9 @@ defossez,Défossez,Défossez,1,1,1,administrateur,,,Agro-alimentaire
 bastide-f,Bastide. 3,F. Bastide. 3,1,1,1,administrateur,,,Agro-alimentaire
 forveille-imprimeur-de-titres-paris-rodez-p,Forveille imprimeur de titres Paris-Rodez,P. Forveille imprimeur de titres Paris-Rodez,1,1,1,administrateur,1933,1933,Mines
 tant-en-afrique-qu-a-paris,tant en Afrique qu'a Paris,tant en Afrique qu'a Paris,1,1,1,administrateur,1933,1933,Mines
-achalme-j,Achalme,J. Achalme,1,1,1,administrateur,1936,1936,Mines
-ph-level,Ph. Level,Ph. Level,1,1,1,administrateur,1936,1936,Mines
-superville-m,Superville,Superville,1,1,1,administrateur,1936,1936,Mines
+achalme-j,Achalme,J. Achalme,1,1,1,administrateur,1951,1951,Mines
+ph-level,Ph. Level,Ph. Level,1,1,1,administrateur,1951,1951,Mines
+superville-m,Superville,Superville,1,1,1,administrateur,1951,1951,Mines
 vivier-de-streel-e,Vivier De Streel,Edmond du Vivier De Streel,1,1,1,administrateur,1938,1938,Mines
 dupeyrat-a,Dupeyrat,Armand Dupeyrat,1,1,1,administrateur,1951,1951,Mines
 gascuel-r,Gascuel,Robert Gascuel,1,1,1,administrateur,1951,1951,Mines
@@ -172,7 +168,6 @@ lafarge-f,Lafarge,Lafarge,1,1,1,administrateur,1899,1899,Sociétés commerciales
 montreuil,Montreuil,Montreuil,1,1,1,administrateur,1899,1899,Sociétés commerciales
 j-n,J,Nouzaret J,1,1,1,administrateur,1899,1899,Sociétés commerciales
 mahy-e,Mahy,E. Mahy,1,1,1,administrateur,1899,1899,Sociétés commerciales
-charges-cautionnement,Charges: Cautionnement,Charges: Cautionnement,1,1,1,administrateur,1899,1899,Sociétés commerciales
 de-lange-m,de Lange,Maurice de Lange,1,1,1,administrateur,1899,1899,Sociétés commerciales
 campagne,Campagne,Campagne,1,1,1,administrateur,1899,1899,Sociétés commerciales
 n-daki,N'Daki,N'Daki,1,1,1,administrateur,1899,1899,Sociétés commerciales
@@ -263,7 +258,6 @@ pereire-m,Pereire,Maurice Pereire,1,1,1,administrateur,1903,1903,Sociétés comm
 roose-a,Roose,Alfred Roose,1,1,1,administrateur,1903,1903,Sociétés commerciales
 bouvier-a,BOUVIER,Aimé BOUVIER,1,1,1,administrateur,1899,1899,Sociétés commerciales
 bourgier,Bourgier,Bourgier,1,1,1,administrateur,1900,1900,Sociétés commerciales
-charge-cautionnement,Charge: Cautionnement,Charge: Cautionnement,1,1,1,administrateur,1900,1900,Sociétés commerciales
 j-richmond,J Richmond,J Richmond,1,1,1,president,1907,1907,Sociétés commerciales
 berry-f,Berry,François Berry,1,1,1,administrateur,1907,1907,Sociétés commerciales
 debayser-a,Debayser,A. Debayser,1,1,1,administrateur,1907,1907,Sociétés commerciales
@@ -309,7 +303,6 @@ kakamoeka,Kakamoeka,Kakamoeka,1,1,1,administrateur,1925,1925,Sociétés commerci
 thube-a,Thubé,Amédée Thubé,1,1,1,administrateur_delegue,1929,1929,Sociétés commerciales
 colthurst-j,Colthurst,John Colthurst,1,1,1,administrateur,1929,1929,Sociétés commerciales
 siegfried-j,Siegfried. 12,Jules Siegfried. 12,1,1,1,administrateur,1929,1929,Sociétés commerciales
-sic-borowski-c-est-a-dire-d-origine-polonaise-b,[sic: Borowski (c'est-à-dire d'origine polonaise,Borowsky [sic: Borowski (c'est-à-dire d'origine polonaise,1,1,1,administrateur,1900,1900,Sociétés commerciales
 collas,Collas,Collas,1,1,1,administrateur,1900,1900,Sociétés commerciales
 monniez,Monniez,Monniez,1,1,1,administrateur,1900,1900,Sociétés commerciales
 guilloux-m,Guilloux,Guilloux,1,1,1,administrateur,1900,1900,Sociétés commerciales

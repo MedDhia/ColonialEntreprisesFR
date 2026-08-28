@@ -38,6 +38,7 @@ de-la-mazeliere-o,de la Mazelière,de la Mazelière,2,2,5,president,1927,1940,Mi
 chales-p,Chalès,Chalès. 6; P. Chalès,2,2,4,administrateur,1921,1953,Banque; Transports
 guillaume-r,Guillaume,René Guillaume,2,2,4,administrateur,1929,1933,Banque
 roulleaux-dugage-h,Roulleaux-Dugage,H. Roulleaux-Dugage; Henry Roulleaux-Dugage,2,2,4,administrateur,1912,1925,Mines
+de-batz-r,de Batz,René de Batz,2,2,4,administrateur,1921,1929,Mines
 martin-j,Martin,J. Martin; James Martin,2,2,4,administrateur,1929,1937,Mines
 lederlin-h,Lederlin,H. Lederlin,2,2,4,administrateur,1931,1940,Mines
 o-quin-p,O'Quin,P. O'Quin; Patrick O'Quin,2,2,4,administrateur_delegue,1933,1950,Commerce; Mines
@@ -51,7 +52,6 @@ bastin-j,Bastin,J. Bastin; Jean Bastin,2,2,3,administrateur,1948,1952,Commerce; 
 lesieur-h,Lesieur,H. Lesieur; Henri Lesieur,2,2,3,administrateur,1948,1952,Commerce; Industries agro-alimentaires
 vezin-m,Vezin,Maurice Vezin,2,2,3,administrateur,1929,1951,Banque; Foncier et immobilier
 frere-m,Frère,Frère; Maurice Frère,2,2,3,administrateur,1919,1921,Industries
-de-batz-r,de Batz,René de Batz,2,2,3,administrateur,1921,1929,Mines
 legrand-r,Legrand,René Legrand,2,2,3,administrateur,1922,1925,Industries; Industries agro-alimentaires
 oudot-l,Oudot,L. Oudot; Louis Oudot,2,2,3,administrateur,1925,1929,Industries; Industries agro-alimentaires
 gaudart-r,Gaudart,René Gaudart,2,2,3,administrateur,1922,1925,Industries; Industries agro-alimentaires
@@ -76,6 +76,7 @@ marceron-m,Marceron,Marcel Marceron; Marceron,2,2,2,administrateur,1936,1936,Tra
 fossorier-r,Fossorier,Robert Fossorier,2,2,2,administrateur,1949,1951,Transports
 dugue-p,Dugué,Paul Dugué,2,2,2,administrateur,1950,1951,Transports
 faroux-j,Faroux,Faroux; Jean Faroux,2,2,2,administrateur,1908,1936,Mines
+thube-fils-g,Thubé fils,G. Thubé fils; Gaston Thubé fils,2,2,2,president,1925,1938,Commerce
 exportation-au-senegal,exportation au Sénégal,exportation au Sénégal,2,2,2,president,1925,1938,Commerce
 clanis-g,Clanis,Gaston Clanis,2,2,2,administrateur,1914,1931,Industries agro-alimentaires; Mines
 mathon-e,Mathon,Eugène Mathon,2,2,2,administrateur,1921,1922,Industries agro-alimentaires; Mines
@@ -318,14 +319,12 @@ formby-back-f,Formby Back,Francis- Formby Back,1,1,1,administrateur,1898,1898,Tr
 baptiste-jacquot-j,Baptiste Jacquot,Jean Baptiste Jacquot,1,1,1,administrateur,1898,1898,Transports
 frederick-william-manson,Frederick-William Manson,Frederick-William Manson,1,1,1,administrateur,1898,1898,Transports
 thomas-christophe-jordeson,Thomas-Christophe Jordeson,Thomas-Christophe Jordeson,1,1,1,administrateur,1898,1898,Transports
-objet-l-etablissement,Objet: L'établissement,Objet: L'établissement,1,1,1,administrateur,1898,1898,Transports
 pesty-j,Pesty,J. Pesty,1,1,1,administrateur_delegue,1932,1932,Transports
 letourneau-j,Letourneau,J. Letourneau,1,1,1,administrateur,1932,1932,Transports
 martin-du-pont-a,Martin du Pont,A. Martin du Pont,1,1,1,administrateur,1947,1947,Transports
 ferguson-d,Ferguson,D.-G. Ferguson,1,1,1,administrateur,1947,1947,Transports
 lindenmeyer-a,Lindenmeyer,André Lindenmeyer,1,1,1,president,1951,1951,Industries
 gunthert-h,Gunthert,Henri Gunthert,1,1,1,administrateur,1951,1951,Industries
-d-hombres-dir-pierre-cremieux-h,d'Hombres. [Dir.: Pierre Crémieux,Henri d'Hombres. [Dir.: Pierre Crémieux,1,1,1,administrateur,1951,1951,Industries
 fils-dune-lindenmeyer,fils d‘une Lindenmeyer],fils d‘une Lindenmeyer],1,1,1,administrateur,1951,1951,Industries
 hinzelin-a,HINZELIN,Albert HINZELIN,1,1,1,administrateur,1929,1929,Industries
 ciments-de-trouville,Ciments de Trouville,Ciments de Trouville,1,1,1,administrateur,1929,1929,Industries
@@ -392,7 +391,6 @@ jessula-g,Jessula,Georges Jessula,1,1,1,administrateur,1944,1944,Industries agro
 rosa-p,Rosa,P. Rosa,1,1,1,administrateur,1944,1944,Industries agro-alimentaires
 f-valabregue-huilier-marseillais,F Valabrègue [huilier marseillais,F Valabrègue [huilier marseillais,1,1,1,administrateur,1944,1944,Industries agro-alimentaires
 adm-huileries,adm. Huileries,adm. Huileries,1,1,1,administrateur,1944,1944,Industries agro-alimentaires
-savonneries-du-maroc-gerard-dunk-successeur,savonneries du Maroc]. Gérard Dunk: successeur,savonneries du Maroc]. Gérard Dunk: successeur,1,1,1,administrateur,1944,1944,Industries agro-alimentaires
 prom-h,PROM,H. PROM,1,1,1,president,1918,1918,Industries
 privat-a,Privat,A. Privat,1,1,1,administrateur,1921,1921,Commerce
 motelay-p,Motelay,P. Motelay,1,1,1,administrateur,1921,1921,Commerce
@@ -401,7 +399,6 @@ lauga-j,Lauga,J. Lauga,1,1,1,administrateur,1921,1921,Commerce
 soucail-p,Soucail,Paul Soucail,1,1,1,administrateur,1921,1921,Commerce
 r-masse,R Masse,R Masse,1,1,1,administrateur,1911,1911,Mines
 roulleaux-h,Roulleaux,H. Roulleaux,1,1,1,administrateur,1911,1911,Mines
-sic-henry-roulleaux-dugage-d,[sic: Henry Roulleaux-Dugage,Ducage [sic: Henry Roulleaux-Dugage,1,1,1,administrateur,1911,1911,Mines
 de-traz-a,de Traz,André de Traz,1,1,1,administrateur,1912,1912,Mines
 masse-r,Masse,René Masse,1,1,1,administrateur,1912,1912,Mines
 gimon,Gimon,Gimon,1,1,1,administrateur,1914,1914,Mines
@@ -422,7 +419,6 @@ cauchois-l,Cauchois,L. Cauchois,1,1,1,administrateur,1953,1953,Mines
 adm-maurice-cunin,adm. Maurice Cunin,adm. Maurice Cunin,1,1,1,administrateur,1953,1953,Mines
 paul-carlos-mulquin,Paul-Carlos Mulquin,Paul-Carlos Mulquin,1,1,1,administrateur,1953,1953,Mines
 tanon,Tanon,Tanon,1,1,1,president,1894,1894,Commerce
-avoc-me-nivard,Avoc.: Me Nivard,Avoc.: Me Nivard,1,1,1,president,1894,1894,Commerce
 industrielle-de-paris,industrielle de Paris,industrielle de Paris,1,1,1,administrateur,1929,1929,Foncier et immobilier
 saint-martin-c,Saint-Martin,Castres Saint-Martin,1,1,1,administrateur,1929,1929,Foncier et immobilier
 gend-m,Gend,Marius Gend,1,1,1,administrateur,1929,1929,Foncier et immobilier
@@ -433,7 +429,6 @@ norgaard-r,Norgaard,Robert Norgaard,1,1,1,administrateur,1947,1947,Industries ag
 sauvaire-jourdan-h,Sauvaire-Jourdan,Henri Sauvaire-Jourdan,1,1,1,administrateur,1947,1947,Industries agro-alimentaires
 rob-j-foine,Rob.-J. Foine,Rob.-J. Foine,1,1,1,administrateur,1947,1947,Industries agro-alimentaires
 capillon-v,Capillon,V. Capillon,1,1,1,administrateur,1947,1947,Industries agro-alimentaires
-un-administrateur-paris,? Un administrateur: ? Paris,? Un administrateur: ? Paris,1,1,1,administrateur,,,Industries agro-alimentaires
 guy-c,Guy,C. Guy,1,1,1,vice_president,1925,1925,Industries agro-alimentaires
 muller-v,Muller,V. Muller,1,1,1,administrateur,1925,1925,Industries agro-alimentaires
 petersen-g,Petersen,G. Petersen,1,1,1,administrateur,1925,1925,Industries agro-alimentaires
@@ -478,16 +473,9 @@ metman-c,Metman,Ch. Metman,1,1,1,administrateur,1908,1908,Mines
 picard-j,Picard,J. Picard,1,1,1,administrateur,1908,1908,Mines
 watel-e,Watel,E. Watel,1,1,1,administrateur,1908,1908,Mines
 notaires-a-paris,notaires à Paris,notaires à Paris,1,1,1,administrateur,1908,1908,Mines
-presid-gaston-thube-fils,présid.: Gaston Thubé fils,présid.: Gaston Thubé fils,1,1,1,administrateur,1919,1919,Commerce
-thube-fils-g,Thubé fils,Gaston Thubé fils,1,1,1,president,1925,1925,Commerce
-adm-direction,adm. Direction: 2,adm. Direction: 2,1,1,1,president,1925,1925,Commerce
 kaolack,Kaolack,Kaolack,1,1,1,president,1925,1925,Commerce
 foundiougne,Foundiougne,Foundiougne,1,1,1,president,1925,1925,Commerce
-casamance-ziguinchor,Casamance: Ziguinchor,Casamance: Ziguinchor,1,1,1,president,1925,1925,Commerce
-bissao-cacheo,Bissao: Cacheo,Bissao: Cacheo,1,1,1,president,1925,1925,Commerce
 bissao,Bissao,Bissao,1,1,1,president,1925,1925,Commerce
-adm-mm-g-thube-fils,Adm.: MM. G. Thubé fils,Adm.: MM. G. Thubé fils,1,1,1,president,1938,1938,Commerce
-direction,Direction: 2,Direction: 2,1,1,1,president,1938,1938,Commerce
 et-de-logiviere,et de Logivière,et de Logivière,1,1,1,administrateur,1921,1921,Commerce
 de-logiviere-j,de Logivière,Jean de Logivière,1,1,1,administrateur,1925,1925,Commerce
 de-saint-pol-x,de Saint-Pol,Xavier de Saint-Pol,1,1,1,administrateur,1925,1925,Commerce
@@ -516,7 +504,6 @@ pecheries-d-hyeres,pêcheries d'Hyères,pêcheries d'Hyères,1,1,1,administrateu
 pereira-g,Pereira,Gonçalves Pereira,1,1,1,administrateur,1942,1942,Mines
 bouton,Bouton,Bouton,1,1,1,administrateur,,,Mines
 clanis,Clanis,Clanis,1,1,1,administrateur,,,Mines
-clanis-negociant-armateur-a-saint-pierre-g,Clanis: négociant-armateur à Saint-Pierre,Gaston Clanis: négociant-armateur à Saint-Pierre,1,1,1,administrateur,,,Mines
 bonnin-de-ia-bonniniere-l,BONNIN de Ia BONNINIÈRE,Louis BONNIN de Ia BONNINIÈRE,1,1,1,administrateur,,,Mines
 de-beaumont,de BEAUMONT,de BEAUMONT,1,1,1,administrateur,,,Mines
 campagnes-d-algerie,campagnes d'Algérie,campagnes d'Algérie,1,1,1,administrateur,,,Mines
@@ -623,7 +610,6 @@ dakar,Dakar),Dakar),1,0,1,gerant,1951,1951,
 millions-c-f-a,millions C. F. A,millions C. F. A,1,0,1,gerant,1951,1951,
 m-bour-direct,M'Bour (direct. 51,M'Bour (direct. 51,1,0,1,gerant,1951,1951,
 pecheries-de-joal,2]. Pêcheries de Joal,2]. Pêcheries de Joal,1,0,1,gerant,1951,1951,
-direct-m-couard-j,(Direct.: M. Couard,Joal (Direct.: M. Couard,1,0,1,gerant,1951,1951,
 dakar-pecheries-michel-haddad,Dakar). Pêcheries Michel Haddad,Dakar). Pêcheries Michel Haddad,1,0,1,gerant,1951,1951,
 diokhane,Diokhane,Diokhane,1,0,1,gerant,1951,1951,
 nouvion,Nouvion,Nouvion,1,0,1,directeur,1901,1901,Banque

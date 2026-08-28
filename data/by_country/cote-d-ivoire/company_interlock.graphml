@@ -57,7 +57,7 @@
     <node id="boiscoteivoire">
       <data key="n_label">Compagnie des Bois de la Côte-d'Ivoire</data>
       <data key="n_sectors">Industries</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Côte d'Ivoire</data>
     </node>
     <node id="boissassandra">
@@ -117,7 +117,7 @@
     <node id="consolidatedgoldfieldsivorycoast">
       <data key="n_label">The Consolidated Goldfields of the Ivory Coast</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Côte d'Ivoire</data>
     </node>
     <node id="culturesextremeorient">
@@ -135,7 +135,7 @@
     <node id="domainekokumbo">
       <data key="n_label">Compagnie du Domaine de Kokumbo</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Côte d'Ivoire</data>
     </node>
     <node id="etablissementscharlesperinaud">
@@ -177,7 +177,7 @@
     <node id="forestiereafrique">
       <data key="n_label">Compagnie Forestière de l'Afrique française</data>
       <data key="n_sectors">Industries</data>
-      <data key="n_n_directors">17</data>
+      <data key="n_n_directors">16</data>
       <data key="n_territory">Côte d'Ivoire</data>
     </node>
     <node id="forestiereequatoriale">
@@ -201,7 +201,7 @@
     <node id="huileriesafricaines">
       <data key="n_label">Huileries africaines</data>
       <data key="n_sectors">Agro-alimentaire, cultures industrielles</data>
-      <data key="n_n_directors">17</data>
+      <data key="n_n_directors">16</data>
       <data key="n_territory">Côte d'Ivoire</data>
     </node>
     <node id="huileriesafricainesdrewin">
@@ -249,7 +249,7 @@
     <node id="kong">
       <data key="n_label">Compagnie française de Kong</data>
       <data key="n_sectors">Industries</data>
-      <data key="n_n_directors">26</data>
+      <data key="n_n_directors">24</data>
       <data key="n_territory">Côte d'Ivoire</data>
     </node>
     <node id="lorrainecoteivoirenancy">
@@ -261,7 +261,7 @@
     <node id="minesorindenie">
       <data key="n_label">Société des Mines d’or de l'Indénié</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Côte d'Ivoire</data>
     </node>
     <node id="miniereafema">
@@ -483,46 +483,46 @@
     <edge id="e16" source="boiscoteivoire" target="kong">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e17" source="boiscoteivoire" target="forestiereindenie">
+    <edge id="e17" source="actionjouissance" target="kong">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e18" source="boiscoteivoire" target="importationboisexotiques">
+    <edge id="e18" source="actionjouissance" target="plantationselimacafeiersaboisso">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e19" source="forestiereindenie" target="plantationshuileriesbingerville">
+    <edge id="e19" source="boiscoteivoire" target="forestiereindenie">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e20" source="importationboisexotiques" target="transitgrandlahou">
+    <edge id="e20" source="boiscoteivoire" target="importationboisexotiques">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e21" source="actionjouissance" target="kong">
+    <edge id="e21" source="forestiereindenie" target="kong">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e22" source="actionjouissance" target="plantationselimacafeiersaboisso">
+    <edge id="e22" source="forestiereindenie" target="plantationselimacafeiersaboisso">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e23" source="forestiereindenie" target="kong">
+    <edge id="e23" source="forestiereindenie" target="plantationsreuniesouestafricain">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e24" source="forestiereindenie" target="plantationselimacafeiersaboisso">
+    <edge id="e24" source="importationboisexotiques" target="kong">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e25" source="forestiereindenie" target="plantationsreuniesouestafricain">
+    <edge id="e25" source="importationboisexotiques" target="plantationselimacafeiersaboisso">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e26" source="importationboisexotiques" target="kong">
+    <edge id="e26" source="importationboisexotiques" target="transitgrandlahou">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e27" source="importationboisexotiques" target="plantationselimacafeiersaboisso">
+    <edge id="e27" source="kong" target="plantationsreuniesouestafricain">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e28" source="kong" target="plantationsreuniesouestafricain">
+    <edge id="e28" source="kong" target="transitgrandlahou">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e29" source="kong" target="transitgrandlahou">
+    <edge id="e29" source="plantationselimacafeiersaboisso" target="transitgrandlahou">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e30" source="plantationselimacafeiersaboisso" target="transitgrandlahou">
+    <edge id="e30" source="forestiereindenie" target="plantationshuileriesbingerville">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e31" source="forestieresassandra" target="transitgrandlahou">
@@ -537,58 +537,58 @@
     <edge id="e34" source="cafesproduitscoloniauxcapro" target="forestiereindenie">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e35" source="commercialeafrique" target="exploitationscommercialesafricaines">
+    <edge id="e35" source="huileriesafricaines" target="huileriesplantationscoteivoire">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e36" source="commercialeafrique" target="exploitationscommercialesafricaines">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e36" source="commercialeafrique" target="importationboisexotiques">
+    <edge id="e37" source="commercialeafrique" target="importationboisexotiques">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e37" source="boiscoteivoire" target="plantationshuileriesbingerville">
+    <edge id="e38" source="actionjouissance" target="boiscoteivoire">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e38" source="forestiereindenie" target="importationboisexotiques">
+    <edge id="e39" source="actionjouissance" target="transitgrandlahou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e39" source="importationboisexotiques" target="plantationshuileriesbingerville">
+    <edge id="e40" source="boiscoteivoire" target="plantationselimacafeiersaboisso">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e40" source="plantationshuileriesbingerville" target="transitgrandlahou">
+    <edge id="e41" source="forestiereindenie" target="importationboisexotiques">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e41" source="actionjouissance" target="boiscoteivoire">
+    <edge id="e42" source="plantationselimacafeiersaboisso" target="plantationsreuniesouestafricain">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e42" source="actionjouissance" target="transitgrandlahou">
+    <edge id="e43" source="plantationsreuniesouestafricain" target="transitgrandlahou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e43" source="boiscoteivoire" target="plantationselimacafeiersaboisso">
+    <edge id="e44" source="boiscoteivoire" target="plantationshuileriesbingerville">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e44" source="plantationselimacafeiersaboisso" target="plantationsreuniesouestafricain">
+    <edge id="e45" source="importationboisexotiques" target="plantationshuileriesbingerville">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e45" source="plantationsreuniesouestafricain" target="transitgrandlahou">
+    <edge id="e46" source="plantationshuileriesbingerville" target="transitgrandlahou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e46" source="kong" target="minierefoncierebandama">
+    <edge id="e47" source="kong" target="minierefoncierebandama">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e47" source="kong" target="plantationshuileriesbingerville">
+    <edge id="e48" source="kong" target="plantationshuileriesbingerville">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e48" source="consolidatedgoldfieldsivorycoast" target="minierebondoukoucoteivoire">
+    <edge id="e49" source="consolidatedgoldfieldsivorycoast" target="minierebondoukoucoteivoire">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e49" source="minierealangouacoteivoire" target="minieresanwicoteivoire">
+    <edge id="e50" source="minierealangouacoteivoire" target="minieresanwicoteivoire">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e50" source="cafesproduitscoloniauxcapro" target="plantationshuileriesbingerville">
+    <edge id="e51" source="cafesproduitscoloniauxcapro" target="plantationshuileriesbingerville">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e51" source="huileriesafricaines" target="uniontropicaleplantations">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e52" source="huileriesafricaines" target="huileriesplantationscoteivoire">
+    <edge id="e52" source="huileriesafricaines" target="uniontropicaleplantations">
       <data key="e_weight">2</data>
     </edge>
     <edge id="e53" source="kokumbocoltd" target="minierefoncierebandama">

@@ -1,50 +1,48 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
 creditfonciercongo,financierecongo,Crédit foncier du Congo,Société financière du Congo français,8,beuque-j; clerc-a; henriquez; henriquez-a; henriquez-g; herve-le-grand; serpeille-de-gobineau-l; superville-m
+boiscoloniaux,exploitationsforestieresafricaines,Compagnie générale des Bois coloniaux,Compagnie Exploitations forestières africaines,8,babonneau-f; d-zafiropulo; f-babonneau-ing; g-zafiropulo; michenot-e; weber-j; zafiropulo-d; zafiropulo-g
 financierecongo,hautbascongo,Société financière du Congo français,Compagnie française du Haut et Bas-Congo,8,beuque-j; dawart; de-montreuil; dreyfus-p; er-p; henriquez-g; imprimerie-laroche; trechot-h
 equateur,plantationssanaga,Compagnie Générale de l'Équateur,Plantations de la Sanaga,8,de-beaumont-j; de-rivaud-r; hallet-r; langlois-p; place-v; roullet-g; vieljeux-c; vieljeux-l
 afrique,huileriesmoyencongo,L'Afrique française,Huileries du Moyen-Congo,8,boussenot-g; de-laveleye-y; ducros-a; dumortier-a; raynal-g; rolin-j; serviere-l; warnant-l
-boiscoloniaux,exploitationsforestieresafricaines,Compagnie générale des Bois coloniaux,Compagnie Exploitations forestières africaines,7,babonneau-f; f-babonneau-ing; g-zafiropulo; michenot-e; weber-j; zafiropulo-d; zafiropulo-g
-minierecongo,miniereoubanghioriental,Cie Minière du Congo français,Compagnie Minière de l'Oubanghi oriental,7,adm-del-m-g-hausser; adm-mm-e-benedic; e-lubovitch; g-boussenot; monteil-j; ortiz-linares-g; perrin-l
+nationalecameroun,socnationalecameroun,Sté nationale du Cameroun,Soc. Nationale du CAMEROUN,7,babin-chevaye-j; barthelemy-l; belot-g; conchon-h; eug-guillet-de-la-brosse; marion-de-proce-p; toutee-h
 agricolegabon,hautebokoue,Société agricole du Gabon,Société de la Haute-Bokoué,7,dagouret-j; guibert-g; labat-r; lemaitre-r; mizraki-m; sterlin-y; vacheret-c
 banqueafriqueequatoriale,forestieresanghaoubangui,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.",Compagnie Forestière Sangha-Oubangui,6,bolle-a; de-hemptinne-j; despret-g; josse-a; superville-m; weber-j
+bascongo,francbascongo,Compagnie Française du Bas-Congo,Cie Franç. du BAS-CONGO,6,brack-g; ponche-e; remond-j; trechot-f; trechot-h; trechot-l
 bascongo,hautcongo,Compagnie Française du Bas-Congo,Compagnie Française du Haut-Congo,6,brack-g; ponche-e; remond-j; trechot-f; trechot-h; trechot-l
+francbascongo,hautcongo,Cie Franç. du BAS-CONGO,Compagnie Française du Haut-Congo,6,brack-g; ponche-e; remond-j; trechot-f; trechot-h; trechot-l
+industriellebasogooue,socindbasogooue,Société Industrielle du Bas-Ogooué,Soc. an. ind. du BAS-OGOOUÉ,6,baitry-f; biltz-a; fleury-p; homberg-o; lambert-e; levy-e
+commercialeindustrielleagricolehautogooue,hautogooue,"Société commerciale, industrielle et agricole du Haut-Ogooué",HAUT-OGOOUÉ,6,barre-h; boissonnas-j; chabrieres-m; e-terquem; enjalbert-p; o-barre
 afriquecongo,transportsafrique,Afrique et Congo,Compagnie Générale de transports en Afrique,6,becq-a; benedic-e; coquelin-p; delorme-j; fondere-a; guynet-d
-cameroun,nationalecameroun,Cie française du Cameroun,Sté nationale du Cameroun,6,barthelemy-l; belot-g; conchon-h; eug-guillet-de-la-brosse; marion-de-proce-p; toutee-h
 afriquecongo,transportafrique,Afrique et Congo,Compagnie générale de transport en Afrique,6,benedic; benedic-e; blanc-e; coquelin-p; delorme-j; guynet-d
 transportafrique,transportsafrique,Compagnie générale de transport en Afrique,Compagnie Générale de transports en Afrique,6,barris-p; benedic-e; coquelin-p; delorme-j; guynet-d; vadier-j
 depotspetrolierscamerounbp,depotspetroliersefbrazzavillebp,"Cie française de dépôts pétroliers au Cameroun, B. P","Cie française de dépôts pétroliers en A.E.F., BRAZZAVILLE, B. P",6,bricka-c; colombes; durand-o; freres-d; lille-bonnieres-s; risler-a
 banqueafriqueequatoriale,kouango,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.","Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",5,h-lippens; josse-a; lippens-h; superville-m; weber-j
 entreprisesafricaines,sultanatshautoubangui,"Société d'entreprises africaines, puis Société d'entreprises africaines et Matériel colonial réunis",Les Sultanats du Haut-Oubangui,5,duchanoy-m; fondere-a; mascart-c; superville-m; troutet-f
 alimaienne,hautcongo,L'Alimaïenne,Compagnie Française du Haut-Congo,5,brack-g; cruchet-l; remond-j; trechot-f; trechot-l
-bascongo,francbascongo,Compagnie Française du Bas-Congo,Cie Franç. du BAS-CONGO,5,brack-g; ponche-e; remond-j; trechot-f; trechot-h
+bascongo,fsehautcongo,Compagnie Française du Bas-Congo,Cie Fse du HAUT-CONGO,5,brack-g; ponche-e; remond-j; trechot-f; trechot-h
 bascongo,hautbascongo,Compagnie Française du Bas-Congo,Compagnie française du Haut et Bas-Congo,5,ponche-e; remond-j; trechot-f; trechot-h; trechot-l
-francbascongo,hautcongo,Cie Franç. du BAS-CONGO,Compagnie Française du Haut-Congo,5,brack-g; ponche-e; remond-j; trechot-f; trechot-h
+francbascongo,fsehautcongo,Cie Franç. du BAS-CONGO,Cie Fse du HAUT-CONGO,5,brack-g; ponche-e; remond-j; trechot-f; trechot-h
+francbascongo,hautbascongo,Cie Franç. du BAS-CONGO,Compagnie française du Haut et Bas-Congo,5,ponche-e; remond-j; trechot-f; trechot-h; trechot-l
+fsehautcongo,hautcongo,Cie Fse du HAUT-CONGO,Compagnie Française du Haut-Congo,5,brack-g; ponche-e; remond-j; trechot-f; trechot-h
 hautbascongo,hautcongo,Compagnie française du Haut et Bas-Congo,Compagnie Française du Haut-Congo,5,ponche-e; remond-j; trechot-f; trechot-h; trechot-l
+boiscoloniaux,forestieresanghaoubangui,Compagnie générale des Bois coloniaux,Compagnie Forestière Sangha-Oubangui,5,etudes-du-nord; l-vincent-gaz-de-paris; vincent; vincent-l; weber-j
 leverbrothersltd,leverbrothersltdportsunlightcheshire,Lever Brothers Ltd,"Lever Brothers Ltd, Port SUNLIGHT, Cheshire",5,barnish-c; greenhalgh-h; hartland-swann-l; lever-ferguson-j; lomax-simpson-j
-basogooue,industriellebasogooue,BAS-OGOOUÉ,Société Industrielle du Bas-Ogooué,5,biltz-a; fleury-p; homberg-o; lambert-e; levy-e
-commercialeindustrielleagricolehautogooue,hautogooue,"Société commerciale, industrielle et agricole du Haut-Ogooué",HAUT-OGOOUÉ,5,barre-h; boissonnas-j; chabrieres-m; e-terquem; o-barre
 miniereoubanghioriental,recherchesauriferesgabon,Compagnie Minière de l'Oubanghi oriental,Cie de recherches aurifères au Gabon,5,claude-a; hausser-g; monteil-j; perrin-l; pinci-m
 agricolegabon,unionforestiereogooue,Société agricole du Gabon,Union forestière de l'Ogooué,5,auvray; dagouret-j; labat-r; mizraki-m; vacheret-c
 cameroun,gabon,Cie française du Cameroun,Compagnie Française du Gabon,5,autissier-j; de-peyrecave-r; jouy-f; kagan-n; morane-j
 alimaienne,bascongo,L'Alimaïenne,Compagnie Française du Bas-Congo,4,brack-g; remond-j; trechot-f; trechot-l
-bascongo,fsehautcongo,Compagnie Française du Bas-Congo,Cie Fse du HAUT-CONGO,4,ponche-e; remond-j; trechot-f; trechot-h
-francbascongo,fsehautcongo,Cie Franç. du BAS-CONGO,Cie Fse du HAUT-CONGO,4,ponche-e; remond-j; trechot-f; trechot-h
-francbascongo,hautbascongo,Cie Franç. du BAS-CONGO,Compagnie française du Haut et Bas-Congo,4,ponche-e; remond-j; trechot-f; trechot-h
+alimaienne,francbascongo,L'Alimaïenne,Cie Franç. du BAS-CONGO,4,brack-g; remond-j; trechot-f; trechot-l
 fsehautcongo,hautbascongo,Cie Fse du HAUT-CONGO,Compagnie française du Haut et Bas-Congo,4,ponche-e; remond-j; trechot-f; trechot-h
-fsehautcongo,hautcongo,Cie Fse du HAUT-CONGO,Compagnie Française du Haut-Congo,4,ponche-e; remond-j; trechot-f; trechot-h
-boiscoloniaux,forestieresanghaoubangui,Compagnie générale des Bois coloniaux,Compagnie Forestière Sangha-Oubangui,4,etudes-du-nord; vincent; vincent-l; weber-j
 exploitationsforestieresafricaines,plantationspalmeraiesogooue,Compagnie Exploitations forestières africaines,Cie générale des Plantations et palmeraies de l'Ogooué,4,doumic-j; michenot-e; pila-j; weber-j
 forestieresanghaoubangui,sanghalikouala,Compagnie Forestière Sangha-Oubangui,Compagnie Générale Sangha-Likouala,4,coulon-j; joubert-j; lavril-m; weber-j
 forestieresanghaoubangui,intertropicalcomfina,Compagnie Forestière Sangha-Oubangui,Intertropical-Comfina,4,bolle-a; de-hemptinne-j; josse-a; vandenperre-h
-afrique,afriqueminiereequatoriale,L'Afrique française,Afrique minière équatoriale,4,guet-g; hpk-l; lepel-cointet-g; pierre-c
+frseouhame,ouhamenana,Cie frse de l'OUHAMÉ,Compagnie française de l'Ouhamé et de la Nana,4,cabaret-p; guegan-p; guinard-a; van-voorst
 afriquecongo,messageriesfluvialescongo,Afrique et Congo,Messageries fluviales du Congo,4,beulque-g; fourneau-a; merlet-e; w-guynet
-shaki,sultanatshautoubangui,SHAKI,Les Sultanats du Haut-Oubangui,4,duchanoy-m; mirand-devos-n; troutet-f; watel-p
 africaine,anciensetablissementscquilliardforestiereezanga,L'Africaine,Anciens Établissements C. Quilliard Société forestière d'Ezanga,4,gillet-a; lefevre-c; pecqueur-w; videau-j
 africaine,equatoriale,L'Africaine,L'Équatoriale,4,gillet-a; lefevre-c; pecqueur-w; videau-j
 anciensetablissementscquilliardforestiereezanga,equatoriale,Anciens Établissements C. Quilliard Société forestière d'Ezanga,L'Équatoriale,4,gillet-a; lefevre-c; pecqueur-w; videau-j
 africaineforestiereagricole,equateur,Société africaine forestière et agricole,Compagnie Générale de l'Équateur,4,de-beaumont-j; de-rivaud-r; roullet-g; vieljeux-c
 africaineforestiereagricole,plantationssanaga,Société africaine forestière et agricole,Plantations de la Sanaga,4,de-beaumont-j; de-rivaud-r; roullet-g; vieljeux-c
-agricolecommercialealima,alima,Société Agricole et Commerciale de l'Alima,ALIMA,4,decourcelle-e; gillain-p; jacta-g; lux-p
 commercialecotonniereouhamenanacomouna,transportsouhamenana,Cie commerciale et cotonnière de l'Ouhamé-Nana « Comouna »,Compagnie de Transports Cie française de l'Ouhame et de la Nana,4,bobichon-j; bobichon-probablement-le-fils-d-henri-j; martineau-g; simenel-m
 cotonniereequatoriale,cotonnierehautoubangui,Cie cotonnière équatoriale française,Cie cotonnière du Haut-Oubangui,4,de-bauw-a; gohr-g; landeghem-a; senn-e
 miniereoubanghioriental,recherchesauriferescamerouno,Compagnie Minière de l'Oubanghi oriental,Société de recherches aurifères au Cameroun (S.O,4,benedic-e; claude-a; perrin-l; pinci-m
@@ -55,13 +53,14 @@ hautebokoue,unionforestiereogooue,Société de la Haute-Bokoué,Union forestièr
 unionforestiereafricaine,unionforestiereogooue,Union forestière africaine,Union forestière de l'Ogooué,4,hue-g; labat-r; mizraki-m; vacheret-c
 transporteafriqueparis,transportsafrique,"Cie générale de transporte en Afrique, à Paris",Compagnie Générale de transports en Afrique,4,barris-p; becq-a; benedic-e; guynet-d
 miniereoubanghioriental,recherchesexploitationsdiamantiferes,Compagnie Minière de l'Oubanghi oriental,Société de Recherches et d'exploitations diamantifères,4,benedic-e; claude-a; jolis-a; pinci-m
-alima,banqueafriqueequatoriale,ALIMA,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.",4,adm-mm-s-bruni; massenet; p-mabille; speyer-c
+banqueafrique,banqueafriqueequatoriale,BANQUE FRANÇAISE de l'AFRIQUE,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.",4,bruni-s; massenet; p-mabille; speyer-c
 banqueafriqueequatoriale,creditfonciercongo,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.",Crédit foncier du Congo,3,bolle-a; fondere-a; superville-m
 banqueafriqueequatoriale,sultanatshautoubangui,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.",Les Sultanats du Haut-Oubangui,3,fondere-a; josse-a; superville-m
 forestieresanghaoubangui,kouango,Compagnie Forestière Sangha-Oubangui,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",3,josse-a; superville-m; weber-j
 forestieresanghaoubangui,sultanatshautoubangui,Compagnie Forestière Sangha-Oubangui,Les Sultanats du Haut-Oubangui,3,josse-a; reclus-l; superville-m
+kouango,sultanatshautoubangui,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",Les Sultanats du Haut-Oubangui,3,josse-a; pierre-c; superville-m
 minierecongo,sultanatshautoubangui,Cie Minière du Congo français,Les Sultanats du Haut-Oubangui,3,fondere-a; guynet-d; superville-m
-alimaienne,francbascongo,L'Alimaïenne,Cie Franç. du BAS-CONGO,3,brack-g; remond-j; trechot-f
+alimaienne,fsehautcongo,L'Alimaïenne,Cie Fse du HAUT-CONGO,3,brack-g; remond-j; trechot-f
 alimaienne,hautbascongo,L'Alimaïenne,Compagnie française du Haut et Bas-Congo,3,remond-j; trechot-f; trechot-l
 fsecongocameroun,ngokosangha,Cie Fse des CONGO-CAMEROUN,"N’goko-Sangha, puis Société française Congo-Cameroun",3,cruchet-l; de-jessaint; henrotte
 bambari,congolaisecaoutchouc,BAMBARI,Compagnie Congolaise du Caoutchouc,3,joubert-a; mandel-a; weber-j
@@ -70,13 +69,15 @@ exploitationscommercialesafricaines,exploitationsforestieresafricaines,Compagnie
 exploitationscommercialesafricaines,plantationspalmeraiesogooue,Compagnie d'Exploitations commerciales africaines,Cie générale des Plantations et palmeraies de l'Ogooué,3,doumic-j; lavril-m; michenot-e
 banqueafriqueequatoriale,intertropicalcomfina,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.",Intertropical-Comfina,3,bolle-a; de-hemptinne-j; josse-a
 inkemeinkeni,lefiniagricolecommercialeindustrielle,Cie de I'N'Kémé et de I'N'Kéni,"« La Léfini », Cie agricole, commerciale et industrielle",3,arnold-p; debayser-a; richmond-j
-frseouhame,ouhamenana,Cie frse de l'OUHAMÉ,Compagnie française de l'Ouhamé et de la Nana,3,cabaret-p; guinard-a; van-voorst
-fsehautcongo,hautengounie,Cie Fse du HAUT-CONGO,Compagnie de la Haute-N'Gounié,3,adm-mm-debionne; etc-commerce-d-importation; vergnes-a
+fsehautcongo,hautengounie,Cie Fse du HAUT-CONGO,Compagnie de la Haute-N'Gounié,3,debionne; etc-commerce-d-importation; vergnes-a
+afriquecongo,sultanatshautoubangui,Afrique et Congo,Les Sultanats du Haut-Oubangui,3,fondere-a; guynet-d; pierre-c
 afriquecongo,minierecongo,Afrique et Congo,Cie Minière du Congo français,3,fondere-a; guynet-d; w-guynet
 cavescongolaises,nouvellesgaleriescongolaises,Société anon. « Caves congolaises »,Nouvelles Galeries congolaises,3,christophoridi-j; meunier-g; rebstock-l
 palmeraiescameroun,tabacscameroun,Compagnie des Palmeraies du Cameroun,"Cie des Tabacs du Cameroun, puis Tabacs et plantations du Cameroun, puis Plantations de Nyombé-Penja",3,cahen-fuzier-e; guerin-g; hirsch-m
 pastoraleafricaine,pastoralecommercialeafricaine,Cie pastorale africaine,"Compagnie Pastorale et Commerciale africaine, puis Pastorale africaine",3,bonhomme-l; fink-herault-y; guy-l
 cotonnierecongolaise,intertropicalcomfina,Cie cotonnière congolaise,Intertropical-Comfina,3,blanquet-m; perier-g; van-bree-f
+agricolecommercialealima,socagricolecommercialealima,Société Agricole et Commerciale de l'Alima,Soc. agricole et commerciale de l'ALIMA,3,david; decourcelle-e; jacta-g
+agricolecommercialealima,alima,Société Agricole et Commerciale de l'Alima,ALIMA,3,david; gillain-p; lux-p
 cotonniereequatoriale,financierecongo,Cie cotonnière équatoriale française,Société financière du Congo français,3,allard-j; clerc-a; propper-e
 groupementgabonais,miniereoubanghioriental,Groupement gabonais S. A,Compagnie Minière de l'Oubanghi oriental,3,monteil-j; perrin-l; pinci-m
 groupementgabonais,recherchesauriferesgabon,Groupement gabonais S. A,Cie de recherches aurifères au Gabon,3,monteil-j; perrin-l; pinci-m
@@ -111,8 +112,6 @@ creditfonciercongo,minierecongo,Crédit foncier du Congo,Cie Minière du Congo f
 creditfonciercongo,sultanatshautoubangui,Crédit foncier du Congo,Les Sultanats du Haut-Oubangui,2,fondere-a; superville-m
 entreprisesafricaines,minierecongo,"Société d'entreprises africaines, puis Société d'entreprises africaines et Matériel colonial réunis",Cie Minière du Congo français,2,fondere-a; superville-m
 forestieresanghaoubangui,minierecongo,Compagnie Forestière Sangha-Oubangui,Cie Minière du Congo français,2,guynet-w; superville-m
-kouango,sultanatshautoubangui,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",Les Sultanats du Haut-Oubangui,2,josse-a; superville-m
-alimaienne,fsehautcongo,L'Alimaïenne,Cie Fse du HAUT-CONGO,2,remond-j; trechot-f
 afriquecongo,banqueafriqueequatoriale,Afrique et Congo,"Banque française de l'Afrique équatoriale, puis Banque française de l'Afrique . Suite de la Société française industrielle et coloniale.",2,fondere-a; weber-j
 afriquecongo,exploitationsforestieresafricaines,Afrique et Congo,Compagnie Exploitations forestières africaines,2,fondere-a; weber-j
 afriquecongo,kouango,Afrique et Congo,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",2,pierre-c; weber-j
@@ -129,6 +128,7 @@ exploitationsforestieresafricaines,forestieresanghaoubangui,Compagnie Exploitati
 forestieresanghaoubangui,plantationspalmeraiesogooue,Compagnie Forestière Sangha-Oubangui,Cie générale des Plantations et palmeraies de l'Ogooué,2,lavril-m; weber-j
 plantationspalmeraiesogooue,sanghalikouala,Cie générale des Plantations et palmeraies de l'Ogooué,Compagnie Générale Sangha-Likouala,2,lavril-m; weber-j
 exploitationsforestieresafricaines,minierecongo,Compagnie Exploitations forestières africaines,Cie Minière du Congo français,2,fondere-a; guynet-w
+exploitationsforestieresafricaines,plantationsogooue,Compagnie Exploitations forestières africaines,Société des Plantations de l'Ogooué,2,guynet-w; meyer-a
 forestieresanghaoubangui,messageriesfluvialescongo,Compagnie Forestière Sangha-Oubangui,Messageries fluviales du Congo,2,guynet-w; produits-de-la-lobay
 messageriesfluvialescongo,minierecongo,Messageries fluviales du Congo,Cie Minière du Congo français,2,guynet-w; w-guynet
 creditfonciercongo,equatorialemines,Crédit foncier du Congo,Compagnie Équatoriale de mines,2,benard; bolle-a
@@ -140,8 +140,7 @@ entreprisescommercialescongobelge,proprietairekouilouniari,Sté anon. d'entrepri
 leverbrothersltdportsunlightcheshire,proprietairekouilouniari,"Lever Brothers Ltd, Port SUNLIGHT, Cheshire",Compagnie Propriétaire du Kouilou-Niari,2,greenhalgh-h; moseley-l
 afriqueminiereequatoriale,commercialeindustrielleagricolehautogooue,Afrique minière équatoriale,"Société commerciale, industrielle et agricole du Haut-Ogooué",2,barre-o; o-barre
 commercialeindustrielleagricolehautogooue,coteafrique,"Société commerciale, industrielle et agricole du Haut-Ogooué",CÔTE D'AFRIQUE,2,chabrieres-m; enjalbert-p
-entreprisesafricaines,shaki,"Société d'entreprises africaines, puis Société d'entreprises africaines et Matériel colonial réunis",SHAKI,2,duchanoy-m; troutet-f
-afriquecongo,sultanatshautoubangui,Afrique et Congo,Les Sultanats du Haut-Oubangui,2,fondere-a; guynet-d
+coteafrique,hautogooue,CÔTE D'AFRIQUE,HAUT-OGOOUÉ,2,chabrieres-m; enjalbert-p
 minierecongo,transportsafrique,Cie Minière du Congo français,Compagnie Générale de transports en Afrique,2,fondere-a; guynet-d
 sultanatshautoubangui,transportsafrique,Les Sultanats du Haut-Oubangui,Compagnie Générale de transports en Afrique,2,fondere-a; guynet-d
 aktieselskapetcongosandefjord,sandefjord,Aktieselskapet « Congo » SANDEFJORD,SANDEFJORD,2,wegger-o; wildhagen-c
@@ -153,6 +152,7 @@ africaineforestiereagricole,bordelaiseafricaine,Société africaine forestière 
 africaineforestiereagricole,cameroun,Société africaine forestière et agricole,Cie française du Cameroun,2,roullet-e; roullet-g
 bordelaiseafricaine,equateur,Société bordelaise africaine,Compagnie Générale de l'Équateur,2,de-rivaud-r; roullet-g
 bordelaiseafricaine,plantationssanaga,Société bordelaise africaine,Plantations de la Sanaga,2,de-rivaud-r; roullet-g
+alima,socagricolecommercialealima,ALIMA,Soc. agricole et commerciale de l'ALIMA,2,david; etc-exportation-de-tous-articles
 creditfonciercongo,hautbascongo,Crédit foncier du Congo,Compagnie française du Haut et Bas-Congo,2,beuque-j; henriquez-g
 financierecongo,transporteafriqueparis,Société financière du Congo français,"Cie générale de transporte en Afrique, à Paris",2,de-montreuil; henriquez-g
 hautbascongo,transporteafriqueparis,Compagnie française du Haut et Bas-Congo,"Cie générale de transporte en Afrique, à Paris",2,de-montreuil; henriquez-g
@@ -166,9 +166,7 @@ cotonnierecongolaise,cotonniereequatoriale,Cie cotonnière congolaise,Cie cotonn
 cotonnierecongolaise,cotonnierehautoubangui,Cie cotonnière congolaise,Cie cotonnière du Haut-Oubangui,2,de-bauw-a; landeghem-a
 cotonnierecongolaise,cotonsafricains,Cie cotonnière congolaise,Societe francaise des Cotons africains,2,rhodius-j; vigneron-f
 comptoirsplantationscameroun,exploitationscommercialesafricaines,Comptoirs et plantations du Cameroun,Compagnie d'Exploitations commerciales africaines,2,guiraud-a; raimond-j
-groupementgabonais,minierecongo,Groupement gabonais S. A,Cie Minière du Congo français,2,monteil-j; perrin-l
 groupementgabonais,recherchesauriferescamerouno,Groupement gabonais S. A,Société de recherches aurifères au Cameroun (S.O,2,perrin-l; pinci-m
-minierecongo,recherchesauriferesgabon,Cie Minière du Congo français,Cie de recherches aurifères au Gabon,2,monteil-j; perrin-l
 forestierenombo,unioncolonialeagricoleforestiere,Compagnie forestière de Nombo,Union coloniale agricole et forestière,2,couriol-l; martin-g
 forestiereniari,proprietairekouilouniari,Société Forestière du Niari,Compagnie Propriétaire du Kouilou-Niari,2,deveaud-p; thube-a
 comptoirboiscoloniaux,consortiumboisafricains,Comptoir des bois coloniaux,Consortium des bois africains,2,clement-g; clement-m
@@ -320,7 +318,6 @@ commercialeafriqueequatoriale,entreprisesafricaines,"Compagnie Commerciale de l'
 commercialeafriqueequatoriale,sultanatshautoubangui,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",Les Sultanats du Haut-Oubangui,1,mascart-c
 boiscoloniaux,exploitationscommercialesafricaines,Compagnie générale des Bois coloniaux,Compagnie d'Exploitations commerciales africaines,1,michenot-e
 exploitationsforestieresafricaines,messageriesfluvialescongo,Compagnie Exploitations forestières africaines,Messageries fluviales du Congo,1,guynet-w
-exploitationsforestieresafricaines,plantationsogooue,Compagnie Exploitations forestières africaines,Société des Plantations de l'Ogooué,1,guynet-w
 forestieresanghaoubangui,plantationsogooue,Compagnie Forestière Sangha-Oubangui,Société des Plantations de l'Ogooué,1,guynet-w
 messageriesfluvialescongo,plantationsogooue,Messageries fluviales du Congo,Société des Plantations de l'Ogooué,1,guynet-w
 minierecongo,plantationsogooue,Cie Minière du Congo français,Société des Plantations de l'Ogooué,1,guynet-w
@@ -337,18 +334,14 @@ financierecongo,fsehautcongo,Société financière du Congo français,Cie Fse du
 financierecongo,hautcongo,Société financière du Congo français,Compagnie Française du Haut-Congo,1,trechot-h
 alimaienne,immobilierecongolaise,L'Alimaïenne,Société Immobilière Congolaise,1,trechot-l
 bascongo,immobilierecongolaise,Compagnie Française du Bas-Congo,Société Immobilière Congolaise,1,trechot-l
+francbascongo,immobilierecongolaise,Cie Franç. du BAS-CONGO,Société Immobilière Congolaise,1,trechot-l
 hautbascongo,immobilierecongolaise,Compagnie française du Haut et Bas-Congo,Société Immobilière Congolaise,1,trechot-l
 hautcongo,immobilierecongolaise,Compagnie Française du Haut-Congo,Société Immobilière Congolaise,1,trechot-l
 hautengounie,plantationspalmeraiesogooue,Compagnie de la Haute-N'Gounié,Cie générale des Plantations et palmeraies de l'Ogooué,1,zafiropulo
 intertropicalcomfina,kouango,Intertropical-Comfina,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",1,josse-a
 intertropicalcomfina,sultanatshautoubangui,Intertropical-Comfina,Les Sultanats du Haut-Oubangui,1,josse-a
-afrique,afriquecongo,L'Afrique française,Afrique et Congo,1,pierre-c
-afrique,kouango,L'Afrique française,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",1,pierre-c
-afrique,shaki,L'Afrique française,SHAKI,1,pierre-c
 afriquecongo,afriqueminiereequatoriale,Afrique et Congo,Afrique minière équatoriale,1,pierre-c
-afriquecongo,shaki,Afrique et Congo,SHAKI,1,pierre-c
-afriqueminiereequatoriale,shaki,Afrique minière équatoriale,SHAKI,1,pierre-c
-kouango,shaki,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",SHAKI,1,pierre-c
+afriqueminiereequatoriale,sultanatshautoubangui,Afrique minière équatoriale,Les Sultanats du Haut-Oubangui,1,pierre-c
 equatorialemines,lyonnaiseafriqueequatoriale,Compagnie Équatoriale de mines,Compagnie Lyonnaise de l'Afrique équatoriale française,1,merlin-m
 afriquecongo,proprietairekouilouniari,Afrique et Congo,Compagnie Propriétaire du Kouilou-Niari,1,beulque-g
 entreprisescommercialescongobelge,leverbrothersltdportsunlightcheshire,Sté anon. d'entreprises commerciales au Congo belge,"Lever Brothers Ltd, Port SUNLIGHT, Cheshire",1,moseley-l
@@ -366,6 +359,7 @@ entreprisesafricaines,exploitationsforestieresafricaines,"Société d'entreprise
 entreprisesafricaines,transportsafrique,"Société d'entreprises africaines, puis Société d'entreprises africaines et Matériel colonial réunis",Compagnie Générale de transports en Afrique,1,fondere-a
 exploitationsforestieresafricaines,sultanatshautoubangui,Compagnie Exploitations forestières africaines,Les Sultanats du Haut-Oubangui,1,fondere-a
 exploitationsforestieresafricaines,transportsafrique,Compagnie Exploitations forestières africaines,Compagnie Générale de transports en Afrique,1,fondere-a
+ongomo,socongomo,L'Ongomo,Soc. de l'ONGOMO,1,ancel
 aktieselshapetgabonsandefjord,aktieselskapetcongosandefjord,Aktieselshapet « Gabon » SANDEFJORD,Aktieselskapet « Congo » SANDEFJORD,1,wegger-o
 centreafrique,entreprisesafricaines,Centre-Afrique,"Société d'entreprises africaines, puis Société d'entreprises africaines et Matériel colonial réunis",1,paulin
 boiscoloniaux,forestierelittoralgabonais,Compagnie générale des Bois coloniaux,Société forestière du littoral gabonais,1,vincent-l
@@ -376,10 +370,12 @@ cameroun,plantationssanaga,Cie française du Cameroun,Plantations de la Sanaga,1
 boiscoloniaux,palmeraiescameroun,Compagnie générale des Bois coloniaux,Compagnie des Palmeraies du Cameroun,1,levy-g
 cotonnierehautoubangui,kotto,Cie cotonnière du Haut-Oubangui,La Kotto,1,senn-o
 agricolecommercialealima,forestieresanghaoubangui,Société Agricole et Commerciale de l'Alima,Compagnie Forestière Sangha-Oubangui,1,decourcelle-e
-alima,forestieresanghaoubangui,ALIMA,Compagnie Forestière Sangha-Oubangui,1,decourcelle-e
+forestieresanghaoubangui,socagricolecommercialealima,Compagnie Forestière Sangha-Oubangui,Soc. agricole et commerciale de l'ALIMA,1,decourcelle-e
 agricolecommercialealima,messageriesfluvialescongo,Société Agricole et Commerciale de l'Alima,Messageries fluviales du Congo,1,david
-basogooue,equatorialemines,BAS-OGOOUÉ,Compagnie Équatoriale de mines,1,lambert-e
+alima,messageriesfluvialescongo,ALIMA,Messageries fluviales du Congo,1,david
+messageriesfluvialescongo,socagricolecommercialealima,Messageries fluviales du Congo,Soc. agricole et commerciale de l'ALIMA,1,david
 equatorialemines,industriellebasogooue,Compagnie Équatoriale de mines,Société Industrielle du Bas-Ogooué,1,lambert-e
+equatorialemines,socindbasogooue,Compagnie Équatoriale de mines,Soc. an. ind. du BAS-OGOOUÉ,1,lambert-e
 creditfonciercongo,transporteafriqueparis,Crédit foncier du Congo,"Cie générale de transporte en Afrique, à Paris",1,henriquez-g
 africaine,africainematerielindustriel,L'Africaine,Société africaine de matériel industriel,1,pecqueur-w
 africaine,boisgabon,L'Africaine,Société des Bois du Gabon,1,pecqueur-w
@@ -425,12 +421,10 @@ francocolonialeentreprises,kouango,Compagnie Franco-Coloniale d'Entreprises,"Com
 industriellecolonialeequatoriale,kouango,Cie industrielle et coloniale équatoriale,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",1,joubert-a
 cotonnierecongolaise,equatorialemines,Cie cotonnière congolaise,Compagnie Équatoriale de mines,1,martin-f
 exploitationscommercialesafricaines,groupementgabonais,Compagnie d'Exploitations commerciales africaines,Groupement gabonais S. A,1,perrin-l
-exploitationscommercialesafricaines,minierecongo,Compagnie d'Exploitations commerciales africaines,Cie Minière du Congo français,1,perrin-l
 exploitationscommercialesafricaines,miniereoubanghioriental,Compagnie d'Exploitations commerciales africaines,Compagnie Minière de l'Oubanghi oriental,1,perrin-l
 exploitationscommercialesafricaines,recherchesauriferescamerouno,Compagnie d'Exploitations commerciales africaines,Société de recherches aurifères au Cameroun (S.O,1,perrin-l
 exploitationscommercialesafricaines,recherchesauriferesgabon,Compagnie d'Exploitations commerciales africaines,Cie de recherches aurifères au Gabon,1,perrin-l
-minierecongo,recherchesauriferescamerouno,Cie Minière du Congo français,Société de recherches aurifères au Cameroun (S.O,1,perrin-l
-constructions,exploitationscommercialesafricaines,CONSTRUCTIONS,Compagnie d'Exploitations commerciales africaines,1,fouque-e
+exploitationscommercialesafricaines,socindustrielleconstructions,Compagnie d'Exploitations commerciales africaines,Soc. industrielle de CONSTRUCTIONS,1,fouque-e
 exploitationsforestieresafricaines,pastoralecommercialeafricaine,Compagnie Exploitations forestières africaines,"Compagnie Pastorale et Commerciale africaine, puis Pastorale africaine",1,dudet-e
 africaineplacages,exploitationscommercialesafricaines,Société Africaine de placages,Compagnie d'Exploitations commerciales africaines,1,hauser-e
 africaineplacages,exploitationsforestieresafricaines,Société Africaine de placages,Compagnie Exploitations forestières africaines,1,hauser-e
@@ -459,7 +453,6 @@ boismondah,consortiumventeokoume,Société des bois de la Mondah,Consortium de V
 forestierelittoralgabonais,industrielleboiscontreplaquesmultiplex,Société forestière du littoral gabonais,Cie industrielle des bois contreplaqués Multiplex,1,de-lustrac-j
 industrielleboiscontreplaquesmultiplex,recherchesminesafriqueequatoriale,Cie industrielle des bois contreplaqués Multiplex,Société Française de Recherches et de mines en Afrique Equatoriale,1,masson-c
 congolaise,gentil,Société anon. congolaise des Anc. Etabl. A. Defaye,GENTIL,1,tricart-p
-coteafrique,hautogooue,CÔTE D'AFRIQUE,HAUT-OGOOUÉ,1,chabrieres-m
 commercialeindustrielleagricolehautogooue,forestiereazingo,"Société commerciale, industrielle et agricole du Haut-Ogooué",Société forestière d'Azingo,1,durand-reville-l
 commercialeindustrielleagricolehautogooue,forestieresanghaoubangui,"Société commerciale, industrielle et agricole du Haut-Ogooué",Compagnie Forestière Sangha-Oubangui,1,durand-reville-l
 forestiereazingo,forestieresanghaoubangui,Société forestière d'Azingo,Compagnie Forestière Sangha-Oubangui,1,durand-reville-l
@@ -511,8 +504,8 @@ recherchesexploitationsdiamantiferes,transportsafrique,Société de Recherches e
 recherchesexploitationsdiamantiferes,transportsoubanguicameroun,Société de Recherches et d'exploitations diamantifères,"Société de Transports Oubangui-Cameroun, puis Société des transports ouest-centrafricains",1,benedic-e
 transporteafriqueparis,transportsoubanguicameroun,"Cie générale de transporte en Afrique, à Paris","Société de Transports Oubangui-Cameroun, puis Société des transports ouest-centrafricains",1,benedic-e
 transportsafrique,transportsoubanguicameroun,Compagnie Générale de transports en Afrique,"Société de Transports Oubangui-Cameroun, puis Société des transports ouest-centrafricains",1,benedic-e
-commercialediamant,minierecongo,Société commerciale du diamant,Cie Minière du Congo français,1,monteil-j
 commercialediamant,recherchesauriferesgabon,Société commerciale du diamant,Cie de recherches aurifères au Gabon,1,monteil-j
+bordelaisecomptoirsafricains,entreprisestravauxfrancecolonies,Compagnie Bordelaise des Comptoirs africains,Société d'entreprises de travaux en France et aux Colonies,1,cottin-j
 fibrescoloniales,transportsoubanguicameroun,Société des fibres coloniales,"Société de Transports Oubangui-Cameroun, puis Société des transports ouest-centrafricains",1,weill
 cotonnierehautoubangui,waagfrereslacanenghe,Cie cotonnière du Haut-Oubangui,"Waag frères, lac Anenghé",1,gillieaux-p
 kouango,waagfrereslacanenghe,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français","Waag frères, lac Anenghé",1,mobaye
@@ -524,6 +517,8 @@ commercialehollandoafricainesingel,socoma,"Cie commerciale Hollando-Africaine, S
 plantationsnyombepenjanyombe,unionbananierecameroun,"Plantations de Nyombé-Penja, NYOMBÉ",Union bananière du Cameroun,1,martin-a
 unionfluvialeafriquecentralefortlamy,unionroutierecentreafricaine,"Union fluviale de l'Afrique centrale, FORT-LAMY","Union routière centre-africaine, Anct",1,belan-p
 caissecentralefranceoutremer,unionoutremer,Caisse centrale de la France d'outre-mer,Union française d'outre-mer,1,gilet-h
+caissecentralefranceoutremer,cameroun,Caisse centrale de la France d'outre-mer,Cie française du Cameroun,1,jouy-f
+caissecentralefranceoutremer,gabon,Caisse centrale de la France d'outre-mer,Compagnie Française du Gabon,1,jouy-f
 creditcameroun,energieelectriquecamerounbp,Crédit du Cameroun,"Énergie électrique du Cameroun, B. P",1,riocros-j
 afriquenoire,transportsafrique,Cie de l'Afrique noire,Compagnie Générale de transports en Afrique,1,worms
 africaineplacages,plantationspalmeraiesogooue,Société Africaine de placages,Cie générale des Plantations et palmeraies de l'Ogooué,1,sellier-r
@@ -592,12 +587,14 @@ miniereintercoloniale,miniereoubanghioriental,Société minière intercoloniale,
 miniereintercoloniale,participationsminieresafriquecentrale,Société minière intercoloniale,Société de participations minières en Afrique Centrale,1,de-flers-f
 miniereoubanghioriental,participationsminieresafriquecentrale,Compagnie Minière de l'Oubanghi oriental,Société de participations minières en Afrique Centrale,1,de-flers-f
 equatorialemines,miniereogoouelobaye,Compagnie Équatoriale de mines,Société minière de l'Ogooué-Lobaye,1,berger-h
+equatorialemines,socindustrielleconstructions,Compagnie Équatoriale de mines,Soc. industrielle de CONSTRUCTIONS,1,berger-h
+miniereogoouelobaye,socindustrielleconstructions,Société minière de l'Ogooué-Lobaye,Soc. industrielle de CONSTRUCTIONS,1,berger-h
 brasseriescameroun,unionminierebascongo,Société anonyme des Brasseries du Cameroun,Union minière du Bas-Congo,1,mialaret-f
 socoma,unionroutierecentreafricaine,SOCOMA,"Union routière centre-africaine, Anct",1,garage
 altex,socoma,Société Altex,SOCOMA,1,million-fr-c-f-a
-agricoleforestierecameroun,constructions,Compagnie Agricole et forestière du Cameroun,CONSTRUCTIONS,1,ottino-j
+agricoleforestierecameroun,socindustrielleconstructions,Compagnie Agricole et forestière du Cameroun,Soc. industrielle de CONSTRUCTIONS,1,ottino-j
 entreprisesafricaines,soudanaise,"Société d'entreprises africaines, puis Société d'entreprises africaines et Matériel colonial réunis",Compagnie Soudanaise,1,loste-h
-basogooue,boiscoloniaux,BAS-OGOOUÉ,Compagnie générale des Bois coloniaux,1,tassy
+boiscoloniaux,socindbasogooue,Compagnie générale des Bois coloniaux,Soc. an. ind. du BAS-OGOOUÉ,1,tassy
 equatorialemines,transportsafrique,Compagnie Équatoriale de mines,Compagnie Générale de transports en Afrique,1,benard-m
 financierecongo,transportsafrique,Société financière du Congo français,Compagnie Générale de transports en Afrique,1,benard-m
 commercialekouilouniari,pariscongo,Société Commerciale du Kouilou-Niari,Paris-Congo,1,laffitte-j
