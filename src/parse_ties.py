@@ -393,8 +393,27 @@ def find_anchors(text: str, is_annuaire: bool) -> list[Anchor]:
     return anchors
 
 
-def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[dict]:
-    """Split a document into dated, company-attributed segments."""
+# Anchors that introduce a *structured* directory entry. Inside a single-firm
+# dossier these are that firm's own entry, so an unparseable entry name can
+# safely fall back to the dossier's company. A `citation` is not on this list:
+# a press extract inside a dossier may be about anyone, and one sampled case
+# was a concession application by a man who sat on no board at all.
+DOSSIER_FALLBACK_KINDS = {"directory_entry", "aec_entry", "numbered_entry",
+                          "annuaire_header"}
+
+
+def build_segments(text: str, is_annuaire: bool, default_company: str,
+                   dossier_fallback: bool = False) -> list[dict]:
+    """Split a document into dated, company-attributed segments.
+
+    `dossier_fallback` recovers attribution in a single-firm dossier. The
+    anchor rules below deliberately blank the company when a directory entry's
+    name cannot be validated, because in a multi-firm annuaire keeping the
+    previous firm credits it with the next firm's board. But in a dossier
+    *about one firm*, that same blanking discards ties whose owner is known
+    from the catalogue title - 7,729 of them. The caller passes True only for
+    a company dossier that is not itself an annuaire.
+    """
     anchors = find_anchors(text, is_annuaire)
     segments: list[dict] = []
 
@@ -461,6 +480,11 @@ def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[d
         if from_entry and entry_pos >= 0 and a.pos - entry_pos > MAX_ENTRY_SCOPE:
             company = ""
 
+        attribution = "anchor" if company else ""
+        if not company and dossier_fallback and a.kind in DOSSIER_FALLBACK_KINDS:
+            company = default_company
+            attribution = "dossier_fallback"
+
         segments.append(
             {
                 "start": a.pos,
@@ -469,6 +493,7 @@ def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[d
                 "source": cur_source,
                 "company": company,
                 "anchor": a.kind,
+                "attribution": attribution,
                 "page": a.page,
             }
         )
@@ -493,6 +518,33 @@ PROSE_VERB_RE = re.compile(
     r"s'[eé]l[eè]ve|comprend|figure|permet|doit|peut|vient)\b",
     re.I,
 )
+
+
+# Field labels, balance-sheet prose and addresses that survive name parsing
+# and become "people". These were always in the data but sat harmlessly
+# unattributed; recovering attribution (see build_segments) would promote them
+# into real edges, so they are dropped outright - which also removes 3,209
+# that were already attributed before that change.
+MEMBER_JUNK_RE = re.compile(
+    r"\b(capital|commissaires?|propri[ée]taires?|si[èe]ge|statuts|exercice|"
+    r"dividende|assembl[ée]e|bilan|r[ée]serves?|archives|galeries|"
+    r"nomm[ée]s?\s+pour|pris\s+parmi|n[ée]\s+[àa]\s|fr[èe]re\s+d|"
+    r"conseil|administration|exp\.)", re.I)
+MEMBER_ADDRESS_RE = re.compile(
+    r",\s*(?:r\.|bd|av\.|rue|boulevard|avenue|place|quai)\s|\bparc\s+de\b", re.I)
+# A period after a word of four or more letters, then a capital: a swallowed
+# sentence boundary. Four letters, because "Ed. Bousquet" and "F. Urruty" are
+# ordinary names and a shorter rule flags 22,560 of them.
+MEMBER_SENTENCE_RE = re.compile(r"[^\W\d_]{4,}\.\s+[A-ZÉÈÀÂÎÔÛÇ]")
+
+
+def member_is_junk(name: str) -> bool:
+    """True when a parsed 'person' is really a field label, an address or prose."""
+    if not name:
+        return True
+    return bool(MEMBER_JUNK_RE.search(name)
+                or MEMBER_ADDRESS_RE.search(name)
+                or MEMBER_SENTENCE_RE.search(name))
 
 
 def _fragment_is_namelike(frag: str) -> bool:
@@ -838,6 +890,7 @@ def main() -> None:
     report: list[dict] = []
 
     company_names: dict[str, dict] = {}
+    n_junk = 0
     person_records: dict[str, dict] = defaultdict(
         lambda: {"person_key": "", "names": set(), "surname": "", "given": set(), "n_ties": 0}
     )
@@ -873,7 +926,11 @@ def main() -> None:
             # entry anchor names an actual firm.
             default_company = ""
 
-        segments = build_segments(text, annuaire, default_company)
+        # A single-firm dossier can recover attribution from its own title;
+        # an annuaire cannot, and a thematic document has no subject firm.
+        fallback = (doc["entry_type"] == "company" and not annuaire
+                    and bool(default_company))
+        segments = build_segments(text, annuaire, default_company, fallback)
 
         n_ties = 0
         for seg in segments:
@@ -905,6 +962,7 @@ def main() -> None:
                         "year": seg["year"],
                         "source_ref": seg["source"],
                         "anchor_type": seg["anchor"],
+                        "attribution": seg.get("attribution", ""),
                         "trigger": trigger,
                         "annotation": mem["annotation"],
                         "region": doc["region"],
@@ -914,6 +972,8 @@ def main() -> None:
                     if mem["member_type"] == "organisation":
                         row["member_key"] = mem["entity_key"]
                         org_affiliations.append(row)
+                    elif member_is_junk(mem["name_clean"]):
+                        n_junk += 1
                     else:
                         row["person_key"] = mem["entity_key"]
                         row["surname"] = mem["surname"]
@@ -987,7 +1047,8 @@ def main() -> None:
     _write(f"affiliations{sfx}.csv", affiliations,
            ["doc_id", "company_key", "company_name", "person_key", "name_clean", "surname",
             "given", "role", "year", "source_ref", "annotation", "region", "country",
-            "sector", "anchor_type", "trigger", "parse_note", "member_raw"])
+            "sector", "anchor_type", "attribution", "trigger", "parse_note",
+            "member_raw"])
     _write(f"org_affiliations{sfx}.csv", org_affiliations,
            ["doc_id", "company_key", "company_name", "member_key", "name_clean", "role",
             "year", "source_ref", "annotation", "region", "country", "sector",

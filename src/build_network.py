@@ -374,16 +374,17 @@ def main() -> None:
                     help="skip GraphML export above this node count")
     ap.add_argument("--no-person-index", action="store_true",
                     help="exclude stage 3b (the annuaire indexes) from the network")
-    ap.add_argument("--with-biographical", action="store_true",
-                    help="include stage 3e (biographical dictionaries). Off by "
-                         "default; these ties carry no year.")
-    ap.add_argument("--with-annotations", action="store_true",
-                    help="include stage 3d (the compiler's inline affiliation "
-                         "notes, resolved). Off by default.")
-    ap.add_argument("--with-prose", action="store_true",
-                    help="include stage 3c (prose-reported boards). Off by "
-                         "default: hand-audited precision is ~90%%, below the "
-                         "structured parser's, so it is opt-in.")
+    # Every extraction genre is included by default; each can be excluded.
+    # `source_genre` is on every observation and every two-mode edge, so a
+    # study that wants only the structured evidence can filter instead of
+    # rebuilding. Precision by genre is in METHODOLOGY §4c-4f.
+    ap.add_argument("--no-prose", action="store_true",
+                    help="exclude stage 3c (prose-reported boards, ~90%%)")
+    ap.add_argument("--no-annotations", action="store_true",
+                    help="exclude stage 3d (the compiler's inline notes, ~94%%)")
+    ap.add_argument("--no-biographical", action="store_true",
+                    help="exclude stage 3e (biographical dictionaries, ~93%%; "
+                         "these ties carry no year)")
     args = ap.parse_args()
 
     documents = read_csv("documents.csv")
@@ -411,7 +412,8 @@ def main() -> None:
     # of random samples puts precision near 90% against the structured
     # parser's high nineties. Every row is tagged `prose`, so including it and
     # filtering later is equivalent to excluding it here.
-    if args.with_prose:
+    if not args.no_prose and os.path.exists(
+            os.path.join(PROC_DIR, "affiliations_prose.csv")):
         pr = read_csv("affiliations_prose.csv")
         for r in pr:
             r.setdefault("source_genre", "prose")
@@ -421,7 +423,8 @@ def main() -> None:
     # Stage 3d: the compiler's own notes on a director's other seats. Opt-in:
     # this is the compiler's assertion rather than a transcribed board list,
     # and it carries no year of its own beyond the observation it sits beside.
-    if args.with_annotations:
+    if not args.no_annotations and os.path.exists(
+            os.path.join(PROC_DIR, "affiliations_annotations.csv")):
         an = read_csv("affiliations_annotations.csv")
         for r in an:
             r["person_key"] = r["person_id"]
@@ -441,7 +444,8 @@ def main() -> None:
 
     # Stage 3e: biographical dictionaries. Opt-in, and note these ties are
     # undated - the entry gives a career, not a board list for a given year.
-    if args.with_biographical:
+    if not args.no_biographical and os.path.exists(
+            os.path.join(PROC_DIR, "affiliations_biographical.csv")):
         bio = read_csv("affiliations_biographical.csv")
         for r in bio:
             r.setdefault("source_genre", "biographical")
