@@ -374,6 +374,9 @@ def main() -> None:
                     help="skip GraphML export above this node count")
     ap.add_argument("--no-person-index", action="store_true",
                     help="exclude stage 3b (the annuaire indexes) from the network")
+    ap.add_argument("--with-annotations", action="store_true",
+                    help="include stage 3d (the compiler's inline affiliation "
+                         "notes, resolved). Off by default.")
     ap.add_argument("--with-prose", action="store_true",
                     help="include stage 3c (prose-reported boards). Off by "
                          "default: hand-audited precision is ~90%%, below the "
@@ -411,6 +414,27 @@ def main() -> None:
             r.setdefault("source_genre", "prose")
         affiliations += [r for r in pr if r["company_key"] and r.get("person_key")]
         print(f"prose rows merged: {len(pr):,}", file=sys.stderr)
+
+    # Stage 3d: the compiler's own notes on a director's other seats. Opt-in:
+    # this is the compiler's assertion rather than a transcribed board list,
+    # and it carries no year of its own beyond the observation it sits beside.
+    if args.with_annotations:
+        an = read_csv("affiliations_annotations.csv")
+        for r in an:
+            r["person_key"] = r["person_id"]
+            r.setdefault("source_genre", "annotation")
+            r.setdefault("name_clean", "")
+            r.setdefault("surname", "")
+            r.setdefault("given", "")
+            r.setdefault("parse_note", "")
+            r.setdefault("member_raw", r.get("annotation", ""))
+            r.setdefault("anchor_type", "annotation")
+            r.setdefault("trigger", "annotation")
+            r.setdefault("region", "")
+            r.setdefault("country", "")
+            r.setdefault("sector", "")
+        affiliations += [r for r in an if r["company_key"] and r["person_key"]]
+        print(f"annotation rows merged: {len(an):,}", file=sys.stderr)
 
     for r in affiliations + org_aff:
         r.setdefault("source_genre", "dossier")

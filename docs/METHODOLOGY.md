@@ -43,6 +43,8 @@ Ten stages, each resumable, each writing its own outputs:
 3b. **`parse_person_index.py`** — inverted indexes → person → company ties
    the dossier parser cannot see (§2b).
 3c. **`parse_prose.py`** — boards reported in running prose (§4d). Opt-in.
+3d. **`resolve_annotations.py`** — the compiler's inline affiliation notes,
+   resolved against the company list (§4e). Opt-in; runs after stage 4.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
@@ -62,7 +64,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (778 assertions).
+`checks.py` validates the parsers and the built dataset (794 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -368,6 +370,47 @@ Every row is tagged `source_genre = "prose"`, so including it and filtering
 later is equivalent. That 23% of its rows independently corroborate a pair the
 structured parser already found is a useful signal: noise would not
 concentrate on pairs another method also produced.
+
+## 4e. The compiler's own affiliation notes
+
+Board lists carry the compiler's identification of a director's *other* seats,
+beside the name: `A. R. Fontaine (Distill. Indoch.)`. That is interlock
+evidence stated by the source. Stage 4 emits 20,208 of these as candidates but
+resolves only 2,523 — exact names and catalogue acronyms — because the note is
+abbreviated where the company name is not.
+
+`resolve_annotations.py` matches by **token prefix, in order**: every note
+token must prefix a name token, and in sequence. "Cotonn. St-Quentin" resolves
+to *Cotonnière de Saint-Quentin*; "Bq de Madagascar" to *Banque de
+Madagascar*. Prefix matching needs no list of abbreviations, which matters
+because the compiler invents them freely. Result: **1,780 ties over 520 firms**,
+hand-audited at roughly 94%.
+
+Three refusals do most of the work for precision. A note matching several
+firms is dropped rather than resolved to the likeliest — "Mines" prefixes
+dozens of names, and choosing one manufactures a specific, checkable, wrong
+claim. A single token resolves only on an exact whole-name match, because
+"Armand" prefixes *Armandon & Cie* and "Zafiropulo" prefixed an unrelated
+agency. And a note that is a territory is never a firm: "Afrique Équatoriale
+Française" was matching *Société Générale Française de l'Afrique équatoriale*.
+
+The stage also filters out target company nodes whose "name" is really a
+biographical fragment — the parsers occasionally promote a prose span, and
+matching against one such node turns a single bad node into many bad ties.
+Writing that filter reproduced a bug already documented in `names.py`: under
+`re.IGNORECASE` a `[a-z]` character class matches uppercase too, so a rule
+meant to catch lowercase openings rejected *every* company name in the file,
+including the Banque de l'Indochine. `checks.py` now pins five real names
+against it.
+
+Why only 9% resolve: 4,667 notes name the firm the observation already
+belongs to, and 8,108 name a company absent from this corpus — many are
+metropolitan firms the collection never covers. Neither is recoverable by
+better matching.
+
+Opt-in via `build_network.py --with-annotations`, because this is the
+compiler's assertion rather than a transcribed board list, and it carries no
+year of its own beyond the observation it sits beside.
 
 ## 5. Dating and attributing ties
 

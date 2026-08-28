@@ -744,6 +744,65 @@ def check_prose_parser() -> None:
        {r["source_genre"] for r in rows}, {"prose"})
 
 
+def check_annotation_resolver() -> None:
+    """Stage 3d: abbreviation matching, and the guards it needed."""
+    from resolve_annotations import (JUNK_NAME_RE, build_index, content,
+                                     matches, resolve, tokens)
+
+    print("annotation resolver", file=sys.stderr)
+
+    # Prefix matching in order, which is what lets an abbreviation resolve.
+    check("  'cotonn st quentin' prefixes 'cotonniere de saint quentin'",
+          matches(content(tokens("Cotonn. St-Quentin")),
+                  content(tokens("Cotonnière de Saint-Quentin"))))
+    check("  'cie gen transatl' prefixes the full name",
+          matches(content(tokens("Cie gén. transatl")),
+                  content(tokens("Compagnie générale transatlantique"))))
+    check("  out-of-order tokens do not match",
+          not matches(content(tokens("quentin cotonn")),
+                      content(tokens("Cotonnière de Saint-Quentin"))))
+
+    # The junk filter must not be case-insensitive: under re.I a "^[a-z]"
+    # class matches an uppercase initial, and the first version of this
+    # pattern rejected every company name in the file.
+    for good in ("Banque de l'Indochine", "Compagnie Générale des colonies",
+                 "L'Air liquide", "Société des Messageries maritimes",
+                 "Omnium lyonnais"):
+        check(f"  JUNK_NAME_RE keeps {good[:28]!r}", not JUNK_NAME_RE.search(good))
+    for junk in ("G., 1921-22 min. Int., 1928-30 min. Instruc.",
+                 "Xavier Loisy: polytechnicien"):
+        check(f"  JUNK_NAME_RE rejects {junk[:28]!r}", bool(JUNK_NAME_RE.search(junk)))
+
+    index = build_index([
+        {"company_id": "banqueindochine", "name": "Banque de l'Indochine"},
+        {"company_id": "mineszellidja", "name": "Société des Mines de Zellidja"},
+        {"company_id": "minesbouthaleb", "name": "Société des Mines du Bou-Thaleb"},
+    ])
+    from collections import defaultdict as _dd
+    by_first = _dd(list)
+    for i, (_, _, tk) in enumerate(index):
+        for t in set(content(tk) or tk):
+            by_first[t[:2]].append(i)
+
+    cid, _, method = resolve("Bq de l'Indochine", index, by_first)
+    eq("  'Bq de l'Indochine' resolves", cid, "banqueindochine")
+    # "Mines" alone prefixes both mining firms: guessing would manufacture a
+    # specific, checkable, wrong claim.
+    cid, _, method = resolve("Mines", index, by_first)
+    eq("  a note matching several firms is dropped", cid, "")
+    check("  ...and says why", method in {"single_token", "ambiguous_2"}, method)
+
+    path = os.path.join(PROC_DIR, "affiliations_annotations.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_annotations.csv")
+    check("  resolver produced ties", len(rows) > 500, str(len(rows)))
+    self_ref = [r for r in rows if r["company_key"] == r["from_company_id"]]
+    check("  no tie points back at the firm it was read from", not self_ref,
+          str(len(self_ref)))
+    eq("  every row is tagged", {r["source_genre"] for r in rows}, {"annotation"})
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -1029,6 +1088,7 @@ def main() -> None:
         check_splits()
         check_person_index()
         check_prose_parser()
+        check_annotation_resolver()
         check_geocoding()
         check_figures()
 

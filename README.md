@@ -228,6 +228,7 @@ src/
   parse_ties.py        stage 3  text         -> companies, people, dated ties
   parse_person_index.py stage 3b inverted indexes -> person -> company ties
   parse_prose.py       stage 3c prose      -> boards reported in running text
+  resolve_annotations.py stage 3d notes    -> the compiler's inline affiliations
   build_network.py     stage 4  ties         -> nodes, edges, projections, GraphML
   split_by_country.py  stage 5  dataset      -> per-territory bundles
   code_positionality.py stage 6 people       -> colonial / native coding
@@ -239,7 +240,7 @@ src/
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            778 assertions on the parsers and the built dataset
+  checks.py            794 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -269,6 +270,7 @@ python3 src/fetch_extract.py --retry-failed   # sweep transient network errors
 python3 src/parse_ties.py                     # ~6 min
 python3 src/parse_person_index.py             # ~1 min, person-indexed annuaires
 python3 src/parse_prose.py                    # ~4 min, prose-reported boards
+python3 src/resolve_annotations.py            # after stage 4; inline notes
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding

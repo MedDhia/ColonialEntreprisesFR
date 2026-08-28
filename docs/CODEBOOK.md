@@ -145,6 +145,19 @@ person-firm pairs appear nowhere else, and 23% of its rows corroborate a pair
 the structured parser found independently. See METHODOLOGY §4d for the audit
 and the seven failure classes it fixed.
 
+### `affiliations_annotations.csv` — the compiler's inline notes, resolved (1,780)
+
+Written by `src/resolve_annotations.py` (stage 3d) from
+`candidate_ties_from_annotations.csv`. Columns: `person_id`, `company_key`,
+`company_name`, `role`, `year`, `source_ref`, `doc_id`, `annotation`,
+`from_company_id` (the firm the note was read beside), `match_method`,
+`n_observations`, `source_genre`.
+
+`match_method` records how the note resolved: `name` and `acronym` come from
+stage 4; `prefix`, `prefix_exact_length` and `exact_single_token` from the
+abbreviation matcher. Hand-audited at roughly 94%. Not in the default network
+— `build_network.py --with-annotations`. See METHODOLOGY §4e.
+
 ### `org_affiliations.csv` — company → company board ties as observed
 
 Same shape, for board members that are companies rather than people
