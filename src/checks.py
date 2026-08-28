@@ -702,6 +702,26 @@ def check_figures() -> None:
     # Identity must never rest on colour alone: the legend, the table view and
     # the dark-mode pair above are what the palette's contrast WARN obliges.
 
+    # Every figure must exist as a raster too, and the raster must be current.
+    # A stale PNG beside a rebuilt SVG is the failure mode worth catching:
+    # it looks like a figure and shows the previous run's data.
+    missing, stale, tiny = [], [], []
+    for svg in svgs:
+        svg_path = os.path.join(fig_dir, svg)
+        png_path = svg_path[:-4] + ".png"
+        if not os.path.exists(svg_path):
+            continue
+        if not os.path.exists(png_path):
+            missing.append(svg)
+        elif os.path.getmtime(png_path) < os.path.getmtime(svg_path) - 1:
+            stale.append(svg)
+        elif os.path.getsize(png_path) < 3000:
+            tiny.append(svg)
+    check(f"  every figure has a PNG ({len(svgs)} figures)", not missing,
+          str(missing[:4]))
+    check("  no PNG is older than its SVG", not stale, str(stale[:4]))
+    check("  no PNG is suspiciously small", not tiny, str(tiny[:4]))
+
 
 def main() -> None:
     ap = argparse.ArgumentParser()

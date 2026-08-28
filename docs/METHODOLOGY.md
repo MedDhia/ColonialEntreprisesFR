@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Eight stages, each resumable, each writing its own outputs:
+Nine stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -46,8 +46,9 @@ Eight stages, each resumable, each writing its own outputs:
 7. **`make_figures.py`** — network → the core figures, HTML and SVG (§5d).
 8. **`make_territory_figures.py`** — network → the whole-empire figure, the
    territory matrix and one figure per territory (§5d).
+9. **`render_png.py`** — every figure → PNG, one network per file.
 
-`checks.py` validates the parsers and the built dataset (422 assertions).
+`checks.py` validates the parsers and the built dataset (425 assertions).
 
 ### The extraction trap
 
@@ -479,6 +480,7 @@ python3 src/split_by_country.py                 # ~2 min, per-territory bundles
 python3 src/code_positionality.py               # ~1 min, positionality coding
 python3 src/make_figures.py                     # ~1 min, core figures
 python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
+python3 src/render_png.py                       # ~40 s, PNG of every figure
 python3 src/checks.py                           # must pass
 ```
 

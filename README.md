@@ -127,15 +127,28 @@ versioned as a standalone SVG for papers.
 |---|---|
 | `fig4_empire_network.svg` | **Every** firm sharing a director: 3,085 firms, 39,523 interlocks, nothing subsetted. Colour is territory. |
 | `fig5_territory_matrix.svg` | The empire as a network of territories — 53 × 53 cells, each the number of directors sitting on boards in both. |
-| `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph. |
+| `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph — `algerie`, `tunisie`, `madagascar`, `indochine`, `senegal`, … |
+
+Every figure is versioned twice: `<name>.svg` and `<name>.png` beside it,
+one network per file. The PNGs are 2× (retina-sharp on screen, fine printed a
+page wide) and are what GitHub previews inline.
 
 ```bash
 python3 src/make_figures.py             # figs 1-3, ~1 min
 python3 src/make_territory_figures.py   # figs 4-5 and the 42, ~1 min
+python3 src/render_png.py               # all 47 as PNG, ~40 s
 ```
 
 `--top`, `--min-weight` and `--ego` change what figures 1–3 draw;
-`--level region` switches the territory figures to the 12 index-page regions.
+`--level region` switches the territory figures to the 12 index-page regions;
+`--scale 3` and `--only <stem>` control the PNG pass.
+
+**Colour is capped at three territories**, so on figures 1 and 4 Algeria,
+Tunisia, Madagascar and the rest fall into the recessive grey. That is a
+constraint of the form — a node-link diagram can put any two colours side by
+side, so the palette has to survive an all-pairs test — not a judgement about
+those territories. Each has its own figure in `by_country/`, where it is the
+whole subject.
 
 **Figures 1–3 are maps of the core, not of the whole graph** — each is an
 explicit subset, and none is a basis for a global claim about density or
@@ -167,7 +180,8 @@ src/
   make_figures.py      stage 7  network      -> core figures (HTML + SVG)
   make_territory_figures.py
                        stage 8  network      -> empire and per-territory figures
-  checks.py            422 assertions on the parsers and the built dataset
+  render_png.py        stage 9  figures      -> PNG, one network per file
+  checks.py            425 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -181,8 +195,8 @@ docs/
 figures/
   interlock_network.html  figures 1-3, interactive, self-contained
   territory_networks.html figures 4-5 and all 42 territories
-  fig*.svg                the same figures standalone, for papers
-  by_country/             one SVG per territory
+  fig*.svg, fig*.png      the same figures standalone, for papers
+  by_country/             one SVG and one PNG per territory
 examples/
   explore.py           worked tour of the dataset
 ```
@@ -199,6 +213,7 @@ python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
 python3 src/make_figures.py                   # ~1 min, core figures
 python3 src/make_territory_figures.py         # ~1 min, empire + per-territory
+python3 src/render_png.py                     # ~40 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```
 

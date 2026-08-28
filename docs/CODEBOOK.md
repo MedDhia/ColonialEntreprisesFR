@@ -484,6 +484,32 @@ python3 src/make_territory_figures.py --skip-empire      # figure 4 is the slow 
 python3 src/make_territory_figures.py --min-firms 5      # skip the tiniest graphs
 ```
 
+The 42 slugs match `data/by_country/`, so a territory's figure, its bundle and
+its manifest row line up: `algerie`, `tunisie`, `maroc`, `indochine`,
+`madagascar`, `senegal`, `afrique-occidentale-francaise` and so on. The twelve
+with no figure — Mozambique, Pérou, Abyssinie ou Ethiopie, Togo, Guyane
+hollandaise, Siam, Albanie, Tchad, Mauritanie, Nigéria, Bolivie, Géorgie —
+each have firms in the dataset but no two of them sharing a director.
+
+### PNG rasters
+
+`src/render_png.py` (stage 9) writes `<name>.png` beside every `<name>.svg`,
+one network per file, at 2× the SVG's pixel size.
+
+```bash
+python3 src/render_png.py                       # all 47, ~40 s
+python3 src/render_png.py --scale 3             # for print
+python3 src/render_png.py --only algerie tunisie
+```
+
+Rendering goes through headless Chromium rather than a converter library
+because the figures are laid out against Chromium's text metrics — the label
+width constant in `make_figures._text_width` was calibrated against
+`getComputedTextLength` in this browser, and another rasteriser's font
+substitution would move labels the checks have already verified. `checks.py`
+asserts every SVG has a PNG and that no PNG is older than its SVG: a stale
+raster looks like a figure and shows the previous run's data.
+
 ---
 
 ## 5. Value lists
