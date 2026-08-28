@@ -39,6 +39,7 @@ auxiliaireafricainedeveloppementcommerce,maurelprom,1914_1929,2,frere-m; maurel-
 auxiliaireafricaine,bordeaux,1914_1929,2,maurel-l; prom
 bordeaux,maurelprom,1914_1929,2,maurel-l; prom
 etablissementsmaurelhprom,maurelprom,1914_1929,2,maurel-j; maurel-l
+anciensetablissementschpeyrissac,anciensetablissementschpeyrissaccoloniale,1914_1929,2,matignon-j; peyrissac-l
 acieriesnord,forgesacieriesnordest,1914_1929,2,joubert-j; metayer-m
 exploitationsminieresindustrielles,forgesacieriesnordlorraine,1914_1929,2,bernard-j; metayer-m
 acieriesnord,usinesmetallurgiquesbasseloire,1914_1929,2,bernard-j; goudchaux-m
@@ -61,8 +62,8 @@ explosifs,universelleexplosifsproduitschimiques,1914_1929,2,bouchayer-h; corbin
 etablissementsbeccatdoulaincourtmusseycorbiebonneville,travauxhydrauliquesentreprisesgenerales,1914_1929,2,castel; jordan
 mineslaurium,minesmalfidano,1914_1929,2,monvoisin-f; urruty-f
 miniereribeira,minierevalburatmarignac,1914_1929,2,achalme-j; achalme-p
-grandemaisonbl,rouff,1914_1929,2,bloch-m; worms-e
-grandemaisonbl,grandstravauxbetonarme,1914_1929,2,michel-c; worms-e
+grandemaisonblanc,rouff,1914_1929,2,bloch-m; worms-e
+grandemaisonblanc,grandstravauxbetonarme,1914_1929,2,michel-c; worms-e
 omniumlyonnais,trustimmobilierfrance,1914_1929,2,barth-e; stockhammer-a
 orosdiback,tabacsorientoutremer,1914_1929,2,dutasta-p; ricois-e
 charbonnages,produitschimiquescharbonnages,1914_1929,2,e-bonnet; gaudet-r
@@ -86,6 +87,8 @@ auxiliaireafricainedeveloppementcommerce,bordeaux,1914_1929,1,maurel-l
 auxiliaireafricainedeveloppementcommerce,etablissementsmaurelhprom,1914_1929,1,maurel-l
 bordeaux,etablissementsmaurelhprom,1914_1929,1,maurel-l
 etablissementsmaurelhprom,navigationsudatlantique,1914_1929,1,prom-l
+anciensetablissementschpeyrissaccoloniale,auxiliaireafricainedeveloppementcommerce,1914_1929,1,e-casteincau
+anciensetablissementschpeyrissac,financierecaoutchoucs,1914_1929,1,clanis-g
 acieriesforgeshautsfourneauxpiombino,acieriesnord,1914_1929,1,metayer-m
 acieriesforgeshautsfourneauxpiombino,exploitationsminieresindustrielles,1914_1929,1,metayer-m
 acieriesforgeshautsfourneauxpiombino,forgesacieriesnordest,1914_1929,1,metayer-m
@@ -172,8 +175,8 @@ havraisepeninsulairenavigatonvapeur,usinesmetallurgiquesbasseloireantecedents,19
 forgesacieriesnordest,usinesmetallurgiquesbasseloireantecedents,1914_1929,1,goudchaux
 agricoleminoterie,usinesmetallurgiquesbasseloireantecedents,1914_1929,1,de-gunzburg-j
 forgesacieriesnordest,usinesmetallurgiquesbasseloire,1914_1929,1,cabrol-j
-grandemaisonbl,miniereribeira,1914_1929,1,bernard-l
-grandemaisonbl,usinesmetallurgiquesbasseloire,1914_1929,1,bernard-l
+grandemaisonblanc,miniereribeira,1914_1929,1,bernard-l
+grandemaisonblanc,usinesmetallurgiquesbasseloire,1914_1929,1,bernard-l
 miniereribeira,usinesmetallurgiquesbasseloire,1914_1929,1,bernard-l
 benardjarislovsky,commercialeouestafricain,1914_1929,1,francois-marsal-f
 benardjarislovsky,constructions,1914_1929,1,bancel-h
@@ -202,7 +205,7 @@ banquetransatlantique,etudesentreprisescoloniales,1914_1929,1,despret-g
 banquetransatlantique,mineslucette,1914_1929,1,faure-j
 candlot,cargos,1914_1929,1,bessonneau-j
 cargos,forgesacieriesnordlorraine,1914_1929,1,bessonneau-j
-candlot,grandemaisonbl,1914_1929,1,katz
+candlot,grandemaisonblanc,1914_1929,1,katz
 candlot,polietchausson,1914_1929,1,candlot-e
 centraleapplicationselectriques,centraleindustrieelectrique,1914_1929,1,homberg-o
 centraleapplicationselectriques,manufacturetapiscouvertures,1914_1929,1,homberg-o
@@ -514,6 +517,7 @@ cotiereannam,unionfinanciereextremeorient,1930_1944,1,denis-e
 etablissementsmaurelprom,fiduciaireindochine,1930_1944,1,denis-e
 etablissementsmaurelprom,unionfinanciereextremeorient,1930_1944,1,denis-e
 etablissementsmaurelprom,messageriesafricaines,1930_1944,1,maurel-r
+anciensetablissementschpeyrissac,creditfoncierouestafricain,1930_1944,1,davillier-j
 acieriesnord,nordlorraine,1930_1944,1,metayer-m
 industriellematerieltransportcimt,nordlorraine,1930_1944,1,metayer-m
 chargeursreunis,navigationfraissinet,1930_1944,1,cyprien-fabre-p
@@ -829,8 +833,10 @@ industrielleplatine,unionmines,1930_1944,1,de-solages
 pyreneenneenergieelectrique,unionmines,1930_1944,1,de-solages
 poudressurete,unionelectriquerurale,1930_1944,1,costa-de-beauregard-j
 unioncolonialefinanciereprivee,unionfrancocolonialepaysoutremer,1930_1944,1,x-c
+ancetablissementsjosephparis,entreprisetravauxpublicsouest,1945_1962,4,alliot-p; bolo-f; caldagues-j; tardy-l
 geranceparisienneprivee,hautsfourneauxchiers,1945_1962,3,coloniale-le-siege-est-a-paris; rosenstock; ullmann-e
 cheminsfertramwaysvargard,tramwayssaintquentin,1945_1962,3,autin-j; gerard-e; mechin-a
+anciensetablissementschpeyrissac,anciensetablissementschpeyrissaccoloniale,1945_1962,2,goux-p; peyrissac-w
 centraleenergieelectrique,tramways,1945_1962,2,boulle-l; caillaux-p
 forgesacieriesnordest,unionmines,1945_1962,2,esteve-h; le-blan-j
 colonies,unionindustriellecredit,1945_1962,2,beaupere-l; bouis-c

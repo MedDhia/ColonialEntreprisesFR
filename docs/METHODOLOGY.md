@@ -40,6 +40,8 @@ Ten stages, each resumable, each writing its own outputs:
    plus `text_extraction.csv`.
 3. **`parse_ties.py`** — text → `affiliations.csv`, `org_affiliations.csv`,
    `company_attributes.csv`, `doc_references.csv`.
+3b. **`parse_person_index.py`** — inverted indexes → person → company ties
+   the dossier parser cannot see (§2b).
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
@@ -59,7 +61,42 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (724 assertions).
+`checks.py` validates the parsers and the built dataset (751 assertions).
+
+## 2b. What is *not* extracted
+
+Extraction of the PDFs is near-complete: 5,867 of 5,920 documents (99.2%), the
+rest dead links. Turning that text into ties is not. **Only 2,482 of the 5,867
+(42%) yield a single tie.** The other 3,386 hold 47% of the extracted
+characters. This section says what is in them, because a reader is otherwise
+entitled to assume the pipeline saw everything.
+
+Sorting those 3,386 by how much board vocabulary they contain:
+
+| Role words in the text | Documents | Reading |
+|---|---|---|
+| none | 563 | genuinely no board data |
+| 1–4 | 986 | a passing mention in prose |
+| 5–24 | 1,307 | mostly honours lists and prose histories |
+| 25 or more | 530 | a different genre the parsers do not read |
+
+The last row is the real gap, and it is not one thing:
+
+- **Inverted indexes.** The entry is a person and the list is of companies,
+  keyed by number to a companion list. `parse_ties.py` cannot see these at
+  all. Stage 3b now reads them — see §4c — and recovers 16,131 ties from
+  `Annuaire Desfossés 1956` alone, a document that previously yielded zero.
+- **Biographical dictionaries** (*Qui êtes-vous ? 1924*, *Légion d'honneur en
+  Indochine*), where affiliations sit in a bracketed `[Administrateur : …]`
+  block after fielded prose. **Still unread.**
+- **Honours lists** (*Mérite agricole*, 1.1M characters). These score high on
+  role vocabulary but carry *occupations*, not directorships — "propriétaire
+  et colon", "vétérinaire à Oran". Correctly excluded; counting them would
+  inflate the network with ties that do not exist.
+
+Two further gaps are quantified elsewhere: **17,995 parsed ties (22.7%)** are
+dropped for want of an identifiable firm (§5), and **6,394 annotation leads**
+sit unverified in `candidate_ties_from_annotations.csv`.
 
 ### The extraction trap
 
@@ -185,6 +222,71 @@ others, so instead every plausible pair is written to
 splits one firm's degree across two nodes**, which matters for centrality and
 for component structure.
 
+## 4c. Reading the inverted indexes
+
+`src/parse_person_index.py` handles the genre §2b identifies: the entry is a
+person, the list is of companies, and the companies are numbered rather than
+named:
+
+```
+Achard (Georges-P.), 107 (dga BAO), 207 (Bq comm. afr.), 238 (Créd. fonc.
+    Ouest-Afric.), 1776 (Cult. Diakandapé).
+```
+
+The numbers key into a companion document that lists the firms in order —
+`107. Banque de l'Afrique occidentale` — so the pair is a complete, resolvable
+affiliation dataset. It produced **16,131 ties, 3,929 people and 1,889 firms**
+where the dossier parser produced none.
+
+**The trap.** Entries carry bracketed notes, and those notes contain numbers:
+`Abinal (Patrice)[1883-1961][ing.-conseil…], 1613 (…)`. The life dates 1883
+and 1961 are both valid company numbers, so a naive scan turns them into
+directorships that are entirely plausible and entirely invented. There are
+2,628 numbers inside brackets in that one document. Bracketed spans are
+therefore removed before any number is read, and a reference is accepted only
+in list position.
+
+Removing them is itself delicate. The document contains exactly one unmatched
+`[`; a regex that pairs it with the next `]` deletes **87% of the file**, which
+presents as a clean parse of a much smaller source rather than as an error. A
+bounded, depth-counting scan replaces the regex, and `checks.py` tests both
+failure modes directly.
+
+**How the result is verified rather than asserted.** Most references carry the
+compiler's own abbreviation of the firm — `107 (dga BAO)` — which is an
+independent statement of what the number means. Every glossed reference is
+scored for token overlap against the name the key gives. Agreement is **97%**;
+a misaligned numbering would collapse it, and `checks.py` enforces a floor of
+0.90. Roles come from the same gloss, with abbreviations peculiar to this
+source: `comm. cptes` is a statutory auditor, not a director, and 2,461 rows
+turn on that distinction alone.
+
+**Scope, left to the reader.** `Annuaire Desfossés 1956` covers the whole
+Paris Bourse, so only ~14% of its ties are at firms already in this dataset.
+Merging it wholesale would change what the dataset is — Nestlé and Técalémit
+are not colonial firms. The output is therefore a **separate file** with an
+`in_colonial_dataset` flag, not folded into `affiliations.csv`. The other 86%
+is not noise: it is the metropolitan portfolio of colonial directors, which is
+exactly what an interlocking-directorate study wants. That is a decision for
+the analyst.
+
+### A bug this stage exposed in `org_key`
+
+`org_key("Anciens Établissements Ch. Peyrissac et Cie")` returned an empty
+string. The rule that strips a trailing predecessor clause — "(anciennement
+Société X)" — ends in `.*$`, so on a name that *opens* with that vocabulary it
+matched at position 0 and consumed the whole name. Peyrissac is a substantial
+AOF trading house and lost 72 observations to it. The same pattern matched
+`anc` inside "Bl**anc**" and `ex` inside "Al**ex**.", truncating those names
+mid-word.
+
+The rule now fires only when real name text precedes it, and a name made
+entirely of legal forms falls back to a slug of the whole string — except
+where that slug is *itself* only a legal form ("Société"), which stays
+unkeyed rather than becoming a node several unrelated observations pile into.
+Twenty company identifiers changed, all of them corrections; 36 previously
+unkeyable firms now resolve.
+
 ## 5. Dating and attributing ties
 
 A document is split at **anchors** — points that fix a date, a source, or a
@@ -289,7 +391,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 24,458 names
+**Every obvious rule is wrong.** Each was measured against all 24,512 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -336,7 +438,7 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-3,085 firms and 39,523 edges: rendered as a node-link diagram it is a solid
+3,101 firms and 39,732 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
@@ -383,7 +485,7 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 3,085 firms and 39,523 interlocks.** At that density a
+**Figure 4 draws all 3,101 firms and 39,732 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
@@ -437,7 +539,7 @@ Three decisions determine the numbers.
 **Computed on the whole graph, displayed on a slice.** Betweenness is a global
 property: the shortest paths that matter run through firms outside any core
 one might draw. It is computed on the giant component of the interlock graph
-at `weight >= 1` (3,039 firms, 39,497 ties) and then displayed on whatever
+at `weight >= 1` (3,055 firms, 39,497 ties) and then displayed on whatever
 subset a figure shows. Recomputing it on the 170 drawn firms would yield a
 different quantity wearing the same name, and would systematically flatter
 firms that happen to sit in the middle of that particular selection.
@@ -494,7 +596,7 @@ hand-built because the names are historical — Bône not Annaba, Tourane not Da
 Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
 reliably. It is an input: editing it changes the output.
 
-**Coverage: 3,138 of 8,493 firms (37%), and 1,393 of the 3,085 in the
+**Coverage: 3,138 of 8,548 firms (37%), and 1,393 of the 3,101 in the
 interlock graph (45%).** The map draws those. It is not a map of the empire's
 firms but of the ones whose address survived, and the unplaced 55% are absent
 rather than assumed.

@@ -569,6 +569,98 @@ def check_labels() -> None:
                   f"{term} leaked into the French figure")
 
 
+def check_org_key() -> None:
+    """org_key must not be defeated by the name's own opening words."""
+    print("names.org_key", file=sys.stderr)
+    cases = [
+        # The predecessor clause is a *tail*. A name that opens with it used to
+        # be consumed whole: Peyrissac, a major AOF trading house, lost 72
+        # observations this way.
+        ("Anciens Établissements Ch. Peyrissac et Cie", "anciensetablissementschpeyrissac"),
+        ("Anciens Établissements Eiffel", "anciensetablissementseiffel"),
+        # Mid-word matches: "anc" inside "Blanc", "ex" inside "Alex".
+        ("Grande Maison de Blanc", "grandemaisonblanc"),
+        ("Alex. Bury. Cie minière", "alexburyminiere"),
+        ("Société Altex", "altex"),
+        # A real trailing predecessor clause is still stripped.
+        ("Compagnie du Maroc (anciennement Société marocaine)", "maroc"),
+        # All-stopword names get a slug rather than an empty key...
+        ("Société générale", "societegenerale"),
+        # ...but a bare legal form is not a firm and must stay unkeyed.
+        ("Société", ""),
+        ("Société anon.", ""),
+        ("Compagnie", ""),
+        # Unchanged behaviour on ordinary names.
+        ("Banque de l'Indochine", "banqueindochine"),
+    ]
+    for raw, want in cases:
+        eq(f"  org_key({raw[:34]!r})", org_key(raw), want)
+
+
+def check_person_index() -> None:
+    """The inverted-index parser: its two failure modes are silent."""
+    from parse_person_index import (REF_RE, gloss_agrees, role_of,
+                                    split_name, strip_brackets)
+
+    print("person-index parser", file=sys.stderr)
+
+    # Failure mode 1: numbers inside bracketed notes read as company
+    # references. Life dates fall squarely in the company-number range, so a
+    # fabricated tie looks entirely plausible.
+    entry = "Abinal (Patrice)[1883-1961][ing.-conseil, anc. adm.], 1613 (Applications)."
+    stripped = strip_brackets(entry)
+    check("  bracketed life dates are stripped before refs are read",
+          "1883" not in stripped and "1961" not in stripped and "1613" in stripped,
+          repr(stripped))
+    name, rest = split_name(stripped)
+    refs = [n for n, _ in REF_RE.findall(rest or "")]
+    eq("  only the real reference survives", refs, ["1613"])
+
+    # Failure mode 2: an unmatched '[' pairs with a ']' far below and the
+    # regex deletes most of the document - which looks like a clean parse of
+    # a much smaller source rather than like an error.
+    runaway = "A (x), 11 (one).\n" + "B [unclosed, 22 (two).\n" + "C (y), 33 (three).\n"
+    out = strip_brackets(runaway)
+    check("  an unmatched bracket does not eat the document",
+          len(out) > 0.8 * len(runaway) and "33" in out,
+          f"{len(out)} of {len(runaway)} chars survived")
+
+    # Role abbreviations peculiar to the annuaire.
+    for gloss, want in (("comm. cptes Pyrites de Huelva", "commissaire_aux_comptes"),
+                        ("pdt Nestlé Alimentana", "president"),
+                        ("v.-pdt Crédit sarrois", "vice_president"),
+                        ("dga BAO", "directeur_general"),
+                        ("censeur Bq Algérie", "censeur"),
+                        ("Land bank of Egypt", "administrateur")):
+        eq(f"  role_of({gloss[:22]!r})", role_of(gloss), want)
+
+    check("  gloss agreement detects a mismatch",
+          gloss_agrees("Bq comm. afr.", "Banque commerciale africaine") is True
+          and gloss_agrees("Nestlé", "Chemins de fer du Maroc") is False)
+
+    path = os.path.join(PROC_DIR, "affiliations_person_index.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_person_index.csv")
+    check("  produced a substantial number of ties", len(rows) > 5000, str(len(rows)))
+    nokey = [r for r in rows if not r["company_key"]]
+    check("  every row resolves to a company", not nokey, str(len(nokey)))
+    nolink = [r for r in rows if not r["person_key"] and not r["member_key"]]
+    check("  every row has a person or a corporate member", not nolink,
+          str(len(nolink)))
+    brackets = [r for r in rows if "[" in r["company_name"]]
+    check("  editorial notes are stripped from company names", not brackets,
+          str([r["company_name"][:40] for r in brackets[:2]]))
+
+    report = load("person_index_report.csv")
+    for r in report:
+        rate = float(r["gloss_agreement"])
+        check(f"  {r['title'][:34]}: gloss agreement >= 0.90", rate >= 0.90,
+              f"{rate:.3f} - the numbering may be misaligned")
+        check(f"  {r['title'][:34]}: key is substantial",
+              int(r["n_key_companies"]) > 500, r["n_key_companies"])
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -846,11 +938,13 @@ def main() -> None:
     check_citations()
     check_layout()
     check_labels()
+    check_org_key()
     if not args.unit:
         check_extraction()
         check_dataset()
         check_positionality()
         check_splits()
+        check_person_index()
         check_geocoding()
         check_figures()
 

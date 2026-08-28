@@ -282,17 +282,62 @@ def normalise_org_name(raw: str) -> str:
 # "Omnium nord-africain (Anct Bonnaud et Cie)", "Marocaine metallurgique (anc.
 # Ets Bouvier)". The tail names a different firm, so it must not enter the key.
 PREDECESSOR_TAIL_RE = re.compile(
-    r"\s*[\(,]?\s*(?:anct?\.?|ancienne?(?:ment)?|anciens?|ex-?|pr[eé]c[eé]demment|"
+    # The leading \b matters: without it "ex-?" matches inside "Alex." and
+    # truncates the name at the third character.
+    r"\s*[\(,]?\s*\b(?:anct?\.?|ancienne?(?:ment)?|anciens?|ex-?|pr[eé]c[eé]demment|"
     r"nouvelle\s+d[eé]nomination|puis|devenue?)\b.*$",
     re.I,
 )
 
 
+STOPWORD_RE = re.compile(
+    r"\b(societe|ste|s|anonyme|anon|an|cie|compagnie|comp|francaise|francais|"
+    r"generale|general|nouvelle|nouveau|de|du|des|d|la|le|les|l|et|en|a|au|aux|"
+    r"pour|sur|the|of|and)\b")
+
+
+# Slugs that are nothing but a legal form or an article.
+GENERIC_ONLY = {
+    "societe", "societeanonyme", "societeanon", "societeanon", "ste", "steanon",
+    "compagnie", "cie", "lacompagnie", "lasociete", "entreprise", "entreprises",
+    "etablissements", "ets", "etablissement", "groupe", "syndicat", "union",
+    "comptoir", "consortium", "omnium", "banque", "credit", "caisse", "office",
+    "anonyme", "nouvelle", "generale", "francaise",
+}
+
+
+def _slug(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", strip_accents(text).lower())
+
+
 def org_key(raw: str) -> str:
-    """Matching key for a company name: accent- and stopword-stripped slug."""
-    n = strip_accents(PREDECESSOR_TAIL_RE.sub("", normalise_org_name(raw))).lower()
-    n = re.sub(r"\b(societe|ste|s|anonyme|anon|an|cie|compagnie|comp|francaise|francais|"
-               r"generale|general|nouvelle|nouveau|de|du|des|d|la|le|les|l|et|en|a|au|aux|"
-               r"pour|sur|the|of|and)\b", " ", n)
+    """Matching key for a company name: accent- and stopword-stripped slug.
+
+    Two guards, both of which only fire where the plain rule yields nothing,
+    so no existing key changes:
+
+    - The predecessor clause is stripped only when real name text precedes it.
+      `PREDECESSOR_TAIL_RE` ends in `.*$`, so on a name that *begins*
+      "Anciens Établissements Ch. Peyrissac et Cie" it matches at position 0
+      and consumes the whole name. That convention is common in French
+      colonial business, and Peyrissac alone lost 72 observations to it.
+    - A name made entirely of legal forms and stopwords - "Société générale" -
+      falls back to the slug of the whole name rather than to an empty key,
+      which would drop the row from every edge file.
+    """
+    name = normalise_org_name(raw)
+    m = PREDECESSOR_TAIL_RE.search(name)
+    if m and m.start() >= 4:
+        name = name[:m.start()]
+    n = STOPWORD_RE.sub(" ", strip_accents(name).lower())
     n = re.sub(r"[^a-z0-9]+", "", n)
-    return n
+    if n:
+        return n
+    # Fall back to the *original* name, not the truncated one: truncation can
+    # leave a bare "Compagnie," whose slug is a generic key several unrelated
+    # firms would share.
+    fallback = _slug(normalise_org_name(raw))
+    # ...but a name that is *only* a legal form is not a firm. Keying it would
+    # invent a node called "Société" that unrelated observations pile into,
+    # which is worse than leaving the row unattributed.
+    return "" if fallback in GENERIC_ONLY else fallback

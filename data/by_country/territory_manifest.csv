@@ -1,23 +1,23 @@
 territory,slug,n_documents,n_ties,n_board_ties,n_persons,n_companies,n_two_mode_edges,n_interlock_edges,n_corporate_ties,first_year,last_year,n_persons_shared,n_companies_shared,share_persons_shared,share_companies_shared
-Maroc,maroc,454,11091,10492,5598,913,8018,4328,729,1878,2007,1655,53,0.296,0.058
-Indochine,indochine,2460,10287,9782,4425,608,6794,5720,720,1881,1995,1337,36,0.302,0.059
-Empire (transversal),empire-transversal,558,9845,9292,5407,459,6599,1344,504,1861,2006,2238,108,0.414,0.235
-Algérie,algerie,816,4628,4278,2760,287,3251,448,196,1856,1959,1138,30,0.412,0.105
-Afrique occidentale française,afrique-occidentale-francaise,32,4402,4118,2804,416,3780,1171,263,1882,1975,1536,146,0.548,0.351
-Madagascar,madagascar,189,3563,3257,1878,229,2517,490,237,1890,1973,616,23,0.328,0.1
-Afrique équatoriale française,afrique-equatoriale-francaise,44,3160,2933,1975,291,2540,584,260,1899,1968,998,84,0.505,0.289
-Tunisie,tunisie,253,1872,1781,1157,114,1326,113,88,1881,1958,588,19,0.508,0.167
+Maroc,maroc,454,11123,10522,5618,920,8050,4341,734,1878,2007,1657,53,0.295,0.058
+Indochine,indochine,2460,10301,9796,4431,610,6808,5734,728,1881,1995,1338,36,0.302,0.059
+Empire (transversal),empire-transversal,558,9948,9388,5435,463,6646,1355,516,1861,2006,2254,110,0.415,0.238
+Algérie,algerie,816,4628,4278,2760,287,3251,448,198,1856,1959,1138,30,0.412,0.105
+Afrique occidentale française,afrique-occidentale-francaise,32,4450,4165,2817,422,3823,1205,264,1882,1975,1545,148,0.548,0.351
+Madagascar,madagascar,189,3563,3257,1878,229,2517,490,238,1890,1973,616,23,0.328,0.1
+Afrique équatoriale française,afrique-equatoriale-francaise,44,3172,2945,1980,293,2551,591,261,1899,1968,1002,84,0.506,0.287
+Tunisie,tunisie,253,1872,1781,1157,114,1326,113,90,1881,1958,588,19,0.508,0.167
 Côte d'Ivoire,cote-d-ivoire,163,1193,1097,791,105,958,131,34,1889,1972,498,44,0.63,0.419
 Sénégal,senegal,92,1191,1139,650,71,756,91,44,1868,1953,469,37,0.722,0.521
-Syrie-Liban,syrie-liban,53,830,781,512,47,590,65,71,1892,1953,248,8,0.484,0.17
+Syrie-Liban,syrie-liban,53,830,781,512,47,590,65,73,1892,1953,248,8,0.484,0.17
 Nouvelle-Calédonie (Mélanésie),nouvelle-caledonie-melanesie,84,808,796,411,46,540,104,36,1882,1964,142,9,0.345,0.196
 Java et Sumatra (Indes néerlandaises),java-et-sumatra-indes-neerlandaises,22,653,625,191,19,272,53,10,1910,1953,65,0,0.34,0.0
-Gabon,gabon,61,610,589,393,43,472,48,22,1899,1959,263,22,0.669,0.512
+Gabon,gabon,61,610,589,393,43,472,48,24,1899,1959,264,22,0.672,0.512
 Congo-Brazzaville ou Moyen-Congo,congo-brazzaville-ou-moyen-congo,84,561,538,394,50,446,44,24,1899,1954,233,20,0.591,0.4
 Empire ottoman/Turquie,empire-ottoman-turquie,35,537,489,309,21,345,19,36,1896,1943,115,0,0.372,0.0
-Djibouti,djibouti,22,528,514,226,24,268,39,17,1898,1953,113,4,0.5,0.167
+Djibouti,djibouti,22,531,514,229,25,271,39,17,1898,1953,113,4,0.493,0.16
 Guyane française,guyane-francaise,51,510,471,322,39,353,20,22,1878,1955,135,4,0.419,0.103
-Tahiti (Polynésie),tahiti-polynesie,23,483,469,194,15,247,31,16,1910,1953,87,1,0.448,0.067
+Tahiti (Polynésie),tahiti-polynesie,23,483,469,194,15,247,31,17,1910,1953,87,1,0.448,0.067
 La Réunion,la-reunion,15,393,390,207,17,266,24,21,1920,1953,90,8,0.435,0.471
 Égypte,egypte,16,376,363,176,7,184,4,2,1887,1953,59,0,0.335,0.0
 Guadeloupe et Martinique,guadeloupe-et-martinique,20,356,347,220,34,269,18,27,1907,1962,89,3,0.405,0.088
@@ -45,7 +45,7 @@ Chili,chili,2,36,27,33,2,35,1,1,1912,1945,11,0,0.333,0.0
 Togo,togo,5,32,32,26,4,26,0,2,1921,1948,22,2,0.846,0.5
 Terres australes et antartiques françaises,terres-australes-et-antartiques-francaises,6,32,32,24,5,29,3,4,1910,1943,13,1,0.542,0.2
 Guyane hollandaise (Suriname),guyane-hollandaise-suriname,1,29,29,29,1,29,0,2,1895,1938,15,1,0.517,1.0
-Siam (Thaïlande),siam-thailande,4,27,27,27,3,27,0,7,1896,1954,6,1,0.222,0.333
+Siam (Thaïlande),siam-thailande,4,27,27,27,3,27,0,8,1896,1954,6,1,0.222,0.333
 Serbie-Yougoslavie,serbie-yougoslavie,5,22,22,18,2,19,1,2,1907,1910,9,0,0.5,0.0
 Albanie,albanie,1,13,13,12,1,12,0,0,1897,1909,6,0,0.5,0.0
 Tchad,tchad,4,11,10,9,2,9,0,2,1914,1919,7,1,0.778,0.5

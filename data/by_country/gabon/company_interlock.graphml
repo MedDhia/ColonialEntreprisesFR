@@ -150,7 +150,7 @@
       <data key="n_n_directors">17</data>
       <data key="n_territory">Gabon</data>
     </node>
-    <node id="multipl">
+    <node id="multiplex">
       <data key="n_label">Multiplex</data>
       <data key="n_sectors">Industrie</data>
       <data key="n_n_directors">11</data>
@@ -318,13 +318,13 @@
     <edge id="e43" source="forestierelittoralgabonaisekuata" target="forestierelittoralgabonnais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e44" source="forestierelittoralgabonnais" target="multipl">
+    <edge id="e44" source="forestierelittoralgabonnais" target="multiplex">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e45" source="unioncolonialeagricoleforestiere" target="unionforestiereafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e46" source="multipl" target="plantationspalmeraiesogooue">
+    <edge id="e46" source="multiplex" target="plantationspalmeraiesogooue">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e47" source="plantationsogooue" target="plantationspalmeraiesogooue">

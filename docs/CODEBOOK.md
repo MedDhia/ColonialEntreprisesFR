@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **Empty for 22.9% of rows** (18,207 of 79,343), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 22.7% of rows** (17,995 of 79,343), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |
@@ -97,6 +97,35 @@ appear several times if several sources state it.
 | `trigger` | Which board-list pattern matched. Useful for filtering on extraction confidence — `conseil_annuaire`, `conseil_colon` and the `*_abbrev` triggers come from structured directory fields; `conseil_compose` comes from running prose. |
 | `parse_note` | Which name rule fired: `initials_or_forename`, `positional_forename`, `surname_first_paren`, `surname_first_bare`, `surname_only`. `positional_forename` is the weakest. |
 | `member_raw` | Verbatim fragment before parsing. Keep for re-coding. |
+
+### `affiliations_person_index.csv` — ties from the inverted indexes (16,131)
+
+Written by `src/parse_person_index.py` (stage 3b) from annuaires whose entries
+are people rather than firms. Same columns as `affiliations.csv`, plus:
+
+| Variable | Description |
+|---|---|
+| `entry_number` | The company's number in the annuaire's own list — the link that resolves the tie. |
+| `source_genre` | `person_index`. |
+| `in_colonial_dataset` | 1 if the firm is already a node in `companies.csv`. **Only ~14% are.** |
+
+**This file is deliberately not merged into `affiliations.csv`.** `Annuaire
+Desfossés 1956` covers the whole Paris Bourse, so most of its firms are
+metropolitan or foreign; folding them in would change what this dataset is.
+Filter on `in_colonial_dataset = 1` for the colonial slice, or keep the rest
+as the metropolitan portfolio of colonial directors. `role` is coded from the
+compiler's gloss, defaulting to `administrateur` because the index is headed
+*"ADMINISTRATEURS DES SOCIÉTÉS COTÉES"*.
+
+### `person_index_report.csv` — one row per annuaire parsed
+
+`title`, `index_doc_id`, `key_doc_id`, `n_key_companies`, `n_person_ties`,
+`n_corporate_ties`, `n_glossed`, `gloss_agreement`, `n_unresolved_refs`.
+
+`gloss_agreement` is the accuracy evidence: the share of references whose
+compiler gloss (`107 (dga BAO)`) matches the name the numbered key gives. It
+runs at **0.97**; `checks.py` fails below 0.90, because a misaligned numbering
+would otherwise yield a large, plausible, entirely wrong dataset.
 
 ### `org_affiliations.csv` — company → company board ties as observed
 
@@ -357,7 +386,7 @@ the same columns as the corresponding top-level files, restricted to that
 territory and with nodes and edges recomputed from its ties alone.
 
 **Ties partition; nodes do not.** Every tie carries exactly one territory, so
-bundle tie counts sum to the dataset total (61,136) with none duplicated or
+bundle tie counts sum to the dataset total (61,348) with none duplicated or
 dropped. Firms and people appear in every bundle where they are observed —
 21% of people and 9% of firms are in more than one country bundle — so
 **node counts must not be added across bundles**.
@@ -449,7 +478,7 @@ graph (3,085).
 | Variable | Description |
 |---|---|
 | `company_id`, `name` | Firm, matching `companies.csv`. |
-| `in_giant` | 1 if in the giant component (3,039 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
+| `in_giant` | 1 if in the giant component (3,055 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
 | `degree` | Firms it shares at least one director with. |
 | `weighted_degree` | Sum of shared-director counts over those ties. |
 | `betweenness` | Normalised betweenness centrality, **exact and unweighted**, computed on the giant component. |
@@ -476,7 +505,7 @@ variable.
 
 ### `company_places.csv` — a city for each firm
 
-Written by `src/geocode.py` (stage 6c). One row per firm (8,493); 3,138 carry
+Written by `src/geocode.py` (stage 6c). One row per firm (8,548); 3,138 carry
 a city.
 
 | Variable | Description |
@@ -528,9 +557,9 @@ by `betweenness` instead of weighted degree. Holding the node set and layout
 fixed is the whole design: the difference between figures 1 and 6 is the
 finding, and a fresh layout would let neither be read against the other.
 
-**Figure 4 — every firm, every interlock.** All 3,085 firms in
-`edges_company_interlock.csv` at `weight >= 1` and all 39,523 interlocks
-between them — no threshold, no top-N. The giant component (3,039 firms,
+**Figure 4 — every firm, every interlock.** All 3,101 firms in
+`edges_company_interlock.csv` at `weight >= 1` and all 39,732 interlocks
+between them — no threshold, no top-N. The giant component (3,055 firms,
 98.5%) fills the canvas; the 46 firms in 22 unconnected components sit in a
 labelled strip below a rule. Colour is the firm's first territory folded to
 the three largest, node area is weighted degree, and the sixteen largest are

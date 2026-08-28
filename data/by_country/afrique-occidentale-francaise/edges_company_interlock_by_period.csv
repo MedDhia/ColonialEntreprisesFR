@@ -1,13 +1,19 @@
 company_id_1,company_id_2,period,weight,shared_directors
 messageriesafricaines,minesfalemegambie,1914_1929,6,charbonnel-h; duchesne-fournet-p; gimon-c; legrand-g; michel-cote-c; watel-p
+anciensetablissementscarpotafricaineelectricite,salinscapvert,1914_1929,5,casteincau-e; gorgeu-m; guignard-e; martin-c; peyrissac-l
+anciensetablissementschpeyrissaccolonialeafrique,salinscapvert,1914_1929,5,casteincau-e; davillier-j; gorgeu-m; guignard-e; peyrissac-l
 africaine,africaneasterntradecorporationltdroyalliverbuildingliverpool,1914_1929,5,grey-w; hutchinson-h; nicholl-w; stuart-m; tunnicliffe-j
 africaine,intercontinentaleentreprisesreunies,1914_1929,5,benedic-e; fondere-a; fourneau-a; guynet-w; vigouroux-l
 comptoirsafricains,forestiereindenie,1914_1929,5,calcat-f; callot-t; gompel-p; levy-g; mizraki-m
+afrique,anciensetablissementsmplanteyafrique,1914_1929,5,boussenot-g; delaquis-l; fontaine-a; plantey-j; plantey-m
 coteafrique,culturecotonniereniger,1914_1929,5,audebeau-bey-c; hermann-du-pasquier; hirsch-l; hirsch-m; loisy-x
 forestiereafrique,occidentaleafricaine,1914_1929,5,bonfils-e; cassagnac-j; experton-p; vizioz-g; vizioz-j
 occidentaleafricaine,scieriesafricaines,1914_1929,5,cassagnac-j; experton-p; vizioz-d; vizioz-g; vizioz-j
 unionforestiereafricaine,usinagebois,1914_1929,5,bernheim-l; fouque-j; gast-a; haas-a; klotz-e
 commercialeouestafricain,ouestafricain,1914_1929,5,angoulvant-g; fatio-h; fontaine-l; gaisman-a; jacquier-f
+anciensetablissementscarpotafricaineelectricite,anciensetablissementschpeyrissaccolonialeafrique,1914_1929,4,casteincau-e; gorgeu-m; guignard-e; peyrissac-l
+anciensetablissementscarpotafricaineelectricite,colonialebia,1914_1929,4,casteincau-e; gorgeu-m; guignard-e; peyrissac-l
+anciensetablissementschpeyrissaccolonialeafrique,colonialebia,1914_1929,4,casteincau-e; gorgeu-m; guignard-e; peyrissac-l
 colonialebia,salinscapvert,1914_1929,4,casteincau-e; gorgeu-m; guignard-e; peyrissac-l
 bordelaisecomptoirsafricains,comptoirsafricains,1914_1929,4,calcat-f; delmas-p; levy-g; vezia-f
 comptoirsafricains,cotonafricain,1914_1929,4,calcat-f; delmas-p; levy-g; mizraki-m
@@ -22,6 +28,7 @@ africainecommerce,bordelaisecomptoirsafricains,1914_1929,3,delmas-p; frere-m; ph
 auxiliaireafricainedeveloppementcommerceindustrie,banqueafriqueoccidentale,1914_1929,3,maurel-l; nouvion-h; ph-delmas
 auxiliaireafricainedeveloppementcommerceindustrie,bordelaisecomptoirsafricains,1914_1929,3,frere-m; ph-delmas; vezia-f
 africaine,afriquecongo,1914_1929,3,lutscher-f; pierre-c; vigouroux-l
+anciensetablissementschpeyrissaccolonialeafrique,cochez,1914_1929,3,e-guignard; gorgeu-m; peyrissac-l
 bordelaisecomptoirsafricains,cotonafricain,1914_1929,3,calcat-f; delmas-p; levy-g
 cotonafricain,forestiereindenie,1914_1929,3,calcat-f; levy-g; mizraki-m
 boiscoteivoire,kong,1914_1929,3,levy-g; mizraki-m; picanon-e
@@ -46,15 +53,17 @@ auxiliaireafricainedeveloppementcommerceindustrie,salinssinesaloum,1914_1929,2,m
 auxiliaireafricainedeveloppementcommerceindustrie,comptoirsafricains,1914_1929,2,paulin-c; vezia-f
 bordelaisecomptoirsafricains,salinssinesaloum,1914_1929,2,delmas-p; vezia-f
 comptoirsafricains,salinssinesaloum,1914_1929,2,delmas-p; vezia-f
+anciensetablissementscarpotafricaineelectricite,cochez,1914_1929,2,gorgeu-m; peyrissac-l
+cochez,colonialebia,1914_1929,2,gorgeu-m; peyrissac-l
+cochez,salinscapvert,1914_1929,2,gorgeu-m; peyrissac-l
+afrique,anciensetablissementschpeyrissaccolonialeafrique,1914_1929,2,davillier-j; gorgeu-m
+afrique,salinscapvert,1914_1929,2,davillier-j; gorgeu-m
 bordelaisecomptoirsafricains,forestiereindenie,1914_1929,2,calcat-f; levy-g
 boiscoteivoire,comptoirsafricains,1914_1929,2,levy-g; mizraki-m
 boiscoteivoire,cotonafricain,1914_1929,2,levy-g; mizraki-m
 bordelaisecomptoirsafricains,kong,1914_1929,2,katz-m; levy-g
 cotonafricain,kong,1914_1929,2,levy-g; mizraki-m
 bordelaisecomptoirsafricains,industrielleafricaine,1914_1929,2,delmas-p; katz-m
-afrique,salinscapvert,1914_1929,2,davillier-j; gorgeu-m
-cochez,colonialebia,1914_1929,2,gorgeu-m; peyrissac-l
-cochez,salinscapvert,1914_1929,2,gorgeu-m; peyrissac-l
 commercialecoteafrique,consignatairesreunis,1914_1929,2,claverie-g; romanet-b
 comptoirsafricains,industrielleafricaine,1914_1929,2,delmas-p; mizraki-m
 cotonafricain,industrielleafricaine,1914_1929,2,delmas-p; mizraki-m
@@ -74,6 +83,10 @@ francoafricaineetudesparticipations,industrielleproduitscoloniaux,1914_1929,1,co
 dahomey,francoafricaineetudesparticipations,1914_1929,1,diagne-b
 africainecommerce,banqueafriqueoccidentale,1914_1929,1,ph-delmas
 banqueafriqueoccidentale,bordelaisecomptoirsafricains,1914_1929,1,ph-delmas
+anciensetablissementscarpotafricaineelectricite,auxiliaireafricainedeveloppementcommerceindustrie,1914_1929,1,casteincau-e
+anciensetablissementscarpotafricaineelectricite,bamako,1914_1929,1,casteincau-e
+anciensetablissementschpeyrissaccolonialeafrique,auxiliaireafricainedeveloppementcommerceindustrie,1914_1929,1,casteincau-e
+anciensetablissementschpeyrissaccolonialeafrique,bamako,1914_1929,1,casteincau-e
 auxiliaireafricainedeveloppementcommerceindustrie,bamako,1914_1929,1,casteincau-e
 auxiliaireafricainedeveloppementcommerceindustrie,colonialebia,1914_1929,1,casteincau-e
 auxiliaireafricainedeveloppementcommerceindustrie,salinscapvert,1914_1929,1,casteincau-e
@@ -95,18 +108,21 @@ banqueafriqueoccidentale,forestiereafrique,1914_1929,1,boyer-p
 africaine,bankbritishwestafricalimited,1914_1929,1,stuart-m
 africaneasterntradecorporationltdroyalliverbuildingliverpool,bankbritishwestafricalimited,1914_1929,1,stuart-m
 afriquecongo,intercontinentaleentreprisesreunies,1914_1929,1,vigouroux-l
+afrique,anciensetablissementscarpotafricaineelectricite,1914_1929,1,gorgeu-m
+afrique,cochez,1914_1929,1,gorgeu-m
+afrique,colonialebia,1914_1929,1,gorgeu-m
 boiscoteivoire,bordelaisecomptoirsafricains,1914_1929,1,levy-g
 bordelaisecomptoirsafricains,constructionafricaine,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,entreprisesafricaines,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,silicocalcaireafricaine,1914_1929,1,superville-m
 constructionafricaine,entreprisesafricaines,1914_1929,1,superville-m
 entreprisesafricaines,silicocalcaireafricaine,1914_1929,1,superville-m
-afrique,cochez,1914_1929,1,gorgeu-m
-afrique,colonialebia,1914_1929,1,gorgeu-m
 coteivoire,cotelvoire,1914_1929,1,lind-j
 boiscoteivoire,industrielleafricaine,1914_1929,1,mizraki-m
 forestiereindenie,industrielleafricaine,1914_1929,1,mizraki-m
 kokumbocoltd,kong,1914_1929,1,terquem-l
+afrique,comptoirsfrancoafricains,1914_1929,1,boussenot-g
+anciensetablissementsmplanteyafrique,comptoirsfrancoafricains,1914_1929,1,boussenot-g
 africainecommerce,cotonafricain,1914_1929,1,delmas-p
 africainecommerce,industrielleafricaine,1914_1929,1,delmas-p
 africainecommerce,salinssinesaloum,1914_1929,1,delmas-p
@@ -171,7 +187,6 @@ colonialebia,commerceinternationalcolonial,1914_1929,1,lorin-h
 afriqueoccidentale,industrielleafricaine,1914_1929,1,mathon-e
 afriqueoccidentale,salinssinesaloum,1914_1929,1,mathon-e
 commerceinternationalcolonial,figafrica,1914_1929,1,tricot-g
-afrique,comptoirsfrancoafricains,1914_1929,1,boussenot-g
 etablissementsmaurelprom,macinaniger,1914_1929,1,maurel-j
 commercialeafricaineexportationimportation,omniumcommercialafricain,1914_1929,1,girard-m
 bamako,commercialeouestafricain,1914_1929,1,poncin-h
@@ -485,6 +500,8 @@ auxiliaireafricainedeveloppementcommerce,unionremorqueursdakar,1945_1962,1,delma
 manutentionafricaine,messageriesafricaines,1945_1962,1,delmas-p
 manutentionafricaine,messageriessenegal,1945_1962,1,delmas-p
 manutentionafricaine,unionremorqueursdakar,1945_1962,1,delmas-p
+anciensetablissementschpeyrissaccolonialeafrique,messageriesafricaines,1945_1962,1,lemaignen-r
+anciensetablissementschpeyrissaccolonialeafrique,unionremorqueursdakar,1945_1962,1,lemaignen-r
 commercialeafrique,forestierecommercialeafricaine,1945_1962,1,sellier-r
 domainekokumbo,entreprisesafricaines,1945_1962,1,gerard-r
 domainekokumbocapital,entreprisesafricaines,1945_1962,1,gerard-r
@@ -527,6 +544,7 @@ miniereafema,miniereconakry,1945_1962,1,garreau-dombasle-m
 brasseriescoteivoire,brasseriesouestafricain,post_1962,7,curral-j; de-lestapis-r; faivre-h; gaston-dreyfus-r; glacieres-de-l-indochine; monnier-c; orcel-j
 dabou,forestiereequatoriale,post_1962,6,daudier-e; de-beaumont-j; de-rivaud-r; japhet-e; ph-langlois-berthelot; schoofs-m
 agenceabidjan,charbonniereouestafricain,post_1962,4,bouffe-g; fossorier-r; merville-j; roux-j
+societeanonymedesanciensetablissementsjulesburki,transittransportsafrique,post_1962,4,dupre-l; marcou-d; monneron-p; vidal-l
 occidentaleafricaine,scieriesafricaines,post_1962,4,anthoine-f; bocquet-j; nemos-e; vigne-r
 agricoleindustrielleouestafricain,culturecotonniereniger,post_1962,4,bedouet-j; grandet-h; hermann-du-pasquier; villars-r
 agricoleindustrielleouestafricain,plantationsguinee,post_1962,4,bedouet-j; gamichon-p; grandet-h; villars-r
@@ -653,6 +671,7 @@ africainefinanciereagricole,forestiereequatoriale,post_1962,1,japhet-e
 automobilescoteafrique,brasseriesouestafricain,post_1962,1,guieysse-p
 brasseriesouestafricain,briqueteriesbamako,post_1962,1,guieysse-p
 africainemagasinagetransit,colonialeagricoleindustrielle,post_1962,1,delannoy-r
+commercialeindustriellecoteafrique,societeanonymedesanciensetablissementsjulesburki,post_1962,1,monneron-p
 commercialeindustriellecoteafrique,transittransportsafrique,post_1962,1,monneron-p
 commercialeouestafricain,plantationstanoe,post_1962,1,carre-r
 africainegrandstravauxest,commercialesoudanrotterdam,post_1962,1,valette-m

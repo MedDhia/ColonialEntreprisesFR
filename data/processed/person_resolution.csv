@@ -20,10 +20,11 @@ albert-pouillat-l,albert-pouillat-l,(Albert Pouillat,identity,0,1,1,1937,1937
 b-o-m,b-o-m,(B O,identity,0,1,3,1954,1954
 b-o-c,b-o-c,(B. O,identity,0,1,3,1930,1930
 b-o-d,b-o-d,(B. O,identity,0,1,3,1937,1937
-b-o-m-l,b-o-m-l,(B. O. M,identity,0,2,4,1930,1933
-b-o-m-m,b-o-m-m,(B. O. M,identity,0,1,4,1930,1930
-b-o-m-t,b-o-m-t,(B. O. M,identity,0,1,4,1930,1930
-b-o-m-z,b-o-m-z,(B. O. M,identity,0,1,4,1930,1930
+b-o-m-h,b-o-m-h,(B. O. M,identity,0,1,5,1935,1935
+b-o-m-l,b-o-m-l,(B. O. M,identity,0,2,5,1930,1933
+b-o-m-m,b-o-m-m,(B. O. M,identity,0,1,5,1930,1930
+b-o-m-t,b-o-m-t,(B. O. M,identity,0,1,5,1930,1930
+b-o-m-z,b-o-m-z,(B. O. M,identity,0,1,5,1930,1930
 bom-b,bom-b,(B.O.M,identity,0,1,2,1935,1935
 bom-m,bom-m,(B.O.M,identity,0,1,2,1935,1935
 bureau-correspondant-s,bureau-correspondant-s,(Bureau correspondant: 22,identity,0,1,1,1930,1930
@@ -63,7 +64,6 @@ et-l,et-l,-et-L.),identity,0,2,6,1949,1949
 pres-m-louis-ferasson-v,pres-m-louis-ferasson-v,-prés.: M. Louis Férasson,identity,0,1,1,1938,1938
 v-presid-j-d-anglejan,v-presid-j-d-anglejan,-v.-présid.: J d'Anglejan,identity,0,1,0,1956,1956
 x-f,x-f,1,identity,0,2,17,1922,1937
-x-h,x-h,1,identity,0,3,17,1920,1958
 mm-o-homberg,mm-o-homberg,1 MM. O. Homberg,identity,0,1,0,,
 et-m-etienne-antoine-marie-andre-saint-martin,et-m-etienne-antoine-marie-andre-saint-martin,10° Et M. Étienne-Antoine-Marie-André Saint-Martin,identity,0,1,0,1908,1908
 e-paralleles-est-du-meridien-de-paris,e-paralleles-est-du-meridien-de-paris,11e parallèles est du méridien de Paris,identity,0,1,0,1901,1901
@@ -125,6 +125,7 @@ m-francois-dujardin-beaumetz,m-francois-dujardin-beaumetz,3° M. François Dujar
 m-max-begouen,m-max-begouen,3° M. Max Begouën,identity,0,1,0,1927,1927
 m-oudiette,m-oudiette,3° M. OUDIETTE,identity,0,1,0,1940,1940
 suppression,suppression,3° Suppression,identity,0,1,0,1929,1929
+x-h,x-h,4,identity,0,4,17,1920,1958
 x-o,x-o,4,identity,0,2,17,1920,1921
 l-assemblee-renouvelle-j,l-assemblee-renouvelle-j,4. L'assemblée renouvelle,identity,0,1,1,1919,1919
 commissaire-m-louis-pujol,commissaire-m-louis-pujol,44. Commissaire: M. Louis Pujol,identity,0,1,0,1921,1921
@@ -173,6 +174,7 @@ e-exploitation-des-mines,e-exploitation-des-mines,9e Exploitation des mines,iden
 e-direction,e-direction,9e. Direction,identity,0,2,0,1925,1925
 m-paul-gregoire,m-paul-gregoire,9° M. Paul Grégoire,identity,0,1,0,1908,1908
 alger,alger,? Alger,identity,0,2,0,1938,1938
+amedee-f-oliveau-jeune,amedee-f-oliveau-jeune,? Amédée F. Oliveau jeune,identity,0,1,0,1941,1941
 b-garfunkel,b-garfunkel,? B. Garfunkel,identity,0,1,0,1929,1929
 breger-aine,breger-aine,? Breger aîné,identity,0,2,0,1931,1938
 breger-aine-paris,breger-aine-paris,? Bréger Aîné - Paris,identity,0,1,0,1955,1955
@@ -846,7 +848,7 @@ allibert-j,allibert-j,Allibert,identity,0,1,1,1926,1926
 allier-a,allier-a,Allier,identity,0,1,3,1937,1937
 allier-c,allier-c,Allier,identity,0,2,3,1921,1955
 allier-j,allier-j,Allier,identity,0,1,3,1935,1935
-alliot-p,alliot-p,Alliot,identity,0,1,1,1953,1953
+alliot-p,alliot-p,Alliot,identity,0,2,1,1953,1953
 allix,allix,Allix,identity,0,2,0,1951,1951
 allouche,allouche-l,Allouche,folded_unique_initial,0,1,1,1920,1920
 allouche-l,allouche-l,Allouche,identity,0,2,1,1913,1920
@@ -927,7 +929,8 @@ amilhau-a,amilhau-a,Amilhau,identity,0,1,1,1938,1938
 amira-d,amira-d,Amira,identity,0,1,1,1938,1938
 amizet-l,amizet-l,Amizet,identity,0,1,1,1953,1953
 ammann-p,ammann-p,Ammann. 10,identity,0,1,1,1930,1930
-amouroux,amouroux,Amouroux,identity,0,1,0,1910,1910
+amouroux,amouroux-g,Amouroux,folded_unique_initial,0,1,1,1910,1910
+amouroux-g,amouroux-g,Amouroux,identity,0,1,1,1951,1951
 ampanihy-edouard-cailly,ampanihy-edouard-cailly,Ampanihy. Édouard Cailly,identity,0,1,0,1937,1937
 ampasinambo-du-mesnil-d-engente,ampasinambo-du-mesnil-d-engente,Ampasinambo. Du Mesnil d'Engente,identity,0,1,0,1937,1937
 amram-e,amram-e,Amram,identity,0,1,1,1941,1941
@@ -952,7 +955,7 @@ ancel-r,ancel-r,Ancel,identity,0,1,3,1937,1937
 ancel-seitz-p,ancel-seitz-p,Ancel Seitz,identity,0,2,1,1895,1895
 ancet-j,ancet-j,Ancet,identity,0,2,1,1890,1929
 ancey-c,ancey-c,Ancey,identity,0,5,2,1913,1950
-ancey-g,ancey-g,Ancey,identity,0,3,2,1930,1930
+ancey-g,ancey-g,Ancey,identity,0,4,2,1930,1984
 ancion,ancion-a,Ancion,folded_unique_initial,0,10,1,1908,1923
 ancion-a,ancion-a,Ancion,identity,0,1,1,1927,1927
 ancion-van-put,ancion-van-put-a,Ancion Van Put,folded_unique_initial,0,7,1,1925,1945
@@ -1090,7 +1093,8 @@ aram-ovaghion-e,aram-ovaghion-e,Aram Ovaghion,identity,0,1,1,,
 araoux-h,araoux-h,Araoux,identity,0,1,1,1922,1922
 araud-s,araud-s,Araud,identity,0,3,1,1925,1925
 arbeit-p,arbeit-p,Arbeit,identity,0,2,1,1950,1971
-arbel-l,arbel-l,Arbel,identity,0,1,1,1880,1880
+arbel-a,arbel-a,Arbel,identity,0,1,2,1912,1912
+arbel-l,arbel-l,Arbel,identity,0,1,2,1880,1880
 arbel-statuts-chez-me-panhard,arbel-statuts-chez-me-panhard,Arbel. Statuts chez Me Panhard,identity,0,1,0,1918,1918
 arbelot,arbelot-g,Arbelot,folded_unique_initial,0,2,1,1938,1938
 arbelot-g,arbelot-g,Arbelot,identity,0,1,1,1928,1928
@@ -1400,6 +1404,7 @@ azango-a,azango-a,Azango,identity,0,1,1,1949,1949
 azaouricet,azaouricet,Azaouricet,identity,0,2,0,1925,1925
 azaria-r,azaria-r,Azaria,identity,0,1,1,1929,1929
 azarian-g,azarian-g,Azarian,identity,0,1,1,1940,1940
+azemar-e,azemar-e,Azemar,identity,0,1,1,1935,1935
 azered,azered,Azered,identity,0,1,0,1925,1925
 azoulay-a,azoulay-a,Azoulay,identity,0,1,1,1924,1924
 ain-beida,ain-beida,Aïn-Beida,identity,0,1,0,1925,1925
@@ -1582,7 +1587,7 @@ balas-a,balas-a,Balas,identity,0,5,1,1937,1940
 balay-g,balay-g,Balay,identity,0,2,3,1945,1953
 balay-h,balay-h,Balay,identity,0,2,3,1929,1945
 balayer-p,balayer-p,Balayer,identity,0,1,1,1969,1969
-balay-j,balay-j,Balaÿ,identity,0,4,3,1891,1938
+balay-j,balay-j,Balaÿ,identity,0,5,3,1891,1938
 baldauff,baldauff-j,Baldauff,folded_unique_initial,0,1,1,1914,1914
 baldauff-j,baldauff-j,Baldauff,identity,0,1,1,1922,1922
 balding-b,balding-b,Balding,identity,0,12,1,1921,1940
@@ -1867,7 +1872,7 @@ bastia,bastia,Bastia,identity,0,2,0,1919,1921
 bastid-a,bastid-a,Bastid,identity,0,1,3,1947,1947
 bastid-c,bastid-c,Bastid,identity,0,12,3,1942,1963
 bastid-p,bastid-p,Bastid,identity,0,3,3,1945,1963
-bastid-polytechnicien-c,bastid-polytechnicien-c,Bastid [Polytechnicien,identity,0,1,1,1971,1971
+bastid-polytechnicien-c,bastid-polytechnicien-c,Bastid [Polytechnicien,identity,0,2,1,1971,1971
 bastid-polytechicien-p,bastid-polytechicien-p,Bastid [polytechicien,identity,0,1,1,1950,1950
 bastide-l,bastide-l,Bastide,identity,0,1,3,1937,1937
 bastide-p,bastide-p,Bastide,identity,0,3,3,1943,1949
@@ -1928,7 +1933,8 @@ baudon-de-mony-x,baudon-de-mony-x,Baudon de Mony,identity,0,5,3,1890,1925
 baudouin-a,baudouin-a,Baudouin,identity,0,1,2,1912,1912
 baudouin-p,baudouin-p,Baudouin,identity,0,43,2,1887,1964
 baudoz,baudoz,Baudoz,identity,0,1,0,1905,1905
-baudrand-l,baudrand-l,Baudrand,identity,0,1,1,1930,1930
+baudrand-h,baudrand-h,Baudrand,identity,0,1,2,1984,1984
+baudrand-l,baudrand-l,Baudrand,identity,0,2,2,1930,1984
 baudry,baudry-e,Baudry,folded_unique_initial,0,2,1,1926,1926
 baudry-e,baudry-e,Baudry,identity,0,1,1,1937,1937
 bauer,bauer,Bauer,unfolded_ambiguous,1,7,4,1900,1931
@@ -2709,7 +2715,7 @@ bolle-a,bolle-a,Bolle,identity,0,9,2,1912,1931
 bolle-g,bolle-g,Bolle,identity,0,3,2,1911,1953
 bollee-a,bollee-a,Bollée,identity,0,6,1,1925,1937
 bollee-ingenieur-a,bollee-ingenieur-a,Bollée [ingénieur,identity,0,1,1,1973,1973
-bolo-f,bolo-f,Bolo,identity,0,1,1,1953,1953
+bolo-f,bolo-f,Bolo,identity,0,2,1,1953,1953
 bologne,bologne,Bologne,identity,0,2,0,1925,1925
 bolze-les-bouchonneries-de-sale-l,bolze-les-bouchonneries-de-sale-l,Bolze. Les Bouchonneries de Salé,identity,0,1,1,1949,1949
 bommart,bommart,Bommart,identity,0,1,0,1925,1925
@@ -2838,6 +2844,7 @@ bordj-bou-arreridj,bordj-bou-arreridj,Bordj-Bou- Arreridj,identity,0,1,0,1925,19
 bordj-redir,bordj-redir,Bordj-Rédir,identity,0,1,0,1925,1925
 borduge,borduge-m,Borduge,folded_unique_initial,0,13,1,1931,1953
 borduge-m,borduge-m,Borduge,identity,0,6,1,1937,1971
+boreau-g,boreau-g,Boreau,identity,0,1,1,1971,1971
 borel,borel-j,Borel,folded_unique_initial,0,3,1,1914,1930
 borel-j,borel-j,Borel,identity,0,2,1,1915,1922
 borel-de-bitche,borel-de-bitche-j,Borel de Bitche,folded_unique_initial,0,1,1,1925,1925
@@ -3078,6 +3085,7 @@ bourrellis,bourrellis-l,Bourrellis,folded_unique_initial,0,4,1,1913,1937
 bourrellis-l,bourrellis-l,Bourrellis,identity,0,33,1,1921,1969
 bourrellis-fougerolle-l,bourrellis-fougerolle-l,Bourrellis [Fougerolle,identity,0,2,1,1920,1922
 bourret,bourret,Bourret,identity,0,3,0,1925,1929
+bourrieu-g,bourrieu-g,Bourrieu,identity,0,10,1,1929,1951
 bourrrellis-l,bourrrellis-l,Bourrrellis,identity,0,3,1,1929,1933
 bourruet-aubertot-j,bourruet-aubertot-j,Bourruet-Aubertot,identity,0,1,1,1949,1949
 boursier-l,boursier-l,Boursier,identity,0,1,1,1909,1909
@@ -3102,7 +3110,7 @@ boussac-r,boussac-r,Boussac,identity,0,1,2,1937,1937
 boussand-h,boussand-h,Boussand,identity,0,3,2,1937,1956
 boussand-l,boussand-l,Boussand,identity,0,17,2,1899,1973
 boussenot,boussenot-g,Boussenot,folded_unique_initial,0,1,1,1927,1927
-boussenot-g,boussenot-g,Boussenot,identity,0,39,1,1911,1968
+boussenot-g,boussenot-g,Boussenot,identity,0,40,1,1911,1968
 boussingault,boussingault,Boussingault,identity,0,1,0,1940,1940
 boussiron-l,boussiron-l,Boussiron,identity,0,2,2,1929,1929
 boussiron-s,boussiron-s,Boussiron,identity,0,1,2,1933,1933
@@ -3532,6 +3540,7 @@ burger-r,burger-r,Burger,identity,0,2,1,1935,1937
 burgess-t,burgess-t,Burgess,identity,0,1,1,1937,1937
 burgi-p,burgi-p,Burgi,identity,0,1,1,1930,1930
 buridon-l,buridon-l,Buridon,identity,0,1,1,1958,1958
+burki-j,burki-j,Burki,identity,0,1,1,1937,1937
 burkle-c,burkle-c,Burklé,identity,0,1,1,1949,1949
 burn-r,burn-r,Burn,identity,0,1,1,1933,1933
 burnand,burnand,Burnand,identity,0,1,0,1918,1918
@@ -3585,7 +3594,8 @@ bechet-commissaires-des-comptes-a-jeambille-j,bechet-commissaires-des-comptes-a-
 beconne,beconne,Béconne,identity,0,1,0,1938,1938
 becot,becot-h,Bécot,folded_unique_initial,0,1,1,1938,1938
 becret,becret,Bécret,identity,0,1,0,1912,1912
-bedat,bedat,Bédat,identity,0,10,0,1887,1971
+bedat,bedat,Bédat,unfolded_year_span,1,11,1,1887,1971
+bedat-j,bedat-j,Bédat,identity,0,1,1,1914,1914
 bedat-de-monlaur-p,bedat-de-monlaur-p,Bédat de Monlaur,identity,0,3,1,1887,1971
 bedi-bey,bedi-bey,Bédi-Bey,identity,0,1,0,1937,1937
 begue-l,begue-l,Bégué,identity,0,2,1,1890,1925
@@ -3652,6 +3662,8 @@ beziat-a,beziat-a,Béziat,identity,0,1,2,1882,1882
 beziat-j,beziat-j,Béziat,identity,0,2,2,1890,1929
 beziers-l,beziers-l,Béziers,identity,0,1,2,1926,1926
 beziers-p,beziers-p,Béziers,identity,0,1,2,1926,1926
+bunzli,bunzli-e,Bünzli,folded_unique_initial,0,1,1,1914,1914
+bunzli-e,bunzli-e,Bünzli,identity,0,1,1,1914,1914
 buf,buf,Bœuf,unfolded_year_span,1,3,1,1857,1971
 buf-j,buf-j,Bœuf,identity,0,1,1,1951,1951
 c-h,c-h,C,identity,0,1,5,1938,1938
@@ -3898,7 +3910,7 @@ calary-de-lamaziere-r,calary-de-lamaziere-r,Calary de Lamazière,identity,0,2,3,
 calary-de-lamaziere-avocat-r,calary-de-lamaziere-avocat-r,Calary de Lamazière: avocat,identity,0,1,1,1921,1921
 calcat-f,calcat-f,Calcat,identity,0,25,1,1909,1943
 calcat-statuts-deposes-chez-me-revel,calcat-statuts-deposes-chez-me-revel,Calcat. Statuts déposés chez Me Revel,identity,0,1,0,1921,1921
-caldagues-j,caldagues-j,Caldaguès,identity,0,1,1,1953,1953
+caldagues-j,caldagues-j,Caldaguès,identity,0,2,1,1953,1953
 caldairon,caldairon,Caldairon,identity,0,1,0,1947,1947
 caldeira-queiroz-h,caldeira-queiroz-h,Caldeira Queiroz,identity,0,4,1,1917,1927
 calderon,calderon-f,Calderon,folded_unique_initial,0,1,1,1926,1926
@@ -4197,6 +4209,7 @@ cassin,cassin-r,Cassin,folded_unique_initial,0,1,1,1932,1932
 cassin-r,cassin-r,Cassin,identity,0,1,1,1937,1937
 cassir-g,cassir-g,Cassir,identity,0,3,1,1910,1938
 cassou-g,cassou-g,Cassou,identity,0,1,1,1935,1935
+cassou-de-saint-mathurin,cassou-de-saint-mathurin,Cassou de Saint-Mathurin,identity,0,1,0,1914,1914
 cassoute-p,cassoute-p,Cassoute,identity,0,1,1,1922,1922
 cassuto-c,cassuto-c,Cassuto,identity,0,1,1,1923,1923
 casse-barthe-h,casse-barthe-h,Cassé-Barthe,identity,0,1,1,1937,1937
@@ -4209,7 +4222,8 @@ castan-r,castan-r,Castan,identity,0,1,1,1949,1949
 castanie,castanie-p,Castanié,folded_unique_initial,0,3,1,1928,1937
 castanie-p,castanie-p,Castanié,identity,0,2,1,1931,1937
 castein-bureaux-a-casablanca-c,castein-bureaux-a-casablanca-c,Castein (Bureaux à Casablanca: 34,identity,0,1,1,1949,1949
-casteincau-e,casteincau-e,Casteincau,identity,0,13,1,1920,1975
+casteincau,casteincau-e,Casteincau,folded_unique_initial,0,1,1,1923,1923
+casteincau-e,casteincau-e,Casteincau,identity,0,21,1,1920,1975
 casteineau-e,casteineau-e,Casteineau,identity,0,1,1,1938,1938
 castel,castel,Castel,identity,0,2,0,1922,1922
 castella-s,castella-s,Castella,identity,0,2,1,1937,1937
@@ -4229,7 +4243,7 @@ catalan,catalan-l,Catalan,folded_unique_initial,0,2,1,1936,1937
 catalan-l,catalan-l,Catalan,identity,0,5,1,1932,1964
 cataliotti-valdina,cataliotti-valdina,Cataliotti-Valdina,identity,0,1,0,1920,1920
 catalogne,catalogne-e,Catalogne,folded_unique_initial,0,2,1,1948,1963
-catalogne-e,catalogne-e,Catalogne,identity,0,6,1,1947,1971
+catalogne-e,catalogne-e,Catalogne,identity,0,7,1,1947,1971
 catalogne-a-chastel-e,catalogne-a-chastel-e,Catalogne A. Chastel,identity,0,1,1,1953,1953
 cateaux-l,cateaux-l,Cateaux,identity,0,1,1,1928,1928
 catecka,catecka,Catecka,identity,0,1,0,1954,1954
@@ -4528,7 +4542,7 @@ chapsal-f,chapsal-f,Chapsal,identity,0,3,1,1890,1937
 chapuis,chapuis,Chapuis,unfolded_ambiguous,1,10,3,1914,1968
 chapuis-a,chapuis-a,Chapuis,identity,0,1,3,1931,1931
 chapuis-c,chapuis-c,Chapuis,identity,0,3,3,1890,1937
-chapuis-h,chapuis-h,Chapuis,identity,0,21,3,1909,1958
+chapuis-h,chapuis-h,Chapuis,identity,0,22,3,1909,1958
 chapuis-statuts-chez-me-baudrier,chapuis-statuts-chez-me-baudrier,Chapuis. Statuts chez Me Baudrier,identity,0,1,0,1918,1918
 chapuis-ile-d-aore-dedieu,chapuis-ile-d-aore-dedieu,Chapuis. Île d'Aoré.: Dedieu,identity,0,1,0,1932,1932
 chapuy-g,chapuy-g,Chapuy,identity,0,1,2,1933,1933
@@ -4827,6 +4841,7 @@ cholon-x,cholon-x,Cholon: X,identity,0,1,1,1925,1925
 chomel-m,chomel-m,Chomel,identity,0,2,1,1926,1930
 chomereau-lamotte,chomereau-lamotte-s,Chomereau-Lamotte,folded_unique_initial,0,1,1,1910,1910
 chomereau-lamotte-s,chomereau-lamotte-s,Chomereau-Lamotte,identity,0,1,1,1910,1910
+chomienne-r,chomienne-r,Chomienne,identity,0,1,1,1935,1935
 choncair,choncair,Choncair,identity,0,1,0,1963,1963
 chone,chone,Choné,identity,0,5,0,1931,1945
 choppin-de-janvry,choppin-de-janvry-j,Choppin de Janvry,folded_unique_initial,0,2,1,1940,1949
@@ -4911,7 +4926,7 @@ clairouin-a,clairouin-a,Clairouin,identity,0,1,1,1922,1922
 clamageran-g,clamageran-g,Clamageran,identity,0,1,2,1937,1937
 clamageran-w,clamageran-w,Clamageran,identity,0,4,2,1920,1937
 clanis,clanis,Clanis,unfolded_year_span,1,5,1,1919,1929
-clanis-g,clanis-g,Clanis,identity,0,11,1,1914,1975
+clanis-g,clanis-g,Clanis,identity,0,17,1,1914,1975
 clanis-negociant-armateur-a-saint-pierre-g,clanis-negociant-armateur-a-saint-pierre-g,Clanis: négociant-armateur à Saint-Pierre,identity,0,1,1,,
 clappier,clappier-e,Clappier,folded_unique_initial,0,3,1,1925,1925
 clappier-e,clappier-e,Clappier,identity,0,2,1,1937,1958
@@ -5037,7 +5052,7 @@ colaneri-f,colaneri-f,Colaneri,identity,0,1,2,1926,1926
 colaneri-roger-desmoineaux-f,colaneri-roger-desmoineaux-f,Colaneri Roger Desmoineaux,identity,0,1,1,1927,1927
 colardeau,colardeau,Colardeau,identity,0,1,0,1932,1932
 colas,colas,Colas,unfolded_ambiguous,1,6,3,1881,1931
-colas-e,colas-e,Colas,identity,0,17,3,1925,1951
+colas-e,colas-e,Colas,identity,0,18,3,1925,1951
 colas-j,colas-j,Colas,identity,0,1,3,1945,1945
 colas-l,colas-l,Colas,identity,0,3,3,1921,1940
 cole-f-c-a-s,cole-f-c-a-s,Cole F. C. A,identity,0,1,1,1929,1929
@@ -5279,6 +5294,7 @@ conseil-mm-jean-delpech,conseil-mm-jean-delpech,Conseil: MM. Jean Delpech,identi
 conseil-mm-jean-hersent,conseil-mm-jean-hersent,Conseil: MM. Jean Hersent,identity,0,2,0,1926,1930
 conseil-mm-jean-levert,conseil-mm-jean-levert,Conseil: MM. Jean Levert,identity,0,1,0,1931,1931
 conseil-mm-jean-epinat,conseil-mm-jean-epinat,Conseil: MM. Jean Épinat,identity,0,1,0,1935,1935
+conseil-mm-joao-b-casqueiro,conseil-mm-joao-b-casqueiro,Conseil: MM. Joao B. Casqueiro,identity,0,1,0,1935,1935
 conseil-mm-joseph-nicolas,conseil-mm-joseph-nicolas,Conseil: MM. Joseph Nicolas,identity,0,1,0,1926,1926
 conseil-mm-koster,conseil-mm-koster,Conseil: MM. Koœster,identity,0,1,0,1930,1930
 conseil-mm-l-borgeaud,conseil-mm-l-borgeaud,Conseil: MM. L. Borgeaud,identity,0,1,0,1933,1933
@@ -5312,6 +5328,7 @@ conseil-mm-vicente-castella,conseil-mm-vicente-castella,Conseil: MM. Vicente Cas
 conseil-mm-victor-gautier,conseil-mm-victor-gautier,Conseil: MM. Victor Gautier,identity,0,2,0,1926,1930
 conseil-mm-edouard,conseil-mm-edouard,Conseil: MM. Édouard,identity,0,1,0,1935,1935
 conseil-mm-etienne-audibert,conseil-mm-etienne-audibert,Conseil: MM. Étienne Audibert,identity,0,1,0,1926,1926
+conseil-mme-tramoy-de-laubeypie,conseil-mme-tramoy-de-laubeypie,Conseil: Mme Tramoy de Laubeypie,identity,0,1,0,1930,1930
 conseil-mme-vve-f,conseil-mme-vve-f,Conseil: Mme Vve F,identity,0,1,1,1930,1930
 conseil-mme-de-surrel,conseil-mme-de-surrel,Conseil: Mme de Surrel,identity,0,1,0,1931,1931
 conseil-p-paris,conseil-p-paris,Conseil: P. Paris,identity,0,1,0,1932,1932
@@ -5816,6 +5833,7 @@ ducroquet,ducroquet,DUCROQUET,identity,0,1,0,1907,1907
 daniel-raty,daniel-raty,D[aniel Raty,identity,0,1,0,1952,1952
 desire-garbe,desire-garbe,D[ésiré Garbe,identity,0,1,0,1938,1938
 da-motta-gomes-junior-j,da-motta-gomes-junior-j,Da Motta Gomes Junior,identity,0,1,1,1938,1938
+dabadie-f,dabadie-f,Dabadie,identity,0,3,1,1922,1929
 dabakala,dabakala,Dabakala,identity,0,1,0,1951,1951
 dabakala-blachon,dabakala-blachon,Dabakala. Blachon,identity,0,1,0,1931,1931
 dabakala-de-tessieres,dabakala-de-tessieres,Dabakala. De Tessières,identity,0,1,0,1926,1926
@@ -5879,6 +5897,7 @@ damart-h,damart-h,Damart,identity,0,2,1,1931,1937
 damas-fabrication-de-tous-instruments-de-controle,damas-fabrication-de-tous-instruments-de-controle,Damas. Fabrication de tous instruments de contrôle,identity,0,1,0,,
 damaye-c,damaye-c,Damaye,identity,0,2,1,1912,1914
 dambmann-g,dambmann-g,Dambmann,identity,0,1,1,1899,1899
+damestoy-a,damestoy-a,Damestoy,identity,0,1,1,1942,1942
 damet-sic-danset-m,damet-sic-danset-m,Damet [sic: Danset,identity,0,2,1,1913,1922
 damian-j,damian-j,Damian,identity,0,3,1,1919,1921
 damiani-s,damiani-s,Damiani,identity,0,2,1,1919,1921
@@ -6010,14 +6029,14 @@ davan,davan,Davan,identity,0,1,0,1889,1889
 davicion,davicion,Davicion,identity,0,2,0,1914,1917
 david,david,David,unfolded_ambiguous,1,9,4,1899,1937
 david-c,david-c,David,identity,0,1,4,1930,1930
-david-e,david-e,David,identity,0,3,4,1903,1930
+david-e,david-e,David,identity,0,4,4,1903,1930
 david-j,david-j,David,identity,0,3,4,1879,1881
 david-r,david-r,David,identity,0,2,4,1937,1937
 david-weill-p,david-weill-p,David-Weill,identity,0,1,1,1937,1937
 davidoff-a,davidoff-a,Davidoff,identity,0,3,1,1911,1912
 davies-c,davies-c,Davies,identity,0,1,1,1937,1937
 davillier,davillier-j,Davillier,folded_unique_initial,0,1,1,1926,1926
-davillier-j,davillier-j,Davillier,identity,0,19,1,1926,1975
+davillier-j,davillier-j,Davillier,identity,0,29,1,1925,1975
 daville,daville,Davillé,unfolded_ambiguous,1,1,2,1901,1901
 daville-a,daville-a,Davillé,identity,0,1,2,1901,1901
 daville-e,daville-e,Davillé,identity,0,1,2,1901,1901
@@ -6139,13 +6158,14 @@ dejou-p,dejou-p,Dejou,identity,0,1,1,1949,1949
 dekonink,dekonink-r,Dekonink,folded_unique_initial,0,1,1,1951,1951
 dekonink-r,dekonink-r,Dekonink,identity,0,3,1,1949,1951
 del-porto,del-porto-a,Del Porto,folded_unique_initial,0,7,1,1922,1933
-delachaussee-f,delachaussee-f,Delachaussée,identity,0,1,1,1930,1930
+delachaussee-f,delachaussee-f,Delachaussée,identity,0,2,1,1930,1930
 delacote,delacote,Delacote,identity,0,2,0,1949,1971
 delacre-l,delacre-l,Delacre,identity,0,1,1,1898,1898
 delacroix,delacroix-j,Delacroix,folded_unique_initial,0,4,1,1912,1920
 delacroix-j,delacroix-j,Delacroix,identity,0,4,1,1937,1969
 delacroix-laval-m,delacroix-laval-m,Delacroix-Laval,identity,0,1,1,1931,1931
 delafond,delafond,Delafond,identity,0,1,0,1926,1926
+delagarde-a,delagarde-a,Delagarde,identity,0,1,1,1984,1984
 delage-e,delage-e,Delage,identity,0,2,4,1910,1937
 delage-g,delage-g,Delage,identity,0,4,4,1923,1937
 delage-m,delage-m,Delage,identity,0,4,4,1914,1926
@@ -6177,7 +6197,7 @@ delanoe,delanoe,Delanoë,identity,0,2,0,1914,1914
 delaplane,delaplane,Delaplane,identity,0,1,0,1932,1932
 delaporte-a,delaporte-a,Delaporte,identity,0,2,2,1937,1937
 delaporte-l,delaporte-l,Delaporte,identity,0,1,2,1880,1880
-delaquis-l,delaquis-l,Delaquis,identity,0,4,1,1911,1925
+delaquis-l,delaquis-l,Delaquis,identity,0,5,1,1911,1925
 delarbre,delarbre,Delarbre,unfolded_ambiguous,1,3,2,1882,1931
 delarbre-a,delarbre-a,Delarbre,identity,0,3,2,1923,1926
 delarbre-m,delarbre-m,Delarbre,identity,0,2,2,1925,1926
@@ -6371,7 +6391,7 @@ dennece,dennece,Dennecé,identity,0,3,0,1938,1938
 denoix,denoix-g,Denoix,folded_unique_initial,0,1,1,1925,1925
 denoix-g,denoix-g,Denoix,identity,0,3,1,1945,1953
 denormandie,denormandie,Denormandie,identity,0,1,0,1901,1901
-denorus,denorus,Denorus,identity,0,2,0,1932,1933
+denorus,denorus-d,Denorus,folded_unique_initial,0,2,1,1932,1933
 dent-a,dent-a,Dent,identity,0,2,1,1922,1922
 dentz-a,dentz-a,Dentz,identity,0,15,1,1929,1971
 depas-r,depas-r,Depas,identity,0,1,1,1940,1940
@@ -7031,6 +7051,7 @@ dugue-p,dugue-p,Dugué,identity,0,5,1,1950,1963
 dugue-de-la-fauconnerie,dugue-de-la-fauconnerie,Dugué de la Fauconnerie,identity,0,2,0,1887,1892
 duhesme-g,duhesme-g,Duhesme,identity,0,2,1,1926,1930
 duhoux-a,duhoux-a,Duhoux,identity,0,1,1,1926,1926
+dujardin,dujardin,Dujardin,unfolded_ambiguous,1,1,3,1951,1951
 dujardin-c,dujardin-c,Dujardin,identity,0,2,3,1947,1951
 dujardin-e,dujardin-e,Dujardin,identity,0,5,3,1937,1953
 dujardin-s,dujardin-s,Dujardin,identity,0,1,3,1951,1951
@@ -7127,7 +7148,7 @@ duprez-bom-h,duprez-bom-h,Duprez (B.O.M,identity,0,1,1,1935,1935
 dupre,dupre,Dupré,unfolded_ambiguous,1,1,5,1921,1921
 dupre-a,dupre-a,Dupré,identity,0,8,5,1890,1971
 dupre-f,dupre-f,Dupré,identity,0,8,5,1909,1945
-dupre-l,dupre-l,Dupré,identity,0,2,5,1953,1963
+dupre-l,dupre-l,Dupré,identity,0,3,5,1953,1963
 dupre-m,dupre-m,Dupré,identity,0,1,5,1932,1932
 dupre-p,dupre-p,Dupré,identity,0,2,5,1939,1963
 dupre-fils-d-anthyme-a,dupre-fils-d-anthyme-a,Dupré [fils d'Anthyme,identity,0,1,1,1971,1971
@@ -7274,6 +7295,7 @@ dejardin-verkinder,dejardin-verkinder-p,Déjardin-Verkinder,folded_unique_initia
 demarest,demarest,Démarest,unfolded_ambiguous,1,4,2,1912,1920
 demarest-m,demarest-m,Démarest,identity,0,3,2,1912,1926
 demaret-l,demaret-l,Démaret,identity,0,2,1,1923,1933
+denorus-d,denorus-d,Dénorus,identity,0,1,1,1951,1951
 depute-de-l-yonne-adresses-p,depute-de-l-yonne-adresses-p,Député de l'Yonne Adresses: 12,identity,0,1,1,1927,1927
 depute-de-la-seine-adresses-c,depute-de-la-seine-adresses-c,Député de la Seine Adresses: 54,identity,0,1,1,1927,1927
 depot-des-messageries-hachette-gustave-dagort,depot-des-messageries-hachette-gustave-dagort,Dépôt des messageries Hachette. Gustave Dagort,identity,0,1,0,1937,1937
@@ -7297,7 +7319,7 @@ e-bejot,e-bejot,E Béjot,identity,0,2,0,1906,1912
 e-carbonnel,e-carbonnel,E Carbonnel,identity,0,1,0,1912,1912
 e-carnot,e-carnot,E Carnot,identity,0,5,0,1902,1951
 e-carre,e-carre,E Carré,identity,0,1,0,1908,1908
-e-casteincau,e-casteincau,E Casteincau,identity,0,2,0,1922,1925
+e-casteincau,e-casteincau,E Casteincau,identity,0,3,0,1922,1925
 e-cattaui,e-cattaui,E Cattaui,identity,0,1,0,1896,1896
 e-coeytaux,e-coeytaux,E Coeytaux,identity,0,2,0,1921,1958
 e-colas,e-colas,E Colas,identity,0,2,0,1922,1958
@@ -7323,7 +7345,7 @@ e-gigandet,e-gigandet,E Gigandet,identity,0,1,0,1915,1915
 e-giscard-d-estaing,e-giscard-d-estaing,E Giscard-d'Estaing,identity,0,1,0,1951,1951
 e-gruner,e-gruner,E Gruner,identity,0,1,0,1929,1929
 e-guernier,e-guernier,E Guernier,identity,0,5,0,1921,1950
-e-guignard,e-guignard,E Guignard,identity,0,1,0,1925,1925
+e-guignard,e-guignard,E Guignard,identity,0,3,0,1922,1925
 e-guillet-de-la-brosse,e-guillet-de-la-brosse,E Guillet de la Brosse,identity,0,1,0,1958,1958
 e-gue,e-gue,E Gué,identity,0,1,0,1926,1926
 e-hassebroucq,e-hassebroucq,E Hassebroucq,identity,0,2,0,1913,1922
@@ -7710,6 +7732,7 @@ erkes-a,erkes-a,Erkes,identity,0,2,1,1926,1930
 erkiletlian-g,erkiletlian-g,Erkiletlian,identity,0,1,1,1949,1949
 erm-snozzi,erm-snozzi,Erm. Snozzi,identity,0,2,0,1937,1937
 ern-plisson-statuts-chez-me-moyne,ern-plisson-statuts-chez-me-moyne,Ern. Plisson. Statuts chez Me Moyne,identity,0,1,0,1916,1916
+ernest,ernest,Ernest,identity,0,1,0,1935,1935
 ernest-guyot-sionnest-e,ernest-guyot-sionnest-e,Ernest Guyot-Sionnest,identity,0,1,1,1922,1922
 ernest-picard-p,ernest-picard-p,Ernest-Picard,identity,0,7,1,1922,1940
 ernest-picard-censeurs-mm-gaston-boulogne-p,ernest-picard-censeurs-mm-gaston-boulogne-p,Ernest-Picard. Censeurs: MM. Gaston Boulogne,identity,0,1,1,1940,1940
@@ -7788,7 +7811,7 @@ etats-unis-mm-brangier,etats-unis-mm-brangier,Etats-Unis: MM. Brangier,identity,
 etcheverry-h,etcheverry-h,Etcheverry,identity,0,3,1,1951,1971
 etlin-p,etlin-p,Etlin,identity,0,2,1,1935,1951
 etoumbi,etoumbi,Etoumbi,identity,0,1,0,1925,1925
-ettedgui-i,ettedgui-i,Ettedgui,identity,0,1,2,1922,1922
+ettedgui-i,ettedgui-i,Ettedgui,identity,0,2,2,1922,1926
 ettedgui-s,ettedgui-s,Ettedgui,identity,0,3,2,1922,1935
 eud-rey,eud-rey,Eud. Rey,identity,0,2,0,1882,1887
 eug,eug,Eug,identity,0,1,0,1937,1937
@@ -7934,6 +7957,7 @@ f-chapelet,f-chapelet,F Chapelet,identity,0,1,0,1919,1919
 f-coquelle,f-coquelle,F Coquelle,identity,0,4,0,1921,1925
 f-coquelle-neg-consignataire-a-dunkerque,f-coquelle-neg-consignataire-a-dunkerque,F Coquelle [nég.-consignataire à Dunkerque,identity,0,1,0,1925,1925
 f-coupvent-des-graviers,f-coupvent-des-graviers,F Coupvent des Graviers,identity,0,1,0,1971,1971
+f-dabadie,f-dabadie,F Dabadie,identity,0,1,0,1922,1922
 f-delaitre,f-delaitre,F Delaitre,identity,0,3,0,1913,1913
 f-devise,f-devise,F Devise,identity,0,2,0,1910,1912
 f-estier,f-estier,F Estier,identity,0,1,0,1920,1920
@@ -8352,6 +8376,7 @@ flipo-fils-p,flipo-fils-p,Flipo fils,identity,0,1,1,1937,1937
 flobert-p,flobert-p,Flobert,identity,0,1,1,1945,1945
 flondrois-a,flondrois-a,Flondrois,identity,0,1,1,1937,1937
 flondrois-commissaires-des-comptes-mm-join-lambert-a,flondrois-commissaires-des-comptes-mm-join-lambert-a,Flondrois. Commissaires des comptes: MM. Join-Lambert,identity,0,1,1,1940,1940
+florentin-r,florentin-r,Florentin,identity,0,1,1,1935,1935
 florida-glanca,florida-glanca,Florida-Glanca,identity,0,1,0,1925,1925
 florimond-albert-baitry,florimond-albert-baitry,Florimond-Albert Baitry,identity,0,1,0,1920,1920
 florin-p,florin-p,Florin,identity,0,2,1,1926,1950
@@ -8391,7 +8416,7 @@ fonde-de-pouvoirs-marcel-penicaud,fonde-de-pouvoirs-marcel-penicaud,Fondé de po
 fonsales-a,fonsales-a,Fonsales,identity,0,1,1,1912,1912
 font-a,font-a,Font,identity,0,1,1,1930,1930
 fontaine,fontaine,Fontaine,unfolded_ambiguous,1,6,8,1892,1945
-fontaine-a,fontaine-a,Fontaine,identity,0,42,8,1890,1938
+fontaine-a,fontaine-a,Fontaine,identity,0,43,8,1890,1938
 fontaine-e,fontaine-e,Fontaine,identity,0,18,8,1887,1948
 fontaine-f,fontaine-f,Fontaine,identity,0,4,8,1911,1913
 fontaine-g,fontaine-g,Fontaine,identity,0,1,8,1937,1937
@@ -8442,7 +8467,7 @@ forti-j,forti-j,Forti,identity,0,3,1,1892,1901
 fortier,fortier,Fortier,identity,0,1,0,1931,1931
 fortin,fortin,Fortin,unfolded_ambiguous,1,1,4,1919,1919
 fortin-c,fortin-c,Fortin,identity,0,2,4,1932,1952
-fortin-g,fortin-g,Fortin,identity,0,1,4,1920,1920
+fortin-g,fortin-g,Fortin,identity,0,2,4,1920,1953
 fortin-p,fortin-p,Fortin,identity,0,1,4,1935,1935
 fortin-hermann-commissaires-mm-a-luini,fortin-hermann-commissaires-mm-a-luini,Fortin-Hermann. Commissaires: MM. A. Luini,identity,0,1,0,1906,1906
 fortoul-a,fortoul-a,Fortoul,identity,0,4,2,1929,1953
@@ -9365,7 +9390,7 @@ germain,germain,Germain,unfolded_ambiguous,1,4,7,1925,1940
 germain-a,germain-a,Germain,identity,0,4,7,1929,1948
 germain-f,germain-f,Germain,identity,0,3,7,1925,1963
 germain-h,germain-h,Germain,identity,0,2,7,1945,1948
-germain-j,germain-j,Germain,identity,0,2,7,1952,1952
+germain-j,germain-j,Germain,identity,0,3,7,1930,1952
 germain-p,germain-p,Germain,identity,0,2,7,1925,1929
 germain-r,germain-r,Germain,identity,0,1,7,1929,1929
 germain-s,germain-s,Germain,identity,0,2,7,1906,1914
@@ -9438,7 +9463,7 @@ gille-e,gille-e,Gille,identity,0,1,3,1969,1969
 gille-p,gille-p,Gille,identity,0,2,3,1923,1969
 gilles,gilles-a,Gilles,folded_unique_initial,0,1,1,1913,1913
 gilles-a,gilles-a,Gilles,identity,0,1,1,1930,1930
-gillet-a,gillet-a,Gillet,identity,0,5,6,1929,1951
+gillet-a,gillet-a,Gillet,identity,0,6,6,1929,1951
 gillet-c,gillet-c,Gillet,identity,0,2,6,1926,1937
 gillet-e,gillet-e,Gillet,identity,0,1,6,1926,1926
 gillet-f,gillet-f,Gillet,identity,0,1,6,1950,1950
@@ -9638,9 +9663,10 @@ gorchs-chacou,gorchs-chacou-f,Gorchs-Chacou,folded_unique_initial,0,7,1,1913,192
 gorchs-chacou-f,gorchs-chacou-f,Gorchs-Chacou,identity,0,19,1,1919,1938
 gorchs-chacou-a-neuilly-sur-seine-f,gorchs-chacou-a-neuilly-sur-seine-f,Gorchs-Chacou à Neuilly-sur-Seine,identity,0,1,1,1922,1922
 gorge,gorge,Gorge,identity,0,2,0,1925,1925
-gorgeu,gorgeu,Gorgeu,unfolded_ambiguous,1,8,2,1906,1938
-gorgeu-m,gorgeu-m,Gorgeu,identity,0,13,2,1906,1975
-gorgeu-s,gorgeu-s,Gorgeu,identity,0,2,2,1920,1975
+gorgeu,gorgeu,Gorgeu,unfolded_ambiguous,1,11,2,1906,1938
+gorgeu-m,gorgeu-m,Gorgeu,identity,0,17,2,1906,1975
+gorgeu-s,gorgeu-s,Gorgeu,identity,0,6,2,1920,1975
+gorgeu-commissaires-aux-comptes-l-pliquet-s,gorgeu-commissaires-aux-comptes-l-pliquet-s,Gorgeu. Commissaires aux comptes: L. Pliquet,identity,0,2,1,1945,1948
 gorgeu-comptoirs-senegal-st-louis-s,gorgeu-comptoirs-senegal-st-louis-s,Gorgeu. Comptoirs: Sénégal: St-Louis,identity,0,1,1,1925,1925
 gorgeux-p,gorgeux-p,Gorgeux,identity,0,1,1,1880,1880
 gorounat-p,gorounat-p,Gorounat,identity,0,1,1,1932,1932
@@ -9708,8 +9734,9 @@ gouttenoire-j,gouttenoire-j,Gouttenoire,identity,0,5,2,1937,1953
 gouttenoire-commissaires-aux-comptes-p-montel-g,gouttenoire-commissaires-aux-comptes-p-montel-g,Gouttenoire. Commissaires aux comptes: P. Montel,identity,0,1,1,1945,1945
 gouvernet,gouvernet,Gouvernet,identity,0,1,0,1950,1950
 gouvy,gouvy,Gouvy,identity,0,3,0,1890,1925
-goux-a,goux-a,Goux,identity,0,1,2,1927,1927
-goux-v,goux-v,Goux,identity,0,1,2,1927,1927
+goux-a,goux-a,Goux,identity,0,1,3,1927,1927
+goux-p,goux-p,Goux,identity,0,7,3,1937,1951
+goux-v,goux-v,Goux,identity,0,1,3,1927,1927
 gouy-l,gouy-l,Gouy,identity,0,1,2,1937,1937
 gouy-m,gouy-m,Gouy,identity,0,1,2,1937,1937
 gouzee-a,gouzee-a,Gouzée,identity,0,2,1,1937,1937
@@ -10012,7 +10039,7 @@ guigibert-a,guigibert-a,Guigibert,identity,0,1,1,1932,1932
 guiglo-g-meyer,guiglo-g-meyer,Guiglo. G. Meyer,identity,0,1,0,1951,1951
 guignabaudet-p,guignabaudet-p,Guignabaudet,identity,0,6,1,1932,1963
 guignard,guignard,Guignard,unfolded_ambiguous,1,1,2,1963,1963
-guignard-e,guignard-e,Guignard,identity,0,13,2,1920,1975
+guignard-e,guignard-e,Guignard,identity,0,20,2,1920,1975
 guignard-g,guignard-g,Guignard,identity,0,12,2,1931,1971
 guignet-l,guignet-l,Guignet,identity,0,1,2,1923,1923
 guignet-w,guignet-w,Guignet,identity,0,1,2,1903,1903
@@ -10686,6 +10713,7 @@ henry-m,henry-m,Henry,identity,0,2,6,1928,1937
 henry-p,henry-p,Henry,identity,0,2,6,1913,1913
 henry-r,henry-r,Henry,identity,0,6,6,1899,1926
 henry-franck-d-apres-doc-af-p,henry-franck-d-apres-doc-af-p,Henry Franck. [D'après Doc af,identity,0,1,1,1963,1963
+henry-de-demandolx-c,henry-de-demandolx-c,Henry de Demandolx,identity,0,1,1,1963,1963
 henry-greard-o,henry-greard-o,Henry-Gréard,identity,0,9,1,1931,1953
 henry-greard-commissaires-aux-comptes-mm-barreau-o,henry-greard-commissaires-aux-comptes-mm-barreau-o,Henry-Gréard. Commissaires aux comptes: MM. Barreau,identity,0,1,1,1953,1953
 hentsch-c,hentsch-c,Hentsch,identity,0,1,4,1952,1952
@@ -10840,7 +10868,7 @@ hochdoerffer-c,hochdoerffer-c,Hochdoerffer,identity,0,3,1,1930,1937
 hochdoerfier-a,hochdoerfier-a,Hochdoerfier,identity,0,2,1,1936,1937
 hochon-b,hochon-b,Hochon,identity,0,4,1,1880,1918
 hoffet-g,hoffet-g,Hoffet,identity,0,4,2,1913,1937
-hoffet-h,hoffet-h,Hoffet,identity,0,16,2,1900,1954
+hoffet-h,hoffet-h,Hoffet,identity,0,17,2,1900,1954
 hoffherr-r,hoffherr-r,Hoffherr,identity,0,2,1,1937,1937
 hoffmann,hoffmann,Hoffmann,unfolded_ambiguous,1,5,2,1913,1950
 hoffmann-a,hoffmann-a,Hoffmann,identity,0,2,2,1929,1930
@@ -10991,6 +11019,7 @@ huguenot,huguenot,Huguenot,identity,0,1,0,1925,1925
 hugues,hugues,Hugues,identity,0,1,0,1914,1914
 huguet-p,huguet-p,Huguet,identity,0,2,2,1937,1952
 huguet-v,huguet-v,Huguet,identity,0,1,2,1890,1890
+huge,huge-p,Hugé,folded_unique_initial,0,1,1,1953,1953
 huge-p,huge-p,Hugé,identity,0,3,1,1930,1937
 hui-bon-hoa-l,hui-bon-hoa-l,Hui Bon Hoa,identity,0,3,1,1942,1993
 huilafric,huilafric,Huilafric,identity,0,1,0,1958,1958
@@ -11814,6 +11843,7 @@ juin-g,juin-g,Juin,identity,0,1,1,1937,1937
 jules,jules-b,Jules,folded_unique_initial,0,5,1,1893,1950
 jules-b,jules-b,Jules,identity,0,1,1,1940,1940
 jules-dollfus-l,jules-dollfus-l,Jules Dollfus,identity,0,1,1,1898,1898
+jules-t-senouf,jules-t-senouf,Jules-T. Senouf,identity,0,1,0,1926,1926
 julet-a,julet-a,Julet,identity,0,1,1,1949,1949
 julhiet-e,julhiet-e,Julhiet,identity,0,7,1,1925,1931
 julia,julia-m,Julia,folded_unique_initial,0,2,1,1925,1928
@@ -12475,8 +12505,8 @@ lamarre-magny,lamarre-magny,Lamarre. Magny,identity,0,1,0,1920,1920
 lamarziere,lamarziere,Lamarzière,identity,0,1,0,1915,1915
 lamasse,lamasse-j,Lamasse,folded_unique_initial,0,1,1,1925,1925
 lamasse-j,lamasse-j,Lamasse,identity,0,1,1,1938,1938
-lamaziere,lamaziere-l,Lamazière,folded_unique_initial,0,1,1,1915,1915
-lamaziere-l,lamaziere-l,Lamazière,identity,0,2,1,1945,1953
+lamaziere,lamaziere-l,Lamazière,folded_unique_initial,0,2,1,1914,1915
+lamaziere-l,lamaziere-l,Lamazière,identity,0,3,1,1914,1953
 lamazou-g,lamazou-g,Lamazou,identity,0,1,1,1949,1949
 lamb-c,lamb-c,Lamb,identity,0,1,1,1926,1926
 lambarene,lambarene,Lambaréné,identity,0,5,0,1937,1937
@@ -12574,7 +12604,7 @@ lanquetin-l,lanquetin-l,Lanquetin,identity,0,2,1,1926,1937
 lanselle-p,lanselle-p,Lanselle,identity,0,2,1,1948,1953
 lantenois-h,lantenois-h,Lantenois,identity,0,3,1,1937,1937
 lantz,lantz-l,Lantz,folded_unique_initial,0,4,1,1925,1953
-lantz-l,lantz-l,Lantz,identity,0,11,1,1925,1969
+lantz-l,lantz-l,Lantz,identity,0,12,1,1925,1969
 lantz-commissaires-aux-comptes-ch-rety-j,lantz-commissaires-aux-comptes-ch-rety-j,Lantz. Commissaires aux comptes: Ch. Réty,identity,0,1,1,1953,1953
 lantzenberg,lantzenberg-j,Lantzenberg,folded_unique_initial,0,1,1,1937,1937
 lantzenberg-j,lantzenberg-j,Lantzenberg,identity,0,2,1,1937,1940
@@ -12909,7 +12939,7 @@ lebout,lebout,Lebout,identity,0,2,0,1948,1948
 lebreton-f,lebreton-f,Lebreton,identity,0,10,1,1890,1937
 lebrun-g,lebrun-g,Lebrun,identity,0,1,2,1930,1930
 lebrun-j,lebrun-j,Lebrun,identity,0,2,2,1903,1929
-lebevre-c,lebevre-c,Lebèvre,identity,0,1,1,1931,1931
+lebevre-c,lebevre-c,Lebèvre,identity,0,2,1,1931,1951
 lebee-e,lebee-e,Lebée,identity,0,5,1,1937,1953
 lecanu-j,lecanu-j,Lecanu,identity,0,1,1,1906,1906
 lecanu-commissaire-de-surveillance,lecanu-commissaire-de-surveillance,Lecanu. Commissaire de surveillance,identity,0,1,0,1908,1908
@@ -12985,7 +13015,7 @@ lefrancois-statuts-deposes-chez-me-vigier-g,lefrancois-statuts-deposes-chez-me-v
 lefebvre,lefebvre,Lefèbvre,unfolded_ambiguous,1,3,5,1937,1950
 lefebvre-e,lefebvre-e,Lefèbvre,identity,0,3,5,1945,1969
 lefevre,lefevre,Lefèvre,unfolded_ambiguous,1,4,5,1922,1963
-lefevre-c,lefevre-c,Lefèvre,identity,0,17,5,1924,1951
+lefevre-c,lefevre-c,Lefèvre,identity,0,18,5,1924,1951
 lefevre-e,lefevre-e,Lefèvre,identity,0,3,5,1929,1940
 lefevre-h,lefevre-h,Lefèvre,identity,0,2,5,1951,1951
 lefevre-r,lefevre-r,Lefèvre,identity,0,1,5,1949,1949
@@ -12993,7 +13023,7 @@ lefevre-pontalis-h,lefevre-pontalis-h,Lefèvre-Pontalis,identity,0,1,1,1930,1930
 lefevre-vacquerie,lefevre-vacquerie-p,Lefèvre-Vacquerie,folded_unique_initial,0,1,1,1922,1922
 lefevre-vacquerie-p,lefevre-vacquerie-p,Lefèvre-Vacquerie,identity,0,7,1,1923,1933
 lefevre-l,lefevre-l,Lefévre,identity,0,9,5,1913,1954
-legal-c,legal-c,Legal,identity,0,7,2,1930,1937
+legal-c,legal-c,Legal,identity,0,8,2,1930,1937
 legal-e,legal-e,Legal,identity,0,1,2,1937,1937
 legave-m,legave-m,Legave,identity,0,1,1,1890,1890
 legay-f,legay-f,Legay,identity,0,4,2,1937,1940
@@ -13061,7 +13091,7 @@ lem-g,lem-g,Lem,identity,0,2,1,1890,1922
 lemaignen,lemaignen,Lemaignen,unfolded_ambiguous,1,1,3,1926,1926
 lemaignen-c,lemaignen-c,Lemaignen,identity,0,2,3,1943,1951
 lemaignen-g,lemaignen-g,Lemaignen,identity,0,1,3,1922,1922
-lemaignen-r,lemaignen-r,Lemaignen,identity,0,19,3,1932,1963
+lemaignen-r,lemaignen-r,Lemaignen,identity,0,21,3,1932,1963
 lemaigre-dubreuil-j,lemaigre-dubreuil-j,Lemaigre-Dubreuil,identity,0,8,4,1948,1969
 lemaigre-dubreuil-l,lemaigre-dubreuil-l,Lemaigre-Dubreuil,identity,0,1,4,1930,1930
 lemaigre-dubreuil-p,lemaigre-dubreuil-p,Lemaigre-Dubreuil,identity,0,1,4,1913,1913
@@ -13103,8 +13133,9 @@ lenfant-e,lenfant-e,Lenfant,identity,0,1,2,1920,1920
 lenfant-l,lenfant-l,Lenfant,identity,0,2,2,1958,1959
 lenhardt-e,lenhardt-e,Lenhardt,identity,0,4,1,1937,1969
 lennox-g,lennox-g,Lennox,identity,0,1,1,1932,1932
-lenoir-g,lenoir-g,Lenoir,identity,0,4,2,1890,1938
-lenoir-p,lenoir-p,Lenoir,identity,0,2,2,1940,1948
+lenoir-a,lenoir-a,Lenoir,identity,0,1,3,1930,1930
+lenoir-g,lenoir-g,Lenoir,identity,0,4,3,1890,1938
+lenoir-p,lenoir-p,Lenoir,identity,0,2,3,1940,1948
 lenoir-lombard-odier-g,lenoir-lombard-odier-g,Lenoir [Lombard-Odier,identity,0,1,1,1930,1930
 lenormand,lenormand,Lenormand,unfolded_ambiguous,1,1,3,1938,1938
 lenormand-e,lenormand-e,Lenormand,identity,0,3,3,1927,1937
@@ -13448,8 +13479,9 @@ lorieux,lorieux,Lorieux,unfolded_year_span,1,13,1,1912,1953
 lorieux-l,lorieux-l,Lorieux,identity,0,8,1,1915,1975
 lorilleux-e,lorilleux-e,Lorilleux,identity,0,2,2,1930,1930
 lorilleux-p,lorilleux-p,Lorilleux,identity,0,1,2,1935,1935
-lorin-h,lorin-h,Lorin,identity,0,2,2,1926,1926
-lorin-l,lorin-l,Lorin,identity,0,4,2,1933,1940
+lorin-h,lorin-h,Lorin,identity,0,2,3,1926,1926
+lorin-l,lorin-l,Lorin,identity,0,4,3,1933,1940
+lorin-p,lorin-p,Lorin,identity,0,1,3,1971,1971
 loriot,loriot,Loriot,identity,0,1,0,1913,1913
 lorrain-h,lorrain-h,Lorrain,identity,0,3,1,1921,1937
 lorraine,lorraine,Lorraine,identity,0,2,0,1938,1953
@@ -13459,7 +13491,8 @@ lorthiois,lorthiois,Lorthiois,unfolded_ambiguous,1,4,2,1920,1922
 lorthiois-j,lorthiois-j,Lorthiois,identity,0,13,2,1900,1953
 lorthiois-l,lorthiois-l,Lorthiois,identity,0,1,2,1928,1928
 lorton-p,lorton-p,Lorton,identity,0,1,1,1926,1926
-lory-j,lory-j,Lory,identity,0,2,1,1953,1963
+lory-a,lory-a,Lory,identity,0,1,2,1953,1953
+lory-j,lory-j,Lory,identity,0,2,2,1953,1963
 loses-r,loses-r,Loses,identity,0,1,1,1935,1935
 lossier-h,lossier-h,Lossier,identity,0,2,1,1949,1963
 losson-l,losson-l,Losson,identity,0,1,1,1937,1937
@@ -13503,6 +13536,7 @@ loustau-h,loustau-h,Loustau,identity,0,1,2,1947,1947
 lousteau,lousteau,Lousteau,identity,0,1,0,1949,1949
 loutrel-j,loutrel-j,Loutrel,identity,0,10,1,1928,1973
 loutrel,loutrel-j,Loutrel. 5,folded_unique_initial,0,3,1,1920,1933
+loutrel-direction-jacques-lory-j,loutrel-direction-jacques-lory-j,Loutrel. Direction: Jacques Lory,identity,0,1,1,1953,1953
 loutrel-jean-gueugnier-frere-d-alberte-gueugnier-j,loutrel-jean-gueugnier-frere-d-alberte-gueugnier-j,Loutrel. Jean Gueugnier: frère d'Alberte Gueugnier,identity,0,1,1,1973,1973
 louvain,louvain,Louvain,identity,0,1,0,1919,1919
 louvard-h,louvard-h,Louvard,identity,0,5,1,1887,1949
@@ -13526,9 +13560,10 @@ lubovtich-e,lubovtich-e,Lubovtich,identity,0,2,1,1940,1945
 luc,luc-a,Luc,folded_unique_initial,0,3,1,1925,1927
 luc-a,luc-a,Luc,identity,0,9,1,1890,1927
 luca-mimbelli-l,luca-mimbelli-l,Luca Mimbelli,identity,0,1,1,1901,1901
-lucas-j,lucas-j,Lucas,identity,0,3,2,1926,1958
+lucas-h,lucas-h,Lucas,identity,0,1,3,1926,1926
+lucas-j,lucas-j,Lucas,identity,0,3,3,1926,1958
 lucas-de-peslouan,lucas-de-peslouan,Lucas de Peslouan,identity,0,2,0,1925,1944
-lucas-v,lucas-v,Lucas. 6,identity,0,1,2,1929,1929
+lucas-v,lucas-v,Lucas. 6,identity,0,1,3,1929,1929
 luce-r,luce-r,Luce,identity,0,1,1,1930,1930
 lucet-ii-j,lucet-ii-j,Lucet. II,identity,0,1,1,1951,1951
 luchaire,luchaire-m,Luchaire,folded_unique_initial,0,1,1,1918,1918
@@ -13901,7 +13936,7 @@ mallinson-w,mallinson-w,Mallinson,identity,0,2,1,1922,1929
 mallon,mallon,Mallon,unfolded_ambiguous,1,1,2,1921,1921
 mallon-c,mallon-c,Mallon,identity,0,1,2,1951,1951
 mallon-h,mallon-h,Mallon,identity,0,1,2,1963,1963
-malon,malon-j,Malon,folded_unique_initial,0,1,1,1901,1901
+malon,malon-j,Malon,folded_unique_initial,0,2,1,1901,1914
 malon-j,malon-j,Malon,identity,0,1,1,1937,1937
 malota-f,malota-f,Malota,identity,0,1,1,1937,1937
 malphettes-commissaires-aux-comptes-j-richet-j,malphettes-commissaires-aux-comptes-j-richet-j,Malphettes. Commissaires aux comptes: J. Richet,identity,0,1,1,1948,1948
@@ -14050,7 +14085,7 @@ marcorelles-commissaires-aux-comptes-e-menetrier-p,marcorelles-commissaires-aux-
 marcos,marcos,Marcos,identity,0,1,0,1922,1922
 marcotte-de-sainte-marie-j,marcotte-de-sainte-marie-j,Marcotte de Sainte-Marie,identity,0,1,1,,
 marcou,marcou,Marcou,unfolded_ambiguous,1,3,3,1948,1958
-marcou-d,marcou-d,Marcou,identity,0,1,3,1963,1963
+marcou-d,marcou-d,Marcou,identity,0,2,3,1963,1963
 marcou-g,marcou-g,Marcou,identity,0,1,3,1907,1907
 marcou-o,marcou-o,Marcou,identity,0,2,3,1936,1951
 marcoux-p,marcoux-p,Marcoux,identity,0,3,1,1931,1948
@@ -14180,7 +14215,7 @@ marti-a,marti-a,Marti,identity,0,1,1,1949,1949
 martiff-a,martiff-a,Martiff,identity,0,1,1,1951,1951
 martin,martin,Martin,unfolded_ambiguous,1,13,13,1912,1971
 martin-a,martin-a,Martin,identity,0,7,13,1912,1958
-martin-c,martin-c,Martin,identity,0,4,13,1912,1951
+martin-c,martin-c,Martin,identity,0,5,13,1912,1951
 martin-e,martin-e,Martin,identity,0,10,13,1899,1937
 martin-f,martin-f,Martin,identity,0,3,13,1922,1953
 martin-g,martin-g,Martin,identity,0,15,13,1897,1951
@@ -14321,7 +14356,7 @@ mathurin-marie-gue,mathurin-marie-gue,Mathurin-Marie Gué,identity,0,1,0,1925,19
 mathe-dumaine-r,mathe-dumaine-r,Mathé- Dumaine,identity,0,2,1,1951,1963
 mathe-dumaine,mathe-dumaine-r,Mathé-Dumaine,folded_unique_initial,0,1,1,1951,1951
 mathee-r,mathee-r,Mathée,identity,0,7,1,1890,1937
-matignon-j,matignon-j,Matignon. 2,identity,0,2,1,1890,1920
+matignon-j,matignon-j,Matignon,identity,0,6,1,1890,1927
 matlhey-p,matlhey-p,Matlhey,identity,0,1,1,1907,1907
 matsas-a,matsas-a,Matsas,identity,0,2,2,1914,1917
 matsas-z,matsas-z,Matsas,identity,0,2,2,1909,1912
@@ -14540,6 +14575,7 @@ mercier-j,mercier-j,Mercier,identity,0,8,8,1908,1930
 mercier-l,mercier-l,Mercier,identity,0,3,8,1920,1925
 mercier-m,mercier-m,Mercier,identity,0,1,8,1937,1937
 mercier-y,mercier-y,Mercier,identity,0,1,8,1949,1949
+mercier-offset-camille-lacoste-o,mercier-offset-camille-lacoste-o,Mercier Offset Camille Lacoste,identity,0,1,1,1952,1952
 mercier-pageyral-a,mercier-pageyral-a,Mercier-Pageyral,identity,0,2,1,1938,1945
 merciers,merciers,Merciers,identity,0,1,0,1913,1913
 mercie-g,mercie-g,Mercié,identity,0,4,1,1904,1949
@@ -14579,7 +14615,7 @@ mesiet,mesiet,Mesiet,identity,0,1,0,1922,1922
 meslage-p,meslage-p,Meslage,identity,0,1,1,1951,1951
 meslier-a,meslier-a,Meslier,identity,0,4,2,1929,1936
 meslier-l,meslier-l,Meslier,identity,0,1,2,1930,1930
-meslin-g,meslin-g,Meslin,identity,0,2,1,1930,1952
+meslin-g,meslin-g,Meslin,identity,0,3,1,1930,1952
 mesloula,mesloula,Mesloula,identity,0,4,0,1911,1937
 mesnager-j,mesnager-j,Mesnager,identity,0,2,1,1948,1959
 mesnard,mesnard,Mesnard,identity,0,1,0,1902,1902
@@ -14915,7 +14951,7 @@ monmerque-a,monmerque-a,Monmerqué,identity,0,6,1,1927,1940
 monmont,monmont,Monmont,identity,0,1,0,1892,1892
 monmeja-r,monmeja-r,Monméja,identity,0,2,1,1922,1958
 monnanteuil-e,monnanteuil-e,Monnanteuil,identity,0,1,1,1948,1948
-monneron-p,monneron-p,Monneron,identity,0,7,1,1937,1963
+monneron-p,monneron-p,Monneron,identity,0,9,1,1937,1963
 monnerot,monnerot-j,Monnerot,folded_unique_initial,0,1,1,1925,1925
 monnerot-j,monnerot-j,Monnerot,identity,0,1,1,1931,1931
 monnet-g,monnet-g,Monnet,identity,0,3,3,1949,1963
@@ -15050,7 +15086,8 @@ moriani-c,moriani-c,Moriani,identity,0,1,1,1912,1912
 moriaud-a,moriaud-a,Moriaud,identity,0,1,1,1932,1932
 moricand-p,moricand-p,Moricand,identity,0,1,1,1922,1922
 morice-m,morice-m,Morice,identity,0,1,1,1937,1937
-morillon-a,morillon-a,Morillon,identity,0,8,1,1926,1940
+morillon-a,morillon-a,Morillon,identity,0,8,2,1926,1940
+morillon-e,morillon-e,Morillon,identity,0,1,2,1930,1930
 morin,morin,Morin,unfolded_ambiguous,1,7,7,1899,1958
 morin-c,morin-c,Morin,identity,0,1,7,1926,1926
 morin-g,morin-g,Morin,identity,0,4,7,1935,1969
@@ -15267,7 +15304,7 @@ mena-j,mena-j,Ména,identity,0,2,1,1925,1928
 menage-commissaires-aux-comptes-g-deffaux-l,menage-commissaires-aux-comptes-g-deffaux-l,Ménage. Commissaires aux comptes: G. Deffaux,identity,0,1,1,1940,1940
 menager-e,menager-e,Ménager,identity,0,1,2,1926,1926
 menager-h,menager-h,Ménager,identity,0,6,2,1930,1953
-menard-j,menard-j,Ménard,identity,0,3,1,1945,1953
+menard-j,menard-j,Ménard,identity,0,4,1,1945,1953
 menard-j-o-aef-j,menard-j-o-aef-j,Ménard (J. O. A.E.F,identity,0,1,1,1937,1937
 menervile,menervile,Ménervile,identity,0,1,0,1925,1925
 menerville,menerville,Ménerville,identity,0,1,0,1925,1925
@@ -15478,7 +15515,7 @@ nicholls-g,nicholls-g,Nicholls,identity,0,2,1,1937,1951
 nico-m,nico-m,Nico,identity,0,1,1,1925,1925
 nicol,nicol,Nicol,unfolded_ambiguous,1,15,2,1899,1937
 nicol-f,nicol-f,Nicol,identity,0,4,2,1899,1901
-nicol-l,nicol-l,Nicol,identity,0,2,2,1936,1951
+nicol-l,nicol-l,Nicol,identity,0,3,2,1936,1951
 nicolas,nicolas,Nicolas,unfolded_ambiguous,1,2,8,1915,1937
 nicolas-a,nicolas-a,Nicolas,identity,0,3,8,1918,1941
 nicolas-c,nicolas-c,Nicolas,identity,0,7,8,1945,1973
@@ -15494,6 +15531,7 @@ nicolai-f,nicolai-f,Nicolaï,identity,0,1,1,1951,1951
 nicolet-l,nicolet-l,Nicolet,identity,0,1,2,1937,1937
 nicolet-v,nicolet-v,Nicolet,identity,0,1,2,1899,1899
 nicolle-l,nicolle-l,Nicolle,identity,0,2,1,1928,1937
+nicot-l,nicot-l,Nicot,identity,0,1,1,1963,1963
 nicou,nicou-p,Nicou,folded_unique_initial,0,1,1,1914,1914
 nicou-p,nicou-p,Nicou,identity,0,6,1,1925,1937
 nicou-micheville-p,nicou-micheville-p,Nicou [Micheville,identity,0,1,1,1925,1925
@@ -16391,7 +16429,7 @@ peautonnier-f-forveille-m,peautonnier-f-forveille-m,Peautonnier. F. Forveille,id
 peaux,peaux,Peaux,identity,0,1,0,1926,1926
 pechkranz,pechkranz,Pechkranz,identity,0,1,0,1932,1932
 pecout-g,pecout-g,Pecout,identity,0,1,1,1931,1931
-pecqueur-w,pecqueur-w,Pecqueur,identity,0,13,1,1929,1951
+pecqueur-w,pecqueur-w,Pecqueur,identity,0,15,1,1929,1951
 pector-d,pector-d,Pector,identity,0,3,1,1903,1926
 pector-sieges-d-exploitation-tsaratanana-d,pector-sieges-d-exploitation-tsaratanana-d,Pector. Sièges d'exploitation: Tsaratanana,identity,0,1,1,1925,1925
 pector-sieges-d-exploitation-tsaratanana-or-d,pector-sieges-d-exploitation-tsaratanana-or-d,Pector. Sièges d'exploitation: Tsaratanana. Or,identity,0,1,1,1938,1938
@@ -16647,8 +16685,11 @@ peyraud-cultures-tropicales-en-afrique-p,peyraud-cultures-tropicales-en-afrique-
 peyredieu-du-charlat-c,peyredieu-du-charlat-c,Peyredieu du Charlat,identity,0,1,1,1909,1909
 peyrelongue-j,peyrelongue-j,Peyrelongue,identity,0,2,2,1921,1958
 peyrelongue-x,peyrelongue-x,Peyrelongue,identity,0,1,2,1926,1926
-peyrissac-l,peyrissac-l,Peyrissac,identity,0,7,1,1920,1975
-peyrissac,peyrissac-l,Peyrissac],folded_unique_initial,0,2,1,1938,1958
+peyrissac-f,peyrissac-f,Peyrissac,identity,0,7,3,1937,1951
+peyrissac-l,peyrissac-l,Peyrissac,identity,0,21,3,1920,1975
+peyrissac-w,peyrissac-w,Peyrissac,identity,0,4,3,1945,1951
+peyrissac-commissaires-aux-comptes-l-pliquet-w,peyrissac-commissaires-aux-comptes-l-pliquet-w,Peyrissac. Commissaires aux comptes: L. Pliquet,identity,0,1,1,1940,1940
+peyrissac,peyrissac,Peyrissac],unfolded_ambiguous,1,2,3,1938,1958
 peyronnet-a,peyronnet-a,Peyronnet,identity,0,6,1,1926,1951
 peyronnet-senateur-a,peyronnet-senateur-a,Peyronnet [sénateur,identity,0,1,1,1928,1928
 peyronnet-magistrat-a,peyronnet-magistrat-a,Peyronnet: magistrat,identity,0,1,1,1951,1951
@@ -16967,8 +17008,8 @@ planes-j,planes-j,Planes,identity,0,3,1,1950,1969
 plant-a,plant-a,Plant,identity,0,2,1,1921,1921
 plantet-h,plantet-h,Plantet,identity,0,4,1,1937,1952
 plantey,plantey,Plantey,unfolded_ambiguous,1,3,2,1911,1938
-plantey-j,plantey-j,Plantey,identity,0,4,2,1922,1925
-plantey-m,plantey-m,Plantey,identity,0,5,2,1922,1926
+plantey-j,plantey-j,Plantey,identity,0,5,2,1922,1925
+plantey-m,plantey-m,Plantey,identity,0,6,2,1922,1926
 plantin,plantin,Plantin,identity,0,1,0,1919,1919
 plantron,plantron,Plantron,identity,0,1,0,1910,1910
 planty-a,planty-a,Planty,identity,0,3,1,1926,1931
@@ -16998,8 +17039,9 @@ pleiku-pierre-cerclier,pleiku-pierre-cerclier,Pleiku. Pierre Cerclier,identity,0
 plessier-a,plessier-a,Plessier,identity,0,1,2,1951,1951
 plessier-l,plessier-l,Plessier,identity,0,1,2,1951,1951
 pletinckx,pletinckx,Pletinckx,identity,0,1,0,1919,1919
-pleutin-e,pleutin-e,Pleutin,identity,0,2,1,1951,1971
+pleutin-e,pleutin-e,Pleutin,identity,0,3,1,1951,1971
 pleutin-n-b-e,pleutin-n-b-e,Pleutin. N.-B,identity,0,1,1,1937,1937
+pley-r,pley-r,Pley,identity,0,1,1,1942,1942
 plez-g,plez-g,Plez,identity,0,2,1,1922,1926
 plichon,plichon-j,Plichon,folded_unique_initial,0,1,1,1930,1930
 plichon-j,plichon-j,Plichon,identity,0,1,1,1924,1924
@@ -18208,6 +18250,9 @@ riz-julien-phong-y,riz-julien-phong-y,Riz. Julien Phong-y,identity,0,1,1,1906,19
 riz-edouard-chouquet,riz-edouard-chouquet,Riz. Édouard Chouquet,identity,0,1,0,1931,1931
 rizerie,rizerie,Rizerie,identity,0,1,0,1937,1937
 rizerie-j-venot,rizerie-j-venot,Rizerie. J. Venot,identity,0,1,0,1937,1937
+ries-b,ries-b,Riès,identity,0,1,3,1951,1951
+ries-m,ries-m,Riès,identity,0,1,3,1951,1951
+ries-p,ries-p,Riès,identity,0,1,3,1951,1951
 road-c,road-c,Road,identity,0,1,3,1936,1936
 road-g,road-g,Road,identity,0,1,3,1935,1935
 road-r,road-r,Road,identity,0,1,3,1937,1937
@@ -18297,7 +18342,7 @@ roederer-j,roederer-j,Roederer,identity,0,2,2,1937,1940
 roederer-p,roederer-p,Roederer,identity,0,1,2,1913,1913
 roehrig,roehrig,Roehrig,identity,0,1,0,1931,1931
 roersch-n-b-l,roersch-n-b-l,Roersch. N. B,identity,0,1,1,1937,1937
-roffe-s,roffe-s,Roffe,identity,0,1,1,1922,1922
+roffe-s,roffe-s,Roffe,identity,0,2,1,1922,1926
 roger,roger-a,Roger,folded_unique_initial,0,3,1,1912,1930
 roger-a,roger-a,Roger,identity,0,3,1,1913,1922
 roger-machart-censeurs-mm-l-lefrere-c,roger-machart-censeurs-mm-l-lefrere-c,Roger- Machart. Censeurs: MM. L. Lefrère,identity,0,1,1,1948,1948
@@ -18637,6 +18682,7 @@ s-rolo,s-rolo,S Rolo,identity,0,1,0,1906,1906
 s-de-lanzac-de-laborie-ugine,s-de-lanzac-de-laborie-ugine,S de Lanzac de Laborie [Ugine,identity,0,2,0,1938,1938
 s-addis-c,s-addis-c,S. Addis,identity,0,3,1,1937,1945
 s-addis-kcmg-c,s-addis-kcmg-c,S. Addis K.C.M.G,identity,0,1,1,1938,1938
+s-akerib-m,s-akerib-m,S. Akérib,identity,0,1,1,1926,1926
 s-benazeraf-a,s-benazeraf-a,S. Benazeraf,identity,0,1,1,1935,1935
 s-ettedgui-i,s-ettedgui-i,S. Ettedgui,identity,0,4,1,1922,1930
 s-wilson-c,s-wilson-c,S. Wilson,identity,0,3,1,1932,1938
@@ -18832,7 +18878,7 @@ sainte-suzanne-abbe-bruignieres,sainte-suzanne-abbe-bruignieres,Sainte-Suzanne. 
 sainte-suzanne-edgard-payet,sainte-suzanne-edgard-payet,Sainte-Suzanne. Edgard Payet,identity,0,1,0,1937,1937
 saize-commissaires-aux-comptes-p-gentilhomme-a,saize-commissaires-aux-comptes-p-gentilhomme-a,Saize. Commissaires aux comptes: P. Gentilhomme,identity,0,1,1,1953,1953
 sala,sala,Sala,identity,0,1,0,1926,1926
-salagna-e,salagna-e,Salagna,identity,0,1,1,1975,1975
+salagna-e,salagna-e,Salagna,identity,0,7,1,1925,1975
 salaisons,salaisons,Salaisons,identity,0,1,0,1949,1949
 salaisons-de-porc-georger,salaisons-de-porc-georger,Salaisons de porc. Georger,identity,0,1,0,1937,1937
 salamandre,salamandre,Salamandre,identity,0,1,0,1938,1938
@@ -19258,7 +19304,9 @@ senn-o,senn-o,Senn,identity,0,10,2,1920,1951
 sennequier-crozet-n,sennequier-crozet-n,Sennequier-Crozet,identity,0,1,1,1890,1890
 sennhauser-g,sennhauser-g,Sennhauser,identity,0,1,1,1922,1922
 senonville,senonville,Senonville,identity,0,2,0,1925,1938
-senouf,senouf,Senouf,identity,0,1,0,1949,1949
+senouf,senouf,Senouf,unfolded_ambiguous,1,1,2,1949,1949
+senouf-l,senouf-l,Senouf,identity,0,1,2,1926,1926
+senouf-r,senouf-r,Senouf,identity,0,1,2,1926,1926
 senthiles,senthiles,Senthiles,identity,0,1,0,1924,1924
 sentilhes-j,sentilhes-j,Sentilhes,identity,0,1,1,1937,1937
 sentis-r,sentis-r,Sentis,identity,0,1,1,1937,1937
@@ -19532,6 +19580,7 @@ sorano-a,sorano-a,Sorano,identity,0,1,1,1951,1951
 sorbe-e,sorbe-e,Sorbe,identity,0,6,1,1926,1963
 sorbe,sorbe-e,Sorbé,folded_unique_initial,0,3,1,1921,1928
 sorel-a,sorel-a,Sorel,identity,0,1,1,1948,1948
+sorlin-g,sorlin-g,Sorlin,identity,0,4,1,1937,1948
 sormonte-v,sormonte-v,Sormonte,identity,0,1,1,1949,1949
 soto-reguera-j,soto-reguera-j,Soto Reguera,identity,0,2,1,1926,1926
 soualem-trifia,soualem-trifia,Soualem-Trifia,identity,0,1,0,1949,1949
@@ -19864,6 +19913,7 @@ tabat-b-o-m-g,tabat-b-o-m-g,Tabat (B. O. M,identity,0,1,1,1930,1930
 tabou,tabou,Tabou,identity,0,2,0,1931,1951
 tabourel-c,tabourel-c,Tabourel,identity,0,2,1,1924,1926
 tabourot-c,tabourot-c,Tabourot,identity,0,3,1,1937,1993
+tacchella-j,tacchella-j,Tacchella,identity,0,1,1,1963,1963
 tachet-j,tachet-j,Tachet,identity,0,1,1,1899,1899
 tachet-censeurs-mm-blasselle,tachet-censeurs-mm-blasselle,Tachet. Censeurs: MM. Blasselle,identity,0,2,0,1879,1881
 taeschler-m,taeschler-m,Taeschler,identity,0,1,1,1949,1949
@@ -19960,7 +20010,7 @@ tardieu-commissaires-aux-comptes-mm-j-dhaussy,tardieu-commissaires-aux-comptes-m
 tardivat-h,tardivat-h,Tardivat,identity,0,4,1,1951,1963
 tardrew-w,tardrew-w,Tardrew,identity,0,1,1,1951,1951
 tardy-e,tardy-e,Tardy,identity,0,1,3,1958,1958
-tardy-l,tardy-l,Tardy,identity,0,2,3,1947,1953
+tardy-l,tardy-l,Tardy,identity,0,3,3,1947,1953
 tardy-p,tardy-p,Tardy,identity,0,3,3,1913,1958
 targe-a,targe-a,Targe,identity,0,2,1,1933,1937
 target,target,Target,identity,0,2,0,1897,1907
@@ -20443,6 +20493,7 @@ trabet-statuts-deposes-chez-me-delplanques-v,trabet-statuts-deposes-chez-me-delp
 trabucato,trabucato,Trabucato,identity,0,1,0,1951,1951
 trachier-g,trachier-g,Trachier,identity,0,1,1,1937,1937
 trajano-vieira-da-rocha-f,trajano-vieira-da-rocha-f,Trajano Vieira da Rocha,identity,0,2,1,1937,1940
+tramoy-de-laubeypie,tramoy-de-laubeypie,Tramoy de Laubeypie,identity,0,1,0,1930,1930
 tramquan,tramquan,Tramquan,identity,0,1,0,1955,1955
 tramways-de-bangkok,tramways-de-bangkok,Tramways de Bangkok,identity,0,1,0,1914,1914
 tramways-de-karkoff,tramways-de-karkoff,Tramways de Karkoff,identity,0,1,0,1929,1929
@@ -20493,7 +20544,7 @@ triboulet,triboulet,Triboulet,identity,0,1,0,1949,1949
 tricart-p,tricart-p,Tricart,identity,0,4,1,1936,1951
 tricaud,tricaud-m,Tricaud,folded_unique_initial,0,1,1,1953,1953
 tricaud-m,tricaud-m,Tricaud,identity,0,2,1,1949,1951
-trichet-l,trichet-l,Trichet,identity,0,3,1,1930,1938
+trichet-l,trichet-l,Trichet,identity,0,4,1,1930,1942
 tricheux,tricheux,Tricheux,identity,0,2,0,1900,1907
 tricheux-plomb-argentifere-v,tricheux-plomb-argentifere-v,Tricheux. Plomb argentifère,identity,0,1,1,1925,1925
 tricheux-plomb-argentifere-albonico-v,tricheux-plomb-argentifere-albonico-v,Tricheux. Plomb argentifère. ALBONICO,identity,0,1,1,1925,1925
@@ -20545,6 +20596,7 @@ trouillet,trouillet-p,Trouillet,folded_unique_initial,0,1,1,1940,1940
 trouillet-p,trouillet-p,Trouillet,identity,0,1,1,1912,1912
 trouin-c,trouin-c,Trouin,identity,0,1,1,1908,1908
 trouis-s,trouis-s,Trouis,identity,0,1,2,1953,1953
+trousseau-a,trousseau-a,Trousseau,identity,0,1,1,1971,1971
 trousselle,trousselle-r,Trousselle,folded_unique_initial,0,3,1,1927,1938
 trousselle-r,trousselle-r,Trousselle 1,identity,0,4,1,1921,1937
 troussier,troussier,Troussier,identity,0,1,0,1911,1911
@@ -20959,6 +21011,7 @@ verda-p,verda-p,Verda,identity,0,1,1,1933,1933
 verdad,verdad,Verdad,identity,0,1,0,1925,1925
 verdeliet-j,verdeliet-j,Verdeliet,identity,0,2,1,1936,1937
 verdellet-j,verdellet-j,Verdellet,identity,0,3,1,1956,1956
+verdet,verdet,Verdet,unfolded_ambiguous,1,1,2,1914,1914
 verdet-f,verdet-f,Verdet,identity,0,1,2,1913,1913
 verdet-h,verdet-h,Verdet,identity,0,3,2,1922,1926
 verdeuil-f,verdeuil-f,Verdeuil,identity,0,1,2,1926,1926
@@ -21088,14 +21141,14 @@ vidal,vidal,Vidal,unfolded_ambiguous,1,3,7,1939,1951
 vidal-c,vidal-c,Vidal,identity,0,3,7,1949,1975
 vidal-e,vidal-e,Vidal,identity,0,3,7,1926,1937
 vidal-j,vidal-j,Vidal,identity,0,5,7,1926,1951
-vidal-l,vidal-l,Vidal,identity,0,3,7,1937,1963
+vidal-l,vidal-l,Vidal,identity,0,4,7,1937,1963
 vidal-n,vidal-n,Vidal,identity,0,1,7,1949,1949
 vidal-p,vidal-p,Vidal,identity,0,5,7,1890,1975
 vidal-r,vidal-r,Vidal,identity,0,1,7,1919,1919
 vidal-commissaires-mm-evrard-p,vidal-commissaires-mm-evrard-p,Vidal. Commissaires: MM. Evrard,identity,0,2,1,1925,1925
 vidal-haiphong-e,vidal-haiphong-e,Vidal. Haïphong,identity,0,1,1,1932,1932
 videau-h,videau-h,Videau,identity,0,3,2,1926,1948
-videau-j,videau-j,Videau,identity,0,5,2,1929,1951
+videau-j,videau-j,Videau,identity,0,6,2,1929,1951
 videcocq,videcocq,Videcocq,identity,0,1,0,1899,1899
 vidie-c,vidie-c,Vidie,identity,0,1,1,1950,1950
 vidil,vidil,Vidil,identity,0,1,0,1925,1925
@@ -21147,7 +21200,7 @@ vignolini-n,vignolini-n,Vignolini,identity,0,2,1,1937,1963
 vignon-a,vignon-a,Vignon,identity,0,2,2,1951,1952
 vignon-p,vignon-p,Vignon,identity,0,1,2,1933,1933
 vignoud-j,vignoud-j,Vignoud,identity,0,1,1,1935,1935
-vigoureux-a,vigoureux-a,Vigoureux,identity,0,3,1,1949,1949
+vigoureux-a,vigoureux-a,Vigoureux,identity,0,4,1,1949,1951
 vigouroux,vigouroux,Vigouroux,unfolded_ambiguous,1,4,2,1899,1953
 vigouroux-e,vigouroux-e,Vigouroux,identity,0,1,2,1931,1931
 vigouroux-l,vigouroux-l,Vigouroux,identity,0,13,2,1922,1948
@@ -21163,6 +21216,7 @@ villa-f,villa-f,Villa,identity,0,1,1,1926,1926
 villaca-a,villaca-a,Villaca,identity,0,2,1,1912,1914
 villain,villain-f,Villain,folded_unique_initial,0,5,1,1881,1919
 villain-f,villain-f,Villain,identity,0,9,1,1913,1940
+villaire-l,villaire-l,Villaire,identity,0,1,1,1914,1914
 villanueva,villanueva,Villanueva,identity,0,1,0,1920,1920
 villard,villard-a,Villard,folded_unique_initial,0,1,1,1881,1881
 villard-a,villard-a,Villard,identity,0,1,1,1929,1929
@@ -21194,7 +21248,7 @@ villiers-h,villiers-h,Villiers,identity,0,8,1,1913,1969
 villiers-adam,villiers-adam,Villiers-Adam,identity,0,1,0,1938,1938
 villy-van-de-velde,villy-van-de-velde,Villy Van de Velde,identity,0,2,0,1925,1926
 vimont,vimont,Vimont,unfolded_ambiguous,1,2,2,1942,1943
-vimont-a,vimont-a,Vimont,identity,0,1,2,1909,1909
+vimont-a,vimont-a,Vimont,identity,0,2,2,1909,1912
 vimont-m,vimont-m,Vimont,identity,0,1,2,1937,1937
 vimont-vicary-r,vimont-vicary-r,Vimont-Vicary,identity,0,1,1,1922,1922
 vincenot,vincenot,Vincenot,identity,0,8,0,1890,1953
@@ -21535,7 +21589,8 @@ wibratte-commissaires-aux-comptes-h-villiers-a,wibratte-commissaires-aux-comptes
 wibratte-commissaires-des-comptes-m-henrion-l,wibratte-commissaires-des-comptes-m-henrion-l,Wibratte. Commissaires des comptes: M. Henrion,identity,0,1,1,1940,1940
 wibratte-construction-l,wibratte-construction-l,Wibratte. Construction,identity,0,1,1,1925,1925
 wibratte-statuts-deposes-chez-mes-bossy,wibratte-statuts-deposes-chez-mes-bossy,Wibratte. Statuts déposés chez Mes Bossy,identity,0,1,0,1922,1922
-wickers,wickers,Wickers,identity,0,1,0,1949,1949
+wickers,wickers-l,Wickers,folded_unique_initial,0,1,1,1949,1949
+wickers-l,wickers-l,Wickers,identity,0,1,1,1951,1951
 wickersheimer,wickersheimer,Wickersheimer,identity,0,1,0,1914,1914
 widderson-a,widderson-a,Widderson,identity,0,1,1,1935,1935
 widhoff,widhoff,Widhoff,unfolded_year_span,1,1,1,1951,1951
@@ -21662,6 +21717,7 @@ yanco-bey-joannides-s,yanco-bey-joannides-s,Yanco bey Joannidès,identity,0,1,1,
 yang-ting-l,yang-ting-l,Yang-Ting,identity,0,1,1,1937,1937
 yannacopoulos-commissaires-des-comptes-b-leonardos-s,yannacopoulos-commissaires-des-comptes-b-leonardos-s,Yannacopoulos. Commissaires des comptes: B. Léonardos,identity,0,3,1,1937,1948
 yaounde,yaounde,Yaoundé,identity,0,3,0,1937,1947
+yeatman-l,yeatman-l,Yeatman,identity,0,1,1,1971,1971
 yeghen-pacha-a,yeghen-pacha-a,Yeghen- Pacha,identity,0,2,1,1931,1933
 yen-vien,yen-vien,Yen-Vien,identity,0,1,0,1931,1931
 yenh-my,yenh-my,Yenh-my,identity,0,2,0,1906,1906
@@ -22142,7 +22198,7 @@ agglomeres-d-haiphong,agglomeres-d-haiphong,agglomérés d'Haïphong],identity,0
 agric-gabon-s,agric-gabon-s,agric. Gabon ],identity,0,1,1,1963,1963
 agric-pointe-a-pitre,agric-pointe-a-pitre,agric. Pointe-à-Pitre,identity,0,1,0,1975,1975
 agricole-c,agricole-c,agricole,identity,0,1,2,1926,1926
-agricole-e,agricole-e,agricole,identity,0,2,2,1930,1938
+agricole-e,agricole-e,agricole,identity,0,3,2,1930,1938
 agricole-d-algerie,agricole-d-algerie,agricole d'Algérie,identity,0,3,0,1908,1953
 agricole-de-saigon,agricole-de-saigon,agricole de Saïgon,identity,0,1,0,1932,1932
 agricole-de-sefrou,agricole-de-sefrou,agricole de Sefrou,identity,0,1,0,1953,1953
@@ -22898,6 +22954,7 @@ de-daran-j,de-daran-j,de Daran,identity,0,1,1,1922,1922
 de-dardel-p,de-dardel-p,de Dardel,identity,0,1,1,1925,1925
 de-dartein-j,de-dartein-j,de Dartein,identity,0,1,1,1937,1937
 de-decker-r,de-decker-r,de Decker,identity,0,2,2,1920,1920
+de-demandols-h,de-demandols-h,de Demandols,identity,0,1,1,1937,1937
 de-demandolx,de-demandolx,de Demandolx,identity,0,2,0,1934,1937
 de-dietrich,de-dietrich-a,de Dietrich,folded_unique_initial,0,2,1,1925,1925
 de-dietrich-a,de-dietrich-a,de Dietrich,identity,0,1,1,1906,1906
@@ -23329,7 +23386,7 @@ dir-distilleries-de-l-indochine-cholon,dir-distilleries-de-l-indochine-cholon,di
 dir-eaux,dir-eaux,dir. Eaux,identity,0,1,0,1926,1926
 dir-papeteries-d-arches,dir-papeteries-d-arches,dir. Papeteries d'Arches],identity,0,1,0,1938,1938
 dir-sifa,dir-sifa,dir. SIFA],identity,0,1,0,,
-dir-ewtetains-de-pia-ouac,dir-ewtetains-de-pia-ouac,dir. ÉWT+Étains de Pia-Ouac,identity,0,1,0,1971,1971
+dir-ewtetains-de-pia-ouac,dir-ewtetains-de-pia-ouac,dir. ÉWT+Étains de Pia-Ouac,identity,0,2,0,1971,1971
 direct-zinc,direct-zinc,direct. Zinc,identity,0,2,0,1925,1925
 direct-adj-m-paul-simon,direct-adj-m-paul-simon,direct.-adj.: M. Paul Simon,identity,0,1,0,1951,1951
 direct-adj-m-paul-simon-il,direct-adj-m-paul-simon-il,direct.-adj.: M. Paul Simon. Il,identity,0,1,0,1971,1971
@@ -23428,6 +23485,7 @@ deposes-chez-me-aubron-s,deposes-chez-me-aubron-s,déposés chez Me Aubron,ident
 deposes-chez-me-bach-s,deposes-chez-me-bach-s,déposés chez Me Bach,identity,0,1,1,1908,1908
 deposes-chez-me-bachelez-s,deposes-chez-me-bachelez-s,déposés chez Me Bachelez,identity,0,1,1,1915,1915
 deposes-chez-me-baffin-s,deposes-chez-me-baffin-s,déposés chez Me Baffin,identity,0,1,1,1912,1912
+deposes-chez-me-balay-s,deposes-chez-me-balay-s,déposés chez Me Balaÿ,identity,0,1,1,1912,1912
 deposes-chez-me-barthe-s,deposes-chez-me-barthe-s,déposés chez Me Barthe,identity,0,1,1,1921,1921
 deposes-chez-me-baudrier-s,deposes-chez-me-baudrier-s,déposés chez Me Baudrier,identity,0,2,1,1911,1912
 deposes-chez-me-bazin-s,deposes-chez-me-bazin-s,déposés chez Me Bazin,identity,0,6,1,1912,1914
@@ -24348,6 +24406,7 @@ immobilieres-o,immobilieres-o,immobilières,identity,0,1,1,1930,1930
 immobilieres-jacob,immobilieres-jacob,immobilières. Jacob,identity,0,1,0,1941,1941
 immobilieres-conseil-mm-leon-bordet-o,immobilieres-conseil-mm-leon-bordet-o,immobilières.— Conseil: MM. Léon Bordet,identity,0,1,1,1930,1930
 imp-exp-a-paris,imp-exp-a-paris,imp-exp à Paris],identity,0,1,0,1915,1915
+imp-bordeaux,imp-bordeaux,imp. Bordeaux,identity,0,1,0,1941,1941
 imp-maldoyenne,imp-maldoyenne,imp. Maldoyenne,identity,0,1,0,,
 imp-paris,imp-paris,imp. Paris,identity,0,4,0,1949,1953
 imp-exp-paris,imp-exp-paris,imp.-exp. Paris,identity,0,1,0,1971,1971
@@ -24416,7 +24475,7 @@ ing-e-c-p,ing-e-c-p,ing. E. C. P,identity,0,5,1,1936,1963
 ing-ecp,ing-ecp-b,ing. E.C.P,folded_unique_initial,0,8,1,1905,1935
 ing-i-c-n,ing-i-c-n,ing. I. C. N,identity,0,3,1,1921,1925
 ing-r-huyghues-despointes,ing-r-huyghues-despointes,ing. R. Huyghues-Despointes,identity,0,1,0,1937,1937
-ing-tp-indoch,ing-tp-indoch,ing. T.P. Indoch,identity,0,1,0,1971,1971
+ing-tp-indoch,ing-tp-indoch,ing. T.P. Indoch,identity,0,2,0,1971,1971
 ingenieir-ecp,ingenieir-ecp,ingénieir ECP,identity,0,1,0,,
 ingenieurs-a-bruxelles,ingenieurs-a-bruxelles,ingénieurs à Bruxelles,identity,0,1,0,1913,1913
 inscrites-a-la-cote-officielle,inscrites-a-la-cote-officielle,inscrites à la Cote officielle,identity,0,1,0,1906,1906
