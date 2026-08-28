@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Seven stages, each resumable, each writing its own outputs:
+Eight stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -43,9 +43,11 @@ Seven stages, each resumable, each writing its own outputs:
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
-7. **`make_figures.py`** — network → `figures/`, HTML and SVG (§5d).
+7. **`make_figures.py`** — network → the core figures, HTML and SVG (§5d).
+8. **`make_territory_figures.py`** — network → the whole-empire figure, the
+   territory matrix and one figure per territory (§5d).
 
-`checks.py` validates the parsers and the built dataset (188 assertions).
+`checks.py` validates the parsers and the built dataset (422 assertions).
 
 ### The extraction trap
 
@@ -363,6 +365,52 @@ Layouts use a fixed seed, so the figures are reproducible; a spring layout has
 no meaningful axes and distance between unconnected nodes carries no
 information.
 
+### The whole graph and the territories
+
+`src/make_territory_figures.py` writes the complementary set: figure 4 (every
+firm), figure 5 (the territory matrix) and one figure per territory. Where
+stage 7 subsets deliberately, these do not — which raises different problems.
+
+**Figure 4 draws all 3,085 firms and 39,523 interlocks.** At that density a
+node-link diagram cannot be read firm by firm, and it is not offered for that.
+The question it answers is compositional: are the empire's boards one
+integrated elite or separate territorial ones? Colour is the firm's first
+territory folded to the three largest, and the answer the figure gives is
+"both" — Indochine, Maroc and AOF each hold a visibly distinct lobe, joined
+through a dense mixed core. Node radii are 42% of the core figure's and edge
+ink 42% of its opacity, because the settings tuned for 170 nodes render 3,085
+as a solid disc.
+
+**Nothing is dropped to make the picture tidy.** 98.5% of the firms sit in one
+giant component; the other 46 are in 22 tiny ones that a spring layout flings
+into the corners. They are packed into a strip below a rule, labelled as
+unconnected, rather than being silently cut — a figure captioned "every firm"
+has to contain every firm. `checks.py` asserts the drawn node set equals the
+graph's, for figure 4 and for each of the 42 territory figures, so the claim
+is enforced rather than merely intended.
+
+**Figure 5 is a matrix, not a node-link diagram.** Aggregated to territories
+the graph is small (53 nodes) and nearly complete (713 of 1,378 possible pairs
+share at least one director), which is exactly the regime where a node-link
+diagram degenerates into a scribble and a matrix becomes readable. The cell is
+the count of directors holding board seats in both territories; rows and
+columns are ordered by size, which is what makes the core-periphery structure
+legible. Two things to know before reading it: the shading steps by **rank,
+not linearly**, because the counts are heavily skewed and a linear ramp would
+put everything but the top two pairs — Maroc–Algérie at 1,086 shared
+directors and Maroc–Indochine at 1,024 — in the palest step; and a firm listed in two territories contributes its whole board to
+both, which is the tie being counted rather than an artefact — a
+Paris-registered firm operating in Morocco and Indochina genuinely links them.
+
+**Per-territory figures are that territory's complete graph**, from its own
+bundle, with no threshold and no top-N. They use one hue and so carry no
+legend, the heading naming the series. The giant component is laid out alone
+and scaled to fill the canvas, with the residue in the same bottom strip: a
+joint layout let three stragglers shrink Senegal's 39-firm main component to a
+quarter of the frame. Twelve territories get no figure because no two of their
+firms share a director — recorded and listed on the page rather than omitted,
+since that is a fact about the collection's coverage, not about the territory.
+
 ## 6. Validity — read this before using the data
 
 **It is a sample of statements, not a census of boards.** A firm's absence
@@ -429,7 +477,8 @@ python3 src/parse_ties.py                       # ~6 min
 python3 src/build_network.py                    # ~3 min
 python3 src/split_by_country.py                 # ~2 min, per-territory bundles
 python3 src/code_positionality.py               # ~1 min, positionality coding
-python3 src/make_figures.py                     # ~1 min, figures/
+python3 src/make_figures.py                     # ~1 min, core figures
+python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
 python3 src/checks.py                           # must pass
 ```
 

@@ -441,6 +441,49 @@ threshold everywhere, `--ego` the focal firm of figure 3 (matched on
 same figure. See METHODOLOGY §5d for why the subset, the three-colour cap and
 the shared layout are what they are.
 
+### The whole empire, and every territory
+
+`src/make_territory_figures.py` (stage 8) writes the rest of `figures/`.
+
+| File | Contents |
+|---|---|
+| `territory_networks.html` | Figures 4 and 5 plus all 42 territory figures in one page, with hover tooltips, a table of territory counts and dark mode. |
+| `fig4_empire_network.svg` | Figure 4, standalone, light mode. |
+| `fig5_territory_matrix.svg` | Figure 5, standalone, light mode. |
+| `by_country/<slug>.svg` | One per territory, light mode; slugs match `data/by_country/`. |
+
+**Figure 4 — every firm, every interlock.** All 3,085 firms in
+`edges_company_interlock.csv` at `weight >= 1` and all 39,523 interlocks
+between them — no threshold, no top-N. The giant component (3,039 firms,
+98.5%) fills the canvas; the 46 firms in 22 unconnected components sit in a
+labelled strip below a rule. Colour is the firm's first territory folded to
+the three largest, node area is weighted degree, and the sixteen largest are
+labelled.
+
+**Figure 5 — the territory matrix.** 53 × 53 cells for the territories with
+at least eight directors; the cell is the number of people holding a board
+seat (`is_board_seat = 1`) at a firm in each. A firm listed in several
+territories counts in each of them. The diagonal is outlined rather than
+filled. Shading steps by rank over the observed range, so a cell's step gives
+its position in the distribution, not a proportional count — hover in the page
+for the number. The largest cells are Maroc–Algérie at 1,086 shared directors
+and Maroc–Indochine at 1,024; 713 of the 1,378 possible pairs share at least
+one.
+
+**Per-territory figures.** Each is one territory's complete interlock graph,
+built from `data/by_country/<slug>/edges_company_interlock.csv` — every firm
+and every tie in that bundle. The caption gives firms, interlocks, components,
+the largest component, and how many firms in the bundle have no interlock at
+all. Canvas height scales with the graph (250–640 px). Twelve territories have
+firms but no interlock and get no figure; they are listed on the page.
+
+```bash
+python3 src/make_territory_figures.py                    # defaults
+python3 src/make_territory_figures.py --level region     # the 12 regions
+python3 src/make_territory_figures.py --skip-empire      # figure 4 is the slow part
+python3 src/make_territory_figures.py --min-firms 5      # skip the tiniest graphs
+```
+
 ---
 
 ## 5. Value lists
