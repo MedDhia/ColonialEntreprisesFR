@@ -141,7 +141,7 @@
     <node id="commercialetunisienne">
       <data key="n_label">Société Commerciale Tunisienne</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique); Transports maritimes et aériens</data>
-      <data key="n_n_directors">22</data>
+      <data key="n_n_directors">23</data>
       <data key="n_territory">Tunisie</data>
     </node>
     <node id="comptoirminesgrandstravaux">
@@ -405,7 +405,7 @@
     <node id="minesdouaria">
       <data key="n_label">Société des mines de Douaria</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">10</data>
       <data key="n_territory">Tunisie</data>
     </node>
     <node id="minesfedjeladoum">
@@ -654,12 +654,6 @@
       <data key="n_n_directors">8</data>
       <data key="n_territory">Tunisie</data>
     </node>
-    <node id="socfeutresrok">
-      <data key="n_label">Soc. an. des FEUTRES ROK</data>
-      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">10</data>
-      <data key="n_territory">Tunisie</data>
-    </node>
     <node id="socfrseminesdjebelhallouf">
       <data key="n_label">Soc. an. frse des MINES du DJEBEL-HALLOUF</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
@@ -804,11 +798,11 @@
     <edge id="e3" source="djebeldjerissa" target="socdjebeldjerissa">
       <data key="e_weight">8</data>
     </edge>
-    <edge id="e4" source="batiment" target="bazina">
+    <edge id="e4" source="minesdouaria" target="syndicatminesdjebeltrozzadjebelserdj">
       <data key="e_weight">8</data>
     </edge>
-    <edge id="e5" source="minesdouaria" target="syndicatminesdjebeltrozzadjebelserdj">
-      <data key="e_weight">7</data>
+    <edge id="e5" source="batiment" target="bazina">
+      <data key="e_weight">8</data>
     </edge>
     <edge id="e6" source="djebeldjerissa" target="gafsa">
       <data key="e_weight">7</data>
@@ -1191,493 +1185,490 @@
     <edge id="e132" source="metallurgiquemegrine" target="socdjebeldjerissa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e133" source="socalsaciennefilaturetissagejute" target="socfeutresrok">
+    <edge id="e133" source="nebida" target="socalsaciennefilaturetissagejute">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e134" source="nebida" target="socalsaciennefilaturetissagejute">
+    <edge id="e134" source="socalsaciennefilaturetissagejute" target="socvelvetrum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e135" source="socalsaciennefilaturetissagejute" target="socvelvetrum">
+    <edge id="e135" source="antoinemilazzo" target="minesgarnalfaya">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e136" source="antoinemilazzo" target="minesgarnalfaya">
+    <edge id="e136" source="minesalgerietunisieomnium" target="minesgarnalfaya">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e137" source="minesalgerietunisieomnium" target="minesgarnalfaya">
+    <edge id="e137" source="beniniguez" target="commercialetunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e138" source="beniniguez" target="commercialetunisienne">
+    <edge id="e138" source="commercialetunisienne" target="metallurgiquetunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e139" source="commercialetunisienne" target="metallurgiquetunisie">
+    <edge id="e139" source="commercialetunisienne" target="minesdjebelhallouf">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e140" source="commercialetunisienne" target="minesdjebelhallouf">
+    <edge id="e140" source="commercialetunisienne" target="socfrseminesdjebelhallouf">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e141" source="commercialetunisienne" target="socfrseminesdjebelhallouf">
+    <edge id="e141" source="metallurgiquetunisie" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e142" source="metallurgiquetunisie" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e142" source="minesdjebelhallouf" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e143" source="minesdjebelhallouf" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e143" source="socfrseminesdjebelhallouf" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e144" source="socfrseminesdjebelhallouf" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e144" source="minesdjebelhallouf" target="tunisiennefonciereagricole">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e145" source="minesdjebelhallouf" target="tunisiennefonciereagricole">
+    <edge id="e145" source="socfrseminesdjebelhallouf" target="tunisiennefonciereagricole">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e146" source="socfrseminesdjebelhallouf" target="tunisiennefonciereagricole">
+    <edge id="e146" source="djebeldjerissa" target="socminesdjebelressas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e147" source="djebeldjerissa" target="socminesdjebelressas">
+    <edge id="e147" source="foncieretunisie" target="minesdjebelressas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e148" source="foncieretunisie" target="minesdjebelressas">
+    <edge id="e148" source="foncieretunisie" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e149" source="foncieretunisie" target="phosphatestunisiens">
+    <edge id="e149" source="foncieretunisie" target="socminesdjebelressas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e150" source="foncieretunisie" target="socminesdjebelressas">
+    <edge id="e150" source="fonderiesmegrinefilialemetallgeselschaft" target="minesdjebelressas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e151" source="fonderiesmegrinefilialemetallgeselschaft" target="minesdjebelressas">
+    <edge id="e151" source="fonderiesmegrinefilialemetallgeselschaft" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e152" source="fonderiesmegrinefilialemetallgeselschaft" target="phosphatestunisiens">
+    <edge id="e152" source="fonderiesmegrinefilialemetallgeselschaft" target="socminesdjebelressas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e153" source="fonderiesmegrinefilialemetallgeselschaft" target="socminesdjebelressas">
+    <edge id="e153" source="minesdjebelressas" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e154" source="minesdjebelressas" target="phosphatestunisiens">
+    <edge id="e154" source="phosphatestunisiens" target="socminesdjebelressas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e155" source="phosphatestunisiens" target="socminesdjebelressas">
+    <edge id="e155" source="minieredjebellorbeus" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e156" source="minieredjebellorbeus" target="phosphatestunisiens">
+    <edge id="e156" source="minieredjebellorbeus" target="tunisiennecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e157" source="minieredjebellorbeus" target="tunisiennecultures">
+    <edge id="e157" source="minieredjebellorbeus" target="minierekanguet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e158" source="minieredjebellorbeus" target="minierekanguet">
+    <edge id="e158" source="cheminsfertunisiens" target="etudeshautsfourneauxacieriestunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e159" source="cheminsfertunisiens" target="etudeshautsfourneauxacieriestunisie">
+    <edge id="e159" source="cheminsfertunisiens" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e160" source="cheminsfertunisiens" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e160" source="commercialetunisienne" target="etudeshautsfourneauxacieriestunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e161" source="commercialetunisienne" target="etudeshautsfourneauxacieriestunisie">
+    <edge id="e161" source="commercialetunisienne" target="fermierecheminsfertunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e162" source="commercialetunisienne" target="fermierecheminsfertunisiens">
+    <edge id="e162" source="etudeshautsfourneauxacieriestunisie" target="fermierecheminsfertunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e163" source="etudeshautsfourneauxacieriestunisie" target="fermierecheminsfertunisiens">
+    <edge id="e163" source="etudeshautsfourneauxacieriestunisie" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e164" source="etudeshautsfourneauxacieriestunisie" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e164" source="fermierecheminsfertunisiens" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e165" source="fermierecheminsfertunisiens" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e165" source="phosphatescheminsfergafsa" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e166" source="phosphatescheminsfergafsa" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e166" source="foncieretunisie" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e167" source="foncieretunisie" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e167" source="phosphatescheminsfergafsa" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e168" source="phosphatescheminsfergafsa" target="phosphatesdyr">
+    <edge id="e168" source="cheminsfertunisiens" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e169" source="cheminsfertunisiens" target="phosphatesdyr">
+    <edge id="e169" source="fermierecheminsfertunisiens" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e170" source="fermierecheminsfertunisiens" target="phosphatesdyr">
+    <edge id="e170" source="beniniguez" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e171" source="beniniguez" target="phosphatesdyr">
+    <edge id="e171" source="cheminsfertunisiens" target="portstunissoussesfax">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e172" source="cheminsfertunisiens" target="portstunissoussesfax">
+    <edge id="e172" source="fermierecheminsfertunisiens" target="portstunissoussesfax">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e173" source="fermierecheminsfertunisiens" target="portstunissoussesfax">
+    <edge id="e173" source="portstunissoussesfax" target="tramwaystunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e174" source="portstunissoussesfax" target="tramwaystunis">
+    <edge id="e174" source="foncierafricain" target="portstunissoussesfax">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e175" source="foncierafricain" target="portstunissoussesfax">
+    <edge id="e175" source="banquetunisie" target="gazregiecointeresseeeauxtunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e176" source="banquetunisie" target="gazregiecointeresseeeauxtunis">
+    <edge id="e176" source="banquetunisie" target="immobilieretunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e177" source="banquetunisie" target="immobilieretunisienne">
+    <edge id="e177" source="banquetunisie" target="minesferkroumirienefzas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e178" source="banquetunisie" target="minesferkroumirienefzas">
+    <edge id="e178" source="gazregiecointeresseeeauxtunis" target="minesferkroumirienefzas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e179" source="gazregiecointeresseeeauxtunis" target="minesferkroumirienefzas">
+    <edge id="e179" source="gazregiecointeresseeeauxtunis" target="socminesfedjeladoum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e180" source="gazregiecointeresseeeauxtunis" target="socminesfedjeladoum">
+    <edge id="e180" source="immobilieretunisienne" target="minesfedjeladoum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e181" source="immobilieretunisienne" target="minesfedjeladoum">
+    <edge id="e181" source="immobilieretunisienne" target="minesferkroumirienefzas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e182" source="immobilieretunisienne" target="minesferkroumirienefzas">
+    <edge id="e182" source="immobilieretunisienne" target="socminesfedjeladoum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e183" source="immobilieretunisienne" target="socminesfedjeladoum">
+    <edge id="e183" source="minesferkroumirienefzas" target="socminesfedjeladoum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e184" source="minesferkroumirienefzas" target="socminesfedjeladoum">
+    <edge id="e184" source="commercialetunisienne" target="energieelectriquevillebizerte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e185" source="commercialetunisienne" target="energieelectriquevillebizerte">
+    <edge id="e185" source="commercialetunisienne" target="djebeldjerissa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e186" source="commercialetunisienne" target="djebeldjerissa">
+    <edge id="e186" source="djebeldjerissa" target="tunisiennephosphatesdjebelmdilla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e187" source="djebeldjerissa" target="tunisiennephosphatesdjebelmdilla">
+    <edge id="e187" source="commercialetunisienne" target="tunisiennemagasinsgenerauxentrepots">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e188" source="commercialetunisienne" target="tunisiennemagasinsgenerauxentrepots">
+    <edge id="e188" source="mineskefchambi" target="tunisienneminieremetallurgique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e189" source="mineskefchambi" target="tunisienneminieremetallurgique">
+    <edge id="e189" source="immobilieremaroc" target="minesfedjeladoum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e190" source="immobilieremaroc" target="minesfedjeladoum">
+    <edge id="e190" source="immobilieremaroc" target="socminesfedjeladoum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e191" source="immobilieremaroc" target="socminesfedjeladoum">
+    <edge id="e191" source="minierefrancotunisienne" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e192" source="minierefrancotunisienne" target="phosphatestunisiens">
+    <edge id="e192" source="centresud" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e193" source="centresud" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e193" source="centresud" target="ruraletunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e194" source="centresud" target="ruraletunisienne">
+    <edge id="e194" source="centresud" target="socsibelhassen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e195" source="centresud" target="socsibelhassen">
+    <edge id="e195" source="centresud" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e196" source="centresud" target="tunisoiseindustrielle">
+    <edge id="e196" source="colonisationouedramel" target="etablissementsschwichbaizeau">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e197" source="colonisationouedramel" target="etablissementsschwichbaizeau">
+    <edge id="e197" source="colonisationouedramel" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e198" source="colonisationouedramel" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e198" source="colonisationouedramel" target="ruraletunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e199" source="colonisationouedramel" target="ruraletunisienne">
+    <edge id="e199" source="colonisationouedramel" target="socsibelhassen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e200" source="colonisationouedramel" target="socsibelhassen">
+    <edge id="e200" source="colonisationouedramel" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e201" source="colonisationouedramel" target="tunisoiseindustrielle">
+    <edge id="e201" source="djimla" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e202" source="djimla" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e202" source="djimla" target="socsibelhassen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e203" source="djimla" target="socsibelhassen">
+    <edge id="e203" source="djimla" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e204" source="djimla" target="tunisoiseindustrielle">
+    <edge id="e204" source="etablissementsschwichbaizeau" target="socsibelhassen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e205" source="etablissementsschwichbaizeau" target="socsibelhassen">
+    <edge id="e205" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="omniumimmobiliertunisien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e206" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="omniumimmobiliertunisien">
+    <edge id="e206" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="ruraletunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e207" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="ruraletunisienne">
+    <edge id="e207" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="socsibelhassen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e208" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="socsibelhassen">
+    <edge id="e208" source="omniumimmobiliertunisien" target="ruraletunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e209" source="omniumimmobiliertunisien" target="ruraletunisienne">
+    <edge id="e209" source="omniumimmobiliertunisien" target="socsibelhassen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e210" source="omniumimmobiliertunisien" target="socsibelhassen">
+    <edge id="e210" source="omniumimmobiliertunisien" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e211" source="omniumimmobiliertunisien" target="tunisoiseindustrielle">
+    <edge id="e211" source="ruraletunisienne" target="socsibelhassen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e212" source="ruraletunisienne" target="socsibelhassen">
+    <edge id="e212" source="ruraletunisienne" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e213" source="ruraletunisienne" target="tunisoiseindustrielle">
+    <edge id="e213" source="socsibelhassen" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e214" source="socsibelhassen" target="tunisoiseindustrielle">
+    <edge id="e214" source="atelierschantiersmaritimestunisie" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e215" source="atelierschantiersmaritimestunisie" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e215" source="commercialetunisienne" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e216" source="commercialetunisienne" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e216" source="banquetunisie" target="immobiliereitalo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e217" source="banquetunisie" target="immobiliereitalo">
+    <edge id="e217" source="belgeminesdjebelslatadjebelhameima" target="belgeminesreunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e218" source="belgeminesdjebelslatadjebelhameima" target="belgeminesreunies">
+    <edge id="e218" source="belgeminesreunies" target="phosphatescheminsfergafsa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e219" source="belgeminesreunies" target="phosphatescheminsfergafsa">
+    <edge id="e219" source="belgeminesreunies" target="portstunissoussesfax">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e220" source="belgeminesreunies" target="portstunissoussesfax">
+    <edge id="e220" source="centresud" target="commercialeafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e221" source="centresud" target="commercialeafricaine">
+    <edge id="e221" source="centresud" target="olivettesmaiana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e222" source="centresud" target="olivettesmaiana">
+    <edge id="e222" source="colonisationouedramel" target="commercialeafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e223" source="colonisationouedramel" target="commercialeafricaine">
+    <edge id="e223" source="colonisationouedramel" target="olivettesmaiana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e224" source="colonisationouedramel" target="olivettesmaiana">
+    <edge id="e224" source="centresud" target="etsboyoud">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e225" source="centresud" target="etsboyoud">
+    <edge id="e225" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="nebida">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e226" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="nebida">
+    <edge id="e226" source="commercialeafricaine" target="comptoirminesgrandstravaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e227" source="commercialeafricaine" target="comptoirminesgrandstravaux">
+    <edge id="e227" source="commercialeafricaine" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e228" source="commercialeafricaine" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e228" source="commercialeafricaine" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e229" source="commercialeafricaine" target="tunisoiseindustrielle">
+    <edge id="e229" source="comptoirminesgrandstravaux" target="etsboyoud">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e230" source="comptoirminesgrandstravaux" target="etsboyoud">
+    <edge id="e230" source="comptoirminesgrandstravaux" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e231" source="comptoirminesgrandstravaux" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e231" source="comptoirminesgrandstravaux" target="morellivet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e232" source="comptoirminesgrandstravaux" target="morellivet">
+    <edge id="e232" source="comptoirminesgrandstravaux" target="olivettesmaiana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e233" source="comptoirminesgrandstravaux" target="olivettesmaiana">
+    <edge id="e233" source="comptoirminesgrandstravaux" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e234" source="comptoirminesgrandstravaux" target="tunisoiseindustrielle">
+    <edge id="e234" source="etsboyoud" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e235" source="etsboyoud" target="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens">
+    <edge id="e235" source="etsboyoud" target="morellivet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e236" source="etsboyoud" target="morellivet">
+    <edge id="e236" source="etsboyoud" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e237" source="etsboyoud" target="tunisoiseindustrielle">
+    <edge id="e237" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="morellivet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e238" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="morellivet">
+    <edge id="e238" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="olivettesmaiana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e239" source="groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens" target="olivettesmaiana">
+    <edge id="e239" source="morellivet" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e240" source="morellivet" target="tunisoiseindustrielle">
+    <edge id="e240" source="olivettesmaiana" target="tunisoiseindustrielle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e241" source="olivettesmaiana" target="tunisoiseindustrielle">
+    <edge id="e241" source="djimla" target="morellivet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e242" source="djimla" target="morellivet">
+    <edge id="e242" source="morellivet" target="omniumimmobiliertunisien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e243" source="morellivet" target="omniumimmobiliertunisien">
+    <edge id="e243" source="cheminsfertunisiens" target="djebeldjerissa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e244" source="cheminsfertunisiens" target="djebeldjerissa">
+    <edge id="e244" source="djebeldjerissa" target="fermierecheminsfertunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e245" source="djebeldjerissa" target="fermierecheminsfertunisiens">
+    <edge id="e245" source="1911djebelhallouf" target="minesdjebeltouila">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e246" source="1911djebelhallouf" target="minesdjebeltouila">
+    <edge id="e246" source="1911djebelhallouf" target="immeubleslyonnaisferryville">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e247" source="1911djebelhallouf" target="immeubleslyonnaisferryville">
+    <edge id="e247" source="1911djebelhallouf" target="immobilieretunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e248" source="1911djebelhallouf" target="immobilieretunisie">
+    <edge id="e248" source="1911djebelhallouf" target="salinestunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e249" source="1911djebelhallouf" target="salinestunisie">
+    <edge id="e249" source="1911djebelhallouf" target="tunisienneminieremetallurgique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e250" source="1911djebelhallouf" target="tunisienneminieremetallurgique">
+    <edge id="e250" source="immeubleslyonnaisferryville" target="immobilieretunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e251" source="immeubleslyonnaisferryville" target="immobilieretunisie">
+    <edge id="e251" source="immeubleslyonnaisferryville" target="salinestunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e252" source="immeubleslyonnaisferryville" target="salinestunisie">
+    <edge id="e252" source="immeubleslyonnaisferryville" target="tunisienneminieremetallurgique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e253" source="immeubleslyonnaisferryville" target="tunisienneminieremetallurgique">
+    <edge id="e253" source="immobilieretunisie" target="salinestunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e254" source="immobilieretunisie" target="salinestunisie">
+    <edge id="e254" source="immobilieretunisie" target="tunisienneminieremetallurgique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e255" source="immobilieretunisie" target="tunisienneminieremetallurgique">
+    <edge id="e255" source="salinestunisie" target="tunisienneminieremetallurgique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e256" source="salinestunisie" target="tunisienneminieremetallurgique">
+    <edge id="e256" source="minesdjebelressas" target="nebida">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e257" source="minesdjebelressas" target="nebida">
+    <edge id="e257" source="domainepotinville" target="recherchesminieresfalta">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e258" source="domainepotinville" target="recherchesminieresfalta">
+    <edge id="e258" source="domainepotinville" target="tunisiennecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e259" source="domainepotinville" target="tunisiennecultures">
+    <edge id="e259" source="cheminsfertunisiens" target="energieelectriquevillebizerte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e260" source="cheminsfertunisiens" target="energieelectriquevillebizerte">
+    <edge id="e260" source="cheminsfertunisiens" target="tunisiennecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e261" source="cheminsfertunisiens" target="tunisiennecultures">
+    <edge id="e261" source="energieelectriquevillebizerte" target="fermierecheminsfertunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e262" source="energieelectriquevillebizerte" target="fermierecheminsfertunisiens">
+    <edge id="e262" source="energieelectriquevillebizerte" target="tramwaystunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e263" source="energieelectriquevillebizerte" target="tramwaystunis">
+    <edge id="e263" source="energieelectriquevillebizerte" target="tunisiennecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e264" source="energieelectriquevillebizerte" target="tunisiennecultures">
+    <edge id="e264" source="fermierecheminsfertunisiens" target="tunisiennecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e265" source="fermierecheminsfertunisiens" target="tunisiennecultures">
+    <edge id="e265" source="tramwaystunis" target="tunisiennecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e266" source="tramwaystunis" target="tunisiennecultures">
+    <edge id="e266" source="etudeshautsfourneauxacieriestunisie" target="tramwaystunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e267" source="etudeshautsfourneauxacieriestunisie" target="tramwaystunis">
+    <edge id="e267" source="exploitationsminierestunisie" target="minesdjebeltabouna">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e268" source="exploitationsminierestunisie" target="minesdjebeltabouna">
+    <edge id="e268" source="cheminsfertunisiens" target="foncierafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e269" source="cheminsfertunisiens" target="foncierafricain">
+    <edge id="e269" source="fermierecheminsfertunisiens" target="foncierafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e270" source="fermierecheminsfertunisiens" target="foncierafricain">
+    <edge id="e270" source="fermiereelectriquesousse" target="salinestunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e271" source="fermiereelectriquesousse" target="salinestunisie">
+    <edge id="e271" source="fermiereelectriquesousse" target="gazregiecointeresseeeauxtunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e272" source="fermiereelectriquesousse" target="gazregiecointeresseeeauxtunis">
+    <edge id="e272" source="alimentationtunisiennehammamlif" target="fonciereagricole">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e273" source="alimentationtunisiennehammamlif" target="fonciereagricole">
+    <edge id="e273" source="alimentationtunisiennehammamlif" target="motoculturenordafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e274" source="alimentationtunisiennehammamlif" target="motoculturenordafricaine">
+    <edge id="e274" source="alimentationtunisiennehammamlif" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e275" source="alimentationtunisiennehammamlif" target="phosphatestunisiens">
+    <edge id="e275" source="fonciereagricole" target="motoculturenordafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e276" source="fonciereagricole" target="motoculturenordafricaine">
+    <edge id="e276" source="fonciereagricole" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e277" source="fonciereagricole" target="phosphatestunisiens">
+    <edge id="e277" source="motoculturenordafricaine" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e278" source="motoculturenordafricaine" target="phosphatestunisiens">
+    <edge id="e278" source="foncierefrancotunisienne" target="immeubleslyonnaisferryville">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e279" source="foncierefrancotunisienne" target="immeubleslyonnaisferryville">
+    <edge id="e279" source="fonderiesmegrinefilialemetallgeselschaft" target="tunisienneminieremetallurgique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e280" source="fonderiesmegrinefilialemetallgeselschaft" target="tunisienneminieremetallurgique">
+    <edge id="e280" source="gafsa" target="minesgarnalfaya">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e281" source="gafsa" target="minesgarnalfaya">
+    <edge id="e281" source="gazregiecointeresseeeauxtunis" target="minesnefate">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e282" source="gazregiecointeresseeeauxtunis" target="minesnefate">
+    <edge id="e282" source="minesfedjeladoum" target="minesnefate">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e283" source="minesfedjeladoum" target="minesnefate">
+    <edge id="e283" source="gazregiecointeresseeeauxtunis" target="immobilieremaroc">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e284" source="gazregiecointeresseeeauxtunis" target="immobilieremaroc">
+    <edge id="e284" source="boujaber" target="tunisiennelineriesfeuillette">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e285" source="boujaber" target="tunisiennelineriesfeuillette">
+    <edge id="e285" source="minesgarnalfaya" target="minierefrancotunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e286" source="minesgarnalfaya" target="minierefrancotunisienne">
+    <edge id="e286" source="minesnefate" target="minierekanguet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e287" source="minesnefate" target="minierekanguet">
+    <edge id="e287" source="fermiereminessidibouaouane" target="minesnefate">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e288" source="fermiereminessidibouaouane" target="minesnefate">
+    <edge id="e288" source="minesnefate" target="sidibouaouane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e289" source="minesnefate" target="sidibouaouane">
+    <edge id="e289" source="olivettesmaiana" target="ruraletunisienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e290" source="olivettesmaiana" target="ruraletunisienne">
+    <edge id="e290" source="phosphatesgouraia" target="stationshivernalesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e291" source="phosphatesgouraia" target="stationshivernalesafricaines">
+    <edge id="e291" source="phosphatesmaknassy" target="phosphatestunisiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e292" source="phosphatesmaknassy" target="phosphatestunisiens">
+    <edge id="e292" source="phosphatesouartane" target="tunisiennepetroles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e293" source="phosphatesouartane" target="tunisiennepetroles">
+    <edge id="e293" source="fermiereminessidibouaouane" target="minessidibouaouane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e294" source="fermiereminessidibouaouane" target="minessidibouaouane">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e295" source="exploitationsminieressidibouaouane" target="minessidibouaouane">
+    <edge id="e294" source="exploitationsminieressidibouaouane" target="minessidibouaouane">
       <data key="e_weight">1</data>
     </edge>
   </graph>

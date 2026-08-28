@@ -1,6 +1,6 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 munich-p,Munich,Paul Munich,5,5,8,vice_president,1931,1937,Divers; Documentation générale
-munich-j,Munich,Jean Munich,5,5,7,administrateur,1931,1937,Divers; Documentation générale
+munich-j,Munich,Jean Munich,5,5,7,administrateur_delegue,1931,1937,Divers; Documentation générale
 weiss-p-paul,Weiss,Paul Weiss; Paul Weiss. 4,5,5,6,president,1931,1937,Divers; Documentation générale
 de-bondeli-e,de Bondeli,Édouard de Bondeli,4,4,6,administrateur,1931,1937,Divers; Documentation générale
 derouet-m,Derouet,Maurice Derouet,4,4,6,administrateur,1931,1937,Divers; Documentation générale
@@ -45,7 +45,7 @@ segrestaa-l,Segrestaa,L.J. Segrestaa,1,1,2,administrateur,1907,1927,Divers; Docu
 castillon-du-perron-a,Castillon du Perron,A. Castillon du Perron,1,1,2,administrateur,1907,1927,Divers; Documentation générale
 pelissier-tanon-c,Pelissier-Tanon,Charles Pelissier-Tanon; Charles Pélissier-Tanon,1,1,2,administrateur,1924,1937,Divers; Documentation générale
 monsen-c,Monsen,Christian Monsen,1,1,2,administrateur,1924,1937,Divers; Documentation générale
-besse-j,Besse,Joseph Besse,1,1,2,administrateur,1937,1937,Divers; Documentation générale
+besse-j,Besse,Joseph Besse,1,1,2,administrateur_delegue,1937,1937,Divers; Documentation générale
 du-perron-g,du Perron,Gabriel du Perron,1,1,2,administrateur,1937,1937,Divers; Documentation générale
 brugiere,Brugière,Brugière,1,1,2,administrateur,1937,1940,Divers
 smet-micard,Smet-Micard,Smet-Micard,1,1,2,administrateur,1948,1950,Divers
@@ -92,7 +92,7 @@ duplan,Duplan,Duplan,1,1,1,administrateur,1927,1927,Documentation générale
 watel-p,Watel,Paul Watel,1,1,1,president,1927,1927,Documentation générale
 ed-lancesseur,Ed. Lancesseur,Ed. Lancesseur,1,1,1,administrateur_delegue,1927,1927,Documentation générale
 jenart-p,Jénart,P. Jénart,1,1,1,administrateur,1927,1927,Documentation générale
-pelissier-tanon-f,Pélissier-Tanon,Frédéric Pélissier-Tanon,1,1,1,administrateur,1937,1937,Documentation générale
+pelissier-tanon-f,Pélissier-Tanon,Frédéric Pélissier-Tanon,1,1,1,administrateur_delegue,1937,1937,Documentation générale
 laurent-gheerbrandt-j,Laurent Gheerbrandt,J. Laurent Gheerbrandt,1,1,1,administrateur,1937,1937,Documentation générale
 le-peletier-p,Le Peletier,Paul Le Peletier,1,1,1,administrateur,1937,1937,Documentation générale
 roll-hansen-s,Roll-Hansen,Sverre Roll-Hansen,1,1,1,administrateur,1937,1937,Documentation générale
@@ -107,13 +107,13 @@ mathieu-g,Mathieu,Georges Mathieu,1,1,1,administrateur,1937,1937,Documentation g
 charon-a,Charon,André Charon,1,1,1,administrateur,1937,1937,Documentation générale
 j-christian-aries,J.-Christian Ariès,J.-Christian Ariès,1,1,1,administrateur_delegue,1937,1937,Documentation générale
 fabre-domergue-l,Fabre-Domergue,Louis Fabre-Domergue,1,1,1,administrateur_delegue,1937,1937,Documentation générale
-saint-leger-r,Saint-Léger,Robert Saint-Léger,1,1,1,administrateur,1937,1937,Documentation générale
+saint-leger-r,Saint-Léger,Robert Saint-Léger,1,1,1,administrateur_delegue,1937,1937,Documentation générale
 bellonie-bernard-t,Bellonie-Bernard,Théodore Bellonie-Bernard,1,1,1,administrateur,1937,1937,Documentation générale
 bacqueville-j,Bacqueville,Joël Bacqueville,1,1,1,administrateur,1937,1937,Documentation générale
 hervet-p,Hervet,Paul Hervet,1,1,1,administrateur,1937,1937,Documentation générale
 lesca-y,Lesca,Yvon Lesca,1,1,1,administrateur,1937,1937,Documentation générale
 valatelli-g,Valatelli,Gino Valatelli,1,1,1,president,1937,1937,Documentation générale
-crussard-p,Crussard,Pierre Crussard,1,1,1,administrateur,1937,1937,Documentation générale
+crussard-p,Crussard,Pierre Crussard,1,1,1,administrateur_delegue,1937,1937,Documentation générale
 de-marchena-j,de Marchena,Jacques de Marchena,1,1,1,administrateur,1937,1937,Documentation générale
 monnier-p,Monnier,Pierre Monnier,1,1,1,administrateur,1937,1937,Documentation générale
 segrestaa-j,Segrestaa,Jean Segrestaa,1,1,1,president,1937,1937,Documentation générale

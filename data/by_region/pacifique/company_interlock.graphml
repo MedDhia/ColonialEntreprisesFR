@@ -267,7 +267,7 @@
     <node id="nickel">
       <data key="n_label">Société Le Nickel</data>
       <data key="n_sectors">Documentation générale (par ordre chronologique); Mines et métallurgie</data>
-      <data key="n_n_directors">65</data>
+      <data key="n_n_directors">66</data>
       <data key="n_territory">Pacifique</data>
     </node>
     <node id="nouvelleshebrides">
@@ -297,7 +297,7 @@
     <node id="ouaco">
       <data key="n_label">Sté de Ouaco</data>
       <data key="n_sectors">Autres sociétés; Documentation générale (par ordre chronologique)</data>
-      <data key="n_n_directors">18</data>
+      <data key="n_n_directors">17</data>
       <data key="n_territory">Pacifique</data>
     </node>
     <node id="petrolesshellilesfrancaisespacifique">
@@ -591,109 +591,109 @@
     <edge id="e80" source="nickel" target="phosphatesoceanie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e81" source="ouaco" target="tiebaghi">
+    <edge id="e81" source="concessionnaireportpapeete" target="nickel">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e82" source="comptoirsoceanie" target="concessionnaireportpapeete">
+    <edge id="e82" source="ouaco" target="tiebaghi">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e83" source="concessionnaireportpapeete" target="cotonniereetablissementsoceanie">
+    <edge id="e83" source="comptoirsoceanie" target="concessionnaireportpapeete">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e84" source="concessionnaireportpapeete" target="francotahitienne">
+    <edge id="e84" source="concessionnaireportpapeete" target="cotonniereetablissementsoceanie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e85" source="concessionnaireportpapeete" target="ilesmarquises">
+    <edge id="e85" source="concessionnaireportpapeete" target="francotahitienne">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e86" source="agricolemopelia" target="tahiti">
+    <edge id="e86" source="concessionnaireportpapeete" target="ilesmarquises">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e87" source="agricoleminierenouvelleshebrides" target="immobilierenouvelleshebrides">
+    <edge id="e87" source="agricolemopelia" target="tahiti">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e88" source="caledonia" target="ilespacifique">
+    <edge id="e88" source="agricoleminierenouvelleshebrides" target="immobilierenouvelleshebrides">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e89" source="colonialeilesbanks" target="colonialevate">
+    <edge id="e89" source="caledonia" target="ilespacifique">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e90" source="caledonickel" target="comitedirection">
+    <edge id="e90" source="colonialeilesbanks" target="colonialevate">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e91" source="havraisecaledonienne" target="immobilierenouvelleshebrides">
+    <edge id="e91" source="caledonickel" target="comitedirection">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e92" source="havraisecaledonienne" target="immobilierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e92" source="immobilierenouvelleshebrides" target="nouvelleshebrides">
+    <edge id="e93" source="immobilierenouvelleshebrides" target="nouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e93" source="havraisecaledonienne" target="nouvelleshebridesgeneralitesnouvelleshebrides">
+    <edge id="e94" source="havraisecaledonienne" target="nouvelleshebridesgeneralitesnouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e94" source="havraisecaledonienne" target="oregon">
+    <edge id="e95" source="havraisecaledonienne" target="oregon">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e95" source="havraisecaledonienne" target="ilespacifique">
+    <edge id="e96" source="havraisecaledonienne" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e96" source="ballandefils" target="concessionnaireportpapeete">
+    <edge id="e97" source="ballandefils" target="concessionnaireportpapeete">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e97" source="caledonia" target="concessionnaireportpapeete">
+    <edge id="e98" source="caledonia" target="concessionnaireportpapeete">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e98" source="chalandage" target="concessionnaireportpapeete">
+    <edge id="e99" source="chalandage" target="concessionnaireportpapeete">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e99" source="chalandage" target="minesnickelreunies">
+    <edge id="e100" source="chalandage" target="minesnickelreunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e100" source="chalandage" target="navalecommercialeoceanie">
+    <edge id="e101" source="chalandage" target="navalecommercialeoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e101" source="chalandage" target="navaleoceanie">
+    <edge id="e102" source="chalandage" target="navaleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e102" source="concessionnaireportpapeete" target="etablissementsballande">
+    <edge id="e103" source="concessionnaireportpapeete" target="etablissementsballande">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e103" source="concessionnaireportpapeete" target="hautsfourneauxnoumea">
+    <edge id="e104" source="concessionnaireportpapeete" target="hautsfourneauxnoumea">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e104" source="concessionnaireportpapeete" target="navalecommercialeoceanie">
+    <edge id="e105" source="concessionnaireportpapeete" target="navalecommercialeoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e105" source="concessionnaireportpapeete" target="navaleoceanie">
+    <edge id="e106" source="concessionnaireportpapeete" target="navaleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e106" source="caledonickel" target="hautsfourneauxnoumea">
+    <edge id="e107" source="caledonickel" target="hautsfourneauxnoumea">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e107" source="caledonickel" target="navaleoceanie">
+    <edge id="e108" source="caledonickel" target="navaleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e108" source="hautsfourneauxnoumea" target="nickel">
+    <edge id="e109" source="hautsfourneauxnoumea" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e109" source="navaleoceanie" target="nickel">
+    <edge id="e110" source="navaleoceanie" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e110" source="ballandefils" target="comitedirection">
+    <edge id="e111" source="ballandefils" target="comitedirection">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e111" source="chalandage" target="comitedirection">
+    <edge id="e112" source="chalandage" target="comitedirection">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e112" source="comitedirection" target="etablissementsballande">
+    <edge id="e113" source="comitedirection" target="etablissementsballande">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e113" source="caledonickel" target="concessionnaireportpapeete">
+    <edge id="e114" source="caledonickel" target="concessionnaireportpapeete">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e114" source="caledonickel" target="portpapeeteetudes">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e115" source="concessionnaireportpapeete" target="nickel">
+    <edge id="e115" source="caledonickel" target="portpapeeteetudes">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e116" source="nickel" target="portpapeeteetudes">

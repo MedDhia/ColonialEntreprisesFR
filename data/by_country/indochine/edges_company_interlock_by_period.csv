@@ -57,6 +57,7 @@ plantationheveasindochinebola,rizicolesoctrang,1914_1929,4,bauge-l; charousset-l
 fonciererizicolesoctrang,rizicolesoctrang,1914_1929,4,bertrand-g-georges; bertrand-g-gustave; beyssac-c; mazet-j
 caoutchoucspadang,plantationsindochinoises,1914_1929,4,blanchard-p; de-rivaud-m-max; hallet-r; langlois-p-philippe
 industriellechimieextremeorienthaiphong,tabacsindochine,1914_1929,3,hermenier; homberg; simon-s
+anthracitestonkin,industriellechimieextremeorient,1914_1929,3,delorme-p; fontaine-a; homberg-o
 creditfoncierindochine,tabacsindochine,1914_1929,3,fontaine-l; hermenier-g; homberg-o
 distilleriesiindochine,distilleriesindochine,1914_1929,3,boyaval-l; chapsal; homberg-o
 distilleriesiindochine,marchandisescoursroute,1914_1929,3,boyaval-l; chapsal; homberg-o
@@ -97,12 +98,12 @@ grandslacsindochine,transportsautomobilescentreannam,1914_1929,3,guesde-p; mazet
 rizeriesextremeorient,transportsautomobilescentreannam,1914_1929,3,grammont-m-maxime; triadou-c; ville-e
 indochinoiseculturestropicales,sucreriesraffineriesindochine,1914_1929,3,bouvier-r; fauconnier-h; guesde-p
 caoutchoucsindochine,locninh,1914_1929,3,clerc-l; goutet-g; josse-a-adrien
+industriellechimieextremeorient,minesorbaolac,1914_1929,3,chapuis-c; delorme-p; deschars-e
+minesorbaolac,oxygeneacetyleneextremeorient,1914_1929,3,delorme-p; deschars-e; grand-dufay-c
 unionelectriqueindochine,vitalimentscoloniaux,1914_1929,3,boyaval-l; poix-g; viaux-h
 allumettes,forestierecommercialeannam,1914_1929,3,genasi-a; herold-w; mange-f-frederic
 forestierecommercialeannam,indochinoiseallumettes,1914_1929,3,genasi-a; herold-w; mange-f-frederic
 forestierecommercialeannam,socindochinoiseforestiereallumettes,1914_1929,3,genasi-a; herold-w; mange-f-frederic
-industriellechimieextremeorient,minesorbaolac,1914_1929,3,chapuis-c; delorme-p; deschars-e
-minesorbaolac,oxygeneacetyleneextremeorient,1914_1929,3,delorme-p; deschars-e; grand-dufay-c
 administration,saigonnaisenavigationtransport,1914_1929,3,de-laboulaye-e; guesde-p; rueff-g
 caoutchoucskompongthom,indochinoiseculturestropicales,1914_1929,3,de-laboulaye-e; deschars-l; lejeune-c
 indochinoiseculturestropicales,saigonnaisenavigationtransport,1914_1929,3,de-laboulaye-e; guesde-p; rueff-g
@@ -127,7 +128,6 @@ banqueindochine,industriellechimieextremeorienthaiphong,1914_1929,2,homberg; sim
 industriellechimieextremeorient,tabacsindochine,1914_1929,2,homberg-o; simon-s
 anthracitestonkin,distilleriesiindochine,1914_1929,2,fontaine-l-leonard; homberg-o
 anthracitestonkin,distilleriesindochine,1914_1929,2,fontaine-a; homberg-o
-anthracitestonkin,industriellechimieextremeorient,1914_1929,2,fontaine-a; homberg-o
 anthracitestonkin,marchandisescoursroute,1914_1929,2,fontaine-a; homberg-o
 anthracitestonkin,tabacsindochine,1914_1929,2,fontaine-l-leonard; homberg-o
 anthracitestonkin,verreriesextremeorient,1914_1929,2,fontaine-l-leonard; homberg-o
@@ -233,10 +233,10 @@ plantationsindochinoises,sucreriesraffineriesindochine,1914_1929,2,bouvier-r; gu
 distilleriesindochine,socchauxhydrauliqueslangtho,1914_1929,2,fontaine-a; fontaine-l
 distilleriesindochine,vitalimentscoloniaux,1914_1929,2,boyaval-l; fontaine-a
 marchandisescoursroute,vitalimentscoloniaux,1914_1929,2,boyaval-l; fontaine-a
+industriellechimieextremeorient,oxygeneacetyleneextremeorient,1914_1929,2,delorme-p; deschars-e
 cimentsportlandartificielsindochine,indochinoisecimentfondulafarge,1914_1929,2,marchegay-l; perpignani-n
 creditfoncierindochine,messageriesfluvialescochinchine,1914_1929,2,bernard-f; guesde-p
 anthracitestonkinmaokhetrangbach,industriellechimieextremeorienthaiphong,1914_1929,2,delorme; homberg
-industriellechimieextremeorient,oxygeneacetyleneextremeorient,1914_1929,2,delorme-p; deschars-e
 administration,caoutchoucskompongthom,1914_1929,2,de-laboulaye-e; deschars-l
 administration,plantationsheveasprekchlong,1914_1929,2,de-laboulaye-e; rueff-g
 indochinoiseculturestropicales,plantationsheveasprekchlong,1914_1929,2,de-laboulaye-e; rueff-g
@@ -850,6 +850,8 @@ socasiatiqueboissonsindigenes,unionindochinoiseouunionindochinoise,1914_1929,1,f
 socchauxhydrauliqueslangtho,unionindochinoiseouunionindochinoise,1914_1929,1,fontaine-a
 socchauxhydrauliqueslangtho,vitalimentscoloniaux,1914_1929,1,fontaine-a
 unionindochinoiseouunionindochinoise,vitalimentscoloniaux,1914_1929,1,fontaine-a
+anthracitestonkin,minesorbaolac,1914_1929,1,delorme-p
+anthracitestonkin,oxygeneacetyleneextremeorient,1914_1929,1,delorme-p
 chauxhydrauliqueslangtho,socchauxhydrauliqueslangtho,1914_1929,1,candlot-e
 cimentsportlandartificielsindochine,socchauxhydrauliqueslangtho,1914_1929,1,candlot-e
 charbonnagestonkin,chauxhydrauliqueslangtho,1914_1929,1,ferrant-r
@@ -1268,9 +1270,9 @@ recherchesredevances,terresrougesthanhhoa,1914_1929,1,fafart-a
 etudesexploitationsminieresindochine,unionfinancierefrancoindochinoise,1914_1929,1,dupuy
 plantationsterresrouges,tramways,1914_1929,1,garnier-a
 indochinoiseculturestropicales,socindochinoiseculturestropicales,1930_1944,13,angoulvant-g; bouvier-r; budop; dufay-h; generale-d; ginestet; hiep-hoa; homberg-o; lithiby-j; rocca-e; sibilat-r; simoni-p; sud-ginestet
+minieremetallurgiqueindochinemineschodienfonderiezincquangyen,socminesetainhauttonkin,1930_1944,12,bault-g; de-sincay-e; harth-p; hauzeur-l; le-bret-j; lecuvre-f; ledoux-f; merigeault-e; robellaz-f; st-paul-de-sincay-g; thion-de-la-chaume; vincent-a
 hydrauliqueasie,hydrauliqueasiesaigoncorr,1930_1944,11,carrere; carrere-g; charles; crepines; legrand-r; malcor; mazet; mazet-e; teissier-du-cros-e; water-c-i; water-co-i
 ufeo,unionfinanciereextremeorient,1930_1944,11,agabriel-l; baillet-g; bonnardel-j; chantrel-j; g-rene-laederich; hadengue-y; laederich-g; le-montreer-g; loisy-x; prangey-h; prangey-h-henri
-minieremetallurgiqueindochinemineschodienfonderiezincquangyen,socminesetainhauttonkin,1930_1944,11,bault-g; de-sincay-e; harth-p; hauzeur-l; le-bret-j; lecuvre-f; ledoux-f; robellaz-f; st-paul-de-sincay-g; thion-de-la-chaume; vincent-a
 leonblondeaux,manufacturesindochinoisescigarettes,1930_1944,10,durand-saint-ange; ed-pfeiffer; ed-weill; guesde-p; laurent-j; law-whishaw-m; rheims-j; rueff-g; tinchant-v; warland-o
 creditmobilierindochinois,creditmobilierindochinoisexploitationmonts,1930_1944,9,agabriel-l; bernard-p; boudon-r-robert; de-chambure-h; gannay-p; goury-du-roslan-r; guesde-p; laurent-j-jean; nouailhetas-a
 indochinoisecommerce,sicaf,1930_1944,9,arnaud-de-vogue; d-eichthal-r; d-ursel-f; guesde-p; hachette-r; laroche-c; lenoir-g; letondot-c; van-regemorter
@@ -1629,7 +1631,9 @@ energieelectriqueindochinoise,hydrauliqueasie,1930_1944,2,manus-m; teissier-du-c
 fonciererizicolesoctrang,thidoirizieresindochine,1930_1944,2,beyssac-c; jean-duclos-j
 salinessudannam,tsanhhaptsaofreres,1930_1944,2,cafe-r; riz
 charbonnagesvinhphuoc,messageriesautomobilesnordannamlaos,1930_1944,2,coudoux-p; monier-g
+charbonnagesdongtrieu,minieremetallurgiqueindochinemineschodienfonderiezincquangyen,1930_1944,2,merigeault-e; vincent-a
 charbonnagesdongtrieu,socminesetainhauttonkin,1930_1944,2,merigeault-e; vincent-a
+minieremetallurgiqueindochinemineschodienfonderiezincquangyen,soccharbonnagesdongtrieu,1930_1944,2,merigeault-e; vincent-a
 soccharbonnagesdongtrieu,socminesetainhauttonkin,1930_1944,2,merigeault-e; vincent-a
 indochinoiseculturestropicales,sochonquan,1930_1944,2,dufay-h; rocca-e
 sochonquan,socindochinoiseculturestropicales,1930_1944,2,dufay-h; rocca-e
@@ -2675,12 +2679,12 @@ agricolesudindochinoise,sacric,1930_1944,1,simoni-p
 agricolesudindochinoise,socindochinoiseculturestropicales,1930_1944,1,simoni-p
 chalandage,tuyauxagglomerescentrifugesindochine,1930_1944,1,daurelle-r
 chalandageremorquageindochine,tuyauxagglomerescentrifugesindochine,1930_1944,1,daurelle-r
-charbonnagesdongtrieu,minieremetallurgiqueindochinemineschodienfonderiezincquangyen,1930_1944,1,vincent-a
-minieremetallurgiqueindochinemineschodienfonderiezincquangyen,soccharbonnagesdongtrieu,1930_1944,1,vincent-a
 charbonnages,charbonnagesdongtrieu,1930_1944,1,merigeault-e
+charbonnages,minieremetallurgiqueindochinemineschodienfonderiezincquangyen,1930_1944,1,merigeault-e
 charbonnages,soccharbonnagesdongtrieu,1930_1944,1,merigeault-e
 charbonnages,socminesetainhauttonkin,1930_1944,1,merigeault-e
 charbonnagesdongtrieu,indochinoisecharbonnagesminesmetalliques,1930_1944,1,merigeault-e
+indochinoisecharbonnagesminesmetalliques,minieremetallurgiqueindochinemineschodienfonderiezincquangyen,1930_1944,1,merigeault-e
 indochinoisecharbonnagesminesmetalliques,soccharbonnagesdongtrieu,1930_1944,1,merigeault-e
 indochinoisecharbonnagesminesmetalliques,socminesetainhauttonkin,1930_1944,1,merigeault-e
 charbonnages,phosphatestonkin,1930_1944,1,lancrenon-p
@@ -2793,7 +2797,6 @@ denisfreresindochine,rizindochinedenisfreres,1945_1962,5,de-ferry-f; delalande-l
 manufacturesindochinoisescigarettes,messageriesfluvialescochinchine,1945_1962,5,foy-s; kaleski-g; karcher-l; picard-g; rueff-g
 banqueiindochine,banqueindochine,1945_1962,5,bernard-f; brincard-g; michel-cote-c; minost-e; peloni-c
 caoutchoucspadang,indochinoiseculturesplantationsterresrouges,1945_1962,5,de-beaumont-j; de-rivaud-r; langlois-berthelot-p; lecointre-g; michaux-r
-banqueiindochine,indochinefilmscinemas,1945_1962,5,bousquet-r; catalogne-e; gannay-p; maxime-robert-j; rolloy-h
 bienhoaindustrielleforestiere,foretsscieriesbienhoa,1945_1962,5,ansault-j; ducarouge-e; furiet-c; petit; pyck-a
 caoutchoucsindochinesiegesocial,indochinoiseculturestropicales,1945_1962,5,bergougnan-a; bernard-p; berthier-j-jules; bouvier-r; fauconnier-h
 agricolethanhtuyhatantuongprovince,agricolethanhtuyhatantuongprovincebienhoasud,1945_1962,5,bonniel-a; bonniel-j; bonniel-y; de-gosselin-m; morange-c
@@ -2828,10 +2831,10 @@ kratie,manufacturesindochinoisescigarettes,1945_1962,3,biron-l; foy-s; rueff-g
 manufacturesindochinoisescigarettes,mimot,1945_1962,3,foy-s; rheims-j; rueff-g
 manufacturesindochinoisescigarettes,plantationskratie,1945_1962,3,biron-l; foy-s; rueff-g
 messageriesfluvialescochinchine,mimot,1945_1962,3,dewez-h; foy-s; rueff-g
-banqueiindochine,caoutchoucsindochinesiegesocial,1945_1962,3,bernard-f; de-flers-f; laurent-j-jean
 caoutchoucsindochine,caoutchoucsindochinesiegesocial,1945_1962,3,bergougnan-a; bernard-f; bernard-p
 caoutchoucsindochinesiegesocial,plantationsindochinoises,1945_1962,3,bernard-p; bouvier-r; laurent-j-jean
 indochinoiseplantationsheveas,plantationsindochinoises,1945_1962,3,de-laboulaye-e; laurent-j; laurent-j-jean
+banqueiindochine,indochinefilmscinemas,1945_1962,3,bousquet-r; catalogne-e; rolloy-h
 etainscammon,fermiereetainsextremeorient,1945_1962,3,bardoux-j; brard-r; coueslant-j
 foncieretonkinannam,immobilieresudasie,1945_1962,3,bussy-a-andre; carrere-g; petithuguenin-p
 caoutchoucsextremeorient,indochinoiseculturestropicales,1945_1962,3,bernard-p; bouvier-r; giscard-d-estaing-e
@@ -2888,11 +2891,10 @@ hautsplateauxindochinois,mimot,1945_1962,2,foy-s; walter
 hautsplateauxindochinoisbanmethuot,indochinoiseplantationsreuniesmimot,1945_1962,2,foy-s; thion-de-la-chaume-r-robert
 hautsplateauxindochinoisbanmethuotsudviet,indochinoiseplantationsreuniesmimot,1945_1962,2,foy-s; thion-de-la-chaume-r-robert
 banqueiindochine,charbonnagestonkin,1945_1962,2,deschamp-j; minost-e
-banqueiindochine,creditfoncierindochine,1945_1962,2,maxime-robert-j; minost-e
-banqueiindochine,credithypothecaireindochine,1945_1962,2,maxime-robert-j; minost-e
 banqueiindochine,indochinoiseplantationsheveas,1945_1962,2,laurent-j-jean; minost-e
 banqueindochine,charbonnagestonkin,1945_1962,2,deschamps-j; minost-e
 charbonnagestonkin,indochinoiseplantationsheveas,1945_1962,2,baudouin-p; minost-e
+banqueiindochine,caoutchoucsindochinesiegesocial,1945_1962,2,bernard-f; laurent-j-jean
 caoutchoucsmekongindochinoise,caoutchoucspadang,1945_1962,2,de-beaumont-j; langlois-berthelot-p
 caoutchoucsmekongindochinoise,indochinoiseculturescambodge,1945_1962,2,de-beaumont-j; langlois-berthelot-p
 caoutchoucsmekongindochinoise,indochinoiseculturesplantationsterresrouges,1945_1962,2,de-beaumont-j; langlois-berthelot-p
@@ -2900,21 +2902,15 @@ caoutchoucspadang,indochinoiseculturecaoutchoucsmekong,1945_1962,2,de-beaumont-j
 indochinoiseculturecaoutchoucsmekong,indochinoiseculturescambodge,1945_1962,2,de-beaumont-j; langlois-berthelot-p
 indochinoiseculturecaoutchoucsmekong,indochinoiseculturesplantationsterresrouges,1945_1962,2,de-beaumont-j; langlois-berthelot-p
 banqueiindochine,plantationsindochinoises,1945_1962,2,laurent-j-jean; michel-cote-c
-banquefrancochinoisecommerceindustrie,banqueiindochine,1945_1962,2,e-p-laurent-j; maxime-robert-j
-banqueiindochine,sifa,1945_1962,2,de-flers-f; maxime-robert-j
-caoutchoucsdonai,caoutchoucskompongthom,1945_1962,2,de-chambure-h; de-flers-f
-caoutchoucskompongthom,hautsplateauxindochinoisbanmethuot,1945_1962,2,de-flers-f; thion-de-la-chaume-r-robert
-caoutchoucskompongthom,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,2,de-flers-f; thion-de-la-chaume-r-robert
+banqueiindochine,imprimerieextremeorient,1945_1962,2,coueslant-j; rolloy-h
 banquefrancochinoisecommerceindustrie,credithypothecaireindochine,1945_1962,2,bussy-a-andre; maxime-robert-j
 banquefrancochinoisecommerceindustrie,sifa,1945_1962,2,bussy-a-andre; maxime-robert-j
-banqueiindochine,indochinoiseelectricite,1945_1962,2,hannotin-m; maxime-robert-j
-colonialeeclairageenergie,indochinoiseelectricite,1945_1962,2,maxime-robert-j; toche-c
 credithypothecaireindochine,sifa,1945_1962,2,bussy-a-andre; maxime-robert-j
-eauxelectriciteindochine,sifa,1945_1962,2,guillanton-a; maxime-robert-j
-indochinoiseelectricite,sifa,1945_1962,2,guillanton-a; maxime-robert-j
-banqueiindochine,imprimerieextremeorient,1945_1962,2,coueslant-j; rolloy-h
 foncieretonkinannam,sifa,1945_1962,2,bussy-a-andre; carrere-g
 immobilieresudasie,sifa,1945_1962,2,bussy-a-andre; carrere-g
+colonialeeclairageenergie,indochinoiseelectricite,1945_1962,2,maxime-robert-j; toche-c
+eauxelectriciteindochine,sifa,1945_1962,2,guillanton-a; maxime-robert-j
+indochinoiseelectricite,sifa,1945_1962,2,guillanton-a; maxime-robert-j
 caoutchoucsextremeorient,chalandageremorquageindochine,1945_1962,2,bernard-p; giscard-d-estaing-e
 caoutchoucsextremeorient,phosphatestonkin,1945_1962,2,bernard-p; giscard-d-estaing-e
 caoutchoucsextremeorient,sacric,1945_1962,2,bernard-p; giscard-d-estaing-e
@@ -2927,6 +2923,7 @@ phosphatestonkin,sacric,1945_1962,2,bernard-p; giscard-d-estaing-e
 fiduciaireindochine,plantationshautdonnai,1945_1962,2,hadengue-y; nouailhetas-a
 foncieresaigonnaise,plantationshautdonnai,1945_1962,2,haasz-f; nouailhetas-a
 plantationshautdonnai,plantationskratie,1945_1962,2,biron-l; hadengue-y
+caoutchoucsdonai,caoutchoucskompongthom,1945_1962,2,de-chambure-h; de-flers-f
 indochinoiseculturesplantationsterresrouges,plantationsterresrougesheveasquanloicafeiersheveasjava,1945_1962,2,lecointre-g; perot-j
 caoutchoucsmekong,foncieretonkinannam,1945_1962,2,carrere-g; petithuguenin-p
 caoutchoucsmekong,immobilieresudasie,1945_1962,2,carrere-g; petithuguenin-p
@@ -2936,6 +2933,8 @@ foncieretonkinannam,indochinoiseculturecaoutchoucsmekong,1945_1962,2,carrere-g; 
 immobilieresudasie,indochinoiseculturecaoutchoucsmekong,1945_1962,2,carrere-g; petithuguenin-p
 agricolethescafeskontum,immobilieresudasie,1945_1962,2,caffort-l; petithuguenin-p
 agricolethescafeskontumannam,foncieretonkinannam,1945_1962,2,audren-de-kerdrel-r; petithuguenin-p
+caoutchoucskompongthom,hautsplateauxindochinoisbanmethuot,1945_1962,2,de-flers-f; thion-de-la-chaume-r-robert
+caoutchoucskompongthom,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,2,de-flers-f; thion-de-la-chaume-r-robert
 caoutchoucskompongthom,indochinoiseplantationsreuniesmimot,1945_1962,2,deschars-l; thion-de-la-chaume-r-robert
 caoutchoucsphuochoa,indochinoiseplantationsheveas,1945_1962,2,laurent-j; thion-de-la-chaume-r-robert
 hautsplateauxindochinoisbanmethuot,indochinoiseplantationsheveas,1945_1962,2,lis-a; thion-de-la-chaume-r-robert
@@ -3062,6 +3061,8 @@ hautsplateauxindochinoisbanmethuotsudviet,messageriesfluvialescochinchine,1945_1
 hautsplateauxindochinoisbanmethuotsudviet,mimot,1945_1962,1,foy-s
 hautsplateauxindochinoisbanmethuotsudviet,plantationskratie,1945_1962,1,foy-s
 banqueiindochine,cheminsferindochineyunnan,1945_1962,1,minost-e
+banqueiindochine,creditfoncierindochine,1945_1962,1,minost-e
+banqueiindochine,credithypothecaireindochine,1945_1962,1,minost-e
 banqueindochine,cheminsferindochineyunnan,1945_1962,1,minost-e
 banqueindochine,creditfoncierindochine,1945_1962,1,minost-e
 banqueindochine,credithypothecaireindochine,1945_1962,1,minost-e
@@ -3090,38 +3091,18 @@ banqueindochine,plantationsindochinoises,1945_1962,1,michel-cote-c
 banqueiindochine,indochinoiseplantationsreuniesmimot,1945_1962,1,laurent-j-jean
 caoutchoucsindochinesiegesocial,indochinoiseplantationsheveas,1945_1962,1,laurent-j-jean
 caoutchoucsindochinesiegesocial,indochinoiseplantationsreuniesmimot,1945_1962,1,laurent-j-jean
-banqueiindochine,caoutchoucsdonai,1945_1962,1,de-flers-f
-banqueiindochine,caoutchoucskompongthom,1945_1962,1,de-flers-f
-banqueiindochine,etainswolframtonkin,1945_1962,1,de-flers-f
-banqueiindochine,hautsplateauxindochinois,1945_1962,1,de-flers-f
-banqueiindochine,hautsplateauxindochinoisbanmethuot,1945_1962,1,de-flers-f
-banqueiindochine,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,de-flers-f
-caoutchoucsdonai,caoutchoucsindochinesiegesocial,1945_1962,1,de-flers-f
-caoutchoucsdonai,etainswolframtonkin,1945_1962,1,de-flers-f
-caoutchoucsdonai,hautsplateauxindochinois,1945_1962,1,de-flers-f
-caoutchoucsdonai,hautsplateauxindochinoisbanmethuot,1945_1962,1,de-flers-f
-caoutchoucsdonai,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,de-flers-f
-caoutchoucsdonai,sifa,1945_1962,1,de-flers-f
-caoutchoucsindochinesiegesocial,caoutchoucskompongthom,1945_1962,1,de-flers-f
-caoutchoucsindochinesiegesocial,etainswolframtonkin,1945_1962,1,de-flers-f
-caoutchoucsindochinesiegesocial,hautsplateauxindochinois,1945_1962,1,de-flers-f
-caoutchoucsindochinesiegesocial,hautsplateauxindochinoisbanmethuot,1945_1962,1,de-flers-f
-caoutchoucsindochinesiegesocial,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,de-flers-f
-caoutchoucsindochinesiegesocial,sifa,1945_1962,1,de-flers-f
-caoutchoucskompongthom,etainswolframtonkin,1945_1962,1,de-flers-f
-caoutchoucskompongthom,hautsplateauxindochinois,1945_1962,1,de-flers-f
-caoutchoucskompongthom,sifa,1945_1962,1,de-flers-f
-etainswolframtonkin,hautsplateauxindochinois,1945_1962,1,de-flers-f
-etainswolframtonkin,hautsplateauxindochinoisbanmethuot,1945_1962,1,de-flers-f
-etainswolframtonkin,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,de-flers-f
-etainswolframtonkin,sifa,1945_1962,1,de-flers-f
-hautsplateauxindochinois,sifa,1945_1962,1,de-flers-f
-hautsplateauxindochinoisbanmethuot,sifa,1945_1962,1,de-flers-f
-hautsplateauxindochinoisbanmethuotsudviet,sifa,1945_1962,1,de-flers-f
-agricoleindustriellethapmuoi,banqueiindochine,1945_1962,1,gannay-p
-agricoleindustriellethapmuoi,indochinefilmscinemas,1945_1962,1,gannay-p
+banqueiindochine,indochinoiseelectricite,1945_1962,1,hannotin-m
+banqueiindochine,etainscammon,1945_1962,1,coueslant-j
+banqueiindochine,fermiereetainsextremeorient,1945_1962,1,coueslant-j
+etainscammon,imprimerieextremeorient,1945_1962,1,coueslant-j
+fermiereetainsextremeorient,imprimerieextremeorient,1945_1962,1,coueslant-j
+imprimerieextremeorient,indochinefilmscinemas,1945_1962,1,rolloy-h
+agricolethescafeskontumannam,banquefrancochinoisecommerceindustrie,1945_1962,1,le-gallen-m
+banquefrancochinoisecommerceindustrie,foncieretonkinannam,1945_1962,1,bussy-a-andre
+banquefrancochinoisecommerceindustrie,immobilieresudasie,1945_1962,1,bussy-a-andre
+credithypothecaireindochine,foncieretonkinannam,1945_1962,1,bussy-a-andre
+credithypothecaireindochine,immobilieresudasie,1945_1962,1,bussy-a-andre
 asiatiquenavigation,banquefrancochinoisecommerceindustrie,1945_1962,1,maxime-robert-j
-asiatiquenavigation,banqueiindochine,1945_1962,1,maxime-robert-j
 asiatiquenavigation,colonialeeclairageenergie,1945_1962,1,maxime-robert-j
 asiatiquenavigation,creditfoncierindochine,1945_1962,1,maxime-robert-j
 asiatiquenavigation,credithypothecaireindochine,1945_1962,1,maxime-robert-j
@@ -3135,9 +3116,6 @@ banquefrancochinoisecommerceindustrie,eauxelectriciteindochine,1945_1962,1,maxim
 banquefrancochinoisecommerceindustrie,indochinefilmscinemas,1945_1962,1,maxime-robert-j
 banquefrancochinoisecommerceindustrie,indochinoiseelectricite,1945_1962,1,maxime-robert-j
 banquefrancochinoisecommerceindustrie,unionelectriqueindochine,1945_1962,1,maxime-robert-j
-banqueiindochine,colonialeeclairageenergie,1945_1962,1,maxime-robert-j
-banqueiindochine,eauxelectriciteindochine,1945_1962,1,maxime-robert-j
-banqueiindochine,unionelectriqueindochine,1945_1962,1,maxime-robert-j
 colonialeeclairageenergie,creditfoncierindochine,1945_1962,1,maxime-robert-j
 colonialeeclairageenergie,credithypothecaireindochine,1945_1962,1,maxime-robert-j
 colonialeeclairageenergie,eauxelectriciteindochine,1945_1962,1,maxime-robert-j
@@ -3160,20 +3138,6 @@ indochinefilmscinemas,sifa,1945_1962,1,maxime-robert-j
 indochinefilmscinemas,unionelectriqueindochine,1945_1962,1,maxime-robert-j
 indochinoiseelectricite,unionelectriqueindochine,1945_1962,1,maxime-robert-j
 sifa,unionelectriqueindochine,1945_1962,1,maxime-robert-j
-banqueiindochine,culturesextremeorient,1945_1962,1,coueslant-j
-banqueiindochine,etainscammon,1945_1962,1,coueslant-j
-banqueiindochine,fermiereetainsextremeorient,1945_1962,1,coueslant-j
-culturesextremeorient,etainscammon,1945_1962,1,coueslant-j
-culturesextremeorient,fermiereetainsextremeorient,1945_1962,1,coueslant-j
-culturesextremeorient,imprimerieextremeorient,1945_1962,1,coueslant-j
-etainscammon,imprimerieextremeorient,1945_1962,1,coueslant-j
-fermiereetainsextremeorient,imprimerieextremeorient,1945_1962,1,coueslant-j
-imprimerieextremeorient,indochinefilmscinemas,1945_1962,1,rolloy-h
-agricolethescafeskontumannam,banquefrancochinoisecommerceindustrie,1945_1962,1,le-gallen-m
-banquefrancochinoisecommerceindustrie,foncieretonkinannam,1945_1962,1,bussy-a-andre
-banquefrancochinoisecommerceindustrie,immobilieresudasie,1945_1962,1,bussy-a-andre
-credithypothecaireindochine,foncieretonkinannam,1945_1962,1,bussy-a-andre
-credithypothecaireindochine,immobilieresudasie,1945_1962,1,bussy-a-andre
 creditfoncierindochine,immobiliereindochine,1945_1962,1,daroussin-j
 creditfoncierindochine,plantationsheveasxuanloc,1945_1962,1,daroussin-j
 credithypothecaireindochine,immobiliereindochine,1945_1962,1,daroussin-j
@@ -3219,6 +3183,28 @@ agricolethescafeskontumannam,caoutchoucsmekongindochinoise,1945_1962,1,petithugu
 agricolethescafeskontumannam,immobilieresudasie,1945_1962,1,petithuguenin-p
 agricolethescafeskontumannam,indochinoiseculturecaoutchoucsmekong,1945_1962,1,petithuguenin-p
 caoutchoucspadang,plantationsterresrougesheveasquanloicafeiersheveasjava,1945_1962,1,lecointre-g
+caoutchoucsdonai,caoutchoucsindochinesiegesocial,1945_1962,1,de-flers-f
+caoutchoucsdonai,etainswolframtonkin,1945_1962,1,de-flers-f
+caoutchoucsdonai,hautsplateauxindochinois,1945_1962,1,de-flers-f
+caoutchoucsdonai,hautsplateauxindochinoisbanmethuot,1945_1962,1,de-flers-f
+caoutchoucsdonai,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,de-flers-f
+caoutchoucsdonai,sifa,1945_1962,1,de-flers-f
+caoutchoucsindochinesiegesocial,caoutchoucskompongthom,1945_1962,1,de-flers-f
+caoutchoucsindochinesiegesocial,etainswolframtonkin,1945_1962,1,de-flers-f
+caoutchoucsindochinesiegesocial,hautsplateauxindochinois,1945_1962,1,de-flers-f
+caoutchoucsindochinesiegesocial,hautsplateauxindochinoisbanmethuot,1945_1962,1,de-flers-f
+caoutchoucsindochinesiegesocial,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,de-flers-f
+caoutchoucsindochinesiegesocial,sifa,1945_1962,1,de-flers-f
+caoutchoucskompongthom,etainswolframtonkin,1945_1962,1,de-flers-f
+caoutchoucskompongthom,hautsplateauxindochinois,1945_1962,1,de-flers-f
+caoutchoucskompongthom,sifa,1945_1962,1,de-flers-f
+etainswolframtonkin,hautsplateauxindochinois,1945_1962,1,de-flers-f
+etainswolframtonkin,hautsplateauxindochinoisbanmethuot,1945_1962,1,de-flers-f
+etainswolframtonkin,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,de-flers-f
+etainswolframtonkin,sifa,1945_1962,1,de-flers-f
+hautsplateauxindochinois,sifa,1945_1962,1,de-flers-f
+hautsplateauxindochinoisbanmethuot,sifa,1945_1962,1,de-flers-f
+hautsplateauxindochinoisbanmethuotsudviet,sifa,1945_1962,1,de-flers-f
 caoutchoucsphuochoa,hautsplateauxindochinoisbanmethuot,1945_1962,1,thion-de-la-chaume-r-robert
 caoutchoucsphuochoa,hautsplateauxindochinoisbanmethuotsudviet,1945_1962,1,thion-de-la-chaume-r-robert
 caoutchoucsphuochoa,indochinoiseplantationsreuniesmimot,1945_1962,1,thion-de-la-chaume-r-robert
@@ -3289,6 +3275,7 @@ chantiersateliersreunisindochine,plantationsindochinoises,1945_1962,1,de-laboula
 indochinoiseeauxielectriciteannam,indochinoiseplantationsheveas,1945_1962,1,de-laboulaye-e
 indochinoiseeauxielectriciteannam,indochinoiseplantationsreuniesmimot,1945_1962,1,de-laboulaye-e
 indochinoiseeauxielectriciteannam,plantationsindochinoises,1945_1962,1,de-laboulaye-e
+agricoleindustriellethapmuoi,indochinefilmscinemas,1945_1962,1,gannay-p
 caoutchoucskompongthom,unionelectriqueindochine,1945_1962,1,labbe-j
 caoutchoucsphuochoa,unionelectriqueindochine,1945_1962,1,labbe-j
 caoutchoucskompongthom,plantationsindochinoises,1945_1962,1,laurent-j
@@ -3483,7 +3470,6 @@ etainscammon,minesetainhauttonkin,post_1962,1,brard-r
 etainsindochine,minesetainhauttonkin,post_1962,1,wolfram-du-tonkin
 etainsindochine,etainswolframtonkin,post_1962,1,mallet-a
 agricolethescafeskontumannam,immobilieresudasie,post_1962,1,petithuguenin-p
-indochinoiseforestiereallumettes,indochinoisemessageriesautomobiles,post_1962,1,chatot-j
 etainswolframtonkin,indochinoiseforestiereallumettes,post_1962,1,de-flers-f
 etainswolframtonkin,minieremetallurgiqueindochine,post_1962,1,de-flers-f
 etainswolframtonkin,unionminiereindochinoise,post_1962,1,de-flers-f
@@ -3497,9 +3483,7 @@ etainspiaouac,minesetainhauttonkin,post_1962,1,ramonatxo-h
 agricolethescafeskontumannam,forgesatelierschantiersindochine,post_1962,1,caffort-l-leon
 agricolethescafeskontumannam,urbainefonciereindochinoise,post_1962,1,caffort-l-leon
 forgesatelierschantiersindochine,urbainefonciereindochinoise,post_1962,1,caffort-l-leon
-chalandageremorquageindochine,etablissementsdelignon,post_1962,1,papillon-p
 chalandageremorquageindochine,indochinoisecharbonnagesminesmetalliques,post_1962,1,papillon-p
-etablissementsdelignon,indochinoisecharbonnagesminesmetalliques,post_1962,1,papillon-p
 asiatiqueafricaine,chalandageremorquageindochine,post_1962,1,guesde-p
 asiatiqueafricaine,distilleriesiindochine,post_1962,1,guesde-p
 asiatiqueafricaine,sucreriesraffineriesindochine,post_1962,1,guesde-p

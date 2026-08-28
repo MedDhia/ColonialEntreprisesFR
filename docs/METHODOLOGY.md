@@ -69,14 +69,19 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (856 assertions).
+`checks.py` validates the parsers and the built dataset (876 assertions).
 
 ## 2b. What is *not* extracted
 
 Extraction of the PDFs is near-complete: 5,867 of 5,920 documents (99.2%), the
-rest dead links. Turning that text into ties is not. **3,592 of the 5,867
-(61%) yield at least one tie**; the other 2,271 hold 26% of the extracted
-characters. When only the dossier parser existed those figures were 2,482
+rest dead links. Turning that text into ties is not.
+
+Four denominators are easy to confuse, so they are stated once here and used
+consistently: **5,920** documents are catalogued, **5,874** have a text file,
+**5,867** extract cleanly, and **5,863** carry usable text — the four that fall
+out hold under 200 characters, a header and nothing else. Tie coverage is
+measured against that last figure. **3,592 of the 5,863 (61%) yield at least
+one tie**; the other 2,271 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
 (42%) and 47% — stages 3b–3e, below, are what closed the gap. This section
 says what is still in the residue, because a reader is otherwise entitled to
 assume the pipeline saw everything.
@@ -105,7 +110,7 @@ The last row is the real gap, and it is not one thing:
   et colon", "vétérinaire à Oran". Correctly excluded; counting them would
   inflate the network with ties that do not exist.
 
-One further gap is quantified elsewhere: **9,094 parsed ties (12.5%)** are
+One further gap is quantified elsewhere: **9,136 parsed ties (12.5%)** are
 dropped for want of an identifiable firm (§5). The compiler's annotation leads
 are now resolved as far as they go (§4e).
 
@@ -443,7 +448,7 @@ abbreviated where the company name is not.
 token must prefix a name token, and in sequence. "Cotonn. St-Quentin" resolves
 to *Cotonnière de Saint-Quentin*; "Bq de Madagascar" to *Banque de
 Madagascar*. Prefix matching needs no list of abbreviations, which matters
-because the compiler invents them freely. Result: **1,644 ties over 502 firms**,
+because the compiler invents them freely. Result: **1,646 ties over 502 firms**,
 hand-audited at roughly 94%.
 
 Three refusals do most of the work for precision. A note matching several
@@ -463,8 +468,14 @@ meant to catch lowercase openings rejected *every* company name in the file,
 including the Banque de l'Indochine. `checks.py` now pins five real names
 against it.
 
-Why only 8% of the 20,354 candidate notes resolve: 4,218 name the firm the
-observation already belongs to, and 8,238 name a company absent from this
+Two resolution rates appear above and they measure different stages, which is
+worth keeping straight. Stage 4 resolves **3,680 of its 21,904 raw candidate
+rows (16.8%)** by exact name and catalogue acronym. Stage 3d then runs the
+prefix matcher over the **20,354** distinct notes that remain and recovers
+**1,676 (8%)** more.
+
+Why that second rate is so low: 4,218 of those notes name the firm the
+observation already belongs to, and 8,242 name a company absent from this
 corpus — many are
 metropolitan firms the collection never covers. Neither is recoverable by
 better matching.
@@ -487,7 +498,7 @@ is the entry header and is never named again.
 What stage 3e adds is **person-scoped segmentation**: the document is split at
 the capitalised surname headers, and every role construction inside an entry is
 attributed to that entry's person. Company names are resolved with the prefix
-matcher from §4e. **3,167 ties over 725 firms and 694 people**, hand-audited
+matcher from §4e. **3,167 ties over 725 firms and 696 people**, hand-audited
 at roughly 93%.
 
 Two guards were added from the audit. A capitalised *headline* has exactly the
@@ -601,7 +612,7 @@ entry to several firms at once, joined with a plus sign —
 `Houillères du bassin de la Loire + Houillères des Cévennes… du Dauphiné`.
 Those 82 people are the boards of three nationalised coal undertakings pooled
 into one pseudo-firm. **22 companies have such a combined name, carrying 185
-of 90,745 two-mode edges (0.20%).** They are left as the source wrote them:
+of 90,861 two-mode edges (0.20%).** They are left as the source wrote them:
 splitting a name on a plus sign would also cut the ones where it separates a
 firm from its depot rather than from another firm, and the affected share is
 too small to justify guessing. Filter on a `+` in `name` to drop them.
@@ -681,7 +692,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 33,558 names
+**Every obvious rule is wrong.** Each was measured against all 33,580 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -728,11 +739,11 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-5,862 firms and 76,886 edges: rendered as a node-link diagram it is a solid
+5,862 firms and 76,893 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
-170 firms of highest weighted degree — 1,407 interlocks. Reading a *global*
+170 firms of highest weighted degree — 1,403 interlocks. Reading a *global*
 property such as density or centralisation off that picture is a mistake; the
 figure is a map of the core, and the numbers for the whole graph are in
 `network_stats.csv`.
@@ -752,7 +763,7 @@ nodes and a full table view rather than relying on the hue alone.
 **Small multiples share one layout, computed once.** Figure 2 draws one panel
 per period. The obvious implementation — lay out and normalise each period's
 subgraph independently — rescales every panel to fill its box, which made the
-1914–1929 panel (2,952 interlocks) look *smaller* than pre-1914 (479): the
+1914–1929 panel (2,943 interlocks) look *smaller* than pre-1914 (479): the
 visual encoding then contradicts the data. The layout is instead computed
 once on the union of all periods and each panel draws its own edges at those
 fixed coordinates, with one size scale throughout. A firm therefore sits in
@@ -775,14 +786,14 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 5,862 firms and 76,886 interlocks.** At that density a
+**Figure 4 draws all 5,862 firms and 76,893 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
 territory folded to the three largest, and the answer the figure gives is
 "both" — Indochine, Maroc and AOF each hold a visibly distinct lobe, joined
 through a dense mixed core. Node radii are 42% of the core figure's and edge
-ink 42% of its opacity, because the settings tuned for 170 nodes render 3,549
+ink 42% of its opacity, because the settings tuned for 170 nodes render 3,550
 as a solid disc.
 
 **Nothing is dropped to make the picture tidy.** 98.5% of the firms sit in one
@@ -794,7 +805,7 @@ graph's, for figure 4 and for each of the 42 territory figures, so the claim
 is enforced rather than merely intended.
 
 **Figure 5 is a matrix, not a node-link diagram.** Aggregated to territories
-the graph is small (54 nodes) and nearly complete (862 of 1,431 possible pairs
+the graph is small (54 nodes) and nearly complete (863 of 1,431 possible pairs
 share at least one director), which is exactly the regime where a node-link
 diagram degenerates into a scribble and a matrix becomes readable. The cell is
 the count of directors holding board seats in both territories; rows and
@@ -802,7 +813,7 @@ columns are ordered by size, which is what makes the core-periphery structure
 legible. Two things to know before reading it: the shading steps by **rank,
 not linearly**, because the counts are heavily skewed and a linear ramp would
 put everything but the top two pairs — Maroc–Indochine at 4,477 shared
-directors and Maroc–Algérie at 4,446 — in the palest step; and a firm listed in two territories contributes its whole board to
+directors and Maroc–Algérie at 4,439 — in the palest step; and a firm listed in two territories contributes its whole board to
 both, which is the tie being counted rather than an artefact — a
 Paris-registered firm operating in Morocco and Indochina genuinely links them.
 
@@ -829,7 +840,7 @@ Three decisions determine the numbers.
 **Computed on the whole graph, displayed on a slice.** Betweenness is a global
 property: the shortest paths that matter run through firms outside any core
 one might draw. It is computed on the giant component of the interlock graph
-at `weight >= 1` (5,776 firms, 76,886 ties) and then displayed on whatever
+at `weight >= 1` (5,776 firms, 76,893 ties) and then displayed on whatever
 subset a figure shows. Recomputing it on the 170 drawn firms would yield a
 different quantity wearing the same name, and would systematically flatter
 firms that happen to sit in the middle of that particular selection.
@@ -898,7 +909,7 @@ false one about production. A city's size on the map is firms *recorded* there,
 inheriting all of §6's coverage unevenness. And ties within a single city
 cannot be drawn — an edge from Paris to Paris is a dot — so the 5,146
 within-city interlocks appear as a table column rather than on the map, against
-1,099 drawn city pairs; a reader who counts only the lines undercounts the
+1,100 drawn city pairs; a reader who counts only the lines undercounts the
 network badly.
 
 The headline result survives all three: 37% of placed firms in the interlock

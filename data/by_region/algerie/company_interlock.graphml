@@ -135,7 +135,7 @@
     <node id="alfasocfabricationpatescellulose">
       <data key="n_label">L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose</data>
       <data key="n_sectors">Filière bois : exploitation forestière, liège, meubles, cellulose, papier…</data>
-      <data key="n_n_directors">14</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Algerie</data>
     </node>
     <node id="algerienne">
@@ -651,7 +651,7 @@
     <node id="corvinomenny">
       <data key="n_label">CORVINO et MENNY</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">17</data>
+      <data key="n_n_directors">18</data>
       <data key="n_territory">Algerie</data>
     </node>
     <node id="cotonnierebonoise">
@@ -681,7 +681,7 @@
     <node id="creditfoncieralgerietunisie">
       <data key="n_label">Crédit foncier d'Algérie-Tunisie</data>
       <data key="n_sectors">Banques et groupes financiers, assurances; Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">88</data>
+      <data key="n_n_directors">89</data>
       <data key="n_territory">Algerie</data>
     </node>
     <node id="creditimmobilieralger">
@@ -1644,12 +1644,6 @@
       <data key="n_n_directors">4</data>
       <data key="n_territory">Algerie</data>
     </node>
-    <node id="socfeutresrok">
-      <data key="n_label">Soc. an. des FEUTRES ROK</data>
-      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">9</data>
-      <data key="n_territory">Algerie</data>
-    </node>
     <node id="socfrancminesfer">
       <data key="n_label">Soc. franç. de MINES DE FER</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
@@ -1665,7 +1659,7 @@
     <node id="socindustrielletelephones">
       <data key="n_label">Soc. Industrielle des TÉLÉPHONES</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">15</data>
+      <data key="n_n_directors">14</data>
       <data key="n_territory">Algerie</data>
     </node>
     <node id="socmessagerieslittoral">
@@ -1908,6 +1902,12 @@
       <data key="n_n_directors">3</data>
       <data key="n_territory">Algerie</data>
     </node>
+    <node id="voorhouthaye">
+      <data key="n_label">Voorhout, à La Haye</data>
+      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
+      <data key="n_n_directors">1</data>
+      <data key="n_territory">Algerie</data>
+    </node>
     <node id="vveedouardleach">
       <data key="n_label">Vve Édouard LEACH</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
@@ -1932,11 +1932,11 @@
       <data key="n_n_directors">21</data>
       <data key="n_territory">Algerie</data>
     </node>
-    <edge id="e0" source="entreprisemaritimecommerciale" target="socentreprisemaritimecommerciale">
+    <edge id="e0" source="corvinomenny" target="creditfoncieralgerietunisie">
       <data key="e_weight">16</data>
     </edge>
-    <edge id="e1" source="corvinomenny" target="creditfoncieralgerietunisie">
-      <data key="e_weight">15</data>
+    <edge id="e1" source="entreprisemaritimecommerciale" target="socentreprisemaritimecommerciale">
+      <data key="e_weight">16</data>
     </edge>
     <edge id="e2" source="ouenza" target="socouenza">
       <data key="e_weight">15</data>
@@ -1947,11 +1947,11 @@
     <edge id="e4" source="omniumminesalgerietunisie" target="phosphatesconstantine">
       <data key="e_weight">12</data>
     </edge>
-    <edge id="e5" source="alfa" target="alfasocfabricationpatescellulose">
+    <edge id="e5" source="banquealgerie" target="banqueindustrielleafriquenord">
       <data key="e_weight">11</data>
     </edge>
-    <edge id="e6" source="banquealgerie" target="banqueindustrielleafriquenord">
-      <data key="e_weight">11</data>
+    <edge id="e6" source="alfa" target="alfasocfabricationpatescellulose">
+      <data key="e_weight">10</data>
     </edge>
     <edge id="e7" source="minierefrancoafricaine" target="socminierefrancoafricaine">
       <data key="e_weight">9</data>
@@ -2355,70 +2355,70 @@
     <edge id="e140" source="creditfoncieralgerietunisie" target="socentreprisemaritimecommerciale">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e141" source="agricolealgerienne" target="tabacsalgeriens">
+    <edge id="e141" source="creditfoncieragricolealgerie" target="creditfoncieralgerietunisie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e142" source="creditfoncieralgerietunisie" target="tabacsalgeriens">
+    <edge id="e142" source="agricolealgerienne" target="tabacsalgeriens">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e143" source="ceresfabricationventetousengraisproduitsviticoles" target="viticoles">
+    <edge id="e143" source="corvinomenny" target="tabacsalgeriens">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e144" source="nordafricaincommercial" target="viticoles">
+    <edge id="e144" source="creditfoncieralgerietunisie" target="tabacsalgeriens">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e145" source="exploitationsforestieresminierespetitekabylie" target="socexploitationforestiereminierepetitekabylie">
+    <edge id="e145" source="ceresfabricationventetousengraisproduitsviticoles" target="viticoles">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e146" source="cenpasoccentraleusinespapiers" target="socfeutresrok">
+    <edge id="e146" source="nordafricaincommercial" target="viticoles">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e147" source="fabriquealsaciennesieges" target="royaleasturienneminesdirection">
+    <edge id="e147" source="exploitationsforestieresminierespetitekabylie" target="socexploitationforestiereminierepetitekabylie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e148" source="fabriquealsaciennesieges" target="socfeutresrok">
+    <edge id="e148" source="minieredjendli" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e149" source="minieredjendli" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e149" source="mineschabetkohol" target="syndicatlyonnaisnordafricain">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e150" source="mineschabetkohol" target="syndicatlyonnaisnordafricain">
+    <edge id="e150" source="mineschabetkohol" target="socminesoranie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e151" source="mineschabetkohol" target="socminesoranie">
+    <edge id="e151" source="minesfermiliana" target="minesferrouina">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e152" source="minesfermiliana" target="minesferrouina">
+    <edge id="e152" source="minesouastamesloula" target="minieredjendli">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e153" source="minesouastamesloula" target="minieredjendli">
+    <edge id="e153" source="banqueindustrielleafriquenord" target="cheminsferroutesalgerie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e154" source="banqueindustrielleafriquenord" target="cheminsferroutesalgerie">
+    <edge id="e154" source="banqueindustrielleafriquenord" target="mineszincguergour">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e155" source="banqueindustrielleafriquenord" target="mineszincguergour">
+    <edge id="e155" source="banqueindustrielleafriquenord" target="zincguergour">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e156" source="banqueindustrielleafriquenord" target="zincguergour">
+    <edge id="e156" source="cheminsferroutesalgerie" target="mineszincguergour">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e157" source="cheminsferroutesalgerie" target="mineszincguergour">
+    <edge id="e157" source="cheminsferroutesalgerie" target="zincguergour">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e158" source="cheminsferroutesalgerie" target="zincguergour">
+    <edge id="e158" source="concessionnaireminesouenza" target="concessionnaireouenza">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e159" source="concessionnaireminesouenza" target="concessionnaireouenza">
+    <edge id="e159" source="mineraisfermagnetiquemoktaelhadid" target="petrolestliouanet">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e160" source="mineraisfermagnetiquemoktaelhadid" target="petrolestliouanet">
+    <edge id="e160" source="mineraisfermagnetiquemoktaelhadid" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e161" source="mineraisfermagnetiquemoktaelhadid" target="socalgeriennepetrolestliouanet">
+    <edge id="e161" source="algerienneproduitschimiquesengrais" target="mineraisfermagnetiquemoktaelhadid">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e162" source="algerienneproduitschimiquesengrais" target="mineraisfermagnetiquemoktaelhadid">
+    <edge id="e162" source="fabriquealsaciennesieges" target="royaleasturienneminesdirection">
       <data key="e_weight">2</data>
     </edge>
     <edge id="e163" source="afriquenord" target="banqueindustrielleafriquenord">
@@ -3468,1603 +3468,1609 @@
     <edge id="e511" source="aguilas" target="mineszaccar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e512" source="aguilas" target="zaccarfer">
+    <edge id="e512" source="aguilas" target="voorhouthaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e513" source="concessionnaireminesouenza" target="minesrarelmaden">
+    <edge id="e513" source="aguilas" target="zaccarfer">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e514" source="concessionnaireminesouenza" target="zaccarfer">
+    <edge id="e514" source="concessionnaireminesouenza" target="minesrarelmaden">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e515" source="minesrarelmaden" target="socouenza">
+    <edge id="e515" source="concessionnaireminesouenza" target="voorhouthaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e516" source="socouenza" target="zaccarfer">
+    <edge id="e516" source="concessionnaireminesouenza" target="zaccarfer">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e517" source="minescuivretenes" target="ouenza">
+    <edge id="e517" source="minesrarelmaden" target="socouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e518" source="minescuivretenes" target="socouenza">
+    <edge id="e518" source="minesrarelmaden" target="voorhouthaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e519" source="ateliersreparationsmaritimesbeliard" target="expansionnordafricaine">
+    <edge id="e519" source="mineszaccar" target="voorhouthaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e520" source="cellulosesafriquenord" target="soccellulosesafriquenord">
+    <edge id="e520" source="ouenza" target="voorhouthaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e521" source="socchaines" target="soctissagesmecaniquesisere">
+    <edge id="e521" source="socouenza" target="voorhouthaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e522" source="creditfoncieralgerietunisie" target="etudescheminfertransafricain">
+    <edge id="e522" source="socouenza" target="zaccarfer">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e523" source="etudescheminfertransafricain" target="mineschabetkohol">
+    <edge id="e523" source="voorhouthaye" target="zaccarfer">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e524" source="etudescheminfertransafricain" target="socminesbouthaleb">
+    <edge id="e524" source="minescuivretenes" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e525" source="cheminsferroutesalgerie" target="corvinomenny">
+    <edge id="e525" source="minescuivretenes" target="socouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e526" source="cheminsferroutesalgerie" target="mineschabetkohol">
+    <edge id="e526" source="ateliersreparationsmaritimesbeliard" target="expansionnordafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e527" source="cheminsferroutesalgerie" target="socminesbouthaleb">
+    <edge id="e527" source="cellulosesafriquenord" target="soccellulosesafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e528" source="cheminsferroutesalgerie" target="usineslavieconstantine">
+    <edge id="e528" source="socchaines" target="soctissagesmecaniquesisere">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e529" source="corvinomenny" target="socminesbouthaleb">
+    <edge id="e529" source="creditfoncieralgerietunisie" target="etudescheminfertransafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e530" source="corvinomenny" target="usineslavieconstantine">
+    <edge id="e530" source="etudescheminfertransafricain" target="mineschabetkohol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e531" source="creditfoncieralgerietunisie" target="usineslavieconstantine">
+    <edge id="e531" source="etudescheminfertransafricain" target="socminesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e532" source="mineschabetkohol" target="usineslavieconstantine">
+    <edge id="e532" source="cheminsferroutesalgerie" target="corvinomenny">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e533" source="socminesbouthaleb" target="usineslavieconstantine">
+    <edge id="e533" source="cheminsferroutesalgerie" target="mineschabetkohol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e534" source="corvinomenny" target="entreprisemaritimecommerciale">
+    <edge id="e534" source="cheminsferroutesalgerie" target="socminesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e535" source="corvinomenny" target="petrolestliouanet">
+    <edge id="e535" source="cheminsferroutesalgerie" target="usineslavieconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e536" source="corvinomenny" target="raffineriessoufrereunies">
+    <edge id="e536" source="corvinomenny" target="socminesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e537" source="corvinomenny" target="socalgeriennepetrolestliouanet">
+    <edge id="e537" source="corvinomenny" target="usineslavieconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e538" source="corvinomenny" target="socentreprisemaritimecommerciale">
+    <edge id="e538" source="creditfoncieralgerietunisie" target="usineslavieconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e539" source="creditfoncieralgerietunisie" target="petrolestliouanet">
+    <edge id="e539" source="mineschabetkohol" target="usineslavieconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e540" source="creditfoncieralgerietunisie" target="raffineriessoufrereunies">
+    <edge id="e540" source="socminesbouthaleb" target="usineslavieconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e541" source="creditfoncieralgerietunisie" target="socalgeriennepetrolestliouanet">
+    <edge id="e541" source="corvinomenny" target="entreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e542" source="entreprisemaritimecommerciale" target="mineschabetkohol">
+    <edge id="e542" source="corvinomenny" target="petrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e543" source="entreprisemaritimecommerciale" target="petrolestliouanet">
+    <edge id="e543" source="corvinomenny" target="raffineriessoufrereunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e544" source="entreprisemaritimecommerciale" target="raffineriessoufrereunies">
+    <edge id="e544" source="corvinomenny" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e545" source="entreprisemaritimecommerciale" target="socalgeriennepetrolestliouanet">
+    <edge id="e545" source="corvinomenny" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e546" source="mineschabetkohol" target="petrolestliouanet">
+    <edge id="e546" source="creditfoncieralgerietunisie" target="petrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e547" source="mineschabetkohol" target="raffineriessoufrereunies">
+    <edge id="e547" source="creditfoncieralgerietunisie" target="raffineriessoufrereunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e548" source="mineschabetkohol" target="socalgeriennepetrolestliouanet">
+    <edge id="e548" source="creditfoncieralgerietunisie" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e549" source="mineschabetkohol" target="socentreprisemaritimecommerciale">
+    <edge id="e549" source="entreprisemaritimecommerciale" target="mineschabetkohol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e550" source="petrolestliouanet" target="raffineriessoufrereunies">
+    <edge id="e550" source="entreprisemaritimecommerciale" target="petrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e551" source="petrolestliouanet" target="socentreprisemaritimecommerciale">
+    <edge id="e551" source="entreprisemaritimecommerciale" target="raffineriessoufrereunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e552" source="raffineriessoufrereunies" target="socalgeriennepetrolestliouanet">
+    <edge id="e552" source="entreprisemaritimecommerciale" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e553" source="raffineriessoufrereunies" target="socentreprisemaritimecommerciale">
+    <edge id="e553" source="mineschabetkohol" target="petrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e554" source="socalgeriennepetrolestliouanet" target="socentreprisemaritimecommerciale">
+    <edge id="e554" source="mineschabetkohol" target="raffineriessoufrereunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e555" source="agricolealgerienne" target="creditfoncieralgerietunisie">
+    <edge id="e555" source="mineschabetkohol" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e556" source="corvinomenny" target="domainequatrechemins">
+    <edge id="e556" source="mineschabetkohol" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e557" source="corvinomenny" target="tabacsalgeriens">
+    <edge id="e557" source="petrolestliouanet" target="raffineriessoufrereunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e558" source="creditfoncieralgerietunisie" target="domainequatrechemins">
+    <edge id="e558" source="petrolestliouanet" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e559" source="domainequatrechemins" target="tabacsalgeriens">
+    <edge id="e559" source="raffineriessoufrereunies" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e560" source="cellulosesafriquenord" target="ceresfabricationventetousengraisproduitsviticoles">
+    <edge id="e560" source="raffineriessoufrereunies" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e561" source="cellulosesafriquenord" target="creditfoncieralgerietunisie">
+    <edge id="e561" source="socalgeriennepetrolestliouanet" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e562" source="cellulosesafriquenord" target="creditimmobilieralger">
+    <edge id="e562" source="agricolealgerienne" target="corvinomenny">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e563" source="cellulosesafriquenord" target="nordafricaincommercial">
+    <edge id="e563" source="agricolealgerienne" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e564" source="cellulosesafriquenord" target="typolitho">
+    <edge id="e564" source="corvinomenny" target="domainequatrechemins">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e565" source="cellulosesafriquenord" target="viticoles">
+    <edge id="e565" source="creditfoncieralgerietunisie" target="domainequatrechemins">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e566" source="ceresfabricationventetousengraisproduitsviticoles" target="creditfoncieralgerietunisie">
+    <edge id="e566" source="domainequatrechemins" target="tabacsalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e567" source="ceresfabricationventetousengraisproduitsviticoles" target="creditimmobilieralger">
+    <edge id="e567" source="cellulosesafriquenord" target="ceresfabricationventetousengraisproduitsviticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e568" source="ceresfabricationventetousengraisproduitsviticoles" target="nordafricaincommercial">
+    <edge id="e568" source="cellulosesafriquenord" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e569" source="ceresfabricationventetousengraisproduitsviticoles" target="typolitho">
+    <edge id="e569" source="cellulosesafriquenord" target="creditimmobilieralger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e570" source="creditfoncieralgerietunisie" target="creditimmobilieralger">
+    <edge id="e570" source="cellulosesafriquenord" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e571" source="creditfoncieralgerietunisie" target="nordafricaincommercial">
+    <edge id="e571" source="cellulosesafriquenord" target="typolitho">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e572" source="creditfoncieralgerietunisie" target="typolitho">
+    <edge id="e572" source="cellulosesafriquenord" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e573" source="creditfoncieralgerietunisie" target="viticoles">
+    <edge id="e573" source="ceresfabricationventetousengraisproduitsviticoles" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e574" source="creditimmobilieralger" target="nordafricaincommercial">
+    <edge id="e574" source="ceresfabricationventetousengraisproduitsviticoles" target="creditimmobilieralger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e575" source="creditimmobilieralger" target="typolitho">
+    <edge id="e575" source="ceresfabricationventetousengraisproduitsviticoles" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e576" source="creditimmobilieralger" target="viticoles">
+    <edge id="e576" source="ceresfabricationventetousengraisproduitsviticoles" target="typolitho">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e577" source="nordafricaincommercial" target="typolitho">
+    <edge id="e577" source="creditfoncieralgerietunisie" target="creditimmobilieralger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e578" source="typolitho" target="viticoles">
+    <edge id="e578" source="creditfoncieralgerietunisie" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e579" source="creditfoncieralgerietunisie" target="domainehaouchouedsaf">
+    <edge id="e579" source="creditfoncieralgerietunisie" target="typolitho">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e580" source="entreprisesaeronautiques" target="minesferlarrath">
+    <edge id="e580" source="creditfoncieralgerietunisie" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e581" source="cenpasoccentraleusinespapiers" target="socetablghouplain">
+    <edge id="e581" source="creditimmobilieralger" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e582" source="socetablghouplain" target="socfeutresrok">
+    <edge id="e582" source="creditimmobilieralger" target="typolitho">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e583" source="socfeutresrok" target="socminessidikamber">
+    <edge id="e583" source="creditimmobilieralger" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e584" source="royaleasturienneminesdirection" target="socfeutresrok">
+    <edge id="e584" source="nordafricaincommercial" target="typolitho">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e585" source="fabriquealsaciennesieges" target="socalsaciennefilaturetissagejute">
+    <edge id="e585" source="typolitho" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e586" source="socalsaciennefilaturetissagejute" target="socfeutresrok">
+    <edge id="e586" source="creditfoncieralgerietunisie" target="domainehaouchouedsaf">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e587" source="electricitebiskra" target="etudesminieresbougie">
+    <edge id="e587" source="entreprisesaeronautiques" target="minesferlarrath">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e588" source="electricitebiskra" target="socalsaciennefilaturetissagejute">
+    <edge id="e588" source="fabriquealsaciennesieges" target="socalsaciennefilaturetissagejute">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e589" source="etudesminieresbougie" target="socalsaciennefilaturetissagejute">
+    <edge id="e589" source="electricitebiskra" target="etudesminieresbougie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e590" source="socalsaciennefilaturetissagejute" target="socvelvetrum">
+    <edge id="e590" source="electricitebiskra" target="socalsaciennefilaturetissagejute">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e591" source="socetablghouplain" target="socindustrielletelephones">
+    <edge id="e591" source="etudesminieresbougie" target="socalsaciennefilaturetissagejute">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e592" source="hydroelectriqueafriquenord" target="vveedouardleach">
+    <edge id="e592" source="socalsaciennefilaturetissagejute" target="socvelvetrum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e593" source="emilepfund" target="minesalgerietunisieomnium">
+    <edge id="e593" source="socetablghouplain" target="socindustrielletelephones">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e594" source="emilepfund" target="minesbouthaleb">
+    <edge id="e594" source="cenpasoccentraleusinespapiers" target="socetablghouplain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e595" source="emilepfund" target="minieredjendli">
+    <edge id="e595" source="hydroelectriqueafriquenord" target="vveedouardleach">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e596" source="emilepfund" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e596" source="emilepfund" target="minesalgerietunisieomnium">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e597" source="mineraisfermagnetiquemoktaelhadid" target="minesbouthaleb">
+    <edge id="e597" source="emilepfund" target="minesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e598" source="mineraisfermagnetiquemoktaelhadid" target="minieredjendli">
+    <edge id="e598" source="emilepfund" target="minieredjendli">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e599" source="mineraisfermagnetiquemoktaelhadid" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e599" source="emilepfund" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e600" source="minesalgerietunisieomnium" target="minesbouthaleb">
+    <edge id="e600" source="mineraisfermagnetiquemoktaelhadid" target="minesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e601" source="minesalgerietunisieomnium" target="minieredjendli">
+    <edge id="e601" source="mineraisfermagnetiquemoktaelhadid" target="minieredjendli">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e602" source="minesbouthaleb" target="minieredjendli">
+    <edge id="e602" source="mineraisfermagnetiquemoktaelhadid" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e603" source="minesbouthaleb" target="omniumminesalgerietunisie">
+    <edge id="e603" source="minesalgerietunisieomnium" target="minesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e604" source="minesbouthaleb" target="phosphatesconstantine">
+    <edge id="e604" source="minesalgerietunisieomnium" target="minieredjendli">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e605" source="minesbouthaleb" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e605" source="minesbouthaleb" target="minieredjendli">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e606" source="minieredjendli" target="omniumminesalgerietunisie">
+    <edge id="e606" source="minesbouthaleb" target="omniumminesalgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e607" source="minieredjendli" target="phosphatesconstantine">
+    <edge id="e607" source="minesbouthaleb" target="phosphatesconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e608" source="mineraisfermagnetiquemoktaelhadid" target="omniumminesusines">
+    <edge id="e608" source="minesbouthaleb" target="unionespagnolefabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e609" source="socminesbouthaleb" target="syndicatlyonnaisnordafricain">
+    <edge id="e609" source="minieredjendli" target="omniumminesalgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e610" source="minesoranie" target="socminesbouthaleb">
+    <edge id="e610" source="minieredjendli" target="phosphatesconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e611" source="socminesbouthaleb" target="socminesoranie">
+    <edge id="e611" source="mineraisfermagnetiquemoktaelhadid" target="omniumminesusines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e612" source="mineschellala" target="minesfermiliana">
+    <edge id="e612" source="socminesbouthaleb" target="syndicatlyonnaisnordafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e613" source="mineschellala" target="minesferrouina">
+    <edge id="e613" source="minesoranie" target="socminesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e614" source="mineschellala" target="minesouastamesloula">
+    <edge id="e614" source="socminesbouthaleb" target="socminesoranie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e615" source="minesfermiliana" target="minesouastamesloula">
+    <edge id="e615" source="mineschellala" target="minesfermiliana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e616" source="minesfermiliana" target="minieredjendli">
+    <edge id="e616" source="mineschellala" target="minesferrouina">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e617" source="minesferrouina" target="minesouastamesloula">
+    <edge id="e617" source="mineschellala" target="minesouastamesloula">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e618" source="minesferrouina" target="minieredjendli">
+    <edge id="e618" source="minesfermiliana" target="minesouastamesloula">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e619" source="minesdjebelguendou" target="minesoranie">
+    <edge id="e619" source="minesfermiliana" target="minieredjendli">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e620" source="minesdjebelguendou" target="socminesoranie">
+    <edge id="e620" source="minesferrouina" target="minesouastamesloula">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e621" source="minesguelma" target="minesoranie">
+    <edge id="e621" source="minesferrouina" target="minieredjendli">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e622" source="minesguelma" target="socminesoranie">
+    <edge id="e622" source="minesdjebelguendou" target="minesoranie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e623" source="minesrarelmaden" target="socmineszaccar">
+    <edge id="e623" source="minesdjebelguendou" target="socminesoranie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e624" source="mineszaccar" target="socmineszaccar">
+    <edge id="e624" source="minesguelma" target="minesoranie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e625" source="ouenza" target="socmineszaccar">
+    <edge id="e625" source="minesguelma" target="socminesoranie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e626" source="socmineszaccar" target="zaccarfer">
+    <edge id="e626" source="minesrarelmaden" target="socmineszaccar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e627" source="banquealgerie" target="creditfoncieralgerietunisie">
+    <edge id="e627" source="mineszaccar" target="socmineszaccar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e628" source="banquealgerie" target="manufacturetabacscigarescigarettesbastos">
+    <edge id="e628" source="ouenza" target="socmineszaccar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e629" source="banquealgerie" target="socmineszincguergour">
+    <edge id="e629" source="socmineszaccar" target="zaccarfer">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e630" source="banquealgerie" target="zincguergour">
+    <edge id="e630" source="banquealgerie" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e631" source="banqueindustrielleafriquenord" target="creditfoncieralgerietunisie">
+    <edge id="e631" source="banquealgerie" target="manufacturetabacscigarescigarettesbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e632" source="banqueindustrielleafriquenord" target="manufacturetabacscigarescigarettesbastos">
+    <edge id="e632" source="banquealgerie" target="socmineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e633" source="banqueindustrielleafriquenord" target="socmineszincguergour">
+    <edge id="e633" source="banquealgerie" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e634" source="cheminsferroutesalgerie" target="manufacturetabacscigarescigarettesbastos">
+    <edge id="e634" source="banqueindustrielleafriquenord" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e635" source="cheminsferroutesalgerie" target="socmineszincguergour">
+    <edge id="e635" source="banqueindustrielleafriquenord" target="manufacturetabacscigarescigarettesbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e636" source="creditfoncieralgerietunisie" target="mineszincguergour">
+    <edge id="e636" source="banqueindustrielleafriquenord" target="socmineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e637" source="creditfoncieralgerietunisie" target="socmineszincguergour">
+    <edge id="e637" source="cheminsferroutesalgerie" target="manufacturetabacscigarescigarettesbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e638" source="creditfoncieralgerietunisie" target="zincguergour">
+    <edge id="e638" source="cheminsferroutesalgerie" target="socmineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e639" source="manufacturetabacscigarescigarettesbastos" target="mineszincguergour">
+    <edge id="e639" source="creditfoncieralgerietunisie" target="mineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e640" source="manufacturetabacscigarescigarettesbastos" target="socmineszincguergour">
+    <edge id="e640" source="creditfoncieralgerietunisie" target="socmineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e641" source="manufacturetabacscigarescigarettesbastos" target="zincguergour">
+    <edge id="e641" source="creditfoncieralgerietunisie" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e642" source="algerienne" target="minierefrancoafricaine">
+    <edge id="e642" source="manufacturetabacscigarescigarettesbastos" target="mineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e643" source="algerienne" target="socminierefrancoafricaine">
+    <edge id="e643" source="manufacturetabacscigarescigarettesbastos" target="socmineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e644" source="minieremetallurgiquecaronte" target="socminierefrancoafricaine">
+    <edge id="e644" source="manufacturetabacscigarescigarettesbastos" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e645" source="concessionnaireouenza" target="mineszaccar">
+    <edge id="e645" source="algerienne" target="minierefrancoafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e646" source="grandstravauxalgeriens" target="ouenza">
+    <edge id="e646" source="algerienne" target="socminierefrancoafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e647" source="grandstravauxalgeriens" target="socouenza">
+    <edge id="e647" source="minieremetallurgiquecaronte" target="socminierefrancoafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e648" source="algeriennepetrolestliouanet" target="phosphatesconstantine">
+    <edge id="e648" source="concessionnaireouenza" target="mineszaccar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e649" source="algeriennepetrolestliouanet" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e649" source="grandstravauxalgeriens" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e650" source="petrolestliouanet" target="phosphatesconstantine">
+    <edge id="e650" source="grandstravauxalgeriens" target="socouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e651" source="petrolestliouanet" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e651" source="algeriennepetrolestliouanet" target="phosphatesconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e652" source="phosphatesconstantine" target="socalgeriennepetrolestliouanet">
+    <edge id="e652" source="algeriennepetrolestliouanet" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e653" source="socalgeriennepetrolestliouanet" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e653" source="petrolestliouanet" target="phosphatesconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e654" source="omniumminesalgerietunisie" target="petrolestliouanet">
+    <edge id="e654" source="petrolestliouanet" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e655" source="omniumminesalgerietunisie" target="socalgeriennepetrolestliouanet">
+    <edge id="e655" source="phosphatesconstantine" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e656" source="algeriennepetrolestliouanet" target="unionelectriquegaziereafriquenord">
+    <edge id="e656" source="socalgeriennepetrolestliouanet" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e657" source="algeriennepetrolestliouanet" target="zincguergour">
+    <edge id="e657" source="omniumminesalgerietunisie" target="petrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e658" source="petrolestliouanet" target="unionelectriquegaziereafriquenord">
+    <edge id="e658" source="omniumminesalgerietunisie" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e659" source="petrolestliouanet" target="zincguergour">
+    <edge id="e659" source="algeriennepetrolestliouanet" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e660" source="socalgeriennepetrolestliouanet" target="unionelectriquegaziereafriquenord">
+    <edge id="e660" source="algeriennepetrolestliouanet" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e661" source="socalgeriennepetrolestliouanet" target="zincguergour">
+    <edge id="e661" source="petrolestliouanet" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e662" source="unionelectriquegaziereafriquenord" target="zincguergour">
+    <edge id="e662" source="petrolestliouanet" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e663" source="algeriennepetrolestliouanet" target="algerienneproduitschimiquesengrais">
+    <edge id="e663" source="socalgeriennepetrolestliouanet" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e664" source="algeriennepetrolestliouanet" target="mineraisfermagnetiquemoktaelhadid">
+    <edge id="e664" source="socalgeriennepetrolestliouanet" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e665" source="algerienneproduitschimiquesengrais" target="petrolestliouanet">
+    <edge id="e665" source="unionelectriquegaziereafriquenord" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e666" source="algerienneproduitschimiquesengrais" target="socalgeriennepetrolestliouanet">
+    <edge id="e666" source="algeriennepetrolestliouanet" target="algerienneproduitschimiquesengrais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e667" source="banquealgerie" target="cartonneriesrochette">
+    <edge id="e667" source="algeriennepetrolestliouanet" target="mineraisfermagnetiquemoktaelhadid">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e668" source="banquealgerie" target="centraleusinespapier">
+    <edge id="e668" source="algerienneproduitschimiquesengrais" target="petrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e669" source="banquealgerie" target="sanhadja">
+    <edge id="e669" source="algerienneproduitschimiquesengrais" target="socalgeriennepetrolestliouanet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e670" source="cartonneriesrochette" target="centraleusinespapier">
+    <edge id="e670" source="banquealgerie" target="cartonneriesrochette">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e671" source="cartonneriesrochette" target="sanhadja">
+    <edge id="e671" source="banquealgerie" target="centraleusinespapier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e672" source="centraleusinespapier" target="sanhadja">
+    <edge id="e672" source="banquealgerie" target="sanhadja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e673" source="fabriquealsaciennesieges" target="manufacturetapisorient">
+    <edge id="e673" source="cartonneriesrochette" target="centraleusinespapier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e674" source="manufacturetapisorient" target="royaleasturienneminesdirection">
+    <edge id="e674" source="cartonneriesrochette" target="sanhadja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e675" source="banqueindustrielleafriquenord" target="cenpasoccentraleusinespapiers">
+    <edge id="e675" source="centraleusinespapier" target="sanhadja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e676" source="banqueindustrielleafriquenord" target="fabriquealsaciennesieges">
+    <edge id="e676" source="fabriquealsaciennesieges" target="manufacturetapisorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e677" source="fabriquealsaciennesieges" target="papeteriesnavarre">
+    <edge id="e677" source="manufacturetapisorient" target="royaleasturienneminesdirection">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e678" source="minesouastamesloula" target="socindustrielletelephones">
+    <edge id="e678" source="banqueindustrielleafriquenord" target="cenpasoccentraleusinespapiers">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e679" source="socgenexplosifscheddites" target="socindustrielletelephones">
+    <edge id="e679" source="banqueindustrielleafriquenord" target="fabriquealsaciennesieges">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e680" source="cenpasoccentraleusinespapiers" target="socminessidikamber">
+    <edge id="e680" source="fabriquealsaciennesieges" target="papeteriesnavarre">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e681" source="cenpasoccentraleusinespapiers" target="soctissagesmecaniquesisere">
+    <edge id="e681" source="minesouastamesloula" target="socindustrielletelephones">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e682" source="socindustrielletelephones" target="socminessidikamber">
+    <edge id="e682" source="socgenexplosifscheddites" target="socindustrielletelephones">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e683" source="socindustrielletelephones" target="soctissagesmecaniquesisere">
+    <edge id="e683" source="cenpasoccentraleusinespapiers" target="socminessidikamber">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e684" source="socminessidikamber" target="soctissagesmecaniquesisere">
+    <edge id="e684" source="cenpasoccentraleusinespapiers" target="soctissagesmecaniquesisere">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e685" source="fermesalgeriennes" target="minesfer">
+    <edge id="e685" source="socindustrielletelephones" target="socminessidikamber">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e686" source="fermesalgeriennes" target="soctramwaysalgeriens">
+    <edge id="e686" source="socindustrielletelephones" target="soctissagesmecaniquesisere">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e687" source="fermesalgeriennes" target="tramwaysalgeriens">
+    <edge id="e687" source="socminessidikamber" target="soctissagesmecaniquesisere">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e688" source="minesfer" target="soctramwaysalgeriens">
+    <edge id="e688" source="fermesalgeriennes" target="minesfer">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e689" source="minesfer" target="tramwaysalgeriens">
+    <edge id="e689" source="fermesalgeriennes" target="soctramwaysalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e690" source="etudescheminfertransafricain" target="internationalewagonslits">
+    <edge id="e690" source="fermesalgeriennes" target="tramwaysalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e691" source="brasseriemalteriealgeriennemustaphainferieur" target="socnordafricaineacconage">
+    <edge id="e691" source="minesfer" target="soctramwaysalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e692" source="antoineachaque" target="papeteriesnavarre">
+    <edge id="e692" source="minesfer" target="tramwaysalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e693" source="afriquenord" target="chauxcimentsrivetalger">
+    <edge id="e693" source="etudescheminfertransafricain" target="internationalewagonslits">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e694" source="afriquenord" target="nordafricainecimentslafarge">
+    <edge id="e694" source="brasseriemalteriealgeriennemustaphainferieur" target="socnordafricaineacconage">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e695" source="banqueindustrielleafriquenord" target="chauxcimentsrivetalger">
+    <edge id="e695" source="antoineachaque" target="papeteriesnavarre">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e696" source="banqueindustrielleafriquenord" target="soccommercialeafriquenord">
+    <edge id="e696" source="afriquenord" target="chauxcimentsrivetalger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e697" source="chauxcimentsrivetalger" target="soccommercialeafriquenord">
+    <edge id="e697" source="afriquenord" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e698" source="nordafricainecimentslafarge" target="soccommercialeafriquenord">
+    <edge id="e698" source="banqueindustrielleafriquenord" target="chauxcimentsrivetalger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e699" source="1918domainesbenislimantablat" target="distilleriesalgerie">
+    <edge id="e699" source="banqueindustrielleafriquenord" target="soccommercialeafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e700" source="1918domainesbenislimantablat" target="lafarge">
+    <edge id="e700" source="chauxcimentsrivetalger" target="soccommercialeafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e701" source="1918domainesbenislimantablat" target="nordafricaincommercial">
+    <edge id="e701" source="nordafricainecimentslafarge" target="soccommercialeafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e702" source="1918domainesbenislimantablat" target="tabacsalgeriens">
+    <edge id="e702" source="1918domainesbenislimantablat" target="distilleriesalgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e703" source="1918domainesbenislimantablat" target="viticoles">
+    <edge id="e703" source="1918domainesbenislimantablat" target="lafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e704" source="1918domainesbenislimantablat" target="warotfreres">
+    <edge id="e704" source="1918domainesbenislimantablat" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e705" source="distilleriesalgerie" target="domainechapeaugendarme">
+    <edge id="e705" source="1918domainesbenislimantablat" target="tabacsalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e706" source="distilleriesalgerie" target="grandstravauxalgeriens">
+    <edge id="e706" source="1918domainesbenislimantablat" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e707" source="distilleriesalgerie" target="lafarge">
+    <edge id="e707" source="1918domainesbenislimantablat" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e708" source="distilleriesalgerie" target="nordafricaincommercial">
+    <edge id="e708" source="distilleriesalgerie" target="domainechapeaugendarme">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e709" source="distilleriesalgerie" target="nordafricainecimentslafarge">
+    <edge id="e709" source="distilleriesalgerie" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e710" source="distilleriesalgerie" target="tabacsalgeriens">
+    <edge id="e710" source="distilleriesalgerie" target="lafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e711" source="distilleriesalgerie" target="viticoles">
+    <edge id="e711" source="distilleriesalgerie" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e712" source="distilleriesalgerie" target="warotfreres">
+    <edge id="e712" source="distilleriesalgerie" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e713" source="domainechapeaugendarme" target="grandstravauxalgeriens">
+    <edge id="e713" source="distilleriesalgerie" target="tabacsalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e714" source="domainechapeaugendarme" target="lafarge">
+    <edge id="e714" source="distilleriesalgerie" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e715" source="domainechapeaugendarme" target="nordafricaincommercial">
+    <edge id="e715" source="distilleriesalgerie" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e716" source="domainechapeaugendarme" target="tabacsalgeriens">
+    <edge id="e716" source="domainechapeaugendarme" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e717" source="domainechapeaugendarme" target="viticoles">
+    <edge id="e717" source="domainechapeaugendarme" target="lafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e718" source="domainechapeaugendarme" target="warotfreres">
+    <edge id="e718" source="domainechapeaugendarme" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e719" source="grandstravauxalgeriens" target="lafarge">
+    <edge id="e719" source="domainechapeaugendarme" target="tabacsalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e720" source="grandstravauxalgeriens" target="nordafricaincommercial">
+    <edge id="e720" source="domainechapeaugendarme" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e721" source="grandstravauxalgeriens" target="nordafricainecimentslafarge">
+    <edge id="e721" source="domainechapeaugendarme" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e722" source="grandstravauxalgeriens" target="viticoles">
+    <edge id="e722" source="grandstravauxalgeriens" target="lafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e723" source="grandstravauxalgeriens" target="warotfreres">
+    <edge id="e723" source="grandstravauxalgeriens" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e724" source="lafarge" target="nordafricaincommercial">
+    <edge id="e724" source="grandstravauxalgeriens" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e725" source="lafarge" target="tabacsalgeriens">
+    <edge id="e725" source="grandstravauxalgeriens" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e726" source="lafarge" target="viticoles">
+    <edge id="e726" source="grandstravauxalgeriens" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e727" source="lafarge" target="warotfreres">
+    <edge id="e727" source="lafarge" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e728" source="nordafricaincommercial" target="nordafricainecimentslafarge">
+    <edge id="e728" source="lafarge" target="tabacsalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e729" source="nordafricaincommercial" target="tabacsalgeriens">
+    <edge id="e729" source="lafarge" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e730" source="nordafricaincommercial" target="warotfreres">
+    <edge id="e730" source="lafarge" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e731" source="nordafricainecimentslafarge" target="tabacsalgeriens">
+    <edge id="e731" source="nordafricaincommercial" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e732" source="nordafricainecimentslafarge" target="viticoles">
+    <edge id="e732" source="nordafricaincommercial" target="tabacsalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e733" source="nordafricainecimentslafarge" target="warotfreres">
+    <edge id="e733" source="nordafricaincommercial" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e734" source="tabacsalgeriens" target="viticoles">
+    <edge id="e734" source="nordafricainecimentslafarge" target="tabacsalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e735" source="tabacsalgeriens" target="warotfreres">
+    <edge id="e735" source="nordafricainecimentslafarge" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e736" source="viticoles" target="warotfreres">
+    <edge id="e736" source="nordafricainecimentslafarge" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e737" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="ceresfabricationventetousengraisproduitsviticoles">
+    <edge id="e737" source="tabacsalgeriens" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e738" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="viticoles">
+    <edge id="e738" source="tabacsalgeriens" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e739" source="fonciereimmobilierevillealger" target="grandstravauxalgeriens">
+    <edge id="e739" source="viticoles" target="warotfreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e740" source="fonciereimmobilierevillealger" target="soccommentryfourchambaultdecazeville">
+    <edge id="e740" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="ceresfabricationventetousengraisproduitsviticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e741" source="grandstravauxalgeriens" target="soccommentryfourchambaultdecazeville">
+    <edge id="e741" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="viticoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e742" source="algerienne" target="entreprisemaritimecommerciale">
+    <edge id="e742" source="fonciereimmobilierevillealger" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e743" source="algerienne" target="socentreprisemaritimecommerciale">
+    <edge id="e743" source="fonciereimmobilierevillealger" target="soccommentryfourchambaultdecazeville">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e744" source="comoyverguet" target="entreprisemaritimecommerciale">
+    <edge id="e744" source="grandstravauxalgeriens" target="soccommentryfourchambaultdecazeville">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e745" source="comoyverguet" target="socentreprisemaritimecommerciale">
+    <edge id="e745" source="algerienne" target="entreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e746" source="algerienne" target="tramwayoranhammambouhadjarextensions">
+    <edge id="e746" source="algerienne" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e747" source="comoyverguet" target="tramwayoranhammambouhadjarextensions">
+    <edge id="e747" source="comoyverguet" target="entreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e748" source="cheminsferouestalgerien" target="corvinomenny">
+    <edge id="e748" source="comoyverguet" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e749" source="cheminsferouestalgerien" target="minesferrouina">
+    <edge id="e749" source="algerienne" target="tramwayoranhammambouhadjarextensions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e750" source="corvinomenny" target="creditalgerien">
+    <edge id="e750" source="comoyverguet" target="tramwayoranhammambouhadjarextensions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e751" source="corvinomenny" target="minesferrouina">
+    <edge id="e751" source="cheminsferouestalgerien" target="corvinomenny">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e752" source="creditalgerien" target="minesferrouina">
+    <edge id="e752" source="cheminsferouestalgerien" target="minesferrouina">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e753" source="corvinomenny" target="mineraisfermagnetiquemoktaelhadid">
+    <edge id="e753" source="corvinomenny" target="creditalgerien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e754" source="creditfoncieralgerietunisie" target="mineraisfermagnetiquemoktaelhadid">
+    <edge id="e754" source="corvinomenny" target="minesferrouina">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e755" source="corvinomenny" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
+    <edge id="e755" source="creditalgerien" target="minesferrouina">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e756" source="corvinomenny" target="liegesproduitsnordafricainsalgerusinebouchonsbone">
+    <edge id="e756" source="corvinomenny" target="mineraisfermagnetiquemoktaelhadid">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e757" source="creditfoncieralgerietunisie" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
+    <edge id="e757" source="creditfoncieralgerietunisie" target="mineraisfermagnetiquemoktaelhadid">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e758" source="creditfoncieralgerietunisie" target="liegesproduitsnordafricainsalgerusinebouchonsbone">
+    <edge id="e758" source="corvinomenny" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e759" source="detartrageconstructionsmecaniques" target="minieredjendli">
+    <edge id="e759" source="corvinomenny" target="liegesproduitsnordafricainsalgerusinebouchonsbone">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e760" source="entreprisemaritimecommerciale" target="ouledsellemainsmara">
+    <edge id="e760" source="creditfoncieralgerietunisie" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e761" source="ouledsellemainsmara" target="socentreprisemaritimecommerciale">
+    <edge id="e761" source="creditfoncieralgerietunisie" target="liegesproduitsnordafricainsalgerusinebouchonsbone">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e762" source="industrielleimmobiliere" target="manufacturetabacscigarescigarettes">
+    <edge id="e762" source="detartrageconstructionsmecaniques" target="minieredjendli">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e763" source="industrielleimmobiliere" target="regiefoncierevillealger">
+    <edge id="e763" source="entreprisemaritimecommerciale" target="ouledsellemainsmara">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e764" source="manufacturetabacscigarescigarettes" target="regiefoncierevillealger">
+    <edge id="e764" source="ouledsellemainsmara" target="socentreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e765" source="immobilierebone" target="industrielleimmobiliere">
+    <edge id="e765" source="industrielleimmobiliere" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e766" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="messagerieslittoral">
+    <edge id="e766" source="industrielleimmobiliere" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e767" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="socmessagerieslittoral">
+    <edge id="e767" source="manufacturetabacscigarescigarettes" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e768" source="messagerieslittoral" target="socmessagerieslittoral">
+    <edge id="e768" source="immobilierebone" target="industrielleimmobiliere">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e769" source="cheminsferestalgerien" target="mineraisfermagnetiquemoktaelhadid">
+    <edge id="e769" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="messagerieslittoral">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e770" source="mineraisfermagnetiquemoktaelhadid" target="minesouastamesloula">
+    <edge id="e770" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="socmessagerieslittoral">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e771" source="minesrarelmaden" target="zincguergour">
+    <edge id="e771" source="messagerieslittoral" target="socmessagerieslittoral">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e772" source="minieredjebelfelten" target="nordafricaincommercial">
+    <edge id="e772" source="cheminsferestalgerien" target="mineraisfermagnetiquemoktaelhadid">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e773" source="concessionnaireouenza" target="nordafricaincommercial">
+    <edge id="e773" source="mineraisfermagnetiquemoktaelhadid" target="minesouastamesloula">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e774" source="comptoirtextilecirta" target="nordafricaincommercial">
+    <edge id="e774" source="minesrarelmaden" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e775" source="ascenseursmontechargeshydrauliquesvillealger" target="minierenordafriquesaintetienne">
+    <edge id="e775" source="minieredjebelfelten" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e776" source="1918domainesbenislimantablat" target="algerienneetudesentreprisesagricolescommercialesindustrielles">
+    <edge id="e776" source="concessionnaireouenza" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e777" source="1918domainesbenislimantablat" target="ascenseursmontechargeshydrauliquesvillealger">
+    <edge id="e777" source="comptoirtextilecirta" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e778" source="1918domainesbenislimantablat" target="distillerieliqueurmandarinebougie">
+    <edge id="e778" source="ascenseursmontechargeshydrauliquesvillealger" target="minierenordafriquesaintetienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e779" source="1918domainesbenislimantablat" target="francoasiatiquepetrolesalgerie">
+    <edge id="e779" source="1918domainesbenislimantablat" target="algerienneetudesentreprisesagricolescommercialesindustrielles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e780" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="francoasiatiquepetrolesalgerie">
+    <edge id="e780" source="1918domainesbenislimantablat" target="ascenseursmontechargeshydrauliquesvillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e781" source="ascenseursmontechargeshydrauliquesvillealger" target="distillerieliqueurmandarinebougie">
+    <edge id="e781" source="1918domainesbenislimantablat" target="distillerieliqueurmandarinebougie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e782" source="ascenseursmontechargeshydrauliquesvillealger" target="francoasiatiquepetrolesalgerie">
+    <edge id="e782" source="1918domainesbenislimantablat" target="francoasiatiquepetrolesalgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e783" source="ascenseursmontechargeshydrauliquesvillealger" target="grandstravauxalgeriens">
+    <edge id="e783" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="francoasiatiquepetrolesalgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e784" source="distillerieliqueurmandarinebougie" target="francoasiatiquepetrolesalgerie">
+    <edge id="e784" source="ascenseursmontechargeshydrauliquesvillealger" target="distillerieliqueurmandarinebougie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e785" source="distillerieliqueurmandarinebougie" target="grandstravauxalgeriens">
+    <edge id="e785" source="ascenseursmontechargeshydrauliquesvillealger" target="francoasiatiquepetrolesalgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e786" source="francoasiatiquepetrolesalgerie" target="grandstravauxalgeriens">
+    <edge id="e786" source="ascenseursmontechargeshydrauliquesvillealger" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e787" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="kieselguhr">
+    <edge id="e787" source="distillerieliqueurmandarinebougie" target="francoasiatiquepetrolesalgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e788" source="ascenseursmontechargeshydrauliquesvillealger" target="kieselguhr">
+    <edge id="e788" source="distillerieliqueurmandarinebougie" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e789" source="audoisefutstransports" target="francoalgeriennelocationfutailles">
+    <edge id="e789" source="francoasiatiquepetrolesalgerie" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e790" source="banqueafriquepaysorient" target="foretscalle">
+    <edge id="e790" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="kieselguhr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e791" source="banquealgerie" target="kieselguhr">
+    <edge id="e791" source="ascenseursmontechargeshydrauliquesvillealger" target="kieselguhr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e792" source="banquealgeriebanquealgerietunisiebanquealgerie" target="kieselguhr">
+    <edge id="e792" source="audoisefutstransports" target="francoalgeriennelocationfutailles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e793" source="banquealgerie" target="creditalgerien">
+    <edge id="e793" source="banqueafriquepaysorient" target="foretscalle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e794" source="aeriennefrancealgerie" target="banquealgerie">
+    <edge id="e794" source="banquealgerie" target="kieselguhr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e795" source="aeriennefrancealgerie" target="banqueindustrielleafriquenord">
+    <edge id="e795" source="banquealgeriebanquealgerietunisiebanquealgerie" target="kieselguhr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e796" source="banquealgerie" target="manufacturetapisorient">
+    <edge id="e796" source="banquealgerie" target="creditalgerien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e797" source="algerienneconstructionsindustriellestravauxart" target="chauxcimentsrivetalger">
+    <edge id="e797" source="aeriennefrancealgerie" target="banquealgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e798" source="algerienneconstructionsindustriellestravauxart" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
+    <edge id="e798" source="aeriennefrancealgerie" target="banqueindustrielleafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e799" source="algerienneconstructionsindustriellestravauxart" target="lafarge">
+    <edge id="e799" source="banquealgerie" target="manufacturetapisorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e800" source="algerienneconstructionsindustriellestravauxart" target="manufacturetabacscigarescigarettesjbastos">
+    <edge id="e800" source="algerienneconstructionsindustriellestravauxart" target="chauxcimentsrivetalger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e801" source="algerienneconstructionsindustriellestravauxart" target="nordafricainecimentslafarge">
+    <edge id="e801" source="algerienneconstructionsindustriellestravauxart" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e802" source="algerienneconstructionsindustriellestravauxart" target="universelletabacs">
+    <edge id="e802" source="algerienneconstructionsindustriellestravauxart" target="lafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e803" source="chauxcimentsrivetalger" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
+    <edge id="e803" source="algerienneconstructionsindustriellestravauxart" target="manufacturetabacscigarescigarettesjbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e804" source="chauxcimentsrivetalger" target="manufacturetabacscigarescigarettesjbastos">
+    <edge id="e804" source="algerienneconstructionsindustriellestravauxart" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e805" source="chauxcimentsrivetalger" target="universelletabacs">
+    <edge id="e805" source="algerienneconstructionsindustriellestravauxart" target="universelletabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e806" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="lafarge">
+    <edge id="e806" source="chauxcimentsrivetalger" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e807" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="manufacturetabacscigarescigarettesjbastos">
+    <edge id="e807" source="chauxcimentsrivetalger" target="manufacturetabacscigarescigarettesjbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e808" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="nordafricainecimentslafarge">
+    <edge id="e808" source="chauxcimentsrivetalger" target="universelletabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e809" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="universelletabacs">
+    <edge id="e809" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="lafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e810" source="lafarge" target="manufacturetabacscigarescigarettesjbastos">
+    <edge id="e810" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="manufacturetabacscigarescigarettesjbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e811" source="lafarge" target="universelletabacs">
+    <edge id="e811" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e812" source="manufacturetabacscigarescigarettesjbastos" target="nordafricainecimentslafarge">
+    <edge id="e812" source="industrielleafriquenordtraitementsousproduitsvigneolivier" target="universelletabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e813" source="manufacturetabacscigarescigarettesjbastos" target="universelletabacs">
+    <edge id="e813" source="lafarge" target="manufacturetabacscigarescigarettesjbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e814" source="nordafricainecimentslafarge" target="universelletabacs">
+    <edge id="e814" source="lafarge" target="universelletabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e815" source="fouque" target="manufacturetabacscigarescigarettes">
+    <edge id="e815" source="manufacturetabacscigarescigarettesjbastos" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e816" source="fouque" target="manufacturetabacscigarescigarettesjbastos">
+    <edge id="e816" source="manufacturetabacscigarescigarettesjbastos" target="universelletabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e817" source="banqueindustrielleafriquenord" target="manufacturetabacscigarescigarettes">
+    <edge id="e817" source="nordafricainecimentslafarge" target="universelletabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e818" source="manufacturetabacscigarescigarettes" target="zincguergour">
+    <edge id="e818" source="fouque" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e819" source="gazconstantine" target="manufacturetabacscigarescigarettes">
+    <edge id="e819" source="fouque" target="manufacturetabacscigarescigarettesjbastos">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e820" source="1918domainesbenislimantablat" target="anciensetablissementsjulesborgeaudfilsnordafricaincommercial">
+    <edge id="e820" source="banqueindustrielleafriquenord" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e821" source="1918domainesbenislimantablat" target="domainesaintcharlesboufarik">
+    <edge id="e821" source="manufacturetabacscigarescigarettes" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e822" source="1918domainesbenislimantablat" target="manufacturetabacscigarescigarettes">
+    <edge id="e822" source="gazconstantine" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e823" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="domainechapeaugendarme">
+    <edge id="e823" source="1918domainesbenislimantablat" target="anciensetablissementsjulesborgeaudfilsnordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e824" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="domainesaintcharlesboufarik">
+    <edge id="e824" source="1918domainesbenislimantablat" target="domainesaintcharlesboufarik">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e825" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="manufacturetabacscigarescigarettes">
+    <edge id="e825" source="1918domainesbenislimantablat" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e826" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="nordafricainecimentslafarge">
+    <edge id="e826" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="domainechapeaugendarme">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e827" source="domainechapeaugendarme" target="manufacturetabacscigarescigarettes">
+    <edge id="e827" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="domainesaintcharlesboufarik">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e828" source="domainesaintcharlesboufarik" target="manufacturetabacscigarescigarettes">
+    <edge id="e828" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e829" source="domainesaintcharlesboufarik" target="nordafricainecimentslafarge">
+    <edge id="e829" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e830" source="manufacturetabacscigarescigarettes" target="nordafricainecimentslafarge">
+    <edge id="e830" source="domainechapeaugendarme" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e831" source="domainesbenhassenvallouise" target="francoalgeriennecarburants">
+    <edge id="e831" source="domainesaintcharlesboufarik" target="manufacturetabacscigarescigarettes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e832" source="domainesaintelouise" target="grandshotelsafriquenord">
+    <edge id="e832" source="domainesaintcharlesboufarik" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e833" source="domainesbenhassenvallouise" target="grandshotelsafriquenord">
+    <edge id="e833" source="manufacturetabacscigarescigarettes" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e834" source="domainescaidessebt" target="grandshotelsafriquenord">
+    <edge id="e834" source="domainesbenhassenvallouise" target="francoalgeriennecarburants">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e835" source="benedictinefecamp" target="cheminsferestalgerien">
+    <edge id="e835" source="domainesaintelouise" target="grandshotelsafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e836" source="algerienneconstructionsnavalesmecaniques" target="bernabefreres">
+    <edge id="e836" source="domainesbenhassenvallouise" target="grandshotelsafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e837" source="bernabefreres" target="immobiliereforteau">
+    <edge id="e837" source="domainescaidessebt" target="grandshotelsafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e838" source="banqueindustrielleafriquenord" target="banquenationalecommerceindustrie">
+    <edge id="e838" source="benedictinefecamp" target="cheminsferestalgerien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e839" source="banqueindustrielleafriquenord" target="centraleusinespapier">
+    <edge id="e839" source="algerienneconstructionsnavalesmecaniques" target="bernabefreres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e840" source="banquenationalecommerceindustrie" target="centraleusinespapier">
+    <edge id="e840" source="bernabefreres" target="immobiliereforteau">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e841" source="banquenationalecommerceindustrie" target="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik">
+    <edge id="e841" source="banqueindustrielleafriquenord" target="banquenationalecommerceindustrie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e842" source="algeriennevinsmousseuxnaturelsbirmandreis" target="boissonsgazeuseshygieniquesalger">
+    <edge id="e842" source="banqueindustrielleafriquenord" target="centraleusinespapier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e843" source="banqueindustrielleafriquenord" target="etudescheminfertransafricain">
+    <edge id="e843" source="banquenationalecommerceindustrie" target="centraleusinespapier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e844" source="banqueindustrielleafriquenord" target="liegeshamendaspetitekabylie">
+    <edge id="e844" source="banquenationalecommerceindustrie" target="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e845" source="afriquenord" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
+    <edge id="e845" source="algeriennevinsmousseuxnaturelsbirmandreis" target="boissonsgazeuseshygieniquesalger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e846" source="banqueindustrielleafriquenord" target="commercialeminiereafriquenord">
+    <edge id="e846" source="banqueindustrielleafriquenord" target="etudescheminfertransafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e847" source="commercialeminiereafriquenord" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
+    <edge id="e847" source="banqueindustrielleafriquenord" target="liegeshamendaspetitekabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e848" source="algerienne" target="brasseriemalteriealgeriennemustaphainferieur">
+    <edge id="e848" source="afriquenord" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e849" source="brasseriemalteriealgeriennemustaphainferieur" target="distilleriebadoilmustapha">
+    <edge id="e849" source="banqueindustrielleafriquenord" target="commercialeminiereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e850" source="bruntortel" target="continentalecombustibles">
+    <edge id="e850" source="commercialeminiereafriquenord" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e851" source="algeriennemeunerie" target="etudeseconomiquesafriquenord">
+    <edge id="e851" source="algerienne" target="brasseriemalteriealgeriennemustaphainferieur">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e852" source="caboteursalgeriens" target="etudeseconomiquesafriquenord">
+    <edge id="e852" source="brasseriemalteriealgeriennemustaphainferieur" target="distilleriebadoilmustapha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e853" source="cargosalgeriens" target="etudeseconomiquesafriquenord">
+    <edge id="e853" source="bruntortel" target="continentalecombustibles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e854" source="caboteursalgeriens" target="creditfoncieralgerietunisie">
+    <edge id="e854" source="algeriennemeunerie" target="etudeseconomiquesafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e855" source="caboteursalgeriens" target="foncieremediterranee">
+    <edge id="e855" source="caboteursalgeriens" target="etudeseconomiquesafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e856" source="cargosalgeriens" target="creditfoncieralgerietunisie">
+    <edge id="e856" source="cargosalgeriens" target="etudeseconomiquesafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e857" source="cargosalgeriens" target="foncieremediterranee">
+    <edge id="e857" source="caboteursalgeriens" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e858" source="cargosalgeriens" target="regiefoncierevillealger">
+    <edge id="e858" source="caboteursalgeriens" target="foncieremediterranee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e859" source="foncieremediterranee" target="regiefoncierevillealger">
+    <edge id="e859" source="cargosalgeriens" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e860" source="caboteursalgeriens" target="industriebois">
+    <edge id="e860" source="cargosalgeriens" target="foncieremediterranee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e861" source="caboteursalgeriens" target="unioncommercialeproducteurs">
+    <edge id="e861" source="cargosalgeriens" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e862" source="carrieresalgeroises" target="cheminsferroutesalgerie">
+    <edge id="e862" source="foncieremediterranee" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e863" source="carrieresalgeroises" target="domainechapeaugendarme">
+    <edge id="e863" source="caboteursalgeriens" target="industriebois">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e864" source="cheminsferroutesalgerie" target="domainechapeaugendarme">
+    <edge id="e864" source="caboteursalgeriens" target="unioncommercialeproducteurs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e865" source="carrieresalgeroises" target="domainequatrechemins">
+    <edge id="e865" source="carrieresalgeroises" target="cheminsferroutesalgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e866" source="carrieresalgeroises" target="ouenza">
+    <edge id="e866" source="carrieresalgeroises" target="domainechapeaugendarme">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e867" source="domainequatrechemins" target="ouenza">
+    <edge id="e867" source="cheminsferroutesalgerie" target="domainechapeaugendarme">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e868" source="cellulosesafriquenord" target="etudeseconomiquesafriquenord">
+    <edge id="e868" source="carrieresalgeroises" target="domainequatrechemins">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e869" source="cellulosesafriquenord" target="creditalgerien">
+    <edge id="e869" source="carrieresalgeroises" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e870" source="cellulosesafriquenord" target="gisementsphosphatiersbordjrdir">
+    <edge id="e870" source="domainequatrechemins" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e871" source="centraleusinespapier" target="creditfoncieralgerietunisie">
+    <edge id="e871" source="cellulosesafriquenord" target="etudeseconomiquesafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e872" source="centraleusinespapier" target="minieredjebelfelten">
+    <edge id="e872" source="cellulosesafriquenord" target="creditalgerien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e873" source="centraleexploitationsrecherchesminieressoukahras" target="minesbouthaleb">
+    <edge id="e873" source="cellulosesafriquenord" target="gisementsphosphatiersbordjrdir">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e874" source="centraleexploitationsrecherchesminieressoukahras" target="minieredjebelfelten">
+    <edge id="e874" source="centraleusinespapier" target="creditfoncieralgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e875" source="centraleexploitationsrecherchesminieressoukahras" target="ouenza">
+    <edge id="e875" source="centraleusinespapier" target="minieredjebelfelten">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e876" source="minesbouthaleb" target="minieredjebelfelten">
+    <edge id="e876" source="centraleexploitationsrecherchesminieressoukahras" target="minesbouthaleb">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e877" source="minesbouthaleb" target="ouenza">
+    <edge id="e877" source="centraleexploitationsrecherchesminieressoukahras" target="minieredjebelfelten">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e878" source="minieredjebelfelten" target="ouenza">
+    <edge id="e878" source="centraleexploitationsrecherchesminieressoukahras" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e879" source="minesboudjoudoun" target="mineszincguergour">
+    <edge id="e879" source="minesbouthaleb" target="minieredjebelfelten">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e880" source="minesboudjoudoun" target="zincguergour">
+    <edge id="e880" source="minesbouthaleb" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e881" source="algerienneproduitschimiquesengrais" target="minesouastamesloula">
+    <edge id="e881" source="minieredjebelfelten" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e882" source="cheminsferroutesalgerie" target="minesouastamesloula">
+    <edge id="e882" source="minesboudjoudoun" target="mineszincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e883" source="algerienneproduitschimiquesengrais" target="grandstravauxalgeriens">
+    <edge id="e883" source="minesboudjoudoun" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e884" source="algerienneproduitschimiquesengrais" target="unionelectriquegaziereafriquenord">
+    <edge id="e884" source="algerienneproduitschimiquesengrais" target="minesouastamesloula">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e885" source="cheminsferroutesalgerie" target="grandstravauxalgeriens">
+    <edge id="e885" source="cheminsferroutesalgerie" target="minesouastamesloula">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e886" source="cheminsferroutesalgerie" target="unionelectriquegaziereafriquenord">
+    <edge id="e886" source="algerienneproduitschimiquesengrais" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e887" source="creditfoncieralgerietunisie" target="grandstravauxalgeriens">
+    <edge id="e887" source="algerienneproduitschimiquesengrais" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e888" source="grandstravauxalgeriens" target="unionelectriquegaziereafriquenord">
+    <edge id="e888" source="cheminsferroutesalgerie" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e889" source="cheminsferroutesalgerie" target="vignoblesalgeriens">
+    <edge id="e889" source="cheminsferroutesalgerie" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e890" source="cheminsferroutesalgerie" target="vignoblesmediterranee">
+    <edge id="e890" source="creditfoncieralgerietunisie" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e891" source="cheminsferroutesalgerie" target="vinsmidialgerie">
+    <edge id="e891" source="grandstravauxalgeriens" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e892" source="minieredjebelfelten" target="vignoblesalgeriens">
+    <edge id="e892" source="cheminsferroutesalgerie" target="vignoblesalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e893" source="minieredjebelfelten" target="vignoblesmediterranee">
+    <edge id="e893" source="cheminsferroutesalgerie" target="vignoblesmediterranee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e894" source="minieredjebelfelten" target="vinsmidialgerie">
+    <edge id="e894" source="cheminsferroutesalgerie" target="vinsmidialgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e895" source="vignoblesmediterranee" target="vinsmidialgerie">
+    <edge id="e895" source="minieredjebelfelten" target="vignoblesalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e896" source="algeriennecreditbanque" target="algerienneproduitschimiquesengrais">
+    <edge id="e896" source="minieredjebelfelten" target="vignoblesmediterranee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e897" source="algeriennecreditbanque" target="cheminsferroutesalgerie">
+    <edge id="e897" source="minieredjebelfelten" target="vinsmidialgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e898" source="etudescheminfertransafricain" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e898" source="vignoblesmediterranee" target="vinsmidialgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e899" source="phosphatesdjebelonk" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e899" source="algeriennecreditbanque" target="algerienneproduitschimiquesengrais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e900" source="etudescheminfertransafricain" target="fonciereimmobilierevillealger">
+    <edge id="e900" source="algeriennecreditbanque" target="cheminsferroutesalgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e901" source="etudescheminfertransafricain" target="phosphatesdyr">
+    <edge id="e901" source="etudescheminfertransafricain" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e902" source="fonciereimmobilierevillealger" target="phosphatesdyr">
+    <edge id="e902" source="phosphatesdjebelonk" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e903" source="algeriennepetrolestliouanet" target="mineschabetkohol">
+    <edge id="e903" source="etudescheminfertransafricain" target="fonciereimmobilierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e904" source="mineschabetkohol" target="ouenza">
+    <edge id="e904" source="etudescheminfertransafricain" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e905" source="charbonnierealgerienne" target="platrieresrovigo">
+    <edge id="e905" source="fonciereimmobilierevillealger" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e906" source="chargeursalgeriensreunis" target="chauxcimentsouedfergoug">
+    <edge id="e906" source="algeriennepetrolestliouanet" target="mineschabetkohol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e907" source="cheminsferouestalgerien" target="fournituresmilitaires">
+    <edge id="e907" source="mineschabetkohol" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e908" source="aeriennefrancealgerie" target="minesferlarrath">
+    <edge id="e908" source="charbonnierealgerienne" target="platrieresrovigo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e909" source="aeriennefrancealgerie" target="reseauaerientransafricain">
+    <edge id="e909" source="chargeursalgeriensreunis" target="chauxcimentsouedfergoug">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e910" source="minesferlarrath" target="reseauaerientransafricain">
+    <edge id="e910" source="cheminsferouestalgerien" target="fournituresmilitaires">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e911" source="africainearmement" target="concessionnaireminesouenza">
+    <edge id="e911" source="aeriennefrancealgerie" target="minesferlarrath">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e912" source="africainearmement" target="fusionneeliegeshamendaspetitekabylie">
+    <edge id="e912" source="aeriennefrancealgerie" target="reseauaerientransafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e913" source="africainearmement" target="immobilierealgerie">
+    <edge id="e913" source="minesferlarrath" target="reseauaerientransafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e914" source="africainearmement" target="ouenza">
+    <edge id="e914" source="africainearmement" target="concessionnaireminesouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e915" source="concessionnaireminesouenza" target="fusionneeliegeshamendaspetitekabylie">
+    <edge id="e915" source="africainearmement" target="fusionneeliegeshamendaspetitekabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e916" source="concessionnaireminesouenza" target="immobilierealgerie">
+    <edge id="e916" source="africainearmement" target="immobilierealgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e917" source="fusionneeliegeshamendaspetitekabylie" target="ouenza">
+    <edge id="e917" source="africainearmement" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e918" source="immobilierealgerie" target="ouenza">
+    <edge id="e918" source="concessionnaireminesouenza" target="fusionneeliegeshamendaspetitekabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e919" source="1918domainesbenislimantablat" target="agricolealgerienne">
+    <edge id="e919" source="concessionnaireminesouenza" target="immobilierealgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e920" source="1918domainesbenislimantablat" target="algeriennemeunerie">
+    <edge id="e920" source="fusionneeliegeshamendaspetitekabylie" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e921" source="agricolealgerienne" target="algeriennemeunerie">
+    <edge id="e921" source="immobilierealgerie" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e922" source="domainesaintcharlesboufarik" target="foncieremediterranee">
+    <edge id="e922" source="1918domainesbenislimantablat" target="agricolealgerienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e923" source="cimentsportlandafriquenord" target="nordafricainecimentslafarge">
+    <edge id="e923" source="1918domainesbenislimantablat" target="algeriennemeunerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e924" source="algerienneproduitschimiquesengrais" target="commercialecharbonnagesentreprisesmaritimes">
+    <edge id="e924" source="agricolealgerienne" target="algeriennemeunerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e925" source="commercialeacconage" target="commercialecharbonnagesentreprisesmaritimes">
+    <edge id="e925" source="domainesaintcharlesboufarik" target="foncieremediterranee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e926" source="commercialearmement" target="commercialecharbonnagesentreprisesmaritimes">
+    <edge id="e926" source="cimentsportlandafriquenord" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e927" source="algerienneproduitschimiquesengrais" target="oranaisecharbonnages">
+    <edge id="e927" source="algerienneproduitschimiquesengrais" target="commercialecharbonnagesentreprisesmaritimes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e928" source="algerienne" target="omniumminesalgerietunisie">
+    <edge id="e928" source="commercialeacconage" target="commercialecharbonnagesentreprisesmaritimes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e929" source="algerienne" target="tramwayselectriquesoran">
+    <edge id="e929" source="commercialearmement" target="commercialecharbonnagesentreprisesmaritimes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e930" source="omniumminesalgerietunisie" target="tramwayselectriquesoran">
+    <edge id="e930" source="algerienneproduitschimiquesengrais" target="oranaisecharbonnages">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e931" source="algerienneproduitschimiquesengrais" target="phosphatesdyr">
+    <edge id="e931" source="algerienne" target="omniumminesalgerietunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e932" source="algerienne" target="immobilierealgerie">
+    <edge id="e932" source="algerienne" target="tramwayselectriquesoran">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e933" source="algerienne" target="regiefoncierevillealger">
+    <edge id="e933" source="omniumminesalgerietunisie" target="tramwayselectriquesoran">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e934" source="comptoirescomptesidibelabbes" target="minessidimarouf">
+    <edge id="e934" source="algerienneproduitschimiquesengrais" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e935" source="comptoirescomptesidibelabbes" target="tuileriebriqueteriebelabbesiennesidibelabbes">
+    <edge id="e935" source="algerienne" target="immobilierealgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e936" source="minessidimarouf" target="tuileriebriqueteriebelabbesiennesidibelabbes">
+    <edge id="e936" source="algerienne" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e937" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="ateliersfonderiecelestinducros">
+    <edge id="e937" source="comptoirescomptesidibelabbes" target="minessidimarouf">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e938" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="etslouisbilliard">
+    <edge id="e938" source="comptoirescomptesidibelabbes" target="tuileriebriqueteriebelabbesiennesidibelabbes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e939" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="minieremetallurgiquecaronte">
+    <edge id="e939" source="minessidimarouf" target="tuileriebriqueteriebelabbesiennesidibelabbes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e940" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="oranaisefutaille">
+    <edge id="e940" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="ateliersfonderiecelestinducros">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e941" source="ateliersfonderiecelestinducros" target="etslouisbilliard">
+    <edge id="e941" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="etslouisbilliard">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e942" source="ateliersfonderiecelestinducros" target="minieremetallurgiquecaronte">
+    <edge id="e942" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="minieremetallurgiquecaronte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e943" source="ateliersfonderiecelestinducros" target="oranaisefutaille">
+    <edge id="e943" source="anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles" target="oranaisefutaille">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e944" source="etslouisbilliard" target="minieremetallurgiquecaronte">
+    <edge id="e944" source="ateliersfonderiecelestinducros" target="etslouisbilliard">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e945" source="etslouisbilliard" target="oranaisefutaille">
+    <edge id="e945" source="ateliersfonderiecelestinducros" target="minieremetallurgiquecaronte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e946" source="minieremetallurgiquecaronte" target="oranaisefutaille">
+    <edge id="e946" source="ateliersfonderiecelestinducros" target="oranaisefutaille">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e947" source="comptoirtextilecirta" target="tramwayselectriquesconstantine">
+    <edge id="e947" source="etslouisbilliard" target="minieremetallurgiquecaronte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e948" source="agricolealgerienne" target="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik">
+    <edge id="e948" source="etslouisbilliard" target="oranaisefutaille">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e949" source="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik" target="domainechapeaugendarme">
+    <edge id="e949" source="minieremetallurgiquecaronte" target="oranaisefutaille">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e950" source="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik" target="domainesaintcharlesboufarik">
+    <edge id="e950" source="comptoirtextilecirta" target="tramwayselectriquesconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e951" source="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik" target="fermesfrancaisestunisie">
+    <edge id="e951" source="agricolealgerienne" target="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e952" source="creditalgerien" target="unionelectriquegaziereafriquenord">
+    <edge id="e952" source="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik" target="domainechapeaugendarme">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e953" source="creditalgerien" target="industriellepetrolesafriquenord">
+    <edge id="e953" source="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik" target="domainesaintcharlesboufarik">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e954" source="creditfoncieragricolealgerie" target="creditfoncieralgerietunisie">
+    <edge id="e954" source="cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik" target="fermesfrancaisestunisie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e955" source="creditfoncieralgerietunisie" target="fonciereimmobilierevillealger">
+    <edge id="e955" source="creditalgerien" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e956" source="fonciereimmobilierevillealger" target="regiefoncierevillealger">
+    <edge id="e956" source="creditalgerien" target="industriellepetrolesafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e957" source="depotgairard" target="raffineriessoufrereunies">
+    <edge id="e957" source="creditfoncieralgerietunisie" target="fonciereimmobilierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e958" source="depotgairard" target="vignoblesmediterranee">
+    <edge id="e958" source="fonciereimmobilierevillealger" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e959" source="depotgairard" target="vignoblesmediterraneedomainemonvilleduzerville">
+    <edge id="e959" source="depotgairard" target="raffineriessoufrereunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e960" source="raffineriessoufrereunies" target="vignoblesmediterranee">
+    <edge id="e960" source="depotgairard" target="vignoblesmediterranee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e961" source="detartrageconstructionsmecaniques" target="unionvinicolenordafricaine">
+    <edge id="e961" source="depotgairard" target="vignoblesmediterraneedomainemonvilleduzerville">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e962" source="distilleriebadoilmustapha" target="kieselguhr">
+    <edge id="e962" source="raffineriessoufrereunies" target="vignoblesmediterranee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e963" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="unioncommercialeproducteurs">
+    <edge id="e963" source="detartrageconstructionsmecaniques" target="unionvinicolenordafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e964" source="distillerieliqueurmandarinebougie" target="unioncommercialeproducteurs">
+    <edge id="e964" source="distilleriebadoilmustapha" target="kieselguhr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e965" source="distilleriesalgerie" target="unionvinicolenordafricaine">
+    <edge id="e965" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="unioncommercialeproducteurs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e966" source="minesboudjoudoun" target="tramwayselectriquesoran">
+    <edge id="e966" source="distillerieliqueurmandarinebougie" target="unioncommercialeproducteurs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e967" source="minieredjebelfelten" target="tramwayselectriquesoran">
+    <edge id="e967" source="distilleriesalgerie" target="unionvinicolenordafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e968" source="domainechapeaugendarme" target="francoalgeriennecarburants">
+    <edge id="e968" source="minesboudjoudoun" target="tramwayselectriquesoran">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e969" source="domainechapeaugendarme" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
+    <edge id="e969" source="minieredjebelfelten" target="tramwayselectriquesoran">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e970" source="1918domainesbenislimantablat" target="industrielleimmobiliere">
+    <edge id="e970" source="domainechapeaugendarme" target="francoalgeriennecarburants">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e971" source="domainechapeaugendarme" target="industrielleimmobiliere">
+    <edge id="e971" source="domainechapeaugendarme" target="industrielleafriquenordtraitementsousproduitsvigneolivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e972" source="domainechapeaugendarme" target="lassallas">
+    <edge id="e972" source="1918domainesbenislimantablat" target="industrielleimmobiliere">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e973" source="domainechapeaugendarme" target="phosphatesconstantine">
+    <edge id="e973" source="domainechapeaugendarme" target="industrielleimmobiliere">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e974" source="domainechapeaugendarme" target="industriellepetrolesafriquenord">
+    <edge id="e974" source="domainechapeaugendarme" target="lassallas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e975" source="domainechapeaugendarme" target="ouenza">
+    <edge id="e975" source="domainechapeaugendarme" target="phosphatesconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e976" source="industriellepetrolesafriquenord" target="ouenza">
+    <edge id="e976" source="domainechapeaugendarme" target="industriellepetrolesafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e977" source="algerienneconstructionsnavalesmecaniques" target="domainesources">
+    <edge id="e977" source="domainechapeaugendarme" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e978" source="domainesaintelouise" target="mitidja">
+    <edge id="e978" source="industriellepetrolesafriquenord" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e979" source="domainescaidessebt" target="mitidja">
+    <edge id="e979" source="algerienneconstructionsnavalesmecaniques" target="domainesources">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e980" source="domaineskeroulisaintemouchent" target="mitidja">
+    <edge id="e980" source="domainesaintelouise" target="mitidja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e981" source="domaineseltaousarba" target="immobiliereagricoleharrach">
+    <edge id="e981" source="domainescaidessebt" target="mitidja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e982" source="domaineseltaousarba" target="industriebois">
+    <edge id="e982" source="domaineskeroulisaintemouchent" target="mitidja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e983" source="domaineseltaousarba" target="unioncommercialeproducteurs">
+    <edge id="e983" source="domaineseltaousarba" target="immobiliereagricoleharrach">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e984" source="electricitesoukarhas" target="omniumalgerienelectricitetebessa">
+    <edge id="e984" source="domaineseltaousarba" target="industriebois">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e985" source="entreprisemaritimecommerciale" target="oranaisechauxcimentsoranarcole">
+    <edge id="e985" source="domaineseltaousarba" target="unioncommercialeproducteurs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e986" source="eschenauer" target="expansionnordafricaine">
+    <edge id="e986" source="electricitesoukarhas" target="omniumalgerienelectricitetebessa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e987" source="agricolealgeriennebertagna" target="filtreriefrancoalgerienne">
+    <edge id="e987" source="entreprisemaritimecommerciale" target="oranaisechauxcimentsoranarcole">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e988" source="etsbertagna" target="filtreriefrancoalgerienne">
+    <edge id="e988" source="eschenauer" target="expansionnordafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e989" source="agricolealgeriennebertagna" target="phosphatesconstantine">
+    <edge id="e989" source="agricolealgeriennebertagna" target="filtreriefrancoalgerienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e990" source="agricolealgeriennebertagna" target="unioncompagniesregionalesreuniesfabriquesengrais">
+    <edge id="e990" source="etsbertagna" target="filtreriefrancoalgerienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e991" source="agricolealgeriennebertagna" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e991" source="agricolealgeriennebertagna" target="phosphatesconstantine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e992" source="phosphatesconstantine" target="unioncompagniesregionalesreuniesfabriquesengrais">
+    <edge id="e992" source="agricolealgeriennebertagna" target="unioncompagniesregionalesreuniesfabriquesengrais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e993" source="etudesminieresbougie" target="mineskabylie">
+    <edge id="e993" source="agricolealgeriennebertagna" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e994" source="expansionnordafricaine" target="fermedeloupysaintdenissig">
+    <edge id="e994" source="phosphatesconstantine" target="unioncompagniesregionalesreuniesfabriquesengrais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e995" source="filtreriefrancoalgerienne" target="unionmaritimefrancealgerie">
+    <edge id="e995" source="etudesminieresbougie" target="mineskabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e996" source="forestiereliegeouvreouedeloueb" target="liegeshamendaspetitekabylie">
+    <edge id="e996" source="expansionnordafricaine" target="fermedeloupysaintdenissig">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e997" source="distributionenergieelectrique" target="tramwaysalgeriens">
+    <edge id="e997" source="filtreriefrancoalgerienne" target="unionmaritimefrancealgerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e998" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="grandshotelsafriquenord">
+    <edge id="e998" source="forestiereliegeouvreouedeloueb" target="liegeshamendaspetitekabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e999" source="agricolealgerienne" target="grandstravauxalgeriens">
+    <edge id="e999" source="distributionenergieelectrique" target="tramwaysalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1000" source="industriebois" target="mitidja">
+    <edge id="e1000" source="algerienneetudesentreprisesagricolescommercialesindustrielles" target="grandshotelsafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1001" source="industriellepetrolesafriquenord" target="lafarge">
+    <edge id="e1001" source="agricolealgerienne" target="grandstravauxalgeriens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1002" source="industriellepetrolesafriquenord" target="liegeshamendaspetitekabylie">
+    <edge id="e1002" source="industriebois" target="mitidja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1003" source="industriellepetrolesafriquenord" target="nordafricainecimentslafarge">
+    <edge id="e1003" source="industriellepetrolesafriquenord" target="lafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1004" source="industriellepetrolesafriquenord" target="regiefoncierevillealger">
+    <edge id="e1004" source="industriellepetrolesafriquenord" target="liegeshamendaspetitekabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1005" source="lafarge" target="liegeshamendaspetitekabylie">
+    <edge id="e1005" source="industriellepetrolesafriquenord" target="nordafricainecimentslafarge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1006" source="lafarge" target="regiefoncierevillealger">
+    <edge id="e1006" source="industriellepetrolesafriquenord" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1007" source="liegeshamendaspetitekabylie" target="regiefoncierevillealger">
+    <edge id="e1007" source="lafarge" target="liegeshamendaspetitekabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1008" source="nordafricainecimentslafarge" target="regiefoncierevillealger">
+    <edge id="e1008" source="lafarge" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1009" source="fusionneeliegeshamendaspetitekabylie" target="liegesproduitsnordafricainsalgerusinebouchonsbone">
+    <edge id="e1009" source="liegeshamendaspetitekabylie" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1010" source="liegeshamendaspetitekabylie" target="mineskabylie">
+    <edge id="e1010" source="nordafricainecimentslafarge" target="regiefoncierevillealger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1011" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="lucienborgeaud">
+    <edge id="e1011" source="fusionneeliegeshamendaspetitekabylie" target="liegesproduitsnordafricainsalgerusinebouchonsbone">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1012" source="liegesproduitsnordafricainsalgerusinebouchonsbone" target="lucienborgeaud">
+    <edge id="e1012" source="liegeshamendaspetitekabylie" target="mineskabylie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1013" source="minieremzaita" target="phosphatesmzaita">
+    <edge id="e1013" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="lucienborgeaud">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1014" source="minesfermiliana" target="phosphatesmzaita">
+    <edge id="e1014" source="liegesproduitsnordafricainsalgerusinebouchonsbone" target="lucienborgeaud">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1015" source="minieremzaita" target="unioncompagniesregionalesreuniesfabriquesengrais">
+    <edge id="e1015" source="minieremzaita" target="phosphatesmzaita">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1016" source="minieremzaita" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e1016" source="minesfermiliana" target="phosphatesmzaita">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1017" source="mineschellala" target="minesguelma">
+    <edge id="e1017" source="minieremzaita" target="unioncompagniesregionalesreuniesfabriquesengrais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1018" source="mineskabylie" target="mullerpasse19261928souscontrolegraengesberg">
+    <edge id="e1018" source="minieremzaita" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1019" source="minesdjebelaomar" target="ouenza">
+    <edge id="e1019" source="mineschellala" target="minesguelma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1020" source="ouenza" target="palestro">
+    <edge id="e1020" source="mineskabylie" target="mullerpasse19261928souscontrolegraengesberg">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1021" source="minesdjebelaomar" target="sidikamber">
+    <edge id="e1021" source="minesdjebelaomar" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1022" source="mineschellala" target="minesdjebelforer">
+    <edge id="e1022" source="ouenza" target="palestro">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1023" source="mineschellala" target="zincguergour">
+    <edge id="e1023" source="minesdjebelaomar" target="sidikamber">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1024" source="minieredjendli" target="zincguergour">
+    <edge id="e1024" source="mineschellala" target="minesdjebelforer">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1025" source="mineschellala" target="tramwayselectriquesoran">
+    <edge id="e1025" source="mineschellala" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1026" source="minieredjendli" target="tramwayselectriquesoran">
+    <edge id="e1026" source="minieredjendli" target="zincguergour">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1027" source="minesferlarrath" target="phosphatesdyr">
+    <edge id="e1027" source="mineschellala" target="tramwayselectriquesoran">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1028" source="minesferlarrath" target="unionelectriquegaziereafriquenord">
+    <edge id="e1028" source="minieredjendli" target="tramwayselectriquesoran">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1029" source="minesfermilliana" target="minesferrouina">
+    <edge id="e1029" source="minesferlarrath" target="phosphatesdyr">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1030" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="nordafricaincommercial">
+    <edge id="e1030" source="minesferlarrath" target="unionelectriquegaziereafriquenord">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1031" source="liegesproduitsnordafricainsalgerusinebouchonsbone" target="nordafricaincommercial">
+    <edge id="e1031" source="minesfermilliana" target="minesferrouina">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1032" source="omniumminesalgerietunisie" target="secteurelectrique">
+    <edge id="e1032" source="anciensetablissementsjulesborgeaudfilsnordafricaincommercial" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1033" source="phosphatesconstantine" target="secteurelectrique">
+    <edge id="e1033" source="liegesproduitsnordafricainsalgerusinebouchonsbone" target="nordafricaincommercial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1034" source="algerienneelevage" target="oranaisecharbonnages">
+    <edge id="e1034" source="omniumminesalgerietunisie" target="secteurelectrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1035" source="probios" target="syndicatlyonnaisnordafricain">
+    <edge id="e1035" source="phosphatesconstantine" target="secteurelectrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1036" source="regiefoncierevillealger" target="secteurelectriquevoutesalger">
+    <edge id="e1036" source="algerienneelevage" target="oranaisecharbonnages">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1037" source="regiefoncierevillealger" target="tramwayselectriquesoran">
+    <edge id="e1037" source="probios" target="syndicatlyonnaisnordafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1038" source="agricolefinancierealgerie" target="uniontransafricaine">
+    <edge id="e1038" source="regiefoncierevillealger" target="secteurelectriquevoutesalger">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1039" source="approvisionnementnordafricaine" target="vinsmidialgeriebezierssete">
+    <edge id="e1039" source="regiefoncierevillealger" target="tramwayselectriquesoran">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1040" source="algerienneproduitschimiquesengrais" target="ouenza">
+    <edge id="e1040" source="agricolefinancierealgerie" target="uniontransafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1041" source="ouenza" target="vignoblesmediterraneedomainemonvilleduzerville">
+    <edge id="e1041" source="approvisionnementnordafricaine" target="vinsmidialgeriebezierssete">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1042" source="tramwayoranhammambouhadjarextensions" target="tramwayselectriquesoran">
+    <edge id="e1042" source="algerienneproduitschimiquesengrais" target="ouenza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1043" source="unioncompagniesregionalesreuniesfabriquesengrais" target="unionelectriquegaziereafriquenord">
+    <edge id="e1043" source="ouenza" target="vignoblesmediterraneedomainemonvilleduzerville">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e1044" source="unionelectriquegaziereafriquenord" target="unionfabriquesengraisproduitschimiquessuperphosphates">
+    <edge id="e1044" source="tramwayoranhammambouhadjarextensions" target="tramwayselectriquesoran">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e1045" source="unioncompagniesregionalesreuniesfabriquesengrais" target="unionelectriquegaziereafriquenord">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e1046" source="unionelectriquegaziereafriquenord" target="unionfabriquesengraisproduitschimiquessuperphosphates">
       <data key="e_weight">1</data>
     </edge>
   </graph>

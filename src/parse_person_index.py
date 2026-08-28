@@ -229,6 +229,31 @@ INDEX_ROLE_RES = [(re.compile(p, re.I), c) for p, c in INDEX_ROLE_RULES]
 
 
 INDEX_NAME_RE = re.compile(r"^(?P<surname>[^()]+?)\s*\((?P<given>[^)]*)\)\s*$")
+# A whole parenthetical that is commentary rather than the forename, i.e. one
+# containing a colon: "(ep. Cecile Burrus : cf. FIT)", "(1898-1993 : assassine)".
+# Removing it whole keeps the real "(Given)" parenthesis intact, which cutting
+# at the colon alone would not.
+INDEX_COMMENTARY_RE = re.compile(r"\s*\([^()]*:[^()]*\)")
+
+
+def strip_index_commentary(raw: str) -> str:
+    """Drop the compiler's commentary from an index entry's name.
+
+    "Andre (Jacques) (ep. Cecile Burrus : cf. FIT)", "Pharaon (Henri)(1898-1993
+    : assassine)", "Tavera (Maurice) : 159 (comm. gvt...)". A colon never occurs
+    inside a name, on this side of the pipeline any more than on the dossier
+    side, so the name ends before it.
+    """
+    if ":" not in raw:
+        return raw
+    # Remove a whole parenthetical that is commentary before cutting at the
+    # colon, so that a real "(Given)" parenthesis elsewhere survives.
+    out = INDEX_COMMENTARY_RE.sub("", raw).split(":")[0].strip(" ,;.([")
+    # "Chenut (C.) sic." leaves an editorial marker after the forename
+    # parenthesis, which INDEX_NAME_RE requires to be last. Cut back to it.
+    if ")" in out and not out.endswith(")"):
+        out = out[: out.rindex(")") + 1]
+    return out
 
 
 def parse_index_name(raw: str) -> dict:
@@ -243,7 +268,7 @@ def parse_index_name(raw: str) -> dict:
 
     A trailing particle belongs to the surname: "Abs (P. d')" is P. d'Abs.
     """
-    raw = raw.strip()
+    raw = strip_index_commentary(raw.strip())
     m = INDEX_NAME_RE.match(raw)
     if not m:
         # No parenthesis: the whole string is the surname.
@@ -390,7 +415,12 @@ def parse_pair(idoc, key_doc, title, txcache):
                 "source_genre": "person_index",
             }
             if is_org:
-                row.update({"member_key": org_key(name), "name_clean": name})
+                # The corporate branch keeps the printed name, so it needs the
+                # same commentary strip the person branch gets: a few entries
+                # are long enough to read as an organisation while actually
+                # being a person plus the compiler's biography.
+                org_name = strip_index_commentary(name)
+                row.update({"member_key": org_key(org_name), "name_clean": org_name})
                 org_rows.append(row)
             elif not parsed or not parsed.get("person_key"):
                 continue

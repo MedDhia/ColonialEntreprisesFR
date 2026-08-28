@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **Empty for 12.5% of rows** (9,094 of 72,965), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 12.5% of rows** (9,136 of 73,137), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |
@@ -141,14 +141,14 @@ prose construction matched: `prose_role_after` (11,185),
 `prose_appointed_after` (2,571), `prose_nomination`, `prose_appointed_before`,
 `prose_outgoing`, `prose_presidency`.
 
-**In the default network** (11,693 rows survive de-duplication against the
+**In the default network** (11,690 rows survive de-duplication against the
 other genres); `--no-prose` drops it. Hand-audited precision is near 90%,
 below the structured parser's, which is why `source_genre` is on every edge.
 8,421 of its person-firm pairs appear nowhere else, and 23% of its rows
 corroborate a pair the structured parser found independently. See METHODOLOGY
 §4d for the audit and the seven failure classes it fixed.
 
-### `affiliations_annotations.csv` — the compiler's inline notes, resolved (1,644)
+### `affiliations_annotations.csv` — the compiler's inline notes, resolved (1,646)
 
 Written by `src/resolve_annotations.py` (stage 3d) from
 `candidate_ties_from_annotations.csv`. Columns: `person_id`, `company_key`,
@@ -159,7 +159,7 @@ Written by `src/resolve_annotations.py` (stage 3d) from
 `match_method` records how the note resolved: `name` and `acronym` come from
 stage 4; `prefix`, `prefix_exact_length` and `exact_single_token` from the
 abbreviation matcher. Hand-audited at roughly 94%. In the default network
-(1,556 rows survive de-duplication); `--no-annotations` drops it. See
+(1,559 rows survive de-duplication); `--no-annotations` drops it. See
 METHODOLOGY §4e.
 
 ### `affiliations_biographical.csv` — from biographical dictionaries (3,167)
@@ -404,8 +404,8 @@ per person), `positionality_by_territory.csv` and `positionality_review.csv`.
 
 | Value | n | Meaning |
 |---|---|---|
-| `colonial` | 28,683 (85.5%) | No indigenous marker. **Inference from absence** — in a corpus of French colonial boards an unmarked name is overwhelmingly European, but this is not positive evidence. `confidence = low` throughout. |
-| `unclassified` | 4,571 (13.6%) | The name field holds a parse artefact rather than a name; not coded either way. |
+| `colonial` | 28,708 (85.5%) | No indigenous marker. **Inference from absence** — in a corpus of French colonial boards an unmarked name is overwhelmingly European, but this is not positive evidence. `confidence = low` throughout. |
+| `unclassified` | 4,567 (13.6%) | The name field holds a parse artefact rather than a name; not coded either way. |
 | `native` | 146 (0.60%) | Indigenous to a territory under French rule. |
 | `local_non_french_elite` | 33 | Ottoman, Egyptian, Turkish, Armenian and Greek names. Egypt and the Ottoman Empire were **not** French colonies, so these are not colonial subjects of France. |
 | `intermediate` | 26 | Maghrebi Jewish names. Algerian Jews became French citizens by the Crémieux decree of 1870 while Muslim Algerians remained subjects; Moroccan and Tunisian Jews did neither. |
@@ -457,7 +457,7 @@ the same columns as the corresponding top-level files, restricted to that
 territory and with nodes and edges recomputed from its ties alone.
 
 **Ties partition; nodes do not.** Every tie carries exactly one territory, so
-bundle tie counts sum to the dataset total (98,666) with none duplicated or
+bundle tie counts sum to the dataset total (98,798) with none duplicated or
 dropped. Firms and people appear in every bundle where they are observed —
 21% of people and 9% of firms are in more than one country bundle — so
 **node counts must not be added across bundles**.
@@ -511,7 +511,7 @@ them; they are outputs, regenerated from `data/processed/` in about a minute.
 | `fig2_by_period.svg` | Figure 2, standalone, light mode. |
 | `fig3_ego_indochine.svg` | Figure 3, standalone, light mode. |
 
-**Figure 1 — the core interlock network.** 170 firms and 1,407 interlocks:
+**Figure 1 — the core interlock network.** 170 firms and 1,403 interlocks:
 `edges_company_interlock.csv` filtered to `weight >= 2` (two or more shared
 directors), largest component, top 170 by weighted degree. Node area is
 weighted degree, edge opacity and width are the number of shared directors,
@@ -522,7 +522,7 @@ with leader lines.
 
 **Figure 2 — small multiples by period.** One panel per `PERIODS` value, from
 `edges_company_interlock_by_period.csv` at the same `weight >= 2`: pre-1914
-479 ties, 1914–1929 2,952, 1930–1944 2,067, 1945–1962 2,539, post-1962 151. All
+479 ties, 1914–1929 2,943, 1930–1944 2,089, 1945–1962 2,532, post-1962 152. All
 five panels share one layout and one size scale, so position is comparable
 across panels and panel density tracks the tie counts printed beneath.
 
@@ -544,7 +544,7 @@ the shared layout are what they are.
 ### `company_centrality.csv` — betweenness on the interlock network
 
 Written by `src/centrality.py` (stage 6b), one row per firm in the interlock
-graph (3,549).
+graph (3,550).
 
 | Variable | Description |
 |---|---|
@@ -592,7 +592,7 @@ a city.
 ### `edges_city_interlock.csv` — the map's edges
 
 `city_1`, `city_2`, `territory_1`, `territory_2`, `group_1`, `group_2`,
-`n_interlocks`. 1,099 city pairs, 11,238 interlocks. **Between-city only** —
+`n_interlocks`. 1,100 city pairs, 11,239 interlocks. **Between-city only** —
 ties within one city cannot be an edge and are in `company_places.csv`'s
 aggregate and the figure's table instead (5,146 of them).
 
@@ -608,7 +608,7 @@ for `Saïgon`. It is an **input**: edit it and rerun stage 6c.
 `city_network.html`. Cities in true position (plate carrée, no coastline —
 none ships with this repo, so a graticule carries the geography), node area
 by firms based there, edge weight by interlocks between the pair, colour by
-sovereignty group. 111 cities, 1,943 firms, 1,099 drawn ties. See METHODOLOGY
+sovereignty group. 111 cities, 1,943 firms, 1,100 drawn ties. See METHODOLOGY
 §5f for the coverage limits and for why a head office is not an operation.
 
 ### The whole empire, and every territory
@@ -629,7 +629,7 @@ fixed is the whole design: the difference between figures 1 and 6 is the
 finding, and a fresh layout would let neither be read against the other.
 
 **Figure 4 — every firm, every interlock.** All 5,862 firms in
-`edges_company_interlock.csv` at `weight >= 1` and all 76,886 interlocks
+`edges_company_interlock.csv` at `weight >= 1` and all 76,893 interlocks
 between them — no threshold, no top-N. The giant component (5,776 firms,
 98.5%) fills the canvas; the 46 firms in 22 unconnected components sit in a
 labelled strip below a rule. Colour is the firm's first territory folded to
@@ -643,7 +643,7 @@ territories counts in each of them. The diagonal is outlined rather than
 filled. Shading steps by rank over the observed range, so a cell's step gives
 its position in the distribution, not a proportional count — hover in the page
 for the number. The largest cells are Maroc–Indochine at 4,477 shared directors
-and Maroc–Algérie at 4,446; 862 of the 1,431 possible pairs share at least
+and Maroc–Algérie at 4,439; 863 of the 1,431 possible pairs share at least
 one.
 
 **Per-territory figures.** Each is one territory's complete interlock graph,

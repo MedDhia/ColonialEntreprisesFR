@@ -146,7 +146,7 @@ marcou,brasseriesouestafricain,2,1948,1953,administrateur,1
 maurel-f,brasseriesouestafricain,3,1948,1953,administrateur,1
 maurel-h,brasseriesouestafricain,1,1936,1936,administrateur,1
 monnier-c,brasseriesouestafricain,3,1948,1953,administrateur,1
-orcel-j,brasseriesouestafricain,4,1936,1953,administrateur,1
+orcel-j,brasseriesouestafricain,4,1936,1953,administrateur_delegue,1
 ph-kreiss,brasseriesouestafricain,3,1948,1953,president,1
 pierre-l,brasseriesouestafricain,2,1936,1948,administrateur,1
 cottereau-f-appel-m,cabotagevapeursenegalrivieressud,1,,,administrateur,1
@@ -220,7 +220,7 @@ ganderax-e,cheminferdakarstlouis,1,1922,1922,administrateur,1
 guilliot-c,cheminferdakarstlouis,1,1922,1922,administrateur,1
 lorieux-l,cheminferdakarstlouis,1,1922,1922,administrateur,1
 pouyer-m,cheminferdakarstlouis,1,1922,1922,administrateur,1
-roland-gosselin-j,cheminferdakarstlouis,1,1922,1922,administrateur,1
+roland-gosselin-j,cheminferdakarstlouis,1,1922,1922,administrateur_delegue,1
 vieuxtemps,cheminferdakarstlouis,1,1922,1922,administrateur,1
 camoin-p,colonialeautomobile,1,1932,1932,administrateur,1
 potton-a,colonialeautomobile,1,1932,1932,administrateur,1
@@ -260,7 +260,7 @@ buhan-p,commercialeafricainesuitepascalbuhan,1,1938,1938,president,1
 buhan-p-pascal,commercialeafricainesuitepascalbuhan,1,1919,1919,administrateur,1
 exportation-au-senegal,commercialeafricainesuitepascalbuhan,1,1938,1938,president,1
 thube-a,commercialeafricainesuitepascalbuhan,2,1919,1938,administrateur,1
-thube-fils-g,commercialeafricainesuitepascalbuhan,1,1938,1938,president,1
+thube-fils-g,commercialeafricainesuitepascalbuhan,2,1919,1938,president,1
 frere,commercialeindustrielleoutremer,1,1919,1919,administrateur,1
 gaudart,commercialeindustrielleoutremer,1,1919,1919,administrateur,1
 paulin,commercialeindustrielleoutremer,1,1919,1919,administrateur,1
@@ -276,7 +276,7 @@ lemaignen-r,commercialeportsafricains,1,1951,1951,president,1
 merville-j,commercialeportsafricains,1,1951,1951,administrateur,1
 moreau-neret-a,commercialeportsafricains,1,1951,1951,administrateur,1
 puravet-j,commercialeportsafricains,1,1951,1951,directeur,0
-rambaud-r-rene,commercialeportsafricains,1,1951,1951,directeur,0
+rambaud-r-rene,commercialeportsafricains,1,1951,1951,directeur_general,0
 roux-j,commercialeportsafricains,1,1951,1951,administrateur,1
 bouffe-g,commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons,1,1936,1936,administrateur,1
 haffen-g,commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons,1,1936,1936,directeur,0
@@ -294,7 +294,7 @@ vezin-m,creditfoncierafrique,1,1951,1951,administrateur,1
 achard-g,creditfoncierafriqueequatorialebrazzaville,1,1943,1943,administrateur,1
 de-la-chesnais-e,creditfoncierafriqueequatorialebrazzaville,1,1930,1930,administrateur,1
 de-la-tour-x,creditfoncierafriqueequatorialebrazzaville,1,1930,1930,administrateur,1
-de-longchamp-c,creditfoncierafriqueequatorialebrazzaville,2,1930,1943,administrateur,1
+de-longchamp-c,creditfoncierafriqueequatorialebrazzaville,2,1930,1943,administrateur_delegue,1
 de-rosiere-l,creditfoncierafriqueequatorialebrazzaville,1,1930,1930,president,1
 harraza-h,creditfoncierafriqueequatorialebrazzaville,1,1930,1930,administrateur,1
 lemaignen-c,creditfoncierafriqueequatorialebrazzaville,1,1943,1943,administrateur,1
@@ -429,10 +429,10 @@ geraud-l,huileriesrizeriesouestafricaines,2,1929,1929,administrateur,1
 guerin-j,huileriesrizeriesouestafricaines,1,1929,1929,administrateur,1
 guy-c,huileriesrizeriesouestafricaines,1,1925,1925,vice_president,1
 legrand-j,huileriesrizeriesouestafricaines,3,1925,1929,administrateur,1
-legrand-r,huileriesrizeriesouestafricaines,1,1925,1925,administrateur,1
+legrand-r,huileriesrizeriesouestafricaines,1,1925,1925,administrateur_delegue,1
 loisy-x,huileriesrizeriesouestafricaines,2,1925,1929,president,1
 muller-v,huileriesrizeriesouestafricaines,1,1925,1925,administrateur,1
-oudot-l,huileriesrizeriesouestafricaines,2,1925,1929,administrateur,1
+oudot-l,huileriesrizeriesouestafricaines,2,1925,1929,administrateur_delegue,1
 petersen-g,huileriesrizeriesouestafricaines,1,1925,1925,administrateur,1
 vezia,huileriesrizeriesouestafricaines,2,1925,1929,administrateur,1
 capillon-v,huileriessavonneriesouestafricainsuitealminko,1,1947,1947,administrateur,1
@@ -467,7 +467,7 @@ lavagne-d-ortigue-j,immobilierefinanciereafricaine,1,,,administrateur,1
 lavril-m,immobilierefinanciereafricaine,1,1950,1950,administrateur,1
 poidatz-r,immobilierefinanciereafricaine,1,1950,1950,administrateur,1
 schlumberger-r,immobilierefinanciereafricaine,1,1950,1950,administrateur,1
-sellier-l,immobilierefinanciereafricaine,1,1950,1950,directeur,0
+sellier-l,immobilierefinanciereafricaine,1,1950,1950,directeur_general,0
 sellier-p,immobilierefinanciereafricaine,2,1950,1950,administrateur,1
 sibilot-l,immobilierefinanciereafricaine,1,1950,1950,administrateur,1
 froment-guieysse-g,immobilierethies,1,1921,1921,administrateur,1
@@ -533,6 +533,7 @@ africaines-m,messageriessenegal,1,1950,1950,administrateur,1
 delmas-p-pierre,messageriessenegal,1,1950,1950,administrateur,1
 dugue-p,messageriessenegal,1,1950,1950,administrateur,1
 durand-reville-l,messageriessenegal,1,1950,1950,administrateur,1
+larche-g,messageriessenegal,1,1950,1950,directeur_general,0
 lorfevre-j,messageriessenegal,1,,,administrateur,1
 moreau-neret-a,messageriessenegal,1,1950,1950,administrateur,1
 villars-r,messageriessenegal,1,1950,1950,administrateur,1
@@ -627,7 +628,7 @@ patricot-a,plantationscasamance,1,1937,1937,administrateur,1
 penin-de-la-raudiere-p,plantationscasamance,1,1937,1937,administrateur,1
 renoux-l,plantationscasamance,1,1937,1937,administrateur,1
 bouillon-p,portdakar,1,1938,1938,administrateur,1
-casteincau-e,salinscapvert,1,1920,1920,administrateur,1
+casteincau-e,salinscapvert,1,1920,1920,administrateur_delegue,1
 davillier-j,salinscapvert,1,1920,1920,administrateur,1
 etienne-p,salinscapvert,1,1942,1942,administrateur,1
 faroux-j,salinscapvert,1,1936,1936,administrateur_delegue,1
@@ -681,7 +682,7 @@ estager-j,senegal,1,1928,1928,administrateur,1
 menada-e,senegal,2,1912,1912,administrateur,1
 pichot-c,senegal,1,1928,1928,president,1
 rainaud-j,senegal,1,1928,1928,administrateur,1
-rennecon-p,senegal,1,1928,1928,administrateur,1
+rennecon-p,senegal,1,1928,1928,administrateur_delegue,1
 billard-g,senegalaisecultureslatemengue,1,1931,1931,administrateur,1
 cadoret-p,senegalaisecultureslatemengue,1,1931,1931,administrateur,1
 chancel-a,senegalaisecultureslatemengue,1,1931,1931,administrateur,1

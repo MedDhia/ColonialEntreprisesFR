@@ -154,8 +154,9 @@ charpentier-j,banquesyrie,2,1938,1938,administrateur,1
 ferrail,banquesyrie,1,1919,1919,administrateur,1
 fonciere-i,banquesyrie,1,1929,1929,administrateur,1
 gouin,banquesyrie,1,1919,1919,administrateur,1
-homberg-a,banquesyrie,2,1938,1938,administrateur,1
+homberg-a,banquesyrie,2,1938,1938,president,1
 immeubles-de-france,banquesyrie,1,1929,1929,administrateur,1
+laville-e,banquesyrie,2,1938,1938,administrateur_delegue,1
 leblanc-l,banquesyrie,2,1938,1938,administrateur,1
 mines-du-chabet-kohol,banquesyrie,1,1929,1929,administrateur,1
 misrachi,banquesyrie,1,1919,1919,administrateur,1
@@ -174,6 +175,7 @@ bassoul-a,banquesyriegrandliban,2,1938,1938,president,1
 bechmann,banquesyriegrandliban,1,1940,1940,administrateur,1
 belgique,banquesyriegrandliban,1,,,president,1
 berard,banquesyriegrandliban,1,1940,1940,president,1
+berard-m,banquesyriegrandliban,2,1938,1938,directeur_general,0
 bey-beyhum-o,banquesyriegrandliban,1,1940,1940,administrateur,1
 bey-daouk-o,banquesyriegrandliban,1,1940,1940,administrateur,1
 bey-el-mouayad-b,banquesyriegrandliban,1,1940,1940,administrateur,1
@@ -211,7 +213,7 @@ italie,banquesyriegrandliban,1,,,president,1
 jacout-p,banquesyriegrandliban,1,,,gerant,0
 lehideux-r-roger,banquesyriegrandliban,2,1938,1938,president,1
 mallet-r,banquesyriegrandliban,2,1938,1938,president,1
-mariage,banquesyriegrandliban,1,,,administrateur,1
+mariage,banquesyriegrandliban,1,,,president,1
 masmonteil-a,banquesyriegrandliban,1,,,administrateur,1
 meyer-borel-c,banquesyriegrandliban,2,1938,1938,president,1
 pahlawan-j,banquesyriegrandliban,1,1940,1940,administrateur,1
@@ -536,6 +538,7 @@ desplats-j,etablissementskern,1,,,president,1
 gendre-e,etablissementskern,1,,,president,1
 grasse,etablissementskern,1,,,president,1
 joachim,etablissementskern,1,,,president,1
+kern-p,etablissementskern,1,,,administrateur_delegue,1
 michel,etablissementskern,1,,,president,1
 ormieres-p,etablissementskern,1,,,president,1
 pernin,etablissementskern,1,,,president,1
@@ -655,6 +658,7 @@ henrotte,financiereorient,2,1896,1898,administrateur,1
 isaac-de-camondo,financiereorient,1,1909,1909,administrateur,1
 laurans-a,financiereorient,1,1909,1909,administrateur,1
 lefranc,financiereorient,1,1898,1898,secretaire,0
+lefranc-l,financiereorient,1,1898,1898,administrateur,1
 mirabaud-a,financiereorient,1,1909,1909,administrateur,1
 nagelmackers,financiereorient,2,1896,1898,administrateur,1
 naville,financiereorient,2,1896,1898,president,1
@@ -1172,7 +1176,7 @@ atthalin-a,radioorient,2,1938,1938,administrateur,1
 barcelone,radioorient,1,,,administrateur,1
 berard,radioorient,2,1938,1938,administrateur,1
 berard-m,radioorient,1,1925,1925,president,1
-bousquet-h,radioorient,4,1924,1938,administrateur,1
+bousquet-h,radioorient,4,1924,1938,president,1
 couly-a,radioorient,5,1937,1953,commissaire_aux_comptes,0
 de-gunzbourg-j,radioorient,1,1925,1925,president,1
 de-gunzburg-j-jean,radioorient,1,1938,1938,administrateur,1
@@ -1215,6 +1219,7 @@ gavoty-c,socasieoccidentale,1,,,president,1
 lataquie,socasieoccidentale,1,,,president,1
 mersina,socasieoccidentale,1,,,president,1
 nabonne-j,socasieoccidentale,1,,,president,1
+nabonne-p,socasieoccidentale,1,,,administrateur_delegue,1
 boissiere-g,socexploitationcheminsfercilicienordsyrie,1,,,administrateur,1
 cerjat-c,socexploitationcheminsfercilicienordsyrie,1,,,administrateur,1
 guibert-l,socexploitationcheminsfercilicienordsyrie,1,,,administrateur,1
@@ -1242,6 +1247,7 @@ natal,socfrsetransactionsinternationalessafti,1,,,directeur,0
 para,socfrsetransactionsinternationalessafti,1,,,directeur,0
 parahyba,socfrsetransactionsinternationalessafti,1,,,directeur,0
 pernambuco,socfrsetransactionsinternationalessafti,1,,,directeur,0
+poulain-r,socfrsetransactionsinternationalessafti,1,,,administrateur_delegue,1
 safi,socfrsetransactionsinternationalessafti,1,,,directeur,0
 serge-a,socfrsetransactionsinternationalessafti,1,,,president,1
 smyrne,socfrsetransactionsinternationalessafti,1,,,directeur,0
@@ -1256,6 +1262,7 @@ gazan-j,socvelvetrum,1,,,president,1
 gerard-g-gabriel,socvelvetrum,1,,,president,1
 gerard-p,socvelvetrum,1,,,president,1
 magnan-g,socvelvetrum,1,,,president,1
+thiebaud-e,socvelvetrum,1,,,administrateur_delegue,1
 bloch-h,tabacsmacedoineasiemineure,1,1923,1923,administrateur,1
 cassuto-c,tabacsmacedoineasiemineure,1,1923,1923,administrateur,1
 clement-bayard-a,tabacsmacedoineasiemineure,1,1923,1923,administrateur,1
@@ -1381,7 +1388,7 @@ nouvion-h,unionovinecoloniale,1,1927,1927,administrateur,1
 saurin,unionovinecoloniale,1,1927,1927,administrateur,1
 cavas-b,usineslaurium,1,1909,1909,administrateur,1
 gambas-a,usineslaurium,1,1909,1909,administrateur,1
-lidorikis-g,usineslaurium,1,1909,1909,administrateur,1
+lidorikis-g,usineslaurium,1,1909,1909,president,1
 matsas-z,usineslaurium,1,1909,1909,administrateur,1
 sgouta-d,usineslaurium,2,1909,1909,administrateur,1
 valsoritis-p,usineslaurium,1,1909,1909,administrateur,1

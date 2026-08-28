@@ -2,7 +2,7 @@ person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top
 toudet-f,Toudet,F. Toudet; Francis Toudet,3,3,6,administrateur,1929,1951,industries agro-alimentaires
 cahen-fuzier-e,Cahen-Fuzier,Cahen-Fuzier; Edouard Cahen-Fuzier; Édouard Cahen-Fuzier,2,2,5,administrateur,1922,1926,industries agro-alimentaires
 munich-p,Munich,Paul Munich,2,2,4,president,1929,1949,Industries; industries agro-alimentaires
-munich-j,Munich,Jean Munich,2,2,4,administrateur,1929,1949,Industries; industries agro-alimentaires
+munich-j,Munich,Jean Munich,2,2,4,administrateur_delegue,1929,1949,Industries; industries agro-alimentaires
 ravaux-r,Ravaux,Ravaux; René Ravaux,2,2,3,administrateur,1937,1951,industries agro-alimentaires
 tabacs,Tabacs,Tabacs; … Tabacs,2,2,3,administrateur,1929,1929,industries agro-alimentaires
 jacquy-p,Jacquy,P. Jacquy,2,2,3,president,1935,1951,industries agro-alimentaires
@@ -45,7 +45,7 @@ marion-de-proce-p,Marion de Procé,Pierre Marion de Procé,1,1,2,administrateur,
 conchon-h,Conchon,Henri Conchon,1,1,2,administrateur,1921,1936,industries agro-alimentaires
 faure-j,Faure,J. Faure,1,1,2,administrateur,1935,1935,industries agro-alimentaires
 aubert-m-marcel,Aubert,Marcel Aubert,1,1,2,president,1930,1936,industries agro-alimentaires
-aweng-j,Aweng,Jean Aweng,1,1,2,administrateur,1930,1936,industries agro-alimentaires
+aweng-j,Aweng,Jean Aweng,1,1,2,administrateur_delegue,1930,1936,industries agro-alimentaires
 hochdoerffer-c,Hochdoerffer,Charles Hochdoerffer,1,1,2,administrateur,1930,1936,industries agro-alimentaires
 dupont-r,Dupont,Robert Dupont,1,1,1,president_directeur_general,1951,1951,industries agro-alimentaires
 dufaure-h,Dufaure,Henri Dufaure,1,1,1,administrateur,1951,1951,industries agro-alimentaires
@@ -57,8 +57,8 @@ zwang-r,Zwang,Robert Zwang,1,1,1,administrateur,1951,1951,industries agro-alimen
 rouquier-e,Rouquier,Émile Rouquier,1,1,1,administrateur,1951,1951,industries agro-alimentaires
 gaston-dreyfus-r,Gaston-Dreyfus,René Gaston-Dreyfus,1,1,1,president,1953,1953,industries agro-alimentaires
 nicolas-c,Nicolas,Charles Nicolas,1,1,1,vice_president,1953,1953,industries agro-alimentaires
-brasseries,Brasseries,Brasseries,1,1,1,administrateur,1953,1953,industries agro-alimentaires
-glacieres-de-l-indochine,glacières de l'Indochine,glacières de l'Indochine,1,1,1,administrateur,1953,1953,industries agro-alimentaires
+brasseries,Brasseries,Brasseries,1,1,1,administrateur_delegue,1953,1953,industries agro-alimentaires
+glacieres-de-l-indochine,glacières de l'Indochine,glacières de l'Indochine,1,1,1,administrateur_delegue,1953,1953,industries agro-alimentaires
 curral-j,Curral,Jean Curral,1,1,1,administrateur,1953,1953,industries agro-alimentaires
 curial-de-brevannes-a,Curial de Brévannes,Amédée Curial de Brévannes,1,1,1,administrateur,1953,1953,industries agro-alimentaires
 mialaret-f,Mialaret,François Mialaret,1,1,1,administrateur,1953,1953,industries agro-alimentaires
@@ -81,7 +81,7 @@ girardin,Girardin,Girardin,1,1,1,administrateur,1945,1945,industries agro-alimen
 dupond-r,Dupond,Robert Dupond,1,1,1,president_directeur_general,1948,1948,industries agro-alimentaires
 dufoure-h,Dufoure,H. Dufoure,1,1,1,administrateur,1948,1948,industries agro-alimentaires
 deschaumaget-j,Deschaumaget,J. Deschaumaget,1,1,1,administrateur,1948,1948,industries agro-alimentaires
-legrand-a-andre,Legrand,André Legrand,1,1,1,administrateur,1929,1929,Industries
+legrand-a-andre,Legrand,André Legrand,1,1,1,administrateur_delegue,1929,1929,Industries
 benard-g,Bénard,Georges Bénard,1,1,1,administrateur,1929,1929,Industries
 de-neufville,de Neufville,de Neufville,1,1,1,administrateur,1929,1929,Industries
 tessier-du-cros-e,Tessier du Cros,Ernest Tessier du Cros,1,1,1,administrateur,1934,1934,Industries
@@ -127,7 +127,7 @@ tassart-l,Tassart,Louis Tassart,1,1,1,president,1936,1936,industries agro-alimen
 domerc-g,Domerc,Georges Domerc,1,1,1,administrateur,1936,1936,industries agro-alimentaires
 toutee-h,Toutée,Henri Toutée,1,1,1,administrateur,1936,1936,industries agro-alimentaires
 berges-m-maurice,Bergès,Maurice Bergès,1,1,1,president,1925,1925,industries agro-alimentaires
-jacquemet-c,Jacquemet,Camille-Marcel Jacquemet,1,1,1,administrateur,1925,1925,industries agro-alimentaires
+jacquemet-c,Jacquemet,Camille-Marcel Jacquemet,1,1,1,administrateur_delegue,1925,1925,industries agro-alimentaires
 berges-m-marguerite,Bergès,Marguerite Bergès,1,1,1,administrateur,1925,1925,industries agro-alimentaires
 gros-j,Gros,J.-B. Gros,1,1,1,administrateur,1925,1925,industries agro-alimentaires
 reiss-l,Reiss,Léon Reiss,1,1,1,administrateur,1925,1925,industries agro-alimentaires

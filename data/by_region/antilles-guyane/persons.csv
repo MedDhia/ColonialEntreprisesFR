@@ -1,6 +1,6 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 munich-p,Munich,Paul Munich,5,5,8,vice_president,1931,1937,Divers; Documentation générale
-munich-j,Munich,Jean Munich,5,5,7,administrateur,1931,1937,Divers; Documentation générale
+munich-j,Munich,Jean Munich,5,5,7,administrateur_delegue,1931,1937,Divers; Documentation générale
 weiss-p-paul,Weiss,Paul Weiss; Paul Weiss. 4,5,5,6,president,1931,1937,Divers; Documentation générale
 de-bondeli-e,de Bondeli,Édouard de Bondeli,4,4,6,administrateur,1931,1937,Divers; Documentation générale
 derouet-m,Derouet,Maurice Derouet,4,4,6,administrateur,1931,1937,Divers; Documentation générale
@@ -64,14 +64,14 @@ arnaud-legasse,Arnaud-Légasse,Arnaud-Légasse,2,2,2,administrateur_delegue,1926
 pepin-p,Pépin,Pierre Pépin,2,2,2,administrateur_delegue,1926,1926,Documentation générale
 legasse-j,Légasse,Jean Légasse,2,2,2,administrateur,1926,1937,Documentation générale
 herve-j,Hervé,Joseph Hervé,2,2,2,vice_president,1937,1937,Documentation générale
-saint-leger-r,Saint-Léger,Robert Saint-Léger,2,2,2,administrateur,1937,1937,Documentation générale
+saint-leger-r,Saint-Léger,Robert Saint-Léger,2,2,2,administrateur_delegue,1937,1937,Documentation générale
 witzig-a,Witzig,Augustin Witzig,2,2,2,administrateur,1937,1937,Divers; Documentation générale
 representee-par-m-jean-munich,représentée par M. Jean Munich,représentée par M. Jean Munich,2,2,2,administrateur,1937,1937,Divers; Documentation générale
 chanove-j-jean,Chanove,Jean Chanove,2,2,2,administrateur,1937,1950,Divers; Documentation générale
 a-s,A,S. A,2,2,2,administrateur,1937,1950,Divers; Documentation générale
 alimentation,Alimentation,Alimentation,2,2,2,administrateur,1937,1937,Documentation générale
 pellissier-tanon-f,Pellissier-Tanon,Frédéric Pellissier-Tanon,2,2,2,president,1930,1937,Divers; Documentation générale
-pellissier-tanon-c,Pellissier-Tanon,Charles Pellissier-Tanon,2,2,2,administrateur,1930,1937,Divers; Documentation générale
+pellissier-tanon-c,Pellissier-Tanon,Charles Pellissier-Tanon,2,2,2,administrateur_delegue,1930,1937,Divers; Documentation générale
 gober-e,Gober,Eugène Gober,2,2,2,administrateur,1927,1937,Divers; Documentation générale
 michel-a-antoine,Michel,Antoine Michel,2,2,2,administrateur,1927,1927,Commerce; Divers
 dalloz-j,Dalloz,J. Dalloz,2,2,2,administrateur,1937,1945,
@@ -156,18 +156,18 @@ de-rivaud-o,de Rivaud,Olivier de Rivaud,1,1,2,administrateur,1922,1922,Divers; D
 dutertre-g,Dutertre,G. Dutertre,1,1,2,administrateur,1922,1922,Divers; Documentation générale
 angibeau-g,Angibeau,Gaston Angibeau,1,1,2,administrateur,1926,1937,Documentation générale
 letouze-a,Letouzé,Albert Letouzé,1,1,2,administrateur,1926,1937,Documentation générale
-pelissier-tanon-f,Pélissier-Tanon,Frédéric Pélissier-Tanon,1,1,2,administrateur,1937,1937,Documentation générale
+pelissier-tanon-f,Pélissier-Tanon,Frédéric Pélissier-Tanon,1,1,2,administrateur_delegue,1937,1937,Documentation générale
 laurent-gheerbrandt-j,Laurent Gheerbrandt,J. Laurent Gheerbrandt,1,1,2,administrateur,1937,1937,Documentation générale
 le-peletier-p,Le Peletier,Paul Le Peletier,1,1,2,administrateur,1937,1937,Documentation générale
-besse-j,Besse,Joseph Besse,1,1,2,administrateur,1937,1937,Divers; Documentation générale
+besse-j,Besse,Joseph Besse,1,1,2,administrateur_delegue,1937,1937,Divers; Documentation générale
 du-perron-g,du Perron,Gabriel du Perron,1,1,2,administrateur,1937,1937,Divers; Documentation générale
-poulalion-p,Poulalion,P. Poulalion,1,1,2,administrateur,1931,1937,Divers; Documentation générale
+poulalion-p,Poulalion,P. Poulalion,1,1,2,administrateur_delegue,1931,1937,Divers; Documentation générale
 poincon-c,Poinçon,Charles Poinçon,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
 schuhmann-l,Schuhmann,L. Schuhmann; Lucien Schuhmann,1,1,2,administrateur,1929,1937,Documentation générale; Mines et placers
 fouquet-r,Fouquet,Robert Fouquet,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
 boesch,Boesch,Boesch,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
 hueber,Hueber,Hueber,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
-devez-g,Devez,G. Devez,1,1,2,administrateur,1929,1937,Documentation générale; Mines et placers
+devez-g,Devez,G. Devez,1,1,2,administrateur_delegue,1929,1937,Documentation générale; Mines et placers
 marande,Marande,Marande,1,1,2,administrateur,1919,1937,Divers; Documentation générale
 seban-r,Seban,René Seban,1,1,2,president,1936,1937,Divers; Documentation générale
 paul-a-alexandre,Paul,Alexandre Paul,1,1,2,administrateur,1936,1937,Divers; Documentation générale
@@ -197,6 +197,7 @@ crouzel-a,Crouzel,André Crouzel,1,1,2,administrateur,1951,1951,Documentation g�
 gallay-h,Gallay,Henry Gallay,1,1,2,administrateur,1951,1951,Documentation générale; Mines et placers
 coupard-c,Coupard,Christian Coupard,1,1,2,administrateur,1951,1951,Documentation générale; Mines et placers
 brichet-c,Brichet,Camille Brichet,1,1,2,vice_president,1925,1925,Documentation générale
+mathias-a,Mathias,Arthur Mathias,1,1,2,administrateur_delegue,1925,1925,Documentation générale
 charvet,Charvet,Charvet,1,1,2,administrateur,1925,1925,Documentation générale
 cahen-g,Cahen,Georges Cahen,1,1,2,administrateur,1925,1925,Documentation générale
 guillemard-p,Guillemard,Pierre Guillemard,1,1,2,administrateur,1925,1925,Documentation générale
@@ -305,7 +306,7 @@ bacqueville-j,Bacqueville,Joël Bacqueville,1,1,1,administrateur,1937,1937,Docum
 hervet-p,Hervet,Paul Hervet,1,1,1,administrateur,1937,1937,Documentation générale
 lesca-y,Lesca,Yvon Lesca,1,1,1,administrateur,1937,1937,Documentation générale
 valatelli-g,Valatelli,Gino Valatelli,1,1,1,president,1937,1937,Documentation générale
-crussard-p,Crussard,Pierre Crussard,1,1,1,administrateur,1937,1937,Documentation générale
+crussard-p,Crussard,Pierre Crussard,1,1,1,administrateur_delegue,1937,1937,Documentation générale
 de-marchena-j,de Marchena,Jacques de Marchena,1,1,1,administrateur,1937,1937,Documentation générale
 monnier-p,Monnier,Pierre Monnier,1,1,1,administrateur,1937,1937,Documentation générale
 segrestaa-j,Segrestaa,Jean Segrestaa,1,1,1,president,1937,1937,Documentation générale
@@ -511,7 +512,6 @@ casey-d,Casey,Daniel Casey,1,1,1,administrateur,1895,1895,
 durand-l-lucien,Durand,Lucien Durand,1,1,1,administrateur,1895,1895,
 guffroy-m,Guffroy,Maurice Guffroy,1,1,1,administrateur,1895,1895,
 noel-salines-de-o,Noël [Salines de,Octave Noël [Salines de,1,1,1,president,1901,1901,
-mathias-a,Mathias,Arthur Mathias,1,1,1,administrateur_delegue,1925,1925,
 dutey-h,Dutey,H. Dutey,1,1,1,administrateur_delegue,1938,1938,
 lederlin-s,Lederlin,S. Lederlin,1,1,1,administrateur_delegue,1938,1938,
 ballis-h,Ballis,H. Ballis,1,1,1,administrateur,1938,1938,

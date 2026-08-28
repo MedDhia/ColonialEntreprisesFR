@@ -1,7 +1,7 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 baizeau-l,Baizeau,L. Baizeau; Lucien Baizeau,9,9,9,administrateur,1922,1938,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique); Industries agro-alimentaires"
 martinier,Martinier,MARTINIER; Martinier,8,8,8,administrateur,1922,1932,"Bois meubles, papier; Bâtiment et travaux publics, matériaux de construction, céramique; Commerce; Industries agro-alimentaires"
-gittens-w,Gittens,GITTENS; Gittens; W. Gittens; William Gittens; Willy Gittens,9,7,13,administrateur_delegue,1922,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Industries diverses; Mines
+gittens-w,Gittens,GITTENS; Gittens; W. Gittens; William Gittens; Willy Gittens,9,7,14,administrateur_delegue,1922,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Industries diverses; Mines
 hackenberger-p,Hackenberger,P. Hackenberger; Paul Hackenberger,6,6,12,administrateur,1911,1940,"Banques et groupes financiers, assurances; Documents généraux (par ordre chronologique); Eau, gaz, électricité (Utilities); Mines; Sociétés foncières et immobilières"
 zafiropulo-d,Zafiropulo,D. Zafiropulo; Demetrius Zafiropulo; Démétrius Zafiropulo,6,6,10,president,1925,1944,Documents généraux (par ordre chronologique); Industries diverses; Mines
 michenot-e,Michenot,Emile Michenot; Émile Michenot,7,6,8,president,1922,1938,Documents généraux (par ordre chronologique); Industries diverses; Mines
@@ -133,7 +133,8 @@ liege,Liège,Liège,2,2,3,administrateur,1922,1925,Documents généraux (par ord
 sonnery-j,Sonnery,J. Sonnery; Jean Sonnery,2,2,3,president,1925,1953,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 de-dietrich-a,de Dietrich,Albert de Dietrich,2,2,3,administrateur,1906,1925,Documents généraux (par ordre chronologique); Mines
 harth-p,Harth,Paul Harth,2,2,3,president,1925,1938,Documents généraux (par ordre chronologique); Mines
-rey-herme,Rey-Herme,Rey-Herme,2,2,3,administrateur,1902,1944,Documents généraux (par ordre chronologique); Mines
+isnel-p,Isnel,P. Isnel; Pierre Isnel,2,2,3,administrateur_delegue,1925,1938,Documents généraux (par ordre chronologique); Mines
+rey-herme,Rey-Herme,Rey-Herme,2,2,3,president,1902,1944,Documents généraux (par ordre chronologique); Mines
 bouchacourt,Bouchacourt,Bouchacourt,2,2,3,administrateur,1902,1944,Documents généraux (par ordre chronologique); Mines
 guitton,Guitton,Guitton,2,2,3,administrateur,1902,1944,Documents généraux (par ordre chronologique); Mines
 buhot-h,Buhot,H. Buhot; Henri Buhot,2,2,3,administrateur,1911,1938,"Documents généraux (par ordre chronologique); Eau, gaz, électricité (Utilities)"
@@ -168,7 +169,6 @@ de-joannis-e,de Joannis,de Joannis,2,2,2,president,1925,1925,Documents générau
 heurteau,Heurteau,Heurteau,2,2,2,president,1925,1925,Documents généraux (par ordre chronologique); Mines
 de-nervo-l,de Nervo,Léon de Nervo,2,2,2,president,1925,1925,Documents généraux (par ordre chronologique); Mines
 puerari,Puérari,Puérari,2,2,2,president,1925,1925,Documents généraux (par ordre chronologique); Mines
-mulhouse,Mulhouse,Mulhouse,2,2,2,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 naples,Naples,Naples,2,2,2,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 alexandrie,Alexandrie,Alexandrie,2,2,2,administrateur,1921,1925,Documents généraux (par ordre chronologique)
 sofia,Sofia,Sofia,2,2,2,administrateur,1925,1925,Documents généraux (par ordre chronologique)
@@ -320,13 +320,13 @@ calo,CALO,CALO,1,1,2,administrateur,1926,1926,Transports maritimes et aériens
 caltagirone-f,Caltagirone,François Caltagirone,1,1,2,administrateur,1922,1925,Documents généraux (par ordre chronologique); Industries diverses
 henri,Henri,Henri,1,1,2,administrateur,1925,1938,Documents généraux (par ordre chronologique)
 chrighton,Chrighton,Chrighton,1,1,2,administrateur,1925,1925,Documents généraux (par ordre chronologique)
+mulhouse,Mulhouse,Mulhouse,2,1,2,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
 beyrouth,Beyrouth,Beyrouth,2,1,2,administrateur,1921,1925,Documents généraux (par ordre chronologique)
-isnel-p,Isnel,Pierre Isnel,1,1,2,president,1925,1938,Documents généraux (par ordre chronologique)
 tricon-m,Tricon,Maurice Tricon,1,1,2,administrateur,1925,1925,Documents généraux (par ordre chronologique); Mines
 gerini-d,Gerini,Dante Gerini,1,1,2,administrateur,1925,1925,Documents généraux (par ordre chronologique); Mines
 boissier-g,Boissier,Gabriel Boissier,1,1,2,administrateur,1925,1944,Documents généraux (par ordre chronologique); Mines
 jourdanne-a,Jourdanne,A. Jourdanne; Alfred Jourdanne,2,1,2,directeur,1926,1938,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles"
-zafiropoulo-d,Zafiropoulo,D. Zafiropoulo,1,1,2,administrateur,1938,1938,Documents généraux (par ordre chronologique); Mines
+zafiropoulo-d,Zafiropoulo,D. Zafiropoulo,1,1,2,president,1938,1938,Documents généraux (par ordre chronologique); Mines
 concessions-de-djebel-touila,Concessions de Djebel- Touila,Concessions de Djebel- Touila; Concessions de Djebel-Touila,1,1,2,administrateur,1938,1938,Documents généraux (par ordre chronologique); Mines
 pouquet-m,Pouquet,Maurice Pouquet,1,1,2,president,1938,1938,Documents généraux (par ordre chronologique); Mines
 tronchere,Tronchère,Tronchère,1,1,2,president,1938,1938,Documents généraux (par ordre chronologique); Mines
@@ -340,7 +340,7 @@ pereire-e,Pereire,Eugène Pereire,1,1,2,president,1892,1897,"Banques et groupes 
 forti-j,Forti,Jules Forti,1,1,2,administrateur_delegue,1892,1897,"Banques et groupes financiers, assurances"
 bloch-l,Bloch,Léonce Bloch,1,1,2,administrateur,1892,1897,"Banques et groupes financiers, assurances"
 halphon-s,Halphon,S. Halphon,1,1,2,administrateur,1892,1897,"Banques et groupes financiers, assurances"
-archawski-w,Archawski,W. Archawski,1,1,2,administrateur,1937,1940,"Banques et groupes financiers, assurances"
+archawski-w,Archawski,W. Archawski,1,1,2,administrateur_delegue,1937,1940,"Banques et groupes financiers, assurances"
 angelini,Angelini,Angelini,1,1,2,administrateur,1937,1940,"Banques et groupes financiers, assurances"
 rigal-l,Rigal,L. Rigal,1,1,2,administrateur,1937,1940,"Banques et groupes financiers, assurances"
 dangelzer-c,Dangelzer,Ch. Dangelzer,1,1,2,president,1948,1951,"Banques et groupes financiers, assurances"
@@ -484,15 +484,7 @@ boulogne,Boulogne,Boulogne,1,1,1,administrateur,1925,1925,Documents généraux (
 fecamp,Fécamp,Fécamp,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 paimpol,Paimpol,Paimpol,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 trouvay-m,Trouvay,Marcel Trouvay,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-caen-l,Caen,Caen,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-lorient,Lorient,Lorient,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-tours,Tours,Tours,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-cognac,Cognac,Cognac,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-charleville,Charleville,Charleville,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-reims,Reims,Reims,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-belfort,Belfort,Belfort,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-etc-feutre-asphalte-pour-renforcer-les-toitures,etc. Feutre asphalté pour renforcer les toitures,etc. Feutre asphalté pour renforcer les toitures,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-herrenschmidt-p,Herrenschmidt,Herrenschmidt,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
+herrenschmidt-p,Herrenschmidt,Herrenschmidt,1,1,1,president,1925,1925,Documents généraux (par ordre chronologique)
 scheidecker-j,Scheidecker,J. Scheidecker,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 schwartz-j-joseph,Schwartz,Joseph Schwartz,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 de-bary-a,de Bary,Albert de Bary,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
@@ -549,10 +541,11 @@ ladreyt,Ladreyt,Ladreyt,1,1,1,administrateur,1944,1944,Documents généraux (par
 weill,Weill,Weill,1,1,1,administrateur,1944,1944,Documents généraux (par ordre chronologique)
 r-weill-fils-s,R. Weill fils,Sté R. Weill fils,1,1,1,administrateur,1944,1944,Documents généraux (par ordre chronologique)
 andre-r,André,Robert André,1,1,1,president,1921,1921,Documents généraux (par ordre chronologique)
+poulain-r,Poulain,Robert Poulain,1,1,1,administrateur_delegue,1921,1921,Documents généraux (par ordre chronologique)
 serge-a,Serge,André Serge,1,1,1,president,1921,1921,Documents généraux (par ordre chronologique)
 alcan-p,Alcan,Pierre Alcan,1,1,1,president,1921,1921,Documents généraux (par ordre chronologique)
 muraton-g,Muraton,Gaston Muraton,1,1,1,president,1921,1921,Documents généraux (par ordre chronologique)
-gerard-g-gabriel,Gérard,Gabriel Gérard,1,1,1,administrateur,1921,1921,Documents généraux (par ordre chronologique)
+gerard-g-gabriel,Gérard,Gabriel Gérard,1,1,1,president,1921,1921,Documents généraux (par ordre chronologique)
 thiebaud-e,Thiébaud,Émile Thiébaud,1,1,1,administrateur_delegue,1921,1921,Documents généraux (par ordre chronologique)
 gassier-m-marie,Gassier,Marie-Louis Gassier,1,1,1,administrateur,1921,1921,Documents généraux (par ordre chronologique)
 magnan-g,Magnan,Gabriel Magnan,1,1,1,administrateur,1921,1921,Documents généraux (par ordre chronologique)
@@ -584,7 +577,8 @@ chaudronnerie-ateliers-otis-pifre,chaudronnerie.. * ATELIERS OTIS-PIFRE,chaudron
 le-play-p,Le Play,P. Le Play,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 level-j,Level,J. Level,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 bouchayer-h,Bouchayer,H. Bouchayer,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
-lebon-a,Lebon,A. Lebon,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
+lebon-a,Lebon,A. Lebon,1,1,1,president,1938,1938,Documents généraux (par ordre chronologique)
+gronier-e,Gronier,E. Gronier,1,1,1,administrateur_delegue,1938,1938,Documents généraux (par ordre chronologique)
 regnault-e,Regnault,E. Regnault,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 saint-rene-tallandier-g,Saint-René Tallandier,G. Saint-René Tallandier,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 delarue-j,Delarue,J. Delarue,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
@@ -594,7 +588,7 @@ henri-c,Henri,C. Henri,1,1,1,administrateur,1938,1938,Documents généraux (par 
 guebbas-m,Guebbas,Mohamedel Guebbas,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 borgeaud-a,Borgeaud,A. Borgeaud,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 warot-a,Warot,A. Warot,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
-ozanne-o,Ozanne,O. Ozanne,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
+ozanne-o,Ozanne,O. Ozanne,1,1,1,president,1938,1938,Documents généraux (par ordre chronologique)
 legrand-girarde-e,Legrand-Girarde,Legrand-Girarde,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 heuzey,Heuzey,Heuzey,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
 brossette,Brossette,Brossette,1,1,1,administrateur,1938,1938,Documents généraux (par ordre chronologique)
@@ -1269,6 +1263,15 @@ laurent-j,Laurent,J. Laurent,1,1,1,administrateur,1945,1945,Mines
 laurent-j-jean,Laurent,Jean Laurent,1,1,1,administrateur,1945,1945,Mines
 bernard-p,Bernard,Paul Bernard,1,1,1,administrateur,1947,1947,Mines
 bessis-j,Bessis,J. Bessis,1,0,2,directeur_general,1938,1938,"Banques et groupes financiers, assurances; Documents généraux (par ordre chronologique)"
+jedeau-g,Jédeau,Gaston Jédeau,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+caen-l,Caen,Caen,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+lorient,Lorient,Lorient,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+tours,Tours,Tours,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+cognac,Cognac,Cognac,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+charleville,Charleville,Charleville,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+reims,Reims,Reims,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+belfort,Belfort,Belfort,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
+etc-feutre-asphalte-pour-renforcer-les-toitures,etc. Feutre asphalté pour renforcer les toitures,etc. Feutre asphalté pour renforcer les toitures,1,0,1,directeur_general,1925,1925,Documents généraux (par ordre chronologique)
 de-talhouet-f,de Talhouët,François de Talhouët,1,0,1,commissaire_aux_comptes,1944,1944,Documents généraux (par ordre chronologique)
 dutreil-c,Dutreil,Claude Dutreil,1,0,1,commissaire_aux_comptes,1944,1944,Documents généraux (par ordre chronologique)
 antinea,Antinea,Antinea,1,0,1,commissaire_aux_comptes,1944,1944,Documents généraux (par ordre chronologique)

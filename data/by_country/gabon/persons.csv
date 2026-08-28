@@ -12,7 +12,6 @@ enjalbert-p,Enjalbert,P. Enjalbert; Paul Enjalbert,3,3,7,administrateur,1909,193
 vergnes-a,Vergnes,Auguste Vergnes; Vergnes,3,3,5,administrateur,1909,1938,Industrie; Sociétés commerciales
 vacheret-c,Vacheret,Ch. Vacheret; Charles Vacheret,3,3,4,administrateur,1921,1951,Agro-alimentaire; Industrie
 superville-m,Superville,Maurice Superville; Superville,3,3,3,administrateur,1916,1926,Agro-alimentaire; Industrie
-meyer-a-alfred,Meyer,Alfred Meyer,3,3,3,administrateur,1919,1928,Agro-alimentaire; Industrie
 de-lustrac-j,de Lustrac,Jean de Lustrac,3,3,3,administrateur,1936,1951,Industrie
 schmidt-m,Schmidt,Max Schmidt; Max-Roger Schmidt,3,3,3,administrateur,1924,1936,Industrie
 videau-j,Videau,Jean Videau,3,3,3,president,1929,1931,Industrie
@@ -32,6 +31,7 @@ durand-reville-l,Durand-Reville,L. Durand-Reville; Luc Durand-Reville,2,2,4,admi
 raoul-duval-j,Raoul-Duval,J. Raoul-Duval; Jean Raoul-Duval,2,2,4,administrateur,1938,1948,Industrie
 hauser-e,Hauser,E. Hauser; Ervin Hauser,2,2,3,administrateur,1951,1953,Industrie
 fondere-a-alphonse,Fondère,Alphonse Fondère,2,2,3,administrateur,1918,1926,Industrie
+meyer-a-alfred,Meyer,Alfred Meyer,3,2,3,directeur_general,1919,1928,Agro-alimentaire; Industrie
 chassedieu-r,Chassedieu,Chassedieu,2,2,3,administrateur,1948,1959,Agro-alimentaire; Industrie
 debionne-e,Debionne,Debionne; Émile Debionne,2,2,3,president,1922,1938,Sociétés commerciales
 hayere-a,Hayère,André Hayère,2,2,3,administrateur_delegue,1929,1936,Industrie
@@ -181,10 +181,11 @@ oudin-a,Oudin,Alfred Oudin,1,1,1,administrateur,1899,1899,Sociétés commerciale
 comte-reveliere-de-la-reveliere-e,comte Revelière de la Revelière,Ernest-Jean-Nicolas comte Revelière de la Revelière,1,1,1,administrateur,1899,1899,Sociétés commerciales
 reveliere-de-la-reveliere,Revelière de la Revelière,Revelière de la Revelière,1,1,1,administrateur,1899,1899,Sociétés commerciales
 wegimont,Wégimont,Wégimont,1,1,1,administrateur,1899,1899,Sociétés commerciales
+lamarque,Lamarque,Lamarque,1,1,1,administrateur,1899,1899,Sociétés commerciales
 ruffy,Ruffy,Ruffy,1,1,1,administrateur,1899,1899,Sociétés commerciales
 du-vivier-de-streel-e,du Vivier de Streel,Edmond du Vivier de Streel,1,1,1,president,1922,1922,Sociétés commerciales
 desouches-b,Desouches,Bernard Desouches,1,1,1,president,1937,1937,Sociétés commerciales
-martin-s,Martin,Simon Martin,1,1,1,administrateur,1937,1937,Sociétés commerciales
+martin-s,Martin,Simon Martin,1,1,1,administrateur_delegue,1937,1937,Sociétés commerciales
 desouches-p,Desouches,P. B. Desouches,1,1,1,administrateur,1937,1937,Sociétés commerciales
 du-vivier-de-streel-p,du Vivier de Streel,Pierre du Vivier de Streel,1,1,1,president,1938,1938,Sociétés commerciales
 desouches-a,Desouches,Albert Desouches,1,1,1,president,1938,1938,Sociétés commerciales
@@ -206,6 +207,7 @@ wenzinger,Wenzinger,Wenzinger,1,1,1,administrateur,1930,1930,Industrie
 otlet,Otlet,Otlet,1,1,1,administrateur,1899,1899,Agro-alimentaire
 edm-caze,Edm. Caze,Edm. Caze,1,1,1,administrateur,1900,1900,Agro-alimentaire
 plasse-j,Plasse,J. Plasse,1,1,1,administrateur,1900,1900,Agro-alimentaire
+montagne-f,Montagne,F. Montagne,1,1,1,administrateur,1900,1900,Agro-alimentaire
 obtenue-par-m-izambert,obtenue par M. Izambert,obtenue par M. Izambert,1,1,1,administrateur,1900,1900,Agro-alimentaire
 ovigui,Ovigui,Ovigui,1,1,1,administrateur,1900,1900,Agro-alimentaire
 schulz-j,Schulz,Jean Schulz,1,1,1,administrateur,1899,1899,Sociétés commerciales
@@ -257,6 +259,7 @@ lambert-e,Lambert,Émile Lambert,1,1,1,president,1925,1925,Industrie
 rocca,Rocca,Rocca,1,1,1,president,1925,1925,Industrie
 rocca-j,Rocca,J.-B. Rocca,1,1,1,president,1925,1925,Industrie
 voirin-j,Voirin,Jules Voirin,1,1,1,president,1925,1925,Industrie
+veyrat-a,Veyrat,A. Veyrat,1,1,1,president,1925,1925,Industrie
 ing-a,ing. A,ing. A,1,1,1,president,1925,1925,Industrie
 de-caplane-a-neuilly-sur-seine-p,de Caplane à Neuilly-sur-Seine,Pierre-Eugène de Caplane à Neuilly-sur-Seine,1,1,1,administrateur,1924,1924,Industrie
 girodias-l,Girodias,Léon Girodias,1,1,1,president,1936,1936,Industrie
@@ -342,7 +345,7 @@ chauviere,Chauvière,Chauvière,1,1,1,administrateur,,,Industrie
 giesecke,Giesecke,Giesecke,1,1,1,administrateur,,,Industrie
 cochet-g,Cochet,Geoffroy Cochet,1,1,1,administrateur,,,Industrie
 montet-p,Montet. 2,P. Montet. 2,1,1,1,administrateur,,,Industrie
-lebevre-c,Lebèvre,Ch. Lebèvre,1,1,1,administrateur,1931,1931,Industrie
+lebevre-c,Lebèvre,Ch. Lebèvre,1,1,1,administrateur_delegue,1931,1931,Industrie
 benedic-e-edouard,Bénédic,Édouard Bénédic,1,1,1,president,,,Mines
 bourceret,Bourceret,Bourceret,1,1,1,administrateur,1948,1948,Industrie
 dugueyt-m,Dugueyt,Maurice Dugueyt,1,1,1,administrateur,1924,1924,Industrie

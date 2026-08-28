@@ -120,6 +120,7 @@ colonialebia,salinscapvert,Compagnie Coloniale de la Bia,Salins du Cap Vert,4,ca
 africainecommerce,electricitesenegal,Compagnie Africaine de Commerce,Compagnie d'Électricité du Sénégal,4,delmas-p-philippe; frere; frere-m; levy
 etablissementsmaurelprom,messageriesafricaines,Établissements Maurel et Prom,Messageries africaines,4,durand-reville-l; maurel-j-joseph; maurel-l-lucien; maurel-r-roger
 banqueafriqueoccidentale,socbriqueteriesbamako,Banque de l'Afrique occidentale,Soc. des Briqueteries de BAMAKO,4,boyer-p; maurel-l; schwob-g; simon-s
+anciensetablissementschpeyrissaccoloniale,anciensetablissementschpeyrissaccolonialeafrique,Anciens Établissements Ch. Peyrissac et Compagnie (Compagnie coloniale de,Anciens Établissements Ch. Peyrissac et Cie (Cie coloniale de l'Afrique,4,bourrieu-g; goux-p; peyrissac-f; peyrissac-l
 comptoirsafricains,cotonafricain,Compagnie Générale des Comptoirs africains,"Société du Coton africain, puis Coton et des textiles africains",4,calcat-f-fernand; delmas-p-philippe; levy-g; mizraki-m
 comptoirsafricains,kong,Compagnie Générale des Comptoirs africains,Compagnie française de Kong,4,calcat-f-fernand; callot-t; levy-g; mizraki-m
 forestiereindenie,kong,Compagnie Forestière de l'Indénié,Compagnie française de Kong,4,calcat-f-fernand; callot-t; levy-g; mizraki-m
@@ -132,8 +133,8 @@ kokumbocoltd,kong,Kokumbo Co. Ltd,Compagnie française de Kong,4,halphen-j-julie
 comptoirindustrielagricolefrancecolonies,comptoirrepresentationsafrique,COMPTOIR INDUSTRIEL ET AGRICOLE DE FRANCE ET DES COLONIES,Comptoir général de représentations pour l'Afrique,4,montet-p; richard-e; richard-m-marius; viriville-g
 immobilierethies,immobilierethies20,"Société Immobilière de Thiès, puis Établissements français de l’Ouest-Africain",Société immobilière de Thiès 20,4,froment-guieysse-g; leme-r; picot-h; richard-m-marius
 commercialeafricaine,commercialeafricainesuitepascalbuhan,Commerciale Africaine,"Nouvelle Société commerciale africaine, suite de Pascal Buhan et Cie",4,buhan-p-pascal; exportation-au-senegal; thube-a; thube-fils-g
-commercialeafricaine,coteivoire,Commerciale Africaine,Compagnie Française de la Côte d'Ivoire,4,deveaud-p; faure-a; leibosis-l; thube-a
 commercialeafricainesuitepascalbuhan,navigationpaquet,"Nouvelle Société commerciale africaine, suite de Pascal Buhan et Cie",Compagnie de navigation Paquet,4,buhan-p; exportation-au-senegal; thube-a; thube-fils-g
+commercialeafricaine,coteivoire,Commerciale Africaine,Compagnie Française de la Côte d'Ivoire,4,deveaud-p; faure-a; leibosis-l; thube-a
 coteivoire,niger,Compagnie Française de la Côte d'Ivoire,Compagnie du Niger français,4,deveaud-p; faure-a; leibosis-l; thube-a
 kokumbocoltd,minierefoncierebandama,Kokumbo Co. Ltd,Société minière et foncière du Bandama,4,frot-h; halphen-j-julien; oppenheim-s; simonnet-g
 agricoleindustriellesoudan,alsaciennecoteivoire,"Compagnie Agricole et Industrielle du Soudan, puis Agricole et Industrielle de l'Ouest africain",Société Alsacienne de la Côte d’Ivoire,4,bedouet-j; begouen-m; godet-r; renoux-l
@@ -201,7 +202,6 @@ messageriesafricaines,salinssinesaloum,Messageries africaines,Salins du Sine Sal
 banqueafriqueoccidentale,scieriesafricaines,Banque de l'Afrique occidentale,Compagnie des Scieries africaines,3,fourn-g; schwob-d-hericourt-g; schwob-g
 afriquecongo,intercontinentaleentreprisesreunies,Afrique et Congo,Société Intercontinentale d'entreprises réunies,3,fourneau-a; guynet-w; vigouroux-l
 commercialeindustriellepalmeraiesafricaines,plantationstanoe,Société commerciale et industrielle des palmeraies africaines,Société des plantations de la Tanoé,3,allibaud-j; desouches-b; weber-j
-anciensetablissementschpeyrissaccoloniale,anciensetablissementschpeyrissaccolonialeafrique,Anciens Établissements Ch. Peyrissac et Compagnie (Compagnie coloniale de,Anciens Établissements Ch. Peyrissac et Cie (Cie coloniale de l'Afrique,3,bourrieu-g; goux-p; peyrissac-l
 bordelaisecomptoirsafricains,cotonafricain,Compagnie Bordelaise des Comptoirs africains,"Société du Coton africain, puis Coton et des textiles africains",3,calcat-f-fernand; delmas-p-philippe; levy-g
 bordelaisecomptoirsafricains,kong,Compagnie Bordelaise des Comptoirs africains,Compagnie française de Kong,3,calcat-f-fernand; katz-m; levy-g
 comptoirsafricains,plantationselimacafeiersaboisso,Compagnie Générale des Comptoirs africains,"Société des Plantations d'Élima, caféiers à Aboisso",3,calcat-f-fernand; levy-g; mizraki-m
@@ -242,12 +242,12 @@ bordeauxdirectionnantes,commercialeafricainesuitepascalbuhan,BORDEAUX (Direction
 bordeauxdirectionnantes,socminierenigerguinee,BORDEAUX (Direction à NANTES,Soc. MINIÈRE NIGER-GUINÉE,3,buhan-p-pascal; thube-a; thube-fils-g
 commercialeafricaine,socminierenigerguinee,Commerciale Africaine,Soc. MINIÈRE NIGER-GUINÉE,3,buhan-p-pascal; thube-a; thube-fils-g
 commercialeafricainesuitepascalbuhan,socminierenigerguinee,"Nouvelle Société commerciale africaine, suite de Pascal Buhan et Cie",Soc. MINIÈRE NIGER-GUINÉE,3,buhan-p-pascal; thube-a; thube-fils-g
+commercialeafricaine,navigationpaquet,Commerciale Africaine,Compagnie de navigation Paquet,3,exportation-au-senegal; thube-a; thube-fils-g
 aboisso,commercialeafricaine,ABOISSO,Commerciale Africaine,3,deveaud-p; faure-a; thube-a
 aboisso,coteivoire,ABOISSO,Compagnie Française de la Côte d'Ivoire,3,deveaud-p; faure-a; thube-a
 aboisso,miniereniger,ABOISSO,Société Minière du Niger français,3,deveaud-p; faure-a; thube-a
 aboisso,niger,ABOISSO,Compagnie du Niger français,3,deveaud-p; faure-a; thube-a
 commercialeafricaine,miniereniger,Commerciale Africaine,Société Minière du Niger français,3,deveaud-p; faure-a; thube-a
-commercialeafricaine,navigationpaquet,Commerciale Africaine,Compagnie de navigation Paquet,3,exportation-au-senegal; thube-a; thube-fils-g
 coteivoire,miniereniger,Compagnie Française de la Côte d'Ivoire,Société Minière du Niger français,3,deveaud-p; faure-a; thube-a
 miniereniger,niger,Société Minière du Niger français,Compagnie du Niger français,3,deveaud-p; faure-a; thube-a
 palmador,palmador1,Société Palmador,Société Palmador 1,3,de-logiviere-h; eichenberger-f; gardissal-m
@@ -324,12 +324,14 @@ eauxelectriciteouestafricain,unionhydroelectriqueafricaine,Eaux et électricité
 societeanonymedesanciensetablissementsjulesburki,transportsmaritimesafriqueoccidentalectm,Société anonyme des Anciens Établissements Jules Burki,Cie de transports maritimes de l'Afrique occidentale Française (C.T.M. de,3,colas-e; nicol-l; vidal-l
 diourbel,exploitationsminieresafriqueoccidentale,DIOURBEL,Exploitations minières en Afrique Occidentale,3,baer-e; bryce-doyle-d; de-breteuil-c
 exploitationsminieresafriqueoccidentale,guineennerecherchesexploitationsminieres,Exploitations minières en Afrique Occidentale,Société Guinéenne de Recherches et d'exploitations minières,3,baer-e; bryce-doyle-d; de-breteuil-c
+recherchesetudesminieresafriquecentrale,recherchesexploitationsminieresafriquecentrale,Société de Recherches et d'études minières pour l'Afrique centrale,Société de recherches et d'exploitations minières pour l'Afrique centrale,3,baer-e; bastid-p-pierre; catalogne-e
 kaolack,occidentaleafricaine,KAOLACK,L'Occidentale Africaine,3,bocquet-j; geraud-l; vigne-r
 agricolecommercialeindustriellebadikaha,foncierecoteafrique,"Compagnie agricole, commerciale et industrielle de Badikaha",Foncière de la Côte d'Afrique,3,castres-saint-martin-g; tanqueray-g; vezin-m
 agricolecommercialeindustriellebadikahacacib,foncierecoteafrique,"Compagnie Agricole, Commerciale et Industrielle de Badikaha CACIB)",Foncière de la Côte d'Afrique,3,castres-saint-martin-g; tanqueray-g; vezin-m
 creditfoncierafrique,foncierecoteafrique,Crédit foncier de l'Afrique française,Foncière de la Côte d'Afrique,3,castres-saint-martin-g; tanqueray-g; vezin-m
 culturescoteivoire,navaledelmasvieljeux,Cie de cultures de la Côte-d'Ivoire,Société navale Delmas-Vieljeux,3,roullet-g; vieljeux-c; vieljeux-p
 delmasvieljeux,navaledelmasvieljeux,Cie Delmas-Vieljeux,Société navale Delmas-Vieljeux,3,roullet-g; vieljeux-c; vieljeux-p
+cafescoteivoire,cafesproduitscoloniauxcapro,Société française des Cafés de la Côte-d'Ivoire,« Cafés et produits coloniaux français » CAPRO,3,deloffre-g; deloffre-p; lemaitre-r
 cafesproduitscoloniauxcapro,forestiereindenie,« Cafés et produits coloniaux français » CAPRO,Compagnie Forestière de l'Indénié,3,deloffre-g; lemaitre-r; pognon-l
 cafescoteivoire,plantationselima,Société française des Cafés de la Côte-d'Ivoire,Plantations d'Élima,3,deloffre-g; faucheux-j; guibert-g-georges
 cafescoteivoire,plantationselimacafeiersaboisso,Société française des Cafés de la Côte-d'Ivoire,"Société des Plantations d'Élima, caféiers à Aboisso",3,deloffre-g; faucheux-j; guibert-g-georges
@@ -434,8 +436,8 @@ senegal,senegal10,Compagnie du Sénégal,« Sénégal » 10,2,delmas-p-philippe;
 etablissementsbartheslesieur,officecommissionafrique,Établissements Barthès et Lesieur,Office de Commission de l'Afrique française,2,barthes-c; cladiere-v
 etablissementsmaurelprom,socfranccolonisationmacinaniger,Établissements Maurel et Prom,Soc. an. Franç. de Colonisation MACINA-NIGER,2,maurel-j-jean; maurel-j-joseph
 bordeauxdirectionnantes,navigationpaquet,BORDEAUX (Direction à NANTES,Compagnie de navigation Paquet,2,thube-a; thube-fils-g
-commercialefruitscoloniaux,messageriesafricaines,Société commerciale des fruits coloniaux,Messageries africaines,2,decron-c; thube-a
 navigationpaquet,socminierenigerguinee,Compagnie de navigation Paquet,Soc. MINIÈRE NIGER-GUINÉE,2,thube-a; thube-fils-g
+commercialefruitscoloniaux,messageriesafricaines,Société commerciale des fruits coloniaux,Messageries africaines,2,decron-c; thube-a
 africaineetudescommercialesindustrielles,marcelsimon,Société africaine d'études commerciales et industrielles,Marcel Simon,2,gaudart; mandois-e
 commercialeouestafricain,plantationstanoe,Société Commerciale de l'Ouest-Africain,Société des plantations de la Tanoé,2,carre-r; poncin-h
 agricoleafricaine,ouestafricain,Société Agricole Africaine,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],2,angoulvant-g; fatio-h
@@ -542,12 +544,12 @@ dakarsoutes,senegal,« Dakar-Soutes »,Compagnie du Sénégal,2,olivier-m-mauric
 industriellecoloniale,unionelectriquecoloniale,Industrielle Coloniale,"Union électrique coloniale, puis Union électrique d’outre-mer",2,hainglaise-p; lessault-s
 kokumbo,miniereindustrielleimmobilierecoteivoire,KOKUMBO,"Minière, Industrielle et Immobilière de la Côte-d'Ivoire",2,berger; tezier-h
 africainetransportstropicaux,silicocalcaireafricaine,Société africaine des Transports tropicaux,La Silico-Calcaire africaine,2,estienne-g; roques-j-jacques
+guineennerecherchesexploitationsminieres,recherchesexploitationsminieresafriquecentrale,Société Guinéenne de Recherches et d'exploitations minières,Société de recherches et d'exploitations minières pour l'Afrique centrale,2,baer-e; dermody-g
 diourbel,electriqueindustriellebaoldiourbel,DIOURBEL,"Société Électrique et Industrielle du Baol, Diourbel",2,jessula-d; pradon-m
 agboville,grandlahou,AGBOVILLE,GRAND-LAHOU,2,mounier-a; mounier-p
 colonialecoteivoire,navaledelmasvieljeux,Compagnie Coloniale de la Côte-d’Ivoire,Société navale Delmas-Vieljeux,2,vieljeux-c; vieljeux-p
 aboisso,cafesproduitscoloniauxcapro,ABOISSO,« Cafés et produits coloniaux français » CAPRO,2,deloffre-g; lemaitre-r
 aboisso,forestiereindenie,ABOISSO,Compagnie Forestière de l'Indénié,2,deloffre-g; lemaitre-r
-cafescoteivoire,cafesproduitscoloniauxcapro,Société française des Cafés de la Côte-d'Ivoire,« Cafés et produits coloniaux français » CAPRO,2,deloffre-g; lemaitre-r
 cafescoteivoire,forestiereindenie,Société française des Cafés de la Côte-d'Ivoire,Compagnie Forestière de l'Indénié,2,deloffre-g; lemaitre-r
 cafesproduitscoloniauxcapro,plantationshuileriesbingerville,« Cafés et produits coloniaux français » CAPRO,Société des Plantations et huileries de Bingerville,2,lemaitre-r; pognon-l
 comptoirimportationboisafricains,forestiereindenie,Comptoir d'importation des bois africains,Compagnie Forestière de l'Indénié,2,dudet-e; lemaitre-r
@@ -573,7 +575,6 @@ africainerepresentationsindustriellescommerciales,yoniakolente,Société africai
 africainerepresentationsindustriellescommerciales,yoniakolentekolente,Société africaine française de représentations industrielles et commerciales,"« La Yonia-Kolente », KOLENTÉ",2,chanove-j-jean; de-bressieux-r
 africainegrandstravauxest,entreprisecentreafrique,Sté africaine des Grands travaux de l'Est,Entreprise du Centre-Afrique,2,vichot-j; william-b
 alsaciennecoteivoire,kaolack,Société Alsacienne de la Côte d’Ivoire,KAOLACK,2,bocquet-j; bourgeois-gavardin-j
-recherchesetudesminieresafriquecentrale,recherchesexploitationsminieresafriquecentrale,Société de Recherches et d'études minières pour l'Afrique centrale,Société de recherches et d'exploitations minières pour l'Afrique centrale,2,bastid-p-pierre; catalogne-e
 banqueafriqueoccidentale,socfranccolonisationmacinaniger,Banque de l'Afrique occidentale,Soc. an. Franç. de Colonisation MACINA-NIGER,2,maurel-e; prom-l
 commercialeafricaine,frseafriqueoccidentale,Commerciale Africaine,Cie frse de l'AFRIQUE OCCIDENTALE,2,bissao; kaolack
 consolidatedgoldfieldsivorycoast,minierebondoukoucoteivoire,The Consolidated Goldfields of the Ivory Coast,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,2,boucher-e; richard-j
@@ -1391,6 +1392,7 @@ afriquecongo,unionelectriquecoloniale,Afrique et Congo,"Union électrique coloni
 afriquecongo,entreprisesafricaines,Afrique et Congo,"Société d'entreprises africaines, puis Société d'entreprises africaines et Matériel colonial réunis",1,guynet-d
 alminko,huileriessavonneriesouestafricain,« Alminko »,Huileries et savonneries de l'Ouest africain,1,durbec-h
 anciensetablissementschpeyrissac,anciensetablissementschpeyrissaccoloniale,Anciens Établissements Ch. Peyrissac et Cie,Anciens Établissements Ch. Peyrissac et Compagnie (Compagnie coloniale de,1,peyrissac-f
+anciensetablissementschpeyrissac,anciensetablissementschpeyrissaccolonialeafrique,Anciens Établissements Ch. Peyrissac et Cie,Anciens Établissements Ch. Peyrissac et Cie (Cie coloniale de l'Afrique,1,peyrissac-f
 lesieurafrique,officecommissionafrique,Lesieur-Afrique,Office de Commission de l'Afrique française,1,bastin-j
 baltivent,unionsenegalaiseindustriesmaritimes,Compagnie Baltivent,Union sénégalaise d'industries maritimes,1,venture-l
 drogueriesafricainesmanufacturesmatieres,plantationssorotona,Compagnie des drogueries africaines et Manufactures de Matières,Société des Plantations de Sorotona,1,tallon-p
@@ -1489,9 +1491,6 @@ miniereafema,miniereouestafricaine,Compagnie Minière de l’Afema,Compagnie min
 miniereafema,miniereouestafricaineaboisso,Compagnie Minière de l’Afema,"Compagnie Minière ouest-africaine, Aboisso",1,lejeune-c
 comptoirproduitsafricains,etablissementsroucharde,Comptoir des Produits africains,Société anon. des Établissements Rouchard (S.A.E,1,cremieu-alcan-e
 comptoirproduitsafricains,rouchard,Comptoir des Produits africains,"Rouchard, puis S.A. des Éts Rouchard",1,cremieu-alcan-e
-comptoirproduitsafricains,unioncomptoirsoutremerunicomer,Comptoir des Produits africains,Union des Comptoirs d'Outre-Mer UNICOMER,1,cremieu-alcan-e
-etablissementsroucharde,unioncomptoirsoutremerunicomer,Société anon. des Établissements Rouchard (S.A.E,Union des Comptoirs d'Outre-Mer UNICOMER,1,cremieu-alcan-e
-rouchard,unioncomptoirsoutremerunicomer,"Rouchard, puis S.A. des Éts Rouchard",Union des Comptoirs d'Outre-Mer UNICOMER,1,cremieu-alcan-e
 commercialefruitscoloniaux,sotorra,Société commerciale des fruits coloniaux,A. Sotorra,1,chavanel-e
 auxiliairecommerceafricain,commercialesoudan,Société auxiliaire de commerce africain,Société commerciale du Soudan français,1,hoos-w
 commercialesoudan,commercialesoudanrotterdam,Société commerciale du Soudan français,"Société commerciale du Soudan français, ROTTERDAM",1,hoos-w
@@ -1546,6 +1545,11 @@ francocolonialetravauxpublicsmaritimes,omniumroutierouestafricain,Cie franco-col
 minessenegambie,salinscapvert,Compagnie des Mines de Sénégambie,Salins du Cap Vert,1,faroux-j
 commercialeindustriellecoteafrique,societeanonymedesanciensetablissementsjulesburki,Société Commerciale et Industrielle de la Côte d'Afrique,Société anonyme des Anciens Établissements Jules Burki,1,monneron-p
 commercialeindustriellecoteafrique,transittransportsafrique,Société Commerciale et Industrielle de la Côte d'Afrique,Société anon. de transit et de transports en Afrique,1,monneron-p
+diourbel,recherchesetudesminieresafriquecentrale,DIOURBEL,Société de Recherches et d'études minières pour l'Afrique centrale,1,baer-e
+diourbel,recherchesexploitationsminieresafriquecentrale,DIOURBEL,Société de recherches et d'exploitations minières pour l'Afrique centrale,1,baer-e
+exploitationsminieresafriqueoccidentale,recherchesetudesminieresafriquecentrale,Exploitations minières en Afrique Occidentale,Société de Recherches et d'études minières pour l'Afrique centrale,1,baer-e
+exploitationsminieresafriqueoccidentale,recherchesexploitationsminieresafriquecentrale,Exploitations minières en Afrique Occidentale,Société de recherches et d'exploitations minières pour l'Afrique centrale,1,baer-e
+guineennerecherchesexploitationsminieres,recherchesetudesminieresafriquecentrale,Société Guinéenne de Recherches et d'exploitations minières,Société de Recherches et d'études minières pour l'Afrique centrale,1,baer-e
 brasseriesouestafricain,colonialecoteguinee,Société des Brasseries de l'Ouest Africain,Société Coloniale française de la Côte de Guinée,1,dreyfus
 agricoleindustriellesoudan,brasseriesouestafricain,"Compagnie Agricole et Industrielle du Soudan, puis Agricole et Industrielle de l'Ouest africain",Société des Brasseries de l'Ouest Africain,1,dreyfus-g
 brasseriescoteivoire,comptoirproduitsafricains,Société des Brasseries de la Côte-d'Ivoire,Comptoir des Produits africains,1,kreiss-p
@@ -1728,7 +1732,6 @@ africainegrandstravauxest,commercialesoudanrotterdam,Sté africaine des Grands t
 auxiliairecommerceafricain,culturecotonniereniger,Société auxiliaire de commerce africain,"Compagnie de Culture cotonnière du Niger, puis Compagnie générale du Niger",1,valette-m
 commercialesoudanrotterdam,culturecotonniereniger,"Société commerciale du Soudan français, ROTTERDAM","Compagnie de Culture cotonnière du Niger, puis Compagnie générale du Niger",1,valette-m
 africainemagasinagetransit,colonialeagricoleindustrielle,Société africaine de Magasinage et de Transit,Société coloniale agricole et industrielle des Anciens Établissements R,1,delannoy-r
-culturesextremeorient,golfeguinee,Cie française des cultures d'Extrême-Orient,Société générale du Golfe de Guinée,1,lasseigne-l
 lesieurafrique,palme,Lesieur-Afrique,Société Palme,1,commerciale-de-l-ouest-africain-s
 aboisso,africaineforestiereallumettes,ABOISSO,Cie africaine forestière et des allumettes,1,bourceret-p
 aboisso,minieredahomey,ABOISSO,"Société Minière du Dahomey, puis du Dahomey-Niger",1,bourceret-p
@@ -1757,7 +1760,6 @@ colonialechauxcimentsof,travauxafricains,Société coloniale des chaux et ciment
 colonialechauxcimentsof,colonialesac,Société coloniale des chaux et ciments de l'A.-O. F,"Société Coloniale du sac, puis Société commerciale et industrielle du sac",1,corty-a
 guineennerecherchesexploitationsminieres,minieredahomey,Société Guinéenne de Recherches et d'exploitations minières,"Société Minière du Dahomey, puis du Dahomey-Niger",1,de-flers-f
 guineennerecherchesexploitationsminieres,minieredahomeyniger,Société Guinéenne de Recherches et d'exploitations minières,Société minière du Dahomey-Niger,1,de-flers-f
-guineennerecherchesexploitationsminieres,recherchesexploitationsminieresafriquecentrale,Société Guinéenne de Recherches et d'exploitations minières,Société de recherches et d'exploitations minières pour l'Afrique centrale,1,dermody-g
 forestierecommercialeafricaine,forestiereindenie,Société forestière et commerciale africaine,Compagnie Forestière de l'Indénié,1,bouruet-aubertot-j
 dabou,oleagineuxtropicaux,DABOU,Cie générale des oléagineux tropicaux,1,michaux-r
 forestiereequatoriale,oleagineuxtropicaux,Compagnie Forestière équatoriale,Cie générale des oléagineux tropicaux,1,michaux-r

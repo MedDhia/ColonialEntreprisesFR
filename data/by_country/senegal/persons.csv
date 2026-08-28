@@ -59,6 +59,7 @@ philippart-f,Philippart,Fernand Philippart,2,2,3,administrateur,1920,1929,Indust
 lemaignen-r,Lemaignen,Robert Lemaignen,2,2,3,administrateur,1936,1951,Transports
 villars-r,Villars,René Villars,2,2,3,administrateur,1936,1950,Transports
 durand-reville-l,Durand-Réville,Luc Durand-Réville,2,2,3,administrateur,1936,1950,Transports
+thube-fils-g,Thubé fils,G. Thubé fils; Gaston Thubé fils,2,2,3,president,1919,1938,Commerce
 clanis-g,Clanis,Gaston Clanis,2,2,3,administrateur,1914,1931,Industries agro-alimentaires; Mines
 mathon-e,Mathon,Eugène Mathon,2,2,3,administrateur,1921,1922,Industries agro-alimentaires; Mines
 chemin-p,Chemin,Paul Chemin,2,2,2,administrateur,1948,1951,Industries
@@ -79,7 +80,6 @@ fossorier-r,Fossorier,Robert Fossorier,2,2,2,administrateur,1949,1951,Transports
 dugue-p,Dugué,Paul Dugué,2,2,2,administrateur,1950,1951,Transports
 faroux-j,Faroux,Faroux; Jean Faroux,2,2,2,administrateur,1908,1936,Mines
 buhan-p-pascal,Buhan,Pascal Buhan,2,2,2,administrateur,1919,1925,Commerce
-thube-fils-g,Thubé fils,G. Thubé fils; Gaston Thubé fils,2,2,2,president,1925,1938,Commerce
 exportation-au-senegal,exportation au Sénégal,exportation au Sénégal,2,2,2,president,1925,1938,Commerce
 bouffe-g,Bouffé,G. Bouffé; Gaston Bouffé,2,2,2,administrateur,1936,1951,Transports
 merville-j,Merville,J. Merville; Jean Merville,2,2,2,administrateur,1936,1951,Transports
@@ -158,7 +158,7 @@ ph-kreiss,Ph. Kreiss,Ph. Kreiss,1,1,3,president,1948,1953,Industries agro-alimen
 maurel-f,Maurel,F. Maurel; Frédéric Maurel,1,1,3,administrateur,1948,1953,Industries agro-alimentaires
 monnier-c,Monnier,Ch. Monnier; Christian Monnier,1,1,3,administrateur,1948,1953,Industries agro-alimentaires
 faivre-h,Faivre,H. Faivre; Henri Faivre,1,1,3,administrateur,1948,1953,Industries agro-alimentaires
-de-longchamp-c,de Longchamp,Charles de Longchamp,1,1,2,administrateur,1930,1943,Banque
+de-longchamp-c,de Longchamp,Charles de Longchamp,1,1,2,administrateur_delegue,1930,1943,Banque
 bonnet-p,Bonnet,P. Bonnet,1,1,2,administrateur,1911,1913,Industries agro-alimentaires
 chevignard-g,Chevignard,G. Chevignard,1,1,2,administrateur,1911,1913,Industries agro-alimentaires
 deroche-l,Deroche,L. Deroche,1,1,2,administrateur,1911,1913,Industries agro-alimentaires
@@ -360,7 +360,7 @@ cladiere-georges-lesieur-v,Cladière Georges Lesieur,Victor Cladière Georges Le
 menager-h,Ménager,H. Ménager,1,1,1,administrateur,1948,1948,Commerce
 menager-h-henri,Ménager,Henri Ménager,1,1,1,administrateur,1951,1951,Commerce
 pichot-c,Pichot,Camille Pichot,1,1,1,president,1928,1928,Industries agro-alimentaires
-rennecon-p,Renneçon,Paul Renneçon,1,1,1,administrateur,1928,1928,Industries agro-alimentaires
+rennecon-p,Renneçon,Paul Renneçon,1,1,1,administrateur_delegue,1928,1928,Industries agro-alimentaires
 rainaud-j,Rainaud,Jean Rainaud,1,1,1,administrateur,1928,1928,Industries agro-alimentaires
 estager-j,Estager,Jean Estager,1,1,1,administrateur,1928,1928,Industries agro-alimentaires
 blanc-p,Blanc,Paul Blanc,1,1,1,administrateur,1928,1928,Industries agro-alimentaires
@@ -503,7 +503,7 @@ ducros-p,Ducros,Pierre-Albert Ducros,1,1,1,administrateur,1937,1937,Industries a
 bouillon-p,Bouillon,Paul Bouillon,1,1,1,administrateur,1938,1938,Transports
 gorgeu-m,Gorgeu,Maurice Gorgeu,1,1,1,president,1920,1920,Mines
 peyrissac-l,Peyrissac,Léon Peyrissac,1,1,1,vice_president,1920,1920,Mines
-casteincau-e,Casteincau,Émile Casteincau,1,1,1,administrateur,1920,1920,Mines
+casteincau-e,Casteincau,Émile Casteincau,1,1,1,administrateur_delegue,1920,1920,Mines
 gorgeu-s,Gorgeu,Serge Gorgeu,1,1,1,administrateur,1920,1920,Mines
 guignard-e-edouard,Guignard,Édouard Guignard,1,1,1,administrateur,1920,1920,Mines
 matignon-j,Matignon. 2,J.-J. Matignon. 2,1,1,1,administrateur,1920,1920,Mines
@@ -617,12 +617,13 @@ vintejoux-m,Vintéjoux,Max Vintéjoux,1,0,1,secretaire,1951,1951,Industries
 guyot,Guyot,Guyot,1,0,1,commissaire_aux_comptes,1901,1901,Transports
 desanges-c,Desanges,Claude Desanges,1,0,1,directeur_general,1951,1951,Industries
 logan-noergaard-r,Logan Noergaard,Robert Logan Noergaard,1,0,1,secretaire,1936,1936,Industries agro-alimentaires
+larche-g,Larché,Georges-Marie Larché,1,0,1,directeur_general,1950,1950,Transports
 denorus-d,Denorus,Denorus,1,0,1,directeur,1933,1933,Transports
 pichon,Pichon,Pichon,1,0,1,directeur,1933,1933,Transports
 haffen-g,Haffen,G. Haffen,1,0,1,directeur,1936,1936,Transports
 ing-e-c-p,ing. E. C. P,ing. E. C. P,1,0,1,directeur,1936,1936,Transports
-rambaud-r-rene,Rambaud,René Rambaud,1,0,1,directeur,1951,1951,Transports
+rambaud-r-rene,Rambaud,René Rambaud,1,0,1,directeur_general,1951,1951,Transports
 halle-e,Halle,Étienne Halle,1,0,1,directeur,1951,1951,Transports
 puravet-j,Puravet,Jacques Puravet,1,0,1,directeur,1951,1951,Transports
 joubert-j-jacques,Joubert,Jacques-Robert Joubert,1,0,1,directeur_general,1950,1950,Banque
-sellier-l,Sellier,Lucien Sellier,1,0,1,directeur,1950,1950,Banque
+sellier-l,Sellier,Lucien Sellier,1,0,1,directeur_general,1950,1950,Banque

@@ -46,7 +46,7 @@ guet-g,afriqueminiereequatoriale,1,1922,1922,administrateur,1
 lepel-cointet,afriqueminiereequatoriale,1,1921,1921,administrateur,1
 o-barre,afriqueminiereequatoriale,1,1922,1922,president,1
 piene,afriqueminiereequatoriale,1,1921,1921,administrateur,1
-pierre-c,afriqueminiereequatoriale,1,1922,1922,administrateur,1
+pierre-c,afriqueminiereequatoriale,1,1922,1922,administrateur_delegue,1
 thomas-g,afriqueminiereequatoriale,1,1922,1922,administrateur,1
 boin-g,agricolecommercialealima,3,1903,1915,president,1
 coosemans,agricolecommercialealima,1,1915,1915,administrateur,1
@@ -59,6 +59,7 @@ gillain-p,agricolecommercialealima,3,1903,1938,administrateur,1
 jacta-g,agricolecommercialealima,3,1903,1915,administrateur_delegue,1
 lux-p,agricolecommercialealima,1,1938,1938,president,1
 sud-ouest-de-la-concession,agricolecommercialealima,1,1903,1903,administrateur,1
+vacherot-h,agricolecommercialealima,1,1938,1938,administrateur_delegue,1
 vanbourzeix,agricolecommercialealima,1,1938,1938,president,1
 arnold-p,agricolecommercialeindustriellelefini,1,1907,1907,administrateur,1
 berry-f,agricolecommercialeindustriellelefini,1,1907,1907,administrateur,1
@@ -101,6 +102,7 @@ rabaud-c,boismayumbe,1,,,administrateur,1
 cauvez-i,caoutchoucsproduitslobay,1,1899,1899,administrateur,1
 grisar-e-ernest,caoutchoucsproduitslobay,1,1899,1899,administrateur,1
 motte-bossut-l,caoutchoucsproduitslobay,1,1899,1899,administrateur,1
+collot-a,colonialebaniembe,1,1899,1899,administrateur,1
 david,colonialebaniembe,1,1899,1899,administrateur,1
 decourcelle-e,colonialebaniembe,1,1899,1899,administrateur,1
 gauthier,colonialebaniembe,1,1899,1899,administrateur,1
@@ -115,7 +117,8 @@ lafarge,commercialecolonialekadeisangha,1,1899,1899,administrateur,1
 mahy-e,commercialecolonialekadeisangha,1,1899,1899,administrateur,1
 martin-e-emile,commercialecolonialekadeisangha,1,1899,1899,administrateur,1
 montreuil,commercialecolonialekadeisangha,1,1899,1899,administrateur,1
-nouzaret-j,commercialecolonialekadeisangha,1,1899,1899,commissaire_aux_comptes,0
+nouzaret,commercialecolonialekadeisangha,1,1899,1899,commissaire_aux_comptes,0
+nouzaret-h,commercialecolonialekadeisangha,1,1899,1899,administrateur,1
 launay-a,commercialeindustriellecongo,1,1899,1899,commissaire_aux_comptes,0
 boutelleau-g,congo,1,1900,1900,administrateur,1
 boutelleau-g-gustave,congo,1,1900,1900,administrateur,1
@@ -163,7 +166,7 @@ farin-r,entreprisestravaux,1,1930,1930,administrateur,1
 fontaine-a-armand,entreprisestravaux,1,1930,1930,administrateur,1
 georges-p-hurpeau,entreprisestravaux,1,1930,1930,administrateur,1
 ph-guignabaudet,entreprisestravaux,1,1930,1930,administrateur,1
-raynal-g,entreprisestravaux,1,1930,1930,administrateur,1
+raynal-g,entreprisestravaux,1,1930,1930,administrateur_delegue,1
 rolin-j-jean,entreprisestravaux,1,1930,1930,administrateur,1
 serviere-l,entreprisestravaux,1,1930,1930,administrateur,1
 weitz-e,entreprisestravaux,1,1930,1930,administrateur,1
@@ -253,6 +256,7 @@ hurault-de-ligny,ibenga,1,1930,1930,president,1
 jacques,ibenga,1,1906,1906,administrateur,1
 lindeboom-a,ibenga,1,1906,1906,administrateur,1
 maho-c,ibenga,1,1930,1930,secretaire,0
+piot,ibenga,1,1930,1930,administrateur,1
 remplacent-mm-p-mancheron-j,ibenga,1,1930,1930,administrateur,1
 verspreeuwen,ibenga,1,1930,1930,administrateur,1
 dommanget-a,immobilierecongolaise,1,1933,1933,administrateur,1
@@ -279,7 +283,7 @@ etc-marie-avec-alice-georgette-penard,minesdjouecuivre,1,1910,1910,administrateu
 gaz,minesdjouecuivre,1,1910,1910,administrateur,1
 albrand-j,minesniari,1,1935,1935,administrateur,1
 cl-chabaux,minesniari,1,1930,1930,administrateur,1
-doyen-de-l-isle-g,minesniari,1,1935,1935,administrateur,1
+doyen-de-l-isle-g,minesniari,1,1935,1935,administrateur_delegue,1
 guggenheim-j,minesniari,1,1930,1930,administrateur,1
 hutsebaut,minesniari,1,1930,1930,administrateur,1
 iselin-r,minesniari,1,1935,1935,administrateur,1
@@ -294,7 +298,7 @@ gascuel-r,minierecongo,1,1951,1951,administrateur,1
 guynet-d,minierecongo,2,1951,1951,administrateur,1
 letondot-c,minierecongo,2,1951,1951,administrateur,1
 level-p,minierecongo,1,1951,1951,administrateur,1
-lion-p,minierecongo,1,1951,1951,administrateur,1
+lion-p,minierecongo,1,1951,1951,administrateur_delegue,1
 ph-level,minierecongo,1,1951,1951,administrateur,1
 sengier-e,minierecongo,2,1951,1951,administrateur,1
 superville-m,minierecongo,1,1951,1951,administrateur,1
@@ -338,7 +342,8 @@ plassard-j-jules,ongomo,1,1901,1901,president,1
 tant-en-france-qu-en-belgique,ongomo,1,1924,1924,administrateur,1
 terrains,ongomo,1,1911,1911,administrateur,1
 bernard-m-maurice,proprietairekouilouniari,1,1902,1902,administrateur,1
-beulque-g,proprietairekouilouniari,3,1904,1925,administrateur,1
+beulque-g,proprietairekouilouniari,4,1902,1925,administrateur,1
+beulque-lemmens,proprietairekouilouniari,1,1924,1924,administrateur,1
 colthurst-j,proprietairekouilouniari,1,1929,1929,administrateur,1
 cravoisier-e,proprietairekouilouniari,1,1929,1929,administrateur,1
 dubar-g,proprietairekouilouniari,1,1902,1902,administrateur,1
@@ -373,11 +378,13 @@ campagne-f,sangha,1,1899,1899,administrateur,1
 de-lange-m,sangha,1,1899,1899,administrateur,1
 de-lapeyrouse-g,sangha,2,1899,1899,administrateur,1
 fautrel-g,sangha,2,1899,1899,administrateur,1
+jore-s,sangha,1,1899,1899,administrateur,1
 n-daki,sangha,1,1899,1899,administrateur,1
 riviere-a,sangha,1,1899,1899,administrateur,1
 riviere-a-adrien,sangha,1,1899,1899,administrateur,1
 borowsky,sanghaequatoriale,1,1900,1900,administrateur,1
 collas,sanghaequatoriale,1,1900,1900,administrateur,1
+gimmig,sanghaequatoriale,1,1900,1900,administrateur,1
 guilloux-m,sanghaequatoriale,1,1900,1900,administrateur,1
 lauer,sanghaequatoriale,1,1900,1900,administrateur,1
 monniez,sanghaequatoriale,1,1900,1900,administrateur,1

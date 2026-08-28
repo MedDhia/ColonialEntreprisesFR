@@ -67,7 +67,7 @@ caquas-j,Caquas,Caquas; J.-M. Caquas,3,2,3,administrateur,1937,1940,"Agro-alimen
 pernotte-j,Pernotte,J. Pernotte; Joseph Pernotte,2,2,3,administrateur,1922,1957,"Agro-alimentaire, cultures industrielles"
 hallet-a,Hallet,A. Hallet; Adrien Hallet,2,2,3,administrateur,1922,1957,"Agro-alimentaire, cultures industrielles"
 giraud-r,Giraud,Raoul Giraud,2,2,3,administrateur,1922,1957,"Agro-alimentaire, cultures industrielles"
-mathon-e,Mathon,E. Mathon; Eugène Mathon,2,2,3,administrateur,1911,1925,"Agro-alimentaire, cultures industrielles"
+mathon-e,Mathon,E. Mathon; Eugène Mathon,2,2,3,president,1911,1925,"Agro-alimentaire, cultures industrielles"
 lambert,Lambert,Lambert,2,2,3,administrateur,1914,1951,Industries; Mines
 lyon-m,Lyon,Max Lyon; Max Lyon6,2,2,3,administrateur,1902,1903,Mines
 bonfils-e,Bonfils,E. Bonfils; Émile Bonfils,2,2,3,administrateur,1920,1922,"Agro-alimentaire, cultures industrielles; Commerce"
@@ -77,15 +77,15 @@ pirlet-l,Pirlet,L. Pirlet; Lucien Pirlet,2,2,3,administrateur,1948,1951,"Agro-al
 lamarque-m,Lamarque,Maurice LAMARQUE; Maurice Lamarque,2,2,3,administrateur,1935,1951,"Agro-alimentaire, cultures industrielles"
 chavatte-l,Chavatte,Lucien Chavatte,2,2,2,administrateur,1928,1930,Commerce
 lanique,Lanique,Lanique,2,2,2,administrateur,1912,1919,"Agro-alimentaire, cultures industrielles; Industries"
-martin-e-edouard,Martin,Édouard Martin,2,2,2,administrateur,1924,1925,Industries
+martin-e-edouard,Martin,Édouard Martin,2,2,2,administrateur_delegue,1924,1925,Industries
 kreiss-p,Kreiss,P. Kreiss; Philippe Kreiss,2,2,2,president,1958,1958,"Agro-alimentaire, cultures industrielles"
-orcel-j,Orcel,J. Orcel; Jacques Orcel,2,2,2,administrateur,1958,1958,"Agro-alimentaire, cultures industrielles"
-faivre-h,Faivre,H. Faivre; Henri Faivre,2,2,2,administrateur,1958,1958,"Agro-alimentaire, cultures industrielles"
+orcel-j,Orcel,J. Orcel; Jacques Orcel,2,2,2,administrateur_delegue,1958,1958,"Agro-alimentaire, cultures industrielles"
+faivre-h,Faivre,H. Faivre; Henri Faivre,2,2,2,administrateur_delegue,1958,1958,"Agro-alimentaire, cultures industrielles"
 glacieres-de-l-indochine,Glacières de l'Indochine,Glacières de l'Indochine; glacières de l'Indochine,2,2,2,administrateur,1958,1958,"Agro-alimentaire, cultures industrielles"
 curral-j,Curral,J. Curral; Jean Curral,2,2,2,administrateur,1958,1958,"Agro-alimentaire, cultures industrielles"
 dayan-l,Dayan,L. Dayan; Louis Dayan,2,2,2,administrateur,1958,1958,"Agro-alimentaire, cultures industrielles"
 monnier-c,Monnier,Ch. Monnier; Christian Monnier,2,2,2,administrateur,1958,1958,"Agro-alimentaire, cultures industrielles"
-duvernet-j,Duvernet,Jacques Duvernet,2,2,2,administrateur,1951,1951,Commerce
+duvernet-j,Duvernet,Jacques Duvernet,2,2,2,administrateur_delegue,1951,1951,Commerce
 tardivat-h,Tardivat,Henri Tardivat,2,2,2,administrateur,1951,1951,Commerce
 martin-v,Martin,Victor Martin,2,2,2,administrateur,1951,1951,Commerce
 jeanne-henriette-duvernet,Jeanne-Henriette Duvernet,Jeanne-Henriette Duvernet,2,2,2,administrateur,1951,1951,Commerce
@@ -147,7 +147,7 @@ quiquet-f,Quiquet,F. Quiquet,1,1,3,administrateur,1945,1953,"Agro-alimentaire, c
 mansour-s,Mansour,Saïd Mansour,1,1,3,administrateur,1920,1925,Commerce
 mansour-a,Mansour,Assad Mansour,1,1,3,administrateur,1920,1925,Commerce
 verdier-j,Verdier,Jules Verdier,1,1,3,vice_president,1920,1925,Commerce
-mounier-a,Mounier,A. Mounier; André Mounier,1,1,3,administrateur,1929,1948,Transports
+mounier-a,Mounier,A. Mounier; André Mounier,1,1,3,administrateur_delegue,1929,1948,Transports
 haechler-j,Haechler,Jacques Haechler,1,1,3,administrateur_delegue,1922,1933,Commerce
 lamarque,Lamarque,Lamarque,1,1,3,administrateur,1937,1945,"Agro-alimentaire, cultures industrielles"
 tabou,Tabou,Tabou,2,1,2,gerant,1926,1951,Documents généraux (par ordre chronologique)
@@ -263,7 +263,7 @@ dormoy-a,Dormoy,Abel Dormoy,1,1,1,administrateur,1930,1930,Industries
 gavary-f,Gavary,Fernand Gavary,1,1,1,administrateur,1930,1930,Industries
 josse-r,Josse,Robert Josse,1,1,1,administrateur,1930,1930,Industries
 weyl-m,Weyl. 5,Marcel Weyl. 5,1,1,1,administrateur,1930,1930,Industries
-de-lestang-l,de Lestang,Lucien de Lestang,1,1,1,administrateur,1947,1947,Industries
+de-lestang-l,de Lestang,Lucien de Lestang,1,1,1,administrateur_delegue,1947,1947,Industries
 castres-saint-martin-g,Castres Saint-Martin,G. Castres Saint-Martin,1,1,1,administrateur,1947,1947,Industries
 vezin-m,Vezin,Maurice Vezin,1,1,1,administrateur,1947,1947,Industries
 claude-h-mallon,Claude-H. Mallon. 8,Claude-H. Mallon. 8,1,1,1,administrateur,1947,1947,Industries
@@ -315,7 +315,7 @@ masmontet-g,Masmontet,Guy Masmontet,1,1,1,administrateur,1937,1937,Industries
 jaccard-m,Jaccard. 2,Marcel Jaccard. 2,1,1,1,administrateur,1937,1937,Industries
 fay-g,Fay,Georges Fay,1,1,1,administrateur,1938,1938,Mines
 et-jacques-puerari,et Jacques Puerari,et Jacques Puerari,1,1,1,administrateur,1938,1938,Mines
-bellanger-a,Bellanger,Albert Bellanger,1,1,1,administrateur,1938,1938,Mines
+bellanger-a,Bellanger,Albert Bellanger,1,1,1,president,1938,1938,Mines
 boissonnas-r,Boissonnas,Rémi Boissonnas,1,1,1,administrateur,1938,1938,Mines
 garreau-dombasle-m,Garreau-Dombasle,Maurice Garreau-Dombasle,1,1,1,administrateur,1938,1938,Mines
 vernes-g,Vernes,Gérard Vernes,1,1,1,administrateur,1938,1938,Mines
@@ -330,7 +330,7 @@ sellier-r,Sellier,Robert Sellier,1,1,1,administrateur,1947,1947,Commerce
 guignard-e,Guignard,Ed Guignard,1,1,1,president,,,Commerce
 gorgeu-m,Gorgeu,Maurice Gorgeu,1,1,1,president,,,Commerce
 peyrissac-l,Peyrissac,Léon Peyrissac,1,1,1,president,,,Commerce
-casteincau-e,Casteincau,E. Casteincau,1,1,1,administrateur,,,Commerce
+casteincau-e,Casteincau,E. Casteincau,1,1,1,administrateur_delegue,,,Commerce
 eug-beynis,Eug. Beynis,Eug. Beynis,1,1,1,administrateur,,,Commerce
 lorin-h,Lorin,Henri Lorin,1,1,1,administrateur,,,Commerce
 lespes-j,Lespès,Joseph Lespès,1,1,1,administrateur,,,Commerce
@@ -394,7 +394,6 @@ gompel-p,Gompel,Pierre Gompel,1,1,1,administrateur,1924,1924,Industries
 bouruet-aubertot-j,Bouruet-Aubertot,Jean Bouruet-Aubertot,1,1,1,president,1951,1951,Industries
 gigarroa-m,Gigarroa,Maurice Gigarroa,1,1,1,administrateur,1951,1951,Industries
 boyer-j-jean,Boyer,Jean Boyer,1,1,1,president,1950,1950,Industries
-boyer-m,Boyer,Marguerite Boyer,1,1,1,administrateur,1950,1950,Industries
 arnoux-a,Arnoux,Albert Arnoux,1,1,1,administrateur,1950,1950,Industries
 aubert-l,Aubert,Louis Aubert,1,1,1,administrateur,1950,1950,Industries
 cademartory-l,Cademartory,Léon Cademartory,1,1,1,administrateur,1950,1950,Industries
@@ -450,7 +449,7 @@ perrin-p,Perrin,Paul Perrin,1,1,1,administrateur,1912,1912,Industries
 majorelle-l,Majorelle,Louis Majorelle,1,1,1,administrateur,1912,1912,Industries
 bastien,Bastien,Bastien,1,1,1,administrateur,1912,1912,Industries
 dreyer,Dreyer,Dreyer,1,1,1,administrateur,1912,1912,Industries
-lecomte-f,Lecomte,Fernand Lecomte,1,1,1,administrateur,1930,1930,Mines
+lecomte-f,Lecomte,Fernand Lecomte,1,1,1,administrateur_delegue,1930,1930,Mines
 boudinier-e,Boudinier,Émile Boudinier,1,1,1,administrateur,1930,1930,Mines
 nicolas-l,Nicolas,Louis Nicolas,1,1,1,administrateur,1930,1930,Mines
 germain-a-antoine,Germain,Antoine Germain,1,1,1,administrateur,1930,1930,Mines
@@ -504,6 +503,7 @@ comptour,Comptour,Comptour,1,1,1,administrateur,1945,1945,"Agro-alimentaire, cul
 joyel-faure-a,Joyel-Faure,André Joyel-Faure,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
 oudinot-p,Oudinot,Paul Oudinot,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
 sitri-e,Sitri,Édouard Sitri,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
+deloffre-p,Deloffre,Paul Deloffre,1,1,1,president,1951,1951,"Agro-alimentaire, cultures industrielles"
 fiaux-p,Fiaux,Pol Fiaux,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
 raguis-g,Raguis. 6,Georges Raguis. 6,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
 mornard-p,Mornard,Pierre Mornard,1,1,1,administrateur,1928,1928,"Agro-alimentaire, cultures industrielles"
@@ -533,7 +533,7 @@ dutheil-p,Dutheil,P. Dutheil,1,1,1,administrateur,1951,1951,"Agro-alimentaire, c
 larcheveque-h,Larchevêque,H. Larchevêque,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
 lepissier-c,Lépissier,Ch. Lépissier,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
 roux-baudrand-s,Roux-Baudrand,Stéphane Roux-Baudrand,1,1,1,president,1922,1922,Industries
-roux-baudrand-j,Roux-Baudrand,Jean Roux-Baudrand,1,1,1,administrateur,1922,1922,Industries
+roux-baudrand-j,Roux-Baudrand,Jean Roux-Baudrand,1,1,1,administrateur_delegue,1922,1922,Industries
 gautier-d,Gautier,Daniel Gautier,1,1,1,administrateur,1922,1922,Industries
 saint-pere-c,Saint-Père,Charles Saint-Père,1,1,1,administrateur,1922,1922,Industries
 rosel-c,Rosel,Charles Rosel,1,1,1,administrateur,1922,1922,Industries
@@ -569,13 +569,13 @@ lattes-a,Lattes,Alfred Lattes,1,1,1,administrateur,1903,1903,Mines
 le-barbier-l,Le Barbier,L. Le Barbier,1,1,1,administrateur,1914,1914,"Agro-alimentaire, cultures industrielles"
 lieux-p,Lieux,P. Lieux,1,1,1,administrateur,1914,1914,"Agro-alimentaire, cultures industrielles"
 plieux-de-dusse,Plieux de Dusse,Plieux de Dusse,1,1,1,administrateur,1914,1914,"Agro-alimentaire, cultures industrielles"
-marechand-a,Maréchand,André Maréchand,1,1,1,administrateur,1930,1930,Commerce
+marechand-a,Maréchand,André Maréchand,1,1,1,administrateur_delegue,1930,1930,Commerce
 perrissin-j,Perrissin,Jacques Perrissin,1,1,1,administrateur,1930,1930,Commerce
 guerin-a,Guérin,Agénor Guérin,1,1,1,administrateur,1930,1930,Commerce
 fries-g,Fries,Georges Fries,1,1,1,administrateur,1930,1930,Commerce
 moreau-l,Moreau,Lucien Moreau,1,1,1,administrateur,1930,1930,Commerce
 charlet-p,Charlet,Pierre Charlet,1,1,1,administrateur,1930,1930,Commerce
-achalme-j,Achalme,Jacques Achalme,1,1,1,administrateur,1929,1929,"Agro-alimentaire, cultures industrielles"
+achalme-j,Achalme,Jacques Achalme,1,1,1,administrateur_delegue,1929,1929,"Agro-alimentaire, cultures industrielles"
 harang-a,Harang. 2,Albert Harang. 2,1,1,1,administrateur,1929,1929,"Agro-alimentaire, cultures industrielles"
 lebrun-j,Lebrun,J. Lebrun,1,1,1,administrateur,1903,1903,Mines
 delhorbe-l,Delhorbe 2,L. Delhorbe 2,1,1,1,administrateur,1903,1903,Mines
@@ -598,6 +598,7 @@ j-m,J,Marcel J,1,1,1,administrateur,1909,1909,Industries
 robert-h,Robert,H. Robert,1,1,1,administrateur,1909,1909,Industries
 abidjan-m,(?) Abidjan,Milly (?) Abidjan,1,1,1,administrateur,,,"Agro-alimentaire, cultures industrielles"
 catalogne-e,Catalogne,Catalogne,1,1,1,administrateur,1948,1948,Mines
+baer-e,Baer,Edgar Baer,1,1,1,president,1948,1948,Mines
 bastid-p-pierre,Bastid,Pierre-Charles Bastid,1,1,1,administrateur,1948,1948,Mines
 millions-fr-c-f-a-prospections,millions fr. C. F. A. Prospections,millions fr. C. F. A. Prospections,1,1,1,administrateur,1948,1948,Mines
 de-vienne-p,de Vienne,Pierre de Vienne,1,1,1,administrateur,1934,1934,Mines
@@ -636,12 +637,6 @@ binot,Binot,Binot,1,1,1,administrateur,1945,1945,"Agro-alimentaire, cultures ind
 leuret-a,Leuret,A. Leuret,1,1,1,administrateur,1945,1945,"Agro-alimentaire, cultures industrielles"
 freulon,Freulon,Freulon,1,1,1,administrateur,1945,1945,"Agro-alimentaire, cultures industrielles"
 banquet-succ-de-son-pere-j-m-h,Banquet [succ de son père J.-M,Henri Banquet [succ de son père J.-M,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
-lyon,Lyon],Lyon],1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
-leuret-j,Leuret,Jacques Leuret,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
-poursin-a,Poursin,André Poursin,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
-poursin-l,Poursin,Louis Poursin,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
-lasseigne-l,Lasseigne,Lucien Lasseigne,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
-malcros-p,Malcros,Pierre Malcros,1,1,1,administrateur,1951,1951,"Agro-alimentaire, cultures industrielles"
 gagnoa,Gagnoa,Gagnoa,1,0,4,gerant,1951,1951,Documents généraux (par ordre chronologique)
 man,Man,Man,1,0,4,gerant,1951,1951,Documents généraux (par ordre chronologique)
 treichville,Treichville,Treichville,1,0,3,gerant,1951,1951,Documents généraux (par ordre chronologique)
@@ -679,12 +674,18 @@ perrin-o,Perrin,Octave Perrin,1,0,1,directeur_general,1951,1951,Commerce
 monsieur-rene-thevenot,monsieur René Thévenot,monsieur René Thévenot,1,0,1,commissaire_aux_comptes,1935,1935,Mines
 pres-de-grand-bassam,près de Grand-Bassam,près de Grand-Bassam,1,0,1,directeur_general,1912,1912,Industries
 vinson-j,Vinson,J. Vinson,1,0,1,commissaire_aux_comptes,1937,1937,Industries
+boyer-m,Boyer,Marguerite Boyer,1,0,1,directeur_general,1950,1950,Industries
 julliard-h,Julliard,H. Julliard,1,0,1,directeur,1933,1933,Industries
 beraud-p,Béraud,Paul Béraud,1,0,1,commissaire_aux_comptes,1901,1901,Industries
 drouin-r,Drouin,Robert Drouin,1,0,1,directeur,1951,1951,Commerce
-deloffre-p,Deloffre,Paul Deloffre,1,0,1,directeur_general,1951,1951,"Agro-alimentaire, cultures industrielles"
 girard-j-jacques,Girard,Jacques Girard,1,0,1,directeur,1940,1940,"Agro-alimentaire, cultures industrielles"
 dupuy,Dupuy,Dupuy,1,0,1,gerant,1935,1935,Mines
 fragniere-f,Fragnière,Fragnière,1,0,1,gerant,1935,1935,Mines
 margutti-l,Margutti,Louis-Denis Margutti,1,0,1,gerant,1935,1935,Mines
 et-ernest-foret,et Ernest Foret,et Ernest Foret,1,0,1,gerant,1935,1935,Mines
+lyon,Lyon],Lyon],1,0,1,directeur_general,1951,1951,"Agro-alimentaire, cultures industrielles"
+leuret-j,Leuret,Jacques Leuret,1,0,1,directeur_general,1951,1951,"Agro-alimentaire, cultures industrielles"
+poursin-a,Poursin,André Poursin,1,0,1,directeur_general,1951,1951,"Agro-alimentaire, cultures industrielles"
+poursin-l,Poursin,Louis Poursin,1,0,1,directeur_general,1951,1951,"Agro-alimentaire, cultures industrielles"
+lasseigne-l,Lasseigne,Lucien Lasseigne,1,0,1,directeur_general,1951,1951,"Agro-alimentaire, cultures industrielles"
+malcros-p,Malcros,Pierre Malcros,1,0,1,directeur_general,1951,1951,"Agro-alimentaire, cultures industrielles"

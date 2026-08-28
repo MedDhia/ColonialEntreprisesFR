@@ -501,13 +501,13 @@
     <node id="francoantankare">
       <data key="n_label">Société Franco-Antankare</data>
       <data key="n_sectors">Banques et groupes financiers</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Madagascar et Djibouti</data>
     </node>
     <node id="francomalgache">
       <data key="n_label">Compagnie Générale Franco-malgache</data>
       <data key="n_sectors">Industries agro-alimentaires</data>
-      <data key="n_n_directors">14</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Madagascar et Djibouti</data>
     </node>
     <node id="francomalgachecommissionconsignation">
@@ -531,7 +531,7 @@
     <node id="gisementsauriferesanasaha">
       <data key="n_label">Société Gisements aurifères d'Anasaha</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">5</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Madagascar et Djibouti</data>
     </node>
     <node id="gmodrin">
@@ -681,7 +681,7 @@
     <node id="madagascar">
       <data key="n_label">Compagnie Générale de Madagascar, puis Compagnie générale de Madagascar-France</data>
       <data key="n_sectors">Commerce; Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">26</data>
+      <data key="n_n_directors">27</data>
       <data key="n_territory">Madagascar et Djibouti</data>
     </node>
     <node id="madagascarautomobile">
@@ -1083,7 +1083,7 @@
     <node id="socgraphitessahanavo">
       <data key="n_label">Soc. des GRAPHITES de la SAHANAVO</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Madagascar et Djibouti</data>
     </node>
     <node id="socilesmalgaches">
@@ -1095,7 +1095,7 @@
     <node id="socindustriellecommercialeemyrne">
       <data key="n_label">Soc. industrielle et commerciale de l'EMYRNE</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Madagascar et Djibouti</data>
     </node>
     <node id="socindustrielleconstructions">
@@ -1149,7 +1149,7 @@
     <node id="syndicatlyonnaisexplorationmadagascar">
       <data key="n_label">Syndicat lyonnais d'exploration à Madagascar</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">4</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Madagascar et Djibouti</data>
     </node>
     <node id="syndicatlyonnaismadagascar">
@@ -1251,10 +1251,10 @@
     <edge id="e4" source="sucreriesmarseillaisesmadagascar" target="sucreriesmarseillaisesmadagascarnamakia">
       <data key="e_weight">12</data>
     </edge>
-    <edge id="e5" source="tanninscoloniaux" target="tanninscoloniauxsahambavy">
-      <data key="e_weight">11</data>
+    <edge id="e5" source="graphitessahanavo" target="socgraphitessahanavo">
+      <data key="e_weight">12</data>
     </edge>
-    <edge id="e6" source="graphitessahanavo" target="socgraphitessahanavo">
+    <edge id="e6" source="tanninscoloniaux" target="tanninscoloniauxsahambavy">
       <data key="e_weight">11</data>
     </edge>
     <edge id="e7" source="plantationsanjouan" target="plantationssakarive">
@@ -1305,34 +1305,34 @@
     <edge id="e22" source="plantesparfumsmadagascar" target="socplantesparfumsmadagascar">
       <data key="e_weight">7</data>
     </edge>
-    <edge id="e23" source="conservesalimentairesmontagneambre" target="industriellecommercialeemyrne">
+    <edge id="e23" source="importationsexportationscommission" target="socindustriellecommercialeemyrne">
       <data key="e_weight">7</data>
     </edge>
-    <edge id="e24" source="fonciereindustriellecommercialemadagascar" target="fonciereminieremadagascar">
+    <edge id="e24" source="industriellecommercialeemyrne" target="socindustriellecommercialeemyrne">
       <data key="e_weight">7</data>
     </edge>
-    <edge id="e25" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="rhumspurs">
+    <edge id="e25" source="conservesalimentairesmontagneambre" target="industriellecommercialeemyrne">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e26" source="fonciereindustriellecommercialemadagascar" target="fonciereminieremadagascar">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e27" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="rhumspurs">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e26" source="rhumspurs" target="sucreriescoloniales">
+    <edge id="e28" source="rhumspurs" target="sucreriescoloniales">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e27" source="creditfonciercolonial" target="sucreriescoloniales">
+    <edge id="e29" source="creditfonciercolonial" target="sucreriescoloniales">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e28" source="cotesomalis" target="maritimeafriqueorientale">
+    <edge id="e30" source="cotesomalis" target="maritimeafriqueorientale">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e29" source="colonialemadagascar" target="magasinsgenerauxentrepotsmadagascar">
+    <edge id="e31" source="colonialemadagascar" target="magasinsgenerauxentrepotsmadagascar">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e30" source="lyonnaisemadagascar" target="madagascar">
-      <data key="e_weight">6</data>
-    </edge>
-    <edge id="e31" source="importationsexportationscommission" target="socindustriellecommercialeemyrne">
-      <data key="e_weight">6</data>
-    </edge>
-    <edge id="e32" source="industriellecommercialeemyrne" target="socindustriellecommercialeemyrne">
+    <edge id="e32" source="lyonnaisemadagascar" target="madagascar">
       <data key="e_weight">6</data>
     </edge>
     <edge id="e33" source="agricoleindustriellemadagascar" target="commissionconsignationcoloniales">
@@ -1458,169 +1458,169 @@
     <edge id="e73" source="agricolemadagascar" target="ankaratra">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e74" source="culturescoloniales" target="nosybeenneindustriesagricoles">
+    <edge id="e74" source="gisementsauriferesanasaha" target="syndicatlyonnaisexplorationmadagascar">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e75" source="culturescoloniales" target="sambiranaise">
+    <edge id="e75" source="culturescoloniales" target="nosybeenneindustriesagricoles">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e76" source="agricolesambirano" target="nosybeenneindustriesagricoles">
+    <edge id="e76" source="culturescoloniales" target="sambiranaise">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e77" source="angevinemadagascar" target="cultureelevagemadagascarnord">
+    <edge id="e77" source="agricolesambirano" target="nosybeenneindustriesagricoles">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e78" source="culture" target="cultureelevagemadagascarnord">
+    <edge id="e78" source="angevinemadagascar" target="cultureelevagemadagascarnord">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e79" source="conservesalimentairesmontagneambre" target="francomalgachecommissionconsignation">
+    <edge id="e79" source="culture" target="cultureelevagemadagascarnord">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e80" source="emileranarivelo" target="rossignol">
+    <edge id="e80" source="conservesalimentairesmontagneambre" target="francomalgachecommissionconsignation">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e81" source="nantaiseculturecoloniale" target="nantaisemadagascar">
+    <edge id="e81" source="emileranarivelo" target="rossignol">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e82" source="ileskerguelensaintpaulamsterdam" target="ileskerguelenstpaulamsterdam">
+    <edge id="e82" source="nantaiseculturecoloniale" target="nantaisemadagascar">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e83" source="florensorville" target="rossignol">
+    <edge id="e83" source="ileskerguelensaintpaulamsterdam" target="ileskerguelenstpaulamsterdam">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e84" source="graphites" target="mineraisgrandeile">
+    <edge id="e84" source="florensorville" target="rossignol">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e85" source="graphites" target="mineraisgrandelle">
+    <edge id="e85" source="graphites" target="mineraisgrandeile">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e86" source="chantiersateliersbassin" target="francomalgachecommissionconsignation">
+    <edge id="e86" source="graphites" target="mineraisgrandelle">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e87" source="conservesalimentairesmontagneambre" target="electriciteentreprisesmadagascar">
+    <edge id="e87" source="chantiersateliersbassin" target="francomalgachecommissionconsignation">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e88" source="cefrancomalgacheentreprises" target="francomalgacheentreprises">
+    <edge id="e88" source="conservesalimentairesmontagneambre" target="electriciteentreprisesmadagascar">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e89" source="domainesppineltabacsoleagineuxmadagascar" target="tabacsoleagineuxmadagascar">
+    <edge id="e89" source="cefrancomalgacheentreprises" target="francomalgacheentreprises">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e90" source="agricolemadagascar" target="exploitationgraphitesmadagascar">
+    <edge id="e90" source="domainesppineltabacsoleagineuxmadagascar" target="tabacsoleagineuxmadagascar">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e91" source="agricolemadagascar" target="exploitationgraphitesmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e91" source="civilefomboni" target="civilefombonimoheli">
+    <edge id="e92" source="civilefomboni" target="civilefombonimoheli">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e92" source="colonialebambao" target="etablissementsantoinechirisproduitsaromatiqueschimiques">
+    <edge id="e93" source="colonialebambao" target="etablissementsantoinechirisproduitsaromatiqueschimiques">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e93" source="colonialebambao" target="grandecomore">
+    <edge id="e94" source="colonialebambao" target="grandecomore">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e94" source="colonialebambaobambao" target="grandecomore">
+    <edge id="e95" source="colonialebambaobambao" target="grandecomore">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e95" source="afriqueorientale" target="cotesomalis">
+    <edge id="e96" source="afriqueorientale" target="cotesomalis">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e96" source="afriqueorientale" target="creditfonciermadagascar">
+    <edge id="e97" source="afriqueorientale" target="creditfonciermadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e97" source="afriqueorientale" target="creditfonciermadagascarcreditfonciermadagascarreunion">
+    <edge id="e98" source="afriqueorientale" target="creditfonciermadagascarcreditfonciermadagascarreunion">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e98" source="afriqueorientale" target="lyonnaisemadagascar">
+    <edge id="e99" source="afriqueorientale" target="lyonnaisemadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e99" source="agricultureindustriecoloniales" target="entreprisesmaritimesmadagascar">
+    <edge id="e100" source="agricultureindustriecoloniales" target="entreprisesmaritimesmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e100" source="agricultureindustriecoloniales" target="filaturetissagemadagascar">
+    <edge id="e101" source="agricultureindustriecoloniales" target="filaturetissagemadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e101" source="agricultureindustriecoloniales" target="outremer">
+    <edge id="e102" source="agricultureindustriecoloniales" target="outremer">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e102" source="approvisionnementsgenerauxdjibouti" target="cotesomalis">
+    <edge id="e103" source="approvisionnementsgenerauxdjibouti" target="cotesomalis">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e103" source="cotesomalis" target="navigationmerrouge">
+    <edge id="e104" source="cotesomalis" target="navigationmerrouge">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e104" source="entreprisesmaritimesmadagascar" target="lyonnaisemadagascar">
+    <edge id="e105" source="entreprisesmaritimesmadagascar" target="lyonnaisemadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e105" source="filaturetissagemadagascar" target="lyonnaisemadagascar">
+    <edge id="e106" source="filaturetissagemadagascar" target="lyonnaisemadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e106" source="afriqueorientalemaritimecommerciale" target="approvisionnementsgenerauxdjibouti">
+    <edge id="e107" source="afriqueorientalemaritimecommerciale" target="approvisionnementsgenerauxdjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e107" source="afriqueorientalemaritimecommerciale" target="maritimeafriqueorientale">
+    <edge id="e108" source="afriqueorientalemaritimecommerciale" target="maritimeafriqueorientale">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e108" source="afriqueorientale" target="industrielledjibouti">
+    <edge id="e109" source="afriqueorientale" target="industrielledjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e109" source="afriqueorientalemaritimecommerciale" target="industrielledjibouti">
+    <edge id="e110" source="afriqueorientalemaritimecommerciale" target="industrielledjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e110" source="mineraisgrandeile" target="plantesparfumsmadagascar">
+    <edge id="e111" source="mineraisgrandeile" target="plantesparfumsmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e111" source="salinesdjibouti" target="salinesdjiboutisfaxmadagascar">
+    <edge id="e112" source="salinesdjibouti" target="salinesdjiboutisfaxmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e112" source="creditfonciermadagascar" target="grandsdomainesmadagascar">
+    <edge id="e113" source="creditfonciermadagascar" target="grandsdomainesmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e113" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="grandsdomainesmadagascar">
+    <edge id="e114" source="creditfonciermadagascarcreditfonciermadagascarreunion" target="grandsdomainesmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e114" source="grandsdomainesmadagascar" target="unionminiereindustrielle">
+    <edge id="e115" source="grandsdomainesmadagascar" target="unionminiereindustrielle">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e115" source="conservesalimentairesmontagneambre" target="socindustriellecommercialeemyrne">
+    <edge id="e116" source="conservesalimentairesmontagneambre" target="socindustriellecommercialeemyrne">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e116" source="energieindustrielle" target="fonciereminieremadagascar">
+    <edge id="e117" source="energieindustrielle" target="fonciereminieremadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e117" source="agricoleindustriellemadagascar" target="agricolesucrierenossibe">
+    <edge id="e118" source="agricoleindustriellemadagascar" target="agricolesucrierenossibe">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e118" source="agricolesucrierenossibe" target="sucreriesmarseillaisesmadagascarnamakia">
+    <edge id="e119" source="agricolesucrierenossibe" target="sucreriesmarseillaisesmadagascarnamakia">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e119" source="agricoleindustriellemadagascar" target="sucreriesmarseillaisesmadagascar">
+    <edge id="e120" source="agricoleindustriellemadagascar" target="sucreriesmarseillaisesmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e120" source="nosybeenneindustriesagricoles" target="occidentalemadagascar">
+    <edge id="e121" source="nosybeenneindustriesagricoles" target="occidentalemadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e121" source="electriciteeauxmadagascar" target="fonciereminieremadagascar">
+    <edge id="e122" source="electriciteeauxmadagascar" target="fonciereminieremadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e122" source="graphitesmashar" target="graphitesmaskar">
+    <edge id="e123" source="graphitesmashar" target="graphitesmaskar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e123" source="madagascaroildevelopmentcoltd" target="madagascaroildevelopmentcoltd11pancraslanelondresec">
+    <edge id="e124" source="madagascaroildevelopmentcoltd" target="madagascaroildevelopmentcoltd11pancraslanelondresec">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e124" source="exploitationminesorsihanaka" target="socexploitationminesorsihanaka">
+    <edge id="e125" source="exploitationminesorsihanaka" target="socexploitationminesorsihanaka">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e125" source="exploitationminesorsihanaka" target="socminesorandavakoera">
+    <edge id="e126" source="exploitationminesorsihanaka" target="socminesorandavakoera">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e126" source="socexploitationminesorsihanaka" target="socminesorandavakoera">
+    <edge id="e127" source="socexploitationminesorsihanaka" target="socminesorandavakoera">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e127" source="syndicatlyonnaismadagascar" target="wharftamatave">
-      <data key="e_weight">3</data>
-    </edge>
-    <edge id="e128" source="gisementsauriferesanasaha" target="syndicatlyonnaisexplorationmadagascar">
+    <edge id="e128" source="syndicatlyonnaismadagascar" target="wharftamatave">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e129" source="gisementsauriferesanasaha" target="syndicatlyonnaismadagascar">
@@ -2904,352 +2904,367 @@
     <edge id="e555" source="florensorville" target="graphitessahanavo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e556" source="florensorville" target="socindustrielleconstructions">
+    <edge id="e556" source="florensorville" target="socgraphitessahanavo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e557" source="graphitessahanavo" target="rossignol">
+    <edge id="e557" source="florensorville" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e558" source="graphitessahanavo" target="socindustrielleconstructions">
+    <edge id="e558" source="graphitessahanavo" target="rossignol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e559" source="rossignol" target="socindustrielleconstructions">
+    <edge id="e559" source="graphitessahanavo" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e560" source="florensorville" target="hydroelectriquereunionhe">
+    <edge id="e560" source="rossignol" target="socgraphitessahanavo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e561" source="hydroelectriquereunionhe" target="rossignol">
+    <edge id="e561" source="rossignol" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e562" source="madagascar" target="rossignol">
+    <edge id="e562" source="socgraphitessahanavo" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e563" source="andrelefebvre" target="plantationsanjouan">
+    <edge id="e563" source="florensorville" target="hydroelectriquereunionhe">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e564" source="andrelefebvre" target="rossignol">
+    <edge id="e564" source="hydroelectriquereunionhe" target="rossignol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e565" source="grandsbois" target="hydroelectriquereunionhe">
+    <edge id="e565" source="madagascar" target="rossignol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e566" source="plantesparfumsmadagascar" target="salinesdjiboutisfaxmadagascar">
+    <edge id="e566" source="andrelefebvre" target="plantationsanjouan">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e567" source="graphites" target="salinesdjiboutisfaxmadagascar">
+    <edge id="e567" source="andrelefebvre" target="rossignol">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e568" source="graphites" target="socglegraphites">
+    <edge id="e568" source="grandsbois" target="hydroelectriquereunionhe">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e569" source="graphites" target="uniongraphites">
+    <edge id="e569" source="plantesparfumsmadagascar" target="salinesdjiboutisfaxmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e570" source="malgachecultures" target="socglegraphites">
+    <edge id="e570" source="graphites" target="salinesdjiboutisfaxmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e571" source="malgachecultures" target="uniongraphites">
+    <edge id="e571" source="graphites" target="socglegraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e572" source="mineraisgrandeile" target="socglegraphites">
+    <edge id="e572" source="graphites" target="uniongraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e573" source="mineraisgrandelle" target="salinesdjiboutisfaxmadagascar">
+    <edge id="e573" source="malgachecultures" target="socglegraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e574" source="mineraisgrandelle" target="socglegraphites">
+    <edge id="e574" source="malgachecultures" target="uniongraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e575" source="salinesdjiboutisfaxmadagascar" target="socglegraphites">
+    <edge id="e575" source="mineraisgrandeile" target="socglegraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e576" source="salinesdjiboutisfaxmadagascar" target="uniongraphites">
+    <edge id="e576" source="mineraisgrandelle" target="salinesdjiboutisfaxmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e577" source="socglegraphites" target="tulear">
+    <edge id="e577" source="mineraisgrandelle" target="socglegraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e578" source="tulear" target="uniongraphites">
+    <edge id="e578" source="salinesdjiboutisfaxmadagascar" target="socglegraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e579" source="creditindustrielafricain" target="salinsmidisalinesdjibouti">
+    <edge id="e579" source="salinesdjiboutisfaxmadagascar" target="uniongraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e580" source="africainecommercerepresentation" target="salinsmidisalinesdjibouti">
+    <edge id="e580" source="socglegraphites" target="tulear">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e581" source="africainecommercerepresentation" target="minassian">
+    <edge id="e581" source="tulear" target="uniongraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e582" source="entreprisesmaritimesmadagascar" target="mahajamba">
+    <edge id="e582" source="creditindustrielafricain" target="salinsmidisalinesdjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e583" source="filaturetissagemadagascar" target="mahajamba">
+    <edge id="e583" source="africainecommercerepresentation" target="salinsmidisalinesdjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e584" source="madagascarautomobile" target="minierefinancieremadagascar">
+    <edge id="e584" source="africainecommercerepresentation" target="minassian">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e585" source="madagascarautomobiletananariverenault" target="minierefinancieremadagascar">
+    <edge id="e585" source="entreprisesmaritimesmadagascar" target="mahajamba">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e586" source="agricoleindustriellemadagascar" target="banquemadagascarcomores">
+    <edge id="e586" source="filaturetissagemadagascar" target="mahajamba">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e587" source="banquemadagascarcomores" target="commissionconsignationcoloniales">
+    <edge id="e587" source="madagascarautomobile" target="minierefinancieremadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e588" source="banquemadagascarcomores" target="madagascarautomobile">
+    <edge id="e588" source="madagascarautomobiletananariverenault" target="minierefinancieremadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e589" source="banquemadagascarcomores" target="madagascarautomobiletananariverenault">
+    <edge id="e589" source="agricoleindustriellemadagascar" target="banquemadagascarcomores">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e590" source="banquemadagascarcomores" target="marseillaisemadagascar">
+    <edge id="e590" source="banquemadagascarcomores" target="commissionconsignationcoloniales">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e591" source="fianarantsoa" target="miniereconcessionsprassoabyssinie">
+    <edge id="e591" source="banquemadagascarcomores" target="madagascarautomobile">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e592" source="domaineankaratrasucrieremahavavy" target="gemmesmadagascar">
+    <edge id="e592" source="banquemadagascarcomores" target="madagascarautomobiletananariverenault">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e593" source="domaineankaratrasucrieremahavavy" target="graphites">
+    <edge id="e593" source="banquemadagascarcomores" target="marseillaisemadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e594" source="domaineankaratrasucrieremahavavy" target="mineraisgrandeile">
+    <edge id="e594" source="fianarantsoa" target="miniereconcessionsprassoabyssinie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e595" source="domaineankaratrasucrieremahavavy" target="mineraisgrandelle">
+    <edge id="e595" source="domaineankaratrasucrieremahavavy" target="gemmesmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e596" source="gemmesmadagascar" target="malgachecultures">
+    <edge id="e596" source="domaineankaratrasucrieremahavavy" target="graphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e597" source="gemmesmadagascar" target="tulear">
+    <edge id="e597" source="domaineankaratrasucrieremahavavy" target="mineraisgrandeile">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e598" source="gemmesmadagascar" target="unioncommercialemadagascar">
+    <edge id="e598" source="domaineankaratrasucrieremahavavy" target="mineraisgrandelle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e599" source="malgachecultures" target="unioncommercialemadagascar">
+    <edge id="e599" source="gemmesmadagascar" target="malgachecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e600" source="tulear" target="unioncommercialemadagascar">
+    <edge id="e600" source="gemmesmadagascar" target="tulear">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e601" source="gemmesmadagascar" target="uniongraphites">
+    <edge id="e601" source="gemmesmadagascar" target="unioncommercialemadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e602" source="graphites" target="salinsmidisalinesdjibouti">
+    <edge id="e602" source="malgachecultures" target="unioncommercialemadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e603" source="graphitessahanavo" target="maximedarrieuxfils">
+    <edge id="e603" source="tulear" target="unioncommercialemadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e604" source="culturescoloniales" target="sambiranaiseambohimenaparambanja">
+    <edge id="e604" source="gemmesmadagascar" target="uniongraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e605" source="produitsagricolestropicaux" target="sambiranaiseambohimenaparambanja">
+    <edge id="e605" source="graphites" target="salinsmidisalinesdjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e606" source="cefrancomalgacheentreprises" target="cotieremadagascar">
+    <edge id="e606" source="graphitessahanavo" target="maximedarrieuxfils">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e607" source="mahajamba" target="produitsagricolestropicaux">
+    <edge id="e607" source="culturescoloniales" target="sambiranaiseambohimenaparambanja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e608" source="mahajamba" target="tanninscoloniaux">
+    <edge id="e608" source="produitsagricolestropicaux" target="sambiranaiseambohimenaparambanja">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e609" source="mahajamba" target="tanninscoloniauxsahambavy">
+    <edge id="e609" source="cefrancomalgacheentreprises" target="cotieremadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e610" source="foncieresudmadagascar" target="messageriesfrancaisesmadagascar">
+    <edge id="e610" source="mahajamba" target="produitsagricolestropicaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e611" source="foncieresudmadagascar" target="socglegraphites">
+    <edge id="e611" source="mahajamba" target="tanninscoloniaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e612" source="betsibokaambatoboeni" target="industrieparfumsproduitschimiques">
+    <edge id="e612" source="mahajamba" target="tanninscoloniauxsahambavy">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e613" source="banquemadagascarcomores" target="charbonnagessakoa">
+    <edge id="e613" source="foncieresudmadagascar" target="messageriesfrancaisesmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e614" source="banquemadagascarcomores" target="graphites">
+    <edge id="e614" source="foncieresudmadagascar" target="socglegraphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e615" source="banquemadagascarcomores" target="malgachecultures">
+    <edge id="e615" source="betsibokaambatoboeni" target="industrieparfumsproduitschimiques">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e616" source="banquemadagascarcomores" target="mineraisgrandeile">
+    <edge id="e616" source="banquemadagascarcomores" target="charbonnagessakoa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e617" source="banquemadagascarcomores" target="mineraisgrandelle">
+    <edge id="e617" source="banquemadagascarcomores" target="graphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e618" source="banquemadagascarcomores" target="plantesparfumsmadagascar">
+    <edge id="e618" source="banquemadagascarcomores" target="malgachecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e619" source="banquemadagascarcomores" target="tulear">
+    <edge id="e619" source="banquemadagascarcomores" target="mineraisgrandeile">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e620" source="charbonnagessakoa" target="graphites">
+    <edge id="e620" source="banquemadagascarcomores" target="mineraisgrandelle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e621" source="charbonnagessakoa" target="malgachecultures">
+    <edge id="e621" source="banquemadagascarcomores" target="plantesparfumsmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e622" source="charbonnagessakoa" target="mineraisgrandeile">
+    <edge id="e622" source="banquemadagascarcomores" target="tulear">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e623" source="charbonnagessakoa" target="mineraisgrandelle">
+    <edge id="e623" source="charbonnagessakoa" target="graphites">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e624" source="charbonnagessakoa" target="plantesparfumsmadagascar">
+    <edge id="e624" source="charbonnagessakoa" target="malgachecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e625" source="charbonnagessakoa" target="tulear">
+    <edge id="e625" source="charbonnagessakoa" target="mineraisgrandeile">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e626" source="graphites" target="plantesparfumsmadagascar">
+    <edge id="e626" source="charbonnagessakoa" target="mineraisgrandelle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e627" source="mineraisgrandelle" target="plantesparfumsmadagascar">
+    <edge id="e627" source="charbonnagessakoa" target="plantesparfumsmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e628" source="elevagepecheindustriemadagascar" target="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
+    <edge id="e628" source="charbonnagessakoa" target="tulear">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e629" source="produitsalimentaires" target="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
+    <edge id="e629" source="graphites" target="plantesparfumsmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e630" source="domaineankaratrasucrieremahavavy" target="sucreriesmarseillaisesmadagascar">
+    <edge id="e630" source="mineraisgrandelle" target="plantesparfumsmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e631" source="domaineankaratrasucrieremahavavy" target="sucreriesmarseillaisesmadagascarnamakia">
+    <edge id="e631" source="elevagepecheindustriemadagascar" target="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e632" source="andrelefebvre" target="florensorville">
+    <edge id="e632" source="produitsalimentaires" target="tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e633" source="cafesmadagascar" target="fianarantsoa">
+    <edge id="e633" source="domaineankaratrasucrieremahavavy" target="sucreriesmarseillaisesmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e634" source="cafesmadagascar" target="leonkrafit">
+    <edge id="e634" source="domaineankaratrasucrieremahavavy" target="sucreriesmarseillaisesmadagascarnamakia">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e635" source="cafesmadagascar" target="minierefoncieremalgache">
+    <edge id="e635" source="andrelefebvre" target="florensorville">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e636" source="fianarantsoa" target="financieremadagascar">
+    <edge id="e636" source="cafesmadagascar" target="fianarantsoa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e637" source="fianarantsoa" target="leonkrafit">
+    <edge id="e637" source="cafesmadagascar" target="leonkrafit">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e638" source="financieremadagascar" target="leonkrafit">
+    <edge id="e638" source="cafesmadagascar" target="minierefoncieremalgache">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e639" source="financieremadagascar" target="minierefoncieremalgache">
+    <edge id="e639" source="fianarantsoa" target="financieremadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e640" source="leonkrafit" target="minierefoncieremalgache">
+    <edge id="e640" source="fianarantsoa" target="leonkrafit">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e641" source="agricolesucrierenossibe" target="banquemadagascarcomores">
+    <edge id="e641" source="financieremadagascar" target="leonkrafit">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e642" source="banquemadagascarcomores" target="electriciteeauxmadagascar">
+    <edge id="e642" source="financieremadagascar" target="minierefoncieremalgache">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e643" source="banquemadagascarcomores" target="malgachefibrestextilesderives">
+    <edge id="e643" source="leonkrafit" target="minierefoncieremalgache">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e644" source="comptoirnationalescompteparis" target="socindustrielleconstructions">
+    <edge id="e644" source="agricolesucrierenossibe" target="banquemadagascarcomores">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e645" source="electriciteeauxmadagascar" target="financieremadagascar">
+    <edge id="e645" source="agricolesucrierenossibe" target="madagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e646" source="agricolesucrierenossibe" target="charbonnagessakoa">
+    <edge id="e646" source="banquemadagascarcomores" target="madagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e647" source="filaturetissagemadagascar" target="industriellefortdauphin">
+    <edge id="e647" source="banquemadagascarcomores" target="electriciteeauxmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e648" source="industriellefortdauphin" target="tanninscoloniaux">
+    <edge id="e648" source="banquemadagascarcomores" target="malgachefibrestextilesderives">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e649" source="industriellefortdauphin" target="tanninscoloniauxsahambavy">
+    <edge id="e649" source="comptoirnationalescompteparis" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e650" source="betsibokaambatoboeni" target="grandeile">
+    <edge id="e650" source="electriciteeauxmadagascar" target="financieremadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e651" source="betsibokaambatoboeni" target="grandelle">
+    <edge id="e651" source="agricolesucrierenossibe" target="charbonnagessakoa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e652" source="agricolesucrierenossibe" target="creditfonciermadagascar">
+    <edge id="e652" source="filaturetissagemadagascar" target="industriellefortdauphin">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e653" source="faraonyexploitatonplacersauriferesmadagascar" target="malgachecultures">
+    <edge id="e653" source="industriellefortdauphin" target="tanninscoloniaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e654" source="faraonyexploitatonplacersauriferesmadagascar" target="minesorandavakoera">
+    <edge id="e654" source="industriellefortdauphin" target="tanninscoloniauxsahambavy">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e655" source="malgachecultures" target="minesorandavakoera">
+    <edge id="e655" source="betsibokaambatoboeni" target="grandeile">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e656" source="francoantankare" target="minesorandavakoera">
+    <edge id="e656" source="betsibokaambatoboeni" target="grandelle">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e657" source="banquespecialemadagascaroceanindien" target="charbonnagebatelagemadagascar">
+    <edge id="e657" source="agricolesucrierenossibe" target="creditfonciermadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e658" source="banquespecialemadagascaroceanindien" target="messageriesfrancaisesmadagascar">
+    <edge id="e658" source="faraonyexploitatonplacersauriferesmadagascar" target="malgachecultures">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e659" source="charbonnagebatelagemadagascar" target="messageriesfrancaisesmadagascar">
+    <edge id="e659" source="faraonyexploitatonplacersauriferesmadagascar" target="minesorandavakoera">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e660" source="mineraisgrandeile" target="socindustrielleconstructions">
+    <edge id="e660" source="malgachecultures" target="minesorandavakoera">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e661" source="gisementsauriferesanasaha" target="plantesparfumsmadagascar">
+    <edge id="e661" source="francoantankare" target="minesorandavakoera">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e662" source="gisementsauriferesanasaha" target="socplantesparfumsmadagascar">
+    <edge id="e662" source="banquespecialemadagascaroceanindien" target="charbonnagebatelagemadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e663" source="plantesparfumsmadagascar" target="syndicatlyonnaisexplorationmadagascar">
+    <edge id="e663" source="banquespecialemadagascaroceanindien" target="messageriesfrancaisesmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e664" source="socplantesparfumsmadagascar" target="syndicatlyonnaisexplorationmadagascar">
+    <edge id="e664" source="charbonnagebatelagemadagascar" target="messageriesfrancaisesmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e665" source="francoantankare" target="imperialecheminsferethiopiens">
+    <edge id="e665" source="mineraisgrandeile" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e666" source="betsibokaambatoboeni" target="creditfonciermadagascar">
+    <edge id="e666" source="gisementsauriferesanasaha" target="plantesparfumsmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e667" source="betsibokaambatoboeni" target="mahajamba">
+    <edge id="e667" source="gisementsauriferesanasaha" target="socplantesparfumsmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e668" source="creditfonciermadagascar" target="mahajamba">
+    <edge id="e668" source="plantesparfumsmadagascar" target="syndicatlyonnaisexplorationmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e669" source="francomalgache" target="madagaskara">
+    <edge id="e669" source="socplantesparfumsmadagascar" target="syndicatlyonnaisexplorationmadagascar">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e670" source="francoantankare" target="grandecomore">
+    <edge id="e670" source="francoantankare" target="imperialecheminsferethiopiens">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e671" source="salinesdiegosuarez" target="salinesmadagascar">
+    <edge id="e671" source="betsibokaambatoboeni" target="creditfonciermadagascar">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e672" source="betsibokaambatoboeni" target="mahajamba">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e673" source="creditfonciermadagascar" target="mahajamba">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e674" source="francomalgache" target="madagaskara">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e675" source="francoantankare" target="grandecomore">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e676" source="salinesdiegosuarez" target="salinesmadagascar">
       <data key="e_weight">1</data>
     </edge>
   </graph>

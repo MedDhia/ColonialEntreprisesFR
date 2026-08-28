@@ -72,10 +72,12 @@ ROLE_RULES: list[tuple[str, str]] = [
     (r"pr[eé]sident[- ]?directeur[- ]g[eé]n[eé]ral|p\.?-?d\.?-?g\.?\b|pdt\.?-?dir\.?|"
      r"pr[eé]sid\.?-?dir\.?", "president_directeur_general"),
     (r"vice-?pr[eé]sident[s]?|vice-?pr[eé]sid\.?|v\.?-?pr[eé]sid\.?|vice-?pr[eé]s\.?", "vice_president"),
-    (r"pr[eé]sident[e]?[s]?\b|pr[eé]sid\.?|pr[eé]st\.?|\bpdt\.?\b", "president"),
-    (r"administrateur[s]?[- ]d[eé]l[eé]gu[eé][es]?|admin\.?-?d[eé]l\.?|adm\.?\s*d[eé]l\.?|"
+    # "pres." keeps its period: bare "pres" is the preposition "pres de".
+    (r"pr[eé]sident[e]?[s]?\b|pr[eé]sid\.?|pr[eé]st\.?|\bpdt\.?\b|\bpr[eé]s\.", "president"),
+    (r"administrateur[s]?[- ]d[eé]l[eé]gu[eé][es]?|adm(?:in)?\.?[-\s]*d[eé]l[eé]?g?\.?|"
      r"administrateur[s]?[- ]directeur[s]?", "administrateur_delegue"),
-    (r"directeur[s]?\s+g[eé]n[eé]ra(?:l|ux)|dir\.?\s*g[eé]n\.?|directrice\s+g[eé]n[eé]rale",
+    (r"directeur[s]?\s+g[eé]n[eé]ra(?:l|ux)|direct(?:eurs?)?\.?\s*g[eé]n\.?|"
+     r"dir\.?\s*g[eé]n\.?|directrice\s+g[eé]n[eé]rale",
      "directeur_general"),
     (r"commissaire[s]?\s+(?:aux\s+comptes|des\s+comptes)|commiss\.?\s+aux\s+comptes|"
      r"commissaire[s]?\s+suppl[eé]ant[s]?", "commissaire_aux_comptes"),
@@ -256,8 +258,14 @@ DASH_ENTRY_RE = re.compile(
 # Annuaire industriel entry: the firm's name in capitals at the start of a line,
 # followed by the inverted generic head in parentheses:
 #   "ABATTOIRS MUNICIPAUX ET INDUSTRIELS AU MAROC (Soc. gen. des), siege adm. :"
+# Anchored with (?m)^ rather than (?:^|\n) so that `m.start()` is the first
+# character of the line, not the newline before it. With the old form this
+# pattern reported a position one character earlier than
+# ANNUAIRE_INDUS_ENTRY_RE for the same notice head, so the two never collided
+# and the anchor de-duplication below silently did nothing: 357 head pairs
+# differed by exactly one character.
 CAPS_ENTRY_RE = re.compile(
-    r"(?:^|\n)(?P<name>[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ0-9\s'’&.\-«»]{5,90}?)\s*"
+    r"(?m)^(?P<name>[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ0-9\s'’&.\-«»]{5,90}?)\s*"
     r"\((?P<head>[^)\n]{2,60})\)"
 )
 
@@ -466,20 +474,25 @@ def find_anchors(text: str, is_annuaire: bool) -> list[Anchor]:
     for m in ANNUAIRE_HEADER_RE.finditer(text):
         anchors.append(Anchor(m.start(), "annuaire_header", m.group("year"),
                               "Annuaire des entreprises coloniales"))
-    aec_year = ""
+    aec_years: list[tuple[int, str]] = []
     for m in AEC_RE.finditer(text):
-        aec_year = aec_year or m.group("year")
+        aec_years.append((m.start(), m.group("year")))
         anchors.append(Anchor(m.start(), "aec_entry", m.group("year"),
                               f"AEC {m.group('year')}, p. {m.group('page')}",
                               clean_anchor_company(m.group("name")), m.group("page")))
-    if aec_year:
-        # Only inside a document that already carries a spelled-out AEC entry:
-        # a bare page number means nothing on its own.
+    if aec_years:
+        # A bare page belongs to the listing it sits in, so it takes the year of
+        # the nearest AEC entry *before* it, not the document's first. The
+        # Fedhala dossier reprints AEC 1922 and then AEC 1951; taking the first
+        # stamped the two 1951 entries (pages 826 and 857 - only a volume that
+        # long has them) as 1922, a 29-year error on four board seats.
         for m in AEC_BARE_PAGE_RE.finditer(text):
             name = clean_anchor_company(m.group("name"))
-            if name:
-                anchors.append(Anchor(m.start(), "aec_entry", aec_year,
-                                      f"AEC {aec_year}", name))
+            if not name:
+                continue
+            year = next((y for pos, y in reversed(aec_years) if pos < m.start()),
+                        aec_years[0][1])
+            anchors.append(Anchor(m.start(), "aec_entry", year, f"AEC {year}", name))
     for m in DESFOSSES_RE.finditer(text):
         pub = clean_text(m.group("pub"))
         anchors.append(Anchor(m.start(), "directory_entry", m.group("year"),
@@ -666,15 +679,28 @@ PROSE_VERB_RE = re.compile(
 # into real edges, so they are dropped outright - which also removes 3,209
 # that were already attributed before that change.
 # A role label the list parser swallowed, ahead of the name it introduces. The
-# period is optional because the sources abbreviate inconsistently ("Prés:. M.
-# J. Garcin" puts it on the wrong side of the colon).
+# label is captured, not just removed: it states the role of the name behind it,
+# and the enclosing list's role is usually a different one. Discarding it filed
+# 199 "Adm.:" rows as `president` and 113 "Prés.:" rows as `administrateur`.
+#
+# The separators are all loose because the sources abbreviate inconsistently:
+# "Prés:. M. J. Garcin" puts the period on the wrong side of the colon,
+# "Adm.-dél.:" hyphenates where "adm. dél." spaces, and "direct. gén.:" splits
+# a two-word title across an abbreviation point.
+_LABEL_SEP = r"[-.\s]*"
 MEMBER_LABEL_PREFIX_RE = re.compile(
-    r"^\s*(?:adm(?:in)?(?:\.|istrateurs?)?(?:\s*d[ée]l[ée]gu[ée]s?)?|"
-    r"pr[ée]s(?:\.|ident)?|v(?:ice)?[-.\s]*pr[ée]s(?:\.|ident)?|"
-    r"direct(?:\.|eurs?)?(?:\s*g[ée]n[ée]ral)?|dir\.|d\.?g\.?|"
+    r"^\s*(?P<label>"
+    r"v(?:ice)?" + _LABEL_SEP + r"pr[ée]s(?:id)?(?:ent)?e?s?|"
+    r"adm(?:in)?(?:istrateurs?)?\.?" + _LABEL_SEP +
+    r"(?:d[ée]l[ée]gu[ée]e?s?|dél\.?|dels?)|"
+    r"adm(?:in)?(?:istrateurs?)?|"
+    r"pr[ée]s(?:id)?(?:ent)?e?s?|"
+    r"direct(?:eurs?|rices?)?\.?" + _LABEL_SEP + r"g[ée]n(?:[ée]ral)?e?s?|"
+    r"direct(?:eurs?|rices?)?|dir|d\.?\s*g|"
     r"g[ée]rants?|censeurs?|secr[ée]taires?|"
-    r"fond[ée]s?\s+de\s+pouvoirs?|repr[ée]sentants?|mandataires?)"
-    r"\s*\.?\s*:\s*\.?\s*", re.I)
+    r"commissaires?(?:" + _LABEL_SEP + r"aux" + _LABEL_SEP + r"comptes)?|"
+    r"fond[ée]s?\s+de\s+pouvoirs?|repr[ée]sentants?|mandataires?"
+    r")\s*\.?\s*:\s*\.?\s*", re.I)
 MEMBER_JUNK_RE = re.compile(
     r"\b(capital|commissaires?|propri[ée]taires?|si[èe]ge|statuts|exercice|"
     r"dividende|assembl[ée]e|bilan|r[ée]serves?|archives|galeries|"
@@ -934,7 +960,20 @@ def _make_member(frag: str, role: str) -> dict | None:
     # the row discarded - 1,514 rows held a colon and every hand-checked one was
     # of this shape. LEADING_MM_RE then removes the "MM." the label left behind,
     # so this has to run first.
-    bare = MEMBER_LABEL_PREFIX_RE.sub("", bare)
+    #
+    # The label also *overrides* the role inherited from the enclosing list. It
+    # is the more specific statement: a "Prés.:" inside a run of administrateurs
+    # names the president, and taking the run's role instead is simply wrong.
+    label = MEMBER_LABEL_PREFIX_RE.match(bare)
+    if label:
+        # The separator swallows the abbreviation's period, and several role
+        # rules need it - "pres." is the president, bare "pres" is the
+        # preposition - so a failed lookup is retried with it restored.
+        text = label.group("label")
+        labelled = canonical_role(text) or canonical_role(text + ".")
+        if labelled:
+            role = labelled
+        bare = bare[label.end():]
     bare = LEADING_MM_RE.sub("", bare).strip(" .,;:")
     bare = re.sub(r"\s+", " ", bare).strip(" .,;:")
     if not bare or len(bare) < 3:

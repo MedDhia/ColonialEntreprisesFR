@@ -2014,7 +2014,9 @@ banqueetatmaroc,energieelectriquemaroc,1930_1944,4,laurent-atthalin-a; mauclere-
 energieelectriquemaroc,portsmarocains,1930_1944,4,bourrellis-l; giros-a; laurent-atthalin-a; rebuffel-c
 energieelectriquemaroc,portsmarocainsmehedyaportlyautey,1930_1944,4,atthalin-a; bourrellis-l; giros-a; rebuffel-c
 entreprisesmaroc,portsmarocains,1930_1944,4,bourrellis-l; dayde-j; giros-a; rebuffel-c
+fruitieremaroc,marocainebenimtir,1930_1944,4,cahen-d-anvers-c; de-joannis-e-edouard; gradis-g; ledoux-f
 fruitieremaroc,marocainesiditaibi,1930_1944,4,cahen-d-anvers-c; de-joannis-e-edouard; gradis-g; ledoux-f
+marocainebenimtir,marocainesiditaibi,1930_1944,4,cahen-d-anvers-c; de-joannis-e-edouard; gradis-g; ledoux-f
 africainetransports,omniumnordafricain,1930_1944,4,epinat-j; grand-p; laurent-m-maurice; paris-e
 africainetransports,prospectionetudesminieresmaroc,1930_1944,4,epinat-j; grand-p; laurent-m-maurice; paris-e
 agencefrance,omniumnordafricain,1930_1944,4,epinat-j; grand-p; lyon-levy; mourgnot-p
@@ -2027,6 +2029,7 @@ francomarocaine,portsmarocains,1930_1944,4,bourrellis-l; dayde-j; giscard-d-esta
 liegesmamora,mamora,1930_1944,4,becot-h; delcourt-e; doyen-a; prevot-e
 briqueteriesfedala,francomarocainefedala,1930_1944,4,de-lapeyriere-j; hersent-g-georges; hersent-g-gilbert; hersent-m
 francomarocainefedala,salinesfedala,1930_1944,4,foucault-g; hersent-g-georges; hersent-g-gilbert; perrin-de-brichambaut-p
+abattoirsmunicipauxindustrielsmaroc,fasielectricite,1930_1944,3,godard-l; jordan-p; roudy-a
 fasielectricite,maroc,1930_1944,3,atthalin-a; godard-l; roudy-a
 maroc,tabacsmaroc,1930_1944,3,atthalin-a; beugin-p; roudy-a
 africainetransports,franceauto,1930_1944,3,berti-v; epinat-j; paris-e
@@ -2037,8 +2040,8 @@ energieelectriquemaroc,porttanger,1930_1944,3,courcelle-j; laurent-atthalin-a; l
 banqueetatmaroc,tabacsmaroc,1930_1944,3,guiot-g; ruiz-senen-v; van-nierop-h
 internationaleregiecointeresseetabacsmaroc,tabacsmaroc,1930_1944,3,atthalin-a; benac-a; ruiz-senen-v
 marocaineimmeublesurbains,nordmarocain,1930_1944,3,charbonnel-l; de-mari-h; lorenzy-j
-fruitieremaroc,marocainebenimtir,1930_1944,3,cahen-d-anvers-c; gradis-g; ledoux-f
-marocainebenimtir,marocainesiditaibi,1930_1944,3,cahen-d-anvers-c; gradis-g; ledoux-f
+comptoirmaroc,culturesindustriellesmaroc,1930_1944,3,bonan-f; gradis-g; orcel-j
+comptoirmaroc,fruitieremaroc,1930_1944,3,bonan-f; gradis-g; orcel-j
 comptoirminesgrandstravauxmaroc,directioncasablanca,1930_1944,3,massenet-a-albert; massenet-m; schmerber-h
 agencefrance,prospectionetudesminieresmaroc,1930_1944,3,epinat-j; grand-p; mourgnot-p
 agencefrance,tifnouttiranimine,1930_1944,3,epinat-j; grand-p; mourgnot-p
@@ -2073,8 +2076,11 @@ bonlogis,foncieremaroc,1930_1944,3,clynans-p; hornung-j; vauthier-j
 marocainetransportsmaritimes,shellmaroc,1930_1944,3,agnew-a; brylinski-a; godber-f
 bonlogis,industrielleagricolemarrakech,1930_1944,3,coppee-e; orts-p; vauthier-j
 minesgraphitemarocouminesgraphitesmaroc,minesgraphitesmaroc,1930_1944,3,mercie-g; theodore-m; touny-l
+abattoirsmunicipauxindustrielsmaroc,explosifs,1930_1944,2,godard-l; jordan-p
+abattoirsmunicipauxindustrielsmaroc,maroc,1930_1944,2,godard-l; roudy-a
+explosifs,maroc,1930_1944,2,atthalin-a; godard-l
+maroc,portsmarocains,1930_1944,2,godard-l; laurent-atthalin-a
 abattoirsmunicipauxindustrielsmaroc,brasseriesmaroc,1930_1944,2,katz-m; roudy-a
-abattoirsmunicipauxindustrielsmaroc,fasielectricite,1930_1944,2,jordan-p; roudy-a
 abattoirsmunicipauxindustrielsmaroc,socchauxcimentsmateriauxconstructionmaroc,1930_1944,2,katz-m; roudy-a
 agricolezemmours,constructioncivile,1930_1944,2,roudy-a; sagot-a
 banquecommercialemaroc,developpementcasablanca,1930_1944,2,berti-v; roudy-a
@@ -2102,7 +2108,6 @@ banqueetatmaroc,caissepretsimmobiliersmaroc,1930_1944,2,desoubry-g; laurent-atth
 banqueetatmaroc,maroc,1930_1944,2,laurent-atthalin-a; moreau-e
 cheminsfermaroc,marocainedistributioneaugazelectricite,1930_1944,2,guerin-a-albert; laurent-atthalin-a
 energieelectriquemaroc,marocainedistributioneaugazelectricite,1930_1944,2,laurent-atthalin-a; mercier-e
-maroc,portsmarocains,1930_1944,2,godard-l; laurent-atthalin-a
 annonay,financierefrancomarocaine,1930_1944,2,de-montgolfier-c; de-montgolfier-j-joseph
 banquehypothecairemaroc,financierefrancomarocaine,1930_1944,2,de-montgolfier-c; de-montgolfier-j-joseph
 banqueparisiennemaroc,marocaineconstructionsmetalliques,1930_1944,2,eustache-v; machavoine-g
@@ -2114,22 +2119,24 @@ commercialemaghreb,creditmaghreb,1930_1944,2,legal-c; mahieux-h
 commercialemaghreb,mobiliereimmobilierefrancomarocaine,1930_1944,2,legal-c; mahieux-h
 creditmaghreb,mobiliereimmobilierefrancomarocaine,1930_1944,2,legal-c; mahieux-h
 brasseriesmaroc,carrieresmarocaines,1930_1944,2,charbonnier-a; orcel-j
+brasseriesmaroc,comptoirmaroc,1930_1944,2,gradis-g; orcel-j
 brasseriesmaroc,culturesindustriellesmaroc,1930_1944,2,gradis-g; orcel-j
 brasseriesmaroc,fruitieremaroc,1930_1944,2,gradis-g; orcel-j
+carrieresmarocaines,comptoirmaroc,1930_1944,2,dreyfus-boris-g; orcel-j
 carrieresmarocaines,fruitieremaroc,1930_1944,2,orcel-j; sagot-a
 paris,petrolesmaroc,1930_1944,2,danset-m; palliez-a
 agencefrance,autohall,1930_1944,2,grand-p; guillemet-p
 autohall,produitsmaroc,1930_1944,2,guillemet-p; mas-p
 agricoledoukkala,culturesindustriellesmaroc,1930_1944,2,de-joannis-e-edouard; gradis-g
 agricoledoukkala,fruitieremaroc,1930_1944,2,de-joannis-e-edouard; gradis-g
+agricoledoukkala,marocainebenimtir,1930_1944,2,de-joannis-e-edouard; gradis-g
 agricoledoukkala,marocainesiditaibi,1930_1944,2,de-joannis-e-edouard; gradis-g
-comptoirmaroc,culturesindustriellesmaroc,1930_1944,2,bonan-f; gradis-g
-comptoirmaroc,fruitieremaroc,1930_1944,2,bonan-f; gradis-g
 conservesmaroc,fruitieremaroc,1930_1944,2,gradis-g; ledoux-f
 conservesmaroc,marocaineainsikh,1930_1944,2,gradis-g; ledoux-f
 conservesmaroc,marocainebenimtir,1930_1944,2,gradis-g; ledoux-f
 conservesmaroc,marocainesiditaibi,1930_1944,2,gradis-g; ledoux-f
 conservesmaroc,marocaineterrescultures,1930_1944,2,gradis-g; ledoux-f
+culturesindustriellesmaroc,marocainebenimtir,1930_1944,2,de-joannis-e-edouard; gradis-g
 culturesindustriellesmaroc,marocainesiditaibi,1930_1944,2,de-joannis-e-edouard; gradis-g
 fruitieremaroc,marocaineainsikh,1930_1944,2,gradis-g; ledoux-f
 fruitieremaroc,marocaineterrescultures,1930_1944,2,gradis-g; ledoux-f
@@ -2182,7 +2189,6 @@ cheminsfermaroc,fasielectricite,1930_1944,2,atthalin-a; lebon-a-andre
 cheminsfermarocoriental,francoespagnolecheminfertangerfez,1930_1944,2,atthalin-a; margot-m
 cheminsfermaroc,tabacsmaroc,1930_1944,2,atthalin-a; beugin-p
 energieelectriquemaroc,francomarocaine,1930_1944,2,atthalin-a; bourrellis-l
-explosifs,maroc,1930_1944,2,atthalin-a; godard-l
 francomarocaine,tabacsmaroc,1930_1944,2,atthalin; atthalin-a
 cherifiennepetroles,minieremarocaine,1930_1944,2,ferasson-l-louis; salvane-l
 cheminsfermarocoriental,cherifiennepetroles,1930_1944,2,guerin-a; le-trocquer-y
@@ -2221,6 +2227,9 @@ marocaineboismateriauxconstruction,marocaineimmobilieredarbeida,1930_1944,2,goul
 mazagan,moulinsmazagan,1930_1944,2,fiol-j; fradin-c
 cherifienneautomobilesmaterielagricole,sudauto,1930_1944,2,barathon-e; duplain-p
 balima,cherifienneexploitationscommerciales,1930_1944,2,liorel-a; mathias-l
+abattoirsmunicipauxindustrielsmaroc,portsmarocains,1930_1944,1,godard-l
+explosifs,portsmarocains,1930_1944,1,godard-l
+fasielectricite,portsmarocains,1930_1944,1,godard-l
 abattoirsmunicipauxindustrielsmaroc,agricolezemmours,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,banquecommercialemaroc,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,chauxcimentsmateriauxconstructionmaroc,1930_1944,1,roudy-a
@@ -2230,7 +2239,6 @@ abattoirsmunicipauxindustrielsmaroc,developpementcasablanca,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,electricitemarrakech,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,electricitesafi,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,immobilieremaroc,1930_1944,1,roudy-a
-abattoirsmunicipauxindustrielsmaroc,maroc,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,marocainedistributioneaugazelectricite,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,moulinsmaghreb,1930_1944,1,roudy-a
 abattoirsmunicipauxindustrielsmaroc,tabacsmaroc,1930_1944,1,roudy-a
@@ -2336,7 +2344,6 @@ abattoirsmunicipauxindustrielsmaroc,minesaouli,1930_1944,1,de-caqueray-g
 abattoirsmunicipauxindustrielsmaroc,industrielleboismanufacture,1930_1944,1,cotte-l-ludovic
 abattoirsmunicipauxindustrielsmaroc,cherifienneimmobilierefinanciere,1930_1944,1,gompel-r-robert
 abattoirsmunicipauxindustrielsmaroc,chaouiamaroc,1930_1944,1,jordan-p
-abattoirsmunicipauxindustrielsmaroc,explosifs,1930_1944,1,jordan-p
 chaouiamaroc,explosifs,1930_1944,1,jordan-p
 chaouiamaroc,fasielectricite,1930_1944,1,jordan-p
 abattoirsmunicipauxindustrielsmaroc,eclairageforcemaroc,1930_1944,1,katz-m
@@ -2451,6 +2458,8 @@ brasseriesmaroc,industriellepetrolesmaroc,1930_1944,1,orcel-j
 carrieresmarocaines,culturesindustriellesmaroc,1930_1944,1,orcel-j
 carrieresmarocaines,developpementcasablanca,1930_1944,1,orcel-j
 carrieresmarocaines,industriellepetrolesmaroc,1930_1944,1,orcel-j
+comptoirmaroc,developpementcasablanca,1930_1944,1,orcel-j
+comptoirmaroc,industriellepetrolesmaroc,1930_1944,1,orcel-j
 culturesindustriellesmaroc,developpementcasablanca,1930_1944,1,orcel-j
 culturesindustriellesmaroc,industriellepetrolesmaroc,1930_1944,1,orcel-j
 developpementcasablanca,fruitieremaroc,1930_1944,1,orcel-j
@@ -2499,10 +2508,8 @@ agricoledoukkala,brasseriesmaroc,1930_1944,1,gradis-g
 agricoledoukkala,comptoirmaroc,1930_1944,1,gradis-g
 agricoledoukkala,conservesmaroc,1930_1944,1,gradis-g
 agricoledoukkala,marocaineainsikh,1930_1944,1,gradis-g
-agricoledoukkala,marocainebenimtir,1930_1944,1,gradis-g
 agricoledoukkala,marocaineterrescultures,1930_1944,1,gradis-g
 agricoledoukkala,vulcanisationmoderne,1930_1944,1,gradis-g
-brasseriesmaroc,comptoirmaroc,1930_1944,1,gradis-g
 brasseriesmaroc,conservesmaroc,1930_1944,1,gradis-g
 brasseriesmaroc,marocaineainsikh,1930_1944,1,gradis-g
 brasseriesmaroc,marocainebenimtir,1930_1944,1,gradis-g
@@ -2518,7 +2525,6 @@ comptoirmaroc,vulcanisationmoderne,1930_1944,1,gradis-g
 conservesmaroc,culturesindustriellesmaroc,1930_1944,1,gradis-g
 conservesmaroc,vulcanisationmoderne,1930_1944,1,gradis-g
 culturesindustriellesmaroc,marocaineainsikh,1930_1944,1,gradis-g
-culturesindustriellesmaroc,marocainebenimtir,1930_1944,1,gradis-g
 culturesindustriellesmaroc,marocaineterrescultures,1930_1944,1,gradis-g
 culturesindustriellesmaroc,vulcanisationmoderne,1930_1944,1,gradis-g
 fruitieremaroc,vulcanisationmoderne,1930_1944,1,gradis-g
@@ -2526,7 +2532,6 @@ marocaineainsikh,vulcanisationmoderne,1930_1944,1,gradis-g
 marocainebenimtir,vulcanisationmoderne,1930_1944,1,gradis-g
 marocainesiditaibi,vulcanisationmoderne,1930_1944,1,gradis-g
 marocaineterrescultures,vulcanisationmoderne,1930_1944,1,gradis-g
-carrieresmarocaines,comptoirmaroc,1930_1944,1,dreyfus-boris-g
 comptoirmaroc,foncieremaroc,1930_1944,1,de-cherisey-r
 comptoirmaroc,miroiteriemaroc,1930_1944,1,bonan-f
 culturesindustriellesmaroc,miroiteriemaroc,1930_1944,1,bonan-f
@@ -3155,8 +3160,6 @@ immobilierekenitreenneterrainsindustriels,madrague,1930_1944,1,mussard-r
 agricoleboumais,fsepetrolesmaroc,1930_1944,1,laroche-h
 balima,bonlogis,1930_1944,1,croizau-g
 banquecommercialemaroc,molybdene,1930_1944,1,pietri-n
-explosifs,portsmarocains,1930_1944,1,godard-l
-fasielectricite,portsmarocains,1930_1944,1,godard-l
 asiatiqueafricaine,chauxcimentsmateriauxconstructionmaroc,1930_1944,1,duboin-j
 portfedala,salinesmaroc,1945_1962,9,defougere-g; duchemin-c; hennique-p; hersent-g-gilbert; lefevre-l; peraire-j; perrin-de-brichambaut-p; philip-a; tunmac-s
 minesbouskour,minesissougri,1945_1962,8,bardoux-j; bellanger-a; boissonnas-r; celier-p; de-flers-f; halmagrand-l; mallet-a; tastet-e
@@ -3184,8 +3187,6 @@ minierebouazzergraara,prospectionetudesminieresmaroc,1945_1962,3,epinat-j; mourg
 minieregundafa,minieresmala,1945_1962,3,berger-h; berger-v; nenard-r
 omniumnordafricain,penarroyamaroc,1945_1962,3,aguillon-j; getten-p; pagezy-h
 salinesmaroc,valdora,1945_1962,3,defougere-g; duchemin-c; hersent-g-gilbert
-cheminsfermaroc,francoespagnolecheminfertangerfez,1945_1962,3,ardoin-p; mercier-g; wibratte-l
-energieelectriquemaroc,francoespagnolecheminfertangerfez,1945_1962,3,ardoin-p; mercier-g; wibratte-l
 fermessegmet,marocainevinicole,1945_1962,3,guillemet-p; restany-p; villiers-h
 idem1948,minesbouarfa,1945_1962,3,ardoin-p; delgua-a; ferasson-l-louis
 marocaine,rharbkhlot,1945_1962,2,de-caqueray-g; villiers-h
@@ -3219,6 +3220,8 @@ minesgraphitemarocouminesgraphitesmaroc,minieregundafa,1945_1962,2,berger-h; ber
 minesgraphitemarocouminesgraphitesmaroc,minieresmala,1945_1962,2,berger-h; berger-v
 cherifiennearmement,omniumnordafricain,1945_1962,2,getten-p; peyronnet-a
 banqueetatmaroc,cheminsfermaroc,1945_1962,2,jahan-h; wibratte-l
+cheminsfermaroc,francoespagnolecheminfertangerfez,1945_1962,2,mercier-g; wibratte-l
+energieelectriquemaroc,francoespagnolecheminfertangerfez,1945_1962,2,mercier-g; wibratte-l
 caissepretsimmobiliersmaroc,tramwaysautobuscasablanca,1945_1962,2,gendre-e; grillot-a
 marocainemagasinsgeneraux,tramwaysautobuscasablanca,1945_1962,2,gendre-e; grillot-a
 creditmaghreb,techniqueetudesindustriellescommercialesmarocsteic,1945_1962,2,favre-gilly-r; meynial-r-roger
@@ -3230,9 +3233,9 @@ maroc,marocainedistributioneaugazelectricite,1945_1962,2,anthoine-f; jullien-a
 pecheriesconservesalimentaires,tramwaysautobuscasablanca,1945_1962,2,amadou-g; geraud-l
 cherifienneengraisproduitschimiques,moulinsmaghreb,1945_1962,2,massena-a; prince-d-essling
 moulinsmaghreb,omniumnordafricain,1945_1962,2,painvin-g; toussaint-g
-cheminsfermarocoriental,francoespagnolecheminfertangerfez,1945_1962,2,ardoin-p; margot-m
 cheminsfermarocoriental,minesbouarfa,1945_1962,2,ardoin-p; delgua-a
-francoespagnolecheminfertangerfez,idem1948,1945_1962,2,ardoin-p; margot-m
+entrepotsfrigorifiquesafriquenord,portfedala,1945_1962,2,defougere-g; perrin-de-brichambaut-p
+entrepotsfrigorifiquesafriquenord,salinesmaroc,1945_1962,2,defougere-g; perrin-de-brichambaut-p
 banqueetatmaroc,internationaleregiecointeresseetabacsmaroc,1945_1962,2,ruiz-senen-v; verrijn-stuart-g
 chauxcimentsmateriauxconstructionmaroc,marocainegazcomprimes,1945_1962,1,katz
 chauxcimentsmateriauxconstructionmaroc,moulinsmaghreb,1945_1962,1,katz
@@ -3461,17 +3464,15 @@ energieelectriquemaroc,entrepriseelectriquezenatasfedala,1945_1962,1,ardoin-p
 energieelectriquemaroc,idem1948,1945_1962,1,ardoin-p
 energieelectriquemaroc,minesbouarfa,1945_1962,1,ardoin-p
 entreprisecolonialeelectrification,entrepriseelectriquezenatasfedala,1945_1962,1,ardoin-p
-entreprisecolonialeelectrification,francoespagnolecheminfertangerfez,1945_1962,1,ardoin-p
 entreprisecolonialeelectrification,idem1948,1945_1962,1,ardoin-p
 entreprisecolonialeelectrification,minesbouarfa,1945_1962,1,ardoin-p
-entrepriseelectriquezenatasfedala,francoespagnolecheminfertangerfez,1945_1962,1,ardoin-p
 entrepriseelectriquezenatasfedala,idem1948,1945_1962,1,ardoin-p
 entrepriseelectriquezenatasfedala,minesbouarfa,1945_1962,1,ardoin-p
-francoespagnolecheminfertangerfez,minesbouarfa,1945_1962,1,ardoin-p
-entrepotsfrigorifiquesafriquenord,portfedala,1945_1962,1,perrin-de-brichambaut-p
-entrepotsfrigorifiquesafriquenord,salinesmaroc,1945_1962,1,perrin-de-brichambaut-p
+entrepotsfrigorifiquesafriquenord,valdora,1945_1962,1,defougere-g
 maroccommercialeimmob,portfedala,1945_1962,1,fedala
 maroccommercialeimmob,valdora,1945_1962,1,fedala
+conserveriesmarocaines,portfedala,1945_1962,1,et-lefebvre
+conserveriesmarocaines,valdora,1945_1962,1,et-lefebvre
 argilesbouadra,portsmarocains,1945_1962,1,laures-f
 banqueetatmaroc,tabacsmaroc,1945_1962,1,ruiz-senen-v
 africaineagricoleminiere,asiatiqueafricaine,1945_1962,1,lyautey-p
@@ -3490,6 +3491,8 @@ internationaleregiecointeresseetabacsmaroc,tramwaysautobuscasablanca,1945_1962,1
 maroc,tramwaysautobuscasablanca,1945_1962,1,jullien-a
 marocainedistributioneaugazelectricite,tramwaysautobuscasablanca,1945_1962,1,jullien-a
 francoespagnolecheminfertangerfez,maroc,1945_1962,1,brincard-c
+cheminsfermarocoriental,francoespagnolecheminfertangerfez,1945_1962,1,margot-m
+francoespagnolecheminfertangerfez,idem1948,1945_1962,1,margot-m
 cheminsfermarocoriental,moulinsmaghreb,1945_1962,1,destombes-j
 charbonnagesnordafricains,unionauriferecasablancasuitemarocaineparticipations,1945_1962,1,solignac-m
 charbonnagesnordafricains,minesaouli,1945_1962,1,loix-g
@@ -3508,12 +3511,12 @@ moulinsmaghreb,portsmarocains,1945_1962,1,sagot-a
 brasseriesmaroc,brasseriesnordmarocain,post_1962,6,faivre-h; gaston-dreyfus-r; kreiss-p; monnier-c; orcel-j; sicot-l
 cherifienneenergie,marocaineapplicationselectriques,post_1962,4,ardoin-p; bonfils-m; julien-m; radiguer-c
 cheminsfermaroc,energieelectriquemaroc,post_1962,4,ardoin-p; mercier-g; moreau-neret-o; wibratte-l
-marocaineexploitationsminieresbouarfaparoujda,minesbouarfa,post_1962,4,berti-v; delgua-a; ferasson-l-louis; guerin-a-albert
 cherifienneenergie,energieelectriquemaroc,post_1962,3,ardoin-p; bourrellis-l; julien-m
-cheminsfermarocoriental,minesbouarfa,post_1962,3,ardoin-p; delgua-a; ferasson-l-louis
 cheminsfermarocoriental,marocaineexploitationsminieresbouarfaparoujda,post_1962,3,delattre-l; delgua-a; ferasson-l-louis
+marocaineexploitationsminieresbouarfaparoujda,minesbouarfa,post_1962,3,berti-v; delgua-a; guerin-a-albert
 omniumnordafricain,penarroyamaroc,post_1962,3,aguillon-j; getten-p; pagezy-h
 energieelectriquemaroc,marocaineapplicationselectriques,post_1962,2,ardoin-p; julien-m
+cheminsfermarocoriental,minesbouarfa,post_1962,2,ardoin-p; delgua-a
 eclairageforcemaroc,entreprisesmaroc,post_1962,2,bourrellis-l; jahan-l
 electricitemazagan,electricitesafi,post_1962,2,bonfils; hornung-c
 marocainemagasinsgeneraux,tramwaysautobuscasablanca,post_1962,2,gendre-e; grillot-a
@@ -3525,19 +3528,13 @@ marocaineapplicationselectriques,tramwaysautobuscasablanca,post_1962,1,julien-m
 electricitemazagan,marocaineapplicationselectriques,post_1962,1,lefrancois-l
 cheminsfermaroc,cheminsfermarocoriental,post_1962,1,ardoin-p
 cheminsfermaroc,cherifienneenergie,post_1962,1,ardoin-p
-cheminsfermaroc,francoespagnolecheminfertangerfez,post_1962,1,ardoin-p
 cheminsfermaroc,marocaineapplicationselectriques,post_1962,1,ardoin-p
 cheminsfermaroc,minesbouarfa,post_1962,1,ardoin-p
 cheminsfermarocoriental,cherifienneenergie,post_1962,1,ardoin-p
 cheminsfermarocoriental,energieelectriquemaroc,post_1962,1,ardoin-p
-cheminsfermarocoriental,francoespagnolecheminfertangerfez,post_1962,1,ardoin-p
 cheminsfermarocoriental,marocaineapplicationselectriques,post_1962,1,ardoin-p
-cherifienneenergie,francoespagnolecheminfertangerfez,post_1962,1,ardoin-p
 cherifienneenergie,minesbouarfa,post_1962,1,ardoin-p
-energieelectriquemaroc,francoespagnolecheminfertangerfez,post_1962,1,ardoin-p
 energieelectriquemaroc,minesbouarfa,post_1962,1,ardoin-p
-francoespagnolecheminfertangerfez,marocaineapplicationselectriques,post_1962,1,ardoin-p
-francoespagnolecheminfertangerfez,minesbouarfa,post_1962,1,ardoin-p
 marocaineapplicationselectriques,minesbouarfa,post_1962,1,ardoin-p
 marocaineapplicationselectriques,marocainedistributioneaugazelectricite,post_1962,1,thuillier-j
 chauxcimentsmateriauxconstructionmaroc,nantaiseimportationmarochailaustgutzeitmollinedahl,post_1962,1,hailaust-g
@@ -3565,7 +3562,6 @@ maroc,tramwaysautobuscasablanca,post_1962,1,jullien-a
 marocainedistributioneaugazelectricite,tramwaysautobuscasablanca,post_1962,1,jullien-a
 cheminsfermarocoriental,marocaineetudessiderurgiques,post_1962,1,ferasson-l-louis
 marocaineetudessiderurgiques,marocaineexploitationsminieresbouarfaparoujda,post_1962,1,ferasson-l-louis
-marocaineetudessiderurgiques,minesbouarfa,post_1962,1,ferasson-l-louis
 cherifienneenergie,eclairageforcemaroc,post_1962,1,bourrellis-l
 cherifienneenergie,entreprisesmaroc,post_1962,1,bourrellis-l
 eclairageforcemaroc,energieelectriquemaroc,post_1962,1,bourrellis-l

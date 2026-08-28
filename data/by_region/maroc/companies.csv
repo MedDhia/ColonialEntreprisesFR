@@ -1,7 +1,7 @@
 company_id,name,sectors,n_ties,n_directors,first_year,last_year
 cheminsfermaroc,Compagnie des Chemins de fer du Maroc,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",246,78,1913,1969
-banqueetatmaroc,Banque d'État du Maroc,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",172,71,1922,1953
-francoespagnolecheminfertangerfez,Compagnie franco-espagnole du Chemin de fer de Tanger à Fez,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",145,69,1913,1969
+banqueetatmaroc,Banque d'État du Maroc,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",174,71,1922,1953
+francoespagnolecheminfertangerfez,Compagnie franco-espagnole du Chemin de fer de Tanger à Fez,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",145,68,1913,1969
 creditmarocain,Crédit marocain,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",114,66,1913,1952
 maroc,Compagnie du Maroc,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique); Sociétés foncières et immobilières",176,63,1913,1969
 energieelectriquemaroc,Énergie électrique du Maroc,"Documents généraux (par ordre chronologique); Eau, gaz, électricité (Utilities)",155,57,1924,1969
@@ -9,7 +9,7 @@ moulinsmaghreb,Société des Moulins du Maghreb,Documents généraux (par ordre 
 manutentionmarocaine,La Manutention marocaine,"Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",101,48,1913,1969
 metallurgiqueminierefrancomarocaine,Compagnie Métallurgique et minière franco-marocaine,Documents généraux (par ordre chronologique); Mines,116,47,1912,1938
 chauxcimentsmateriauxconstructionmaroc,"Chaux, ciments et matériaux de construction au Maroc","Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",130,46,1913,1969
-marocainedistributioneaugazelectricite,"Société Marocaine de distribution d'eau, de gaz et d'électricité","Documents généraux (par ordre chronologique); Eau, gaz, électricité (Utilities)",83,40,1914,1969
+marocainedistributioneaugazelectricite,"Société Marocaine de distribution d'eau, de gaz et d'électricité","Documents généraux (par ordre chronologique); Eau, gaz, électricité (Utilities)",85,40,1914,1969
 marocaine,Compagnie marocaine,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",102,39,1913,1952
 minesbouarfa,Société des Mines de Bou-Arfa,Documents généraux (par ordre chronologique); Mines,103,38,1922,1969
 porttanger,Société du Port de Tanger,"Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",52,38,1926,1952
@@ -54,7 +54,7 @@ cherifienneengraisproduitschimiques,Société Chérifienne d'engrais et de produ
 voyageshotelsnordafricains,Société des voyages et hôtels nord-africains,"Documents généraux (par ordre chronologique); Hôtellerie, tourisme, tourisme",26,23,1925,1951
 minoteriefrancomarocainesale,Minoterie franco-marocaine de Salé,Documents généraux (par ordre chronologique),24,23,1941,1941
 naphtesrhrabcentral,Sté des naphtes du Rhrab central,Documents généraux (par ordre chronologique),23,23,1950,1950
-comptoirmetallurgiquemaroc,Comptoir métallurgique du Maroc,Commerce; Documents généraux (par ordre chronologique),61,22,1913,1958
+comptoirmetallurgiquemaroc,Comptoir métallurgique du Maroc,Commerce; Documents généraux (par ordre chronologique),62,22,1913,1958
 etudesmarocainescommerceagriculturemines,"Société d'Études marocaines pour le commerce, l'agriculture et les mines","Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",59,22,1913,1926
 tabacsmaroc,Tabacs au Maroc,Industries agro-alimentaires,51,22,1927,1945
 materieltravauxagricoles,Cie de Matériel et de travaux agricoles,Documents généraux (par ordre chronologique); Industries agro-alimentaires,30,22,1922,1926
@@ -71,7 +71,7 @@ rharbkhlot,Rharb et Khlot,Documents généraux (par ordre chronologique); Indust
 maroccommerceindustrie,Compagnie du Maroc pour le commerce et l'industrie,Commerce; Documents généraux (par ordre chronologique),30,20,1922,1926
 marrakechauto,Marrakech-Auto,Documents généraux (par ordre chronologique),20,20,1930,1930
 lyonmaroc,Lyon-Maroc,Sociétés foncières et immobilières,20,20,1920,1922
-abattoirsmunicipauxindustrielsmaroc,Société générale des Abattoirs municipaux et industriels au Maroc,Documents généraux (par ordre chronologique); Industries agro-alimentaires,46,19,1920,1938
+abattoirsmunicipauxindustrielsmaroc,Société générale des Abattoirs municipaux et industriels au Maroc,Documents généraux (par ordre chronologique); Industries agro-alimentaires,47,19,1920,1938
 liegesmamora,"Société des Lièges de la Mamora, puis Compagnie de la Mamora","Documents généraux (par ordre chronologique); Filière bois : exploitation forestière, meubles, cellulose, papier…",45,19,1920,1931
 algeromarocaineculturecommerce,Société Algéro-Marocaine de Culture et de commerce,Documents généraux (par ordre chronologique); Industries agro-alimentaires,42,19,1920,1958
 culturesindustriellesmaroc,Société de Cultures industrielles au Maroc,Documents généraux (par ordre chronologique),29,19,1926,1937
@@ -95,10 +95,11 @@ agricolemarocaine,Agricole Marocaine,Documents généraux (par ordre chronologiq
 briqueteriesfedhala,Briqueteries de Fedhala,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",32,17,1913,1926
 sudmarocain,Compagnie du Sud-Marocain,Documents généraux (par ordre chronologique); Industries agro-alimentaires,32,17,1923,1937
 fonciereagricolemaroc,Compagnie Foncière et Agricole du Maroc,Documents généraux (par ordre chronologique); Industries agro-alimentaires,31,17,1908,1958
-comptoirmaroc,Comptoir français du Maroc,Commerce; Documents généraux (par ordre chronologique),29,17,1913,1948
+comptoirmaroc,Comptoir français du Maroc,Commerce; Documents généraux (par ordre chronologique),30,17,1913,1948
 autohall,Auto-Hall,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",28,17,1922,1937
 domainebeniamar,Domaine de Béni-Amar,Documents généraux (par ordre chronologique); Industries agro-alimentaires,25,17,1924,1935
 makanghia,La Makanghia,Commerce,24,17,1928,1928
+francomarocaineoufrancomarocaine,Société Franco-Marocaine ou Société franco-marocaine,Mines,23,17,1911,1924
 minoteriesatlas,Société anon. des minoteries de l'Atlas,Documents généraux (par ordre chronologique),18,17,1935,1935
 minoterieatlasboujab,"Minoterie de l'Atlas à Boujab, puis Société nouvelle des minoteries de l'Atlas",Industries agro-alimentaires,17,17,1935,1935
 magasinsgenerauxwarrantsmaroc,Société des Magasins généraux et warrants du Maroc,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",36,16,1912,1926
@@ -106,9 +107,9 @@ immobilierelyonnaisemarocaine,Société Immobilière Lyonnaise Marocaine,Documen
 habitationsmaroc,Société d'Habitations au Maroc,Documents généraux (par ordre chronologique); Sociétés foncières et immobilières,33,16,1922,1952
 minesoudjda,Société des Mines d'Oudjda,Documents généraux (par ordre chronologique); Mines,31,16,1916,1958
 eclairageforcemaroc,Cie d'Éclairage et de force au Maroc,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",26,16,1924,1969
-francomarocaineoufrancomarocaine,Société Franco-Marocaine ou Société franco-marocaine,Mines,22,16,1911,1924
 creditfrancomarocaincommerceexterieur,Crédit franco-marocain du commerce extérieur,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",21,16,1922,1925
 agricoletadla,Société Agricole du Tadla,Documents généraux (par ordre chronologique); Industries agro-alimentaires,20,16,1926,1952
+afrique,L'Afrique française,Documents généraux (par ordre chronologique),19,16,1925,1938
 portsmarocainsmehedyakenitrarabatsale,Société des Ports marocains de Mehedya-Kenitra et Rabat-Salé,"Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",17,16,1917,1958
 minieremzaita,Compagnie minière du M'Zaïta,Documents généraux (par ordre chronologique),17,16,1937,1969
 vulcanisationmoderne,Vulcanisation moderne,Documents généraux (par ordre chronologique),17,16,1930,1930
@@ -124,9 +125,9 @@ banquefoncieremaroc,Banque foncière du Maroc,"Banques, groupes financiers, assu
 minierebouazzergraara,Société minière du Bou-Azzer et du Graâra,Documents généraux (par ordre chronologique); Mines,25,15,1930,1952
 agadir,Compagnie d'Agadir,Documents généraux (par ordre chronologique); Mines,24,15,1913,1969
 centralemarocaine,Société Centrale marocaine,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",24,15,1922,1938
+miniereafriquenord,Compagnie Minière de l'Afrique du Nord,Documents généraux (par ordre chronologique); Mines,22,15,1923,1926
 constructioncivile,Construction civile,Documents généraux (par ordre chronologique),21,15,1926,1937
 afriqueindustriellecommercialeagricole,"L'Afrique industrielle, commerciale et agricole",Documents généraux (par ordre chronologique),19,15,1922,1926
-afrique,L'Afrique française,Documents généraux (par ordre chronologique),18,15,1925,1938
 africaineimportationcharbonsbriquettesnordpas,Société africaine d'importation de charbons et briquettes du Nord et du Pas,Documents généraux (par ordre chronologique),17,15,1937,1937
 nordafricaineventespubliques,Société Nord-Africaine de Ventes publiques,Documents généraux (par ordre chronologique); Industries agro-alimentaires,17,15,1926,1937
 merinosmarocain,Le Mérinos marocain,Documents généraux (par ordre chronologique); Industries agro-alimentaires,16,15,1926,1935
@@ -145,7 +146,6 @@ pecheriesconservesalimentaires,Société anonyme de pêcheries et conserves alim
 superphosphatesproduitschimiquesmaroc,Compagnie des Superphosphates et des produits chimiques du Maroc,Documents généraux (par ordre chronologique); Industries chimiques,24,14,1926,1937
 lesieurafrique,Lesieur-Afrique,Documents généraux (par ordre chronologique); Industries agro-alimentaires,23,14,1952,1969
 cherifiennehivernage,Société Chérifienne d'hivernage,"Documents généraux (par ordre chronologique); Hôtellerie, tourisme, tourisme",22,14,1928,1952
-miniereafriquenord,Compagnie Minière de l'Afrique du Nord,Documents généraux (par ordre chronologique); Mines,21,14,1923,1926
 fermieremarocaineexploitationsagricoles,Compagnie Fermière Marocaine d’Exploitations agricoles,Documents généraux (par ordre chronologique); Industries agro-alimentaires,19,14,1920,1937
 charbonnierecasablanca,Compagnie Charbonniere de Casablanca,Commerce; Documents généraux (par ordre chronologique),17,14,1926,1937
 etablbozzibaudin,Établ. Bozzi et Baudin,Documents généraux (par ordre chronologique),16,14,1930,1930
@@ -160,6 +160,7 @@ polietchaussonmaroc,Poliet et Chausson-Maroc,"Bâtiment et travaux publics, mat�
 etudesmarocainescommerceiindustriemines,"Sté d'études marocaines pour le commerce, I'industrie et les mines","Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",21,13,1913,1922
 huileriessavonneriescherifiennes,Huileries et savonneries chérifiennes,Documents généraux (par ordre chronologique),20,13,1913,1926
 tuileriesbriqueteriesmarrakech,Tuileries et briqueteries de Marrakech,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",19,13,1930,1930
+etudestravauxartmaroc,Société d’Études et de Travaux d'art du Maroc,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",18,13,1920,1930
 chalutagemediterranee,Société de Chalutage de la Méditerranée,Industries agro-alimentaires,18,13,1922,1922
 cherifienneagricultureelevage,Société Chérifienne d'Agriculture et d'élevage,Documents généraux (par ordre chronologique); Industries agro-alimentaires,16,13,1924,1926
 etudesentreprisesomniummarocain,Société d'études et d'entreprises Omnium marocain,"Banques, groupes financiers, assureurs",16,13,1912,1926
@@ -175,10 +176,9 @@ brasseriesnordmarocain,Société des Brasseries du Nord-Marocain,Documents gén�
 abattoirsmunicipauxmaroc,Sté générale des abattoirs municipaux au Maroc,Documents généraux (par ordre chronologique); Industries agro-alimentaires,24,12,1922,1927
 banquemarocaineagriculturecommerceindustrie,"Banque marocaine pour l'agriculture, le commerce et l'industrie","Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",24,12,1921,1922
 minesissougri,Société des Mines de l'Issougri,Documents généraux (par ordre chronologique); Mines,23,12,1951,1952
+omniumentreprises,Omnium d'entreprises,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",20,12,1913,1969
 bonlogis,Le Bon Logis,Documents généraux (par ordre chronologique); Sociétés foncières et immobilières,20,12,1922,1930
-omniumentreprises,Omnium d'entreprises,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",19,12,1913,1969
 etudesexploitationsminierestadla,Société d'études et d'exploitations minières du Tadla,Documents généraux (par ordre chronologique),17,12,1937,1969
-etudestravauxartmaroc,Société d’Études et de Travaux d'art du Maroc,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",17,12,1920,1930
 exportationimportationmaroc,Sté d'exportation et d'importation au Maroc,Documents généraux (par ordre chronologique),16,12,1922,1926
 nantaiseimportationmaroc,Société Nantaise d’Importation au Maroc,Commerce,16,12,1920,1926
 salinesfedala,Salines de Fédala,Documents généraux (par ordre chronologique),15,12,1930,1930
@@ -259,7 +259,6 @@ fruitsprimeursmaroc,Fruits et primeurs du Maroc,Documents généraux (par ordre 
 marocainepetrolesmory,Société marocaine des pétroles Mory,Documents généraux (par ordre chronologique),10,10,1949,1949
 unionminierepanafricaine,Union minière panafricaine,Documents généraux (par ordre chronologique),10,10,1952,1952
 distributioneau,DISTRIBUTION D'EAU,Documents généraux (par ordre chronologique),10,10,1925,1925
-socfeutresrok,Soc. an. des FEUTRES ROK,Documents généraux (par ordre chronologique),10,10,1925,1925
 casablancaiseconstructionseconomiquescreditmobilier,Casablancaise de Constructions economiques et de crédit mobilier,Sociétés foncières et immobilières,10,10,1922,1922
 chauxcimentsmateriauxconstruction,"Sté anon. des chaux, ciments et matériaux de construction au","Bâtiment et travaux publics, matériaux de construction, céramique",10,10,1922,1922
 domainekoriflaainelaouda,"Domaine de Korifla, Aïn-el-Aouda",Industries agro-alimentaires,10,10,1926,1926
@@ -277,7 +276,7 @@ marocainegazcomprimes,Société Marocaine de Gaz comprimés,Documents généraux
 cheminfertangerfez,Chemin de fer Tanger-Fez,"Transports terrestres, garages automobiles et agricoles",15,9,1922,1948
 madrague,« La Madrague »,Documents généraux (par ordre chronologique),14,9,1930,1930
 groupemarocainetudeentreprises,Groupe marocain d'étude et d'entreprises,"Banques, groupes financiers, assureurs",13,9,1924,1924
-conserveriesmarocaines,Conserveries marocaines,"Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",12,9,1922,1969
+conserveriesmarocaines,Conserveries marocaines,"Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",12,9,1937,1969
 marocainescieriesatlas,Société marocaine des Scieries de l'Atlas,"Documents généraux (par ordre chronologique); Filière bois : exploitation forestière, meubles, cellulose, papier…",11,9,1922,1958
 electricitemazagan,Société d'Électricité de Mazagan,"Documents généraux (par ordre chronologique); Eau, gaz, électricité (Utilities)",11,9,1926,1969
 mobiliereimmobilierefrancomarocaine,Société mobilière et immobilière franco-marocaine,Documents généraux (par ordre chronologique),11,9,1926,1930
@@ -360,6 +359,7 @@ caissepretsimmobiliers,Caisse de prêts immobiliers,"Banques, groupes financiers
 officenordafricain,Office nord-africain,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",14,7,1930,1969
 comptoirautomobileagricole,Comptoir automobile et agricole,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",13,7,1926,1930
 minierehautguir,Société minière du Haut-Guir,Documents généraux (par ordre chronologique); Mines,13,7,1937,1952
+marocainebenimtir,Société Marocaine des Beni M'Tir,Documents généraux (par ordre chronologique); Industries agro-alimentaires,12,7,1937,1952
 comptoirsfrancomarocains,Comptoirs franco-marocains,Commerce; Documents généraux (par ordre chronologique),11,7,1913,1922
 maisonfamiliale,« La Maison familiale »,Documents généraux (par ordre chronologique),10,7,1922,1930
 agricolenordafricain,Société Agricole du Nord-Africain,Documents généraux (par ordre chronologique); Industries agro-alimentaires,10,7,1926,1926
@@ -372,6 +372,7 @@ foncieremarococcidental,Société Foncière du Maroc Occidental,Documents géné
 foncieremarocainemessara,Société Foncière Marocaine Messara,Documents généraux (par ordre chronologique); Sociétés foncières et immobilières,8,7,1926,1926
 fonciereagricolehautmaroc,Compagnie foncière et agricole du Haut-Maroc,Documents généraux (par ordre chronologique),8,7,1937,1952
 mobiliereimmobilieremarocsoudan,Cie mobilière et immobilière Maroc et Soudan,Documents généraux (par ordre chronologique),8,7,1937,1937
+marocainebeniahsen,Société marocaine des Béni Ahsen,Documents généraux (par ordre chronologique),8,7,1952,1952
 mediterranee,Cie générale de la Méditerranée,Documents généraux (par ordre chronologique),7,7,1913,1913
 messageriescherifiennes,Cie des messageries chérifiennes,Documents généraux (par ordre chronologique),7,7,1913,1913
 navigationpaquet,Compagnie de navigation Paquet,Documents généraux (par ordre chronologique),7,7,1913,1913
@@ -401,7 +402,6 @@ meknesauto,« Meknès-Auto»,Documents généraux (par ordre chronologique),7,7,
 loirethaentjens,Loiret et Haentjens,Documents généraux (par ordre chronologique),7,7,1919,1919
 marocaineetsjjcarnaudforgesbasseindre,Société marocaine des Éts J.-J. Carnaud et Forges de Basse-Indre,Documents généraux (par ordre chronologique),7,7,1969,1969
 agavesmaroc,Société des agaves du Maroc,Documents généraux (par ordre chronologique),7,7,1952,1952
-marocainebeniahsen,Société marocaine des Béni Ahsen,Documents généraux (par ordre chronologique),7,7,1952,1952
 marocainecommerceindustriecereales,Sté marocaine de commerce et d'industrie des céréales,Documents généraux (par ordre chronologique),7,7,1952,1952
 anomboissonsgazeusessafimogador,Sté anom des boissons gazeuses de Safi-Mogador,Documents généraux (par ordre chronologique),7,7,1953,1953
 soclyonnaiseetudesmaroc,Soc. lyonnaise d'ÉTUDES AU MAROC,Documents généraux (par ordre chronologique),7,7,1925,1925
@@ -419,7 +419,6 @@ etablissementsperezcoudert,Établissements Pérez et Coudert,Documents générau
 nordafricaineentreprise,Société anon. Nord-Africaine d'entreprise (anc,Documents généraux (par ordre chronologique),10,6,1937,1952
 naphtesrharbcentraln,Société des naphtes du Rharb central (N,Documents généraux (par ordre chronologique),9,6,1926,1937
 annonay,ANNONAY,Documents généraux (par ordre chronologique),9,6,1937,1952
-marocainebenimtir,Société Marocaine des Beni M'Tir,Documents généraux (par ordre chronologique); Industries agro-alimentaires,9,6,1937,1952
 minesgraphitesmaroc,Mines et graphites du Maroc,Documents généraux (par ordre chronologique),9,6,1904,1935
 unionfinanciereconstructionmaroc,Union financière pour la construction au Maroc,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",8,6,1914,1958
 agricolenordafricainagence,Cie agricole du Nord-Africain. Agence,Documents généraux (par ordre chronologique); Industries agro-alimentaires,8,6,1922,1958
@@ -469,6 +468,7 @@ marocainecarburants,Compagnie Marocaine des Carburants,Commerce,6,6,1926,1926
 naphtesrharbcentral,Société des Naphtes du Rharb central,Pétrole et gaz,6,6,1922,1922
 africaineprospection,Société Africaine de Prospection,Mines,6,6,1929,1929
 machinesagricolesrwallut,MACHINES AGRICOLES R. WALLUT et Cie,"Transports terrestres, garages automobiles et agricoles",6,6,1925,1925
+socfrsetransactionsinternationalessafti,Soc. an. frse de transactions internationales SAFTI,Documents généraux (par ordre chronologique),23,5,1925,1925
 marocainetravauxpublics,Société Marocaine de Travaux publics,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique); Transports maritimes, fluviaux et aériens",15,5,1922,1958
 foncierechaouia,Société Foncière de la Chaouïa,Documents généraux (par ordre chronologique); Sociétés foncières et immobilières,10,5,1913,1958
 minierebramrane,Société Minière du Bramrane,Documents généraux (par ordre chronologique); Mines,10,5,1929,1937
@@ -545,7 +545,6 @@ recherchesminieresfrancaisescolonialesentreprises,Société Recherches minières
 sidimoussa,"Sidi-Moussa, puis Société cotonnière au Maroc",Industries agro-alimentaires,5,5,1926,1926
 ovinekittyrene,Societe ovine de Kitty René,Industries agro-alimentaires,5,5,1926,1926
 unionmaritimecoloniale,Union maritime et coloniale,"Banques, groupes financiers, assureurs",5,5,1926,1926
-socfrsetransactionsinternationalessafti,Soc. an. frse de transactions internationales SAFTI,Documents généraux (par ordre chronologique),22,4,1925,1925
 creditfonciermaroc,Crédit foncier du Maroc,"Banques, groupes financiers, assureurs; Documents généraux (par ordre chronologique)",8,4,1922,1925
 docksagriculture,Docks de l'Agriculture,Documents généraux (par ordre chronologique),8,4,1926,1950
 immobilieremedinacasablanca,Société immobilière de la Nouvelle Médina de Casablanca,Documents généraux (par ordre chronologique),8,4,1926,1935
@@ -791,6 +790,7 @@ omniumfrance,Omnium de France,"Banques, groupes financiers, assureurs",2,2,1922,
 renot,Rénot & Cie,Commerce,2,2,1926,1926
 saupiquetmaroc,Saupiquet-Maroc,Industries agro-alimentaires,2,2,,
 immobilieresoukelarbarharb,Cie immobilière de Souk-el-Arba-du-Rharb,Documents généraux (par ordre chronologique),18,1,1949,1949
+socfeutresrok,Soc. an. des FEUTRES ROK,Documents généraux (par ordre chronologique),11,1,1925,1925
 conservesfedhala,Conserves de Fedhala,Industries agro-alimentaires,2,1,1926,1926
 maisonlevy,Maison Lévy,Commerce,2,1,1926,1926
 omniumalgeriemarocfrancoespagnolemines,"Omnium d'Algérie-Maroc, Sté franco-espagnole de mines",Documents généraux (par ordre chronologique),1,1,1913,1913

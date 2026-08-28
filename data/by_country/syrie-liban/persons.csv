@@ -4,7 +4,7 @@ blanche-p,Blanche,P. Blanche; Paul Blanche,5,5,12,administrateur,1899,1945,"Tran
 michon-coster-j,Michon- Coster,J. Michon- Coster; J. Michon-Coster,5,5,11,administrateur,1914,1948,"Transports maritimes, ports et docks; Transports terrestres"
 henry-a,Henry,A. Henry; Arsène Henry,5,5,10,administrateur,1912,1938,"Banques et sociétés financières; Documents généraux; Transports maritimes, ports et docks"
 roudy-a,Roudy,A. Roudy; Athanase Roudy; Roudy,4,4,8,administrateur,1922,1948,Banques et sociétés financières; Documents généraux; Transports terrestres
-berard-m,Bérard,Maurice Bérard; Maurice-Robert Bérard,4,4,4,administrateur,1920,1929,"Sociétés diverses; Transports maritimes, ports et docks"
+berard-m,Bérard,Maurice Bérard; Maurice-Robert Bérard,5,4,6,administrateur,1920,1938,"Banques et sociétés financières; Documents généraux; Sociétés diverses; Transports maritimes, ports et docks"
 boissiere-g,Boissière,G. Boissière; Gustave Boissière,3,3,8,administrateur,1922,1948,Documents généraux; Transports terrestres
 saint-rene-taillandier-g,Saint-René Taillandier,G. Saint-René Taillandier; G. Saint-René Taillandier. 18; Saint-René Taillandier,3,3,6,administrateur,1920,1933,"Banques et sociétés financières; Transports maritimes, ports et docks"
 pirard-a,Pirard,A. Pirard; Albert Pirard,3,3,5,administrateur,1922,1933,Documents généraux; Transports terrestres
@@ -16,7 +16,7 @@ misk-n,Misk,N. Misk; Nasry Misk,3,3,3,administrateur,1909,1914,"Eaux, électrici
 sabbag-e,Sabbag,E. Sabbag; Elias Sabbag,3,3,3,administrateur,1909,1914,"Eaux, électricité (utilities)"
 habert-g,Habert,G. Habert; Gustave Habert,3,3,3,administrateur,1892,1912,"Transports maritimes, ports et docks; Transports terrestres"
 marbeau,Marbeau,Marbeau,2,2,9,administrateur,1937,1953,Banques et sociétés financières; Transports terrestres
-bousquet-h,Bousquet,H. Bousquet; Henri Bousquet,2,2,5,administrateur,1924,1938,Documents généraux; Sociétés diverses
+bousquet-h,Bousquet,H. Bousquet; Henri Bousquet,2,2,5,president,1924,1938,Documents généraux; Sociétés diverses
 salem,Salem,Salem,2,2,5,administrateur,1914,1933,Banques et sociétés financières; Transports terrestres
 bourgeois-d,Bourgeois,D. Bourgeois,2,2,5,administrateur,1933,1948,Transports terrestres
 passelecq-m,Passelecq,Passelecq; Passelecq9,2,2,5,administrateur,1925,1937,"Eaux, électricité (utilities); Transports terrestres"
@@ -97,7 +97,8 @@ soubret-e,Soubret,E. Soubret,1,1,3,administrateur,1927,1933,Transports terrestre
 thonet-c,Thonet,Ch. Thonet,1,1,3,administrateur,1927,1933,Transports terrestres
 lamarche-a,Lamarche,A. Lamarche,1,1,3,administrateur,1927,1933,Transports terrestres
 beyrouth,Beyrouth,Beyrouth,2,1,2,administrateur,,,Documents généraux
-homberg-a,Homberg,A. Homberg; André Homberg,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+homberg-a,Homberg,A. Homberg; André Homberg,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+laville-e,Laville,E. Laville,1,1,2,administrateur_delegue,1938,1938,Banques et sociétés financières; Documents généraux
 charpentier-j,Charpentier,J.-C. Charpentier,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
 leblanc-l,Leblanc,L. Leblanc,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
 misrachi-a,Misrachi,A. Misrachi,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
@@ -171,6 +172,7 @@ philippar-g,Philippar,Georges Philippar,1,1,1,administrateur,1927,1927,Transport
 renault-l,Renault,Louis Renault,1,1,1,administrateur,1927,1927,Transports aériens
 et-ernest-roume,et Ernest Roume,et Ernest Roume,1,1,1,administrateur,1927,1927,Transports aériens
 bourdillon,Bourdillon,Bourdillon,1,1,1,president,,,Documents généraux
+nabonne-p,Nabonne,P. Nabonne,1,1,1,administrateur_delegue,,,Documents généraux
 nabonne-j,Nabonne,J. Nabonne,1,1,1,president,,,Documents généraux
 gavoty-c,Gavoty,Ch. Gavoty,1,1,1,president,,,Documents généraux
 alexandrette,Alexandrette,Alexandrette,1,1,1,president,,,Documents généraux
@@ -193,10 +195,12 @@ mexico,Mexico,Mexico,1,1,1,administrateur,,,Documents généraux
 buenos-aires,Buenos-Aires,Buenos-Aires,1,1,1,administrateur,,,Documents généraux
 batavia,Batavia,Batavia,1,1,1,administrateur,,,Documents généraux
 andre-r,André,Robert André,1,1,1,president,,,Documents généraux
+poulain-r,Poulain,Robert Poulain,1,1,1,administrateur_delegue,,,Documents généraux
 serge-a,Serge,André Serge,1,1,1,president,,,Documents généraux
 alcan-p,Alcan,Pierre Alcan,1,1,1,president,,,Documents généraux
 muraton-g,Muraton,Gaston Muraton,1,1,1,president,,,Documents généraux
 gerard-g-gabriel,Gérard,Gabriel Gérard,1,1,1,president,,,Documents généraux
+thiebaud-e,Thiébaud,Émile Thiébaud,1,1,1,administrateur_delegue,,,Documents généraux
 gassier-m-marie,Gassier,Marie-Louis Gassier,1,1,1,president,,,Documents généraux
 gerard-p,Gérard,Paul Gérard,1,1,1,president,,,Documents généraux
 magnan-g,Magnan,Gabriel Magnan,1,1,1,president,,,Documents généraux
@@ -224,7 +228,7 @@ bresil,Brésil,Brésil,1,1,1,president,,,Documents généraux
 chili,Chili,Chili,1,1,1,president,,,Documents généraux
 portugal,Portugal,Portugal,1,1,1,president,,,Documents généraux
 espagne,Espagne,Espagne,1,1,1,president,,,Documents généraux
-mariage,Mariage,Mariage,1,1,1,administrateur,,,Documents généraux
+mariage,Mariage,Mariage,1,1,1,president,,,Documents généraux
 esteve,Estève,Estève,1,1,1,administrateur,,,Documents généraux
 dedons-de-pierrefeu-e,Dedons de Pierrefeu,Emmanuel Dedons de Pierrefeu,1,1,1,administrateur,,,Documents généraux
 masmonteil-a,Masmonteil,A. Masmonteil,1,1,1,administrateur,,,Documents généraux
@@ -232,6 +236,7 @@ grandchamps-g,Grandchamps,G. Grandchamps,1,1,1,administrateur,,,Documents géné
 fabrique-de-parquets-a-chalons-sur-marne,fabrique de parquets à Châlons-sur-Marne,fabrique de parquets à Châlons-sur-Marne,1,1,1,administrateur,,,Documents généraux
 soissons,Soissons,Soissons,1,1,1,administrateur,,,Documents généraux
 simonin-h,Simonin,H. Simonin,1,1,1,president,,,Documents généraux
+kern-p,Kern,Pierre Kern,1,1,1,administrateur_delegue,,,Documents généraux
 desplats-j,Desplats,Desplats,1,1,1,president,,,Documents généraux
 joachim,Joachim,Joachim,1,1,1,president,,,Documents généraux
 michel,Michel,Michel,1,1,1,president,,,Documents généraux

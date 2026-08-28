@@ -1,31 +1,31 @@
 city_1,city_2,territory_1,territory_2,group_1,group_2,n_interlocks
 Casablanca,Paris,Maroc,France,empire,metropole,1003
-Paris,Saïgon,France,Indochine,metropole,empire,638
+Paris,Saïgon,France,Indochine,metropole,empire,635
 Alger,Paris,Algérie,France,empire,metropole,503
 Dakar,Paris,Sénégal,France,empire,metropole,291
-Marseille,Paris,France,France,metropole,metropole,273
-Lyon,Paris,France,France,metropole,metropole,229
+Marseille,Paris,France,France,metropole,metropole,274
+Lyon,Paris,France,France,metropole,metropole,230
 Haïphong,Paris,Indochine,France,empire,metropole,217
 Paris,Tunis,France,Tunisie,metropole,empire,208
-Paris,Pnom-Penh,France,Indochine,metropole,empire,192
+Paris,Pnom-Penh,France,Indochine,metropole,empire,191
 Paris,Tanger,France,Maroc,metropole,empire,180
 Brazzaville,Paris,Congo-Brazzaville,France,empire,metropole,171
-Hanoï,Paris,Indochine,France,empire,metropole,147
+Hanoï,Paris,Indochine,France,empire,metropole,145
 Bruxelles,Paris,Belgique,France,foreign,metropole,140
-Abidjan,Paris,Côte d'Ivoire,France,empire,metropole,136
+Abidjan,Paris,Côte d'Ivoire,France,empire,metropole,137
 Djibouti,Paris,Djibouti,France,empire,metropole,132
 Paris,Rabat,France,Maroc,metropole,empire,128
 Paris,Tananarive,France,Madagascar,metropole,empire,126
 Constantinople,Paris,Empire ottoman/Turquie,France,foreign,metropole,108
 La Haye,Paris,Pays-Bas,France,foreign,metropole,105
-Libreville,Paris,Gabon,France,empire,metropole,104
 Londres,Paris,Royaume-Uni,France,foreign,metropole,104
-Meknès,Paris,Maroc,France,empire,metropole,99
+Libreville,Paris,Gabon,France,empire,metropole,102
 Grand-Bassam,Paris,Côte d'Ivoire,France,empire,metropole,99
-Bordeaux,Paris,France,France,metropole,metropole,95
+Meknès,Paris,Maroc,France,empire,metropole,98
+Bordeaux,Paris,France,France,metropole,metropole,96
 Alger,Casablanca,Algérie,Maroc,empire,empire,87
+Constantine,Paris,Algérie,France,empire,metropole,82
 Douala,Paris,Cameroun,France,empire,metropole,82
-Constantine,Paris,Algérie,France,empire,metropole,81
 Casablanca,Rabat,Maroc,Maroc,empire,empire,76
 Oran,Paris,Algérie,France,empire,metropole,75
 Pnom-Penh,Saïgon,Indochine,Indochine,empire,empire,69
@@ -50,6 +50,7 @@ Paris,Rufisque,France,Sénégal,metropole,empire,39
 Nossi-Bé,Paris,Madagascar,France,empire,metropole,39
 Casablanca,Tunis,Maroc,Tunisie,empire,empire,38
 Casablanca,Marseille,Maroc,France,empire,metropole,37
+Le Havre,Paris,France,France,metropole,metropole,37
 Dakar,Saïgon,Sénégal,Indochine,empire,empire,37
 Cayenne,Paris,Guyane française,France,empire,metropole,37
 Paris,Tuléar,France,Madagascar,metropole,empire,35
@@ -57,7 +58,6 @@ Alger,Saïgon,Algérie,Indochine,empire,empire,35
 Casablanca,Meknès,Maroc,Maroc,empire,empire,34
 Bordeaux,Casablanca,France,Maroc,metropole,empire,34
 Fedhala,Paris,Maroc,France,empire,metropole,34
-Le Havre,Paris,France,France,metropole,metropole,32
 Kaolack,Paris,Sénégal,France,empire,metropole,31
 Casablanca,Djibouti,Maroc,Djibouti,empire,empire,31
 Saïgon,Tourane,Indochine,Indochine,empire,empire,31
@@ -86,15 +86,15 @@ Paris,Sfax,France,Tunisie,metropole,empire,21
 Casablanca,Haïphong,Maroc,Indochine,empire,empire,21
 Abidjan,Casablanca,Côte d'Ivoire,Maroc,empire,empire,21
 Paris,Toulon,France,France,metropole,metropole,20
-Paris,Tourane,France,Indochine,metropole,empire,20
-Paris,Vinh,France,Indochine,metropole,empire,20
 Nantes,Paris,France,France,metropole,metropole,20
 Casablanca,Cholon,Maroc,Indochine,empire,empire,19
+Paris,Tourane,France,Indochine,metropole,empire,19
+Paris,Vinh,France,Indochine,metropole,empire,19
 Lyon,Saïgon,France,Indochine,metropole,empire,19
 Alger,Marseille,Algérie,France,empire,metropole,19
-Cotonou,Paris,Dahomey (Bénin),France,empire,metropole,19
-Kayes,Paris,Soudan français,France,empire,metropole,19
 Bienhoa,Paris,Indochine,France,empire,metropole,19
+Kayes,Paris,Soudan français,France,empire,metropole,19
+Cotonou,Paris,Dahomey (Bénin),France,empire,metropole,19
 Hanoï,Pnom-Penh,Indochine,Indochine,empire,empire,18
 Saïgon,Vinh,Indochine,Indochine,empire,empire,18
 Casablanca,Pnom-Penh,Maroc,Indochine,empire,empire,17
@@ -114,6 +114,7 @@ Mostaganem,Paris,Algérie,France,empire,metropole,15
 Casablanca,Tananarive,Maroc,Madagascar,empire,empire,14
 Paris,Sousse,France,Tunisie,metropole,empire,14
 Nam-Dinh,Paris,Indochine,France,empire,metropole,14
+Abidjan,Dakar,Côte d'Ivoire,Sénégal,empire,empire,14
 Casablanca,Constantine,Maroc,Algérie,empire,empire,14
 Athènes,Paris,Grèce,France,foreign,metropole,14
 La Rochelle,Paris,France,France,metropole,metropole,14
@@ -121,14 +122,12 @@ Brazzaville,Casablanca,Congo-Brazzaville,Maroc,empire,empire,13
 La Haye,Londres,Pays-Bas,Royaume-Uni,foreign,foreign,13
 Rabat,Tanger,Maroc,Maroc,empire,empire,13
 Bordeaux,Kayes,France,Soudan français,metropole,empire,13
-Abidjan,Dakar,Côte d'Ivoire,Sénégal,empire,empire,13
 Moroni,Paris,Comores,France,empire,metropole,13
 Abidjan,Grand-Bassam,Côte d'Ivoire,Côte d'Ivoire,empire,empire,12
 Grand-Bassam,Saïgon,Côte d'Ivoire,Indochine,empire,empire,12
-Marseille,Pnom-Penh,France,Indochine,metropole,empire,12
 Casablanca,Douala,Maroc,Cameroun,empire,empire,12
 Casablanca,Oran,Maroc,Algérie,empire,empire,12
-Lomé,Paris,Togo,France,empire,metropole,12
+Marseille,Pnom-Penh,France,Indochine,metropole,empire,12
 Bordeaux,Saïgon,France,Indochine,metropole,empire,12
 Paris,Pointe-Noire,France,Congo-Brazzaville,metropole,empire,12
 Lyon,Tunis,France,Tunisie,metropole,empire,12
@@ -139,19 +138,20 @@ Grand-Bassam,Marseille,Côte d'Ivoire,France,empire,metropole,11
 Marseille,Tunis,France,Tunisie,metropole,empire,11
 Alger,Djibouti,Algérie,Djibouti,empire,empire,11
 Alger,Haïphong,Algérie,Indochine,empire,empire,11
+Lomé,Paris,Togo,France,empire,metropole,11
 Alger,Rabat,Algérie,Maroc,empire,empire,11
 Douala,Saïgon,Cameroun,Indochine,empire,empire,11
-Paris,Rome,France,Italie,metropole,foreign,11
 Bordeaux,Rabat,France,Maroc,metropole,empire,11
+Paris,Rome,France,Italie,metropole,foreign,11
 Abidjan,Douala,Côte d'Ivoire,Cameroun,empire,empire,11
 Djibouti,Tunis,Djibouti,Tunisie,empire,empire,11
 Bordeaux,Marseille,France,France,metropole,metropole,10
 Paris,Tamatave,France,Madagascar,metropole,empire,10
-Alexandrie,Paris,Égypte,France,foreign,metropole,10
 Alger,Tanger,Algérie,Maroc,empire,empire,10
 Paris,Tlemcen,France,Algérie,metropole,empire,10
 Paris,Saint-Louis,France,Sénégal,metropole,empire,10
 Djibouti,Marseille,Djibouti,France,empire,metropole,10
+Marseille,Tananarive,France,Madagascar,metropole,empire,10
 Fort-de-France,Paris,Guadeloupe et Martinique,France,empire,metropole,10
 Dakar,Haïphong,Sénégal,Indochine,empire,empire,10
 Dakar,Kayes,Sénégal,Soudan français,empire,empire,10
@@ -164,11 +164,11 @@ Dap-Cau,Paris,Indochine,France,empire,metropole,9
 Paris,Thiès,France,Sénégal,metropole,empire,9
 La Haye,Singapour,Pays-Bas,Malaisie,foreign,foreign,9
 Casablanca,La Haye,Maroc,Pays-Bas,empire,foreign,9
+Alexandrie,Paris,Égypte,France,foreign,metropole,9
 Tanger,Tunis,Maroc,Tunisie,empire,empire,9
 Cholon,Pnom-Penh,Indochine,Indochine,empire,empire,9
 Pnom-Penh,Tananarive,Indochine,Madagascar,empire,empire,9
 Haïphong,Lyon,Indochine,France,empire,metropole,9
-Marseille,Tananarive,France,Madagascar,metropole,empire,9
 Alger,Brazzaville,Algérie,Congo-Brazzaville,empire,empire,9
 Paris,Toulouse,France,France,metropole,metropole,9
 Dakar,Rufisque,Sénégal,Sénégal,empire,empire,9
@@ -182,9 +182,9 @@ Casablanca,Constantinople,Maroc,Empire ottoman/Turquie,empire,foreign,8
 Bruxelles,Saïgon,Belgique,Indochine,foreign,empire,8
 Nouméa,Saïgon,Nouvelle-Calédonie,Indochine,empire,empire,8
 Saïgon,Tanger,Indochine,Maroc,empire,empire,8
+Casablanca,Tuléar,Maroc,Madagascar,empire,empire,8
 Lyon,Pnom-Penh,France,Indochine,metropole,empire,8
 Brazzaville,Marseille,Congo-Brazzaville,France,empire,metropole,8
-Casablanca,Tuléar,Maroc,Madagascar,empire,empire,8
 Nouméa,Port-Vila,Nouvelle-Calédonie,Nouvelles-Hébrides,empire,empire,8
 Bordeaux,Tananarive,France,Madagascar,metropole,empire,8
 Djibouti,Pnom-Penh,Djibouti,Indochine,empire,empire,8
@@ -208,10 +208,11 @@ Grand-Bassam,Tananarive,Côte d'Ivoire,Madagascar,empire,empire,7
 Meknès,Rabat,Maroc,Maroc,empire,empire,7
 Dakar,Meknès,Sénégal,Maroc,empire,empire,7
 Casablanca,Nantes,Maroc,France,empire,metropole,7
+Casablanca,Le Havre,Maroc,France,empire,metropole,7
 Nossi-Bé,Saïgon,Madagascar,Indochine,empire,empire,7
+Bruxelles,Casablanca,Belgique,Maroc,foreign,empire,7
 Bruxelles,Londres,Belgique,Royaume-Uni,foreign,foreign,7
 Abidjan,Marseille,Côte d'Ivoire,France,empire,metropole,7
-Bruxelles,Casablanca,Belgique,Maroc,foreign,empire,7
 Bordeaux,Djibouti,France,Djibouti,metropole,empire,7
 Dakar,Djibouti,Sénégal,Djibouti,empire,empire,7
 Hué,Saïgon,Indochine,Indochine,empire,empire,7
@@ -226,7 +227,6 @@ Alger,Papeete,Algérie,Tahiti (Polynésie),empire,empire,7
 Amsterdam,Paris,Pays-Bas,France,foreign,metropole,7
 Casablanca,Grand-Bassam,Maroc,Côte d'Ivoire,empire,empire,6
 Alger,Bordeaux,Algérie,France,empire,metropole,6
-Casablanca,Le Havre,Maroc,France,empire,metropole,6
 Bamako,Saïgon,Soudan français,Indochine,empire,empire,6
 La Haye,Le Havre,Pays-Bas,France,foreign,metropole,6
 La Haye,Rufisque,Pays-Bas,Sénégal,foreign,empire,6
@@ -238,8 +238,8 @@ Alger,Pnom-Penh,Algérie,Indochine,empire,empire,6
 Alger,Londres,Algérie,Royaume-Uni,empire,foreign,6
 Alger,Tananarive,Algérie,Madagascar,empire,empire,6
 Alger,Bruxelles,Algérie,Belgique,empire,foreign,6
-Dakar,Pnom-Penh,Sénégal,Indochine,empire,empire,6
 Abidjan,Cholon,Côte d'Ivoire,Indochine,empire,empire,6
+Dakar,Pnom-Penh,Sénégal,Indochine,empire,empire,6
 Dakar,Tuléar,Sénégal,Madagascar,empire,empire,6
 Londres,Saïgon,Royaume-Uni,Indochine,foreign,empire,6
 Dakar,Fedhala,Sénégal,Maroc,empire,empire,6
@@ -374,6 +374,8 @@ Tananarive,Tanger,Madagascar,Maroc,empire,empire,3
 Constantinople,Tanger,Empire ottoman/Turquie,Maroc,foreign,empire,3
 Cayenne,Tanger,Guyane française,Maroc,empire,empire,3
 Port-Lyautey,Tanger,Maroc,Maroc,empire,empire,3
+Casablanca,Tlemcen,Maroc,Algérie,empire,empire,3
+Casablanca,Dap-Cau,Maroc,Indochine,empire,empire,3
 Bruxelles,Rabat,Belgique,Maroc,foreign,empire,3
 Cotonou,Marseille,Dahomey (Bénin),France,empire,metropole,3
 Conakry,Marseille,Guinée Conakry,France,empire,metropole,3
@@ -381,8 +383,6 @@ Constantinople,Lyon,Empire ottoman/Turquie,France,foreign,metropole,3
 Le Havre,Lyon,France,France,metropole,metropole,3
 Lille,Paris,France,France,metropole,metropole,3
 Paris,Saint-Denis,France,La Réunion,metropole,empire,3
-Casablanca,Tlemcen,Maroc,Algérie,empire,empire,3
-Casablanca,Dap-Cau,Maroc,Indochine,empire,empire,3
 Bordeaux,Hué,France,Indochine,metropole,empire,3
 Bangui,Marseille,Oubangui-Chari,France,empire,metropole,3
 Lomé,Marseille,Togo,France,empire,metropole,3
@@ -390,8 +390,6 @@ Djibouti,Rabat,Djibouti,Maroc,empire,empire,3
 Djibouti,Tananarive,Djibouti,Madagascar,empire,empire,3
 Alger,Nossi-Bé,Algérie,Madagascar,empire,empire,3
 Alger,Douala,Algérie,Cameroun,empire,empire,3
-Nouméa,Pnom-Penh,Nouvelle-Calédonie,Indochine,empire,empire,3
-Conakry,Pnom-Penh,Guinée Conakry,Indochine,empire,empire,3
 Cholon,Tananarive,Indochine,Madagascar,empire,empire,3
 Brazzaville,Cholon,Congo-Brazzaville,Indochine,empire,empire,3
 Cholon,Marseille,Indochine,France,empire,metropole,3
@@ -406,6 +404,7 @@ Bordeaux,Douala,France,Cameroun,metropole,empire,3
 Bamako,Bordeaux,Soudan français,France,empire,metropole,3
 Bordeaux,Ziguinchor,France,Sénégal,metropole,empire,3
 Hussein-Dey,Marseille,Algérie,France,empire,metropole,3
+Hanoï,Londres,Indochine,Royaume-Uni,empire,foreign,3
 Constantine,Dakar,Algérie,Sénégal,empire,empire,3
 Libreville,Marseille,Gabon,France,empire,metropole,3
 Beyrouth,Constantinople,Syrie-Liban,Empire ottoman/Turquie,empire,foreign,3
@@ -414,12 +413,14 @@ Bruxelles,Constantinople,Belgique,Empire ottoman/Turquie,foreign,foreign,3
 Alger,Bangui,Algérie,Oubangui-Chari,empire,empire,3
 Tananarive,Tunis,Madagascar,Tunisie,empire,empire,3
 Alger,Nantes,Algérie,France,empire,metropole,3
+Nouméa,Pnom-Penh,Nouvelle-Calédonie,Indochine,empire,empire,3
 Bangui,Nouméa,Oubangui-Chari,Nouvelle-Calédonie,empire,empire,3
 Léopoldville,Nouméa,Congo-Kinshasa,Nouvelle-Calédonie,foreign,empire,3
 Paris,Pointe-à-Pitre,France,Guadeloupe et Martinique,metropole,empire,3
 Brazzaville,Cayenne,Congo-Brazzaville,Guyane française,empire,empire,3
 Brazzaville,Yaoundé,Congo-Brazzaville,Cameroun,empire,empire,3
 Brazzaville,Marrakech,Congo-Brazzaville,Maroc,empire,empire,3
+Conakry,Pnom-Penh,Guinée Conakry,Indochine,empire,empire,3
 Paris,Rouen,France,France,metropole,metropole,3
 Libreville,Tanger,Gabon,Maroc,empire,empire,3
 Marrakech,Tanger,Maroc,Maroc,empire,empire,3
@@ -438,12 +439,12 @@ Le Havre,Port-Gentil,France,Gabon,metropole,empire,3
 Maison-Carrée,Paris,Algérie,France,empire,metropole,3
 Alger,Sfax,Algérie,Tunisie,empire,empire,3
 Djibouti,Oran,Djibouti,Algérie,empire,empire,3
+Léopoldville,Paris,Congo-Kinshasa,France,foreign,metropole,3
 Grand-Bassam,Kayes,Côte d'Ivoire,Soudan français,empire,empire,3
 Douala,Kayes,Cameroun,Soudan français,empire,empire,3
 Bône,Hussein-Dey,Algérie,Algérie,empire,empire,3
 Constantine,Hussein-Dey,Algérie,Algérie,empire,empire,3
 Abidjan,Cayenne,Côte d'Ivoire,Guyane française,empire,empire,3
-Léopoldville,Paris,Congo-Kinshasa,France,foreign,metropole,3
 Hanoï,Lomé,Indochine,Togo,empire,empire,3
 Cayenne,Lyon,Guyane française,France,empire,metropole,3
 Douala,Grand-Bassam,Cameroun,Côte d'Ivoire,empire,empire,3
@@ -472,6 +473,7 @@ Anvers,La Haye,Belgique,Pays-Bas,foreign,foreign,2
 Casablanca,Grenoble,Maroc,France,empire,metropole,2
 Le Caire,Tanger,Égypte,Maroc,foreign,empire,2
 Bamako,Tanger,Soudan français,Maroc,empire,empire,2
+Casablanca,Thiès,Maroc,Sénégal,empire,empire,2
 Bruxelles,Rufisque,Belgique,Sénégal,foreign,empire,2
 Brazzaville,Bruxelles,Congo-Brazzaville,Belgique,empire,foreign,2
 Bruxelles,Léopoldville,Belgique,Congo-Kinshasa,foreign,foreign,2
@@ -481,7 +483,6 @@ Anvers,Bruxelles,Belgique,Belgique,foreign,foreign,2
 Casablanca,Tourane,Maroc,Indochine,empire,empire,2
 Douala,Lyon,Cameroun,France,empire,metropole,2
 Londres,Lyon,Royaume-Uni,France,foreign,metropole,2
-Casablanca,Thiès,Maroc,Sénégal,empire,empire,2
 Libreville,Nouméa,Gabon,Nouvelle-Calédonie,empire,empire,2
 Kayes,Nouméa,Soudan français,Nouvelle-Calédonie,empire,empire,2
 Conakry,Nouméa,Guinée Conakry,Nouvelle-Calédonie,empire,empire,2
@@ -492,12 +493,8 @@ Marseille,Nantes,France,France,metropole,metropole,2
 Djibouti,Kaolack,Djibouti,Sénégal,empire,empire,2
 Djibouti,Hué,Djibouti,Indochine,empire,empire,2
 Abidjan,Djibouti,Côte d'Ivoire,Djibouti,empire,empire,2
-Londres,Pnom-Penh,Royaume-Uni,Indochine,foreign,empire,2
 Nossi-Bé,Pnom-Penh,Madagascar,Indochine,empire,empire,2
-Majunga,Pnom-Penh,Madagascar,Indochine,empire,empire,2
-Brazzaville,Pnom-Penh,Congo-Brazzaville,Indochine,empire,empire,2
-Pnom-Penh,Rufisque,Indochine,Sénégal,empire,empire,2
-Constantinople,Pnom-Penh,Empire ottoman/Turquie,Indochine,foreign,empire,2
+Londres,Pnom-Penh,Royaume-Uni,Indochine,foreign,empire,2
 Cholon,Tunis,Indochine,Tunisie,empire,empire,2
 Fès,Tananarive,Maroc,Madagascar,empire,empire,2
 Dakar,Tamatave,Sénégal,Madagascar,empire,empire,2
@@ -512,7 +509,6 @@ Marseille,Strasbourg,France,France,metropole,metropole,2
 Marseille,Oujda,France,Maroc,metropole,empire,2
 Marrakech,Marseille,Maroc,France,empire,metropole,2
 Londres,Tunis,Royaume-Uni,Tunisie,foreign,empire,2
-Hanoï,Londres,Indochine,Royaume-Uni,empire,foreign,2
 Constantine,Londres,Algérie,Royaume-Uni,empire,foreign,2
 Londres,Marrakech,Royaume-Uni,Maroc,foreign,empire,2
 Londres,Oran,Royaume-Uni,Algérie,foreign,empire,2
@@ -534,6 +530,10 @@ Brazzaville,Port-Gentil,Congo-Brazzaville,Gabon,empire,empire,2
 Brazzaville,Tunis,Congo-Brazzaville,Tunisie,empire,empire,2
 Brazzaville,Ziguinchor,Congo-Brazzaville,Sénégal,empire,empire,2
 Dunkerque,Marseille,France,France,metropole,metropole,2
+Majunga,Pnom-Penh,Madagascar,Indochine,empire,empire,2
+Brazzaville,Pnom-Penh,Congo-Brazzaville,Indochine,empire,empire,2
+Pnom-Penh,Rufisque,Indochine,Sénégal,empire,empire,2
+Constantinople,Pnom-Penh,Empire ottoman/Turquie,Indochine,foreign,empire,2
 Brazzaville,Léopoldville,Congo-Brazzaville,Congo-Kinshasa,empire,foreign,2
 Brazzaville,Haïphong,Congo-Brazzaville,Indochine,empire,empire,2
 Diégo-Suarez,Tananarive,Madagascar,Madagascar,empire,empire,2
@@ -541,7 +541,6 @@ Anvers,Casablanca,Belgique,Maroc,foreign,empire,2
 Majunga,Tunis,Madagascar,Tunisie,empire,empire,2
 Lyon,Sousse,France,Tunisie,metropole,empire,2
 Abidjan,Lyon,Côte d'Ivoire,France,empire,metropole,2
-Douala,Haïphong,Cameroun,Indochine,empire,empire,2
 Douala,Nouméa,Cameroun,Nouvelle-Calédonie,empire,empire,2
 Fedhala,Marrakech,Maroc,Maroc,empire,empire,2
 Bône,Fedhala,Algérie,Maroc,empire,empire,2
@@ -626,12 +625,12 @@ Bamako,Cayenne,Soudan français,Guyane française,empire,empire,2
 Cayenne,Marrakech,Guyane française,Maroc,empire,empire,2
 Abidjan,Singapour,Côte d'Ivoire,Malaisie,empire,foreign,2
 Port-Lyautey,Rabat,Maroc,Maroc,empire,empire,2
+Djibouti,Meknès,Djibouti,Maroc,empire,empire,2
 Alger,Oujda,Algérie,Maroc,empire,empire,2
 Alger,Rufisque,Algérie,Sénégal,empire,empire,2
 Alger,Thiès,Algérie,Sénégal,empire,empire,2
 Bône,Lyon,Algérie,France,empire,metropole,2
 Casablanca,Sousse,Maroc,Tunisie,empire,empire,2
-Djibouti,Meknès,Djibouti,Maroc,empire,empire,2
 Oujda,Saïgon,Maroc,Indochine,empire,empire,2
 Conakry,Yaoundé,Guinée Conakry,Cameroun,empire,empire,2
 Libreville,Rufisque,Gabon,Sénégal,empire,empire,2
@@ -672,6 +671,7 @@ Kaolack,Tanger,Sénégal,Maroc,empire,empire,1
 Papeete,Tanger,Tahiti (Polynésie),Maroc,empire,empire,1
 Bruxelles,Tanger,Belgique,Maroc,foreign,empire,1
 Tanger,Tuléar,Maroc,Madagascar,empire,empire,1
+Casablanca,Moroni,Maroc,Comores,empire,empire,1
 Bruxelles,Kaolack,Belgique,Sénégal,foreign,empire,1
 Bruxelles,Toulon,Belgique,France,foreign,metropole,1
 Bruxelles,Dap-Cau,Belgique,Indochine,foreign,empire,1
@@ -681,19 +681,8 @@ Casablanca,Fort-de-France,Maroc,Guadeloupe et Martinique,empire,empire,1
 Fort-de-France,Lyon,Guadeloupe et Martinique,France,empire,metropole,1
 Lyon,Oujda,France,Maroc,metropole,empire,1
 Brazzaville,Lyon,Congo-Brazzaville,France,empire,metropole,1
-Casablanca,Moroni,Maroc,Comores,empire,empire,1
 Diégo-Suarez,Marseille,Madagascar,France,empire,metropole,1
 Djibouti,Marrakech,Djibouti,Maroc,empire,empire,1
-Le Caire,Pnom-Penh,Égypte,Indochine,foreign,empire,1
-Hué,Pnom-Penh,Indochine,Indochine,empire,empire,1
-Cayenne,Pnom-Penh,Guyane française,Indochine,empire,empire,1
-Pnom-Penh,Tamatave,Indochine,Madagascar,empire,empire,1
-Pnom-Penh,Saint-Louis,Indochine,Sénégal,empire,empire,1
-Douala,Pnom-Penh,Cameroun,Indochine,empire,empire,1
-Bordeaux,Pnom-Penh,France,Indochine,metropole,empire,1
-Bamako,Pnom-Penh,Soudan français,Indochine,empire,empire,1
-Hussein-Dey,Pnom-Penh,Algérie,Indochine,empire,empire,1
-Amsterdam,Pnom-Penh,Pays-Bas,Indochine,foreign,empire,1
 Papeete,Pnom-Penh,Tahiti (Polynésie),Indochine,empire,empire,1
 Cholon,Vinh,Indochine,Indochine,empire,empire,1
 Cholon,Papeete,Indochine,Tahiti (Polynésie),empire,empire,1
@@ -727,6 +716,7 @@ Constantine,Marseille,Algérie,France,empire,metropole,1
 Londres,Sfax,Royaume-Uni,Tunisie,foreign,empire,1
 Brazzaville,Londres,Congo-Brazzaville,Royaume-Uni,empire,foreign,1
 Cotonou,Londres,Dahomey (Bénin),Royaume-Uni,empire,foreign,1
+Le Havre,Londres,France,Royaume-Uni,metropole,foreign,1
 Douala,Fès,Cameroun,Maroc,empire,empire,1
 Conakry,Fès,Guinée Conakry,Maroc,empire,empire,1
 Fedhala,Fès,Maroc,Maroc,empire,empire,1
@@ -774,12 +764,23 @@ Bamako,Marseille,Soudan français,France,empire,metropole,1
 Beyrouth,Marseille,Syrie-Liban,France,empire,metropole,1
 Bordeaux,Majunga,France,Madagascar,metropole,empire,1
 Bordeaux,Haïphong,France,Indochine,metropole,empire,1
+Le Caire,Pnom-Penh,Égypte,Indochine,foreign,empire,1
+Hué,Pnom-Penh,Indochine,Indochine,empire,empire,1
+Cayenne,Pnom-Penh,Guyane française,Indochine,empire,empire,1
+Pnom-Penh,Tamatave,Indochine,Madagascar,empire,empire,1
+Pnom-Penh,Saint-Louis,Indochine,Sénégal,empire,empire,1
+Douala,Pnom-Penh,Cameroun,Indochine,empire,empire,1
+Bordeaux,Pnom-Penh,France,Indochine,metropole,empire,1
+Bamako,Pnom-Penh,Soudan français,Indochine,empire,empire,1
+Hussein-Dey,Pnom-Penh,Algérie,Indochine,empire,empire,1
+Amsterdam,Pnom-Penh,Pays-Bas,Indochine,foreign,empire,1
 Cantho,Saïgon,Indochine,Indochine,empire,empire,1
 La Haye,Port-Gentil,Pays-Bas,Gabon,foreign,empire,1
 Lisbonne,Tanger,Portugal,Maroc,foreign,empire,1
 Constantine,Tanger,Algérie,Maroc,empire,empire,1
 Majunga,Sousse,Madagascar,Tunisie,empire,empire,1
 Lyon,Vinh,France,Indochine,metropole,empire,1
+Douala,Haïphong,Cameroun,Indochine,empire,empire,1
 Fedhala,Sousse,Maroc,Tunisie,empire,empire,1
 Hanoï,Port-Lyautey,Indochine,Maroc,empire,empire,1
 Londres,Port-Lyautey,Royaume-Uni,Maroc,foreign,empire,1

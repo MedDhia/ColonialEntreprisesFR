@@ -40,6 +40,7 @@ caboteursalgeriens,cargosalgeriens,1914_1929,3,coudray-a; mohring-f; pres-d-alge
 algerienneproduitschimiquesengrais,commercialeacconage,1914_1929,3,bouffe-g; galoppe-r; marceron-m
 algerienne,phosphatesdyr,1914_1929,3,bordet-l-lucien; jurien-de-la-graviere-p; morin-t
 algerienneconstructionsindustriellestravauxart,constructionsindustriellestravauxartcit,1914_1929,3,caquot-a; carret-e; pelnard-l
+creditfoncieralgerietunisie,manufacturetabacscigarescigarettesbastos,1914_1929,2,galicier-a; philippar-e
 industrielleafriquenordtraitementsousproduitsvigneolivier,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,2,dubourdieu-l; mf-p
 approvisionnementnordafricaine,socalsaciennefilaturetissagejute,1914_1929,2,dijon-j; nancy
 socalsaciennefilaturetissagejute,socchaines,1914_1929,2,nancy; turin
@@ -72,12 +73,11 @@ creditfoncieralgerietunisie,entreprisemaritimecommerciale,1914_1929,2,estier-h; 
 agricolealgerienne,tabacsalgeriens,1914_1929,2,gronier-e; yusuf-c
 creditfoncieralgerietunisie,tabacsalgeriens,1914_1929,2,gronier-e; henri-c
 exploitationsforestieresminierespetitekabylie,socexploitationforestiereminierepetitekabylie,1914_1929,2,germain; joly
-fabriquealsaciennesieges,royaleasturienneminesdirection,1914_1929,2,amiens; reims
-fabriquealsaciennesieges,socfeutresrok,1914_1929,2,mulhouse; reims
 mineschabetkohol,socminesoranie,1914_1929,2,chastel-a; ledoux
 minesfermiliana,minesferrouina,1914_1929,2,bois-colombes; urruty-f
 minesouastamesloula,minieredjendli,1914_1929,2,marlier-j; urruty-f
 banqueindustrielleafriquenord,mineszincguergour,1914_1929,2,delamotte-g; galicier-a
+fabriquealsaciennesieges,royaleasturienneminesdirection,1914_1929,2,amiens; reims
 1918domainesbenislimantablat,grandstravauxalgeriens,1914_1929,2,borgeaud-l; giraud-e-edmond
 algerienneetudesentreprisesagricolescommercialesindustrielles,ascenseursmontechargeshydrauliquesvillealger,1914_1929,2,giraud-e-edmond; guerlet-a
 algerienneetudesentreprisesagricolescommercialesindustrielles,distillerieliqueurmandarinebougie,1914_1929,2,brissonnet-e-edgard; giraud-e-edmond
@@ -109,10 +109,13 @@ allianceafricaineassurancesreassurances,minoteriereneesclapezrelizane,1914_1929,
 acconagecharbonnagejullian,charbonnierenordafricain,1914_1929,1,laurens-j
 africaineculturesindustrielles,charbonnierenordafricain,1914_1929,1,stern-j
 africaineculturesindustrielles,algerienneproduitschimiquesengrais,1914_1929,1,philippar-e
+africaineculturesindustrielles,creditfoncieralgerietunisie,1914_1929,1,philippar-e
 africaineculturesindustrielles,manufacturetabacscigarescigarettesbastos,1914_1929,1,philippar-e
 africaineculturesindustrielles,manufacturetabacscigarescigarettesjbastos,1914_1929,1,philippar-e
+algerienneproduitschimiquesengrais,creditfoncieralgerietunisie,1914_1929,1,philippar-e
 algerienneproduitschimiquesengrais,manufacturetabacscigarescigarettesbastos,1914_1929,1,philippar-e
 algerienneproduitschimiquesengrais,manufacturetabacscigarescigarettesjbastos,1914_1929,1,philippar-e
+creditfoncieralgerietunisie,manufacturetabacscigarescigarettesjbastos,1914_1929,1,philippar-e
 africaineculturesindustrielles,grandstravauxalgeriens,1914_1929,1,asnieres
 africaineculturesindustrielles,groupevinicole,1914_1929,1,asnieres
 grandstravauxalgeriens,groupevinicole,1914_1929,1,asnieres
@@ -273,6 +276,11 @@ aguilas,concessionnaireminesouenza,1914_1929,1,drappier-g
 aguilas,mineszaccar,1914_1929,1,drappier-g
 aguilas,ouenza,1914_1929,1,drappier-g
 aguilas,socouenza,1914_1929,1,drappier-g
+aguilas,voorhouthaye,1914_1929,1,drappier-g
+concessionnaireminesouenza,voorhouthaye,1914_1929,1,drappier-g
+mineszaccar,voorhouthaye,1914_1929,1,drappier-g
+ouenza,voorhouthaye,1914_1929,1,drappier-g
+socouenza,voorhouthaye,1914_1929,1,drappier-g
 ateliersreparationsmaritimesbeliard,expansionnordafricaine,1914_1929,1,martin
 cellulosesafriquenord,soccellulosesafriquenord,1914_1929,1,bouscasse
 socchaines,soctissagesmecaniquesisere,1914_1929,1,barcelone
@@ -302,10 +310,7 @@ creditfoncieralgerietunisie,typolitho,1914_1929,1,barbedette-f
 creditimmobilieralger,typolitho,1914_1929,1,barbedette-f
 creditfoncieralgerietunisie,domainehaouchouedsaf,1914_1929,1,blida
 entreprisesaeronautiques,minesferlarrath,1914_1929,1,arnou-g
-socetablghouplain,socfeutresrok,1914_1929,1,tours
-royaleasturienneminesdirection,socfeutresrok,1914_1929,1,reims
 fabriquealsaciennesieges,socalsaciennefilaturetissagejute,1914_1929,1,mulhouse
-socalsaciennefilaturetissagejute,socfeutresrok,1914_1929,1,mulhouse
 electricitebiskra,etudesminieresbougie,1914_1929,1,liege
 electricitebiskra,socalsaciennefilaturetissagejute,1914_1929,1,liege
 etudesminieresbougie,socalsaciennefilaturetissagejute,1914_1929,1,liege
@@ -338,7 +343,6 @@ banqueindustrielleafriquenord,creditfoncieralgerietunisie,1914_1929,1,galicier-a
 banqueindustrielleafriquenord,manufacturetabacscigarescigarettesbastos,1914_1929,1,galicier-a
 banqueindustrielleafriquenord,socmineszincguergour,1914_1929,1,galicier-a
 banqueindustrielleafriquenord,zincguergour,1914_1929,1,galicier-a
-creditfoncieralgerietunisie,manufacturetabacscigarescigarettesbastos,1914_1929,1,galicier-a
 creditfoncieralgerietunisie,mineszincguergour,1914_1929,1,galicier-a
 creditfoncieralgerietunisie,socmineszincguergour,1914_1929,1,galicier-a
 creditfoncieralgerietunisie,zincguergour,1914_1929,1,galicier-a
@@ -510,12 +514,12 @@ agricolefinancierealgerie,uniontransafricaine,1914_1929,1,philouze-h
 approvisionnementnordafricaine,vinsmidialgeriebezierssete,1914_1929,1,gontard-a
 algerienneproduitschimiquesengrais,ouenza,1914_1929,1,mesnier-j
 ouenza,vignoblesmediterraneedomainemonvilleduzerville,1914_1929,1,bernard
+corvinomenny,creditfoncieralgerietunisie,1930_1944,16,borgeaud-a; buhot-h; de-caix-r; delarue-j; dubourdieu-l; gronier-e; henri-c; loisy-x; mohamed-el-guebbas; philippar-e; regnault-e; saint-rene-tallandier-g; terrier-a; trelat-m; warot-a; zafiropulo-d
 entreprisemaritimecommerciale,socentreprisemaritimecommerciale,1930_1944,16,blanchet-a; d-estienne-d-orves; dal-piaz-j; de-fontgalland-a; estier-h; fabry-r; fr-estier; giraud-h-hubert; gravier-g; mallen-e; mante-t; noblemaire-g; oppenheim; tanon-a-albert; thenard; zafiropulo-d
-corvinomenny,creditfoncieralgerietunisie,1930_1944,15,borgeaud-a; buhot-h; de-caix-r; delarue-j; dubourdieu-l; henri-c; loisy-x; mohamed-el-guebbas; philippar-e; regnault-e; saint-rene-tallandier-g; terrier-a; trelat-m; warot-a; zafiropulo-d
 afriquenord,soccommercialeafriquenord,1930_1944,8,berthon-l; chidaine-p; en-beton-t; lemaigre-dubreuil-r; michaux-l; mocquerio-p; morin-g; salvane-l
 afriquenord,commercialeminiereafriquenord,1930_1944,8,berthon-l; chidaine-p; ferasson-l-louis; lemaigre-dubreuil-r; morin-g; mourgnot-p; salvane-l; thomas-e-emile
-alfa,alfasocfabricationpatescellulose,1930_1944,6,baschet-m; bouchayer-h; colas-l; desforges-p; roudy-a; villet-f
 algerienne,comoyverguet,1930_1944,6,conty-a; de-sayve-j; fabry-r; mirabaud-a; odier-l; saint-germain-m
+alfa,alfasocfabricationpatescellulose,1930_1944,5,baschet-m; bouchayer-h; desforges-p; roudy-a; villet-f
 commercialeminiereafriquenord,soccommercialeafriquenord,1930_1944,5,berthon-l; chidaine-p; lemaigre-dubreuil-r; morin-g; salvane-l
 lafarge,nordafricainecimentslafarge,1930_1944,5,borgeaud-l; boutier-a; daher-p; ewbank; laboubee-s
 banquealgerie,banqueindustrielleafriquenord,1930_1944,5,boyer-p; ernest-picard-p; galicier-a; moatti; sabatier-e

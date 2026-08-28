@@ -266,6 +266,50 @@ def check_citations() -> None:
         check(f"  bare page rejects {text[:28]!r}",
               not P.AEC_BARE_PAGE_RE.search(text))
 
+    # A bare page takes the year of the nearest AEC entry *before* it. Taking
+    # the document's first stamped the Fedhala dossier's two 1951 entries as
+    # 1922 - a 29-year error on four board seats.
+    two_volume = ("AEC 1922. — 489 — Cie du port de Fedhala, rue de Londres\n"
+                  "509 — Sté des briqueteries de Fedhala, rue de Londres\n"
+                  "AEC 1951. — 819 — Cie du port de Fédala (C.P.F), rue de Liège\n"
+                  "826 — Les Conserveries marocaines (COSMAR)\n")
+    years = {a.company: a.year for a in P.find_anchors(two_volume, False)
+             if a.kind == "aec_entry"}
+    eq("  bare page before the 1951 entry keeps 1922",
+       years.get("Sté des briqueteries de Fedhala"), "1922")
+    eq("  bare page after the 1951 entry takes 1951",
+       years.get("Les Conserveries marocaines (COSMAR)")
+       or years.get("Les Conserveries marocaines"), "1951")
+
+    # Both head patterns must report the same offset for the same notice, or
+    # the anchor de-duplication below them silently does nothing.
+    head = "ALLUMETTES (Soc. indo-chinoise forestière et des), 41, bd de Magenta,\n"
+    doc = "x\n" + head
+    caps = [m.start() for m in P.CAPS_ENTRY_RE.finditer(doc)]
+    ind = [m.start() for m in P.ANNUAIRE_INDUS_ENTRY_RE.finditer(doc)]
+    check("  caps and industriel heads agree on the offset",
+          bool(caps) and bool(ind) and caps[0] == ind[0], f"{caps} vs {ind}")
+
+    print("parse_ties swallowed role labels", file=sys.stderr)
+    # The label states the role of the name behind it and overrides the role
+    # inherited from the enclosing list. Discarding it filed 199 "Adm.:" rows
+    # as president and 113 "Prés.:" rows as administrateur.
+    for frag, name, role in [
+            ("Adm.: MM. Henri Girche", "Henri Girche", "administrateur"),
+            ("Prés.: M. J. Garcin", "J. Garcin", "president"),
+            ("Prés:. M. J. Garcin", "J. Garcin", "president"),
+            ("Adm.-dél.: M. Jean Dupont", "Jean Dupont", "administrateur_delegue"),
+            ("direct. gén.: M. Léon Blum", "Léon Blum", "directeur_general"),
+            ("Censeurs: MM. Paul Reynaud", "Paul Reynaud", "censeur"),
+            ("administrateur-délégué: M. René Cassin", "René Cassin",
+             "administrateur_delegue")]:
+        m = P._make_member(frag, "administrateur")
+        eq(f"  {frag[:26]!r} name", m and m["name_clean"], name)
+        eq(f"  {frag[:26]!r} role", m and m["role"], role)
+    # "pres." is the president; bare "pres" is the preposition "pres de".
+    for text in ("près de Paris", "à près de 3 millions", "situé près du port"):
+        eq(f"  {text!r} is not a role", P.canonical_role(text), "")
+
     print("parse_ties member labels", file=sys.stderr)
     # A swallowed role label hides a real name; strip it rather than lose the
     # tie. What is left after the strip must contain no colon.
@@ -484,9 +528,12 @@ def check_dataset() -> None:
     # du Port de Fedhala, 1921) and read as a possible constitution list. It was
     # not: the Fedhala dossier reprints AEC entries for a dozen *other* firms
     # under shorthand heads that no anchor matched, so one firm collected a
-    # dozen boards. With those heads anchored the maximum is 52, and the ceiling
-    # comes down to 90 to keep the gain. Loosening it again should mean a real
-    # large board was found, not a re-run of that bug.
+    # dozen boards. With those heads anchored the dossier parser's own maximum
+    # is 52; the merged network still reaches 82, on a pseudo-firm the annuaire
+    # key names as several undertakings at once ("Houilleres du bassin de la
+    # Loire + Houilleres des Cevennes..."). The ceiling is 90, so the headroom
+    # is 8, not 38. Loosening it should mean a real large board was found, not
+    # a re-run of either bug.
     per_year: Counter = Counter()
     for e in load("edges_person_company.csv"):
         if e["is_board_seat"] == "1" and e["year"]:
@@ -496,12 +543,20 @@ def check_dataset() -> None:
         check("  no firm-year has an implausible director count", n <= 90,
               f"{cid} in {yr} has {n}")
 
-    # No person's name contains a colon. Every such row was a swallowed field
-    # label; the recoverable ones ("Adm.: MM. Henri Girche") are stripped back
-    # to the name and the rest rejected, so none should survive.
-    colon = [a for a in load("affiliations.csv") if ":" in a["name_clean"]]
+    # No person's name contains a colon, in *any* genre. The recoverable ones
+    # ("Adm.: MM. Henri Girche") are stripped back to the name and the rest
+    # rejected. Scanning only affiliations.csv missed 20 rows in the person
+    # index and 6 resolved surnames, which came from a different parser.
+    colon = []
+    for f in ("affiliations.csv", "affiliations_person_index.csv",
+              "affiliations_prose.csv", "affiliations_annotations.csv",
+              "affiliations_biographical.csv", "persons_resolved.csv"):
+        for r in load(f):
+            for col in ("name_clean", "surname"):
+                if ":" in (r.get(col) or ""):
+                    colon.append((f, r[col]))
     check("  no member name carries a field label", not colon,
-          f"{len(colon)} do, e.g. {colon[0]['name_clean'][:40]!r}" if colon else "")
+          f"{len(colon)} do, e.g. {colon[0][0]} {colon[0][1][:34]!r}" if colon else "")
 
     # Annotation residue in a name means a bracketed note was split across a
     # comma or an "et" again. It was 1,367 rows before the split learned to

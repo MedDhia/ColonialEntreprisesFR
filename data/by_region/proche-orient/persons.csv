@@ -12,11 +12,11 @@ emond-r,Emond,Emond; René Emond,4,4,13,administrateur,1892,1933,"Transports mar
 pissard-l,Pissard,L. Pissard; Léon Pissard; Pissard,4,4,12,administrateur,1920,1940,
 boissiere-g,Boissière,G. Boissière; Gustave Boissière,4,4,9,administrateur,1922,1948,Documents généraux; Transports terrestres
 deffes-j,Deffès,J. Deffès; Jules Deffès,4,4,7,administrateur,1907,1917,
+berard-m,Bérard,Maurice Bérard; Maurice-Robert Bérard,5,4,6,administrateur,1920,1938,"Banques et sociétés financières; Documents généraux; Sociétés diverses; Transports maritimes, ports et docks"
 genebrias-de-fredaigue-g,Genébrias de Fredaigue,Genébrias de Fredaigue; Génébrias de Fredaigue,4,4,6,administrateur,1909,1917,Transports terrestres
 menasche-j,Menasché,J. Menasché; J. Ménasché,4,4,4,administrateur,1909,1938,"Eaux, électricité (utilities)"
 naville-p,Naville,P. Naville; Pyrame Naville,4,4,4,administrateur,1903,1909,
 pangiris-bey-s,Pangiris Bey,S. E. Pangiris Bey; S.E. Alexandre Pangiris Bey; S.E. Pangiris Bey,4,4,4,administrateur,1903,1910,"Transports maritimes, ports et docks"
-berard-m,Bérard,Maurice Bérard; Maurice-Robert Bérard,4,4,4,administrateur,1920,1929,"Sociétés diverses; Transports maritimes, ports et docks"
 jacobs-e,Jacobs,E. Jacobs; E. Jacobs. 24,3,3,18,administrateur,1923,1953,Banques et sociétés financières
 salvago,Salvago,Salvago,3,3,18,administrateur,1905,1948,
 rey-a,Rey,A. Rey,3,3,12,administrateur,1907,1933,Transports terrestres
@@ -295,7 +295,8 @@ bacle-l,Baclé,L. Baclé,1,1,3,administrateur,1914,1920,
 dubreuilh-c,Dubreuilh,Dubreuilh,1,1,3,administrateur,1914,1920,
 tavernier-h,Tavernier,H. Tavernier,1,1,3,administrateur,1914,1920,
 beyrouth,Beyrouth,Beyrouth,2,1,2,administrateur,,,Documents généraux
-homberg-a,Homberg,A. Homberg; André Homberg,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
+homberg-a,Homberg,A. Homberg; André Homberg,1,1,2,president,1938,1938,Banques et sociétés financières; Documents généraux
+laville-e,Laville,E. Laville,1,1,2,administrateur_delegue,1938,1938,Banques et sociétés financières; Documents généraux
 leblanc-l,Leblanc,L. Leblanc,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
 misrachi-a,Misrachi,A. Misrachi,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
 taffineau-e,Taffineau,E. Taffineau,1,1,2,administrateur,1938,1938,Banques et sociétés financières; Documents généraux
@@ -462,6 +463,7 @@ philippar-g,Philippar,Georges Philippar,1,1,1,administrateur,1927,1927,Transport
 renault-l,Renault,Louis Renault,1,1,1,administrateur,1927,1927,Transports aériens
 et-ernest-roume,et Ernest Roume,et Ernest Roume,1,1,1,administrateur,1927,1927,Transports aériens
 bourdillon,Bourdillon,Bourdillon,1,1,1,president,,,Documents généraux
+nabonne-p,Nabonne,P. Nabonne,1,1,1,administrateur_delegue,,,Documents généraux
 nabonne-j,Nabonne,J. Nabonne,1,1,1,president,,,Documents généraux
 gavoty-c,Gavoty,Ch. Gavoty,1,1,1,president,,,Documents généraux
 alexandrette,Alexandrette,Alexandrette,1,1,1,president,,,Documents généraux
@@ -483,10 +485,12 @@ mexico,Mexico,Mexico,1,1,1,administrateur,,,Documents généraux
 buenos-aires,Buenos-Aires,Buenos-Aires,1,1,1,administrateur,,,Documents généraux
 batavia,Batavia,Batavia,1,1,1,administrateur,,,Documents généraux
 andre-r,André,Robert André,1,1,1,president,,,Documents généraux
+poulain-r,Poulain,Robert Poulain,1,1,1,administrateur_delegue,,,Documents généraux
 serge-a,Serge,André Serge,1,1,1,president,,,Documents généraux
 alcan-p,Alcan,Pierre Alcan,1,1,1,president,,,Documents généraux
 muraton-g,Muraton,Gaston Muraton,1,1,1,president,,,Documents généraux
 gerard-g-gabriel,Gérard,Gabriel Gérard,1,1,1,president,,,Documents généraux
+thiebaud-e,Thiébaud,Émile Thiébaud,1,1,1,administrateur_delegue,,,Documents généraux
 gassier-m-marie,Gassier,Marie-Louis Gassier,1,1,1,president,,,Documents généraux
 gerard-p,Gérard,Paul Gérard,1,1,1,president,,,Documents généraux
 magnan-g,Magnan,Gabriel Magnan,1,1,1,president,,,Documents généraux
@@ -514,7 +518,7 @@ bresil,Brésil,Brésil,1,1,1,president,,,Documents généraux
 chili,Chili,Chili,1,1,1,president,,,Documents généraux
 portugal,Portugal,Portugal,1,1,1,president,,,Documents généraux
 espagne,Espagne,Espagne,1,1,1,president,,,Documents généraux
-mariage,Mariage,Mariage,1,1,1,administrateur,,,Documents généraux
+mariage,Mariage,Mariage,1,1,1,president,,,Documents généraux
 esteve,Estève,Estève,1,1,1,administrateur,,,Documents généraux
 dedons-de-pierrefeu-e,Dedons de Pierrefeu,Emmanuel Dedons de Pierrefeu,1,1,1,administrateur,,,Documents généraux
 masmonteil-a,Masmonteil,A. Masmonteil,1,1,1,administrateur,,,Documents généraux
@@ -522,6 +526,7 @@ grandchamps-g,Grandchamps,G. Grandchamps,1,1,1,administrateur,,,Documents géné
 fabrique-de-parquets-a-chalons-sur-marne,fabrique de parquets à Châlons-sur-Marne,fabrique de parquets à Châlons-sur-Marne,1,1,1,administrateur,,,Documents généraux
 soissons,Soissons,Soissons,1,1,1,administrateur,,,Documents généraux
 simonin-h,Simonin,H. Simonin,1,1,1,president,,,Documents généraux
+kern-p,Kern,Pierre Kern,1,1,1,administrateur_delegue,,,Documents généraux
 desplats-j,Desplats,Desplats,1,1,1,president,,,Documents généraux
 joachim,Joachim,Joachim,1,1,1,president,,,Documents généraux
 michel,Michel,Michel,1,1,1,president,,,Documents généraux
@@ -798,6 +803,7 @@ acte-recu-par-me-van-halteren-s,acte reçu par Me Van Halteren,Suivant acte reç
 herbert-alfred-deed,Herbert-Alfred Deed,Herbert-Alfred Deed,1,1,1,administrateur,1907,1907,
 oserovics-a,Oserovics,A. Oserovics,1,1,1,administrateur,1910,1910,
 munch-j,Münch,J. Münch,1,1,1,administrateur,1910,1910,
+lefranc-l,Lefranc,L. Lefranc,1,1,1,administrateur,1898,1898,
 de-frondeville-f,de Frondeville,Frédéric de Frondeville,1,1,1,administrateur,1909,1909,
 ruiz-a,Ruiz,A. Ruiz,1,1,1,administrateur,1909,1909,
 de-becdelievre-l,de Becdelièvre,Louis de Becdelièvre,1,1,1,administrateur,1922,1922,Banques et sociétés financières
@@ -1075,7 +1081,7 @@ peat,Peat,Peat,1,1,1,administrateur,1948,1948,
 and-co-p,and Co,Peat and Co,1,1,1,administrateur,1953,1953,
 et-me-hafez-mostafa-ragab,et Me Hafez Mostafa Ragab,et Me Hafez Mostafa Ragab,1,1,1,administrateur,1953,1953,
 cavas-b,Cavas,B. Cavas,1,1,1,administrateur,1909,1909,
-lidorikis-g,Lidorikis,G. P. Lidorikis,1,1,1,administrateur,1909,1909,
+lidorikis-g,Lidorikis,G. P. Lidorikis,1,1,1,president,1909,1909,
 gambas-a,Gambas,A.-P. Gambas,1,1,1,administrateur,1909,1909,
 valsoritis-p,Valsoritis,P. Valsoritis,1,1,1,administrateur,1909,1909,
 blount-h,Blount,H. Blount,1,1,1,administrateur,1912,1912,
