@@ -122,6 +122,20 @@ versioned as a standalone SVG for papers.
 | `fig3_ego_indochine.svg` | The interlock neighbourhood of a single firm, the Banque de l'Indochine by default. |
 | `fig6_core_betweenness.svg` | The same 170 firms and the same layout as figure 1, sized by **betweenness centrality** instead of shared directorships — so the difference between the two figures is the finding. |
 
+**`figures/city_network.html`** — the empire on the map.
+
+| | |
+|---|---|
+| `fig7_city_network.svg` | Firms placed at their **city**, not their colony, in true coordinates; an edge joins two cities when a director sat on a board in each. 97 cities, 1,393 firms. |
+
+The finding is stark: **41% of the placeable firms in the interlock graph were
+run from Paris** — more than the next 21 cities combined — and the heavy lines
+radiate from Paris outward rather than running between colonies. Read it with
+the three limits the figure states: only 45% of interlocked firms have a
+recoverable address, a head office is not an operation (a Cochinchina
+plantation run from Paris appears at Paris), and the 3,275 ties *within* a
+single city cannot be drawn as edges and are in the table instead.
+
 **`figures/territory_networks.html`** — the whole empire, and every territory.
 
 | | |
@@ -195,8 +209,10 @@ src/
                        stage 8  network      -> empire and per-territory figures
   render_png.py        stage 9  figures      -> PNG, one network per file
   centrality.py        stage 6b betweenness -> company_centrality.csv
+  geocode.py           stage 6c addresses   -> company_places.csv (city level)
+  make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            697 assertions on the parsers and the built dataset
+  checks.py            724 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -228,10 +244,13 @@ python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
 python3 src/centrality.py                     # ~1 min, exact betweenness
+python3 src/geocode.py                        # place firms at city level
 python3 src/make_figures.py                   # ~1 min, core figures
 python3 src/make_territory_figures.py         # ~1 min, empire + per-territory
 python3 src/make_figures.py --lang en          # English label set
 python3 src/make_territory_figures.py --lang en
+python3 src/make_geo_figure.py                # the map
+python3 src/make_geo_figure.py --lang en
 python3 src/render_png.py                     # ~90 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```

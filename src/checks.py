@@ -569,6 +569,65 @@ def check_labels() -> None:
                   f"{term} leaked into the French figure")
 
 
+def check_geocoding() -> None:
+    """The city gazetteer and the address parser."""
+    from geocode import fold, head_office_prefix, load_gazetteer, match_city
+
+    print("geocoding", file=sys.stderr)
+    index, cities = load_gazetteer()
+    check("  gazetteer loads", len(cities) > 100, f"{len(cities)} cities")
+
+    bad = [c for c, r in cities.items()
+           if not (-90 <= float(r["lat"]) <= 90 and -180 <= float(r["lon"]) <= 180)]
+    check("  every city has plausible coordinates", not bad, str(bad[:3]))
+    at_null = [c for c, r in cities.items()
+               if abs(float(r["lat"])) < 0.01 and abs(float(r["lon"])) < 0.01]
+    check("  no city sits at Null Island", not at_null, str(at_null[:3]))
+
+    # The failure this parser exists to prevent: Paris street names include
+    # rue de Rome, rue de Constantinople and rue d'Alger, so searching a whole
+    # head-office string for city names puts Paris firms in Italy.
+    for raw, want in [
+        ("Paris, 1, rue de Stockholm. Tél. : LAB. 18-34", "Paris"),
+        ("Paris, 12, rue de Rome", "Paris"),
+        ("Paris, 5, rue d'Alger", "Paris"),
+        ("Paris, 40, rue de Constantinople", "Paris"),
+        ("le siège social est à Saïgon", "Saïgon"),
+        ("CASABLANCA (Maroc)", "Casablanca"),
+        ("Alger, 3, boulevard Baudin", "Alger"),
+    ]:
+        eq(f"  {raw[:34]!r} -> {want}",
+           match_city(head_office_prefix(raw), index), want)
+
+    eq("  fold() is accent-insensitive", fold("Saïgon"), fold("Saigon"))
+    eq("  fold() is case-insensitive", fold("DAKAR"), fold("Dakar"))
+
+    path = os.path.join(PROC_DIR, "company_places.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("company_places.csv")
+    placed = [r for r in rows if r["city"]]
+    unknown = sorted({r["city"] for r in placed} - set(cities))
+    check("  every placed city is in the gazetteer", not unknown, str(unknown[:3]))
+    nocoord = [r["company_id"] for r in placed if not r["lat"] or not r["lon"]]
+    check("  every placed firm has coordinates", not nocoord, str(nocoord[:3]))
+    check("  coverage is reported, not silently total",
+          0 < len(placed) < len(rows),
+          f"{len(placed)} of {len(rows)} - a total is suspicious")
+
+    edges_path = os.path.join(PROC_DIR, "edges_city_interlock.csv")
+    if os.path.exists(edges_path):
+        edges = load("edges_city_interlock.csv")
+        # Parenthesised: `a | b - c` binds as `a | (b - c)`, which would only
+        # ever check the second column.
+        seen = ({e["city_1"] for e in edges} | {e["city_2"] for e in edges})
+        stray = sorted(seen - set(cities))
+        check("  city edges reference known cities", not stray, str(stray[:3]))
+        self_loops = [e for e in edges if e["city_1"] == e["city_2"]]
+        check("  city edges are between distinct cities", not self_loops,
+              f"{len(self_loops)} self-loops - within-city ties belong in the table")
+
+
 def check_figures() -> None:
     """The rendered figures must be well-formed, on-canvas and comparable."""
     import xml.etree.ElementTree as ET
@@ -792,6 +851,7 @@ def main() -> None:
         check_dataset()
         check_positionality()
         check_splits()
+        check_geocoding()
         check_figures()
 
     total = CHECKS["passed"] + CHECKS["failed"]

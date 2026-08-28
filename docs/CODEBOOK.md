@@ -474,6 +474,43 @@ Navigation Sud-Atlantique (0.0200), Banque de l'Indochine (0.0187). Note the
 first two are *not* the highest-degree firms — that is the point of the
 variable.
 
+### `company_places.csv` — a city for each firm
+
+Written by `src/geocode.py` (stage 6c). One row per firm (8,493); 3,138 carry
+a city.
+
+| Variable | Description |
+|---|---|
+| `company_id`, `name` | Firm, matching `companies.csv`. |
+| `city` | Canonical city from `data/reference/places_geo.csv`. Empty where no address is recoverable — **not guessed**. |
+| `lat`, `lon` | Coordinates of that city. |
+| `city_territory` | Territory the city sits in, from the gazetteer, so a Paris head office is not filed under Morocco. |
+| `group` | `metropole` / `empire` / `foreign` — where the city stood in relation to French sovereignty. |
+| `source_field` | `place_listed` (clean, from the catalogue title) or `head_office_observed` (parsed from prose). Drop the second if you want only the strong half. |
+| `place_raw` | The string the city was read from, for auditing. |
+
+### `edges_city_interlock.csv` — the map's edges
+
+`city_1`, `city_2`, `territory_1`, `territory_2`, `group_1`, `group_2`,
+`n_interlocks`. 899 city pairs, 7,808 interlocks. **Between-city only** —
+ties within one city cannot be an edge and are in `company_places.csv`'s
+aggregate and the figure's table instead (3,275 of them).
+
+### `data/reference/places_geo.csv`
+
+176 cities: `city`, `lat`, `lon`, `territory`, `group`, `aliases`. Curated by
+hand because the place names are historical (Bône not Annaba, Tourane not Da
+Nang) and no geocoding service returns them reliably. `aliases` holds the
+variant spellings the sources use — 74 of them, e.g. `Saigon` and `Sài Gòn`
+for `Saïgon`. It is an **input**: edit it and rerun stage 6c.
+
+**Figure 7 — the empire on the map.** `fig7_city_network.svg` and
+`city_network.html`. Cities in true position (plate carrée, no coastline —
+none ships with this repo, so a graticule carries the geography), node area
+by firms based there, edge weight by interlocks between the pair, colour by
+sovereignty group. 97 cities, 1,393 firms, 7,808 drawn ties. See METHODOLOGY
+§5f for the coverage limits and for why a head office is not an operation.
+
 ### The whole empire, and every territory
 
 `src/make_territory_figures.py` (stage 8) writes the rest of `figures/`.

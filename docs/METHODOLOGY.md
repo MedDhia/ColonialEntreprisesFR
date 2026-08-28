@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Nine stages, each resumable, each writing its own outputs:
+Ten stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -44,10 +44,12 @@ Nine stages, each resumable, each writing its own outputs:
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
 6b. **`centrality.py`** — interlock graph → exact betweenness per firm (§5e).
+6c. **`geocode.py`** — addresses → a city per firm, below colony level (§5f).
 7. **`make_figures.py`** — network → the core figures, HTML and SVG (§5d).
 8. **`make_territory_figures.py`** — network → the whole-empire figure, the
    territory matrix and one figure per territory (§5d).
 9. **`render_png.py`** — every figure → PNG, one network per file.
+10. **`make_geo_figure.py`** — places → the interlock network on the map (§5f).
 
 Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
@@ -57,7 +59,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (697 assertions).
+`checks.py` validates the parsers and the built dataset (724 assertions).
 
 ### The extraction trap
 
@@ -462,6 +464,55 @@ duplicate splits a firm's brokerage across two nodes, and a wrongly merged
 surname invents brokerage that no one exercised. Read the ranking as a
 description of this network, not of the colonial economy.
 
+## 5f. Placing firms below the level of the colony
+
+The source files a firm under a territory. That unit hides two things worth
+seeing: that Saigon and Hanoi were substantially separate business worlds
+inside one *Indochine*, and that a large share of "colonial" firms were run
+from Paris. `src/geocode.py` recovers the city; `make_geo_figure.py` draws the
+interlock network over it, with position meaning location rather than
+connection.
+
+**Two fields, in order of trust.** `place_listed` comes from the catalogue
+title and is a clean city name (1,692 firms). `head_office_observed` is
+transcribed prose — *"Paris, 1, rue de Stockholm. Tél. : LAB. 18-34"* — and
+covers 3,970. The first is preferred; the second is parsed only where the
+first is absent, and `source_field` records which was used so the weaker half
+can be dropped.
+
+**Why a prefix is parsed rather than the whole string.** A head-office line is
+`<city>, <street address>`, and Paris street names include *rue de Rome*, *rue
+de Constantinople* and *rue d'Alger*. Searching the full string for city names
+would relocate Paris firms to Italy, Turkey and Algeria — a bug that would
+look like a finding. The string is cut at the first digit or street word and
+only the prefix is matched, which is also why *"le siège social est à Paris"*
+resolves correctly. `checks.py` asserts all four of those cases.
+
+**The gazetteer is curated, not geocoded.** `data/reference/places_geo.csv`
+holds 176 cities with coordinates, territory and variant spellings. It is
+hand-built because the names are historical — Bône not Annaba, Tourane not Da
+Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
+reliably. It is an input: editing it changes the output.
+
+**Coverage: 3,138 of 8,493 firms (37%), and 1,393 of the 3,085 in the
+interlock graph (45%).** The map draws those. It is not a map of the empire's
+firms but of the ones whose address survived, and the unplaced 55% are absent
+rather than assumed.
+
+**Three readings the figure would otherwise invite, and why they are wrong.**
+A head office is not an operation: a rubber plantation in Cochinchina run from
+a Paris office appears at Paris, which is a true fact about control and a
+false one about production. A city's size on the map is firms *recorded* there,
+inheriting all of §6's coverage unevenness. And ties within a single city
+cannot be drawn — an edge from Paris to Paris is a dot — so the 3,275
+within-city interlocks appear as a table column rather than on the map, against
+7,808 drawn between cities; a reader who counts only the lines undercounts the
+network by nearly a third.
+
+The headline result survives all three: 41% of placed firms in the interlock
+graph were run from Paris, more than the next 21 cities combined, and the
+heaviest lines radiate from Paris rather than running between colonies.
+
 ## 6. Validity — read this before using the data
 
 **It is a sample of statements, not a census of boards.** A firm's absence
@@ -529,6 +580,7 @@ python3 src/build_network.py                    # ~3 min
 python3 src/split_by_country.py                 # ~2 min, per-territory bundles
 python3 src/code_positionality.py               # ~1 min, positionality coding
 python3 src/centrality.py                       # ~1 min, exact betweenness
+python3 src/geocode.py                          # place firms at city level
 python3 src/make_figures.py                     # ~1 min, core figures
 python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
 python3 src/make_figures.py --lang en            # English label set
