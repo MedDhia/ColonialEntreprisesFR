@@ -16,12 +16,20 @@ network can be sliced by period rather than collapsed into one static graph.
 > surviving press. Read [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) §6 before
 > publishing results — especially for any measure sensitive to missing data.
 >
-> **Extraction coverage.** Of 5,867 documents with usable text, **2,482 (42%)
+> **Extraction coverage.** Of 5,867 documents with usable text, **2,483 (42%)
 > yield at least one tie**; the other 58% hold 47% of the extracted characters
 > and contribute nothing. Most are a genre the parsers do not read — honours
 > lists, prose histories, biographical dictionaries — and some are real misses.
 > §2b of the methodology quantifies what is left on the table. Absence of a
 > firm from the network is not evidence that it had no board.
+>
+> **The network includes the Paris Bourse.** A large share of colonial firms
+> were publicly quoted, so `Annuaire Desfossés 1956` is a colonial source; it
+> contributes 16,131 ties and 1,889 firms, of which 11% also have dossier
+> evidence. The rest are metropolitan and foreign companies that colonial
+> directors also sat on — which is the point, but it means **this is no longer
+> a purely colonial universe**. Every edge carries `source_genre`, so
+> `source_genre == "dossier"` recovers the previous scope exactly.
 
 ## What is in it
 
@@ -31,12 +39,13 @@ network can be sliced by period rather than collapsed into one static graph.
 | Documents with text extracted | **5,874 (99.2%)** — 46 are dead links on the site |
 | Territories | **62** countries / 13 index-page regions (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
 | Economic sectors | 108, as classified by the source |
-| Person → company ties | **61,348** attributed observations of 79,343 parsed (77.3%) |
-| Two-mode edge rows | **58,335**, 98.7% carrying a year |
-| Distinct people | **24,512** |
-| Companies | **8,548** (including firms known only from directory entries) |
-| Company interlock edges | **39,732** pooled, 24,759 within period |
-| Corporate directorships | 2,989 directed company → company edges |
+| Person → company ties | **77,479** — 61,348 from firm dossiers (77.3% of 79,343 parsed) plus 16,131 from the annuaire indexes |
+| Two-mode edge rows | **73,977**, 98.7% carrying a year |
+| Distinct people | **31,926** |
+| Companies | **10,434** (including firms known only from a directory or annuaire entry) |
+| Company interlock edges | **56,003** pooled, 37,171 within period |
+| Extraction genres | firm dossiers + person-indexed annuaires; `source_genre` on every edge |
+| Corporate directorships | 3,432 directed company → company edges |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
 `data/processed/network_stats.csv` holds these figures per period. The
@@ -107,7 +116,7 @@ Ottoman and Egyptian ones, since neither fits the binary. The evidence is the
 name plus the territory — onomastic inference, good for aggregate composition
 and **not** for claims about named individuals.
 
-The headline result is stark and is the point of the variable: of 24,512
+The headline result is stark and is the point of the variable: of 31,926
 people, **146 (0.6%) carry an indigenous name**. By territory, board members
 with an indigenous name run at 1.0% in Morocco and Indochina, 0.4% in Algeria,
 and **0.0% in French Equatorial Africa, Gabon, Congo-Brazzaville and New
@@ -147,7 +156,7 @@ single city cannot be drawn as edges and are in the table instead.
 
 | | |
 |---|---|
-| `fig4_empire_network.svg` | **Every** firm sharing a director: 3,101 firms, 39,732 interlocks, nothing subsetted. Colour is territory. |
+| `fig4_empire_network.svg` | **Every** firm sharing a director: 4,729 firms, 56,003 interlocks, nothing subsetted. Colour is territory. |
 | `fig5_territory_matrix.svg` | The empire as a network of territories — 53 × 53 cells, each the number of directors sitting on boards in both. |
 | `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph — `algerie`, `tunisie`, `madagascar`, `indochine`, `senegal`, … |
 
@@ -220,7 +229,7 @@ src/
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            751 assertions on the parsers and the built dataset
+  checks.py            766 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)

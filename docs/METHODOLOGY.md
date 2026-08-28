@@ -61,7 +61,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (751 assertions).
+`checks.py` validates the parsers and the built dataset (766 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -261,14 +261,47 @@ a misaligned numbering would collapse it, and `checks.py` enforces a floor of
 source: `comm. cptes` is a statutory auditor, not a director, and 2,461 rows
 turn on that distinction alone.
 
-**Scope, left to the reader.** `Annuaire Desfossés 1956` covers the whole
-Paris Bourse, so only ~14% of its ties are at firms already in this dataset.
-Merging it wholesale would change what the dataset is — Nestlé and Técalémit
-are not colonial firms. The output is therefore a **separate file** with an
-`in_colonial_dataset` flag, not folded into `affiliations.csv`. The other 86%
-is not noise: it is the metropolitan portfolio of colonial directors, which is
-exactly what an interlocking-directorate study wants. That is a decision for
-the analyst.
+**Scope: merged, and what that changes.** `Annuaire Desfossés 1956` lists the
+companies quoted on the Paris Bourse. A large share of colonial firms were
+publicly quoted, so this is a colonial source — excluding it to avoid
+admitting some non-colonial firms would drop real colonial boards. It is
+therefore merged into the network by default.
+
+The consequence must be stated plainly: **this is no longer a purely colonial
+universe.** 1,889 firms enter from the annuaire, of which 11% also have
+dossier evidence; the remainder are metropolitan and foreign companies. That
+is not noise — it is the rest of the portfolio of the same directors, which is
+what an interlocking-directorate study wants — but a reader who assumes every
+node is a colonial enterprise will be wrong. Every observation and every
+two-mode edge carries `source_genre`, so filtering to `dossier` recovers the
+previous scope exactly, and `build_network.py --no-person-index` rebuilds
+without it.
+
+Two further asymmetries follow from merging one dense source into many sparse
+ones. The annuaire is a **complete snapshot of one year (1956)**, where the
+dossiers are scattered extracts across a century: the 1945–62 period therefore
+has far better board coverage than any other, and a time series of density or
+degree across periods is measuring the sources as much as the economy. And
+because a complete board list generates every pair among its members, the
+annuaire contributes interlocks at a rate the dossier evidence cannot match.
+Compare periods with `source_genre` held constant, or not at all.
+
+### The bug that merging exposed
+
+The first merge produced 162,349 interlocks, 122,693 of them in 1945–62. That
+spike was not a finding. `parse_person_name` reads `Baert (J.)` backwards —
+"Baert" as the forename, "J." as the surname — because in the dossier genre
+that shape is genuinely ambiguous. In *this* genre it is not: the format is
+`Surname (Given)` throughout. So 148 distinct people collapsed onto the key
+`j-b`, which then held 119 board seats and generated some 7,000 interlock
+edges between firms that never shared a director.
+
+Stage 3b now parses the name with the format it is guaranteed rather than
+inferring it, and moves a trailing particle to the front — `Abs (P. d')` is
+P. d'Abs, not a person called "P. d'". Distinct people went from 3,929 to
+9,111 and the most-seated individual from 119 boards to 26. `checks.py` tests
+that four different B-surnames with the initial J. produce four different
+keys, because that is the assertion the bug violated.
 
 ### A bug this stage exposed in `org_key`
 
@@ -391,7 +424,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 24,512 names
+**Every obvious rule is wrong.** Each was measured against all 31,926 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -438,7 +471,7 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-3,101 firms and 39,732 edges: rendered as a node-link diagram it is a solid
+4,729 firms and 56,003 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
@@ -485,7 +518,7 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 3,101 firms and 39,732 interlocks.** At that density a
+**Figure 4 draws all 4,729 firms and 56,003 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
@@ -539,7 +572,7 @@ Three decisions determine the numbers.
 **Computed on the whole graph, displayed on a slice.** Betweenness is a global
 property: the shortest paths that matter run through firms outside any core
 one might draw. It is computed on the giant component of the interlock graph
-at `weight >= 1` (3,055 firms, 39,497 ties) and then displayed on whatever
+at `weight >= 1` (4,671 firms, 39,497 ties) and then displayed on whatever
 subset a figure shows. Recomputing it on the 170 drawn firms would yield a
 different quantity wearing the same name, and would systematically flatter
 firms that happen to sit in the middle of that particular selection.
@@ -596,7 +629,7 @@ hand-built because the names are historical — Bône not Annaba, Tourane not Da
 Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
 reliably. It is an input: editing it changes the output.
 
-**Coverage: 3,138 of 8,548 firms (37%), and 1,393 of the 3,101 in the
+**Coverage: 3,138 of 10,434 firms (37%), and 1,393 of the 4,729 in the
 interlock graph (45%).** The map draws those. It is not a map of the empire's
 firms but of the ones whose address survived, and the unplaced 55% are absent
 rather than assumed.

@@ -62,7 +62,8 @@ from collections import Counter, defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from common import clean_text, plausible_year  # noqa: E402
-from names import looks_like_org, org_key, parse_person_name  # noqa: E402
+from names import (PARTICLES, looks_like_org, make_person_key, org_key,  # noqa: E402
+                   parse_person_name)
 from parse_ties import ROLE_RES  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -227,6 +228,49 @@ INDEX_ROLE_RULES: list[tuple[str, str]] = [
 INDEX_ROLE_RES = [(re.compile(p, re.I), c) for p, c in INDEX_ROLE_RULES]
 
 
+INDEX_NAME_RE = re.compile(r"^(?P<surname>[^()]+?)\s*\((?P<given>[^)]*)\)\s*$")
+
+
+def parse_index_name(raw: str) -> dict:
+    """Parse a `Surname (Given)` entry, which this genre guarantees.
+
+    The general parser must guess which token is the surname, and on
+    "Baert (J.)" it guesses wrong - reading "Baert" as the forename and "J."
+    as the surname. Every `J.` in the B's then collapses into one node: 148
+    distinct people keyed as `j-b`, generating thousands of interlock edges
+    between firms that never shared a director. Here the format is known, so
+    it is applied rather than inferred.
+
+    A trailing particle belongs to the surname: "Abs (P. d')" is P. d'Abs.
+    """
+    raw = raw.strip()
+    m = INDEX_NAME_RE.match(raw)
+    if not m:
+        # No parenthesis: the whole string is the surname.
+        return {"surname": raw, "given": "", "name_clean": raw,
+                "person_key": make_person_key(raw, ""), "parse_note": "index_surname_only"}
+
+    surname = m.group("surname").strip(" ,;.")
+    given = m.group("given").strip(" ,;.")
+
+    # "P. d'" -> the particle moves in front of the surname.
+    note = "index_surname_paren"
+    tokens = given.replace("\u2019", "'").split()
+    particles = []
+    while tokens and tokens[-1].rstrip("'").lower() in PARTICLES:
+        particles.insert(0, tokens.pop())
+        note = "index_particle_moved"
+    if particles:
+        joined = " ".join(particles)
+        surname = (f"{joined}{surname}" if joined.endswith("'")
+                   else f"{joined} {surname}")
+        given = " ".join(tokens)
+
+    name_clean = f"{given} {surname}".strip()
+    return {"surname": surname, "given": given, "name_clean": name_clean,
+            "person_key": make_person_key(surname, given), "parse_note": note}
+
+
 def role_of(gloss: str) -> str:
     """Role from the gloss, defaulting to administrateur.
 
@@ -316,7 +360,7 @@ def parse_pair(idoc, key_doc, title, txcache):
                 or name.count(")") > name.count("(")):
             continue
         is_org = looks_like_org(name)
-        parsed = parse_person_name(name) if not is_org else None
+        parsed = parse_index_name(name) if not is_org else None
         for num, gloss in refs:
             company = key.get(num)
             if company and len(company) < 3:
@@ -416,14 +460,20 @@ def main() -> None:
     # rest as the metropolitan context of colonial directors - which is
     # exactly what an interlocking-directorate study wants - without the
     # choice being made for them here.
-    with open(os.path.join(PROC, "companies.csv"), encoding="utf-8", newline="") as fh:
-        known = {c["company_id"] for c in csv.DictReader(fh)}
+    # Compare against firms with *dossier* evidence, not against companies.csv:
+    # once build_network merges this stage, companies.csv contains these firms
+    # by construction and the flag would read 100% for that reason alone.
+    known = set()
+    with open(os.path.join(PROC, "affiliations.csv"), encoding="utf-8", newline="") as fh:
+        for a in csv.DictReader(fh):
+            if a["company_key"]:
+                known.add(a["company_key"])
     n_known = 0
     for r in all_rows + all_orgs:
         hit = r["company_key"] in known
         r["in_colonial_dataset"] = int(hit)
         n_known += hit
-    print(f"  of which at a firm already in the dataset: {n_known:,} "
+    print(f"  of which at a firm with dossier evidence too: {n_known:,} "
           f"({100 * n_known / max(1, len(all_rows) + len(all_orgs)):.0f}%)",
           file=sys.stderr)
 

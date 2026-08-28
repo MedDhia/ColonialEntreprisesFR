@@ -372,11 +372,33 @@ def main() -> None:
                     help="drop interlock edges below this many shared directors")
     ap.add_argument("--graphml-max-nodes", type=int, default=200000,
                     help="skip GraphML export above this node count")
+    ap.add_argument("--no-person-index", action="store_true",
+                    help="exclude stage 3b (the annuaire indexes) from the network")
     args = ap.parse_args()
 
     documents = read_csv("documents.csv")
     affiliations = [r for r in read_csv("affiliations.csv") if r["company_key"] and r["person_key"]]
     org_aff = [r for r in read_csv("org_affiliations.csv") if r["company_key"] and r["member_key"]]
+
+    # Stage 3b: the person-indexed annuaires. Included by default. A large
+    # share of colonial firms were quoted on the Paris Bourse, so the Desfossés
+    # index is a colonial source and not a foreign one; excluding it because
+    # its firms also include metropolitan companies would drop real colonial
+    # boards to avoid admitting some non-colonial ones. Every row keeps
+    # `source_genre`, so a study that wants only the dossier evidence can
+    # filter it back out, or rebuild with --no-person-index.
+    n_index = 0
+    if not args.no_person_index:
+        idx = read_csv("affiliations_person_index.csv")
+        for r in idx:
+            r.setdefault("source_genre", "person_index")
+        affiliations += [r for r in idx if r["company_key"] and r.get("person_key")]
+        org_aff += [r for r in idx if r["company_key"] and r.get("member_key")]
+        n_index = sum(1 for r in idx if r["company_key"]
+                      and (r.get("person_key") or r.get("member_key")))
+        print(f"person-index rows merged: {n_index:,}", file=sys.stderr)
+    for r in affiliations + org_aff:
+        r.setdefault("source_genre", "dossier")
     attributes = read_csv("company_attributes.csv")
     refs = read_csv("doc_references.csv")
 
@@ -648,26 +670,32 @@ def main() -> None:
                 "n_observations": 1,
                 "source_refs": {r["source_ref"]} if r["source_ref"] else set(),
                 "doc_ids": {r["doc_id"]},
+                "genres": {r.get("source_genre", "dossier")},
             }
         else:
             e["n_observations"] += 1
             if r["source_ref"]:
                 e["source_refs"].add(r["source_ref"])
             e["doc_ids"].add(r["doc_id"])
+            e["genres"].add(r.get("source_genre", "dossier"))
 
     tm_rows = []
     for e in two_mode.values():
         tm_rows.append(
             {
-                **{k: v for k, v in e.items() if k not in {"source_refs", "doc_ids"}},
+                **{k: v for k, v in e.items()
+                   if k not in {"source_refs", "doc_ids", "genres"}},
                 "source_refs": " | ".join(sorted(e["source_refs"]))[:400],
                 "doc_ids": "; ".join(sorted(e["doc_ids"]))[:300],
+                # Which extraction genre supports this edge, so a study can
+                # restrict to the dossier evidence without rebuilding.
+                "source_genre": "; ".join(sorted(e["genres"])),
             }
         )
     tm_rows.sort(key=lambda r: (r["company_id"], r["year"], r["person_id"]))
     write_csv("edges_person_company.csv", tm_rows,
               ["person_id", "company_id", "role", "year", "period", "is_board_seat",
-               "n_observations", "source_refs", "doc_ids"])
+               "n_observations", "source_refs", "doc_ids", "source_genre"])
 
     collapsed: dict[tuple, dict] = {}
     for r in affiliations:

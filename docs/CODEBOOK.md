@@ -109,13 +109,17 @@ are people rather than firms. Same columns as `affiliations.csv`, plus:
 | `source_genre` | `person_index`. |
 | `in_colonial_dataset` | 1 if the firm is already a node in `companies.csv`. **Only ~14% are.** |
 
-**This file is deliberately not merged into `affiliations.csv`.** `Annuaire
-Desfossés 1956` covers the whole Paris Bourse, so most of its firms are
-metropolitan or foreign; folding them in would change what this dataset is.
-Filter on `in_colonial_dataset = 1` for the colonial slice, or keep the rest
-as the metropolitan portfolio of colonial directors. `role` is coded from the
-compiler's gloss, defaulting to `administrateur` because the index is headed
-*"ADMINISTRATEURS DES SOCIÉTÉS COTÉES"*.
+**These rows are merged into the network** by `build_network.py`, because a
+large share of colonial firms were quoted on the Paris Bourse. They keep their
+own file as well, so the two extraction genres can be analysed apart. Filter
+`edges_person_company.csv` on `source_genre` to include or exclude them, or
+rebuild with `--no-person-index`. `role` is coded from the compiler's gloss,
+defaulting to `administrateur` because the index is headed *"ADMINISTRATEURS
+DES SOCIÉTÉS COTÉES"*.
+
+Note the coverage asymmetry this introduces: the annuaire is a complete
+snapshot of **1956**, so the 1945–62 period has better board coverage than any
+other, and cross-period comparisons should hold `source_genre` constant.
 
 ### `person_index_report.csv` — one row per annuaire parsed
 
@@ -252,6 +256,11 @@ Pre-resolution intermediates written by stage 3. Kept for traceability; use
 
 ### `edges_person_company.csv` — two-mode network, by year
 
+Carries `source_genre`: `dossier`, `person_index`, or both where the two
+genres independently attest the same person-firm-role-year. Filtering to
+`dossier` reproduces the network as it stood before the annuaire indexes were
+merged.
+
 `person_id`, `company_id`, `role`, `year`, `period`, `is_board_seat`,
 `n_observations`, `source_refs`, `doc_ids`.
 
@@ -386,7 +395,7 @@ the same columns as the corresponding top-level files, restricted to that
 territory and with nodes and edges recomputed from its ties alone.
 
 **Ties partition; nodes do not.** Every tie carries exactly one territory, so
-bundle tie counts sum to the dataset total (61,348) with none duplicated or
+bundle tie counts sum to the dataset total (77,479) with none duplicated or
 dropped. Firms and people appear in every bundle where they are observed —
 21% of people and 9% of firms are in more than one country bundle — so
 **node counts must not be added across bundles**.
@@ -478,7 +487,7 @@ graph (3,085).
 | Variable | Description |
 |---|---|
 | `company_id`, `name` | Firm, matching `companies.csv`. |
-| `in_giant` | 1 if in the giant component (3,055 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
+| `in_giant` | 1 if in the giant component (4,671 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
 | `degree` | Firms it shares at least one director with. |
 | `weighted_degree` | Sum of shared-director counts over those ties. |
 | `betweenness` | Normalised betweenness centrality, **exact and unweighted**, computed on the giant component. |
@@ -505,7 +514,7 @@ variable.
 
 ### `company_places.csv` — a city for each firm
 
-Written by `src/geocode.py` (stage 6c). One row per firm (8,548); 3,138 carry
+Written by `src/geocode.py` (stage 6c). One row per firm (10,434); 3,138 carry
 a city.
 
 | Variable | Description |
@@ -557,9 +566,9 @@ by `betweenness` instead of weighted degree. Holding the node set and layout
 fixed is the whole design: the difference between figures 1 and 6 is the
 finding, and a fresh layout would let neither be read against the other.
 
-**Figure 4 — every firm, every interlock.** All 3,101 firms in
-`edges_company_interlock.csv` at `weight >= 1` and all 39,732 interlocks
-between them — no threshold, no top-N. The giant component (3,055 firms,
+**Figure 4 — every firm, every interlock.** All 4,729 firms in
+`edges_company_interlock.csv` at `weight >= 1` and all 56,003 interlocks
+between them — no threshold, no top-N. The giant component (4,671 firms,
 98.5%) fills the canvas; the 46 firms in 22 unconnected components sit in a
 labelled strip below a rule. Colour is the firm's first territory folded to
 the three largest, node area is weighted degree, and the sixteen largest are

@@ -625,6 +625,28 @@ def check_person_index() -> None:
           len(out) > 0.8 * len(runaway) and "33" in out,
           f"{len(out)} of {len(runaway)} chars survived")
 
+    # The genre guarantees "Surname (Given)". The general parser guesses, and
+    # on "Baert (J.)" it guesses backwards - forename "Baert", surname "J." -
+    # so 148 distinct people collapsed onto the key `j-b` and generated
+    # thousands of interlock edges between firms that never shared a director.
+    from parse_person_index import parse_index_name
+    for raw, surname, key in [
+        ("Baert (J.)", "Baert", "baert-j"),
+        ("Bailly (J.)", "Bailly", "bailly-j"),
+        ("Achard (Georges-P.)", "Achard", "achard-g"),
+        ("Abaza (Mohamed Aziz)", "Abaza", "abaza-m"),
+        ("Abadie", "Abadie", "abadie"),
+        # A trailing particle belongs in front of the surname.
+        ("Abs (P. d\u2019)", "d'Abs", "d-abs-p"),
+        ("Aboville (J. d\u2019)", "d'Aboville", "d-aboville-j"),
+    ]:
+        got = parse_index_name(raw)
+        eq(f"  parse_index_name({raw!r}).surname", got["surname"], surname)
+        eq(f"  parse_index_name({raw!r}).key", got["person_key"], key)
+    keys = {parse_index_name(f"{s} (J.)")["person_key"]
+            for s in ("Baert", "Bagage", "Bailly", "Balaresque")}
+    eq("  four different B-surnames give four different keys", len(keys), 4)
+
     # Role abbreviations peculiar to the annuaire.
     for gloss, want in (("comm. cptes Pyrites de Huelva", "commissaire_aux_comptes"),
                         ("pdt Nestlé Alimentana", "president"),
