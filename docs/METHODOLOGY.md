@@ -69,7 +69,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (837 assertions).
+`checks.py` validates the parsers and the built dataset (856 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -105,7 +105,7 @@ The last row is the real gap, and it is not one thing:
   et colon", "vétérinaire à Oran". Correctly excluded; counting them would
   inflate the network with ties that do not exist.
 
-One further gap is quantified elsewhere: **9,078 parsed ties (12.4%)** are
+One further gap is quantified elsewhere: **9,094 parsed ties (12.5%)** are
 dropped for want of an identifiable firm (§5). The compiler's annotation leads
 are now resolved as far as they go (§4e).
 
@@ -191,8 +191,19 @@ initials, then leading recognised forenames, with a positional fallback for
 forenames not on the list. Handled registers: initials (`A. R. Fontaine`),
 surname-first with parentheses (`PHILIPPAR (Edmond)`) and without
 (`Chabert Pierre`), nobiliary and Dutch/German particles (`de Margerie`,
-`Van Nierop`), and the sources' in-place expanded initials
-(`P(aul) Delorme`).
+`Van Nierop`), and the two ways the compiler restores a forename the source
+abbreviated — expanding an initial in place (`G[eorges] Hersent`) and
+supplying the whole name ahead of the surname (`[Charles] Michel-Côte`).
+
+Those two conventions were, for most of this dataset's life, thrown away. The
+rule accepted only parentheses, `P(aul) Delorme` — a form that occurs **zero**
+times in the corpus — while the bracketed form occurs 7,802 times and the
+leading form 7,388. All 15,190 were read as annotations and discarded, which
+matters more than a lost forename: the person splitter below works from
+exactly this evidence. Recovering them raised the share of ties carrying a
+full forename to 47%. The leading form is the ambiguous one, since
+`[Phosphates] Océanie` has the same shape, so the bracketed word must be an
+attested forename before it folds in.
 
 Two refusals are deliberate. After an honorific, a name followed by a
 particle is **not** split — `baron Carton de Wiart` keeps `Carton de Wiart`
@@ -202,20 +213,57 @@ inside the surname, so `Carlos de Barros Soares Branco` becomes one surname
 rather than a guess.
 
 `person_key` = normalised surname + first given initial (`fontaine-a`).
-`build_network.py` then applies **one** further fold: a surname-only key is
-merged into a surname-plus-initial key when that key is unique for the
-surname *and* the combined observation years fit within a 60-year career.
-`Katz` folds into `katz-m`; it would not if an `E. Katz` also existed, nor if
-the years implied a 90-year career. Refusals are recorded as
-`unfolded_ambiguous` or `unfolded_year_span` in `person_resolution.csv`,
-which is the complete audit trail.
+`build_network.py` then resolves it in **both** directions, and records every
+decision in `person_resolution.csv`.
 
-**What this does not do.** Two contemporaries who share a surname and a first
-initial are one node. Given the composition of this elite — Fontaine,
-Hersent, Denis, Gradis and Homberg all appear as families operating across
-several firms — that is a real and unquantified source of inflated degree.
-The countermeasure available to you is `merged_keys`, `name_variants` and the
-year span on every person node.
+**Folding**, for keys that are too fine. A surname-only key is merged into a
+surname-plus-initial key when that key is unique for the surname *and* the
+combined observation years fit within a 60-year career. `Katz` folds into
+`katz-m`; it would not if an `E. Katz` also existed, nor if the years implied
+a 90-year career. Refusals are recorded as `unfolded_ambiguous` or
+`unfolded_year_span`.
+
+**Splitting**, for keys that are too coarse — which is what the key format
+otherwise gets wrong, and it was the largest known defect in this dataset.
+Because the key carries only the first *initial*, Georges Hersent and Gilbert
+Hersent were one node, and every firm one of them sat on appeared to interlock
+with every firm the other sat on. Measured on the variant lists, **619 person
+nodes (1.8%) merged forenames that cannot belong to one man, and they carried
+7.0% of all observations.**
+
+Where a key's observations name two such forenames, each named observation
+moves to its own key (`hersent-g-georges`, `hersent-g-gilbert`) and the
+initial-only observations stay behind on `hersent-g`, which now means "a
+G. Hersent, unresolved". They are **not** handed to the commoner of the two,
+for the same reason an ambiguous fold is refused: a coverage gap beats a
+fabricated identification.
+
+Two forenames count as incompatible only when **both are independently
+attested in the forename reference list** and neither is a prefix or a
+one-edit variant of the other. That guard is what makes the split safe, and
+two cases show why it is needed. *Anathase* and *Athanase* Roudy are one man
+— the compiler himself writes "[Athanase, dit souvent] Anathase" — and a
+transposition is not caught by an edit-distance test. *Démétrius* and
+*Dimitri* Zafiropulo are one man under two transliterations of a Greek name.
+Neither pair is two entries in the list, so neither splits. Splitting one man
+into two nodes is the more damaging error, so the rule errs towards leaving a
+key merged: it declines `Charles`/`Clifford` Michel too, where the two
+probably *are* different people.
+
+The effect is to remove interlocks that never existed, with no observation
+lost — every tie is still present, merely attributed to a narrower node.
+Measured on its own, against the same input, the split removes **5,682**
+interlock edges. The net change to the built network is smaller, **2,940**,
+because the forename recovery described above lands in the same release and
+pulls the other way: it collapses keys such as `hersent-ep-anne-marie-thomas-j`,
+built from a kinship note the parser had folded into a surname, back into the
+real person, and those merges create edges of their own.
+
+**What this still does not do.** Two contemporaries who share a surname *and*
+a forename remain one node, as do two who are only ever named by initial. The
+countermeasures available to you are `given_variants`, the year span on every
+person node, and `person_resolution.csv`, in which every fold and split is
+reversible.
 
 ### Firms
 
@@ -345,7 +393,7 @@ thousands of directors out of ordinary sentences. `parse_prose.py` reads the
 prose with three conditions required together: an explicit person marker
 (`MM.`, `M.`, or an appointment verb), an explicit role word in the same
 clause, and every candidate name passing the same shape test the structured
-parser uses. It yields **14,253 ties over 2,520 firms**, of which 8,421
+parser uses. It yields **14,305 ties over 2,523 firms**, of which 8,421
 person-firm pairs are new.
 
 **Attribution was never the hard part.** For a firm dossier the subject
@@ -395,7 +443,7 @@ abbreviated where the company name is not.
 token must prefix a name token, and in sequence. "Cotonn. St-Quentin" resolves
 to *Cotonnière de Saint-Quentin*; "Bq de Madagascar" to *Banque de
 Madagascar*. Prefix matching needs no list of abbreviations, which matters
-because the compiler invents them freely. Result: **1,674 ties over 499 firms**,
+because the compiler invents them freely. Result: **1,644 ties over 502 firms**,
 hand-audited at roughly 94%.
 
 Three refusals do most of the work for precision. A note matching several
@@ -439,7 +487,7 @@ is the entry header and is never named again.
 What stage 3e adds is **person-scoped segmentation**: the document is split at
 the capitalised surname headers, and every role construction inside an entry is
 attributed to that entry's person. Company names are resolved with the prefix
-matcher from §4e. **3,089 ties over 719 firms and 689 people**, hand-audited
+matcher from §4e. **3,167 ties over 725 firms and 694 people**, hand-audited
 at roughly 93%.
 
 Two guards were added from the audit. A capitalised *headline* has exactly the
@@ -553,7 +601,7 @@ entry to several firms at once, joined with a plus sign —
 `Houillères du bassin de la Loire + Houillères des Cévennes… du Dauphiné`.
 Those 82 people are the boards of three nationalised coal undertakings pooled
 into one pseudo-firm. **22 companies have such a combined name, carrying 185
-of 90,860 two-mode edges (0.20%).** They are left as the source wrote them:
+of 90,745 two-mode edges (0.20%).** They are left as the source wrote them:
 splitting a name on a plus sign would also cut the ones where it separates a
 firm from its depot rather than from another firm, and the affected share is
 too small to justify guessing. Filter on a `+` in `name` to drop them.
@@ -633,7 +681,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 34,240 names
+**Every obvious rule is wrong.** Each was measured against all 33,558 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -680,11 +728,11 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-5,882 firms and 79,826 edges: rendered as a node-link diagram it is a solid
+5,862 firms and 76,886 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
-170 firms of highest weighted degree — 1,448 interlocks. Reading a *global*
+170 firms of highest weighted degree — 1,407 interlocks. Reading a *global*
 property such as density or centralisation off that picture is a mistake; the
 figure is a map of the core, and the numbers for the whole graph are in
 `network_stats.csv`.
@@ -704,7 +752,7 @@ nodes and a full table view rather than relying on the hue alone.
 **Small multiples share one layout, computed once.** Figure 2 draws one panel
 per period. The obvious implementation — lay out and normalise each period's
 subgraph independently — rescales every panel to fill its box, which made the
-1914–1929 panel (2,730 interlocks) look *smaller* than pre-1914 (440): the
+1914–1929 panel (2,952 interlocks) look *smaller* than pre-1914 (479): the
 visual encoding then contradicts the data. The layout is instead computed
 once on the union of all periods and each panel draws its own edges at those
 fixed coordinates, with one size scale throughout. A firm therefore sits in
@@ -727,14 +775,14 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 5,882 firms and 79,826 interlocks.** At that density a
+**Figure 4 draws all 5,862 firms and 76,886 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
 territory folded to the three largest, and the answer the figure gives is
 "both" — Indochine, Maroc and AOF each hold a visibly distinct lobe, joined
 through a dense mixed core. Node radii are 42% of the core figure's and edge
-ink 42% of its opacity, because the settings tuned for 170 nodes render 3,531
+ink 42% of its opacity, because the settings tuned for 170 nodes render 3,549
 as a solid disc.
 
 **Nothing is dropped to make the picture tidy.** 98.5% of the firms sit in one
@@ -746,15 +794,15 @@ graph's, for figure 4 and for each of the 42 territory figures, so the claim
 is enforced rather than merely intended.
 
 **Figure 5 is a matrix, not a node-link diagram.** Aggregated to territories
-the graph is small (54 nodes) and nearly complete (863 of 1,431 possible pairs
+the graph is small (54 nodes) and nearly complete (862 of 1,431 possible pairs
 share at least one director), which is exactly the regime where a node-link
 diagram degenerates into a scribble and a matrix becomes readable. The cell is
 the count of directors holding board seats in both territories; rows and
 columns are ordered by size, which is what makes the core-periphery structure
 legible. Two things to know before reading it: the shading steps by **rank,
 not linearly**, because the counts are heavily skewed and a linear ramp would
-put everything but the top two pairs — Maroc–Algérie at 4,635 shared
-directors and Maroc–Indochine at 4,570 — in the palest step; and a firm listed in two territories contributes its whole board to
+put everything but the top two pairs — Maroc–Indochine at 4,477 shared
+directors and Maroc–Algérie at 4,446 — in the palest step; and a firm listed in two territories contributes its whole board to
 both, which is the tie being counted rather than an artefact — a
 Paris-registered firm operating in Morocco and Indochina genuinely links them.
 
@@ -781,7 +829,7 @@ Three decisions determine the numbers.
 **Computed on the whole graph, displayed on a slice.** Betweenness is a global
 property: the shortest paths that matter run through firms outside any core
 one might draw. It is computed on the giant component of the interlock graph
-at `weight >= 1` (5,798 firms, 79,826 ties) and then displayed on whatever
+at `weight >= 1` (5,776 firms, 76,886 ties) and then displayed on whatever
 subset a figure shows. Recomputing it on the 170 drawn firms would yield a
 different quantity wearing the same name, and would systematically flatter
 firms that happen to sit in the middle of that particular selection.
@@ -838,7 +886,7 @@ hand-built because the names are historical — Bône not Annaba, Tourane not Da
 Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
 reliably. It is an input: editing it changes the output.
 
-**Coverage: 3,170 of 10,625 firms (30%), and 1,956 of the 5,882 in the
+**Coverage: 3,170 of 10,537 firms (30%), and 1,943 of the 5,862 in the
 interlock graph (33%).** The map draws those. It is not a map of the empire's
 firms but of the ones whose address survived, and the unplaced 67% are absent
 rather than assumed.
@@ -850,7 +898,7 @@ false one about production. A city's size on the map is firms *recorded* there,
 inheriting all of §6's coverage unevenness. And ties within a single city
 cannot be drawn — an edge from Paris to Paris is a dot — so the 5,146
 within-city interlocks appear as a table column rather than on the map, against
-1,133 drawn city pairs; a reader who counts only the lines undercounts the
+1,099 drawn city pairs; a reader who counts only the lines undercounts the
 network badly.
 
 The headline result survives all three: 37% of placed firms in the interlock

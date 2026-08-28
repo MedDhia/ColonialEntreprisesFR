@@ -1,22 +1,22 @@
 company_id,name,sectors,n_ties,n_directors,first_year,last_year
-creditfoncieregyptien,Crédit foncier égyptien,,154,71,1887,1953
+creditfoncieregyptien,Crédit foncier égyptien,,154,67,1887,1953
+banquesyriegrandliban,Banque de Syrie et du Grand-Liban,Banques et sociétés financières; Documents généraux,74,52,1938,1940
 unionfonciereegypte,Union foncière d'Égypte,,107,51,1905,1953
-banquesyriegrandliban,Banque de Syrie et du Grand-Liban,Banques et sociétés financières; Documents généraux,72,51,1938,1940
 exploitationcheminsferorientaux,Compagnie d'exploitation des Chemins de fer orientaux,,76,49,1906,1933
+ottomaneheraclee,"Société ottomane d'Héraclée, puis Société française d'Héraclée",,62,40,1897,1910
 heraclee,Société d'Héraclée,,116,39,1912,1943
-radioorient,Radio-Orient,Documents généraux; Sociétés diverses,64,39,1924,1953
-ottomaneheraclee,"Société ottomane d'Héraclée, puis Société française d'Héraclée",,63,39,1897,1910
+radioorient,Radio-Orient,Documents généraux; Sociétés diverses,64,37,1924,1953
 cheminferdamashamahprolongements,Chemin de fer Damas-Hamah et prolongements,Transports terrestres,87,36,1909,1953
-banquefonciereegyptelandbankegyptalexandrie,"Banque foncière d'Égypte Land Bank of Egypt, Alexandrie",,77,35,1905,1953
-creditfoncierorient,Crédit foncier d'Orient,,62,32,1910,1948
+banquefonciereegyptelandbankegyptalexandrie,"Banque foncière d'Égypte Land Bank of Egypt, Alexandrie",,77,36,1905,1953
 canalcorinthe,Nouvelle Société du canal de Corinthe,,120,31,1912,1953
-caissehypothecaireegypte,Caisse hypothécaire d'Égypte,,96,30,1912,1953
-minesbaliakaraidin,Mines de Balia-Karaïdin,,82,26,1912,1940
-electricitealep,Électricité d'Alep,"Eaux, électricité (utilities)",66,26,1925,1948
+caissehypothecaireegypte,Caisse hypothécaire d'Égypte,,95,30,1912,1953
+creditfoncierorient,Crédit foncier d'Orient,,62,30,1910,1948
+minesbaliakaraidin,Mines de Balia-Karaïdin,,85,27,1912,1940
+electricitealep,Électricité d'Alep,"Eaux, électricité (utilities)",66,27,1925,1948
 internationale,"Société internationale, puis Société hellénique, puis Nouvelle Société du Canal maritime de Corinthe",,39,23,1882,1899
-banquesyrie,Banque française de Syrie,Banques et sociétés financières; Documents généraux,29,22,1919,1938
-banquepretsnantissementsmontspieteegyptiens,banque de prêts sur nantissements Société des monts-de-piété égyptiens,Banques et sociétés financières,89,21,1925,1953
-banquepaysorient,Banque française des pays d’Orient,,22,19,1925,1938
+banquepretsnantissementsmontspieteegyptiens,banque de prêts sur nantissements Société des monts-de-piété égyptiens,Banques et sociétés financières,89,22,1925,1953
+banquesyrie,Banque française de Syrie,Banques et sociétés financières; Documents généraux,30,20,1919,1938
+banquepaysorient,Banque française des pays d’Orient,,26,19,1925,1938
 etablissementsluchaire,Établissements LUCHAIRE,Documents généraux,19,19,,
 ottomanetramwayseclairageelectriquesdamas,"Société ottomane des Tramways et éclairage électriques de Damas, puis Tramways et électricité de Damas",Transports terrestres,18,18,1910,1928
 anciensetablissementsbairdusinesfrancorussespetrograd,"Anciens Établissements Baird Usines franco-russes, Pétrograd",,38,16,1912,1920
@@ -25,11 +25,12 @@ asphaltespetroleslattaquie,Asphaltes et pétroles de Lattaquié,Sociétés diver
 ottomanecheminfersmyrnecassabaprolongement,Société ottomane du Chemin de fer Smyrne-Cassaba et prolongement,,16,16,1896,1921
 nationalecommerceindustrieagriculturedansempireottoman,"Société Nationale pour le Commerce, l’industrie et l’agriculture dans l’empire ottoman",,16,16,,
 immobiliereindustriellebatiment,Compagnie immobilière et industrielle du bâtiment,,29,15,1931,1948
+creditfonciersyrie,Crédit foncier de Syrie,Banques et sociétés financières,16,15,1919,1921
 tramwayselectricite,"Tramways et électricite, puis Tramways et éclairage de Beyrouth",Transports terrestres,16,15,1906,1926
-creditfonciersyrie,Crédit foncier de Syrie,Banques et sociétés financières,15,15,1919,1921
 immobiliereregieterrainssalonique,Compagnie Immobilière et de Régie de terrains à Salonique,,47,14,1907,1953
+exploitationsminieresserbie,Société d’Exploitations minières en Serbie,,21,14,1907,1910
 meunierelevantdamasjaffa,"Société Meunière du Levant, Damas, Jaffa",Sociétés diverses,20,14,1922,1922
-plakalnitza,PLAKALNITZA,,16,14,1925,1938
+plakalnitza,PLAKALNITZA,,18,14,1925,1938
 foncieresyrie,Société foncière de Syrie,Banques et sociétés financières,14,14,1922,1922
 tramwayseclairagebeyrouth,Tramways et éclairage de Beyrouth,Transports terrestres,32,13,1927,1933
 financiereorient,Societé Financière d'Orient,,20,13,1896,1909
@@ -38,7 +39,6 @@ cheminferottomansaloniquemonastir,Société du Chemin de fer ottoman Salonique-M
 industrielleforestiereminiereprocheorient,"Société Industrielle, Forestière et Minière du Proche-Orient",,14,13,1921,1929
 airunion,Air Union,Transports aériens,13,13,1927,1927
 orientalcarpetmanufacturersltd,"Oriental Carpet Manufacturers, Ltd",,48,12,1912,1914
-exploitationsminieresserbie,Société d’Exploitations minières en Serbie,,15,12,1907,1907
 banquesyrieliban,Banque de Syrie et du Liban,Banques et sociétés financières,14,12,1922,1937
 exploitaitoncheminfercilicie,Société d'exploitaiton Chemin de fer de Cilicie,Transports terrestres,17,11,1922,1925
 banquehypothecairefrancoegyptienne,Banque hypothécaire franco-égyptienne,,15,11,1910,1929

@@ -9,7 +9,7 @@
     <node id="banquefrancochinoisecommerceindustrie">
       <data key="n_label">Banque franco-chinoise pour le commerce et l'industrie</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">34</data>
+      <data key="n_n_directors">32</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="banqueindustriellechine">
@@ -70,7 +70,7 @@
       <data key="e_weight">7</data>
     </edge>
     <edge id="e1" source="banqueindustriellechine" target="poursuitescontredirigeantsbanqueindustriellechine">
-      <data key="e_weight">3</data>
+      <data key="e_weight">4</data>
     </edge>
     <edge id="e2" source="banqueindustriellechine" target="grandstravauxpekin">
       <data key="e_weight">2</data>

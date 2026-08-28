@@ -1,23 +1,23 @@
 company_id_1,company_id_2,period,weight,shared_directors
-etablissementsdarboussierindustrielleagricolepointepitre,industrielleagricolepointepitre,1914_1929,7,besson-l; chapuy-p; g-r; kapferer-c; micard-e; micard-g; raoul-duval-e
-antillaiseculturecommerce,desirade,1914_1929,6,bertin; hanhart-t; jacquesson; pfister; unne; walther
+antillaiseculturecommerce,desirade,1914_1929,6,bertin; hanhart-t; jacquesson-r; pfister-b; unne; walther
+etablissementsdarboussierindustrielleagricolepointepitre,industrielleagricolepointepitre,1914_1929,6,chapuy-p; kapferer-c; micard-e; micard-g; micard-j; robert-g-gustave
 banqueauxiliairecoloniale,banqueguadeloupe,1914_1929,3,dain-c; papin-beaufond-t; picard-j
-consortiummoruefrance,moruesecheriesfecamp,1914_1929,3,arnaud-legasse; legasse-l; pepin-p
+consortiummoruefrance,moruesecheriesfecamp,1914_1929,3,arnaud-legasse; legasse-l-louis; pepin-p
 mataroni,minesorguyane,1914_1929,2,kiener-l; ungauer-l
 banquemartinique,francocolonialeantillaise,1914_1929,1,schnegg-j
-comptoirsgenerauxguyane,sucriereagricoleguyane,1914_1929,1,michel-a
-martiniquaisedistributionenergieelectrique,martiniquaisedistributionenergieelectriquejardin,1930_1944,7,de-bondeli-e; derouet-m; fay-j; le-quesne-r; munich-j; munich-p; weiss-p
-martiniquaisedistributionenergieelectrique,terre,1930_1944,5,de-bondeli-e; derouet-m; munich-j; munich-p; weiss-p
-martiniquaisedistributionenergieelectriquejardin,terre,1930_1944,5,de-bondeli-e; derouet-m; munich-j; munich-p; weiss-p
+comptoirsgenerauxguyane,sucriereagricoleguyane,1914_1929,1,michel-a-antoine
+martiniquaisedistributionenergieelectrique,martiniquaisedistributionenergieelectriquejardin,1930_1944,7,de-bondeli-e; derouet-m; fay-j; le-quesne-r; munich-j; munich-p; weiss-p-paul
+martiniquaisedistributionenergieelectrique,terre,1930_1944,5,de-bondeli-e; derouet-m; munich-j; munich-p; weiss-p-paul
+martiniquaisedistributionenergieelectriquejardin,terre,1930_1944,5,de-bondeli-e; derouet-m; munich-j; munich-p; weiss-p-paul
 barthelemyrobaglia,mocupia,1930_1944,5,frezier-e; gratieux-g; montegu-g; portal-j; robaglia-b
-industrielleagricolepointepitre,industrielleagricolepointepitreetablissements,1930_1944,4,chanove-j; durand-smet-j; micard-e; raoul-duval-e
-electricitefortfrance,martiniquaisedistributionenergieelectrique,1930_1944,3,munich-j; munich-p; weiss-p
-electricitefortfrance,martiniquaisedistributionenergieelectriquejardin,1930_1944,3,munich-j; munich-p; weiss-p
-electricitefortfrance,terre,1930_1944,3,munich-j; munich-p; weiss-p
-colonialeproduitstannants,colonialetonnellerie,1930_1944,3,hamon-j; jarry-p; jarry-r
-colonialeproduitstannants,theresia,1930_1944,3,hamon-j; jarry-p; jarry-r
-colonialetonnellerie,theresia,1930_1944,3,hamon-j; jarry-p; jarry-r
-consortiummoruefrance,grandepeche,1930_1944,3,hourcade-m; legasse-a; legasse-l
+electricitefortfrance,martiniquaisedistributionenergieelectrique,1930_1944,3,munich-j; munich-p; weiss-p-paul
+electricitefortfrance,martiniquaisedistributionenergieelectriquejardin,1930_1944,3,munich-j; munich-p; weiss-p-paul
+electricitefortfrance,terre,1930_1944,3,munich-j; munich-p; weiss-p-paul
+industrielleagricolepointepitre,industrielleagricolepointepitreetablissements,1930_1944,3,durand-smet-j; micard-e; raoul-duval-e
+colonialeproduitstannants,colonialetonnellerie,1930_1944,3,hamon-j; jarry-p; jarry-r-robert
+colonialeproduitstannants,theresia,1930_1944,3,hamon-j; jarry-p; jarry-r-robert
+colonialetonnellerie,theresia,1930_1944,3,hamon-j; jarry-p; jarry-r-robert
+consortiummoruefrance,grandepeche,1930_1944,3,hourcade-m; legasse-a; legasse-l-louis
 commercialeantillesfrancaisesfredtanon,commercialeantillesfrancaisesftanon,1930_1944,2,reisser-e; roy-m
 commercialeantillesfrancaisesfredtanon,representationcoloniale,1930_1944,2,pellissier-tanon-c; pellissier-tanon-f
 cotonniereguyane,franceguyane,1930_1944,1,incertains-r
@@ -30,9 +30,7 @@ franceguyane,miniereroura,1930_1944,1,jameau-j
 colonialeproduitstannants,miniereroura,1930_1944,1,hamon-j
 colonialetonnellerie,miniereroura,1930_1944,1,hamon-j
 miniereroura,theresia,1930_1944,1,hamon-j
-minescuivrenaltagua,naltagua,1930_1944,1,chappey
+minescuivrenaltagua,naltagua,1930_1944,1,chappey-m
 commercialeantillesfrancaisesftanon,representationcoloniale,1945_1962,3,pelissier-tanon-c; pelissier-tanon-g; tanon-c
 colonialeagricoleminiere,stelieadieuvat,1945_1962,1,comet-p
 colonialeagricoleminiere,unionminierehautemana,1945_1962,1,lamer-l
-exploitationsminieresinini,forestiereguyane,1945_1962,1,hellier-j
-gisementsordieumerci,saintelie,pre_1914,1,dommartin-g

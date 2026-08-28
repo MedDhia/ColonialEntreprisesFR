@@ -1,15 +1,15 @@
 company_id,name,sectors,n_ties,n_directors,first_year,last_year
-proprietairekouilouniari,Compagnie Propriétaire du Kouilou-Niari,Sociétés commerciales,40,28,1902,1929
-hautcongo,Compagnie Française du Haut-Congo,Sociétés commerciales,40,21,1900,1922
+proprietairekouilouniari,Compagnie Propriétaire du Kouilou-Niari,Sociétés commerciales,41,29,1902,1929
+hautcongo,Compagnie Française du Haut-Congo,Sociétés commerciales,40,22,1900,1922
 minierecongo,Cie Minière du Congo français,Mines,19,15,1933,1951
-africaineentreprises,Société Africaine d'Entreprises,Sociétés diverses,23,14,1937,1953
+africaineentreprises,Société Africaine d'Entreprises,Sociétés diverses,23,13,1937,1953
+agricolecommercialeindustriellelefini,Cie agricole commerciale et industrielle de la Léfini,Sociétés commerciales,20,13,1899,1907
 agricolecommercialealima,Société Agricole et Commerciale de l'Alima,Agro-alimentaire,22,12,1903,1938
-agricolecommercialeindustriellelefini,Cie agricole commerciale et industrielle de la Léfini,Sociétés commerciales,20,12,1899,1907
-ongomo,L'Ongomo,Sociétés commerciales,13,12,1901,1924
+congo,Compagnie Française du Congo,Sociétés commerciales,17,11,1900,1900
 afrique,L'Afrique française,Agro-alimentaire,13,11,1936,1938
 ibenga,Ibenga,Sociétés commerciales,12,11,1906,1930
 huileriesmoyencongo,Huileries du Moyen-Congo,Agro-alimentaire,11,11,1930,1937
-congo,Compagnie Française du Congo,Sociétés commerciales,17,10,1900,1900
+ongomo,L'Ongomo,Sociétés commerciales,11,11,1901,1924
 sanghalikouala,Compagnie Générale Sangha-Likouala,Sociétés commerciales,17,10,1930,1951
 afriquefonciereindustriellecommerciale,"L'Afrique foncière, industrielle et commerciale",Sociétés commerciales,10,10,1930,1930
 entreprisestravaux,Entreprises et travaux,Sociétés diverses,10,10,1930,1930
@@ -18,24 +18,24 @@ congomines,Congo-Mines,Mines,15,9,1928,1928
 afriqueminiereequatoriale,Afrique minière équatoriale,Mines,9,9,1921,1922
 consortiumminiercongoniari,Consortium minier Congo-Niari,Mines,9,9,1929,1932
 gabonniari,Gabon-Niari,Mines,13,8,1939,1950
-nkemenkeni,Compagnie de l’N’Kémé et de l’N’Kéni,Sociétés commerciales,13,8,1899,1899
 alimaienne,L'Alimaïenne,Sociétés commerciales,10,8,1899,1903
 minesniari,Compagnie des Mines du Niari,Mines,8,8,1930,1935
+nkemenkeni,Compagnie de l’N’Kémé et de l’N’Kéni,Sociétés commerciales,13,7,1899,1899
 commercialecolonialekadeisangha,Compagnie Commerciale et Coloniale de la Kadeï-Sangha,Sociétés commerciales,9,7,1899,1899
+sangha,Compagnie de la Sangha,Sociétés commerciales,9,7,1899,1899
 lyonnaiseafriqueequatoriale,Compagnie Lyonnaise de l'Afrique équatoriale française,Sociétés diverses,7,7,1922,1922
+forestieremayombedimonikamvouti,"Société Forestière de Mayombe, Dimonika-M’Vouti",Agro-alimentaire,7,7,,
 bascongo,Compagnie Française du Bas-Congo,Sociétés commerciales,11,6,1910,1922
-sangha,Compagnie de la Sangha,Sociétés commerciales,9,6,1899,1899
 colonialebaniembe,Société Coloniale du Baniembé,Sociétés commerciales,6,6,1899,1899
 hydroelectriquecongo,Société Hydro-Electrique du Congo Français,Sociétés commerciales,6,6,1928,1928
 mobaye,La Mobaye,Sociétés commerciales,6,6,1903,1903
 minesdjouecuivre,"Société des Mines du Djoué, cuivre",Mines,6,6,1910,1910
+sanghaequatoriale,Société de la Sangha équatoriale,Sociétés commerciales,6,6,1900,1900
 afriqueequatoriale,Société Générale Française de l’Afrique équatoriale,Sociétés commerciales,6,6,1900,1900
-forestieremayombedimonikamvouti,"Société Forestière de Mayombe, Dimonika-M’Vouti",Agro-alimentaire,6,6,,
 immobilierecongolaise,Société Immobilière Congolaise,Sociétés diverses,7,5,1930,1933
 boismayumbe,Compagnie des Bois du Mayumbé,Agro-alimentaire,5,5,,
 ekelasangha,Compagnie de l’Ékéla-Sangha,Sociétés commerciales,5,5,1899,1927
 fruitscoloniauxparisbrazzavilleparis,"Les Fruits coloniaux, Paris-Brazzaville-Paris",Agro-alimentaire,5,5,1928,1928
-sanghaequatoriale,Société de la Sangha équatoriale,Sociétés commerciales,5,5,1900,1900
 sargosfreres,SARGOS frères,Agro-alimentaire,5,5,1930,1930
 alima,ALIMA,Agro-alimentaire,4,4,1925,1925
 congooccidental,Compagnie du Congo Occidental,Sociétés commerciales,4,4,1929,1929
@@ -44,7 +44,7 @@ nouvellesgaleriescongolaises,Nouvelles Galeries congolaises,Sociétés commercia
 groupebungeplantationskomono,groupe Bunge Plantations de Komono,Agro-alimentaire,4,4,1954,1954
 transportsafriqueequatoriale,Société pour l'Française de Transports en Afrique équatoriale,Sociétés diverses,4,4,1929,1929
 unionindustrielleafricaine,Union industrielle africaine,Sociétés commerciales,4,4,1928,1928
-francecongofrancecongofrancecongo,"France-Congo, France-Congo, Nouvelle Société France-Congo",Sociétés commerciales,18,3,1921,1942
+francecongofrancecongofrancecongo,"France-Congo, France-Congo, Nouvelle Société France-Congo",Sociétés commerciales,13,3,1921,1942
 recherchesminesafriqueequatoriale,Société Française de Recherches et de mines en Afrique Equatoriale,Mines,5,3,1928,1935
 explorationminiereequatoriale,Société d'Exploration minière équatoriale,Mines,4,3,1928,1928
 caoutchoucsproduitslobay,Cie des Caoutchoucs et produits de la Lobay,Sociétés commerciales,3,3,1899,1899

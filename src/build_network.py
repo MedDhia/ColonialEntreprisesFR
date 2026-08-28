@@ -11,12 +11,21 @@ network by period instead of collapsing four decades into one graph.
 
 Entity resolution
     A tie's person_key is a *suggested* grouping (normalised surname plus
-    first given initial). This stage adds one further, reversible step: a
-    surname-only key is folded into a surname-plus-initial key when exactly
+    first given initial). This stage refines it in both directions, and both
+    steps are reversible.
+
+    A surname-only key is *folded* into a surname-plus-initial key when exactly
     one such key exists for that surname. Where several exist the key is left
-    alone and marked ambiguous, because guessing would be unrecoverable. The
-    full crosswalk is written to person_resolution.csv so any user can adopt,
-    reject or replace it.
+    alone and marked ambiguous, because guessing would be unrecoverable.
+
+    A key is *split* when its observations name two forenames that cannot be
+    the same man - Georges and Gilbert Hersent share the key "hersent-g", and
+    unsplit they make every firm one sat on interlock with every firm the other
+    sat on. Named observations move to their own key; initial-only ones stay
+    behind on an unresolved key rather than being assigned to either.
+
+    The full crosswalk is written to person_resolution.csv so any user can
+    adopt, reject or replace it.
 
 Outputs (data/processed/)
     companies.csv                       company nodes
@@ -43,7 +52,14 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from common import PLACES, XML_ILLEGAL_RE, ensure_dir, slugify, strip_accents  # noqa: E402
+from common import (  # noqa: E402
+    FORENAMES,
+    PLACES,
+    XML_ILLEGAL_RE,
+    ensure_dir,
+    slugify,
+    strip_accents,
+)
 from names import org_key  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -108,15 +124,76 @@ def write_csv(name: str, rows: list[dict], fields: list[str], subdir: str = "") 
 # folding means two different people were merged, so the fold is refused.
 MAX_CAREER_SPAN = 60
 
+# Words that appear inside a `given` field without being a forename.
+GIVEN_NOISE = {"dit", "souvent", "ne", "fils", "pere", "vve", "sic", "puis", "alias"}
 
-def resolve_persons(affiliations: list[dict]) -> tuple[dict[str, str], list[dict]]:
-    """Fold surname-only keys into a unique surname+initial key.
 
+def first_forename(given: str) -> str:
+    """The primary forename in a `given` field, accent-folded, or ''.
+
+    Only the *first* is taken. "Paul-Albert" and "Jean-Baptiste" are one
+    person's compound forename, not two people, so comparing every token
+    would make one man look like two.
+    """
+    g = given.replace("[", "").replace("]", "").replace("-", " ")
+    for tok in g.replace(".", " ").split():
+        t = strip_accents(tok).lower().strip(".,;:()")
+        if len(t) > 2 and t not in GIVEN_NOISE:
+            return t
+    return ""
+
+
+def _near_variant(a: str, b: str) -> bool:
+    """True when two forenames are spellings of the same name."""
+    if a.startswith(b) or b.startswith(a):
+        return True
+    if abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) == len(b):
+        return sum(1 for x, y in zip(a, b) if x != y) <= 1
+    short, long = (a, b) if len(a) < len(b) else (b, a)
+    return any(long[:i] + long[i + 1:] == short for i in range(len(long)))
+
+
+def incompatible_forenames(names: set[str]) -> list[tuple[str, str]]:
+    """Pairs among `names` that cannot belong to one person.
+
+    Both must be independently attested in the forename reference list. That
+    guard is what makes the split safe: it declines "Anathase"/"Athanase",
+    where the compiler himself notes the variant spelling, and
+    "Démétrius"/"Dimitri", two transliterations of one Greek name - neither
+    pair is two entries in the list. Splitting those would fragment one man
+    into two nodes, which is the more damaging error, so the rule errs towards
+    leaving a key merged.
+    """
+    known = sorted(n for n in names if n in FORENAMES)
+    return [(a, b) for i, a in enumerate(known) for b in known[i + 1:]
+            if not _near_variant(a, b)]
+
+
+def resolve_persons(affiliations: list[dict]) -> tuple[dict[str, str], dict[str, set], list[dict]]:
+    """Resolve person keys, in both directions.
+
+    **Folding** merges a surname-only key into a unique surname+initial key.
     "Katz" is folded into "Katz, M." when Maxime Katz is the only Katz with a
     recorded initial; it is left alone when there is also an "E. Katz", since
     picking one would silently invent an identification. The fold is also
     refused when the two keys' observation years imply a career longer than a
     lifetime, which is the signature of two namesakes rather than one person.
+
+    **Splitting** is the same principle run the other way, and it is what the
+    key format otherwise gets wrong. A key is surname plus *first initial*, so
+    Georges Hersent and Gilbert Hersent are one node, and every firm one sat on
+    appears to interlock with every firm the other sat on. Where a key's
+    observations name two forenames that cannot be the same man, each named
+    observation moves to its own key and the initial-only observations stay
+    behind on the original key, which now means "a G. Hersent, unresolved".
+    They are not assigned to either man, for the same reason an ambiguous fold
+    is refused.
+
+    Returns `(mapping, splits, crosswalk)`: `mapping` folds key to key,
+    `splits` names the forenames to break out of a resolved key, and the
+    crosswalk records every decision. Use `person_id_for` to apply both.
     """
     surname_of: dict[str, str] = {}
     keys = Counter()
@@ -169,8 +246,47 @@ def resolve_persons(affiliations: list[dict]) -> tuple[dict[str, str], list[dict
                     "last_year": max(ys) if ys else "",
                 }
             )
+    # ---- split keys that merged incompatible forenames -----------------
+    given_of: dict[str, Counter] = defaultdict(Counter)
+    for r in affiliations:
+        k = r.get("person_key")
+        if not k:
+            continue
+        f = first_forename(r.get("given", ""))
+        if f:
+            given_of[mapping.get(k, k)][f] += 1
+
+    splits: dict[str, set] = {}
+    for resolved, names in given_of.items():
+        if incompatible_forenames(set(names)):
+            # Only the attested forenames break out. An unlisted one stays with
+            # the ambiguous residue rather than becoming a node on its own.
+            splits[resolved] = {n for n in names if n in FORENAMES}
+
+    for row in crosswalk:
+        target = row["person_key_resolved"]
+        if target in splits:
+            row["rule"] = "split_incompatible_forenames"
+            row["ambiguous"] = 1
+            row["split_forenames"] = "; ".join(sorted(splits[target]))
+        else:
+            row["split_forenames"] = ""
+
     crosswalk.sort(key=lambda r: (r["surname"], r["person_key"]))
-    return mapping, crosswalk
+    return mapping, splits, crosswalk
+
+
+def person_id_for(row: dict, mapping: dict[str, str], splits: dict[str, set]) -> str:
+    """The node a single observation belongs to, after folding and splitting."""
+    key = row.get("person_key", "")
+    resolved = mapping.get(key, key)
+    names = splits.get(resolved)
+    if not names:
+        return resolved
+    f = first_forename(row.get("given", ""))
+    # An initial-only observation is not evidence for either man, so it stays
+    # on the unqualified key rather than joining the commoner of the two.
+    return f"{resolved}-{f}" if f in names else resolved
 
 
 ANNOT_DATE_RE = re.compile(r"^\s*(?:ca\.?\s*)?1[5-9]\d{2}(?:\s*[-–]\s*(?:1[5-9]\d{2}|20\d{2}))?\s*$")
@@ -183,7 +299,6 @@ MIN_ANNOT_KEY_LEN = 8
 
 def annotation_candidate_ties(
     affiliations: list[dict],
-    mapping: dict[str, str],
     acronym_index: dict[str, str],
     known_keys: dict[str, str],
 ) -> list[dict]:
@@ -205,7 +320,8 @@ def annotation_candidate_ties(
     for r in affiliations:
         if not r["annotation"] or not r["person_key"]:
             continue
-        pid = mapping.get(r["person_key"], r["person_key"])
+        # person_id is already resolved (folded and split) by this point.
+        pid = r["person_id"]
         for piece in (p.strip(" .,;=") for p in r["annotation"].split(";")):
             if len(piece) < 3 or ANNOT_DATE_RE.match(piece):
                 continue
@@ -461,13 +577,14 @@ def main() -> None:
         raise SystemExit("no attributed affiliations found - run src/parse_ties.py first")
 
     # ---- person resolution ---------------------------------------------
-    mapping, crosswalk = resolve_persons(affiliations)
+    mapping, splits, crosswalk = resolve_persons(affiliations)
     write_csv("person_resolution.csv", crosswalk,
               ["person_key", "person_key_resolved", "surname", "rule", "ambiguous",
-               "n_observations", "n_sibling_variants", "first_year", "last_year"])
+               "n_observations", "n_sibling_variants", "first_year", "last_year",
+               "split_forenames"])
 
     for r in affiliations:
-        r["person_id"] = mapping.get(r["person_key"], r["person_key"])
+        r["person_id"] = person_id_for(r, mapping, splits)
         r["period"] = period_of(r["year"])
         r["is_board_seat"] = 1 if r["role"] in BOARD_ROLES else 0
 
@@ -632,7 +749,7 @@ def main() -> None:
     print(f"acronym index: {len(acronym_index)} unique, "
           f"{ambiguous_acronyms} ambiguous and unused", file=sys.stderr)
     known_keys = {k: c["name"] for k, c in companies.items()}
-    cand = annotation_candidate_ties(affiliations, mapping, acronym_index, known_keys)
+    cand = annotation_candidate_ties(affiliations, acronym_index, known_keys)
     write_csv("candidate_ties_from_annotations.csv", cand,
               ["person_id", "annotation_raw", "candidate_company_id",
                "candidate_company_name", "match_method", "from_company_id",

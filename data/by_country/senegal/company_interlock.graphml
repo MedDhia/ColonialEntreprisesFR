@@ -15,13 +15,13 @@
     <node id="banqueafriqueoccidentale">
       <data key="n_label">Banque de l'Afrique occidentale</data>
       <data key="n_sectors">Banque</data>
-      <data key="n_n_directors">42</data>
+      <data key="n_n_directors">43</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="banquecommercialeafricaine">
       <data key="n_label">Banque commerciale africaine</data>
       <data key="n_sectors">Banque</data>
-      <data key="n_n_directors">41</data>
+      <data key="n_n_directors">38</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="banquesenegal">
@@ -69,13 +69,13 @@
     <node id="colonialesac">
       <data key="n_label">Société Coloniale du sac, puis Société commerciale et industrielle du sac</data>
       <data key="n_sectors">Industries</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="commerceafricain">
       <data key="n_label">Compagnie Française de Commerce africain</data>
       <data key="n_sectors">Commerce</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="commercialeafricaine">
@@ -87,13 +87,7 @@
     <node id="commercialeafricainesuitepascalbuhan">
       <data key="n_label">Nouvelle Société commerciale africaine, suite de Pascal Buhan et Cie</data>
       <data key="n_sectors">Commerce</data>
-      <data key="n_n_directors">4</data>
-      <data key="n_territory">Sénégal</data>
-    </node>
-    <node id="commercialeindustrielleoutremer">
-      <data key="n_label">Société Commerciale et Industrielle d’Outre-Mer</data>
-      <data key="n_sectors">Industries</data>
-      <data key="n_n_directors">4</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="commercialeportsafricains">
@@ -123,7 +117,7 @@
     <node id="creditfoncierouestafricain">
       <data key="n_label">Crédit foncier de l'Ouest-Africain</data>
       <data key="n_sectors">Banque</data>
-      <data key="n_n_directors">24</data>
+      <data key="n_n_directors">25</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="eauxelectriciteouestafricain">
@@ -174,12 +168,6 @@
       <data key="n_n_directors">13</data>
       <data key="n_territory">Sénégal</data>
     </node>
-    <node id="huileriessavonneriesouestafricainsuitealminko">
-      <data key="n_label">Huileries et savonneries de l'Ouest-africain, suite d'Alminko</data>
-      <data key="n_sectors">Industries agro-alimentaires</data>
-      <data key="n_n_directors">8</data>
-      <data key="n_territory">Sénégal</data>
-    </node>
     <node id="immobilierefinanciereafricaine">
       <data key="n_label">Société Immobilière et financière africaine</data>
       <data key="n_sectors">Banque</data>
@@ -213,7 +201,7 @@
     <node id="messageriesafricaines">
       <data key="n_label">Messageries africaines</data>
       <data key="n_sectors">Transports</data>
-      <data key="n_n_directors">27</data>
+      <data key="n_n_directors">28</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="messageriessenegal">
@@ -225,13 +213,13 @@
     <node id="minesfaleme">
       <data key="n_label">Mines de Falémé</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">19</data>
+      <data key="n_n_directors">20</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="minesfalemegambie">
       <data key="n_label">Compagnie des Mines de Falémé-Gambie</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">37</data>
+      <data key="n_n_directors">38</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="minessenegambie">
@@ -249,13 +237,13 @@
     <node id="salinscapvert">
       <data key="n_label">Salins du Cap Vert</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="salinssinesaloum">
       <data key="n_label">Salins du Sine Saloum</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">41</data>
+      <data key="n_n_directors">33</data>
       <data key="n_territory">Sénégal</data>
     </node>
     <node id="senegal">
@@ -295,12 +283,12 @@
       <data key="n_territory">Sénégal</data>
     </node>
     <edge id="e0" source="minesfaleme" target="minesfalemegambie">
-      <data key="e_weight">10</data>
+      <data key="e_weight">11</data>
     </edge>
-    <edge id="e1" source="banquecommercialeafricaine" target="immobilierefinanciereafricaine">
-      <data key="e_weight">6</data>
+    <edge id="e1" source="cheminferdakarsaintlouis" target="cheminferdakarstlouis">
+      <data key="e_weight">7</data>
     </edge>
-    <edge id="e2" source="cheminferdakarsaintlouis" target="cheminferdakarstlouis">
+    <edge id="e2" source="banquecommercialeafricaine" target="immobilierefinanciereafricaine">
       <data key="e_weight">6</data>
     </edge>
     <edge id="e3" source="commerceafricain" target="lesieurafrique">
@@ -315,10 +303,10 @@
     <edge id="e6" source="banquecommercialeafricaine" target="creditfoncierouestafricain">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e7" source="banqueafriqueoccidentale" target="messageriesafricaines">
+    <edge id="e7" source="electricitesenegal" target="messageriesafricaines">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e8" source="electricitesenegal" target="messageriesafricaines">
+    <edge id="e8" source="messageriesafricaines" target="salinssinesaloum">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e9" source="brasseriesouestafricain" target="hoteliereouestafricainchoa">
@@ -345,229 +333,202 @@
     <edge id="e16" source="fonciereouestafricain" target="immobilierethies">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e17" source="banqueafriqueoccidentale" target="electricitesenegal">
+    <edge id="e17" source="banqueafriqueoccidentale" target="creditfoncierouestafricain">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e18" source="banqueafriqueoccidentale" target="creditfoncierouestafricain">
+    <edge id="e18" source="chauxcimentssenegal" target="messageriesafricaines">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e19" source="banqueafriqueoccidentale" target="salinssinesaloum">
+    <edge id="e19" source="electricitesenegal" target="salinssinesaloum">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e20" source="banqueafriqueoccidentale" target="chauxcimentssenegal">
+    <edge id="e20" source="creditfoncierouestafricain" target="minesfaleme">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e21" source="chauxcimentssenegal" target="messageriesafricaines">
+    <edge id="e21" source="industrielleafricaine" target="messageriesafricaines">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e22" source="electricitesenegal" target="salinssinesaloum">
+    <edge id="e22" source="industrielleafricaine" target="salinssinesaloum">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e23" source="messageriesafricaines" target="salinssinesaloum">
+    <edge id="e23" source="minesfaleme" target="minessenegambie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e24" source="creditfoncierouestafricain" target="minesfaleme">
+    <edge id="e24" source="minesfalemegambie" target="minessenegambie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e25" source="industrielleafricaine" target="messageriesafricaines">
+    <edge id="e25" source="manutentionafricaine" target="salinssinesaloum">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e26" source="industrielleafricaine" target="salinssinesaloum">
+    <edge id="e26" source="manutentionafricaine" target="unionsenegalaiseindustriesmaritimes">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e27" source="manutentionafricaine" target="salinssinesaloum">
+    <edge id="e27" source="messageriessenegal" target="salinssinesaloum">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e28" source="manutentionafricaine" target="unionsenegalaiseindustriesmaritimes">
+    <edge id="e28" source="commercialeportsafricains" target="messageriesafricaines">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e29" source="messageriessenegal" target="salinssinesaloum">
+    <edge id="e29" source="commercialeportsafricains" target="messageriessenegal">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e30" source="minesfaleme" target="minessenegambie">
+    <edge id="e30" source="commercialeportsafricains" target="commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e31" source="minesfalemegambie" target="minessenegambie">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e32" source="commercialeportsafricains" target="messageriesafricaines">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e33" source="commercialeportsafricains" target="messageriessenegal">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e34" source="commercialeportsafricains" target="commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e35" source="africainesisaloyenbamparrufisque" target="chauxcimentssenegal">
+    <edge id="e31" source="africainesisaloyenbamparrufisque" target="chauxcimentssenegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e36" source="africainesisaloyenbamparrufisque" target="fonciereouestafricain">
+    <edge id="e32" source="africainesisaloyenbamparrufisque" target="fonciereouestafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e37" source="africainesisaloyenbamparrufisque" target="immobilierethies">
+    <edge id="e33" source="africainesisaloyenbamparrufisque" target="immobilierethies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e38" source="banqueafriqueoccidentale" target="huileriessavonneriesouestafricainsuitealminko">
+    <edge id="e34" source="banqueafriqueoccidentale" target="banquesenegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e39" source="banqueafriqueoccidentale" target="banquesenegal">
+    <edge id="e35" source="banqueafriqueoccidentale" target="cheminferdakarsaintlouis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e40" source="banqueafriqueoccidentale" target="cheminferdakarsaintlouis">
+    <edge id="e36" source="banquesenegal" target="cheminferdakarsaintlouis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e41" source="banquesenegal" target="cheminferdakarsaintlouis">
+    <edge id="e37" source="banqueafriqueoccidentale" target="electricitesenegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e42" source="chauxcimentssenegal" target="electricitesenegal">
+    <edge id="e38" source="banqueafriqueoccidentale" target="salinssinesaloum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e43" source="chauxcimentssenegal" target="salinssinesaloum">
+    <edge id="e39" source="banqueafriqueoccidentale" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e44" source="creditfoncierouestafricain" target="messageriesafricaines">
+    <edge id="e40" source="creditfoncierouestafricain" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e45" source="banqueafriqueoccidentale" target="senegalaisevoieseconomiques">
+    <edge id="e41" source="banqueafriqueoccidentale" target="senegalaisevoieseconomiques">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e46" source="banquecommercialeafricaine" target="silicocalcaireafricaine">
+    <edge id="e42" source="banquecommercialeafricaine" target="silicocalcaireafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e47" source="creditfoncierouestafricain" target="immobilierefinanciereafricaine">
+    <edge id="e43" source="creditfoncierouestafricain" target="immobilierefinanciereafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e48" source="colonialechauxcimentsof" target="travauxafricains">
+    <edge id="e44" source="colonialechauxcimentsof" target="travauxafricains">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e49" source="colonialechauxcimentsof" target="colonialesac">
+    <edge id="e45" source="colonialechauxcimentsof" target="colonialesac">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e50" source="cheminferdakarsaintlouis" target="messageriesafricaines">
+    <edge id="e46" source="chauxcimentssenegal" target="electricitesenegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e51" source="cheminferdakarstlouis" target="messageriesafricaines">
+    <edge id="e47" source="chauxcimentssenegal" target="salinssinesaloum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e52" source="brasseriesouestafricain" target="messageriessenegal">
+    <edge id="e48" source="cheminferdakarsaintlouis" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e53" source="hoteliereouestafricainchoa" target="messageriessenegal">
+    <edge id="e49" source="cheminferdakarstlouis" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e54" source="colonialeautomobile" target="etablissementsvincentgoux">
+    <edge id="e50" source="brasseriesouestafricain" target="messageriessenegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e55" source="etablissementsbartheslesieur" target="senegalaisevoieseconomiques">
+    <edge id="e51" source="hoteliereouestafricainchoa" target="messageriessenegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e56" source="commerceafricain" target="etablissementsbartheslesieur">
+    <edge id="e52" source="colonialeautomobile" target="etablissementsvincentgoux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e57" source="etablissementsbartheslesieur" target="lesieurafrique">
+    <edge id="e53" source="etablissementsbartheslesieur" target="senegalaisevoieseconomiques">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e58" source="commercialeportsafricains" target="creditfoncierouestafricain">
+    <edge id="e54" source="commerceafricain" target="etablissementsbartheslesieur">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e59" source="commercialeportsafricains" target="eauxelectriciteouestafricain">
+    <edge id="e55" source="etablissementsbartheslesieur" target="lesieurafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e60" source="creditfoncierouestafricain" target="eauxelectriciteouestafricain">
+    <edge id="e56" source="commercialeportsafricains" target="creditfoncierouestafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e61" source="creditfoncierafrique" target="creditfoncierouestafricain">
+    <edge id="e57" source="commercialeportsafricains" target="eauxelectriciteouestafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e62" source="creditfoncierouestafricain" target="foncierecoteafrique">
+    <edge id="e58" source="commercialeportsafricains" target="salinscapvert">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e63" source="eauxelectriciteouestafricain" target="electricitesenegal">
+    <edge id="e59" source="creditfoncierouestafricain" target="eauxelectriciteouestafricain">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e64" source="commercialeindustrielleoutremer" target="electricitesenegal">
+    <edge id="e60" source="creditfoncierouestafricain" target="salinscapvert">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e61" source="eauxelectriciteouestafricain" target="salinscapvert">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e62" source="creditfoncierafrique" target="creditfoncierouestafricain">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e63" source="creditfoncierouestafricain" target="foncierecoteafrique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e64" source="eauxelectriciteouestafricain" target="electricitesenegal">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e65" source="electricitesenegal" target="industrielleafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e66" source="electricitesenegal" target="manutentionafricaine">
+    <edge id="e66" source="electricitesenegal" target="senegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e67" source="electricitesenegal" target="messageriessenegal">
+    <edge id="e67" source="industrielleafricaine" target="senegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e68" source="electricitesenegal" target="senegal">
+    <edge id="e68" source="messageriesafricaines" target="senegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e69" source="electricitesenegal" target="unionsenegalaiseindustriesmaritimes">
+    <edge id="e69" source="salinssinesaloum" target="senegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e70" source="industrielleafricaine" target="manutentionafricaine">
+    <edge id="e70" source="minesfaleme" target="plantationscasamance">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e71" source="industrielleafricaine" target="messageriessenegal">
+    <edge id="e71" source="manutentionafricaine" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e72" source="industrielleafricaine" target="senegal">
+    <edge id="e72" source="manutentionafricaine" target="messageriessenegal">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e73" source="industrielleafricaine" target="unionsenegalaiseindustriesmaritimes">
+    <edge id="e73" source="messageriesafricaines" target="unionsenegalaiseindustriesmaritimes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e74" source="manutentionafricaine" target="messageriesafricaines">
+    <edge id="e74" source="messageriessenegal" target="unionsenegalaiseindustriesmaritimes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e75" source="manutentionafricaine" target="messageriessenegal">
+    <edge id="e75" source="salinssinesaloum" target="unionsenegalaiseindustriesmaritimes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e76" source="manutentionafricaine" target="senegal">
+    <edge id="e76" source="messageriesafricaines" target="plantationscasamance">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e77" source="messageriesafricaines" target="senegal">
+    <edge id="e77" source="commercialeafricaine" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e78" source="messageriesafricaines" target="unionsenegalaiseindustriesmaritimes">
+    <edge id="e78" source="commercialeafricainesuitepascalbuhan" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e79" source="messageriessenegal" target="senegal">
+    <edge id="e79" source="commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons" target="messageriesafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e80" source="messageriessenegal" target="unionsenegalaiseindustriesmaritimes">
+    <edge id="e80" source="commercialeportsafricains" target="salinssinesaloum">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e81" source="salinssinesaloum" target="senegal">
+    <edge id="e81" source="minessenegambie" target="salinscapvert">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e82" source="salinssinesaloum" target="unionsenegalaiseindustriesmaritimes">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e83" source="senegal" target="unionsenegalaiseindustriesmaritimes">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e84" source="minesfaleme" target="plantationscasamance">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e85" source="messageriesafricaines" target="plantationscasamance">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e86" source="commercialeafricaine" target="messageriesafricaines">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e87" source="commercialeafricainesuitepascalbuhan" target="messageriesafricaines">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e88" source="commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons" target="messageriesafricaines">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e89" source="commercialeportsafricains" target="salinssinesaloum">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e90" source="minessenegambie" target="salinscapvert">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e91" source="salinssinesaloum" target="senegalaisecultureslatemengue">
+    <edge id="e82" source="salinssinesaloum" target="senegalaisecultureslatemengue">
       <data key="e_weight">1</data>
     </edge>
   </graph>

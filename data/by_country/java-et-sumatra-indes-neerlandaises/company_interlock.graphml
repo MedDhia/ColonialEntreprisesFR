@@ -21,13 +21,19 @@
     <node id="caoutchoucsiboga">
       <data key="n_label">Caoutchouc de Siboga</data>
       <data key="n_sectors">Plantations à participation française</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
     </node>
     <node id="culturecaoutchouccafedolokbaros">
       <data key="n_label">Société de culture de caoutchouc et café Dolok Baros</data>
       <data key="n_sectors">Plantations à participation française</data>
       <data key="n_n_directors">3</data>
+      <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
+    </node>
+    <node id="culturecaoutchouckalitengah">
+      <data key="n_label">Société de culture de caoutchouc Kalitengah</data>
+      <data key="n_sectors">Plantations à participation française</data>
+      <data key="n_n_directors">1</data>
       <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
     </node>
     <node id="culturefrancojavanaise">
@@ -63,7 +69,7 @@
     <node id="kalitengah">
       <data key="n_label">Kalitengah</data>
       <data key="n_sectors">Plantations à participation française</data>
-      <data key="n_n_directors">20</data>
+      <data key="n_n_directors">21</data>
       <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
     </node>
     <node id="nieuwtjisalak">
@@ -75,7 +81,7 @@
     <node id="pacouda">
       <data key="n_label">Pacouda</data>
       <data key="n_sectors">Plantations à participation française</data>
-      <data key="n_n_directors">18</data>
+      <data key="n_n_directors">19</data>
       <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
     </node>
     <node id="plantationscaoutchoucsumatra">
@@ -109,171 +115,189 @@
       <data key="n_territory">Java et Sumatra (Indes néerlandaises)</data>
     </node>
     <edge id="e0" source="plantationscaoutchoucsumatra" target="tapanoelie">
-      <data key="e_weight">14</data>
+      <data key="e_weight">15</data>
     </edge>
     <edge id="e1" source="kalitengah" target="tapanoelie">
-      <data key="e_weight">10</data>
+      <data key="e_weight">11</data>
     </edge>
     <edge id="e2" source="kalitengah" target="pacouda">
-      <data key="e_weight">9</data>
+      <data key="e_weight">10</data>
     </edge>
     <edge id="e3" source="kalitengah" target="plantationscaoutchoucsumatra">
-      <data key="e_weight">9</data>
+      <data key="e_weight">10</data>
     </edge>
     <edge id="e4" source="pacouda" target="plantationscaoutchoucsumatra">
-      <data key="e_weight">7</data>
+      <data key="e_weight">8</data>
     </edge>
     <edge id="e5" source="pacouda" target="tapanoelie">
+      <data key="e_weight">8</data>
+    </edge>
+    <edge id="e6" source="caoutchoucsiboga" target="plantationscaoutchoucsumatra">
       <data key="e_weight">7</data>
     </edge>
-    <edge id="e6" source="culturefrancojavanaise" target="franconeerlandaiseculturecommerce">
+    <edge id="e7" source="caoutchoucsiboga" target="tapanoelie">
+      <data key="e_weight">7</data>
+    </edge>
+    <edge id="e8" source="caoutchoucsiboga" target="kalitengah">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e7" source="caoutchoucsiboga" target="plantationscaoutchoucsumatra">
+    <edge id="e9" source="caoutchoucsiboga" target="pacouda">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e8" source="caoutchoucsiboga" target="tapanoelie">
-      <data key="e_weight">6</data>
-    </edge>
-    <edge id="e9" source="algemeenebelgischjavaschcultuurmaatschappij" target="belgischnederlandschecultuurmaatschappij">
+    <edge id="e10" source="algemeenebelgischjavaschcultuurmaatschappij" target="belgischnederlandschecultuurmaatschappij">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e10" source="tamiangrubber" target="tamiangrubberestates">
+    <edge id="e11" source="tamiangrubber" target="tamiangrubberestates">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e11" source="caoutchoucsiboga" target="kalitengah">
+    <edge id="e12" source="culturefrancojavanaise" target="culturepanoulisan">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e12" source="caoutchoucsiboga" target="pacouda">
+    <edge id="e13" source="kalitengah" target="nieuwtjisalak">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e13" source="culturefrancojavanaise" target="culturepanoulisan">
-      <data key="e_weight">5</data>
-    </edge>
-    <edge id="e14" source="kalitengah" target="nieuwtjisalak">
-      <data key="e_weight">5</data>
+    <edge id="e14" source="culturefrancojavanaise" target="franconeerlandaiseculturecommerce">
+      <data key="e_weight">4</data>
     </edge>
     <edge id="e15" source="culturefrancojavanaise" target="tapanoelie">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e16" source="nieuwtjisalak" target="pacouda">
+    <edge id="e16" source="caoutchoucsiboga" target="franconeerlandaiseculturecommerce">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e17" source="nieuwtjisalak" target="plantationscaoutchoucsumatra">
+    <edge id="e17" source="nieuwtjisalak" target="pacouda">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e18" source="nieuwtjisalak" target="tapanoelie">
+    <edge id="e18" source="nieuwtjisalak" target="plantationscaoutchoucsumatra">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e19" source="caoutchoucsiboga" target="franconeerlandaiseculturecommerce">
+    <edge id="e19" source="nieuwtjisalak" target="tapanoelie">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e20" source="franconeerlandaiseculturecommerce" target="tapanoelie">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e20" source="culturefrancojavanaise" target="kalitengah">
+    <edge id="e21" source="culturefrancojavanaise" target="kalitengah">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e21" source="culturefrancojavanaise" target="plantationscaoutchoucsumatra">
+    <edge id="e22" source="culturefrancojavanaise" target="plantationscaoutchoucsumatra">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e22" source="caoutchoucsiboga" target="nieuwtjisalak">
+    <edge id="e23" source="caoutchoucsiboga" target="nieuwtjisalak">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e23" source="culturepacouda" target="pacouda">
+    <edge id="e24" source="culturepacouda" target="pacouda">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e24" source="easterninternationalrubberproducetrustltd" target="tamiangrubber">
+    <edge id="e25" source="easterninternationalrubberproducetrustltd" target="tamiangrubber">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e25" source="franconeerlandaiseculturecommerce" target="tapanoelie">
+    <edge id="e26" source="franconeerlandaiseculturecommerce" target="kalitengah">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e26" source="caoutchoucsiboga" target="culturefrancojavanaise">
+    <edge id="e27" source="franconeerlandaiseculturecommerce" target="pacouda">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e27" source="culturefrancojavanaise" target="pacouda">
+    <edge id="e28" source="franconeerlandaiseculturecommerce" target="plantationscaoutchoucsumatra">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e28" source="culturepanoulisan" target="franconeerlandaiseculturecommerce">
+    <edge id="e29" source="culturepanoulisan" target="franconeerlandaiseculturecommerce">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e29" source="culturepanoulisan" target="pacouda">
+    <edge id="e30" source="caoutchoucsiboga" target="culturefrancojavanaise">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e30" source="kalitengah" target="tamiangrubber">
+    <edge id="e31" source="culturefrancojavanaise" target="pacouda">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e31" source="plantationscaoutchoucsumatra" target="tamiangrubber">
+    <edge id="e32" source="culturepanoulisan" target="pacouda">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e32" source="tamiangrubber" target="tapanoelie">
+    <edge id="e33" source="kalitengah" target="tamiangrubber">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e33" source="culturepacouda" target="kalitengah">
+    <edge id="e34" source="plantationscaoutchoucsumatra" target="tamiangrubber">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e34" source="algemeenebelgischjavaschcultuurmaatschappij" target="plantationsdjember">
+    <edge id="e35" source="tamiangrubber" target="tapanoelie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e36" source="culturepacouda" target="kalitengah">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e37" source="algemeenebelgischjavaschcultuurmaatschappij" target="plantationsdjember">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e35" source="belgischnederlandschecultuurmaatschappij" target="plantationsdjember">
+    <edge id="e38" source="belgischnederlandschecultuurmaatschappij" target="plantationsdjember">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e36" source="culturecaoutchouccafedolokbaros" target="kalitengah">
+    <edge id="e39" source="culturecaoutchouccafedolokbaros" target="kalitengah">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e37" source="easterninternationalrubberproducetrustltd" target="tamiangrubberestates">
+    <edge id="e40" source="easterninternationalrubberproducetrustltd" target="tamiangrubberestates">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e38" source="easterninternationalrubberproducetrustltd" target="plantationscaoutchoucsumatra">
+    <edge id="e41" source="easterninternationalrubberproducetrustltd" target="plantationscaoutchoucsumatra">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e39" source="caoutchoucsiboga" target="culturepanoulisan">
+    <edge id="e42" source="caoutchoucsiboga" target="culturecaoutchouckalitengah">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e40" source="culturepanoulisan" target="kalitengah">
+    <edge id="e43" source="culturecaoutchouckalitengah" target="franconeerlandaiseculturecommerce">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e41" source="culturepanoulisan" target="plantationscaoutchoucsumatra">
+    <edge id="e44" source="culturecaoutchouckalitengah" target="kalitengah">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e42" source="culturepanoulisan" target="tapanoelie">
+    <edge id="e45" source="culturecaoutchouckalitengah" target="pacouda">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e43" source="franconeerlandaiseculturecommerce" target="kalitengah">
+    <edge id="e46" source="culturecaoutchouckalitengah" target="plantationscaoutchoucsumatra">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e44" source="franconeerlandaiseculturecommerce" target="pacouda">
+    <edge id="e47" source="culturecaoutchouckalitengah" target="tapanoelie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e45" source="franconeerlandaiseculturecommerce" target="plantationscaoutchoucsumatra">
+    <edge id="e48" source="caoutchoucsiboga" target="culturepanoulisan">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e46" source="caoutchoucsiboga" target="tamiangrubber">
+    <edge id="e49" source="culturepanoulisan" target="kalitengah">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e47" source="culturefrancojavanaise" target="nieuwtjisalak">
+    <edge id="e50" source="culturepanoulisan" target="plantationscaoutchoucsumatra">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e48" source="culturefrancojavanaise" target="tamiangrubber">
+    <edge id="e51" source="culturepanoulisan" target="tapanoelie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e49" source="nieuwtjisalak" target="tamiangrubber">
+    <edge id="e52" source="caoutchoucsiboga" target="tamiangrubber">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e50" source="pacouda" target="tamiangrubber">
+    <edge id="e53" source="culturefrancojavanaise" target="nieuwtjisalak">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e51" source="caoutchoucsiboga" target="culturepacouda">
+    <edge id="e54" source="culturefrancojavanaise" target="tamiangrubber">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e52" source="culturepacouda" target="nieuwtjisalak">
+    <edge id="e55" source="nieuwtjisalak" target="tamiangrubber">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e53" source="culturepacouda" target="plantationscaoutchoucsumatra">
+    <edge id="e56" source="pacouda" target="tamiangrubber">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e54" source="culturepacouda" target="tapanoelie">
+    <edge id="e57" source="caoutchoucsiboga" target="culturepacouda">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e55" source="culturepacouda" target="culturepanoulisan">
+    <edge id="e58" source="culturepacouda" target="nieuwtjisalak">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e59" source="culturepacouda" target="plantationscaoutchoucsumatra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e60" source="culturepacouda" target="tapanoelie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e61" source="culturepacouda" target="culturepanoulisan">
       <data key="e_weight">1</data>
     </edge>
   </graph>

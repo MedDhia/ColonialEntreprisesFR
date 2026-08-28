@@ -1,11 +1,13 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 chiris-g,Chiris,G. Chiris; Georges Chiris,4,4,7,president,1922,1951,Documents généraux; Sociétés
 hebert-j,Hébert,J. Hébert,3,3,7,administrateur,1945,1953,Documents généraux; Sociétés
-cunisset-p,Cunisset,P. Cunisset; Pierre Cunisset,3,3,5,administrateur,1922,1953,Documents généraux; Sociétés
+cunisset-p,Cunisset,P. Cunisset; Pierre Cunisset,3,3,6,administrateur,1922,1953,Documents généraux; Sociétés
 dumont-c,Dumont,Ch. Dumont,2,2,5,administrateur,1945,1953,Documents généraux; Sociétés
-belloy,Belloy,Belloy,2,2,4,administrateur,1948,1953,Documents généraux; Sociétés
-g-le-bret,G Le Bret,G Le Bret,2,2,2,president,1950,1951,Documents généraux; Sociétés
-chiris-l,Chiris,L. Chiris; L.-A. Chiris,2,2,2,administrateur,1951,1953,Documents généraux; Sociétés
+belloy-m,Belloy,Belloy,2,2,4,administrateur,1948,1953,Documents généraux; Sociétés
+carnot-e,Carnot,E. Carnot; Ernest Carnot; Ernest Carnot1,2,2,3,administrateur,1945,1951,Documents généraux; Sociétés
+guy-le-bret,Guy Le Bret,Guy Le Bret,2,2,3,president,1950,1953,Documents généraux; Sociétés
+chiris-l,Chiris,L. Chiris; L.-A. Chiris; Léon-Antoine Chiris,2,2,3,administrateur,1950,1953,Documents généraux; Sociétés
+carnot-f,Carnot,François Carnot,2,2,2,administrateur,1922,1922,Documents généraux
 bourdillat,Bourdillat,Bourdillat,1,1,3,administrateur,1900,1922,Documents généraux; Sociétés
 thery,Théry,Théry,1,1,2,administrateur,1912,1922,Documents généraux; Sociétés
 mathieu,Mathieu,Mathieu,1,1,2,administrateur,1912,1922,Documents généraux; Sociétés
@@ -15,15 +17,11 @@ fromentault,Fromentault,Fromentault,1,1,2,administrateur,1912,1922,Documents gé
 thomas-f,Thomas,F. Thomas,1,1,2,administrateur,1912,1922,Documents généraux; Sociétés
 martin-a,Martin,A. Martin,1,1,2,administrateur,1912,1922,Documents généraux; Sociétés
 gondran-j,Gondran,J. Gondran,1,1,2,administrateur_delegue,1951,1951,Documents généraux; Sociétés
-e-carnot,E Carnot,E Carnot; E Carnot1,1,1,2,administrateur,1951,1951,Documents généraux; Sociétés
-chagnaud-ep-maud-dumont-c,Chagnaud [ép. Maud Dumont,Ch Chagnaud [ép. Maud Dumont,1,1,2,administrateur,1951,1951,Documents généraux; Sociétés
-fille-de-georges-d,fille de Georges D,fille de Georges D,1,1,2,administrateur,1951,1951,Documents généraux; Sociétés
 pdt-ste-algerienne-des-entreprises-leon-chagnaud,pdt Sté algérienne des entreprises Léon Chagnaud…],pdt Sté algérienne des entreprises Léon Chagnaud…],1,1,2,administrateur,1951,1951,Documents généraux; Sociétés
 gruet-g,Gruet,G. Gruet,1,1,2,directeur,1945,1948,Sociétés
 antoine-g,Antoine,G. Antoine,1,1,2,administrateur,1945,1948,Sociétés
 bouee,Bouée,Bouée,1,1,2,administrateur,1948,1953,Sociétés
-carnot-f,Carnot,François Carnot,1,1,1,administrateur,1922,1922,Documents généraux
-robert-j,Robert,Joseph Robert,1,1,1,administrateur,1922,1922,Documents généraux
+robert-j-joseph,Robert,Joseph Robert,1,1,1,administrateur,1922,1922,Documents généraux
 ewald-r,Ewald,Robert Ewald,1,1,1,administrateur,1922,1922,Documents généraux
 salmon-a,Salmon,Albert Salmon,1,1,1,administrateur,1922,1922,Documents généraux
 moreau-defarges-j,Moreau-Defarges,Moreau-Defarges,1,1,1,administrateur,1922,1922,Documents généraux
@@ -32,14 +30,10 @@ grea-p,Gréa,Pierre Gréa,1,1,1,administrateur,1922,1922,Documents généraux
 dewitte-g,Dewitte,Georges Dewitte,1,1,1,administrateur,1922,1922,Documents généraux
 bouin-g,Bouin,G. Bouin,1,1,1,administrateur,1922,1922,Documents généraux
 regoin-a,Regoin,A. Regoin,1,1,1,administrateur,1922,1922,Documents généraux
-carnot-e,Carnot,E. Carnot,1,1,1,administrateur,1945,1945,Sociétés
 l-chiris,L.. Chiris,L.. Chiris,1,1,1,administrateur,1945,1945,Sociétés
 le-bret-g,Le Bret,G. Le Bret,1,1,1,administrateur,1948,1948,Sociétés
-l-a-chiris,L -A Chiris,L -A Chiris,1,1,1,administrateur,1950,1950,Sociétés
-p-cunisset,P Cunisset,P Cunisset,1,1,1,administrateur,1950,1950,Sociétés
-guy-le-bret,Guy Le Bret,Guy Le Bret,1,1,1,president_directeur_general,1953,1953,Sociétés
 laurent,Laurent,Laurent,1,1,1,administrateur,1900,1900,Sociétés
-fievet-p,Fievet,Fievet,1,1,1,administrateur,1900,1900,Sociétés
+fievet,Fievet,Fievet,1,1,1,administrateur,1900,1900,Sociétés
 laseaux,Laseaux,Laseaux,1,1,1,administrateur,1900,1900,Sociétés
 garnier,Garnier,Garnier,1,1,1,administrateur,1915,1915,Sociétés
 prot,Prot,Prot,1,1,1,administrateur,1915,1915,Sociétés

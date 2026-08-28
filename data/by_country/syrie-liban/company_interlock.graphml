@@ -6,22 +6,28 @@
   <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
   <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
   <graph id="G" edgedefault="undirected">
+    <node id="airunion">
+      <data key="n_label">Air Union</data>
+      <data key="n_sectors">Transports aériens</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Syrie-Liban</data>
+    </node>
     <node id="banquepretsnantissementsmontspieteegyptiens">
       <data key="n_label">banque de prêts sur nantissements Société des monts-de-piété égyptiens</data>
       <data key="n_sectors">Banques et sociétés financières</data>
-      <data key="n_n_directors">21</data>
+      <data key="n_n_directors">22</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="banquesyrie">
       <data key="n_label">Banque française de Syrie</data>
       <data key="n_sectors">Banques et sociétés financières; Documents généraux</data>
-      <data key="n_n_directors">22</data>
+      <data key="n_n_directors">20</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="banquesyriegrandliban">
       <data key="n_label">Banque de Syrie et du Grand-Liban</data>
       <data key="n_sectors">Banques et sociétés financières; Documents généraux</data>
-      <data key="n_n_directors">51</data>
+      <data key="n_n_directors">52</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="banquesyrieliban">
@@ -57,7 +63,7 @@
     <node id="electricitealep">
       <data key="n_label">Électricité d'Alep</data>
       <data key="n_sectors">Eaux, électricité (utilities)</data>
-      <data key="n_n_directors">26</data>
+      <data key="n_n_directors">27</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="etablissementskern">
@@ -171,7 +177,7 @@
     <node id="radioorient">
       <data key="n_label">Radio-Orient</data>
       <data key="n_sectors">Documents généraux; Sociétés diverses</data>
-      <data key="n_n_directors">39</data>
+      <data key="n_n_directors">37</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="socexploitationcheminsfercilicienordsyrie">
@@ -207,199 +213,214 @@
     <edge id="e2" source="louisemmanueladoplphegoranflauxbaronandree" target="ports">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e3" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
+    <edge id="e3" source="georgemallet" target="port">
       <data key="e_weight">4</data>
     </edge>
     <edge id="e4" source="port" target="ports">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e5" source="georgemallet" target="port">
+    <edge id="e5" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
       <data key="e_weight">4</data>
     </edge>
     <edge id="e6" source="eauxbeyrouth" target="ottomanegazbeyrouth">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e7" source="cheminferdamashamahprolongements" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e7" source="banquesyriegrandliban" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e8" source="cheminferdamashamahprolongements" target="ports">
+    <edge id="e8" source="georgemallet" target="ports">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e9" source="louisemmanueladoplphegoranflauxbaronandree" target="port">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e10" source="georgemallet" target="ports">
+    <edge id="e10" source="cheminferdamashamahprolongements" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e11" source="cheminferdamashamahprolongements" target="exploitaitoncheminfercilicie">
+    <edge id="e11" source="cheminferdamashamahprolongements" target="ports">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e12" source="cheminferdamashamahprolongements" target="exploitaitoncheminfercilicie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e12" source="cheminferdamashamahprolongements" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e13" source="cheminferdamashamahprolongements" target="socexploitationcheminsfercilicienordsyrie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e13" source="banquesyrieliban" target="cheminferdamashamahprolongements">
+    <edge id="e14" source="banquesyrieliban" target="cheminferdamashamahprolongements">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e14" source="etablissementsluchaire" target="radioorient">
+    <edge id="e15" source="etablissementsluchaire" target="radioorient">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e15" source="banquesyrie" target="cheminferdamashamahprolongements">
+    <edge id="e16" source="banquesyrie" target="cheminferdamashamahprolongements">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e16" source="banquesyriegrandliban" target="ports">
+    <edge id="e17" source="banquesyriegrandliban" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e17" source="banquesyriegrandliban" target="radioorient">
+    <edge id="e18" source="georgemallet" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e18" source="tramwayseclairagebeyrouth" target="tramwayselectricite">
+    <edge id="e19" source="banquesyriegrandliban" target="radioorient">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e19" source="banquesyrieliban" target="tramwayseclairagebeyrouth">
+    <edge id="e20" source="tramwayseclairagebeyrouth" target="tramwayselectricite">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e20" source="cheminferdamashamahprolongements" target="tramwayseclairagebeyrouth">
+    <edge id="e21" source="banquesyrieliban" target="tramwayseclairagebeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e21" source="cheminferdamashamahprolongements" target="georgemallet">
+    <edge id="e22" source="cheminferdamashamahprolongements" target="tramwayseclairagebeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e22" source="cheminferdamashamahprolongements" target="port">
+    <edge id="e23" source="cheminferdamashamahprolongements" target="georgemallet">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e23" source="georgemallet" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e24" source="cheminferdamashamahprolongements" target="port">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e24" source="eauxbeyrouth" target="ottomaneeauxbeyrouth">
+    <edge id="e25" source="eauxbeyrouth" target="ottomaneeauxbeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e25" source="ottomaneeauxbeyrouth" target="ottomanegazbeyrouth">
+    <edge id="e26" source="ottomaneeauxbeyrouth" target="ottomanegazbeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e26" source="imperialeottomaneroutebeyrouthdamas" target="portquaisentrepotsbeyrouth">
+    <edge id="e27" source="imperialeottomaneroutebeyrouthdamas" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e27" source="banquesyrieliban" target="exploitaitoncheminfercilicie">
+    <edge id="e28" source="airunion" target="banquesyriegrandliban">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e28" source="banquesyrieliban" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e29" source="banquesyrieliban" target="exploitaitoncheminfercilicie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e29" source="banquesyriegrandliban" target="portquaisentrepotsbeyrouth">
+    <edge id="e30" source="banquesyrieliban" target="socexploitationcheminsfercilicienordsyrie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e30" source="banquesyriegrandliban" target="francemediterranee1920">
+    <edge id="e31" source="banquesyriegrandliban" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e31" source="banquesyrieliban" target="francemediterranee1920">
+    <edge id="e32" source="banquesyriegrandliban" target="francemediterranee1920">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e32" source="banquesyriegrandliban" target="tramwayselectricite">
+    <edge id="e33" source="banquesyriegrandliban" target="georgemallet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e33" source="etablissementskern" target="industrielleetatslevant">
+    <edge id="e34" source="banquesyriegrandliban" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e34" source="banquesyriegrandliban" target="cheminferdamashamahprolongements">
+    <edge id="e35" source="banquesyriegrandliban" target="tramwayselectricite">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e35" source="banquesyriegrandliban" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e36" source="creditfonciersyrie" target="etablissementskern">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e36" source="banquesyrieliban" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e37" source="creditfonciersyrie" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e37" source="banquesyrieliban" target="ports">
+    <edge id="e38" source="etablissementskern" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e38" source="banquesyrieliban" target="radioorient">
+    <edge id="e39" source="banquesyriegrandliban" target="cheminferdamashamahprolongements">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e39" source="cheminferdamashamahprolongements" target="radioorient">
+    <edge id="e40" source="banquesyrieliban" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e40" source="louisemmanueladoplphegoranflauxbaronandree" target="radioorient">
+    <edge id="e41" source="banquesyrieliban" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e41" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayseclairagebeyrouth">
+    <edge id="e42" source="banquesyrieliban" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e42" source="ports" target="radioorient">
+    <edge id="e43" source="cheminferdamashamahprolongements" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e43" source="ports" target="tramwayseclairagebeyrouth">
+    <edge id="e44" source="louisemmanueladoplphegoranflauxbaronandree" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e44" source="radioorient" target="tramwayseclairagebeyrouth">
+    <edge id="e45" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayseclairagebeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e45" source="exploitaitoncheminfercilicie" target="foncieresyrie">
+    <edge id="e46" source="ports" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e46" source="cheminferottomanjaffajerusalemprolongements" target="imperialeottomaneroutebeyrouthdamas">
+    <edge id="e47" source="ports" target="tramwayseclairagebeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e47" source="creditfonciersyrie" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e48" source="radioorient" target="tramwayseclairagebeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e48" source="creditfonciersyrie" target="ports">
+    <edge id="e49" source="exploitaitoncheminfercilicie" target="foncieresyrie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e49" source="cheminferdamashamahprolongements" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e50" source="cheminferottomanjaffajerusalemprolongements" target="imperialeottomaneroutebeyrouthdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e50" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e51" source="creditfonciersyrie" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e51" source="port" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e52" source="creditfonciersyrie" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e52" source="ports" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e53" source="creditfonciersyrie" target="libanosyriennetabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e53" source="banquepretsnantissementsmontspieteegyptiens" target="cheminferdamashamahprolongements">
+    <edge id="e54" source="creditfonciersyrie" target="ottomanetramwayseclairageelectriquesdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e54" source="electricitealep" target="ottomanetramwayseclairageelectriquesdamas">
+    <edge id="e55" source="libanosyriennetabacs" target="ottomanetramwayseclairageelectriquesdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e55" source="electricitealep" target="grandshotelslevant">
+    <edge id="e56" source="cheminferdamashamahprolongements" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e56" source="electricitealep" target="meunierelevantdamasjaffa">
+    <edge id="e57" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e57" source="francemediterranee1920" target="grandshotelslevant">
+    <edge id="e58" source="port" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e58" source="francemediterranee1920" target="industrielleetatslevant">
+    <edge id="e59" source="ports" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e59" source="francemediterranee1920" target="radioorient">
+    <edge id="e60" source="banquepretsnantissementsmontspieteegyptiens" target="cheminferdamashamahprolongements">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e60" source="grandshotelslevant" target="industrielleetatslevant">
+    <edge id="e61" source="electricitealep" target="ottomanetramwayseclairageelectriquesdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e61" source="grandshotelslevant" target="radioorient">
+    <edge id="e62" source="electricitealep" target="grandshotelslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e62" source="industrielleetatslevant" target="radioorient">
+    <edge id="e63" source="electricitealep" target="meunierelevantdamasjaffa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e63" source="industrielleetatslevant" target="port">
+    <edge id="e64" source="francemediterranee1920" target="grandshotelslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e64" source="industrielleetatslevant" target="tramwayselectricite">
+    <edge id="e65" source="francemediterranee1920" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e65" source="libanosyriennetabacs" target="ottomanetramwayseclairageelectriquesdamas">
+    <edge id="e66" source="francemediterranee1920" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e66" source="imperialeottomaneroutebeyrouthdamas" target="port">
+    <edge id="e67" source="grandshotelslevant" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e67" source="port" target="portquaisentrepotsbeyrouth">
+    <edge id="e68" source="grandshotelslevant" target="radioorient">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e69" source="industrielleetatslevant" target="radioorient">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e70" source="industrielleetatslevant" target="tramwayselectricite">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e71" source="imperialeottomaneroutebeyrouthdamas" target="port">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e72" source="port" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">1</data>
     </edge>
   </graph>

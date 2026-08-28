@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **Empty for 12.4% of rows** (9,078 of 72,998), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 12.5% of rows** (9,094 of 72,965), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |
@@ -133,22 +133,22 @@ compiler gloss (`107 (dga BAO)`) matches the name the numbered key gives. It
 runs at **0.97**; `checks.py` fails below 0.90, because a misaligned numbering
 would otherwise yield a large, plausible, entirely wrong dataset.
 
-### `affiliations_prose.csv` — boards reported in running prose (14,253)
+### `affiliations_prose.csv` — boards reported in running prose (14,305)
 
 Written by `src/parse_prose.py` (stage 3c). Same columns as
 `affiliations.csv`, plus `source_genre = "prose"`. `trigger` records which
-prose construction matched: `prose_role_after` (11,148),
-`prose_appointed_after` (2,557), `prose_nomination`, `prose_appointed_before`,
+prose construction matched: `prose_role_after` (11,185),
+`prose_appointed_after` (2,571), `prose_nomination`, `prose_appointed_before`,
 `prose_outgoing`, `prose_presidency`.
 
-**In the default network** (11,680 rows survive de-duplication against the
+**In the default network** (11,693 rows survive de-duplication against the
 other genres); `--no-prose` drops it. Hand-audited precision is near 90%,
 below the structured parser's, which is why `source_genre` is on every edge.
 8,421 of its person-firm pairs appear nowhere else, and 23% of its rows
 corroborate a pair the structured parser found independently. See METHODOLOGY
 §4d for the audit and the seven failure classes it fixed.
 
-### `affiliations_annotations.csv` — the compiler's inline notes, resolved (1,674)
+### `affiliations_annotations.csv` — the compiler's inline notes, resolved (1,644)
 
 Written by `src/resolve_annotations.py` (stage 3d) from
 `candidate_ties_from_annotations.csv`. Columns: `person_id`, `company_key`,
@@ -159,10 +159,10 @@ Written by `src/resolve_annotations.py` (stage 3d) from
 `match_method` records how the note resolved: `name` and `acronym` come from
 stage 4; `prefix`, `prefix_exact_length` and `exact_single_token` from the
 abbreviation matcher. Hand-audited at roughly 94%. In the default network
-(1,605 rows survive de-duplication); `--no-annotations` drops it. See
+(1,556 rows survive de-duplication); `--no-annotations` drops it. See
 METHODOLOGY §4e.
 
-### `affiliations_biographical.csv` — from biographical dictionaries (3,089)
+### `affiliations_biographical.csv` — from biographical dictionaries (3,167)
 
 Written by `src/parse_biographies.py` (stage 3e) from *Qui êtes-vous ? 1924*,
 *Légion d'honneur en Indochine* and similar. Same columns as
@@ -170,7 +170,7 @@ Written by `src/parse_biographies.py` (stage 3e) from *Qui êtes-vous ? 1924*,
 
 **`year` is always empty.** The entry gives a career, not a board as it stood
 in a particular year, so these ties fall in the `undated` slice and cannot be
-placed in a period. In the default network (1,522 rows survive
+placed in a period. In the default network (1,548 rows survive
 de-duplication); `--no-biographical` drops it, and any analysis that turns on
 timing should. Hand-audited at roughly 93%; see METHODOLOGY §4f.
 
@@ -263,6 +263,7 @@ of abbreviations the catalogue does not cover.
 | `n_observations` | Number of source statements. |
 | `top_role`, `roles` | Modal role, and full `role:count` distribution. |
 | `first_year`, `last_year` | Range of dated observations. A span beyond ~60 years is a red flag for two namesakes merged — see `person_resolution.csv`. |
+| `given_variants` | Read this before trusting a high-degree node. Two incompatible forenames here mean two people the splitter declined to separate; a node whose variants are all initials is an identification the source never made. |
 | `regions`, `sectors` | Inherited from the documents the person appears in. |
 | `n_name_variants`, `name_variants` | Distinct name strings folded into this node. |
 | `merged_keys` | The pre-resolution `person_key`s making up this node. |
@@ -273,12 +274,30 @@ of abbreviations the catalogue does not cover.
 | Variable | Description |
 |---|---|
 | `person_key` → `person_key_resolved` | The mapping actually applied. |
-| `rule` | `identity` (unchanged), `folded_unique_initial` (surname-only folded into the single initial-bearing variant), `unfolded_ambiguous` (several variants — left alone), `unfolded_year_span` (fold refused because the combined years exceed one career). |
-| `ambiguous` | `1` where a fold was possible in principle but refused. |
+| `rule` | `identity` (unchanged), `folded_unique_initial` (surname-only folded into the single initial-bearing variant), `unfolded_ambiguous` (several variants — left alone), `unfolded_year_span` (fold refused because the combined years exceed one career), `split_incompatible_forenames` (the key merged forenames that cannot be one person — see below). |
+| `ambiguous` | `1` where a fold was possible in principle but refused, and on every split key. |
+| `split_forenames` | For a split key, the forenames broken out of it, `; `-separated. Blank otherwise. |
 | `n_observations`, `n_sibling_variants`, `first_year`, `last_year` | Evidence behind the decision. |
 
-**This file is the audit trail.** Reject the folding and rebuild from
-`person_key` if your question needs a different rule.
+**On splits.** A `person_key` carries only the surname and the first *initial*,
+so Georges and Gilbert Hersent shared `hersent-g`. Where the observations under
+one key name two forenames that cannot belong to one man, each named
+observation moves to its own node (`hersent-g-georges`, `hersent-g-gilbert`)
+and the observations giving only the initial stay on `hersent-g`, which then
+means *an unidentified G. Hersent* — they are not assigned to either man. So
+one `person_key` can map to several `person_id`s, and the mapping depends on
+the observation's `given` field, not on the key alone. `person_key_resolved`
+records the *stem*; use `edges_person_company.csv`'s `person_id` for the node
+an individual observation actually landed on.
+
+The rule is deliberately conservative: two forenames split only when both are
+independently attested forenames and neither is a near-variant of the other,
+because fragmenting one man into two nodes is worse than leaving two merged.
+It therefore does not split *Anathase*/*Athanase* Roudy (one man, variant
+spelling) or *Démétrius*/*Dimitri* Zafiropulo (one man, two transliterations).
+
+**This file is the audit trail.** Reject the folding and splitting and rebuild
+from `person_key` if your question needs a different rule.
 
 ### `company_duplicate_candidates.csv` — unmerged company variants
 
@@ -385,8 +404,8 @@ per person), `positionality_by_territory.csv` and `positionality_review.csv`.
 
 | Value | n | Meaning |
 |---|---|---|
-| `colonial` | 28,702 (83.8%) | No indigenous marker. **Inference from absence** — in a corpus of French colonial boards an unmarked name is overwhelmingly European, but this is not positive evidence. `confidence = low` throughout. |
-| `unclassified` | 5,234 (15.3%) | The name field holds a parse artefact rather than a name; not coded either way. |
+| `colonial` | 28,683 (85.5%) | No indigenous marker. **Inference from absence** — in a corpus of French colonial boards an unmarked name is overwhelmingly European, but this is not positive evidence. `confidence = low` throughout. |
+| `unclassified` | 4,571 (13.6%) | The name field holds a parse artefact rather than a name; not coded either way. |
 | `native` | 146 (0.60%) | Indigenous to a territory under French rule. |
 | `local_non_french_elite` | 33 | Ottoman, Egyptian, Turkish, Armenian and Greek names. Egypt and the Ottoman Empire were **not** French colonies, so these are not colonial subjects of France. |
 | `intermediate` | 26 | Maghrebi Jewish names. Algerian Jews became French citizens by the Crémieux decree of 1870 while Muslim Algerians remained subjects; Moroccan and Tunisian Jews did neither. |
@@ -438,7 +457,7 @@ the same columns as the corresponding top-level files, restricted to that
 territory and with nodes and edges recomputed from its ties alone.
 
 **Ties partition; nodes do not.** Every tie carries exactly one territory, so
-bundle tie counts sum to the dataset total (98,615) with none duplicated or
+bundle tie counts sum to the dataset total (98,666) with none duplicated or
 dropped. Firms and people appear in every bundle where they are observed —
 21% of people and 9% of firms are in more than one country bundle — so
 **node counts must not be added across bundles**.
@@ -492,7 +511,7 @@ them; they are outputs, regenerated from `data/processed/` in about a minute.
 | `fig2_by_period.svg` | Figure 2, standalone, light mode. |
 | `fig3_ego_indochine.svg` | Figure 3, standalone, light mode. |
 
-**Figure 1 — the core interlock network.** 170 firms and 1,448 interlocks:
+**Figure 1 — the core interlock network.** 170 firms and 1,407 interlocks:
 `edges_company_interlock.csv` filtered to `weight >= 2` (two or more shared
 directors), largest component, top 170 by weighted degree. Node area is
 weighted degree, edge opacity and width are the number of shared directors,
@@ -503,7 +522,7 @@ with leader lines.
 
 **Figure 2 — small multiples by period.** One panel per `PERIODS` value, from
 `edges_company_interlock_by_period.csv` at the same `weight >= 2`: pre-1914
-440 ties, 1914–1929 2,730, 1930–1944 1,998, 1945–1962 2,484, post-1962 147. All
+479 ties, 1914–1929 2,952, 1930–1944 2,067, 1945–1962 2,539, post-1962 151. All
 five panels share one layout and one size scale, so position is comparable
 across panels and panel density tracks the tie counts printed beneath.
 
@@ -525,12 +544,12 @@ the shared layout are what they are.
 ### `company_centrality.csv` — betweenness on the interlock network
 
 Written by `src/centrality.py` (stage 6b), one row per firm in the interlock
-graph (3,531).
+graph (3,549).
 
 | Variable | Description |
 |---|---|
 | `company_id`, `name` | Firm, matching `companies.csv`. |
-| `in_giant` | 1 if in the giant component (5,798 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
+| `in_giant` | 1 if in the giant component (5,776 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
 | `degree` | Firms it shares at least one director with. |
 | `weighted_degree` | Sum of shared-director counts over those ties. |
 | `betweenness` | Normalised betweenness centrality, **exact and unweighted**, computed on the giant component. |
@@ -557,7 +576,7 @@ variable.
 
 ### `company_places.csv` — a city for each firm
 
-Written by `src/geocode.py` (stage 6c). One row per firm (10,625); 3,170 carry
+Written by `src/geocode.py` (stage 6c). One row per firm (10,537); 3,170 carry
 a city.
 
 | Variable | Description |
@@ -573,7 +592,7 @@ a city.
 ### `edges_city_interlock.csv` — the map's edges
 
 `city_1`, `city_2`, `territory_1`, `territory_2`, `group_1`, `group_2`,
-`n_interlocks`. 1,133 city pairs, 11,812 interlocks. **Between-city only** —
+`n_interlocks`. 1,099 city pairs, 11,238 interlocks. **Between-city only** —
 ties within one city cannot be an edge and are in `company_places.csv`'s
 aggregate and the figure's table instead (5,146 of them).
 
@@ -589,7 +608,7 @@ for `Saïgon`. It is an **input**: edit it and rerun stage 6c.
 `city_network.html`. Cities in true position (plate carrée, no coastline —
 none ships with this repo, so a graticule carries the geography), node area
 by firms based there, edge weight by interlocks between the pair, colour by
-sovereignty group. 112 cities, 1,956 firms, 1,133 drawn ties. See METHODOLOGY
+sovereignty group. 111 cities, 1,943 firms, 1,099 drawn ties. See METHODOLOGY
 §5f for the coverage limits and for why a head office is not an operation.
 
 ### The whole empire, and every territory
@@ -609,9 +628,9 @@ by `betweenness` instead of weighted degree. Holding the node set and layout
 fixed is the whole design: the difference between figures 1 and 6 is the
 finding, and a fresh layout would let neither be read against the other.
 
-**Figure 4 — every firm, every interlock.** All 5,882 firms in
-`edges_company_interlock.csv` at `weight >= 1` and all 79,826 interlocks
-between them — no threshold, no top-N. The giant component (5,798 firms,
+**Figure 4 — every firm, every interlock.** All 5,862 firms in
+`edges_company_interlock.csv` at `weight >= 1` and all 76,886 interlocks
+between them — no threshold, no top-N. The giant component (5,776 firms,
 98.5%) fills the canvas; the 46 firms in 22 unconnected components sit in a
 labelled strip below a rule. Colour is the firm's first territory folded to
 the three largest, node area is weighted degree, and the sixteen largest are
@@ -623,8 +642,8 @@ seat (`is_board_seat = 1`) at a firm in each. A firm listed in several
 territories counts in each of them. The diagonal is outlined rather than
 filled. Shading steps by rank over the observed range, so a cell's step gives
 its position in the distribution, not a proportional count — hover in the page
-for the number. The largest cells are Maroc–Algérie at 4,635 shared directors
-and Maroc–Indochine at 4,570; 863 of the 1,431 possible pairs share at least
+for the number. The largest cells are Maroc–Indochine at 4,477 shared directors
+and Maroc–Algérie at 4,446; 862 of the 1,431 possible pairs share at least
 one.
 
 **Per-territory figures.** Each is one territory's complete interlock graph,

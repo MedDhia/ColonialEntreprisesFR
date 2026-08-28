@@ -12,6 +12,7 @@ godet-r,Godet,René Godet,3,3,3,administrateur,1930,1951,Industrie
 calvet-g,Calvet,G. Calvet; Georges Calvet,2,2,4,administrateur,1930,1937,Industrie
 helbronner-h,Helbronner,H. Helbronner; Henri Helbronner; Henry Helbronner,2,2,4,administrateur,1929,1951,Industrie
 hirsch-a,Hirsch,André Hirsch,2,2,3,administrateur,1930,1936,Industrie
+level-e,Level,Emile Level; Émile Level,2,2,3,administrateur,1922,1930,Industrie
 chaumet,Chaumet,Chaumet,2,2,2,administrateur,1930,1951,Industrie
 grandet-h,Grandet,Henri Grandet,2,2,2,administrateur,1943,1948,Industrie
 lagache-e,Lagache,E. Lagache; Eugène Lagache,2,2,2,administrateur,1901,1903,Industrie; Mines
@@ -21,7 +22,6 @@ massena-a,Massena,A. Massena; André Massena,1,1,6,administrateur,1931,1951,Indu
 prince-d-essling,prince d'Essling,prince d'Essling,1,1,6,administrateur,1931,1951,Industrie
 chaumet-g,Chaumet,G. Chaumet; Gaston Chaumet,1,1,5,administrateur,1922,1937,Industrie
 begouen,Begouën,Begouën,1,1,5,president,1931,1948,Industrie
-hirsch-l,Hirsch,L. Hirsch; L. Hirsch. 18; Louis Hirsch,1,1,4,administrateur,1922,1938,Industrie
 em-level,Em. Level,Em. Level,1,1,4,administrateur,1927,1940,Industrie
 sandre-j,Sandré,J. Sandré,2,1,4,administrateur,1937,1948,Industrie
 guieysse-p,Guieysse,P. Guieysse; Pierre Guieysse,1,1,3,administrateur,1925,1951,Industrie
@@ -30,7 +30,6 @@ jaloustre-g,Jaloustre,G. Jaloustre,1,1,3,administrateur,1931,1937,Industrie
 godet-g,Godet,G. Godet,1,1,3,administrateur,1931,1937,Industrie
 achard-g,Achard,G.-P. Achard; Georges Achard,1,1,3,administrateur,1945,1951,Industrie
 froment-guieysse-g,Froment-Guieysse,Froment-Guieysse; G. Froment- Guieysse,1,1,2,administrateur,1925,1929,Industrie
-you-e,You,E. You; You,1,1,2,administrateur,1925,1929,Industrie
 daroussin-j,Daroussin,J. Daroussin; Joël Daroussin,1,1,2,administrateur,1929,1951,Industrie
 s-wilson-c,S. Wilson,Charles S. Wilson,1,1,2,administrateur,1936,1938,Industrie
 louis-hirsch-a,Louis Hirsch,André Louis-Hirsch; André- Louis Hirsch,1,1,2,administrateur,1938,1948,Industrie
@@ -39,9 +38,10 @@ hirsch-m,Hirsch,Marcel Hirsch,1,1,2,president,1922,1925,Industrie
 loisy-x,Loisy,X. Loisy,1,1,2,vice_president,1922,1925,Industrie
 atthalin-a,Atthalin,André Atthalin,1,1,2,administrateur,1922,1925,Industrie
 audebeau-bey-c,Audebeau bey,Ch. Audebeau bey,1,1,2,administrateur,1922,1925,Industrie
-e-level,E Level,E Level,1,1,2,administrateur,1922,1925,Industrie
+hirsch-l-louis,Hirsch,Louis Hirsch,1,1,2,administrateur,1922,1925,Industrie
 ed-cahen-fuzier,Ed. Cahen-Fuzier,Ed. Cahen-Fuzier,1,1,2,administrateur,1927,1929,Industrie
 laurent-l,Laurent,L. Laurent,1,1,2,administrateur,1927,1929,Industrie
+hirsch-l,Hirsch. 18,L. Hirsch; L. Hirsch. 18,1,1,2,administrateur,1929,1938,Industrie
 girodias-l,Girodias,L. Girodias,1,1,2,president,1937,1940,Industrie
 hirsch-p,Hirsch,P. Hirsch,1,1,2,administrateur,1937,1940,Industrie
 maurat-g,Maurat,G. Maurat,1,1,2,administrateur,1945,1948,Industrie
@@ -69,6 +69,8 @@ chevalier-a,Chevalier,Auguste Chevalier,1,1,2,administrateur,1928,1931,Commerce
 boissarie-j,Boissarie,J. B. Boissarie; Jean Boissarie,1,1,2,administrateur,1928,1931,Commerce
 lequitte-p,Lequitte,P. M. M. Lequitte; Pierre Lequitte,1,1,2,administrateur,1928,1931,Commerce
 schurr,Schürr,Schürr,1,1,1,administrateur,1925,1925,Industrie
+you,You,You,1,1,1,administrateur,1925,1925,Industrie
+you-e,You,E. You,1,1,1,administrateur,1929,1929,Industrie
 biraben-g,Biraben,G. Biraben,1,1,1,administrateur,1929,1929,Industrie
 rasson-e,Rasson,E. Rasson,1,1,1,administrateur,1929,1929,Industrie
 dujardin-e,Dujardin,Ed Dujardin,1,1,1,president,1951,1951,Industrie
@@ -81,13 +83,12 @@ gamichon-p,Gamichon,Paul Gamichon,1,1,1,administrateur,1948,1948,Industrie
 patricot-a,Patricot,André Patricot,1,1,1,administrateur,1948,1948,Industrie
 bernier-g,Bernier,Georges Bernier,1,1,1,administrateur,1930,1930,Industrie
 koenig-f,Koenig,Francis Koenig,1,1,1,administrateur,1930,1930,Industrie
-level-e,Level,Émile Level,1,1,1,administrateur,1930,1930,Industrie
 mathon-e,Mathon,Eugène Mathon,1,1,1,administrateur,1930,1930,Industrie
 silvestre-j,Silvestre,Joseph Silvestre,1,1,1,administrateur,1930,1930,Industrie
 knig-f,Kœnig,Francis Kœnig,1,1,1,administrateur,1936,1936,Industrie
 frank-de-latour-dejean,Frank de Latour-Dejean,Frank de Latour-Dejean,1,1,1,administrateur,1936,1936,Industrie
-j-baratoux,J Baratoux,J Baratoux,1,1,1,administrateur,1912,1912,Industrie
-j-ple,J Plé,J Plé,1,1,1,administrateur,1912,1912,Industrie
+baratoux-j-jean,Baratoux,Jean Baratoux,1,1,1,administrateur,1912,1912,Industrie
+ple-j,Plé,James Plé,1,1,1,administrateur,1912,1912,Industrie
 minerais,Minerais,Minerais,1,1,1,administrateur,1929,1929,Mines
 robbe-u,Robbe,Urbain Robbe,1,1,1,administrateur,,,Commerce
 boulanger-a,Boulanger,Achille Boulanger,1,1,1,administrateur,,,Commerce
@@ -105,12 +106,12 @@ hottinguer-j,Hottinguer,J.-C. Hottinguer,1,1,1,administrateur,1948,1948,Industri
 hubert-j,Hubert,J. Hubert,1,1,1,administrateur,1948,1948,Industrie
 travaux-d-irrigation-dans-le-ht-senegal-niger,travaux d'irrigation dans le Ht-Sénégal-Niger,travaux d'irrigation dans le Ht-Sénégal-Niger,1,1,1,president,1925,1925,Industrie
 carde-j,Carde,J. Carde,1,1,1,president,1937,1937,Industrie
-bordeaux-j,Bordeaux],Bordeaux],1,1,1,administrateur,1943,1943,Industrie
+delmas-p-pierre,Delmas,Pierre Delmas,1,1,1,administrateur,1943,1943,Industrie
 devraigne-g,Devraigne,Georges Devraigne,1,1,1,administrateur,1943,1943,Industrie
 dupont-ferrier-p,Dupont-Ferrier,Pierre Dupont-Ferrier,1,1,1,administrateur,1943,1943,Industrie
 auxiliaire-du-commerce-africian,Auxiliaire du commerce africian,Auxiliaire du commerce africian,1,1,1,administrateur,1943,1943,Industrie
 de-lestapis-r,de Lestapis,Raoul de Lestapis,1,1,1,administrateur,1922,1922,Industrie
-varasson,Varasson,Varasson,1,1,1,administrateur,1937,1937,Industrie
+varasson-a,Varasson,Varasson,1,1,1,administrateur,1937,1937,Industrie
 begouen-y,Begouën,Y. Begouën,1,1,1,administrateur,1948,1948,Industrie
 helbronner,Helbronner,Helbronner,1,1,1,administrateur,1948,1948,Industrie
 et-deves,Ét. Devès,Ét. Devès,1,1,1,administrateur,1948,1948,Industrie
@@ -137,7 +138,9 @@ van-den-bosch,Van den Bosch,Van den Bosch,1,1,1,administrateur,1901,1901,Industr
 teste,Teste,Teste,1,1,1,administrateur,1901,1901,Industrie
 bing,Bing,Bing,1,1,1,administrateur,1901,1901,Industrie
 rigard,Rigard,Rigard,1,1,1,administrateur,1901,1901,Industrie
-l-de-bazelaire,L de Bazelaire,L de Bazelaire,1,1,1,president,1921,1921,Commerce
+ponsignon-a,Ponsignon,Arthur Ponsignon,1,1,1,administrateur,1911,1911,Banque
+fourcade-e,Fourcade,E. Fourcade,1,1,1,administrateur,1911,1911,Banque
+de-bazelaire-l,de Bazelaire,Louis de Bazelaire,1,1,1,president,1921,1921,Commerce
 charlionais-m,Charlionais,Maurice Charlionais,1,1,1,administrateur,1921,1921,Commerce
 tachard-e,Tachard,E. Tachard,1,1,1,administrateur,1925,1925,Commerce
 charlionnais,Charlionnais,Charlionnais,1,1,1,administrateur,1925,1925,Commerce
@@ -158,26 +161,26 @@ philippson-j,Philippson,Jules Philippson,1,1,1,administrateur,1937,1937,Industri
 chastel-a,Chastel,André Chastel,1,1,1,administrateur,1938,1938,Mines
 et-georges-fay,et Georges Fay 2,et Georges Fay 2,1,1,1,administrateur,1938,1938,Mines
 levy-dakar-r,Lévy Dakar,Roger Lévy Dakar,1,1,1,administrateur,1928,1928,Industrie
-calcat-f,Calcat,Fernand Calcat,1,1,1,president,1930,1930,Industrie
+calcat-f-fernand,Calcat,Fernand Calcat,1,1,1,president,1930,1930,Industrie
 gheerbrandt-j,Gheerbrandt,J.-L. Gheerbrandt,1,1,1,administrateur,1930,1930,Industrie
 hoffmann-a,Hoffmann,Adolphe Hoffmann,1,1,1,administrateur,1930,1930,Industrie
-levy-r,Lévy,Roger Lévy,1,1,1,administrateur,1930,1930,Industrie
+levy-r-roger,Lévy,Roger Lévy,1,1,1,administrateur,1930,1930,Industrie
 constantin-de-celles,Constantin de Celles,Constantin de Celles,1,1,1,president,1936,1936,Industrie
 d-hastrel-de-rivedoux-l,d'Hastrel de Rivedoux,Léger d'Hastrel de Rivedoux,1,1,1,administrateur,1910,1910,Mines
 favreul,Favreul,Favreul,1,1,1,administrateur,1910,1910,Mines
 hieulle-e,Hieulle,Hieulle,1,1,1,administrateur,1910,1910,Mines
 sabatier-g,Sabatier. 4,G. Sabatier. 4,1,1,1,administrateur,1910,1910,Mines
-decron-c,Decron,Decron,1,1,1,administrateur,1926,1926,Commerce
-l-peyrissac,L Peyrissac,L Peyrissac,1,1,1,administrateur,1926,1926,Commerce
-poncin-h,Poncin,Poncin,1,1,1,administrateur,1926,1926,Commerce
+decron-c,Decron,Charles Decron,1,1,1,administrateur,1926,1926,Commerce
+peyrissac-l,Peyrissac,Léon Peyrissac,1,1,1,administrateur,1926,1926,Commerce
+poncin-h,Poncin,Henri Poncin,1,1,1,administrateur,1926,1926,Commerce
 guiho-j,Guiho,J. M. J. Guiho,1,1,1,administrateur,1928,1928,Commerce
 dupouy-n,Dupouy,N. E. F. M. Dupouy,1,1,1,administrateur,1928,1928,Commerce
-vincent-e,Vincent,Ernest Vincent,1,1,1,president,1931,1931,Commerce
+vincent-e-ernest,Vincent,Ernest Vincent,1,1,1,president,1931,1931,Commerce
 revel-c,Revel,Charles Revel,1,1,1,administrateur,1931,1931,Commerce
-couturier-g,Couturier,Gustave Couturier,1,1,1,administrateur,1931,1931,Commerce
+couturier-g-gustave,Couturier,Gustave Couturier,1,1,1,administrateur,1931,1931,Commerce
 boucaumont-p,Boucaumont,Paul Boucaumont,1,1,1,administrateur,1931,1931,Commerce
 depouy-f,Depouy,François Depouy,1,1,1,administrateur,1931,1931,Commerce
-prince-a,Prince,Prince,1,1,1,administrateur,1901,1901,Commerce
+prince,Prince,Prince,1,1,1,administrateur,1901,1901,Commerce
 estieu,Estieu,Estieu,1,1,1,administrateur,1901,1901,Commerce
 expert-bezancon-c,Expert-Bezançon,Charles Expert-Bezançon,1,1,1,administrateur,1901,1901,Commerce
 suilliot-h,Suilliot,Hippolyte Suilliot,1,1,1,administrateur,1901,1901,Commerce

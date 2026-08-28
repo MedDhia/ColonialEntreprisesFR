@@ -9,7 +9,7 @@
     <node id="agricoleminierenouvelleshebrides">
       <data key="n_label">Compagnie Agricole et minière des Nouvelles-Hébrides</data>
       <data key="n_sectors">Entreprises diverses</data>
-      <data key="n_n_directors">11</data>
+      <data key="n_n_directors">12</data>
       <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
     </node>
     <node id="colonialeetablissementsnhagen">
@@ -27,7 +27,7 @@
     <node id="colonialevate">
       <data key="n_label">Compagnie Coloniale de Vaté</data>
       <data key="n_sectors">Entreprises diverses</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">11</data>
       <data key="n_territory">Nouvelles-Hébrides (Mélanésie)</data>
     </node>
     <node id="comptoirsnouvelleshebrides">
@@ -81,34 +81,34 @@
     <edge id="e2" source="colonialevate" target="francohebridaise">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e3" source="colonialeetablissementsnhagen" target="colonialevate">
+    <edge id="e3" source="colonialeetablissementsnhagen" target="colonialeilesbanks">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e4" source="colonialeetablissementsnhagen" target="francohebridaise">
-      <data key="e_weight">4</data>
-    </edge>
-    <edge id="e5" source="colonialeetablissementsnhagen" target="colonialeilesbanks">
-      <data key="e_weight">4</data>
-    </edge>
-    <edge id="e6" source="agricoleminierenouvelleshebrides" target="colonialeilesbanks">
+    <edge id="e4" source="agricoleminierenouvelleshebrides" target="colonialeilesbanks">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e7" source="colonialeilesbanks" target="colonialevate">
+    <edge id="e5" source="colonialeetablissementsnhagen" target="colonialevate">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e8" source="comptoirsnouvelleshebrides" target="ilespacifique">
+    <edge id="e6" source="colonialeetablissementsnhagen" target="francohebridaise">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e9" source="agricoleminierenouvelleshebrides" target="colonialeetablissementsnhagen">
+    <edge id="e7" source="comptoirsnouvelleshebrides" target="ilespacifique">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e8" source="colonialeilesbanks" target="colonialevate">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e10" source="agricoleminierenouvelleshebrides" target="cotonnierenouvelleshebrides">
+    <edge id="e9" source="agricoleminierenouvelleshebrides" target="cotonnierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e11" source="colonialevate" target="cotonnierenouvelleshebrides">
+    <edge id="e10" source="colonialevate" target="cotonnierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e12" source="cotonnierenouvelleshebrides" target="francohebridaise">
+    <edge id="e11" source="cotonnierenouvelleshebrides" target="francohebridaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e12" source="agricoleminierenouvelleshebrides" target="colonialeetablissementsnhagen">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e13" source="colonialeilesbanks" target="francohebridaise">

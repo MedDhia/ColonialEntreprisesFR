@@ -188,6 +188,33 @@ def check_citations() -> None:
     eq("  delegate identified", roles.get("Wladimir Archawski"), "administrateur_delegue")
     check("  plain administrator", roles.get("Victor Berti") == "administrateur", str(roles))
 
+    print("parse_ties bracketed forenames and annotations", file=sys.stderr)
+    # One board list from the Fedhala dossier that exercised four failures at
+    # once: an annotation containing a comma, an annotation containing "et",
+    # an in-place expanded initial, and a leading supplied forename.
+    body = ("MM. J.-B. Hersent [ép. Anne-Marie Thomas, sœur de Georges], présid. ; "
+            "G[eorges] Hersent, v.-présid. ; "
+            "A[nthony] Kroller [Wm. H. Müller et Cie, Rotterdam ], "
+            "[Charles] Michel-Côte, sir John Pilter [Phosphates Océanie]")
+    got = [m["name_clean"] for m in P.parse_board_list(body, "administrateur")]
+    for want in ["Georges Hersent", "Anthony Kroller", "Charles Michel-Côte"]:
+        check(f"  forename recovered: {want!r}", want in got, str(got))
+    # The comma inside "[... et Cie, Rotterdam]" used to split the annotation in
+    # two and leave "Rotterdam ]" as a board member.
+    check("  no annotation residue parsed as a person",
+          not any("]" in n or "[" in n for n in got), str(got))
+    check("  kinship note did not enter the surname",
+          not any("Anne-Marie" in n for n in got), str(got))
+
+    # The guard on the leading form: only an attested forename folds in.
+    for frag, want in [("E[ugène] Hausermann [ECP][Hersent]", "Eugène Hausermann"),
+                       ("[Charles] Michel-Côte", "Charles Michel-Côte")]:
+        m = P._make_member(frag, "administrateur")
+        eq(f"  {frag[:26]!r} parsed", m and m["name_clean"], want)
+    m = P._make_member("[Phosphates] Océanie", "administrateur")
+    check("  a non-forename bracket is not folded in",
+          not m or "Phosphates" not in m["name_clean"], str(m))
+
     print("parse_ties entry anchors", file=sys.stderr)
     # The Annuaire industriel alphabetises on a keyword and parenthesises the
     # rest of the name. Reading the head whole, and putting it back in the right
@@ -476,6 +503,40 @@ def check_dataset() -> None:
     check("  no member name carries a field label", not colon,
           f"{len(colon)} do, e.g. {colon[0]['name_clean'][:40]!r}" if colon else "")
 
+    # Annotation residue in a name means a bracketed note was split across a
+    # comma or an "et" again. It was 1,367 rows before the split learned to
+    # protect them; the remainder are unbalanced brackets in the source itself.
+    aff = load("affiliations.csv")
+    residue = [a for a in aff if "[" in a["name_clean"] or "]" in a["name_clean"]]
+    check("  little annotation residue in names", len(residue) <= 400,
+          f"{len(residue)} rows, e.g. {residue[0]['name_clean'][:40]!r}" if residue else "")
+
+    # The compiler supplies forenames in brackets. If this drops sharply, the
+    # bracket conventions have stopped being read and the person splitter loses
+    # the evidence it works from.
+    full = sum(1 for a in aff if len(a["given"].replace(".", "").strip()) > 2)
+    check("  full forenames recovered on a large share of ties",
+          full >= 0.40 * len(aff), f"{full} of {len(aff)}")
+
+    # Person resolution runs in both directions, and both must stay visible in
+    # the crosswalk: folding merges, splitting separates.
+    res = load("person_resolution.csv")
+    rules = Counter(r["rule"] for r in res)
+    check("  crosswalk records folds", rules["folded_unique_initial"] > 0, str(dict(rules)))
+    check("  crosswalk records splits",
+          rules["split_incompatible_forenames"] > 0, str(dict(rules)))
+    split_rows = [r for r in res if r["rule"] == "split_incompatible_forenames"]
+    check("  every split names the forenames it separated",
+          all(r["split_forenames"] for r in split_rows))
+    # A split key must yield distinct nodes, and the initial-only residue must
+    # remain its own node rather than being handed to either man.
+    pid = {p["person_id"] for p in load("persons_resolved.csv")}
+    for stem, a, b in [("hersent-g", "georges", "gilbert"),
+                       ("delmas-p", "philippe", "pierre")]:
+        check(f"  {stem} split into {a} and {b}",
+              f"{stem}-{a}" in pid and f"{stem}-{b}" in pid)
+        check(f"  {stem} keeps an unresolved residue node", stem in pid)
+
     il = load("edges_company_interlock.csv")
     if il:
         check("  interlock endpoints known",
@@ -558,6 +619,18 @@ def check_splits() -> None:
         aff = load("affiliations.csv")
         attributed = sum(1 for r in aff if r["company_key"] and r["person_key"])
         eq(f"  {level}: ties partition the dataset", total, attributed)
+
+        # The bundles promise person ids that match the top-level files. They
+        # did not for a while: this stage recomputed the resolution over
+        # `affiliations.csv` alone while stage 4 resolved over all five genres,
+        # so a fold or a split could differ. It now reads stage 4's crosswalk.
+        top = {p["person_id"] for p in load("persons_resolved.csv")}
+        stray = set()
+        for f in sorted(_glob.glob(os.path.join(root, "*", "persons.csv")))[:80]:
+            with open(f, encoding="utf-8", newline="") as fh:
+                stray |= {r["person_id"] for r in csv.DictReader(fh)} - top
+        check(f"  {level}: bundle person ids exist at the top level", not stray,
+              f"{len(stray)} do not, e.g. {sorted(stray)[:3]}")
 
         # Every bundle's GraphML must load, same guard as the main graphs.
         bad = []

@@ -83,8 +83,32 @@ SURNAME_FIRST_PAREN_RE = re.compile(
 )
 
 
-# The sources expand an initial in place: "P(aul) Delorme", "L(eonard) Fontaine".
-EXPANDED_INITIAL_RE = re.compile(r"\b([A-ZÉÈÀÂÎÔÛÇ])\(([a-zéèêëàâîïôöûüùç'-]{1,12})\)")
+# The compiler restores a forename the source abbreviated, in two ways. He
+# expands an initial in place - "G[eorges] Hersent", "A[nthony] Kroller" - or
+# supplies the whole name ahead of the surname - "[Charles] Michel-Cote".
+#
+# This rule used to accept only parentheses, "P(aul) Delorme". That form occurs
+# **zero** times in the corpus; the bracketed one occurs 7,802 times and the
+# leading one 7,388, and both were being discarded as annotations, throwing
+# away 15,190 forenames the compiler had gone to the trouble of supplying.
+# Both delimiters are now accepted.
+EXPANDED_INITIAL_RE = re.compile(
+    r"\b([A-ZÉÈÀÂÎÔÛÇ])[(\[]([a-zéèêëàâîïôöûüùç'-]{1,12})[)\]]")
+# A leading bracketed forename. Unlike the in-place form this one is ambiguous
+# - "[Phosphates] Oceanie" has the same shape - so the bracketed word must be
+# an attested forename, and a capitalised surname must follow it.
+LEADING_FORENAME_RE = re.compile(
+    r"^\[([A-ZÉÈÀÂÎÔÛÇ][a-zéèêëàâîïôöûüùç'-]{2,14})\]\s+(?=[A-ZÉÈÀÂÎÔÛÇ])")
+
+
+def expand_leading_forename(text: str) -> str:
+    """Fold a leading "[Forename] Surname" bracket into the name."""
+    m = LEADING_FORENAME_RE.match(text.lstrip())
+    if not m:
+        return text
+    if strip_accents(m.group(1)).lower() not in FORENAMES:
+        return text
+    return LEADING_FORENAME_RE.sub(m.group(1) + " ", text.lstrip(), count=1)
 
 
 def tidy_fragment(text: str) -> str:

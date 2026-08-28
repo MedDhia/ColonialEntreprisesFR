@@ -42,28 +42,10 @@
       <data key="n_n_directors">3</data>
       <data key="n_territory">Guyane française</data>
     </node>
-    <node id="exploitationsminieresinini">
-      <data key="n_label">Société d'Exploitations minières de l'Inini</data>
-      <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">11</data>
-      <data key="n_territory">Guyane française</data>
-    </node>
-    <node id="forestiereguyane">
-      <data key="n_label">Société Forestière de la Guyane française</data>
-      <data key="n_sectors">Divers; Documentation générale</data>
-      <data key="n_n_directors">30</data>
-      <data key="n_territory">Guyane française</data>
-    </node>
     <node id="franceguyane">
       <data key="n_label">Société France-Guyane</data>
       <data key="n_sectors">Divers; Documentation générale</data>
       <data key="n_n_directors">3</data>
-      <data key="n_territory">Guyane française</data>
-    </node>
-    <node id="gisementsordieumerci">
-      <data key="n_label">Société des Gisements d'or de Dieu-Merci</data>
-      <data key="n_sectors">Mines et placers</data>
-      <data key="n_n_directors">5</data>
       <data key="n_territory">Guyane française</data>
     </node>
     <node id="gisementsorsaintelie">
@@ -75,7 +57,7 @@
     <node id="mataroni">
       <data key="n_label">Cie Française du Mataroni, puis Cie des mines d'or de la Guyane française</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Guyane française</data>
     </node>
     <node id="minesorguyane">
@@ -87,7 +69,7 @@
     <node id="miniereroura">
       <data key="n_label">Compagnie Minière de Roura</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">5</data>
+      <data key="n_n_directors">4</data>
       <data key="n_territory">Guyane française</data>
     </node>
     <node id="representationcoloniale">
@@ -99,7 +81,7 @@
     <node id="saintelie">
       <data key="n_label">Saint-Élie</data>
       <data key="n_sectors">Mines et placers</data>
-      <data key="n_n_directors">32</data>
+      <data key="n_n_directors">34</data>
       <data key="n_territory">Guyane française</data>
     </node>
     <node id="saintelieadieuvat">
@@ -129,7 +111,7 @@
     <node id="unionminierehautemana">
       <data key="n_label">Union minière de la Haute-Mana</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Guyane française</data>
     </node>
     <edge id="e0" source="gisementsorsaintelie" target="saintelie">
@@ -183,13 +165,7 @@
     <edge id="e16" source="colonialeagricoleminiere" target="unionminierehautemana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e17" source="exploitationsminieresinini" target="forestiereguyane">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e18" source="comptoirsgenerauxguyane" target="sucriereagricoleguyane">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e19" source="gisementsordieumerci" target="saintelie">
+    <edge id="e17" source="comptoirsgenerauxguyane" target="sucriereagricoleguyane">
       <data key="e_weight">1</data>
     </edge>
   </graph>

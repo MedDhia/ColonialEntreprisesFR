@@ -9,7 +9,7 @@
     <node id="banquefonciereegyptelandbankegyptalexandrie">
       <data key="n_label">Banque foncière d'Égypte Land Bank of Egypt, Alexandrie</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">35</data>
+      <data key="n_n_directors">36</data>
       <data key="n_territory">Égypte</data>
     </node>
     <node id="caissehypothecaireegypte">
@@ -21,13 +21,13 @@
     <node id="creditfoncieregyptien">
       <data key="n_label">Crédit foncier égyptien</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">71</data>
+      <data key="n_n_directors">67</data>
       <data key="n_territory">Égypte</data>
     </node>
     <node id="creditfoncierorient">
       <data key="n_label">Crédit foncier d'Orient</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">32</data>
+      <data key="n_n_directors">30</data>
       <data key="n_territory">Égypte</data>
     </node>
     <node id="landbankegypt">
@@ -51,11 +51,11 @@
     <edge id="e2" source="banquefonciereegyptelandbankegyptalexandrie" target="landbankegypt">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e3" source="creditfoncieregyptien" target="unionfonciereegypte">
+    <edge id="e3" source="landbankegypt" target="unionfonciereegypte">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e4" source="landbankegypt" target="unionfonciereegypte">
-      <data key="e_weight">2</data>
+    <edge id="e4" source="creditfoncieregyptien" target="unionfonciereegypte">
+      <data key="e_weight">1</data>
     </edge>
   </graph>
 </graphml>

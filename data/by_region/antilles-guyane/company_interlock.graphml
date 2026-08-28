@@ -108,16 +108,16 @@
       <data key="n_n_directors">5</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
+    <node id="entreprisemaritimecommerciale">
+      <data key="n_label">L'Entreprise maritime et commerciale</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">12</data>
+      <data key="n_territory">Antilles-Guyane</data>
+    </node>
     <node id="etablissementsdarboussierindustrielleagricolepointepitre">
       <data key="n_label">Établissements Darboussier Sté industrielle et agricole de la Pointe-à-Pitre</data>
       <data key="n_sectors">Documentation générale</data>
-      <data key="n_n_directors">10</data>
-      <data key="n_territory">Antilles-Guyane</data>
-    </node>
-    <node id="exploitationsminieresinini">
-      <data key="n_label">Société d'Exploitations minières de l'Inini</data>
-      <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">11</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="felixhubert">
@@ -129,7 +129,7 @@
     <node id="forestiereguyane">
       <data key="n_label">Société Forestière de la Guyane française</data>
       <data key="n_sectors">Divers; Documentation générale</data>
-      <data key="n_n_directors">30</data>
+      <data key="n_n_directors">31</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="franceguyane">
@@ -144,12 +144,6 @@
       <data key="n_n_directors">1</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
-    <node id="gisementsordieumerci">
-      <data key="n_label">Société des Gisements d'or de Dieu-Merci</data>
-      <data key="n_sectors">Mines et placers</data>
-      <data key="n_n_directors">5</data>
-      <data key="n_territory">Antilles-Guyane</data>
-    </node>
     <node id="gisementsorsaintelie">
       <data key="n_label">Gisements d'or de Saint-Élie</data>
       <data key="n_sectors">Mines et placers</data>
@@ -159,19 +153,13 @@
     <node id="grandepeche">
       <data key="n_label">GRANDE-PÊCHE</data>
       <data key="n_sectors">Documentation générale</data>
-      <data key="n_n_directors">5</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="guadeloupeennedistributionenergieelectrique">
       <data key="n_label">Compagnie Guadeloupéenne de distribution d'énergie électrique</data>
       <data key="n_sectors">Divers</data>
       <data key="n_n_directors">8</data>
-      <data key="n_territory">Antilles-Guyane</data>
-    </node>
-    <node id="immobilierecolonialepetroles">
-      <data key="n_label">Société immobilière coloniale des pétroles</data>
-      <data key="n_sectors">Documentation générale</data>
-      <data key="n_n_directors">3</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="industrielleagricolepointepitre">
@@ -201,19 +189,13 @@
     <node id="mataroni">
       <data key="n_label">Cie Française du Mataroni, puis Cie des mines d'or de la Guyane française</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">6</data>
-      <data key="n_territory">Antilles-Guyane</data>
-    </node>
-    <node id="messageriesantillaises">
-      <data key="n_label">Messageries antillaises</data>
-      <data key="n_sectors">Divers</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="minescuivrenaltagua">
       <data key="n_label">Mines de cuivre de Naltagua</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">23</data>
+      <data key="n_n_directors">20</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="minesorguyane">
@@ -222,10 +204,16 @@
       <data key="n_n_directors">16</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
+    <node id="minesorguyanehollandaise">
+      <data key="n_label">Compagnie des Mines d'or de la Guyane hollandaise</data>
+      <data key="n_sectors">Documentation générale</data>
+      <data key="n_n_directors">25</data>
+      <data key="n_territory">Antilles-Guyane</data>
+    </node>
     <node id="miniereroura">
       <data key="n_label">Compagnie Minière de Roura</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">5</data>
+      <data key="n_n_directors">4</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="mocupia">
@@ -243,7 +231,7 @@
     <node id="naltagua">
       <data key="n_label">Naltagua</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="planteursantillaisreunis">
@@ -261,7 +249,7 @@
     <node id="saintelie">
       <data key="n_label">Saint-Élie</data>
       <data key="n_sectors">Mines et placers</data>
-      <data key="n_n_directors">32</data>
+      <data key="n_n_directors">34</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="saintelieadieuvat">
@@ -279,7 +267,7 @@
     <node id="sucreriesbresiliennes">
       <data key="n_label">Sucreries brésiliennes</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">23</data>
+      <data key="n_n_directors">24</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <node id="sucrerievillaraffard">
@@ -333,7 +321,7 @@
     <node id="unionminierehautemana">
       <data key="n_label">Union minière de la Haute-Mana</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Antilles-Guyane</data>
     </node>
     <edge id="e0" source="guadeloupeennedistributionenergieelectrique" target="terre">
@@ -408,103 +396,91 @@
     <edge id="e23" source="colonialetonnellerie" target="theresia">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e24" source="etablissementsdarboussierindustrielleagricolepointepitre" target="industrielleagricolepointepitreetablissements">
+    <edge id="e24" source="mataroni" target="minesorguyane">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e25" source="mataroni" target="minesorguyane">
+    <edge id="e25" source="commercialeantillesfrancaisesfredtanon" target="commercialeantillesfrancaisesftanon">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e26" source="commercialeantillesfrancaisesfredtanon" target="commercialeantillesfrancaisesftanon">
+    <edge id="e26" source="franceguyane" target="miniereroura">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e27" source="franceguyane" target="miniereroura">
+    <edge id="e27" source="commercialeantillesfrancaisesfredtanon" target="representationcoloniale">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e28" source="commercialeantillesfrancaisesfredtanon" target="representationcoloniale">
+    <edge id="e28" source="saintelieadieuvat" target="stelieadieuvat">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e29" source="saintelieadieuvat" target="stelieadieuvat">
-      <data key="e_weight">2</data>
+    <edge id="e29" source="commercialeantillesfrancaisesftanon" target="entreprisemaritimecommerciale">
+      <data key="e_weight">1</data>
     </edge>
     <edge id="e30" source="agricoletroisrivieres" target="forestiereguyane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e31" source="banquemartinique" target="francocolonialeantillaise">
+    <edge id="e31" source="etablissementsdarboussierindustrielleagricolepointepitre" target="industrielleagricolepointepitreetablissements">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e32" source="comptoirshesse" target="sucreriesbresiliennes">
+    <edge id="e32" source="banquemartinique" target="francocolonialeantillaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e33" source="commercialeantillesfrancaisesfredtanon" target="transportsaeriensguyanais">
+    <edge id="e33" source="comptoirshesse" target="sucreriesbresiliennes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e34" source="consortiummoruefrance" target="messageriesantillaises">
+    <edge id="e34" source="commercialeantillesfrancaisesfredtanon" target="transportsaeriensguyanais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e35" source="grandepeche" target="messageriesantillaises">
+    <edge id="e35" source="cotonniereguyane" target="franceguyane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e36" source="messageriesantillaises" target="moruesecheriesfecamp">
+    <edge id="e36" source="cotonniereguyane" target="miniereroura">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e37" source="cotonniereguyane" target="franceguyane">
+    <edge id="e37" source="cotonniereguyane" target="planteursantillaisreunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e38" source="cotonniereguyane" target="miniereroura">
+    <edge id="e38" source="franceguyane" target="planteursantillaisreunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e39" source="cotonniereguyane" target="planteursantillaisreunis">
+    <edge id="e39" source="miniereroura" target="planteursantillaisreunis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e40" source="franceguyane" target="planteursantillaisreunis">
+    <edge id="e40" source="felixhubert" target="unionbananieremartiniquaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e41" source="miniereroura" target="planteursantillaisreunis">
+    <edge id="e41" source="unionbananiereguyanecayenne" target="unionbananieremartiniquaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e42" source="felixhubert" target="unionbananieremartiniquaise">
+    <edge id="e42" source="consortiummoruefrance" target="unioncommercialebasseterre">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e43" source="unionbananiereguyanecayenne" target="unionbananieremartiniquaise">
+    <edge id="e43" source="colonialeproduitstannants" target="miniereroura">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e44" source="consortiummoruefrance" target="unioncommercialebasseterre">
+    <edge id="e44" source="colonialetonnellerie" target="miniereroura">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e45" source="colonialeproduitstannants" target="miniereroura">
+    <edge id="e45" source="miniereroura" target="theresia">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e46" source="colonialetonnellerie" target="miniereroura">
+    <edge id="e46" source="cotonniereguyane" target="sucriereagricoleguyane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e47" source="miniereroura" target="theresia">
+    <edge id="e47" source="colonialeagricoleminiere" target="saintelieadieuvat">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e48" source="cotonniereguyane" target="sucriereagricoleguyane">
+    <edge id="e48" source="colonialeagricoleminiere" target="stelieadieuvat">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e49" source="colonialeagricoleminiere" target="saintelieadieuvat">
+    <edge id="e49" source="colonialeagricoleminiere" target="unionminierehautemana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e50" source="colonialeagricoleminiere" target="stelieadieuvat">
+    <edge id="e50" source="comptoirsgenerauxguyane" target="sucriereagricoleguyane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e51" source="immobilierecolonialepetroles" target="martiniquaisedistributionenergieelectrique">
+    <edge id="e51" source="forestiereguyane" target="minesorguyanehollandaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e52" source="colonialeagricoleminiere" target="unionminierehautemana">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e53" source="exploitationsminieresinini" target="forestiereguyane">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e54" source="comptoirsgenerauxguyane" target="sucriereagricoleguyane">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e55" source="gisementsordieumerci" target="saintelie">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e56" source="sucreriesbresiliennes" target="sucrerievillaraffard">
+    <edge id="e52" source="sucreriesbresiliennes" target="sucrerievillaraffard">
       <data key="e_weight">1</data>
     </edge>
   </graph>

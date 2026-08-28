@@ -851,9 +851,12 @@ def parse_board_list(body: str, default_role: str) -> list[dict]:
             group_role = canonical_role(lead.group(1))
             group = lead.group(2)
 
-        # Trailing role phrase applying to every name in the group.
+        # Trailing role phrase applying to every name in the group. The comma
+        # split has to protect annotations for the same reason the 'et' split
+        # does, or a bracketed note containing a comma is torn in two.
         tail_role = ""
-        parts = [p for p in re.split(r"\s*,\s*", group) if p.strip()]
+        guarded, restore_group = _protect_annotations(group)
+        parts = [restore_group(p) for p in re.split(r"\s*,\s*", guarded) if p.strip()]
         if parts:
             last = parts[-1].strip(" .")
             cr = canonical_role(last)
@@ -875,24 +878,34 @@ def parse_board_list(body: str, default_role: str) -> list[dict]:
     return members
 
 
-def _split_names(raw: str) -> list[str]:
-    """Split a comma-part into individual names, respecting 'et' and brackets."""
-    raw = raw.strip()
-    if not raw:
-        return []
-    # Protect bracketed annotations from the 'et' split.
+def _protect_annotations(raw: str):
+    """Replace bracketed spans with placeholders, and return a restorer.
+
+    Annotations contain commas and the word "et" - "[Wm. H. Muller et Cie,
+    Rotterdam]" holds both - so any split on either boundary cuts them in half.
+    The near half keeps the name and a dangling "[", the far half is pure
+    residue: 1,367 parsed "people" were fragments like "Rotterdam]" and
+    "censeur Ste generale]".
+    """
     holes: list[str] = []
 
     def stash(m):
         holes.append(m.group(0))
         return f"\x00{len(holes) - 1}\x00"
 
-    protected = ANNOT_RE.sub(stash, raw)
-    pieces = re.split(r"\s+et\s+|\s*&\s*", protected)
-
     def restore(s: str) -> str:
         return re.sub(r"\x00(\d+)\x00", lambda m: holes[int(m.group(1))], s)
 
+    return ANNOT_RE.sub(stash, raw), restore
+
+
+def _split_names(raw: str) -> list[str]:
+    """Split a comma-part into individual names, respecting 'et' and brackets."""
+    raw = raw.strip()
+    if not raw:
+        return []
+    protected, restore = _protect_annotations(raw)
+    pieces = re.split(r"\s+et\s+|\s*&\s*", protected)
     return [restore(p).strip() for p in pieces if restore(p).strip()]
 
 
@@ -904,12 +917,15 @@ def _make_member(frag: str, role: str) -> dict | None:
     if STOP_FRAGMENT_RE.match(frag) or ADDRESS_RE.match(frag):
         return None
 
-    # Expand the sources' in-place initial convention ("R(oger) Savon") before
-    # annotations are read, otherwise "(oger)" is mistaken for an annotation
-    # and the forename is destroyed.
-    from names import EXPANDED_INITIAL_RE
+    # Fold in the forenames the compiler supplied, before annotations are read,
+    # otherwise "[eorges]" is mistaken for an annotation and the forename is
+    # destroyed. Both of his conventions: expansion in place ("G[eorges]
+    # Hersent") and a whole forename ahead of the surname ("[Charles]
+    # Michel-Cote").
+    from names import EXPANDED_INITIAL_RE, expand_leading_forename
 
     frag = EXPANDED_INITIAL_RE.sub(r"\1\2", frag)
+    frag = expand_leading_forename(frag)
     annotations = [clean_text(a or b) for a, b in ANNOT_RE.findall(frag)]
     bare = ANNOT_RE.sub(" ", frag)
     # A role label swallowed into the fragment: "Adm.: MM. Henri Girche",

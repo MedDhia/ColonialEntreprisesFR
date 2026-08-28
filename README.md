@@ -32,11 +32,11 @@ network can be sliced by period rather than collapsed into one static graph.
 >
 > | Genre | Ties | Precision | What it reads |
 > |---|---|---|---|
-> | `dossier` | 59,559 | highest | board lists under a firm heading |
-> | `person_index` | 15,617 | ~97% agreement with the source's own gloss | numbered annuaire indexes |
-> | `prose` | 11,680 | ~90% | board changes reported in sentences |
-> | `annotation` | 1,605 | ~94% | the compiler's inline notes |
-> | `biographical` | 1,522 | ~93% | biographical dictionaries (**undated**) |
+> | `dossier` | 59,414 | highest | board lists under a firm heading |
+> | `person_index` | 15,621 | ~97% agreement with the source's own gloss | numbered annuaire indexes |
+> | `prose` | 11,693 | ~90% | board changes reported in sentences |
+> | `annotation` | 1,556 | ~94% | the compiler's inline notes |
+> | `biographical` | 1,548 | ~93% | biographical dictionaries (**undated**) |
 >
 > Precision figures come from hand-checking random samples against source
 > context. They locate an order of magnitude, not a second decimal.
@@ -44,7 +44,7 @@ network can be sliced by period rather than collapsed into one static graph.
 >
 > **The network includes the Paris Bourse.** A large share of colonial firms
 > were publicly quoted, so `Annuaire Desfossés 1956` is a colonial source; it
-> contributes 15,617 ties and 1,889 firms, of which 11% also have dossier
+> contributes 15,621 ties and 1,889 firms, of which 11% also have dossier
 > evidence. The rest are metropolitan and foreign companies that colonial
 > directors also sat on — which is the point, but it means **this is no longer
 > a purely colonial universe**. Every edge carries `source_genre`, so
@@ -58,14 +58,14 @@ network can be sliced by period rather than collapsed into one static graph.
 | Documents with text extracted | **5,874 (99.2%)** — 46 are dead links on the site |
 | Territories | **62** countries / 13 index-page regions (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
 | Economic sectors | 108, as classified by the source |
-| Person → company ties | **98,615** — 59,559 from firm dossiers, 15,617 from the annuaire indexes, 11,680 from prose, 1,605 from annotations, 1,522 from biographies |
-| Two-mode edge rows | **90,860**, 97.4% carrying a year |
-| Distinct people | **34,240** |
-| Companies | **10,625** (including firms known only from a directory or annuaire entry) |
-| Company interlock edges | **79,826** pooled, 50,217 within period |
+| Person → company ties | **98,666** — 59,414 from firm dossiers, 15,621 from the annuaire indexes, 11,693 from prose, 1,556 from annotations, 1,548 from biographies |
+| Two-mode edge rows | **90,745**, 97.3% carrying a year |
+| Distinct people | **33,558** |
+| Companies | **10,537** (including firms known only from a directory or annuaire entry) |
+| Company interlock edges | **76,886** pooled, 50,301 within period |
 | Extraction genres | 5, all merged; `source_genre` on every observation and edge |
-| Attribution | 87.6% of parsed ties resolve to a firm; `attribution` records how |
-| Corporate directorships | 3,537 directed company → company edges |
+| Attribution | 87.5% of parsed ties resolve to a firm; `attribution` records how |
+| Corporate directorships | 3,405 directed company → company edges |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
 `data/processed/network_stats.csv` holds these figures per period. The
@@ -129,6 +129,32 @@ people appear in more than one territory, so node counts must not be summed.
 elite is shared with others (0.29 for Morocco and Indochina, 0.72 for
 Senegal).
 
+### Who counts as one person
+
+A person key is a normalised surname plus the first given initial, which is
+too coarse on its own: Georges Hersent and Gilbert Hersent both key to
+`hersent-g`, and unsplit they make every firm one sat on interlock with every
+firm the other sat on. `build_network.py` resolves in both directions and
+records every decision in `person_resolution.csv`.
+
+- **Folds** a surname-only key into a unique surname+initial key — 1,916 of
+  them — refusing when several candidates exist or the combined years imply a
+  90-year career.
+- **Splits** a key whose observations name forenames that cannot be one man —
+  512 of them. Named observations move to `hersent-g-georges` and
+  `hersent-g-gilbert`; the ones giving only `G.` stay on `hersent-g`, meaning
+  *an unidentified G. Hersent*, and are handed to neither.
+
+Together with the forename recovery below, this removed **2,940 interlock
+edges that never existed**, with no observation lost — every tie is still
+present, merely attributed to a narrower node. (The split alone accounts for
+more than that; recovering forenames also collapsed junk keys back into real
+people, which adds some edges back.) It is deliberately conservative — two forenames separate
+only when both are independently attested and neither is a near-variant of the
+other — so *Anathase*/*Athanase* Roudy and *Démétrius*/*Dimitri* Zafiropulo
+stay merged, each being one man under two spellings. Check `given_variants` on
+any high-degree node before trusting it.
+
 ### Positionality of individuals
 
 `person_positionality.csv` codes each person `colonial` / `native`, with
@@ -137,8 +163,8 @@ Ottoman and Egyptian ones, since neither fits the binary. The evidence is the
 name plus the territory — onomastic inference, good for aggregate composition
 and **not** for claims about named individuals.
 
-The headline result is stark and is the point of the variable: of 34,240
-people, **228 (0.7%) carry an indigenous name**. By territory, board members
+The headline result is stark and is the point of the variable: of 33,558
+people, **229 (0.7%) carry an indigenous name**. By territory, board members
 with an indigenous name run at 1.0% in Morocco and Indochina, 0.4% in Algeria,
 and **0.0% in French Equatorial Africa, Gabon, Congo-Brazzaville and New
 Caledonia**. All 304 non-European codings are listed in
@@ -154,8 +180,8 @@ versioned as a standalone SVG for papers.
 
 | | |
 |---|---|
-| `fig1_core_interlocks.svg` | The core interlock network: 170 firms, 1,448 interlocks at two or more shared directors — the core of a graph of 3,531 firms. Coloured by territory, sized by weighted degree. |
-| `fig2_by_period.svg` | The same network by period, five panels on one shared layout — 440 ties before 1914, 2,730 in 1914–1929, 147 after 1962. |
+| `fig1_core_interlocks.svg` | The core interlock network: 170 firms, 1,407 interlocks at two or more shared directors — the core of a graph of 3,549 firms. Coloured by territory, sized by weighted degree. |
+| `fig2_by_period.svg` | The same network by period, five panels on one shared layout — 479 ties before 1914, 2,952 in 1914–1929, 151 after 1962. |
 | `fig3_ego_indochine.svg` | The interlock neighbourhood of a single firm, the Banque de l'Indochine by default. |
 | `fig6_core_betweenness.svg` | The same 170 firms and the same layout as figure 1, sized by **betweenness centrality** instead of shared directorships — so the difference between the two figures is the finding. |
 
@@ -163,7 +189,7 @@ versioned as a standalone SVG for papers.
 
 | | |
 |---|---|
-| `fig7_city_network.svg` | Firms placed at their **city**, not their colony, in true coordinates; an edge joins two cities when a director sat on a board in each. 112 cities, 1,956 firms. |
+| `fig7_city_network.svg` | Firms placed at their **city**, not their colony, in true coordinates; an edge joins two cities when a director sat on a board in each. 111 cities, 1,943 firms. |
 
 The finding is stark: **37% of the placeable firms in the interlock graph were
 run from Paris** — more than the next eleven cities combined — and the heavy
@@ -177,7 +203,7 @@ single city cannot be drawn as edges and are in the table instead.
 
 | | |
 |---|---|
-| `fig4_empire_network.svg` | **Every** firm sharing a director: 5,882 firms, 79,826 interlocks, nothing subsetted. Colour is territory. |
+| `fig4_empire_network.svg` | **Every** firm sharing a director: 5,862 firms, 76,886 interlocks, nothing subsetted. Colour is territory. |
 | `fig5_territory_matrix.svg` | The empire as a network of territories — 54 × 54 cells, each the number of directors sitting on boards in both. |
 | `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph — `algerie`, `tunisie`, `madagascar`, `indochine`, `senegal`, … |
 
@@ -253,7 +279,7 @@ src/
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            837 assertions on the parsers and the built dataset
+  checks.py            856 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -331,7 +357,7 @@ rules govern them, and they are worth knowing before you trust a number:
   similarity threshold.
 - **A coverage gap beats a fabricated attribution.** Where the parser cannot
   determine which firm a board belongs to, the tie is left unattributed and
-  excluded from the network — **9,078 of 72,998 parsed ties, 12.4%** — instead
+  excluded from the network — **9,094 of 72,965 parsed ties, 12.5%** — instead
   of being credited to the previous firm in the document. They stay in
   `affiliations.csv` with an empty `company_key`, so the gap is inspectable
   rather than hidden.

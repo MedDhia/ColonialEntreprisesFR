@@ -1,7 +1,7 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 michel-cote-c,Michel-Côte,Ch. Michel-Cote; Ch. Michel-Côte; Ch. Michel-Côte. 2; Charles Michel-Cote,7,7,35,president,1917,1953,Documents généraux; Sociétés
 gimon-c,Gimon,Ch. Gimon; Charles Gimon; Charles Gimon 2,6,6,21,administrateur,1914,1951,Documents généraux; Sociétés
-gorchs-chacou-f,Gorchs-Chacou,F. Gorchs-Chacou; Félix Gorchs-Chacou,6,6,8,administrateur,1919,1926,Documents généraux; Sociétés
+gorchs-chacou-f,Gorchs-Chacou,F. Gorchs-Chacou; Félix Gorchs-Chacou,6,6,10,administrateur,1919,1926,Documents généraux; Sociétés
 hachette-r,Hachette,René Hachette; René Hachette1,5,4,15,administrateur,1920,1937,Documents généraux; Sociétés
 homberg-o,Homberg,O. Homberg; Octave Homberg,3,3,13,administrateur,1912,1933,Documents généraux; Sociétés
 bouffe-g,Bouffé,G. Bouffé; Gaston Bouffé,3,3,7,administrateur,1920,1937,Documents généraux; Sociétés
@@ -9,25 +9,26 @@ moulin-p,Moulin,P. Moulin,3,3,7,administrateur,1920,1926,Documents généraux; S
 jambon-c,Jambon,Ch. Jambon; Charles Jambon,3,3,3,administrateur,1922,1937,Documents généraux
 mingois-g,Mingois,G. Mingois; Georges Mingois,3,3,3,administrateur,1922,1937,Documents généraux
 senn-o,Senn,O. Senn,2,2,5,administrateur,1920,1937,Documents généraux; Sociétés
+philippar-g,Philippar,G. Philippar; Georges Philippar,2,2,5,vice_president,1922,1951,Documents généraux; Sociétés
 famin,Famin,Famin,2,2,5,administrateur,1912,1920,Sociétés
-pilliard-m,Pilliard,Pilliard,2,2,3,administrateur,1922,1926,Documents généraux; Sociétés
+pilliard-m,Pilliard,Maurice Pilliard; Pilliard,2,2,3,administrateur,1922,1926,Documents généraux; Sociétés
+roussel-f,Roussel,F. Roussel; Félix Roussel,2,2,3,administrateur,1922,1926,Documents généraux; Sociétés
 lamotte-m,Lamotte,Maurice Lamotte,2,2,3,vice_president,1924,1937,Documents généraux; Sociétés
-philippar-g,Philippar,G. Philippar; Georges Philippar,2,2,3,vice_president,1926,1951,Documents généraux; Sociétés
-moulin-a,Moulin,A. Moulin; Albert Moulin; Alexis Moulin,2,2,3,administrateur,1937,1937,Documents généraux
+provot-g,Provôt,G. Provot; G. Provôt,2,2,2,administrateur,1922,1926,Documents généraux
 guesde-p,Guesde,P. Guesde; Pierre Guesde,2,2,2,administrateur,1926,1937,Documents généraux
 rousset-bert-h,Rousset-Bert,Henri Rousset-Bert; Henry Rousset-Bert,2,2,2,administrateur,1937,1951,Documents généraux
 lemaignen-r,Lemaignen,Robert Lemaignen,2,2,2,administrateur,1937,1951,Documents généraux
 savon-l,Savon,L. Savon,2,2,2,administrateur,1926,1937,Documents généraux
 et-rene-hachette,et René Hachette,et René Hachette,2,2,2,administrateur,1919,1924,Sociétés
-naud-j,Naud,J. Naud,1,1,15,administrateur,1920,1953,Documents généraux; Sociétés
-dugardin,Dugardin,Dugardin,1,1,14,administrateur,1925,1953,Documents généraux; Sociétés
+naud-j,Naud,J. Naud; Joseph Naud,1,1,17,administrateur,1920,1953,Documents généraux; Sociétés
+dugardin-m,Dugardin,Dugardin,1,1,14,administrateur,1925,1953,Documents généraux; Sociétés
+berthelier-f,Berthelier,F. Berthelier; Ferdinand Berthelier,1,1,12,administrateur,1914,1937,Documents généraux; Sociétés
 wibratte-l,Wibratte,L. Wibratte; Louis Wibratte,1,1,11,administrateur,1925,1953,Documents généraux; Sociétés
-getten,Getten,Getten,1,1,10,administrateur,1917,1933,Documents généraux; Sociétés
-berthelier-f,Berthelier,F. Berthelier,1,1,10,administrateur,1914,1937,Documents généraux; Sociétés
+raindre-j,Raindre,J. Raindre; Jacques Raindre,1,1,10,administrateur,1912,1931,Documents généraux; Sociétés
+robaglia-b,Robaglia 1,B. Robaglia; Barthélémy Robaglia; Barthélémy Robaglia 1,1,1,10,administrateur,1922,1940,Documents généraux; Sociétés
+getten,Getten,Getten,1,1,9,administrateur,1917,1933,Documents généraux; Sociétés
 getten-p,Getten,P. Getten,1,1,8,administrateur,1937,1953,Documents généraux; Sociétés
-robaglia-b,Robaglia,B. Robaglia,1,1,8,administrateur,1925,1940,Documents généraux; Sociétés
 lanino-e,Lanino,E. Lanino,1,1,8,administrateur,1925,1940,Documents généraux; Sociétés
-raindre-j,Raindre,J. Raindre,1,1,8,administrateur,1912,1931,Sociétés
 boyer-h,Boyer,H.-E. Boyer,1,1,7,administrateur,1922,1945,Documents généraux; Sociétés
 einhorn-s,Einhorn,Einhorn; S. Einhorn,1,1,7,administrateur,1912,1925,Documents généraux; Sociétés
 boyer,Boyer,Boyer,1,1,7,administrateur,1917,1933,Sociétés
@@ -43,26 +44,20 @@ meunier,Meunier,Meunier,1,1,4,administrateur,1912,1920,Sociétés
 poggioli-a,Poggioli,Ange Poggioli,1,1,3,administrateur,1921,1926,Documents généraux; Sociétés
 boussac,Boussac,Boussac,1,1,3,administrateur,1920,1922,Documents généraux; Sociétés
 dewavrin-h,Dewavrin,Dewavrin,1,1,3,administrateur,1920,1922,Documents généraux; Sociétés
-lorthiois,Lorthiois,Lorthiois,1,1,3,administrateur,1920,1922,Documents généraux; Sociétés
 guerindon-e,Guérindon,E. Guérindon; E. Guérindon. 6,1,1,3,administrateur,1921,1937,Documents généraux; Sociétés
-meyer-a,Meyer,A. Meyer; André Meyer,1,1,3,administrateur,1937,1940,Documents généraux; Sociétés
 fassica-apte-mikael-a,Fassica Apte Mikael,Ato Fassica Apte Mikael; Atto Fassica Apte Mikael,1,1,3,administrateur,1925,1931,Sociétés
 estrine-l,Estrine,Estrine; Lucien Estrine,1,1,3,administrateur,1919,1925,Sociétés
 semana-j,Semana,J. Semana; Joseph Semana; Semana,1,1,3,administrateur,1919,1925,Sociétés
-f-gorchs-chacou,F Gorchs-Chacou,F Gorchs-Chacou,2,1,2,vice_president,1922,1922,Documents généraux
-berthelier,Berthelier,Berthelier,1,1,2,administrateur,1922,1922,Documents généraux; Sociétés
-j-naud,J Naud,J Naud,1,1,2,administrateur,1922,1922,Documents généraux; Sociétés
-j-raindre,J Raindre,J Raindre,1,1,2,administrateur,1922,1922,Documents généraux; Sociétés
-b-robaglia,B Robaglia 1,B Robaglia; B Robaglia 1,1,1,2,administrateur,1922,1922,Documents généraux; Sociétés
 van-luppen-j,Van Luppen,Joseph Van Luppen,1,1,2,president,1922,1926,Documents généraux
+allain-m,Allain,Maurice Allain,1,1,2,administrateur,1922,1926,Documents généraux
 bourel-h,Bourel,Henry Bourel,1,1,2,administrateur,1922,1926,Documents généraux
 de-brommer-f,de Brommer,Frédéric de Brommer,1,1,2,administrateur,1922,1926,Documents généraux
+de-la-chesnais-e,de la Chesnais,Édouard de la Chesnais,1,1,2,administrateur,1922,1926,Documents généraux
 fernandez-g,Fernandez,Gustave Fernandez,1,1,2,administrateur,1922,1926,Documents généraux
-g-philippar,G Philippar,G Philippar,1,1,2,vice_president,1922,1922,Documents généraux; Sociétés
-h-bontoux,H Bontoux,H Bontoux,1,1,2,directeur_general,1922,1922,Documents généraux; Sociétés
-f-roussel,F Roussel,F Roussel,1,1,2,directeur_general,1922,1922,Documents généraux; Sociétés
+bontoux-h,Bontoux,Henri Bontoux,1,1,2,directeur_general,1922,1922,Documents généraux; Sociétés
 coubeche-a,Coubèche,Ali Coubèche,1,1,2,administrateur,1922,1926,Documents généraux
-galula-j,Galula,Galula,1,1,2,administrateur,1920,1922,Documents généraux; Sociétés
+galula-j,Galula,Galula; Jules Galula,1,1,2,administrateur,1920,1922,Documents généraux; Sociétés
+lorthiois-j,Lorthiois,Jules Lorthiois,1,1,2,administrateur,1920,1922,Documents généraux; Sociétés
 kahn-s,Kahn,Stéphane Kahn,1,1,2,administrateur,1920,1922,Documents généraux; Sociétés
 schwob-j,Schwob,James Schwob,1,1,2,administrateur,1920,1922,Documents généraux; Sociétés
 perben-l,Perben,L. Perben,1,1,2,administrateur,1926,1937,Documents généraux
@@ -73,16 +68,16 @@ j-frederic-bloch-laine,J.-Frédéric Bloch-Lainé,J.-Frédéric Bloch-Lainé,1,1
 roume-e,Roume,E. Roume,1,1,2,administrateur,1912,1914,Sociétés
 carraby-c,Carraby,C. Carraby,1,1,2,administrateur,1912,1914,Sociétés
 berthelier-p,Berthelier,P. Berthelier,1,1,2,administrateur,1937,1940,Sociétés
+meyer-a,Meyer,A. Meyer,1,1,2,administrateur,1937,1940,Sociétés
 bevierre-h,Bevierre,H. Bevierre,1,1,2,administrateur,1937,1940,Sociétés
 wescat-g,Wescat,G. P. Wescat,1,1,2,administrateur,1945,1948,Sociétés
 chefneux,Chefneux,Chefneux,1,1,2,administrateur,1898,1901,Sociétés
+denisane-r,Denisane,Denisane; Raoul Denisane,1,1,2,administrateur,1898,1901,Sociétés
+lacarriere-h,Lacarrière,Henri Lacarrière; Lacarrière,1,1,2,administrateur,1898,1901,Sociétés
 barthelemy-l,Barthélémy,L. Barthélemy; Louis Barthélémy,1,1,2,administrateur,1899,1925,Sociétés
-besson-l,Besson,Léon Besson; Léonce Besson,1,1,2,administrateur,1919,1925,Sociétés
 roubaud-p,Roubaud,P. Roubaud; Paul Roubaud,1,1,2,administrateur,1919,1925,Sociétés
 tardieu-l,Tardieu,L. Tardieu; Léon Tardieu,1,1,2,administrateur,1919,1925,Sociétés
-ce-allain,ce Allain,ce Allain,1,1,1,administrateur,1922,1922,Documents généraux
-fille-de-francisque-bonnardel,fille de Francisque Bonnardel,fille de Francisque Bonnardel,1,1,1,administrateur,1922,1922,Documents généraux
-fdt-hplm,fdt HPLM],fdt HPLM],1,1,1,administrateur,1922,1922,Documents généraux
+getten-m,Getten,Maxime Getten,1,1,1,vice_president,1922,1922,Documents généraux
 prince-l-radziwill,prince L. Radziwill,prince L. Radziwill,1,1,1,administrateur,1922,1922,Documents généraux
 alf-s-gyger,Alf. S. Gyger,Alf. S. Gyger,1,1,1,president,1926,1926,Documents généraux
 dubail-pere-l,Dubail père,L. Dubail père,1,1,1,administrateur,1926,1926,Documents généraux
@@ -91,14 +86,10 @@ pays-a-djibouti-a,Pays à Djibouti,A. Pays à Djibouti,1,1,1,administrateur,1926
 maitre-a-casablanca-f,Maître à Casablanca,F. Maître à Casablanca,1,1,1,administrateur,1926,1926,Documents généraux
 marceron-m,Marceron,Marceron,1,1,1,administrateur,1926,1926,Documents généraux
 lemaignen,Lemaignen,Lemaignen,1,1,1,administrateur,1926,1926,Documents généraux
-allain-m,Allain,Maurice Allain,1,1,1,administrateur,1926,1926,Documents généraux
-de-la-chesnais-e,de la Chesnais,Édouard de la Chesnais,1,1,1,administrateur,1926,1926,Documents généraux
 dureault-h,Duréault,Henry Duréault,1,1,1,administrateur,1926,1926,Documents généraux
 nemirovsky-l,Nemirovsky,Léon Nemirovsky,1,1,1,administrateur,1926,1926,Documents généraux
 dukelsky-dickler-s,Dukelsky-Dickler,Samuel Dukelsky-Dickler,1,1,1,administrateur,1926,1926,Documents généraux
 de-la-hautiere-r,de la Hautière,Raymond de la Hautière,1,1,1,administrateur,1926,1926,Documents généraux
-roussel-f,Roussel,F. Roussel,1,1,1,administrateur,1926,1926,Documents généraux
-provot-g,Provot,G. Provot,1,1,1,administrateur,1926,1926,Documents généraux
 prince-l-radzivill,prince L. Radzivill,prince L. Radzivill,1,1,1,administrateur,1926,1926,Documents généraux
 cuirs,Cuirs,Cuirs,1,1,1,administrateur,1926,1926,Documents généraux
 bamismus-a,Bamismus,Abdalla Bamismus,1,1,1,administrateur,1926,1926,Documents généraux
@@ -106,19 +97,23 @@ cafe-r,Café,Café,1,1,1,administrateur,1926,1926,Documents généraux
 ghaleb,Ghaleb,Ghaleb,1,1,1,administrateur,1926,1926,Documents généraux
 en-nom-collectif-s,en nom collectif,Sté en nom collectif,1,1,1,administrateur,1926,1926,Documents généraux
 soieries,Soieries,Soieries,1,1,1,administrateur,1926,1926,Documents généraux
+moulin-a,Moulin,A. Moulin,1,1,1,administrateur,1937,1937,Documents généraux
 boyer-e,Boyer,E. Boyer,1,1,1,vice_president,1937,1937,Documents généraux
+meyer-a-andre,Meyer,André Meyer,1,1,1,administrateur,1937,1937,Documents généraux
 wibrate-l,Wibrate,Louis Wibrate,1,1,1,administrateur,1937,1937,Documents généraux
 tasfae-tagagne-a,Tasfae Tagagne,Ato Tasfae Tagagne,1,1,1,administrateur,1937,1937,Documents généraux
+moulin-a-alexis,Moulin,Alexis Moulin,1,1,1,administrateur,1937,1937,Documents généraux
+moulin-a-albert,Moulin,Albert Moulin,1,1,1,administrateur,1937,1937,Documents généraux
 baudoin-p,Baudoin,Paul Baudoin,1,1,1,administrateur,1937,1937,Documents généraux
 bouvier-r,Bouvier,René Bouvier,1,1,1,administrateur,1937,1937,Documents généraux
 piquet-v,Piquet,Victor Piquet,1,1,1,administrateur,1937,1937,Documents généraux
-plion-a,Plion,Antoine Plion,1,1,1,administrateur,1937,1937,Documents généraux
+plion-a-antoine,Plion,Antoine Plion,1,1,1,administrateur,1937,1937,Documents généraux
 limongelli-e,Limongelli,Emmanuel Limongelli,1,1,1,administrateur,1937,1937,Documents généraux
 de-fages-de-latour-l,de Fages de Latour,Louis de Fages de Latour,1,1,1,president_directeur_general,1951,1951,Documents généraux
 arcelin-p,Arcelin,Pierre Arcelin,1,1,1,administrateur,1951,1951,Documents généraux
 fuyet-a,Fuyet,André Fuyet,1,1,1,administrateur,1951,1951,Documents généraux
 urbaine-fonciere-africaine-s,urbaine foncière africaine,Sté urbaine foncière africaine,1,1,1,administrateur,1951,1951,Documents généraux
-r-goury-du-roslan,R Goury du Roslan,R Goury du Roslan,1,1,1,vice_president,1951,1951,Documents généraux
+goury-du-roslan-r,Goury du Roslan,Robert Goury du Roslan,1,1,1,vice_president,1951,1951,Documents généraux
 lamotte,Lamotte,Lamotte,1,1,1,vice_president,1951,1951,Documents généraux
 caruel-j,Caruel,Jacqueline Caruel,1,1,1,administrateur,1951,1951,Documents généraux
 moreau-neret-a,Moreau-Néret,André Moreau-Néret,1,1,1,president,1951,1951,Documents généraux
@@ -129,8 +124,9 @@ d-eichthal-r,d'Eichthal,Robert d'Eichthal,1,1,1,administrateur,1951,1951,Documen
 faye-j,Faye,Jean Faye,1,1,1,administrateur,1951,1951,Documents généraux
 de-flers-f,de Flers,François de Flers,1,1,1,administrateur,1951,1951,Documents généraux
 henry-greard-o,Henry-Gréard,Octave Henry-Gréard,1,1,1,administrateur,1951,1951,Documents généraux
-laurent-j,Laurent,Jean Laurent,1,1,1,administrateur,1951,1951,Documents généraux
+laurent-j-jean,Laurent,Jean Laurent,1,1,1,administrateur,1951,1951,Documents généraux
 hure-j,Huré,J. Huré,1,1,1,administrateur,1926,1926,Documents généraux
+charon-a,Charon,André Charon,1,1,1,administrateur,1926,1926,Documents généraux
 vidal-j,Vidal,J. Vidal,1,1,1,administrateur,1926,1926,Documents généraux
 lepanot-p,Lepanot,P. Lepanot,1,1,1,administrateur,1926,1926,Documents généraux
 gronier-a,Gronier,A. Gronier,1,1,1,administrateur,1926,1926,Documents généraux
@@ -147,30 +143,31 @@ cote-c,Cote,Ch. Michel Cote,1,1,1,president,1925,1925,Sociétés
 rouffe-g,Rouffé,G. Rouffé,1,1,1,administrateur,1925,1925,Sociétés
 transit-a-djibouti,transit à Djibouti,transit à Djibouti,1,1,1,administrateur,1925,1925,Sociétés
 a-i,A,Ilg A,1,1,1,administrateur,1898,1898,Sociétés
-r-baudouy,R Baudouy,R Baudouy,1,1,1,administrateur,1898,1898,Sociétés
+baudouy-r,Baudouy,René Baudouy,1,1,1,administrateur,1898,1898,Sociétés
 caro,Caro,Caro,1,1,1,administrateur,1898,1898,Sociétés
 docks-de-constantinople,Docks de Constantinople,Docks de Constantinople,1,1,1,administrateur,1898,1898,Sociétés
-denisane,Denisane,Denisane,1,1,1,administrateur,1898,1898,Sociétés
 deves,Devès,Devès,1,1,1,administrateur,1898,1898,Sociétés
-lacarriere,Lacarrière,Lacarrière,1,1,1,administrateur,1898,1898,Sociétés
 langsdorff,Langsdorff,Langsdorff,1,1,1,administrateur,1898,1898,Sociétés
-seyrig-w,Seyrig,Seyrig,1,1,1,administrateur,1898,1898,Sociétés
+seyrig-t-theophile,Seyrig,Théophile Seyrig,1,1,1,administrateur,1898,1898,Sociétés
 les-etudes,3° Les études,3° Les études,1,1,1,administrateur,1898,1898,Sociétés
-h-lacarriere,H Lacarrière,H Lacarrière,1,1,1,administrateur,1901,1901,Sociétés
-r-denisane,R Denisane,R Denisane,1,1,1,administrateur,1901,1901,Sociétés
 ilg-a,Ilg,A. Ilg,1,1,1,administrateur,1901,1901,Sociétés
 ed-caro,Ed. Caro,Ed. Caro,1,1,1,administrateur,1901,1901,Sociétés
-t-seyrig,T Seyrig,T Seyrig,1,1,1,administrateur,1901,1901,Sociétés
+seyrig-t-theodore,Seyrig,Théodore Seyrig,1,1,1,administrateur,1901,1901,Sociétés
+suais-a,Suais,Abel Suais,1,1,1,administrateur,1901,1901,Sociétés
 teillard-h,Teillard,H. Teillard,1,1,1,administrateur,1901,1901,Sociétés
+maury-a,Maury,Arthur Maury,1,1,1,administrateur,1901,1901,Sociétés
+thibault-a,Thibault,Alphonse Thibault,1,1,1,administrateur,1901,1901,Sociétés
+suais-est-directeur-general-a,Suais est directeur général,Abel Suais est directeur général,1,1,1,administrateur,1901,1901,Sociétés
 le-ballastage,64. Le ballastage,64. Le ballastage,1,1,1,administrateur,1905,1905,Sociétés
 l-installation-des-ateliers-de-reparation-de-dire-,l'installation des ateliers de réparation de Diré-Daoua,l'installation des ateliers de réparation de Diré-Daoua,1,1,1,administrateur,1905,1905,Sociétés
 galuld,Galuld,Galuld,1,1,1,administrateur,1920,1920,Sociétés
 guigniony-g,Guigniony,Guigniony,1,1,1,administrateur,1920,1920,Sociétés
+lorthiois,Lorthiois,Lorthiois,1,1,1,administrateur,1920,1920,Sociétés
 kahn,Kahn,Kahn,1,1,1,administrateur,1920,1920,Sociétés
 ruyters,Ruyters,Ruyters,1,1,1,administrateur,1920,1920,Sociétés
 sommer-e,Sommer,E. Sommer,1,1,1,administrateur,1928,1928,Sociétés
 levi-g,Lévi,Gaston Lévi,1,1,1,administrateur,1928,1928,Sociétés
-gompel-r,Gompel,Robert Gompel,1,1,1,administrateur,1928,1928,Sociétés
+gompel-r-robert,Gompel,Robert Gompel,1,1,1,administrateur,1928,1928,Sociétés
 levi-a,Lévi,Abel Lévi,1,1,1,administrateur,1928,1928,Sociétés
 meunier-r,Meunier,René Meunier,1,1,1,administrateur,1928,1928,Sociétés
 delompre-m,Delompré,Delompré,1,1,1,administrateur,1928,1928,Sociétés
@@ -178,6 +175,7 @@ defrance-e,Defrance,Edmond Defrance,1,1,1,administrateur,1899,1899,Sociétés
 de-la-colonie,DE LA COLONIE,DE LA COLONIE,1,1,1,administrateur,1913,1913,Sociétés
 costa-de-beauregard-g,Costa de Beauregard,Gonzague Costa de Beauregard,1,1,1,president,1925,1925,Sociétés
 canet-a,Canet,A. Canet,1,1,1,administrateur,1925,1925,Sociétés
+besson-l-leon,Besson,Léon Besson,1,1,1,administrateur,1919,1919,Sociétés
 besson,Besson,Besson,1,1,1,administrateur,1919,1919,Sociétés
 roubaud,Roubaud,Roubaud,1,1,1,administrateur,1919,1919,Sociétés
 tardieu,Tardieu,Tardieu,1,1,1,administrateur,1919,1919,Sociétés
@@ -185,6 +183,7 @@ michel-cote,Michel-Cote,Michel-Cote,1,1,1,administrateur,1919,1919,Sociétés
 gimon,Gimon,Gimon,1,1,1,administrateur,1919,1919,Sociétés
 gorchs-chacou,Gorchs-Chacou,Gorchs-Chacou,1,1,1,administrateur,1919,1919,Sociétés
 ann-parisiennes,Ann. Parisiennes,Ann. Parisiennes,1,1,1,administrateur,1919,1919,Sociétés
+besson-l-leonce,Besson,Léonce Besson,1,1,1,administrateur,1925,1925,Sociétés
 duparchy,Duparchy,Duparchy,1,1,1,administrateur,1899,1899,Sociétés
 vigouroux,Vigouroux,Vigouroux,1,1,1,administrateur,1899,1899,Sociétés
 senevez,] Senevez,] Senevez,1,1,1,administrateur,1899,1899,Sociétés

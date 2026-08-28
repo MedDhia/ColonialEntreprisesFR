@@ -1,34 +1,31 @@
 company_id_1,company_id_2,period,weight,shared_directors
-cheminferdakarsaintlouis,cheminferdakarstlouis,1914_1929,6,deves-p; guilliot-c; lorieux-l; pouyer-m; roland-gosselin-j; vieuxtemps
+cheminferdakarsaintlouis,cheminferdakarstlouis,1914_1929,7,deves-p; ganderax-e; guilliot-c; lorieux-l; pouyer-m; roland-gosselin-j; vieuxtemps
 huileriesrizeriesouestafricaines,silicocalcaireafricaine,1914_1929,4,fourneau-l; gaudart-r; legrand-r; oudot-l
-electricitesenegal,messageriesafricaines,1914_1929,3,delmas-p; maurel-l; robert-m
+electricitesenegal,messageriesafricaines,1914_1929,3,delmas-p-philippe; maurel-l-lucien; robert-m-max
 minesfaleme,minesfalemegambie,1914_1929,3,de-batz-r; duchesne-fournet-p; legrand-g
-banqueafriqueoccidentale,electricitesenegal,1914_1929,2,maurel-l; prom-l
-banqueafriqueoccidentale,salinssinesaloum,1914_1929,2,maurel-l; ph-delmas
-chauxcimentssenegal,messageriesafricaines,1914_1929,2,maurel-j; maurel-l
-electricitesenegal,salinssinesaloum,1914_1929,2,delmas-p; maurel-l
-messageriesafricaines,salinssinesaloum,1914_1929,2,delmas-p; maurel-l
 chauxcimentssenegal,fonciereouestafricain,1914_1929,2,froment-guieysse-g; picot-h
 chauxcimentssenegal,immobilierethies,1914_1929,2,froment-guieysse-g; picot-h
 fonciereouestafricain,immobilierethies,1914_1929,2,froment-guieysse-g; picot-h
-industrielleafricaine,messageriesafricaines,1914_1929,2,delmas-p; philippart-f
-industrielleafricaine,salinssinesaloum,1914_1929,2,delmas-p; mathon-e
-commercialeafricaine,commercialeafricainesuitepascalbuhan,1914_1929,2,buhan-p; thube-a
+chauxcimentssenegal,messageriesafricaines,1914_1929,2,maurel-j-joseph; maurel-l-lucien
+electricitesenegal,salinssinesaloum,1914_1929,2,delmas-p-philippe; maurel-l-lucien
+messageriesafricaines,salinssinesaloum,1914_1929,2,delmas-p-philippe; maurel-l-lucien
+industrielleafricaine,messageriesafricaines,1914_1929,2,delmas-p-philippe; philippart-f
+industrielleafricaine,salinssinesaloum,1914_1929,2,delmas-p-philippe; mathon-e
+commercialeafricaine,commercialeafricainesuitepascalbuhan,1914_1929,2,buhan-p-pascal; thube-a
+banqueafriqueoccidentale,electricitesenegal,1914_1929,1,prom-l
 banqueafriqueoccidentale,cheminferdakarsaintlouis,1914_1929,1,deves-g
-banqueafriqueoccidentale,chauxcimentssenegal,1914_1929,1,maurel-l
-banqueafriqueoccidentale,messageriesafricaines,1914_1929,1,maurel-l
-chauxcimentssenegal,electricitesenegal,1914_1929,1,maurel-l
-chauxcimentssenegal,salinssinesaloum,1914_1929,1,maurel-l
+banqueafriqueoccidentale,salinssinesaloum,1914_1929,1,ph-delmas
 banquecommercialeafricaine,silicocalcaireafricaine,1914_1929,1,angoulvant-g
+chauxcimentssenegal,electricitesenegal,1914_1929,1,maurel-l-lucien
+chauxcimentssenegal,salinssinesaloum,1914_1929,1,maurel-l-lucien
 cheminferdakarsaintlouis,messageriesafricaines,1914_1929,1,deves-p
 cheminferdakarstlouis,messageriesafricaines,1914_1929,1,deves-p
 etablissementsbartheslesieur,senegalaisevoieseconomiques,1914_1929,1,barthes-j
-commercialeindustrielleoutremer,electricitesenegal,1914_1929,1,frere-m
-electricitesenegal,industrielleafricaine,1914_1929,1,delmas-p
-minesfaleme,minesfalemegambie,1930_1944,5,charlier-a; de-la-mazeliere-o; duchesne-fournet-p; lederlin-h; martin-j
+electricitesenegal,industrielleafricaine,1914_1929,1,delmas-p-philippe
+minesfaleme,minesfalemegambie,1930_1944,5,charlier-a; de-la-mazeliere; duchesne-fournet-p; lederlin-h; martin-j
 brasseriesouestafricain,hoteliereouestafricainchoa,1930_1944,2,lorfevre-j; orcel-j
-creditfoncierouestafricain,minesfaleme,1930_1944,2,merlin; merlin-m
-manutentionafricaine,salinssinesaloum,1930_1944,2,delmas-p; o-quin-p
+creditfoncierouestafricain,minesfaleme,1930_1944,2,merlin; merlin-m-martial
+manutentionafricaine,salinssinesaloum,1930_1944,2,delmas-p-pierre; o-quin-p
 creditfoncierafriqueequatorialebrazzaville,creditfoncierouestafricain,1930_1944,1,poilay-e
 banqueafriqueoccidentale,creditfoncierouestafricain,1930_1944,1,nouvion-h
 banquecommercialeafricaine,creditfoncierouestafricain,1930_1944,1,bouvier-r
@@ -39,10 +36,10 @@ messageriesafricaines,plantationscasamance,1930_1944,1,begouen-m
 commercialeafricainesuitepascalbuhan,messageriesafricaines,1930_1944,1,thube-a
 commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons,messageriesafricaines,1930_1944,1,marceron-m
 commerceafricain,lesieurafrique,1945_1962,5,bastin-j; lemaigre-dubreuil-j; lesieur-h; lesieur-p; tascher-c
-messageriesafricaines,messageriessenegal,1945_1962,3,delmas-p; durand-reville-l; villars-r
+messageriesafricaines,messageriessenegal,1945_1962,3,delmas-p-pierre; durand-reville-l; villars-r
 banquecommercialeafricaine,immobilierefinanciereafricaine,1945_1962,2,furiet-c; sellier-p
 banquecommercialeafricaine,creditfoncierouestafricain,1945_1962,2,achard-g; poilay-e
-manutentionafricaine,unionsenegalaiseindustriesmaritimes,1945_1962,2,delmas-p; delmas-r
+manutentionafricaine,unionsenegalaiseindustriesmaritimes,1945_1962,2,delmas-p-pierre; delmas-r-robert
 commercialeportsafricains,messageriesafricaines,1945_1962,2,fossorier-r; lemaignen-r
 commercialeportsafricains,messageriessenegal,1945_1962,2,dugue-p; moreau-neret-a
 banqueafriqueoccidentale,creditfoncierouestafricain,1945_1962,1,decron-c
@@ -54,11 +51,11 @@ commercialeportsafricains,creditfoncierouestafricain,1945_1962,1,davillier-j
 commercialeportsafricains,eauxelectriciteouestafricain,1945_1962,1,davillier-j
 creditfoncierouestafricain,eauxelectriciteouestafricain,1945_1962,1,davillier-j
 creditfoncierafrique,creditfoncierouestafricain,1945_1962,1,castres-saint-martin-g
-manutentionafricaine,messageriesafricaines,1945_1962,1,delmas-p
-manutentionafricaine,messageriessenegal,1945_1962,1,delmas-p
-messageriesafricaines,unionsenegalaiseindustriesmaritimes,1945_1962,1,delmas-p
-messageriessenegal,unionsenegalaiseindustriesmaritimes,1945_1962,1,delmas-p
-minesfaleme,minesfalemegambie,pre_1914,2,charbonnel-h; watel-p
+manutentionafricaine,messageriesafricaines,1945_1962,1,delmas-p-pierre
+manutentionafricaine,messageriessenegal,1945_1962,1,delmas-p-pierre
+messageriesafricaines,unionsenegalaiseindustriesmaritimes,1945_1962,1,delmas-p-pierre
+messageriessenegal,unionsenegalaiseindustriesmaritimes,1945_1962,1,delmas-p-pierre
+minesfaleme,minesfalemegambie,pre_1914,3,charbonnel-h; masse-r; watel-p
 banqueafriqueoccidentale,banquesenegal,pre_1914,1,deves-g
 banqueafriqueoccidentale,cheminferdakarsaintlouis,pre_1914,1,deves-g
 banquesenegal,cheminferdakarsaintlouis,pre_1914,1,deves-g
