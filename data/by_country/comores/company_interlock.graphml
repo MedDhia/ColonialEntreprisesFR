@@ -15,7 +15,7 @@
     <node id="colonialebambao">
       <data key="n_label">Société Coloniale de Bambao, puis Comores-Bambao</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">21</data>
+      <data key="n_n_directors">18</data>
       <data key="n_territory">Comores</data>
     </node>
     <node id="colonialebambaobambao">
@@ -33,7 +33,7 @@
     <node id="grandecomore">
       <data key="n_label">Grande-Comore</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">12</data>
       <data key="n_territory">Comores</data>
     </node>
     <edge id="e0" source="colonialebambao" target="colonialebambaobambao">

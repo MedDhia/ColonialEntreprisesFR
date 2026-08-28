@@ -47,12 +47,12 @@ unne,Unné,Unné,2,2,3,administrateur,1920,1922,Divers; Documentation générale
 g-r,G,Robert G,2,2,3,administrateur,1917,1927,Divers; Documentation générale
 reisser-e,Reisser,Edmond Reisser,2,2,3,president,1930,1937,Divers; Documentation générale
 roy-m,Roy,Marc Roy,2,2,3,president,1930,1937,Divers; Documentation générale
-alex-fanier,Alex. Fanier,Alex. Fanier; Alex. Fanier 7,2,2,3,administrateur,1930,1937,Divers; Documentation générale
 representee-par-m-jacques-fay,représentée par M. Jacques Faÿ,représentée par M. Jacques Faÿ,2,2,3,administrateur,1937,1937,Divers; Documentation générale
 le-quesne-r,Le Quesne,Raymond Le Quesne,2,2,3,administrateur,1931,1937,Divers; Documentation générale
 legasse-a,Légasse,A. Légasse; Arnaud Légasse,2,2,3,administrateur,1937,1937,Documentation générale
 pelissier-tanon-g,Pélissier-Tanon,Guy Pélissier-Tanon,2,2,3,administrateur,1924,1951,Divers; Documentation générale
 tanon-c,Tanon,Claude Tanon,2,2,3,administrateur,1924,1951,Divers; Documentation générale
+chappey,Chappey,Chappey,2,2,3,administrateur,1937,1945,
 walther,Walther,Walther,2,2,2,administrateur,1920,1922,Divers; Documentation générale
 papin-beaufond-t,Papin-Beaufond,Tomy Papin-Beaufond,2,2,2,president,1922,1922,Documentation générale
 picard-j,Picard,Jacques Picard,2,2,2,administrateur,1922,1922,Documentation générale
@@ -74,6 +74,9 @@ gober-e,Gober,Eugène Gober,2,2,2,administrateur,1927,1937,Divers; Documentation
 boutrouille-a,Boutrouille,A. Boutrouille,2,2,2,administrateur,1937,1951,Documentation générale
 legrand-a,Legrand,Albert Louis Legrand; André Legrand,2,2,2,administrateur,1931,1951,Divers; Documentation générale
 michel-a,Michel,Antoine Michel,2,2,2,administrateur,1927,1927,Commerce; Divers
+grandet-h,Grandet,H. Grandet,2,2,2,administrateur,1937,1945,
+dalloz-j,Dalloz,J. Dalloz,2,2,2,administrateur,1937,1945,
+bourbousson-a,Bourbousson,A. Bourbousson,2,2,2,administrateur,1937,1945,
 faye-j,Faye,J. Faye,2,2,2,administrateur,1938,1945,
 robaglia-b,Robaglia,B. Robaglia,2,2,2,administrateur,1931,1933,
 montegu-g,Montégu,G. Montégu,2,2,2,administrateur,1931,1933,
@@ -96,7 +99,6 @@ monsen-c,Monsen,Christian Monsen,1,1,4,administrateur,1924,1951,Divers; Document
 langrogne-e,Langrogne,E. Langrogne; Langrogne,1,1,4,administrateur,1931,1940,
 lasseigne-l,Lasseigne,L. Lasseigne; Lucien Lasseigne,1,1,4,president,1937,1948,
 calderon-f,Calderon,F. Calderon,1,1,4,administrateur,1937,1948,
-renevey-e,Renevey,Eugène Renevey; Renevey,1,1,4,administrateur,1879,1888,Mines et placers
 avisse-d,Avisse,Avisse,1,1,4,administrateur,1912,1925,
 massenet,Massenet,Massenet,1,1,4,administrateur,1912,1925,
 manufactures,Manufactures,Manufactures,1,1,4,administrateur,1911,1911,Mines et placers
@@ -121,18 +123,18 @@ soc-raffineries-de-sucre-de-saint-louis,Soc. Raffineries de sucre de Saint-Louis
 brun-p,Brun,P. Brun; Pierre Brun,1,1,3,administrateur,1912,1912,Divers
 merigeault-e,Merigeault,Merigeault,1,1,3,administrateur,1929,1933,
 harth-g,Harth,G. Harth,1,1,3,administrateur,1933,1940,
-puerari-commissaires-des-comptes-r-oblin-j,Puerari. Commissaires des comptes: R. Oblin,J. Puerari. Commissaires des comptes: R. Oblin,1,1,3,administrateur,1937,1945,
 barnabe-f,Barnabé,F. Barnabé,1,1,3,administrateur,1945,1953,
 duby-a,Duby,A. Duby,1,1,3,administrateur,1945,1953,
+mercier-pageyral-a,Mercier-Pageyral,A. Mercier-Pageyral,2,1,3,directeur,1937,1945,
 cellerier-j,Cellerier,J. Cellerier,1,1,3,administrateur,1927,1931,
 isnard-a,Isnard,A. Isnard,1,1,3,administrateur,1940,1948,
 dhormoys-p,DHORMOYS,Paul DHORMOYS; Paul Dhormoys,1,1,3,administrateur_delegue,1878,1883,Mines et placers
 de-lassus-saint-genies-p,de Lassus Saint-Geniès,Pierre de Lassus Saint-Geniès; de Lassus Saint-Geniès,1,1,3,administrateur,1879,1888,Mines et placers
+renevey,Renevey,Renevey,1,1,3,administrateur,1879,1888,Mines et placers
 dore,Doré,Doré,1,1,3,administrateur,1912,1917,
 mortier-p,Mortier,P. Mortier,1,1,3,administrateur,1940,1948,
 bahuet-a,Bahuet,A. Bahuet,1,1,3,administrateur,1945,1953,
 hermite-l,Hermite,L. Hermite,1,1,3,administrateur,1945,1953,
-prive-commissaires-aux-comptes-m-cunin-p,Privé. Commissaires aux comptes: M. Cunin,P. Privé. Commissaires aux comptes: M. Cunin,1,1,3,administrateur,1945,1953,
 besse-e,Besse,Edmond Besse,1,1,2,president,1907,1927,Divers; Documentation générale
 segrestaa-l,Segrestaa,L.J. Segrestaa,1,1,2,administrateur,1907,1927,Divers; Documentation générale
 castillon-du-perron-a,Castillon du Perron,A. Castillon du Perron,1,1,2,administrateur,1907,1927,Divers; Documentation générale
@@ -153,14 +155,12 @@ le-peletier-p,Le Peletier,Paul Le Peletier,1,1,2,administrateur,1937,1937,Docume
 besse-j,Besse,Joseph Besse,1,1,2,administrateur,1937,1937,Divers; Documentation générale
 du-perron-g,du Perron,Gabriel du Perron,1,1,2,administrateur,1937,1937,Divers; Documentation générale
 poulalion-p,Poulalion,P. Poulalion,1,1,2,administrateur,1931,1937,Divers; Documentation générale
-hamon-n-b-j,Hamon. N. B,J. Hamon. N. B,1,1,2,administrateur,1931,1937,Divers; Documentation générale
 poincon-c,Poinçon,Charles Poinçon,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
 schuhmann-l,Schuhmann,L. Schuhmann; Lucien Schuhmann,1,1,2,administrateur,1929,1937,Documentation générale; Mines et placers
 fouquet-r,Fouquet,Robert Fouquet,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
 boesch,Boesch,Boesch,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
 hueber,Hueber,Hueber,1,1,2,administrateur,1933,1937,Documentation générale; Mines et placers
 devez-g,Devez,G. Devez,1,1,2,administrateur,1929,1937,Documentation générale; Mines et placers
-poulalion-n-b-p,Poulalion. N. B,P. Poulalion. N. B,1,1,2,administrateur,1929,1937,Documentation générale; Mines et placers
 marande,Marande,Marande,1,1,2,administrateur,1919,1937,Divers; Documentation générale
 seban-r,Seban,René Seban,1,1,2,president,1936,1937,Divers; Documentation générale
 paul-a,Paul,Alexandre Paul,1,1,2,administrateur,1936,1937,Divers; Documentation générale
@@ -197,12 +197,9 @@ mathias-h,Mathias,Henri Mathias,1,1,2,administrateur,1925,1925,Documentation gé
 bourgeois-a,Bourgeois,Adolphe Bourgeois,1,1,2,administrateur,1925,1925,Documentation générale
 h-schloss-j,H. Schloss,Julius H. Schloss,1,1,2,administrateur,1925,1925,Documentation générale
 nahar-h,Nahar,H. Nahar,1,1,2,administrateur,1925,1925,Documentation générale
-agent-bureaux-a-paris,agent. Bureaux à Paris,agent. Bureaux à Paris,1,1,2,administrateur,1925,1925,Documentation générale
 stala-j,Stala,J. Stala,1,1,2,administrateur,1925,1925,Documentation générale
-secretaire-general-traitement-des-alluvions,secrétaire général. Traitement des alluvions,secrétaire général. Traitement des alluvions,1,1,2,administrateur,1925,1925,Documentation générale
 herrewin-g,Herrewin,G. Herrewin; Georges Herrewin,1,1,2,administrateur,1923,1923,Divers
 brugiere,Brugière,Brugière,1,1,2,administrateur,1937,1940,Divers
-smet-micard-commissaires-des-comptes-mm-m-goldschi,Smet-Micard. Commissaires des comptes: MM. M. Goldschild,Smet-Micard. Commissaires des comptes: MM. M. Goldschild,1,1,2,administrateur,1940,1945,Divers
 smet-micard,Smet-Micard,Smet-Micard,1,1,2,administrateur,1948,1950,Divers
 lecocq-e,Lecocq,Eugène Lecocq,1,1,2,administrateur,1912,1912,Divers
 ziegel-f,Ziegel,Félix Ziegel; Félix Ziégel,1,1,2,administrateur,1912,1912,Divers
@@ -216,9 +213,10 @@ mallet-c,Mallet,Ch. Mallet,1,1,2,administrateur,1937,1940,
 puerari-j,Puerari,J. Puerari,1,1,2,administrateur,1948,1953,
 harth-a,Harth,A. Harth,1,1,2,administrateur,1948,1953,
 pallier-j,Pallier,J. Pallier,1,1,2,administrateur,1948,1953,
-bellanger-commissaires-des-comptes-r-oblin-a,Bellanger. Commissaires des comptes: R. Oblin,A. Bellanger. Commissaires des comptes: R. Oblin,1,1,2,administrateur,1948,1953,
-mercier-pageyral-a,Mercier-Pageyral,A. Mercier-Pageyral,2,1,2,administrateur_delegue,1938,1945,
-chappey,Chappey,Chappey,1,1,2,administrateur,1940,1945,
+mathis-c,Mathis,Ch. Mathis; Charles Mathis,1,1,2,commissaire_aux_comptes,1912,1937,
+matte-j,Matte,J. Matte,1,1,2,administrateur,1937,1938,
+chapuis-h,Chapuis,H. Chapuis,1,1,2,administrateur,1937,1938,
+piron-p,Piron,P. Piron,1,1,2,administrateur,1937,1938,
 riocreux-l,Riocreux,L. Riocreux,1,1,2,administrateur,1945,1948,
 off-lh,off. LH,off. LH,1,1,2,administrateur,1878,1878,Mines et placers
 arnoux,Arnoux,Arnoux,1,1,2,administrateur,1879,1883,Mines et placers
@@ -259,7 +257,6 @@ emm-levalois,Emm. Levalois,Emm. Levalois,1,1,1,administrateur,1922,1922,Document
 emm-rey,Emm. Rey,Emm. Rey,1,1,1,administrateur,1922,1922,Documentation générale
 ruillier-j,Ruillier,Jules Ruillier,1,1,1,administrateur,1922,1922,Documentation générale
 st-aude-stil,St-Aude Stil,St-Aude Stil,1,1,1,administrateur,1922,1922,Documentation générale
-admin-guadeloupe-l-amerique-francaise,admin. Guadeloupe: L'Amérique française,admin. Guadeloupe: L'Amérique française,1,1,1,administrateur,1922,1922,Documentation générale
 pointe-a-pitre,Pointe-à-Pitre,Pointe-à-Pitre,1,1,1,administrateur,1922,1922,Documentation générale
 hebd,Hebd,Hebd,1,1,1,administrateur,1922,1922,Documentation générale
 haugou-r,Haugou,Haugou,1,1,1,administrateur,1927,1927,Documentation générale
@@ -299,7 +296,6 @@ ruse-j,Rusé,Joseph Rusé,1,1,1,administrateur,1937,1937,Documentation général
 bazin-v,Bazin,Victor Bazin,1,1,1,administrateur,1937,1937,Documentation générale
 grosjean-r,Grosjean,Roger Grosjean,1,1,1,administrateur,1937,1937,Documentation générale
 f-l-dalmeyda,F-L. Dalmeyda,F-L. Dalmeyda,1,1,1,administrateur,1937,1937,Documentation générale
-gabrio-n-b-c,Gabrio. N. B,C.-J. Gabrio. N. B,1,1,1,administrateur,1937,1937,Documentation générale
 pierrot-l,Pierrot,Louis Pierrot,1,1,1,administrateur,1937,1937,Documentation générale
 mathieu-g,Mathieu,Georges Mathieu,1,1,1,administrateur,1937,1937,Documentation générale
 charon-a,Charon,André Charon,1,1,1,administrateur,1937,1937,Documentation générale
@@ -319,19 +315,12 @@ deschamps-e,Deschamps,Émile Deschamps,1,1,1,administrateur,1937,1937,Documentat
 de-la-bourdonnaye-a,de la Bourdonnaye,Alphonse de la Bourdonnaye,1,1,1,administrateur,1937,1937,Documentation générale
 robert-m,Robert,Max Robert,1,1,1,administrateur,1937,1937,Documentation générale
 diligenti-g,Diligenti,G. Diligenti,1,1,1,administrateur,1937,1937,Documentation générale
-bunel-pointe-a-pitre-l-c,Bunel. Pointe-à-Pitre. L,C. Bunel. Pointe-à-Pitre. L,1,1,1,administrateur,1937,1937,Documentation générale
 albert-c,Albert,Ch. Albert,1,1,1,administrateur,1937,1937,Documentation générale
-alimentation-andre-alexis,Alimentation. André Alexis,Alimentation. André Alexis,1,1,1,administrateur,1937,1937,Documentation générale
-transit-ferdinand-d-alexis,transit. Ferdinand d'Alexis,transit. Ferdinand d'Alexis,1,1,1,administrateur,1937,1937,Documentation générale
 tissus,Tissus,Tissus,1,1,1,administrateur,1937,1937,Documentation générale
-cycles-harold-audebert,cycles. Harold Audebert,cycles. Harold Audebert,1,1,1,administrateur,1937,1937,Documentation générale
 roseau-e,Roseau,Emmanuel Roseau,1,1,1,administrateur,1937,1937,Documentation générale
 ing-r-huyghues-despointes,ing. R. Huyghues-Despointes,ing. R. Huyghues-Despointes,1,1,1,administrateur,1937,1937,Documentation générale
 clement-c,Clément,Charles Clément,1,1,1,administrateur,1937,1937,Documentation générale
-gaz-marcel-didier-fabrique-d-agglomeres,gaz. Marcel Didier. Fabrique d'agglomérés,gaz. Marcel Didier. Fabrique d'agglomérés,1,1,1,administrateur,1937,1937,Documentation générale
-carreaux-de-ciment-r-domergue,carreaux de ciment. R. Domergue,carreaux de ciment. R. Domergue,1,1,1,administrateur,1937,1937,Documentation générale
 chocolat-m-vauzanges,chocolat. (M. Vauzanges,chocolat. (M. Vauzanges,1,1,1,administrateur,1937,1937,Documentation générale
-etabl-frederic-bordaz,Établ. Frédéric Bordaz,Établ. Frédéric Bordaz,1,1,1,administrateur,1937,1937,Documentation générale
 saint-joseph,Saint-Joseph,Saint-Joseph,1,1,1,administrateur,1937,1937,Documentation générale
 larrouy-h,Larrouy,Henry Larrouy,1,1,1,administrateur,1937,1937,Documentation générale
 fabre-g,Fabre,Guy Fabre,1,1,1,administrateur,1937,1937,Documentation générale
@@ -351,33 +340,23 @@ peslier-l,Peslier,Lucien Peslier,1,1,1,administrateur,1937,1937,Documentation g�
 conrad-g,Conrad,Georges Conrad,1,1,1,administrateur,1937,1937,Documentation générale
 medicinaux-etablissement-a-cayenne,médicinaux). Établissement à Cayenne,médicinaux). Établissement à Cayenne,1,1,1,administrateur,1937,1937,Documentation générale
 halbron-h,Halbron,H. Halbron,1,1,1,administrateur,1937,1937,Documentation générale
-orlihac-n-b,Orlihac. N. B,Orlihac. N. B,1,1,1,administrateur,1937,1937,Documentation générale
 mausuy-j,Mausuy,J. Mausuy,1,1,1,administrateur,1937,1937,Documentation générale
 fils-m,fils,Marande fils,1,1,1,administrateur,1937,1937,Documentation générale
 peron,Péron,Péron,1,1,1,administrateur,1937,1937,Documentation générale
 wackenheim,Wackenheim,Wackenheim,1,1,1,administrateur,1937,1937,Documentation générale
 canal-laussat,canal Laussat,canal Laussat,1,1,1,administrateur,1937,1937,Documentation générale
-conseil-jean-hamon,Conseil: Jean Hamon,Conseil: Jean Hamon,1,1,1,administrateur,1937,1937,Documentation générale
 et-iles-du-salut,et îles du Salut,et îles du Salut,1,1,1,administrateur,1937,1937,Documentation générale
 saint-laurent,Saint-Laurent,Saint-Laurent,1,1,1,administrateur,1937,1937,Documentation générale
 saint-jean,Saint-Jean,Saint-Jean,1,1,1,administrateur,1937,1937,Documentation générale
-fournitures-de-viande-aux-administrations-fleury,Fournitures de viande aux administrations. Fleury,Fournitures de viande aux administrations. Fleury,1,1,1,administrateur,1937,1937,Documentation générale
-charronnage-v-glennie,charronnage. V. Glennie,charronnage. V. Glennie,1,1,1,administrateur,1937,1937,Documentation générale
 garage,Garage,Garage,1,1,1,administrateur,1937,1937,Documentation générale
 briqueterie,Briqueterie,Briqueterie,1,1,1,administrateur,1937,1937,Documentation générale
 urtasum,Urtasum,Urtasum,1,1,1,administrateur,1937,1937,Documentation générale
 legasse-f,Légasse,Ferdinand-Louis Légasse,1,1,1,administrateur,1937,1937,Documentation générale
-depot-des-messageries-hachette-gustave-dagort,Dépôt des messageries Hachette. Gustave Dagort,Dépôt des messageries Hachette. Gustave Dagort,1,1,1,administrateur,1937,1937,Documentation générale
 vins,Vins,Vins,1,1,1,administrateur,1937,1937,Documentation générale
-consign-folquet-freres,consign. Folquet frères,consign. Folquet frères,1,1,1,administrateur,1937,1937,Documentation générale
 en-gros-c,en gros,Commerçants en gros,1,1,1,administrateur,1937,1937,Documentation générale
-consign-a-derouet,consign. A. Dérouet,consign. A. Dérouet,1,1,1,administrateur,1937,1937,Documentation générale
-constructeur-de-navires-v-d-gauvin,Constructeur de navires. V.-D. Gauvin,Constructeur de navires. V.-D. Gauvin,1,1,1,administrateur,1937,1937,Documentation générale
 parfumerie,Parfumerie,Parfumerie,1,1,1,administrateur,1937,1937,Documentation générale
-papeterie-henri-girardin,papeterie. Henri Girardin,papeterie. Henri Girardin,1,1,1,administrateur,1937,1937,Documentation générale
 epicerie,Épicerie,Épicerie,1,1,1,administrateur,1937,1937,Documentation générale
 bouvier-h,Bouvier,Henri Bouvier,1,1,1,administrateur,1951,1951,Documentation générale
-lucet-ii-j,Lucet. II,Jean Lucet. II,1,1,1,administrateur,1951,1951,Documentation générale
 industrielles-e,industrielles,Entreprises industrielles,1,1,1,administrateur,1951,1951,Documentation générale
 thuillier,Thuillier,Thuillier,1,1,1,president,1951,1951,Documentation générale
 marcel-p,Marcel,Pierre Marcel,1,1,1,administrateur,1951,1951,Documentation générale
@@ -437,7 +416,7 @@ reille,Reille,Reille,1,1,1,administrateur,1917,1917,
 bouilloux-lafont,Bouilloux-Lafont,Bouilloux-Lafont,1,1,1,administrateur,1917,1917,
 bouvard,Bouvard,Bouvard,1,1,1,administrateur,1917,1917,
 quellennec,Quellennec,Quellennec,1,1,1,administrateur,1917,1917,
-richou-g,Richou,Richou,1,1,1,administrateur,1917,1917,
+richou,Richou,Richou,1,1,1,administrateur,1917,1917,
 melian-a,Melian,A. Melian,1,1,1,administrateur,1917,1917,
 grandmasson,Grandmasson,Grandmasson,1,1,1,administrateur,1917,1917,
 monteiro-r,Monteiro,Rego Monteiro,1,1,1,administrateur,1917,1917,
@@ -453,8 +432,6 @@ pierrat-a,Pierrat,A. Pierrat,1,1,1,administrateur,1953,1953,Mines et placers
 muller-e,Muller,Édouard Muller,1,1,1,administrateur,1909,1909,Commerce
 altmayer-m,Altmayer,Maurice Altmayer,1,1,1,administrateur,1909,1909,Commerce
 montefiore-r,Montefiore,Raoul Montefiore,1,1,1,administrateur,1909,1909,Commerce
-deposes-chez-me-aubron-s,déposés chez Me Aubron,Statuts déposés chez Me Aubron,1,1,1,administrateur,1909,1909,Commerce
-trabet-statuts-deposes-chez-me-delplanques-v,Trabet. Statuts déposés chez Me Delplanques,V. Trabet. Statuts déposés chez Me Delplanques,1,1,1,administrateur,1923,1923,Divers
 de-chaudun-r,de Chaudun,Roger de Chaudun,1,1,1,administrateur,1923,1923,Divers
 et-victor-trabet,et Victor Trabet,et Victor Trabet,1,1,1,administrateur,1923,1923,Divers
 herrewyn-g,Herrewyn,Georges Herrewyn,1,1,1,president,1923,1923,Divers
@@ -466,7 +443,6 @@ et-octave-pierard,et Octave Piérard,et Octave Piérard,1,1,1,administrateur,188
 et-papin,et Papin,et Papin,1,1,1,administrateur,1882,1882,Divers
 regrette-explorateur-de-l-amerique-meridionale,regretté explorateur de l'Amérique méridionale,regretté explorateur de l'Amérique méridionale,1,1,1,administrateur,1882,1882,Divers
 whitcomb-a,Whitcomb,A. Whitcomb,1,1,1,administrateur,1911,1911,Mines et placers
-deposes-chez-me-leroy-s,déposés chez Me Leroy,Statuts déposés chez Me Leroy,1,1,1,administrateur,1911,1911,Mines et placers
 a-louis-tedesco,A.-Louis Tédesco,A.-Louis Tédesco,1,1,1,administrateur,1921,1921,Mines et placers
 arnoux-l,Arnoux,L. Arnoux,1,1,1,president,1881,1881,Mines et placers
 colas,Colas,Colas,1,1,1,administrateur,1881,1881,Mines et placers
@@ -479,7 +455,6 @@ pinkas-j,Pinkas,J. Pinkas,1,1,1,administrateur,1901,1901,
 nava-s,Nava,S.-R. Nava,1,1,1,administrateur,1901,1901,
 l-m-sola,L.- M. Sola,L.- M. Sola,1,1,1,administrateur,1901,1901,
 ubina,Ubina,Ubina,1,1,1,administrateur,1901,1901,
-bilan-fin-d-annee,Bilan: Fin d'année,Bilan: Fin d'année,1,1,1,administrateur,1901,1901,
 gras-a,Gras,Achille Gras,1,1,1,administrateur,1913,1913,Divers
 humbert-lavalley-e,Humbert-Lavalley,E. Humbert-Lavalley,1,1,1,administrateur,1913,1913,Divers
 robert-g,Robert,Gustave Robert,1,1,1,administrateur,1913,1913,Divers
@@ -492,21 +467,17 @@ aiphonse-de-la-bourdonnaye,AIphonse de La Bourdonnaye,AIphonse de La Bourdonnaye
 e-doucet,E Doucet,E Doucet,1,1,1,administrateur,1950,1950,Divers
 j-durand-smet,J Durand- Smet,J Durand- Smet,1,1,1,administrateur,1950,1950,Divers
 ste-des-raffineries-de-sucre-de-saint-louis,Sté des Raffineries de sucre de Saint-Louis,Sté des Raffineries de sucre de Saint-Louis,1,1,1,administrateur,1950,1950,Divers
-walther-statuts-deposes-chez-me-philippot,Walther. Statuts déposés chez Me Philippot,Walther. Statuts déposés chez Me Philippot,1,1,1,administrateur,1920,1920,Divers
 brugnon-pierre-forveille-m,Brugnon Pierre Forveille,Maurice Brugnon Pierre Forveille,1,1,1,administrateur,1920,1920,Divers
 paris-rodez,Paris-Rodez,Paris-Rodez,1,1,1,administrateur,1920,1920,Divers
 brugnon,Brugnon,Brugnon,1,1,1,president,1925,1925,Divers
 monnerot-j,Monnerot,Monnerot,1,1,1,president,1925,1925,Divers
 trabaud,Trabaud2,Trabaud2,1,1,1,president,1925,1925,Divers
-l-pamard-production-de-sucres-coloniaux,L Pamard. Production de sucres coloniaux,L Pamard. Production de sucres coloniaux,1,1,1,president,1925,1925,Divers
 forestiere-a-douala,forestière à Douala,forestière à Douala,1,1,1,administrateur,1931,1931,Divers
 cameroun,Cameroun,Cameroun,1,1,1,administrateur,1931,1931,Divers
 lhomme-r,Lhomme,Robert Lhomme,1,1,1,administrateur,1931,1931,Divers
 payan-a,Payan,Albert Payan,1,1,1,administrateur,1931,1931,Divers
 munich-f,Munich,François Munich,1,1,1,administrateur,1931,1931,Divers
-industrielles-eminentes-mm-louis-legasse,industrielles éminentes. MM. Louis Legasse,industrielles éminentes. MM. Louis Legasse,1,1,1,administrateur,1912,1912,Divers
 delegue-des-iles-saint-pierre,délégué des îles Saint-Pierre,délégué des îles Saint-Pierre,1,1,1,administrateur,1912,1912,Divers
-au-conseil-superieur-des-colonies-m,au Conseil supérieur des Colonies,Miquelon au Conseil supérieur des Colonies,1,1,1,administrateur,1912,1912,Divers
 controleur-general-de-la-marine,contrôleur général de la Marine,contrôleur général de la Marine,1,1,1,administrateur,1912,1912,Divers
 gouverneur-des-colonies-en-retraite,gouverneur des Colonies en retraite,gouverneur des Colonies en retraite,1,1,1,administrateur,1912,1912,Divers
 re-repartition-payee,1re RÉPARTITION % PAYÉE,1re RÉPARTITION % PAYÉE,1,1,1,administrateur,1912,1912,Divers
@@ -514,8 +485,6 @@ s-personnalites-suivantes-mm-louis-legasse,s personnalités suivantes: MM. Louis
 boundal-a,Boundal,Alexis Boundal,1,1,1,administrateur,1912,1912,Divers
 pagnoud-j,Pagnoud,J. Pagnoud,1,1,1,administrateur,1912,1912,Divers
 landa-l,Landa,Louis Landa,1,1,1,administrateur,1912,1912,Divers
-ziegel-ch-wall-f,Ziegel. Ch. Wall,F. Ziegel. Ch. Wall,1,1,1,administrateur,1912,1912,Divers
-pagnoud-g-theologo-j,Pagnoud. G. Theologo,J. Pagnoud. G. Theologo,1,1,1,administrateur,1912,1912,Divers
 dupasseur,Dupasseur,Dupasseur,1,1,1,administrateur,1910,1910,
 monnier,Monnier. 4,Monnier. 4,1,1,1,administrateur,1910,1910,
 w-d-eichthal,W d'Eichthal,W d'Eichthal,1,1,1,administrateur,1912,1912,
@@ -540,7 +509,6 @@ chalupt-c,Chalupt,Charles Chalupt,1,1,1,administrateur,1912,1912,
 h-de-peyerimhoff,H de Peyerimhoff,H de Peyerimhoff,1,1,1,president,1938,1938,
 adm-mm-h-chapuis,Adm.: MM. H Chapuis,Adm.: MM. H Chapuis,1,1,1,president,1938,1938,
 h-grandet,H Grandet,H Grandet,1,1,1,president,1938,1938,
-matte-j,Matte,J. Matte,1,1,1,president,1938,1938,
 p-piron,P Piron,P Piron,1,1,1,president,1938,1938,
 b-de-saint-seine,B de Saint-Seine,B de Saint-Seine,1,1,1,president,1938,1938,
 b-de-sevenas,B de Sévenas,B de Sévenas,1,1,1,president,1938,1938,
@@ -548,13 +516,8 @@ g-de-gontaut-biron,G de Gontaut- Biron,G de Gontaut- Biron,1,1,1,president,1938,
 fonderie-de-minerais,Fonderie de minerais,Fonderie de minerais,1,1,1,president,1938,1938,
 production-de-cuivre-brut,Production de cuivre brut,Production de cuivre brut,1,1,1,president,1938,1938,
 matte-h-grandet-j,Matte: H. Grandet,J. Matte: H. Grandet,1,1,1,administrateur,1938,1938,
-chapuis-h,Chapuis,H. Chapuis,1,1,1,administrateur,1938,1938,
-piron-p,Piron,P. Piron,1,1,1,administrateur,1938,1938,
 de-valencay,de Valençay,de Valençay,1,1,1,administrateur,1938,1938,
 dalloz-a-bourbousson-j,Dalloz: A. Bourbousson,J. Dalloz: A. Bourbousson,1,1,1,administrateur,1938,1938,
-grandet-h,Grandet,H. Grandet,1,1,1,president,1945,1945,
-bourbousson-a,Bourbousson,A. Bourbousson,1,1,1,administrateur,1945,1945,
-dalloz-j,Dalloz,J. Dalloz,1,1,1,administrateur,1945,1945,
 leroy-l,Leroy,L. Leroy,1,1,1,administrateur,1945,1945,
 guffroy,Guffroy,Guffroy,1,1,1,president,1895,1895,
 petiton,Petiton,Petiton,1,1,1,vice_president,1895,1895,
@@ -562,18 +525,15 @@ mailhe,Mailhe,Mailhe,1,1,1,administrateur,1895,1895,
 d-casey,D Casey,D Casey,1,1,1,administrateur,1895,1895,
 e-le-blond,E Le Blond,E Le Blond,1,1,1,administrateur,1895,1895,
 l-durand,L Durand,L Durand,1,1,1,administrateur,1895,1895,
-l-girard-mm-veronge-de-la-nux,L Girard. MM. Véronge de la Nux,L Girard. MM. Véronge de la Nux,1,1,1,administrateur,1895,1895,
 guffroy-m,Guffroy,Maurice Guffroy,1,1,1,administrateur,1895,1895,
 o-noel-salines-de,O Noël [Salines de,O Noël [Salines de,1,1,1,president,1901,1901,
 mathias-a,Mathias,Arthur Mathias,1,1,1,administrateur_delegue,1925,1925,
-pres-m-s-thompson,Prés. M. S. Thompson,Prés. M. S. Thompson,1,1,1,administrateur,1938,1938,
 dutey-h,Dutey,H. Dutey,1,1,1,administrateur_delegue,1938,1938,
 lederlin-s,Lederlin,S. Lederlin,1,1,1,administrateur_delegue,1938,1938,
 adm-mm-h-ballis,Adm.: MM. H. Ballis,Adm.: MM. H. Ballis,1,1,1,administrateur,1938,1938,
 jackson-h,Jackson,Huntington Jackson,1,1,1,administrateur,1938,1938,
 glen-j,Glen,J. A. Glen,1,1,1,administrateur,1938,1938,
 peixotto-p,Peixotto,P. Peixotto,1,1,1,administrateur,1938,1938,
-cellerier-statuts-deposes-chez-me-dufour-f,Cellerier. Statuts déposés chez Me Dufour,F. Cellerier. Statuts déposés chez Me Dufour,1,1,1,administrateur,1926,1926,
 sauvagnac,Sauvagnac,Sauvagnac,1,1,1,administrateur,1931,1931,
 portal,Portal,Portal,1,1,1,administrateur,1945,1945,
 lautard-j,Lautard,J. Lautard,1,1,1,president_directeur_general,1948,1948,
@@ -582,10 +542,10 @@ mesuard,Mesuard,Mesuard,1,1,1,administrateur,1928,1928,Divers
 chenet,Chenet,Chenet,1,1,1,administrateur,1928,1928,Divers
 robiche,Robiche,Robiche,1,1,1,administrateur,1928,1928,Divers
 gedeon,Gédéon,Gédéon,1,1,1,administrateur,1928,1928,Divers
-boye-statuts-deposes-chez-me-bourdel,Boye. Statuts déposés chez Me Bourdel,Boye. Statuts déposés chez Me Bourdel,1,1,1,administrateur,1928,1928,Divers
 a-j,A,J. S. D. F. P. A,1,1,1,administrateur,1928,1928,Divers
 navigation,Navigation,Navigation,1,1,1,administrateur,1930,1930,Divers
 transports-de-la-guyane,transports de la Guyane,transports de la Guyane,1,1,1,administrateur,1930,1930,Divers
+renevey-e,Renevey,Eugène Renevey,1,1,1,administrateur,1879,1879,Mines et placers
 mercredi-avril-chez-mm-bouvier-freres,mercredi avril Chez MM. BOUVIER frères,mercredi avril Chez MM. BOUVIER frères,1,1,1,administrateur,1879,1879,Mines et placers
 a-leur-succursale-e,à leur succursale,Et à leur succursale,1,1,1,administrateur,1879,1879,Mines et placers
 vice-president-de-la-chambre-des-banquiers,vice- président de la Chambre des banquiers,vice- président de la Chambre des banquiers,1,1,1,administrateur,1879,1879,Mines et placers
@@ -596,26 +556,17 @@ duvigneau-e,Duvigneau,E. Duvigneau,1,1,1,administrateur,1895,1895,Mines et place
 de-foucault,de Foucault. 15,de Foucault. 15,1,1,1,administrateur,1895,1895,Mines et placers
 gautier-t,Gautier,Th Gautier,1,1,1,administrateur,1899,1899,Mines et placers
 objet-exploitation-des-alluvions,Objet: Exploitation des alluvions,Objet: Exploitation des alluvions,1,1,1,administrateur,1899,1899,Mines et placers
-capital-quatre-millions-de-francs,Capital: Quatre millions de francs,Capital: Quatre millions de francs,1,1,1,administrateur,1899,1899,Mines et placers
-repartition-des-benefices-a-la-reserve,Répartition des bénéfices: % à la réserve,Répartition des bénéfices: % à la réserve,1,1,1,administrateur,1899,1899,Mines et placers
-bilan-fin-decembre,Bilan: fin décembre,Bilan: fin décembre,1,1,1,administrateur,1899,1899,Mines et placers
 th-gautier,Th. Gautier,Th. Gautier,1,1,1,administrateur,1902,1902,Mines et placers
-piala-commissaire-de-surveillance-a,Piala. Commissaire de surveillance,A. Piala. Commissaire de surveillance,1,1,1,administrateur,1902,1902,Mines et placers
-administrateurs-commissaires-de-surveillance-mm-be,administrateurs. Commissaires de surveillance: MM. Beauroy,administrateurs. Commissaires de surveillance: MM. Beauroy,1,1,1,administrateur,1906,1906,Mines et placers
 warnier,Warnier,Warnier,1,1,1,administrateur,1906,1906,Mines et placers
-lecanu-commissaire-de-surveillance,Lecanu. Commissaire de surveillance,Lecanu. Commissaire de surveillance,1,1,1,administrateur,1908,1908,Mines et placers
 marchand-a,Marchand,A. Marchand,1,1,1,administrateur,1908,1908,Mines et placers
 chopy-e,Chopy,E. Chopy,1,1,1,administrateur,1912,1912,Mines et placers
 hebert-j,Hébert,J. Hébert,1,1,1,administrateur,1912,1912,Mines et placers
 vincent-a,Vincent,A. Vincent,1,1,1,administrateur,1912,1912,Mines et placers
-administrateurs-commissaires-des-comptes-mm-r-beau,administrateurs. Commissaires des comptes: MM. R. Beauroy,administrateurs. Commissaires des comptes: MM. R. Beauroy,1,1,1,administrateur,1912,1912,Mines et placers
-marchand-siege-social-a-paris-a,Marchand. Siège social: à Paris,A. Marchand. Siège social: à Paris,1,1,1,administrateur,1912,1912,Mines et placers
 dubosc,Dubosc,Dubosc,1,1,1,president,1937,1937,Divers
 maraude-e,Maraude,Émile Maraude,1,1,1,administrateur,,,Divers
 eleuthere-le-blond,Éleuthère Le Blond,Éleuthère Le Blond,1,1,1,administrateur,,,Divers
 et-eusebe-robutte,et Eusèbe Robutte,et Eusèbe Robutte,1,1,1,administrateur,,,Divers
 joly,Joly,Joly,1,1,1,administrateur,1919,1919,Divers
-robutte-statuts-chez-me-huot,Robutte. Statuts chez Me Huot,Robutte. Statuts chez Me Huot,1,1,1,administrateur,1919,1919,Divers
 fancy,Fancy,Fancy,1,1,1,administrateur,1919,1919,Divers
 gimon-p,Gimon,Pierre Gimon,1,1,1,president_directeur_general,1951,1951,Divers
 polytechnicien-g,[Polytechnicien,Guillanton [Polytechnicien,1,1,1,administrateur,1951,1951,Divers
@@ -625,9 +576,6 @@ steinheil-e,Steinheil,E. Steinheil,1,1,1,administrateur,1917,1917,
 huguenot,Huguenot,Huguenot,1,1,1,administrateur,1925,1925,
 mortier-a,Mortier,A. Mortier,1,1,1,president,1933,1933,
 manus-m,Manus,Manus,1,1,1,administrateur,1933,1933,
-p-mortier-commissaires-aux-comptes-g-deffaux,P Mortier. Commissaires aux comptes: G. Deffaux,P Mortier. Commissaires aux comptes: G. Deffaux,1,1,1,administrateur,1937,1937,
-menage-commissaires-aux-comptes-g-deffaux-l,Ménage. Commissaires aux comptes: G. Deffaux,L. Ménage. Commissaires aux comptes: G. Deffaux,1,1,1,administrateur,1940,1940,
-suppl-robert-thoumyre,suppl. Robert Thoumyre,suppl. Robert Thoumyre,1,1,1,administrateur,1945,1945,
 dior-j,Dior,J. Dior,1,1,1,administrateur,1953,1953,
 r-louppe,R Louppe,R Louppe,1,1,1,administrateur,1953,1953,
 croix-de-la-ronciere-s,Croix de la Roncière,Sainte Croix de la Roncière,1,1,1,administrateur,1927,1927,Divers
@@ -643,7 +591,6 @@ dufour-g,Dufour,Gérard Dufour,1,1,1,administrateur,1911,1911,Mines et placers
 delvaux-l,Delvaux,Léon Delvaux,1,1,1,administrateur_delegue,1911,1911,Mines et placers
 lacroix-l,Lacroix,Léon Lacroix,1,1,1,administrateur,1911,1911,Mines et placers
 mercier-j,Mercier,Jules Mercier,1,1,1,administrateur,1911,1911,Mines et placers
-a-mlle-vassiliere-une-fille-m,à Mlle Vassilière. Une fille,marié à Mlle Vassilière. Une fille,1,1,1,administrateur,1911,1911,Mines et placers
 suzanne,Suzanne,Suzanne,1,1,1,administrateur,1911,1911,Mines et placers
 louis-m,Louis,Marc Louis,1,1,1,administrateur,1919,1919,Divers
 de-beaumont,de Beaumont,de Beaumont,1,1,1,administrateur,1919,1919,Divers
@@ -655,23 +602,13 @@ dutertre,Dutertre,Dutertre,1,1,1,administrateur,1919,1919,Divers
 rhumerie,Rhumerie,Rhumerie,1,0,2,gerant,1937,1937,Documentation générale
 sinnamary,Sinnamary,Sinnamary,2,0,2,gerant,1937,1937,Documentation générale
 bree-e,Brée,E. Brée,1,0,1,directeur,1922,1922,Documentation générale
-marsolle-rhumerie-de-clairefontaine-h,Marsolle. Rhumerie de Clairefontaine »,Henri Marsolle. Rhumerie de Clairefontaine »,1,0,1,gerant,1937,1937,Documentation générale
 petit-bourg,Petit-Bourg,Petit-Bourg,1,0,1,gerant,1937,1937,Documentation générale
 basseterre,BasseTerre,BasseTerre,1,0,1,gerant,1937,1937,Documentation générale
 basse-terre,Basse-Terre,Basse-Terre,1,0,1,gerant,1937,1937,Documentation générale
 saint-claude,Saint-Claude,Saint-Claude,1,0,1,gerant,1937,1937,Documentation générale
-jacquemin-h,Jacquemin,Jacquemin,1,0,1,gerant,1937,1937,Documentation générale
-charronnage-rhumeries-r-berthault,charronnage. Rhumeries. R. Berthault,charronnage. Rhumeries. R. Berthault,1,0,1,gerant,1937,1937,Documentation générale
+jacquemin,Jacquemin,Jacquemin,1,0,1,gerant,1937,1937,Documentation générale
 portal-i,Portal,Ilet Portal,1,0,1,gerant,1937,1937,Documentation générale
 p-saint-laurent,p. Saint-Laurent,p. Saint-Laurent,1,0,1,gerant,1937,1937,Documentation générale
-scierie-simon-belus,scierie. Simon Bélus,scierie. Simon Bélus,1,0,1,gerant,1937,1937,Documentation générale
-regina-commune-penitentiaire-de-saint-laurent-du-m,Régina. Commune pénitentiaire de Saint-Laurent-du- Maroni,Régina. Commune pénitentiaire de Saint-Laurent-du- Maroni,1,0,1,gerant,1937,1937,Documentation générale
-pres-saint-laurent-vve-gosselin,près Saint-Laurent. Vve Gosselin,près Saint-Laurent. Vve Gosselin,1,0,1,gerant,1937,1937,Documentation générale
-cayenne-edme-grant,Cayenne. Edmé Grant,Cayenne. Edmé Grant,1,0,1,gerant,1937,1937,Documentation générale
-cayenne-leon-mine,Cayenne. Léon Mine,Cayenne. Léon Mine,1,0,1,gerant,1937,1937,Documentation générale
-scierie-vve-felix-nollier,scierie. Vve Félix Nollier,scierie. Vve Félix Nollier,1,0,1,gerant,1937,1937,Documentation générale
-cayenne-georges-prevot,Cayenne. Georges Prévot,Cayenne. Georges Prévot,1,0,1,gerant,1937,1937,Documentation générale
-cayenne-arsene-raban,Cayenne. Arsène Raban,Cayenne. Arsène Raban,1,0,1,gerant,1937,1937,Documentation générale
 sen-wo-lee-c,Sen-Wo-Lee,Cayenne Sen-Wo-Lee,1,0,1,gerant,1937,1937,Documentation générale
 comptoirs-bordeaux,comptoirs: Bordeaux,comptoirs: Bordeaux,1,0,1,directeur,,,Documentation générale
 mana,Mana,Mana,1,0,1,directeur,,,Documentation générale
@@ -693,11 +630,7 @@ poids-du-cap,poids du Cap,poids du Cap,1,0,1,directeur,,,Documentation général
 pignons-d-inde,pignons d'Inde,pignons d'Inde,1,0,1,directeur,,,Documentation générale
 germie-f,Germié,François Germié,1,0,1,commissaire_aux_comptes,1912,1912,
 le-cesne-w,Le Cesne,William Le Cesne,1,0,1,commissaire_aux_comptes,1912,1912,
-mathis-c,Mathis,Charles Mathis,1,0,1,commissaire_aux_comptes,1912,1912,
-palle-siege-social-a-paris-a,Palle. Siège social: à Paris,André Palle. Siège social: à Paris,1,0,1,commissaire_aux_comptes,1912,1912,
 pageyral-m,Pageyral,Pageyral,1,0,1,directeur,1925,1925,
-paris-rabut,Paris. Rabut,Paris. Rabut,1,0,1,directeur,1925,1925,
-province-de-santiago-de-saint-seine,province de Santiago. De Saint-Seine,province de Santiago. De Saint-Seine,1,0,1,directeur,1925,1925,
 ecoles,Écoles,Écoles,1,0,1,directeur,1925,1925,
 lecanu-j,Lecanu,J. Lecanu,1,0,1,secretaire,1906,1906,Mines et placers
 j-lecanu,J Lecanu,J Lecanu,1,0,1,secretaire,1912,1912,Mines et placers

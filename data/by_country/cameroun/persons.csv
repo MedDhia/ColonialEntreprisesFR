@@ -1,4 +1,5 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
+toudet-f,Toudet,F. Toudet,2,2,5,administrateur,1929,1948,industries agro-alimentaires
 cahen-fuzier-e,Cahen-Fuzier,Cahen-Fuzier; Edouard Cahen-Fuzier; Édouard Cahen-Fuzier,2,2,5,administrateur,1922,1926,industries agro-alimentaires
 munich-p,Munich,Paul Munich,2,2,4,president,1929,1949,Industries; industries agro-alimentaires
 munich-j,Munich,Jean Munich,2,2,4,administrateur,1929,1949,Industries; industries agro-alimentaires
@@ -8,6 +9,8 @@ tabacs,Tabacs,Tabacs; … Tabacs,2,2,3,administrateur,1929,1929,industries agro-
 jacquy-p,Jacquy,P. Jacquy,2,2,3,president,1935,1951,industries agro-alimentaires
 guy-l,Guy,L. Guy,2,2,3,administrateur,1935,1951,industries agro-alimentaires
 bonhomme-l,Bonhomme,L. Bonhomme,2,2,3,administrateur,1935,1951,industries agro-alimentaires
+gallet-j,Gallet,J. Gallet; Joseph Gallet,2,2,2,president,1948,1951,industries agro-alimentaires
+tissot-h,Tissot,H. Tissot; Henri Tissot,2,2,2,administrateur,1948,1951,industries agro-alimentaires
 beaujolin-j,Beaujolin,Julien Beaujolin; Julien-Louis Beaujolin,2,2,2,president,1950,1951,Commerce; industries agro-alimentaires
 girod-f,Girod,François Girod,2,2,2,administrateur,1950,1951,Commerce; industries agro-alimentaires
 hirsch-m,Hirsch,Marcel Hirsch,2,2,2,administrateur,1924,1926,industries agro-alimentaires
@@ -20,7 +23,6 @@ thes-de-l-indochine,Thés de l'Indochine,Thés de l'Indochine,2,2,2,administrate
 palmeraies-du-cameroun,Palmeraies du Cameroun,Palmeraies du Cameroun,2,2,2,administrateur,1929,1929,industries agro-alimentaires
 cotonniere-du-niger-c,cotonnière du Niger,Culture cotonnière du Niger,2,2,2,administrateur,1929,1929,industries agro-alimentaires
 fink-herault-y,Fink-Hérault,Fink-Hérault; Yvan Fink-Hérault,2,2,2,administrateur,1935,1951,industries agro-alimentaires
-toudet-f,Toudet,F. Toudet,1,1,4,administrateur,1929,1940,industries agro-alimentaires
 becker,Becker,Becker,1,1,4,administrateur,1929,1940,industries agro-alimentaires
 fay-j,Faÿ,Jacques Faÿ,1,1,4,administrateur,1929,1949,Industries
 longere-g,Longère,G. Longère; Georges-Étienne Longère,1,1,3,administrateur,1928,1935,industries agro-alimentaires
@@ -30,7 +32,7 @@ bonnier-g,Bonnier,G. Bonnier,1,1,2,administrateur,1937,1940,industries agro-alim
 simon,Simon,Simon,1,1,2,administrateur,1937,1940,industries agro-alimentaires
 bonnemaison-p,Bonnemaison,P. Bonnemaison,1,1,2,administrateur,1937,1940,industries agro-alimentaires
 batsere-l,Batsere,L. Batsere,1,1,2,administrateur,1937,1940,industries agro-alimentaires
-adm-commissaires-aux-comptes-mm-guimpier,adm. Commissaires aux comptes: MM. Guimpier,adm. Commissaires aux comptes: MM. Guimpier,1,1,2,administrateur,1937,1940,industries agro-alimentaires
+adm-guimpier,adm. Guimpier,adm. Guimpier,1,1,2,administrateur,1945,1948,industries agro-alimentaires
 weiss-p,Weiss,Paul Weiss,1,1,2,president,1929,1934,Industries
 teissier-du-cros-e,Teissier du Cros. 8,Ernest Teissier du Cros; Ernest Teissier du Cros. 8,1,1,2,administrateur,1929,1949,Industries
 derouet-m,Derouet,Maurice Derouet,1,1,2,administrateur,1934,1949,Industries
@@ -48,10 +50,9 @@ dupont-r,Dupont,Robert Dupont,1,1,1,president_directeur_general,1951,1951,indust
 dufaure-h,Dufaure,Henri Dufaure,1,1,1,administrateur,1951,1951,industries agro-alimentaires
 eyrolles-r,Eyrolles,Raymond Eyrolles,1,1,1,administrateur,1951,1951,industries agro-alimentaires
 ottino-j,Ottino,Jean Ottino,1,1,1,administrateur,1951,1951,industries agro-alimentaires
-gallet-j,Gallet,Joseph Gallet,1,1,1,president,1951,1951,industries agro-alimentaires
+guimpier-l,Guimpier,L. Guimpier,1,1,1,administrateur,1948,1948,industries agro-alimentaires
 artaud-a,Artaud,André Artaud,1,1,1,administrateur_delegue,1951,1951,industries agro-alimentaires
 f-toudet,F Toudet,F Toudet,1,1,1,administrateur,1951,1951,industries agro-alimentaires
-tissot-h,Tissot,Henri Tissot,1,1,1,administrateur,1951,1951,industries agro-alimentaires
 zwang-cultures-tropicales-afrique-r,Zwang [Cultures tropicales Afrique,Robert Zwang [Cultures tropicales Afrique,1,1,1,administrateur,1951,1951,industries agro-alimentaires
 senegal,Sénégal)],Sénégal)],1,1,1,administrateur,1951,1951,industries agro-alimentaires
 rouquier-e,Rouquier,Émile Rouquier,1,1,1,administrateur,1951,1951,industries agro-alimentaires
@@ -65,7 +66,6 @@ mialaret-f,Mialaret,François Mialaret,1,1,1,administrateur,1953,1953,industries
 industrielles-du-cameroun,industrielles du Cameroun,industrielles du Cameroun,1,1,1,administrateur,1953,1953,industries agro-alimentaires
 palanque-l,Palanque,L. Palanque,1,1,1,administrateur,1953,1953,industries agro-alimentaires
 butruille-g,Butruille,Georges Butruille,1,1,1,administrateur,1953,1953,industries agro-alimentaires
-admin-commissaires-aux-comptes-mm-p-quilichini,admin. Commissaires aux comptes: MM. P. Quilichini,admin. Commissaires aux comptes: MM. P. Quilichini,1,1,1,administrateur,1953,1953,industries agro-alimentaires
 martin,Martin,Martin,1,1,1,administrateur,1953,1953,industries agro-alimentaires
 tabourel-c,Tabourel,Charles-Armand Tabourel,1,1,1,administrateur,1924,1924,Commerce
 buffet-r,Buffet,René Buffet,1,1,1,administrateur,1924,1924,Commerce
@@ -76,6 +76,12 @@ auge,Augé,Augé,1,1,1,administrateur,1929,1929,industries agro-alimentaires
 fauchere-e,Fauchère,E. Fauchère,1,1,1,administrateur,1929,1929,industries agro-alimentaires
 lacarre-a,Lacarré,A. Lacarré,1,1,1,administrateur,1931,1931,industries agro-alimentaires
 bongrand-c,Bongrand,Ch. Bongrand,1,1,1,administrateur,1931,1931,industries agro-alimentaires
+petitjean-j,Petitjean,Jean Petitjean,1,1,1,president,1945,1945,industries agro-alimentaires
+ravilly-e,Ravilly,E. Ravilly,1,1,1,administrateur,1945,1945,industries agro-alimentaires
+girardin,Girardin,Girardin,1,1,1,administrateur,1945,1945,industries agro-alimentaires
+dupond-r,Dupond,Robert Dupond,1,1,1,president_directeur_general,1948,1948,industries agro-alimentaires
+dufoure-h,Dufoure,H. Dufoure,1,1,1,administrateur,1948,1948,industries agro-alimentaires
+deschaumaget-j,Deschaumaget,J. Deschaumaget,1,1,1,administrateur,1948,1948,industries agro-alimentaires
 legrand-a,Legrand,André Legrand,1,1,1,administrateur,1929,1929,Industries
 benard-g,Bénard,Georges Bénard,1,1,1,administrateur,1929,1929,Industries
 de-neufville,de Neufville,de Neufville,1,1,1,administrateur,1929,1929,Industries
@@ -99,7 +105,6 @@ savoie-g,Savoie,G. Savoie,1,1,1,administrateur,1927,1927,Commerce
 lyard-f,Lyard,F. Lyard,1,1,1,administrateur,1927,1927,Commerce
 bigot-g,Bigot,Bigot,1,1,1,administrateur,1927,1927,Commerce
 caillet-j,Caillet,J. Caillet,1,1,1,administrateur,1927,1927,Commerce
-lefrancois-statuts-deposes-chez-me-vigier-g,Lefrançois. Statuts déposes chez Me Vigier,G. Lefrançois. Statuts déposes chez Me Vigier,1,1,1,administrateur,1927,1927,Commerce
 guiffart-a,Guiffart,Armand Guiffart,1,1,1,president,1930,1930,Commerce
 bassuet-m,Bassuet,Bassuet,1,1,1,administrateur,1930,1930,Commerce
 carnot-j,Carnot,Jean Carnot,1,1,1,administrateur,1930,1930,Commerce
@@ -116,7 +121,6 @@ doux-e,Doux,Émile Doux,1,1,1,administrateur,1919,1919,industries agro-alimentai
 et-maurice-wohlgemuth,et Maurice Wohlgemuth,et Maurice Wohlgemuth,1,1,1,administrateur,1919,1919,industries agro-alimentaires
 barthelemy,Barthélemy,Barthélemy,1,1,1,administrateur,1919,1919,industries agro-alimentaires
 doux,Doux,Doux,1,1,1,administrateur,1919,1919,industries agro-alimentaires
-wohlgemut-statuts-chez-me-prudhomme,Wohlgemut. Statuts chez Me Prudhomme,Wohlgemut. Statuts chez Me Prudhomme,1,1,1,administrateur,1919,1919,industries agro-alimentaires
 babin-chevaye-depute-j,Babin Chevaye [député,Jean Babin Chevaye [député,1,1,1,administrateur,1921,1921,industries agro-alimentaires
 dubigeon-r,Dubigeon,Dubigeon,1,1,1,administrateur,1921,1921,industries agro-alimentaires
 loire-c,Loire,ch. Loire,1,1,1,administrateur,1921,1921,industries agro-alimentaires
@@ -128,11 +132,9 @@ tassart-l,Tassart,Louis Tassart,1,1,1,president,1936,1936,industries agro-alimen
 domerc-g,Domerc,Georges Domerc,1,1,1,administrateur,1936,1936,industries agro-alimentaires
 marion-de-proce-p,Marion de Procé,Pierre Marion de Procé,1,1,1,administrateur,1936,1936,industries agro-alimentaires
 toutee-h,Toutée,Henri Toutée,1,1,1,administrateur,1936,1936,industries agro-alimentaires
-administrateurs-service-commercial-m-marcel-roux,administrateurs. Service commercial: M. Marcel Roux,administrateurs. Service commercial: M. Marcel Roux,1,1,1,administrateur,1936,1936,industries agro-alimentaires
 jacquemet-c,Jacquemet,Camille-Marcel Jacquemet,1,1,1,administrateur,1925,1925,industries agro-alimentaires
 gros-j,Gros,J.-B. Gros,1,1,1,administrateur,1925,1925,industries agro-alimentaires
 reiss-l,Reiss,Léon Reiss,1,1,1,administrateur,1925,1925,industries agro-alimentaires
-hirsch-statuts-deposes-chez-me-delapalme-j,Hirsch. Statuts déposés chez Me Delapalme,J. Hirsch. Statuts déposés chez Me Delapalme,1,1,1,administrateur,1924,1924,industries agro-alimentaires
 genlis-h,Genlis,H. Genlis,1,1,1,administrateur,,,industries agro-alimentaires
 p-forveille-imprimeur-de-titres-paris-rodez,? P. Forveille imprimeur de titres Paris-Rodez,? P. Forveille imprimeur de titres Paris-Rodez,1,1,1,administrateur,1928,1928,industries agro-alimentaires
 dudet-e,Dudet,Dudet,1,1,1,administrateur,1935,1935,industries agro-alimentaires
@@ -178,7 +180,6 @@ martin-a,Martin,Albert Martin,1,1,1,president,1937,1937,industries agro-alimenta
 martin-l,Martin,Louis Martin,1,1,1,administrateur,1937,1937,industries agro-alimentaires
 giard-mercier,Giard-Mercier,Giard-Mercier,1,1,1,administrateur,1937,1937,industries agro-alimentaires
 paris,PARIS. 4,PARIS. 4; PARIS. 9,2,0,2,gerant,1930,1930,industries agro-alimentaires
+guiraud-a,Guiraud,A. Guiraud,1,0,1,directeur,1948,1948,industries agro-alimentaires
 mas-j,Mas,Joseph Mas,1,0,1,directeur,1930,1930,Commerce
 drotz-f,Drotz,Fernand Drotz,1,0,1,directeur,1936,1936,industries agro-alimentaires
-coientz-imp-a-tournon-h,COI/ENTZ. IMP. A. TOURNON,Hubert COI/ENTZ. IMP. A. TOURNON,1,0,1,gerant,1930,1930,industries agro-alimentaires
-colentz-impr-a-tournon-h,COLENTZ. Impr. A. TOURNON,Hubert COLENTZ. Impr. A. TOURNON,1,0,1,gerant,1930,1930,industries agro-alimentaires

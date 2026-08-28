@@ -27,7 +27,7 @@
     <node id="agricolecommercialealima">
       <data key="n_label">Société Agricole et Commerciale de l'Alima</data>
       <data key="n_sectors">Agro-alimentaire</data>
-      <data key="n_n_directors">11</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="agricolecommercialeindustriellelefini">
@@ -45,25 +45,25 @@
     <node id="alimaienne">
       <data key="n_label">L'Alimaïenne</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="bascongo">
       <data key="n_label">Compagnie Française du Bas-Congo</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="colonialebaniembe">
       <data key="n_label">Société Coloniale du Baniembé</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="commercialecolonialekadeisangha">
       <data key="n_label">Compagnie Commerciale et Coloniale de la Kadeï-Sangha</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="congo">
@@ -123,7 +123,7 @@
     <node id="ibenga">
       <data key="n_label">Ibenga</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">11</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="immobilierecongolaise">
@@ -135,19 +135,19 @@
     <node id="lyonnaiseafriqueequatoriale">
       <data key="n_label">Compagnie Lyonnaise de l'Afrique équatoriale française</data>
       <data key="n_sectors">Sociétés diverses</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="minesdjouecuivre">
       <data key="n_label">Société des Mines du Djoué, cuivre</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="minierecongo">
       <data key="n_label">Cie Minière du Congo français</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">23</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="mobaye">
@@ -159,7 +159,7 @@
     <node id="mpokoetablissementscongolaisgratry">
       <data key="n_label">M'Poko, Société anonyme des Établissements congolais Gratry</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">11</data>
+      <data key="n_n_directors">10</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="nkemenkeni">
@@ -171,19 +171,19 @@
     <node id="ongomo">
       <data key="n_label">L'Ongomo</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">15</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="proprietairekouilouniari">
       <data key="n_label">Compagnie Propriétaire du Kouilou-Niari</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">31</data>
+      <data key="n_n_directors">28</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="sangha">
       <data key="n_label">Compagnie de la Sangha</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="sanghalikouala">
@@ -204,23 +204,23 @@
     <edge id="e1" source="agricolecommercialealima" target="colonialebaniembe">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e2" source="afrique" target="entreprisestravaux">
+    <edge id="e2" source="agricolecommercialealima" target="alima">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e3" source="afrique" target="huileriesmoyencongo">
+    <edge id="e3" source="afrique" target="entreprisestravaux">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e4" source="afrique" target="huileriesmoyencongo">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e4" source="afriqueequatoriale" target="congo">
+    <edge id="e5" source="afriqueequatoriale" target="congo">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e5" source="agricolecommercialeindustriellelefini" target="nkemenkeni">
+    <edge id="e6" source="agricolecommercialeindustriellelefini" target="nkemenkeni">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e6" source="huileriesmoyencongo" target="sargosfreres">
+    <edge id="e7" source="huileriesmoyencongo" target="sargosfreres">
       <data key="e_weight">3</data>
-    </edge>
-    <edge id="e7" source="agricolecommercialealima" target="alima">
-      <data key="e_weight">2</data>
     </edge>
     <edge id="e8" source="alima" target="colonialebaniembe">
       <data key="e_weight">2</data>

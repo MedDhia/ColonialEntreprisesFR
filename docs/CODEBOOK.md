@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **Empty for 22.7% of rows** (17,995 of 79,343), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 12.9% of rows** (9,567 of 74,238), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |
@@ -100,6 +100,8 @@ appear several times if several sources state it.
 
 ### `affiliations_person_index.csv` — ties from the inverted indexes (16,131)
 
+16,131 rows: 15,679 person → company ties and 452 corporate directorships.
+
 Written by `src/parse_person_index.py` (stage 3b) from annuaires whose entries
 are people rather than firms. Same columns as `affiliations.csv`, plus:
 
@@ -107,7 +109,7 @@ are people rather than firms. Same columns as `affiliations.csv`, plus:
 |---|---|
 | `entry_number` | The company's number in the annuaire's own list — the link that resolves the tie. |
 | `source_genre` | `person_index`. |
-| `in_colonial_dataset` | 1 if the firm is already a node in `companies.csv`. **Only ~14% are.** |
+| `in_colonial_dataset` | 1 if the firm also has dossier evidence in this collection. **Only 194 of the 1,889 firms (10%) do**, covering 11% of the rows — the rest are metropolitan and foreign companies that colonial directors also sat on. |
 
 **These rows are merged into the network** by `build_network.py`, because a
 large share of colonial firms were quoted on the Paris Bourse. They keep their
@@ -139,13 +141,14 @@ prose construction matched: `prose_role_after` (11,148),
 `prose_appointed_after` (2,556), `prose_nomination`, `prose_appointed_before`,
 `prose_outgoing`, `prose_presidency`.
 
-**Not in the default network.** Hand-audited precision is near 90%, below the
-structured parser's; `build_network.py --with-prose` includes it. 8,421 of its
-person-firm pairs appear nowhere else, and 23% of its rows corroborate a pair
-the structured parser found independently. See METHODOLOGY §4d for the audit
-and the seven failure classes it fixed.
+**In the default network** (12,498 rows survive de-duplication against the
+other genres); `--no-prose` drops it. Hand-audited precision is near 90%,
+below the structured parser's, which is why `source_genre` is on every edge.
+8,421 of its person-firm pairs appear nowhere else, and 23% of its rows
+corroborate a pair the structured parser found independently. See METHODOLOGY
+§4d for the audit and the seven failure classes it fixed.
 
-### `affiliations_annotations.csv` — the compiler's inline notes, resolved (1,780)
+### `affiliations_annotations.csv` — the compiler's inline notes, resolved (1,692)
 
 Written by `src/resolve_annotations.py` (stage 3d) from
 `candidate_ties_from_annotations.csv`. Columns: `person_id`, `company_key`,
@@ -155,19 +158,21 @@ Written by `src/resolve_annotations.py` (stage 3d) from
 
 `match_method` records how the note resolved: `name` and `acronym` come from
 stage 4; `prefix`, `prefix_exact_length` and `exact_single_token` from the
-abbreviation matcher. Hand-audited at roughly 94%. Not in the default network
-— `build_network.py --with-annotations`. See METHODOLOGY §4e.
+abbreviation matcher. Hand-audited at roughly 94%. In the default network
+(1,683 rows survive de-duplication); `--no-annotations` drops it. See
+METHODOLOGY §4e.
 
-### `affiliations_biographical.csv` — from biographical dictionaries (3,052)
+### `affiliations_biographical.csv` — from biographical dictionaries (3,060)
 
 Written by `src/parse_biographies.py` (stage 3e) from *Qui êtes-vous ? 1924*,
 *Légion d'honneur en Indochine* and similar. Same columns as
 `affiliations.csv`, plus `match_method` and `source_genre = "biographical"`.
 
 **`year` is always empty.** The entry gives a career, not a board as it stood
-in a particular year, so these ties cannot be placed in a period. Not in the
-default network — `build_network.py --with-biographical`. Hand-audited at
-roughly 93%; see METHODOLOGY §4f.
+in a particular year, so these ties fall in the `undated` slice and cannot be
+placed in a period. In the default network (1,514 rows survive
+de-duplication); `--no-biographical` drops it, and any analysis that turns on
+timing should. Hand-audited at roughly 93%; see METHODOLOGY §4f.
 
 ### `org_affiliations.csv` — company → company board ties as observed
 
@@ -395,7 +400,7 @@ Syro-Lebanese names are `native` under the French mandate and
 `local_non_french_elite` elsewhere — the mandate is the only part of the Near
 East pages that France ruled.
 
-### `positionality_review.csv` — the audit set (205 rows)
+### `positionality_review.csv` — the audit set (308 rows)
 
 Every person coded as other than European, in full. At this scale the coding
 is small enough to read and correct by hand, which is a better guarantee than
@@ -433,7 +438,7 @@ the same columns as the corresponding top-level files, restricted to that
 territory and with nodes and edges recomputed from its ties alone.
 
 **Ties partition; nodes do not.** Every tie carries exactly one territory, so
-bundle tie counts sum to the dataset total (77,479) with none duplicated or
+bundle tie counts sum to the dataset total (99,353) with none duplicated or
 dropped. Firms and people appear in every bundle where they are observed —
 21% of people and 9% of firms are in more than one country bundle — so
 **node counts must not be added across bundles**.
@@ -525,7 +530,7 @@ graph (3,085).
 | Variable | Description |
 |---|---|
 | `company_id`, `name` | Firm, matching `companies.csv`. |
-| `in_giant` | 1 if in the giant component (4,671 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
+| `in_giant` | 1 if in the giant component (5,758 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
 | `degree` | Firms it shares at least one director with. |
 | `weighted_degree` | Sum of shared-director counts over those ties. |
 | `betweenness` | Normalised betweenness centrality, **exact and unweighted**, computed on the giant component. |
@@ -552,7 +557,7 @@ variable.
 
 ### `company_places.csv` — a city for each firm
 
-Written by `src/geocode.py` (stage 6c). One row per firm (10,434); 3,138 carry
+Written by `src/geocode.py` (stage 6c). One row per firm (10,705); 3,138 carry
 a city.
 
 | Variable | Description |
@@ -604,9 +609,9 @@ by `betweenness` instead of weighted degree. Holding the node set and layout
 fixed is the whole design: the difference between figures 1 and 6 is the
 finding, and a fresh layout would let neither be read against the other.
 
-**Figure 4 — every firm, every interlock.** All 4,729 firms in
-`edges_company_interlock.csv` at `weight >= 1` and all 56,003 interlocks
-between them — no threshold, no top-N. The giant component (4,671 firms,
+**Figure 4 — every firm, every interlock.** All 5,839 firms in
+`edges_company_interlock.csv` at `weight >= 1` and all 79,897 interlocks
+between them — no threshold, no top-N. The giant component (5,758 firms,
 98.5%) fills the canvas; the 46 firms in 22 unconnected components sit in a
 labelled strip below a rule. Colour is the firm's first territory folded to
 the three largest, node area is weighted degree, and the sixteen largest are

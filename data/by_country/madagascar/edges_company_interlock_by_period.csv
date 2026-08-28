@@ -9,11 +9,11 @@ minierepetrolesmadagascar,parfums,1914_1929,6,beliard-h; bertrand-c; cheymal-a; 
 emyrne,importationsexportationscommission,1914_1929,5,buissiere-j; perie-a; poucel-f; tholozan-c; vouland-l
 emyrne,industriellecommercialeemyrne,1914_1929,5,buissiere-j; perie-a; poucel-f; tholozan-c; vouland-l
 plantationsanjouan,plantationssakarive,1914_1929,5,baudry-e; baumann; chailloux; fromentault; mathieu
+agricolesucrierenossibe,occidentalemadagascar,1914_1929,5,a-maevatanana-a; adm-mm-fosse; delhorbe-l; exportation-materiel; mougeot
 creditfonciermadagascar,maritimeafriqueorientale,1914_1929,4,bontoux-h; gimon-c; michel-cote-c; philippar-g
 lyonnaisemadagascar,outremer,1914_1929,4,de-boissieu-j; michel-cote-c; perben-l; prenat-e
 agricoleindustriellemadagascar,maritimetransportscoloniaux,1914_1929,4,artaud-a; besson-l; roubaud-p; zafiropulo-g
 agricolesambirano,nosybeenneindustriesagricoles,1914_1929,4,charbonnel-r; l-tardieu; p-thibaud; thibaud-p
-colonialemadagascar,messageriesfrancaisesmadagascar,1914_1929,4,dit-canal-des-pangalanes; gibus-p; mirio; service-public-de-transport-entre-tamatave-v
 commerce,maritimeafriqueorientale,1914_1929,3,bontoux-h; gimon-c; michel-cote-c
 creditfonciermadagascar,grandsdomainesmadagascar,1914_1929,3,allain-e; bourdariat-a; loisy-x
 creditfonciermadagascarcreditfonciermadagascarreunion,grandsdomainesmadagascar,1914_1929,3,allain-e; bourdariat-a; loisy-x
@@ -31,6 +31,7 @@ produitsalimentaires,rochefortaiseproduitsalimentaires,1914_1929,3,bollee-a; che
 agricolesambirano,sembirano,1914_1929,3,lanot-f; p-thibaud; r-hacault
 agricoleindustrielletextilesmadagascar,textilestabacsmadagascarparismajungatananarivesuitecivileetudestextilesmadagascarindustrielleagricoletextilesmadagascar,1914_1929,3,fournes-r; vare-g; velard-e
 ileskerguelensaintpaulamsterdam,pechesaustrales,1914_1929,3,e-bossiere-h; e-bossiere-r; gauthier-p
+colonialemadagascar,messageriesfrancaisesmadagascar,1914_1929,3,dit-canal-des-pangalanes; gibus-p; mirio
 cafesmadagascar,financieremadagascar,1914_1929,3,beurrier-j; julien-bertrand-beurrier; pres-nevers
 creditfonciermadagascarcreditfonciermadagascarreunion,maritimeafriqueorientale,1914_1929,2,bontoux-h; gimon-c
 commerce,grandsdomainesmadagascar,1914_1929,2,allain-e; loisy-x
@@ -42,7 +43,6 @@ creditfonciermadagascar,lyonnaisemadagascar,1914_1929,2,michel-cote-c; perben-l
 creditfonciermadagascar,outremer,1914_1929,2,michel-cote-c; perben-l
 parismadagascar,rianile,1914_1929,2,burrus-a; burrus-p
 betsibokaambatoboeni,grandsdomainesmadagascar,1914_1929,2,amundsen-s; briand-g
-conservesalimentairesmontagneambre,emyrne,1914_1929,2,buissiere-j; tholozan-c
 energieindustrielle,fonciereminieremadagascar,1914_1929,2,durand-e; durand-p
 agricoleindustriellemadagascar,agricolesucrierenossibe,1914_1929,2,besson-l; zafiropulo-g
 agricolesucrierenossibe,maritimetransportscoloniaux,1914_1929,2,besson-l; zafiropulo-g
@@ -50,6 +50,7 @@ graphitesmashar,graphitesmaskar,1914_1929,2,amaury-de-contes-de-bucamps; guillau
 exploitationminesorsihanaka,messageriesmaritimes,1914_1929,2,harrison-smith-j; richard-wallwork-j
 agricolesucrierenossibe,banquespecialemadagascaroceanindien,1914_1929,2,gueugnier; gueugnier-l
 agricolesucrierenossibe,nosybeenneindustriesagricoles,1914_1929,2,chapuis-h; hattu-a
+conservesalimentairesmontagneambre,emyrne,1914_1929,2,buissiere-j; tholozan-c
 francomalgacheentreprises,occidentalemadagascar,1914_1929,2,delcher-j; javet-a
 grandeile,nosybeenneindustriesagricoles,1914_1929,2,chapuis-h; guy-de-la-motte-saint-pierre
 grandeile,sambiranaise,1914_1929,2,chapuis-h; guy-de-la-motte-saint-pierre
@@ -119,15 +120,16 @@ grandsdomainesmadagascar,tanninscoloniauxsahambavy,1914_1929,1,schwob-d-hericour
 emileranarivelo,rossignol,1914_1929,1,fraise
 graphitessahanavo,rossignol,1914_1929,1,ottino-s
 nosybeenneindustriesagricoles,sembirano,1914_1929,1,p-thibaud
-agricolesucrierenossibe,occidentalemadagascar,1914_1929,1,delhorbe-l
 betsibokaambatoboeni,mahajamba,1914_1929,1,l-oudot
 betsibokaambatoboeni,grandeile,1914_1929,1,pierre
 graphites,graphitessahanavo,1930_1944,12,a-ambalarondra-e; adm-del-m-s-ottino; adm-mm-c-de-chazal; anivorano; darrieux; deschars; faure-le-pere-j; fondateur-de-la-miniere-du-kanguet; g-de-breteuil; j-parmentier; joseph; soc-ulysse-gros
 agricolesucrierenossibe,modrin,1930_1944,9,adm-mm-l-besson; chapuis-h; g-zafiropulo; j-exbrayat; l-gueugnier; more-m; pres-m-g-schwob-d-hericourt; r-legrand; springer-c
 malgachecultures,tulear,1930_1944,8,bouruet-aubertot-j; bouvier-r; dequivre-c; giscard-d-estaing-e; krafft-l; piquet-v; saurin-h; tanti-a
+creditfonciermadagascarcreditfonciermadagascarreunion,marceau,1930_1944,7,bontoux-h; gimon-c; h-m; lescot-m; loisy-x; michel-cote-c; perben-l
 parfums,plantesparfumsmadagascar,1930_1944,7,adm-mm-bouvier; dufay; homberg-o; raimbault; rocca; tanti; thierry
 tanninscoloniaux,tanninscoloniauxsahambavy,1930_1944,7,duvallet-l; froissart-l; gueugnier-j; gueugnier-l; legrand-j; schwob-d-hericourt-g; vincent-p
 agricultureindustriecoloniales,lyonnaisemadagascar,1930_1944,6,cottet-c; de-boissieu-j; de-la-morandiere-l; perben-l; prenat-h; ravier-c
+creditfonciermadagascar,creditfonciermadagascarcreditfonciermadagascarreunion,1930_1944,6,gimon-c; lescot-m; loisy-x; michel-cote-c; perben-l; philippar-g
 creditfonciermadagascar,marceau,1930_1944,6,bourdariat-a; gimon-c; lescot-m; loisy-x; michel-cote-c; perben-l
 malgachecultures,plantesparfumsmadagascar,1930_1944,5,bouruet-aubertot-j; bouvier-r; giscard-d-estaing-e; saurin-h; tanti-a
 plantesparfumsmadagascar,tulear,1930_1944,5,bouruet-aubertot-j; bouvier-r; giscard-d-estaing-e; saurin-h; tanti-a
@@ -144,16 +146,22 @@ gemmesmadagascar,mineraisgrandeile,1930_1944,3,bevillard-p; lecomte-p; rigal-j
 graphites,mineraisgrandeile,1930_1944,3,bevillard-p; piquet-v; rigal-j
 culturescoloniales,nosybeenneindustriesagricoles,1930_1944,3,carl-du-manoir; chapuis-h; hacault-r
 culturescoloniales,produitsagricolestropicaux,1930_1944,3,carl-du-manoir; chapuis-h; de-la-motte-saint-pierre-f
+foncieremadagascar,madagascar,1930_1944,3,h-boissier; j-bergey; laurans
 agricultureindustriecoloniales,creditfonciermadagascar,1930_1944,2,michel-cote-c; perben-l
+agricultureindustriecoloniales,creditfonciermadagascarcreditfonciermadagascarreunion,1930_1944,2,michel-cote-c; perben-l
 agricultureindustriecoloniales,marceau,1930_1944,2,michel-cote-c; perben-l
 creditfonciermadagascar,entreprisesmaritimesmadagascar,1930_1944,2,michel-cote-c; perben-l
+creditfonciermadagascarcreditfonciermadagascarreunion,entreprisesmaritimesmadagascar,1930_1944,2,michel-cote-c; perben-l
 entreprisesmaritimesmadagascar,lyonnaisemadagascar,1930_1944,2,perben-l; ravier-c
 entreprisesmaritimesmadagascar,marceau,1930_1944,2,michel-cote-c; perben-l
 agricultureindustriecoloniales,mahajamba,1930_1944,2,de-la-morandiere-l; ravier-c
 lyonnaisemadagascar,mahajamba,1930_1944,2,de-la-morandiere-l; ravier-c
 industriellecommercialeemyrne,phoceennecommercecolonial,1930_1944,2,dieppedalle-g; vouland-l
 colonialebambaobambao,produitsalimentaires,1930_1944,2,chiris-g; gruet-g
+colonialebambaobambao,produitsaromatiquesoceanindien,1930_1944,2,chiris-g; gruet-g
+produitsalimentaires,produitsaromatiquesoceanindien,1930_1944,2,chiris-g; gruet-g
 creditfonciermadagascar,maritimeafriqueorientale,1930_1944,2,michel-cote-c; philippar-g
+creditfonciermadagascarcreditfonciermadagascarreunion,maritimeafriqueorientale,1930_1944,2,michel-cote-c; philippar-g
 gemmesmadagascar,graphites,1930_1944,2,bevillard-p; rigal-j
 gallois,gemmesmadagascar,1930_1944,2,grandin-l; l-krafft
 malgachecultures,mineraisgrandeile,1930_1944,2,bouvier-r; piquet-v
@@ -173,6 +181,7 @@ nantaiseculturecoloniale,nantaisemadagascar,1930_1944,2,kerr-h; roy-a
 batelagechargeurstamatave,porttamatave,1930_1944,2,hoareau-e; nativel-e
 beryl,madagascar,1930_1944,1,bergey-j
 creditfonciermadagascar,lyonnaisemadagascar,1930_1944,1,perben-l
+creditfonciermadagascarcreditfonciermadagascarreunion,lyonnaisemadagascar,1930_1944,1,perben-l
 lyonnaisemadagascar,marceau,1930_1944,1,perben-l
 entreprisesmaritimesmadagascar,mahajamba,1930_1944,1,ravier-c
 agricoleindustriellemadagascar,sucreriesmarseillaisesmadagascar,1930_1944,1,roubaud-p
@@ -188,13 +197,16 @@ conservesalimentairesmontagneambre,phoceennecommercecolonial,1930_1944,1,diepped
 civilefombonimoheli,colonialebambaobambao,1930_1944,1,chiris-g
 civilefombonimoheli,comptoirscoloniauxchiris,1930_1944,1,chiris-g
 civilefombonimoheli,produitsalimentaires,1930_1944,1,chiris-g
+civilefombonimoheli,produitsaromatiquesoceanindien,1930_1944,1,chiris-g
 colonialebambaobambao,comptoirscoloniauxchiris,1930_1944,1,chiris-g
 comptoirscoloniauxchiris,produitsalimentaires,1930_1944,1,chiris-g
+comptoirscoloniauxchiris,produitsaromatiquesoceanindien,1930_1944,1,chiris-g
 agricoleindustriellemadagascar,rweinberger,1930_1944,1,benazeth-l
 madagascarautomobile,rweinberger,1930_1944,1,benazeth-l
 agricultureindustriecoloniales,maritimeafriqueorientale,1930_1944,1,michel-cote-c
 agricultureindustriecoloniales,maritimemajunga,1930_1944,1,michel-cote-c
 creditfonciermadagascar,maritimemajunga,1930_1944,1,michel-cote-c
+creditfonciermadagascarcreditfonciermadagascarreunion,maritimemajunga,1930_1944,1,michel-cote-c
 entreprisesmaritimesmadagascar,maritimeafriqueorientale,1930_1944,1,michel-cote-c
 entreprisesmaritimesmadagascar,maritimemajunga,1930_1944,1,michel-cote-c
 marceau,maritimeafriqueorientale,1930_1944,1,michel-cote-c
@@ -318,7 +330,7 @@ culturescoloniales,nosybeenneindustriesagricoles,post_1962,1,hacault-r
 mahajamba,tanninscoloniaux,post_1962,1,legrand-j
 domaineankaratrasucrieremahavavy,sucreriesmarseillaisesmadagascar,post_1962,1,de-revel-b
 domaineankaratrasucrieremahavavy,tanninscoloniaux,post_1962,1,selon-coston
-gisementsauriferesanasaha,syndicatlyonnaisexplorationmadagascar,pre_1914,4,boussand-l; bouvier; commissaire-m-canavy; duclaux-monteil
+gisementsauriferesanasaha,syndicatlyonnaisexplorationmadagascar,pre_1914,3,boussand-l; bouvier; duclaux-monteil
 agricolemadagascar,exploitationgraphitesmadagascar,pre_1914,2,boulloche-l; cabrol-c
 ankaratra,minesitasy,pre_1914,2,cosson-e; mercier-h
 faraonyexploitatonplacersauriferesmadagascar,minesorandavakoera,pre_1914,1,paris

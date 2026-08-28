@@ -15,13 +15,13 @@
     <node id="banquereunion">
       <data key="n_label">Banque de la Réunion</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="colonialeagricolecommercialeindustriellesucreriescoloniales">
       <data key="n_label">Société coloniale, agricole, commerciale et industrielle Sucreries coloniales</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">92</data>
+      <data key="n_n_directors">57</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="creditfonciercolonial">
@@ -33,7 +33,7 @@
     <node id="grandsbois">
       <data key="n_label">Société anon. des Grands-Bois</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">20</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="hydroelectriquereunionhe">
@@ -57,13 +57,13 @@
     <node id="raphaeldouyere">
       <data key="n_label">Raphaël Douyère</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">4</data>
+      <data key="n_n_directors">3</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="rhumspurs">
       <data key="n_label">Compagnie des Rhums purs</data>
       <data key="n_sectors">Sociétés diverses</data>
-      <data key="n_n_directors">22</data>
+      <data key="n_n_directors">20</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="saintdenis">
@@ -75,7 +75,7 @@
     <node id="sucreriescoloniales">
       <data key="n_label">Sucreries coloniales</data>
       <data key="n_sectors">Sociétés diverses</data>
-      <data key="n_n_directors">52</data>
+      <data key="n_n_directors">51</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="sucreriescolonialescolonialeagricolecommerciale">
@@ -99,20 +99,20 @@
     <edge id="e4" source="rhumspurs" target="sucreriescoloniales">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e5" source="creditfonciercolonial" target="sucreriescoloniales">
+    <edge id="e5" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="creditfonciercolonial">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e6" source="rhumspurs" target="sucreriescolonialescolonialeagricolecommerciale">
-      <data key="e_weight">4</data>
+    <edge id="e6" source="creditfonciercolonial" target="sucreriescoloniales">
+      <data key="e_weight">5</data>
     </edge>
-    <edge id="e7" source="colonialeagricolecommercialeindustriellesucreriescoloniales" target="creditfonciercolonial">
-      <data key="e_weight">4</data>
+    <edge id="e7" source="creditfonciercolonial" target="sucreriescolonialescolonialeagricolecommerciale">
+      <data key="e_weight">5</data>
     </edge>
-    <edge id="e8" source="creditfonciercolonial" target="sucreriescolonialescolonialeagricolecommerciale">
+    <edge id="e8" source="rhumspurs" target="sucreriescolonialescolonialeagricolecommerciale">
       <data key="e_weight">4</data>
     </edge>
     <edge id="e9" source="creditfonciercolonial" target="rhumspurs">
-      <data key="e_weight">2</data>
+      <data key="e_weight">3</data>
     </edge>
     <edge id="e10" source="parisbourbondeveloppementrelationsentre" target="parisbourbondeveloppementrelationsentrefrance">
       <data key="e_weight">2</data>

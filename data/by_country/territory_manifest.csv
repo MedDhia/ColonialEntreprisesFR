@@ -1,55 +1,56 @@
 territory,slug,n_documents,n_ties,n_board_ties,n_persons,n_companies,n_two_mode_edges,n_interlock_edges,n_corporate_ties,first_year,last_year,n_persons_shared,n_companies_shared,share_persons_shared,share_companies_shared
-Maroc,maroc,454,11123,10522,5618,920,8050,4341,734,1878,2007,1657,53,0.295,0.058
-Indochine,indochine,2460,10301,9796,4431,610,6808,5734,728,1881,1995,1338,36,0.302,0.059
-Empire (transversal),empire-transversal,558,9948,9388,5435,463,6646,1355,516,1861,2006,2254,110,0.415,0.238
-Algérie,algerie,816,4628,4278,2760,287,3251,448,198,1856,1959,1138,30,0.412,0.105
-Afrique occidentale française,afrique-occidentale-francaise,32,4450,4165,2817,422,3823,1205,264,1882,1975,1545,148,0.548,0.351
-Madagascar,madagascar,189,3563,3257,1878,229,2517,490,238,1890,1973,616,23,0.328,0.1
-Afrique équatoriale française,afrique-equatoriale-francaise,44,3172,2945,1980,293,2551,591,261,1899,1968,1002,84,0.506,0.287
-Tunisie,tunisie,253,1872,1781,1157,114,1326,113,90,1881,1958,588,19,0.508,0.167
-Côte d'Ivoire,cote-d-ivoire,163,1193,1097,791,105,958,131,34,1889,1972,498,44,0.63,0.419
-Sénégal,senegal,92,1191,1139,650,71,756,91,44,1868,1953,469,37,0.722,0.521
-Syrie-Liban,syrie-liban,53,830,781,512,47,590,65,73,1892,1953,248,8,0.484,0.17
-Nouvelle-Calédonie (Mélanésie),nouvelle-caledonie-melanesie,84,808,796,411,46,540,104,36,1882,1964,142,9,0.345,0.196
-Java et Sumatra (Indes néerlandaises),java-et-sumatra-indes-neerlandaises,22,653,625,191,19,272,53,10,1910,1953,65,0,0.34,0.0
-Gabon,gabon,61,610,589,393,43,472,48,24,1899,1959,264,22,0.672,0.512
-Congo-Brazzaville ou Moyen-Congo,congo-brazzaville-ou-moyen-congo,84,561,538,394,50,446,44,24,1899,1954,233,20,0.591,0.4
-Empire ottoman/Turquie,empire-ottoman-turquie,35,537,489,309,21,345,19,36,1896,1943,115,0,0.372,0.0
-Djibouti,djibouti,22,531,514,229,25,271,39,17,1898,1953,113,4,0.493,0.16
-Guyane française,guyane-francaise,51,510,471,322,39,353,20,22,1878,1955,135,4,0.419,0.103
-Tahiti (Polynésie),tahiti-polynesie,23,483,469,194,15,247,31,17,1910,1953,87,1,0.448,0.067
-La Réunion,la-reunion,15,393,390,207,17,266,24,21,1920,1953,90,8,0.435,0.471
-Égypte,egypte,16,376,363,176,7,184,4,2,1887,1953,59,0,0.335,0.0
-Guadeloupe et Martinique,guadeloupe-et-martinique,20,356,347,220,34,269,18,27,1907,1962,89,3,0.405,0.088
-"Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)",soudan-francais-mali-haute-volta-ou-burkina-fasso-et-niger,49,348,330,214,27,244,11,20,1898,2015,132,10,0.617,0.37
-Guinée Conakry,guinee-conakry,56,315,270,254,32,265,5,22,1888,1951,170,15,0.669,0.469
-Chine,chine,25,313,294,198,13,213,11,17,1906,1953,115,5,0.581,0.385
-Cameroun,cameroun,36,249,243,183,22,205,6,23,1903,1954,136,15,0.743,0.682
-Oubangui-Chari (Centrafrique),oubangui-chari-centrafrique,26,229,228,150,15,164,7,8,1899,1964,107,9,0.713,0.6
-Malaisie,malaisie,19,206,204,104,9,111,4,4,1910,1953,25,0,0.24,0.0
-Grèce,grece,8,178,178,68,5,70,2,0,1880,1953,11,0,0.162,0.0
-Nouvelles-Hébrides (Mélanésie),nouvelles-hebrides-melanesie,15,163,163,96,12,127,21,30,1882,1959,68,5,0.708,0.417
-Dahomey (Bénin),dahomey-benin,26,128,123,112,14,121,2,14,1899,1951,89,7,0.795,0.5
-Macédoine,macedoine,9,124,124,68,8,77,3,3,1884,1948,17,0,0.25,0.0
-Mozambique,mozambique,2,114,113,66,2,66,0,0,1895,1953,11,0,0.167,0.0
-Angola,angola,3,112,92,64,2,67,1,2,1901,1937,10,0,0.156,0.0
-Pérou,perou,1,98,98,40,1,40,0,4,1910,1953,19,0,0.475,0.0
-Comores,comores,10,95,92,53,6,64,9,12,1900,1953,36,5,0.679,0.833
-Brésil,bresil,10,94,90,45,5,46,1,2,1900,1953,20,0,0.444,0.0
-Inde (Comptoirs français de l’),inde-comptoirs-francais-de-l,12,65,63,20,3,24,1,0,1922,1953,7,0,0.35,0.0
-Abyssinie ou Ethiopie,abyssinie-ou-ethiopie,8,59,59,42,3,42,0,4,1921,1937,22,1,0.524,0.333
-Bulgarie,bulgarie,2,53,51,38,4,43,1,2,1920,1945,15,0,0.395,0.0
-Venezuela,venezuela,3,42,42,19,3,24,1,0,1901,1948,10,0,0.526,0.0
-Saint-Pierre et Miquelon,saint-pierre-et-miquelon,3,41,41,27,4,35,3,0,1926,1937,7,1,0.259,0.25
-Chili,chili,2,36,27,33,2,35,1,1,1912,1945,11,0,0.333,0.0
+Maroc,maroc,454,12333,11769,5644,959,8453,4998,852,1878,2007,1806,55,0.32,0.057
+Indochine,indochine,2460,10565,9954,4223,621,6770,5944,752,1881,1995,1389,37,0.329,0.06
+Empire (transversal),empire-transversal,558,9986,9454,5199,467,6476,1367,539,1861,2006,2375,111,0.457,0.238
+Algérie,algerie,816,6293,5957,3440,444,4325,1057,330,1856,1959,1364,33,0.397,0.074
+Afrique occidentale française,afrique-occidentale-francaise,32,4155,3894,2521,421,3519,1201,264,1882,1975,1540,148,0.611,0.352
+Madagascar,madagascar,189,3364,3112,1651,229,2296,493,245,1890,1973,631,23,0.382,0.1
+Afrique équatoriale française,afrique-equatoriale-francaise,44,3022,2832,1818,293,2391,604,261,1899,1968,1010,84,0.556,0.287
+Tunisie,tunisie,253,2527,2434,1405,167,1773,322,120,1881,1958,704,19,0.501,0.114
+Sénégal,senegal,92,1254,1202,647,72,760,92,47,1868,1953,484,37,0.748,0.514
+Côte d'Ivoire,cote-d-ivoire,163,1166,1090,707,105,883,140,34,1889,1972,497,44,0.703,0.419
+Syrie-Liban,syrie-liban,53,822,765,480,47,575,75,73,1892,1953,250,8,0.521,0.17
+Nouvelle-Calédonie (Mélanésie),nouvelle-caledonie-melanesie,84,788,776,389,46,518,104,36,1882,1964,143,9,0.368,0.196
+Java et Sumatra (Indes néerlandaises),java-et-sumatra-indes-neerlandaises,22,655,629,177,21,264,56,10,1910,1953,72,0,0.407,0.0
+Gabon,gabon,61,623,602,393,43,478,55,26,1899,1959,280,22,0.712,0.512
+Empire ottoman/Turquie,empire-ottoman-turquie,35,562,515,315,22,354,21,37,1896,1943,125,0,0.397,0.0
+Égypte,egypte,16,536,519,228,7,247,5,2,1887,1953,61,0,0.268,0.0
+Congo-Brazzaville ou Moyen-Congo,congo-brazzaville-ou-moyen-congo,84,533,512,363,50,417,44,24,1899,1954,233,20,0.642,0.4
+Djibouti,djibouti,22,514,497,206,25,248,39,20,1898,1953,115,4,0.558,0.16
+Guyane française,guyane-francaise,51,476,446,291,39,322,20,22,1878,1955,134,4,0.46,0.103
+Tahiti (Polynésie),tahiti-polynesie,23,459,449,169,15,224,31,19,1910,1953,89,1,0.527,0.067
+"Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)",soudan-francais-mali-haute-volta-ou-burkina-fasso-et-niger,49,350,331,204,27,235,11,21,1898,2015,130,10,0.637,0.37
+La Réunion,la-reunion,15,338,335,154,17,213,24,21,1920,1953,90,8,0.584,0.471
+Guadeloupe et Martinique,guadeloupe-et-martinique,20,335,327,201,34,249,18,27,1907,1962,91,3,0.453,0.088
+Chine,chine,25,315,299,187,14,208,13,17,1906,1953,116,5,0.62,0.357
+Guinée Conakry,guinee-conakry,56,306,269,239,32,250,5,22,1888,1951,169,15,0.707,0.469
+Malaisie,malaisie,19,285,278,121,10,129,4,4,1910,1953,40,0,0.331,0.0
+Cameroun,cameroun,36,253,248,184,23,209,8,23,1903,1954,141,15,0.766,0.652
+Oubangui-Chari (Centrafrique),oubangui-chari-centrafrique,26,224,223,141,15,155,7,8,1899,1964,104,9,0.738,0.6
+Grèce,grece,8,174,174,66,5,68,2,0,1880,1953,11,0,0.167,0.0
+Nouvelles-Hébrides (Mélanésie),nouvelles-hebrides-melanesie,15,171,171,97,12,128,21,30,1882,1959,72,5,0.742,0.417
+Dahomey (Bénin),dahomey-benin,26,127,122,111,14,120,2,14,1899,1951,88,7,0.793,0.5
+Mozambique,mozambique,2,126,125,65,2,65,0,0,1895,1953,11,0,0.169,0.0
+Macédoine,macedoine,9,124,123,64,8,73,3,3,1884,1953,18,0,0.281,0.0
+Angola,angola,3,111,91,62,2,66,1,2,1901,1940,10,0,0.161,0.0
+Pérou,perou,1,93,93,38,1,38,0,4,1910,1953,21,0,0.553,0.0
+Comores,comores,10,91,88,49,6,60,9,12,1900,1953,36,5,0.735,0.833
+Brésil,bresil,10,88,84,41,5,42,1,2,1900,1953,19,0,0.463,0.0
+Inde (Comptoirs français de l’),inde-comptoirs-francais-de-l,12,64,62,19,3,23,1,0,1922,1953,8,0,0.421,0.0
+Bulgarie,bulgarie,2,63,61,38,4,43,1,2,1920,1948,15,0,0.395,0.0
+Abyssinie ou Ethiopie,abyssinie-ou-ethiopie,8,57,57,40,3,40,0,4,1921,1937,22,1,0.55,0.333
+Chili,chili,2,42,35,30,2,36,1,1,1912,1945,11,0,0.367,0.0
+Venezuela,venezuela,3,41,41,18,3,23,1,0,1901,1948,11,0,0.611,0.0
+Russie,russie,1,38,38,16,1,16,0,0,1912,1920,8,0,0.5,0.0
+Saint-Pierre et Miquelon,saint-pierre-et-miquelon,3,36,36,22,4,30,3,0,1926,1937,7,1,0.318,0.25
 Togo,togo,5,32,32,26,4,26,0,2,1921,1948,22,2,0.846,0.5
-Terres australes et antartiques françaises,terres-australes-et-antartiques-francaises,6,32,32,24,5,29,3,4,1910,1943,13,1,0.542,0.2
-Guyane hollandaise (Suriname),guyane-hollandaise-suriname,1,29,29,29,1,29,0,2,1895,1938,15,1,0.517,1.0
-Siam (Thaïlande),siam-thailande,4,27,27,27,3,27,0,8,1896,1954,6,1,0.222,0.333
-Serbie-Yougoslavie,serbie-yougoslavie,5,22,22,18,2,19,1,2,1907,1910,9,0,0.5,0.0
-Albanie,albanie,1,13,13,12,1,12,0,0,1897,1909,6,0,0.5,0.0
+Terres australes et antartiques françaises,terres-australes-et-antartiques-francaises,6,30,30,22,5,27,3,4,1910,1943,11,1,0.5,0.2
+Siam (Thaïlande),siam-thailande,4,26,26,26,3,26,0,8,1896,1954,6,1,0.231,0.333
+Guyane hollandaise (Suriname),guyane-hollandaise-suriname,1,25,25,25,1,25,0,2,1895,1938,13,1,0.52,1.0
+Serbie-Yougoslavie,serbie-yougoslavie,5,21,21,17,2,18,1,2,1907,1910,10,0,0.588,0.0
+Albanie,albanie,1,12,12,11,1,11,0,0,1897,1909,6,0,0.545,0.0
 Tchad,tchad,4,11,10,9,2,9,0,2,1914,1919,7,1,0.778,0.5
-Mauritanie,mauritanie,6,11,10,11,2,11,0,0,1907,1930,8,0,0.727,0.0
-Nigéria,nigeria,1,11,11,10,1,10,0,0,1916,1919,7,1,0.7,1.0
-Bolivie,bolivie,2,8,8,8,1,8,0,0,1901,1901,0,0,0.0,0.0
+Mauritanie,mauritanie,6,11,10,11,2,11,0,0,1907,1930,9,0,0.818,0.0
+Nigéria,nigeria,1,10,10,9,1,9,0,0,1916,1919,7,1,0.778,1.0
+Bolivie,bolivie,2,7,7,7,1,7,0,0,1901,1901,0,0,0.0,0.0
 Géorgie,georgie,2,1,1,1,1,1,0,3,1911,1911,0,0,0.0,0.0

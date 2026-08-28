@@ -2,8 +2,10 @@ company_id_1,company_id_2,period,weight,shared_directors
 louisemmanueladoplphegoranflauxbaronandree,ports,1914_1929,6,berard; blanche-p; garreta-h; henry-a; michon-coster-j; saint-rene-taillandier-g
 banquehypothecairefrancoegyptienne,foncieresyrie,1914_1929,3,d-hugonneau-m; de-cressac-h; ficatier-m
 cheminferdamashamahprolongements,heraclee,1914_1929,3,briere-p; revoil-p; rey-a
+banquefonciereegyptelandbankegyptalexandrie,unionfonciereegypte,1914_1929,3,charles-roux-j; salvago-m; zarifi
 georgemallet,ports,1914_1929,3,bey-p; henry-a; michon-coster-j
 minesbaliakaraidin,miniereindustrielleplakalnitza,1914_1929,2,mavrogordato-a; pissard-l
+banquepaysorient,exploitationcheminsferorientaux,1914_1929,2,devies; fabri-c
 georgemallet,heraclee,1914_1929,2,revoil-p; wiener-h
 creditfoncierorient,creditfonciersyrie,1914_1929,2,f-de-jardin; p-philippar
 grandsmoulinsbulgariebourgas,meunierelevantdamasjaffa,1914_1929,2,baumann; baumann-l
@@ -14,11 +16,16 @@ minesbaliakaraidin,plakalnitza,1914_1929,1,pissard-l
 miniereindustrielleplakalnitza,plakalnitza,1914_1929,1,pissard-l
 exploitaitoncheminfercilicie,minesbaliakaraidin,1914_1929,1,roudy-a
 banquesyrie,cheminferdamashamahprolongements,1914_1929,1,salem
+banquepaysorient,creditfonciersyrie,1914_1929,1,l-orosdi
 banquepretsnantissementsmontspieteegyptiens,caissehypothecaireegypte,1914_1929,1,jacobs-e
 exploitaitoncheminfercilicie,foncieresyrie,1914_1929,1,chaussees
+exploitaitoncheminfercilicie,exploitationcheminsferorientaux,1914_1929,1,rebuffel-c
 exploitationcheminsferorientaux,radioorient,1914_1929,1,bousquet-h
 cheminferdamashamahprolongements,georgemallet,1914_1929,1,revoil-p
+banquefonciereegyptelandbankegyptalexandrie,heraclee,1914_1929,1,zarifi
+heraclee,unionfonciereegypte,1914_1929,1,zarifi
 electricitealep,heraclee,1914_1929,1,weyl
+creditfoncieregyptien,unionfonciereegypte,1914_1929,1,lascaris
 creditfonciersyrie,louisemmanueladoplphegoranflauxbaronandree,1914_1929,1,saint-rene-taillandier-g
 creditfonciersyrie,ports,1914_1929,1,saint-rene-taillandier-g
 cheminferdamashamahprolongements,louisemmanueladoplphegoranflauxbaronandree,1914_1929,1,blanche-p
@@ -37,18 +44,28 @@ louisemmanueladoplphegoranflauxbaronandree,tramwayseclairagebeyrouth,1914_1929,1
 ports,tramwayseclairagebeyrouth,1914_1929,1,berard
 tramwaysconstantinople,tramwayselectricite,1914_1929,1,tramways
 tramwayseclairagebeyrouth,tramwayselectricite,1914_1929,1,pirard-a
+banquesyriegrandliban,banquesyrieliban,1930_1944,10,berard; bey-beyhum-o; bey-daouk-o; bey-el-mouayad-b; boissonnas-j; chabrieres-m; chiha; ed-vernes; h-hottinguer; homsy-a
 cheminferdamashamahprolongements,heraclee,1930_1944,3,boissiere-g; briere-p; rey-a
+minesbaliakaraidin,miniereindustrielleplakalnitza,1930_1944,2,mavrogordato-a; pissard-l
 banquesyriegrandliban,ports,1930_1944,2,berard; r-mallet
 banquesyriegrandliban,tramwayseclairagebeyrouth,1930_1944,2,berard; chiha
+banquesyrieliban,tramwayseclairagebeyrouth,1930_1944,2,berard; chiha
+banquepaysorient,exploitationcheminsferorientaux,1930_1944,2,devies; fabri-c
 cheminferdamashamahprolongements,ports,1930_1944,2,blanche-p; michon-coster-j
+banquefonciereegyptelandbankegyptalexandrie,landbankegypt,1930_1944,2,salvago-m; wellhoff-s
+miniereindustrielleplakalnitza,plakalnitza,1930_1944,2,hausser-g; tanqueray-g
 asphaltespetroleslattaquie,heraclee,1930_1944,1,macaux-h
+banquesyrieliban,cheminferdamashamahprolongements,1930_1944,1,roudy-a
+banquesyrieliban,minesbaliakaraidin,1930_1944,1,roudy-a
 cheminferdamashamahprolongements,minesbaliakaraidin,1930_1944,1,roudy-a
 banquesyrie,exploitationcheminsferorientaux,1930_1944,1,charpentier-j
-banquesyriegrandliban,heraclee,1930_1944,1,de-cerjat-c
 banquesyriegrandliban,radioorient,1930_1944,1,berard
+banquesyrieliban,ports,1930_1944,1,berard
+banquesyrieliban,radioorient,1930_1944,1,berard
 ports,radioorient,1930_1944,1,berard
 ports,tramwayseclairagebeyrouth,1930_1944,1,berard
 radioorient,tramwayseclairagebeyrouth,1930_1944,1,berard
+banquesyriegrandliban,heraclee,1930_1944,1,de-cerjat-c
 banquepretsnantissementsmontspieteegyptiens,caissehypothecaireegypte,1930_1944,1,jacobs-e
 banquepretsnantissementsmontspieteegyptiens,creditfoncierorient,1930_1944,1,jacobs-e
 caissehypothecaireegypte,creditfoncierorient,1930_1944,1,jacobs-e
@@ -56,10 +73,12 @@ electricitealep,heraclee,1930_1944,1,weyl
 creditfoncieregyptien,heraclee,1930_1944,1,bey-n
 cheminferdamashamahprolongements,tramwayseclairagebeyrouth,1930_1944,1,bourgeois-d
 banquepretsnantissementsmontspieteegyptiens,cheminferdamashamahprolongements,1930_1944,1,marbeau
+landbankegypt,unionfonciereegypte,1930_1944,1,mosseri-e
 banquepretsnantissementsmontspieteegyptiens,caissehypothecaireegypte,1945_1962,1,jacobs-e
 cheminferdamashamahprolongements,port,1945_1962,1,blanche-p
 banquepretsnantissementsmontspieteegyptiens,cheminferdamashamahprolongements,1945_1962,1,marbeau
 heraclee,ottomaneheraclee,pre_1914,10,bernard-a; boutan; deffes-j; emond-r; fournier; genebrias-de-fredaigue-g; haladjian-p; rey-a; wiener-h; zarifi
+banquefonciereegyptelandbankegyptalexandrie,unionfonciereegypte,pre_1914,4,charles-roux-j; salvago-m; zarifi; zervudachi-g
 eauxbeyrouth,ottomanegazbeyrouth,pre_1914,4,menasche-j; misk-n; peter-m; sabbag-e
 immobiliereregieterrainssalonique,portsaloniqueottomaneconstruction,pre_1914,4,effendi-h; modiano-l; nabona-j; robert-j
 ottomanecheminfersmyrnecassabaprolongement,tombac,pre_1914,3,auboyneau-g; naville-p; pangiris-bey-s
@@ -76,7 +95,6 @@ ottomaneheraclee,portquaisentrepotsbeyrouth,pre_1914,2,emond-r; pangiris-bey-s
 imperialeottomaneroutebeyrouthdamas,ottomaneheraclee,pre_1914,2,de-nervo-l; emond-r
 imperialeottomaneroutebeyrouthdamas,portquaisentrepotsbeyrouth,pre_1914,2,emond-r; habert-g
 ottomaneheraclee,port,pre_1914,2,bey-p; wiener-h
-banquefonciereegyptelandbankegyptalexandrie,unionfonciereegypte,pre_1914,2,charles-roux-j; salvago-m
 banquefrancoserbe,financiereorient,pre_1914,1,henrotte
 banquefrancoserbe,ottomanecheminfersmyrnecassabaprolongement,pre_1914,1,henrotte
 banquefrancoserbe,exploitationsminieresserbie,pre_1914,1,naville-a
@@ -92,8 +110,12 @@ heraclee,quaisdocksentrepotsconstantinople,pre_1914,1,deffes-j
 ottomanecheminfersmyrnecassabaprolongement,quaisdocksentrepotsconstantinople,pre_1914,1,deffes-j
 ottomanecheminfersmyrnecassabaprolongement,portquaisentrepotsbeyrouth,pre_1914,1,pangiris-bey-s
 portquaisentrepotsbeyrouth,tombac,pre_1914,1,pangiris-bey-s
+anciensetablissementsbairdusinesfrancorussespetrograd,heraclee,pre_1914,1,boutan
+anciensetablissementsbairdusinesfrancorussespetrograd,ottomaneheraclee,pre_1914,1,boutan
 heraclee,imperialeottomaneroutebeyrouthdamas,pre_1914,1,emond-r
 heraclee,portquaisentrepotsbeyrouth,pre_1914,1,emond-r
+banquefonciereegyptelandbankegyptalexandrie,heraclee,pre_1914,1,zarifi
+banquefonciereegyptelandbankegyptalexandrie,ottomaneheraclee,pre_1914,1,zarifi
 heraclee,unionfonciereegypte,pre_1914,1,zarifi
 ottomaneheraclee,unionfonciereegypte,pre_1914,1,zarifi
 minesselenitza,port,pre_1914,1,bey-p

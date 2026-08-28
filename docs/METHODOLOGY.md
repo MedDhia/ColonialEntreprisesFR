@@ -42,12 +42,15 @@ Ten stages, each resumable, each writing its own outputs:
    `company_attributes.csv`, `doc_references.csv`.
 3b. **`parse_person_index.py`** — inverted indexes → person → company ties
    the dossier parser cannot see (§2b).
-3c. **`parse_prose.py`** — boards reported in running prose (§4d). Opt-in.
+3c. **`parse_prose.py`** — boards reported in running prose (§4d).
 3d. **`resolve_annotations.py`** — the compiler's inline affiliation notes,
-   resolved against the company list (§4e). Opt-in; runs after stage 4.
-3e. **`parse_biographies.py`** — biographical dictionaries (§4f). Opt-in;
-   runs after stage 4.
+   resolved against the company list (§4e). Needs `companies.csv`, so it runs
+   after a first pass of stage 4.
+3e. **`parse_biographies.py`** — biographical dictionaries (§4f). Also runs
+   after a first pass of stage 4.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
+   All five genres are merged by default; `--no-person-index`, `--no-prose`,
+   `--no-annotations` and `--no-biographical` drop one each.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
 6b. **`centrality.py`** — interlock graph → exact betweenness per firm (§5e).
@@ -66,30 +69,33 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (803 assertions).
+`checks.py` validates the parsers and the built dataset (804 assertions).
 
 ## 2b. What is *not* extracted
 
 Extraction of the PDFs is near-complete: 5,867 of 5,920 documents (99.2%), the
-rest dead links. Turning that text into ties is not. **Only 2,482 of the 5,867
-(42%) yield a single tie.** The other 3,386 hold 47% of the extracted
-characters. This section says what is in them, because a reader is otherwise
-entitled to assume the pipeline saw everything.
+rest dead links. Turning that text into ties is not. **3,594 of the 5,867
+(61%) yield at least one tie**; the other 2,273 hold 26% of the extracted
+characters. When only the dossier parser existed those figures were 2,482
+(42%) and 47% — stages 3b–3e, below, are what closed the gap. This section
+says what is still in the residue, because a reader is otherwise entitled to
+assume the pipeline saw everything.
 
-Sorting those 3,386 by how much board vocabulary they contain:
+Sorting the 2,273 zero-tie documents by how much board vocabulary they
+contain (the same counting rule as before, so the rows are comparable):
 
-| Role words in the text | Documents | Reading |
-|---|---|---|
-| none | 563 | genuinely no board data |
-| 1–4 | 986 | a passing mention in prose |
-| 5–24 | 1,307 | mostly honours lists and prose histories |
-| 25 or more | 530 | a different genre the parsers do not read |
+| Role words in the text | Documents | Was | Reading |
+|---|---|---|---|
+| none | 499 | 563 | genuinely no board data |
+| 1–4 | 722 | 986 | a passing mention in prose |
+| 5–24 | 792 | 1,307 | mostly honours lists and prose histories |
+| 25 or more | 256 | 530 | a different genre the parsers do not read |
 
 The last row is the real gap, and it is not one thing:
 
 - **Inverted indexes.** The entry is a person and the list is of companies,
   keyed by number to a companion list. `parse_ties.py` cannot see these at
-  all. Stage 3b now reads them — see §4c — and recovers 16,131 ties from
+  all. Stage 3b now reads them — see §4c — and recovers 15,679 ties from
   `Annuaire Desfossés 1956` alone, a document that previously yielded zero.
 - **Biographical dictionaries** (*Qui êtes-vous ? 1924*, *Légion d'honneur en
   Indochine*), where affiliations sit in a bracketed `[Administrateur : …]`
@@ -99,7 +105,7 @@ The last row is the real gap, and it is not one thing:
   et colon", "vétérinaire à Oran". Correctly excluded; counting them would
   inflate the network with ties that do not exist.
 
-One further gap is quantified elsewhere: **17,995 parsed ties (22.7%)** are
+One further gap is quantified elsewhere: **9,567 parsed ties (12.9%)** are
 dropped for want of an identifiable firm (§5). The compiler's annotation leads
 are now resolved as far as they go (§4e).
 
@@ -240,8 +246,8 @@ Achard (Georges-P.), 107 (dga BAO), 207 (Bq comm. afr.), 238 (Créd. fonc.
 
 The numbers key into a companion document that lists the firms in order —
 `107. Banque de l'Afrique occidentale` — so the pair is a complete, resolvable
-affiliation dataset. It produced **16,131 ties, 3,929 people and 1,889 firms**
-where the dossier parser produced none.
+affiliation dataset. It produced **15,679 person ties plus 452 corporate ties,
+9,111 people and 1,889 firms** where the dossier parser produced none.
 
 **The trap.** Entries carry bracketed notes, and those notes contain numbers:
 `Abinal (Patrice)[1883-1961][ing.-conseil…], 1613 (…)`. The life dates 1883
@@ -366,12 +372,16 @@ right order of magnitude and not a second decimal place. And "correct" was
 judged against the surrounding sentence, which establishes that the text says
 what the parser recorded — not that the source was right.
 
-**Because ~90% is below the structured parser, this stage is opt-in.**
-`build_network.py --with-prose` includes it; the default network does not.
-Every row is tagged `source_genre = "prose"`, so including it and filtering
-later is equivalent. That 23% of its rows independently corroborate a pair the
-structured parser already found is a useful signal: noise would not
-concentrate on pairs another method also produced.
+**This stage is in the default network**, and every row is tagged
+`source_genre = "prose"` so `--no-prose` (or a filter on the built edge list)
+recovers the structured-only network exactly. Merging it is the right default
+because the alternative is worse: press extracts are the bulk of this
+collection, and excluding them meant excluding most of what the compiler
+actually assembled. The ~90% precision is a real cost and is why the tag
+exists on every row rather than only in this document. That 23% of its rows
+independently corroborate a pair the structured parser already found is a
+useful signal: noise would not concentrate on pairs another method also
+produced.
 
 ## 4e. The compiler's own affiliation notes
 
@@ -385,7 +395,7 @@ abbreviated where the company name is not.
 token must prefix a name token, and in sequence. "Cotonn. St-Quentin" resolves
 to *Cotonnière de Saint-Quentin*; "Bq de Madagascar" to *Banque de
 Madagascar*. Prefix matching needs no list of abbreviations, which matters
-because the compiler invents them freely. Result: **1,780 ties over 520 firms**,
+because the compiler invents them freely. Result: **1,692 ties over 498 firms**,
 hand-audited at roughly 94%.
 
 Three refusals do most of the work for precision. A note matching several
@@ -405,14 +415,16 @@ meant to catch lowercase openings rejected *every* company name in the file,
 including the Banque de l'Indochine. `checks.py` now pins five real names
 against it.
 
-Why only 9% resolve: 4,667 notes name the firm the observation already
-belongs to, and 8,108 name a company absent from this corpus — many are
+Why only 8% of the 20,554 candidate notes resolve: 4,204 name the firm the
+observation already belongs to, and 8,285 name a company absent from this
+corpus — many are
 metropolitan firms the collection never covers. Neither is recoverable by
 better matching.
 
-Opt-in via `build_network.py --with-annotations`, because this is the
-compiler's assertion rather than a transcribed board list, and it carries no
-year of its own beyond the observation it sits beside.
+Merged by default and tagged `source_genre = "annotation"`; `--no-annotations`
+drops it. Two properties are worth keeping in view when using these rows: the
+tie is the compiler's assertion rather than a transcribed board list, and it
+carries no year of its own beyond the observation it sits beside.
 
 ## 4f. Biographical dictionaries
 
@@ -427,7 +439,7 @@ is the entry header and is never named again.
 What stage 3e adds is **person-scoped segmentation**: the document is split at
 the capitalised surname headers, and every role construction inside an entry is
 attributed to that entry's person. Company names are resolved with the prefix
-matcher from §4e. **3,052 ties over 717 firms and 686 people**, hand-audited
+matcher from §4e. **3,060 ties over 719 firms and 687 people**, hand-audited
 at roughly 93%.
 
 Two guards were added from the audit. A capitalised *headline* has exactly the
@@ -438,9 +450,12 @@ And a single generic token is not a firm: "Compagnie du port" reduces to
 Nouvelle Coloniale*. That fix improved §4e as well.
 
 **These ties carry no year**, and `checks.py` asserts it. A biographical entry
-gives a career, not a board as it stood in a given year, so including them
-adds edges that no period slice can place. That alone is reason enough to keep
-the stage opt-in: `build_network.py --with-biographical`.
+gives a career, not a board as it stood in a given year, so these edges land
+in the `undated` slice and no period slice can place them. They are merged by
+default — the pooled network is where they belong, and dropping a whole genre
+to protect the period slices would cost more than it saves — but any analysis
+that turns on timing should filter them out with `--no-biographical` or on
+`source_genre == "biographical"`.
 
 ## 5. Dating and attributing ties
 
@@ -546,7 +561,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 31,926 names
+**Every obvious rule is wrong.** Each was measured against all 35,158 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -593,7 +608,7 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-4,729 firms and 56,003 edges: rendered as a node-link diagram it is a solid
+5,839 firms and 79,897 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
@@ -640,7 +655,7 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 4,729 firms and 56,003 interlocks.** At that density a
+**Figure 4 draws all 5,839 firms and 79,897 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
@@ -694,7 +709,7 @@ Three decisions determine the numbers.
 **Computed on the whole graph, displayed on a slice.** Betweenness is a global
 property: the shortest paths that matter run through firms outside any core
 one might draw. It is computed on the giant component of the interlock graph
-at `weight >= 1` (4,671 firms, 39,497 ties) and then displayed on whatever
+at `weight >= 1` (5,758 firms, 39,497 ties) and then displayed on whatever
 subset a figure shows. Recomputing it on the 170 drawn firms would yield a
 different quantity wearing the same name, and would systematically flatter
 firms that happen to sit in the middle of that particular selection.
@@ -751,7 +766,7 @@ hand-built because the names are historical — Bône not Annaba, Tourane not Da
 Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
 reliably. It is an input: editing it changes the output.
 
-**Coverage: 3,138 of 10,434 firms (37%), and 1,393 of the 4,729 in the
+**Coverage: 3,138 of 10,705 firms (37%), and 1,393 of the 5,839 in the
 interlock graph (45%).** The map draws those. It is not a map of the empire's
 firms but of the ones whose address survived, and the unplaced 55% are absent
 rather than assumed.

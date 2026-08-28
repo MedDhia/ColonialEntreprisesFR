@@ -1,120 +1,295 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
-constructionelectrique,creditfoncieralgerietunisie,CONSTRUCTION ÉLECTRIQUE,Crédit foncier d'Algérie-Tunisie,26,affreville; ain-bessem; algerie-alger; anthoine-a; ariste-s; aumale; barbedette-f; blida; boufarick; bouira; boulogne-g; buhot-h; castiglione; colea; douera; dubourdieu-l; eug-regnault; eymard-c; gronier-e; guyotville; henri-c; journault-e; lebon-a; rouiba; saliege-h; zafiropulo-d
-banquealgerie,banqueindustrielleafriquenord,BANQUE DE L'ALGERIE,Banque industrielle de l'Afrique du Nord,11,boyer; boyer-p; ernest-picard-p; farnier-c; flouret-m; galicier-a; moatti; sabatier-e; schiaffino-l; tamzali; th-rodocanachi
-banquealgerie,banquealgeriebanquealgerietunisiebanquealgerie,BANQUE DE L'ALGERIE,"Banque de l'Algérie, Banque de l'Algérie et de la Tunisie, Banque de l'Algérie",9,alcay; alphandery; berthon; fils-h; giraud; lassallas; marchessaux; obitz; tachet-censeurs-mm-blasselle
-entreprisealgerienne,entreprisemaritimecommerciale,L'Entreprise algérienne,L'Entreprise maritime et commerciale,7,d-estienne-d-orves; fr-estier; g-noblemaire; lucia; mante-t; marseille; thenard-l
-omniumminesalgerietunisie,phosphatesconstantine,Omnium Société générale de mines d'Algérie-Tunisie,Compagnie des Phosphates de Constantine,6,de-montureux; de-valencay; deyron-l; genebrias-de-fredaigue-g; kapferer; th-ansbacher
-minesbouthaleb,mineschabetkohol,MINES DU BOU-THALEB,Compagnie des mines de Chabet-Kohol,6,adm-mm-leon-boussand; buhot-h; carnot-e; chastel-a; f-ledoux; lebon-a
+constructionelectrique,creditfoncieralgerietunisie,CONSTRUCTION ÉLECTRIQUE,Crédit foncier d'Algérie-Tunisie,26,affreville; ain-bessem; algerie-alger; anthoine-a; ariste-s; aumale; barbedette-f; blida; boufarick; bouira; boulogne-g; buhot-h; castiglione; colea; douera; dubourdieu; eug-regnault; eymard-c; gronier-e; guyotville; henri-c; journault-e; lebon-a; rouiba; saliege-h; zafiropulo-d
+entreprisealgerienne,entreprisemaritimecommerciale,L'Entreprise algérienne,L'Entreprise maritime et commerciale,14,adm-mm-r-fabry; d-estienne-d-orves; djebel-felten; fr-estier; g-gravier; g-noblemaire; h-giraud; lucia; mante-t; marseille; oppenheim; pres-m-j-dal-piaz; thenard-l; zafiropulo-d
+condat,creditfoncieralgerietunisie,CONDAT et Cie,Crédit foncier d'Algérie-Tunisie,13,adm-del-m-e-gronier; adm-m-d-zafiropulo; c-h; e-philippar; e-regnault; g-saint-rene-tallandier; h-buhot; j-delarue; l-dubourdieu; mohamed-el-guebbas; pdt-bone-guelma-t; r-de-caix; x-loisy
+banquealgerie,banqueindustrielleafriquenord,BANQUE DE L'ALGERIE,Banque industrielle de l'Afrique du Nord,12,boyer; boyer-p; delamotte-g; ernest-picard-p; farnier-c; flouret-m; galicier-a; moatti; sabatier-e; schiaffino-l; tamzali; th-rodocanachi
+omniumminesalgerietunisie,phosphatesconstantine,Omnium Société générale de mines d'Algérie-Tunisie,Compagnie des Phosphates de Constantine,10,ansbacher-t; courbevoie; de-montureux; de-valencay; deyron-l; genebrias-de-fredaigue-g; kapferer; montureux-a; talleyrand-perigord-p; th-ansbacher
+banquealgerie,banquealgeriebanquealgerietunisiebanquealgerie,BANQUE DE L'ALGERIE,"Banque de l'Algérie, Banque de l'Algérie et de la Tunisie, Banque de l'Algérie",8,alcay; alphandery; berthon; fils-h; giraud; lassallas; marchessaux; obitz
+minesbouthaleb,mineschabetkohol,MINES DU BOU-THALEB,Compagnie des mines de Chabet-Kohol,7,adm-mm-leon-boussand; buhot-h; carnot-e; chastel-a; f-ledoux; gittens-w; lebon-a
 petolatdijon,petrolestliouanet,PÉTOLAT-DIJON,PÉTROLES de TLIOUANET,6,adm-mm-henri-de-peyerimhoff; aguillon-j; chevaleau-e; homan-l; jordan-p; zafiropulo-d
 minesbouthaleb,mineszincguergour,MINES DU BOU-THALEB,Société des mines de zinc du Guergour,6,administr-mm-h-chabert; choppin-de-janvry-dir-bppb-j; eaux-tunis; f-faure; faure-j; galicier-c
+cheminsferroutesalgerie,minesboudjoudoun,Société des Chemins de fer sur routes d'Algérie,Société des mines de Boudjoudoun,6,devise-f; janicot-x; magnin; petit-j; tanon; tanon-a
+minesboudjoudoun,minieredjebelfelten,Société des mines de Boudjoudoun,Société minière du Djebel-Felten,6,magnin; petit; petit-j; tanon; tanon-a; vacheron-a
 unioncompagniesregionalesreuniesfabriquesengrais,unionfabriquesengraisproduitschimiquessuperphosphates,Union française et Compagnies régionales réunies de fabriques d'engrais et de,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",6,cipriani-p; de-cenival-a; de-courseulles-r; guy-de-gontaut-biron; petit-l; planchat-h
+manufacturetabacscigarescigarettesbastos,manufacturetabacscigarescigarettesjbastos,"Manufacture de Tabacs, Cigares et Cigarettes Bastos","Manufacture de tabacs, cigares et cigarettes J. Bastos",5,bastos-a; bastos-j; bastos-l; perrot-e; philippar-e
+concessionnaireouenza,ouenza,Société concessionnaire d'Ouenza,Société de l'Ouenza,5,baptifaut-a; chabert-p; kroller-a; muller-nico-g; rydbeck-o
 pfund,phosphatesconstantine,PFUND,Compagnie des Phosphates de Constantine,5,adm-th-ansbacher; de-valencay; juge-a; kapferer; schiaffino-l
+mineschellala,minieredjendli,Société des mines du Chellala,Compagnie minière du Djendli,5,cornudet-l; fitoussi-e; gosse-l; jalabert-e; urruty-f
 minesbouthaleb,minesouastamesloula,MINES DU BOU-THALEB,Compagnie des mines de Ouasta et de Mesloula,5,adm-mm-m-champin; denfert-rochereau-a; mirabaud-p; robellaz-f; urruty-f
+algeriennepetrolestliouanet,petolatdijon,Société Algérienne des pétroles de Tliouanet,PÉTOLAT-DIJON,5,aguillon-j; beigbeder-d; homan-l; jordan-p; kennerley-hall-c
 algerienne,clement,Compagnie algérienne,CLÉMENT,5,j-de-sayve; l-odier; p-jurien-de-la-graviere; r-fabry; saint-germain
-algerienneproduitschimiquesengrais,creditfoncieralgerietunisie,Société Algérienne de produits chimiques et d'engrais,Crédit foncier d'Algérie-Tunisie,5,a-l-article-des-statuts-c; brugere-j; jourdanne-a; renaudin-l; trelat-m
-cheminsferouestalgerien,creditalgerien,Compagnie des Chemins de fer de l'Ouest-Algérien,"Crédit algérien, puis Crédit privé",5,favereaux-g; goudchaux-c; leop-see; peytel; peytel-j
+algerienne,phosphatesdyr,Compagnie algérienne,Compagnie des Phosphates du Dyr,5,barrot-f; bordet-l; jurien-de-la-graviere-p; morin-t; p-jurien-de-la-graviere
+minesbouthaleb,zaccarfer,MINES DU BOU-THALEB,"Zaccar, fer",5,a-miliana-e; adm-mm-h-cardozo-pere; adm-ouenza; cardozo-fils-g; van-den-eckhoudt
+lafarge,nordafricainecimentslafarge,Lafarge,Nord-Africaine des Ciments de Lafarge,5,borgeaud-l; boutier-a; daher-p; ewbank; laboubee-s
+cheminsferroutesalgerie,minieredjebelfelten,Société des Chemins de fer sur routes d'Algérie,Société minière du Djebel-Felten,5,lambert-a; magnin; petit-j; tanon; tanon-a
+cheminsferouestalgerien,creditalgerien,Compagnie des Chemins de fer de l'Ouest-Algérien,"Crédit algérien, puis Crédit privé",5,favereaux-g; goudchaux-c; peytel; peytel-a; peytel-j
 afriquenord,commercialeminiereafriquenord,AFRIQUE DU NORD,Société Commerciale et Minière pour l'Afrique du Nord,5,lemaigre-dubreuil-r; morin-g; mourgnot-p; salvane-l; thomas-e
-concessionnaireouenza,ouenza,Société concessionnaire d'Ouenza,Société de l'Ouenza,4,baptifaut-a; chabert-p; kroller-a; rydbeck-o
+agricolelyonnaisenordafrique,cotonnierebonoise,Société Agricole Lyonnaise du Nord de l'Afrique,Société Cotonnière Bônoise,4,brisson; pepin-j; sonnery; tarare
+vignoblesmediterranee,vignoblesmediterraneedomainemonvilleduzerville,VIGNOBLES DE LA MÉDITERRANÉE,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",4,francois-marsal-f; gabet-m; roubaud-j; thierry-de-boccard
+algeriennenavigationafriquenordcharlesschiaffino,phosphatesconstantine,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Compagnie des Phosphates de Constantine,4,ansbacher-t; maniquet-vauberet-l; schiaffino-l; talleyrand-perigord-p
+omniumminesusines,phosphatesconstantine,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",Compagnie des Phosphates de Constantine,4,ansbacher-t; de-valencay; kapferer-m; schiaffino-l
+minesalgerietunisieomnium,phosphatesconstantine,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Compagnie des Phosphates de Constantine,4,ansbacher-t; de-montureux; juge-a; kapferer-m
 millaul,omniumminesalgerietunisie,MILLAUL,Omnium Société générale de mines d'Algérie-Tunisie,4,de-montureux; h-de-peyerimhoff; kapferer; th-ansbacher
-cheminsferroutesalgerie,minesboudjoudoun,Société des Chemins de fer sur routes d'Algérie,Société des mines de Boudjoudoun,4,devise-f; janicot-x; petit-j; tanon-a
+mineszaccar,zaccarfer,MINES du ZACCAR,"Zaccar, fer",4,adm-mm-h-cardozo-pere; adm-ouenza; baguenault-de-puchesse; van-den-eckhoudt
+minesbouthaleb,minieredjebelfelten,MINES DU BOU-THALEB,Société minière du Djebel-Felten,4,adm-mm-j-petit; e-raverot; j-rey-herme; pouquet
+chauxcimentsrivetalger,nordafricainecimentslafarge,Chaux et ciments de Rivet-Alger,Nord-Africaine des Ciments de Lafarge,4,daher-c; daher-p; laboubee-s; michaux-l
+industriebois,unioncommercialeproducteurs,L'Industrie du bois,Union commerciale des producteurs,4,el-biar; jomiau-e; olivier-p; pasquier-m
 algerienne,algerienneproduitschimiquesengrais,Compagnie algérienne,Société Algérienne de produits chimiques et d'engrais,4,demarest; jurien-de-la-graviere-p; mirabaud-e; pallier-j
+algerienneproduitschimiquesengrais,creditfoncieralgerietunisie,Société Algérienne de produits chimiques et d'engrais,Crédit foncier d'Algérie-Tunisie,4,brugere-j; jourdanne-a; renaudin-l; trelat-m
 algerienne,algeriennecreditbanque,Compagnie algérienne,Société nouvelle de la Compagnie algérienne de crédit et de banque,4,bungener-c; fabry-j; fournier-p; pallier-j
+concessionnaireminesouenza,ouenza,Société Concessionnaire des mines d'Ouenza,Société de l'Ouenza,4,drappier-g; kroller-a; muller-nico-g; versailles
+commercialeacconage,commercialearmement,Société Commerciale d'Acconage,Société Commerciale d'Armement,4,galoppe-r; marceron-m; thibaut-a; thibaut-m
 africaineminestransports,ouenza,Société Africaine de Mines et transports,Société de l'Ouenza,3,baptifaut-a; bloch-laine-f; chabert-p
+cenpasoccentraleusinespapiers,manufacturetapisorient,"CENPA, Soc. Centrale des Usines à Papiers",Manufacture de tapis d'Orient,3,metz; nancy; strasbourg
 algerienneeclairageforce,creditfoncieralgerietunisie,Société Algérienne d'éclairage et de force,Crédit foncier d'Algérie-Tunisie,3,berthault; boulogne-g; loisy-x
 creditfoncieralgerietunisie,regiefoncierevillealger,Crédit foncier d'Algérie-Tunisie,Régie foncière de la ville d'Alger,3,boulogne-g; coudray-a; rouan-p
-omniumminesusines,phosphatesconstantine,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",Compagnie des Phosphates de Constantine,3,de-valencay; kapferer-m; schiaffino-l
+algeriennenavigationafriquenordcharlesschiaffino,minesouedrabahais,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Société des mines de l'Oued-Rabah et d'Aïs,3,ansbacher-t; peyerimhoff-de-fontenelle-h; schiaffino-l
+algeriennenavigationafriquenordcharlesschiaffino,minesrarbousakamody,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Société des mines de Rarbou et Sakamody,3,ansbacher-t; maniquet-vauberet-l; talleyrand-perigord-p
+algeriennenavigationafriquenordcharlesschiaffino,omniumminesalgerietunisie,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Omnium Société générale de mines d'Algérie-Tunisie,3,ansbacher-t; peyerimhoff-de-fontenelle-h; talleyrand-perigord-p
+minesrarbousakamody,phosphatesconstantine,Société des mines de Rarbou et Sakamody,Compagnie des Phosphates de Constantine,3,ansbacher-t; maniquet-vauberet-l; talleyrand-perigord-p
 millaul,phosphatesconstantine,MILLAUL,Compagnie des Phosphates de Constantine,3,de-montureux; kapferer; th-ansbacher
-cenpasoccentraleusinespapiers,manufacturetapisorient,"CENPA, Soc. Centrale des Usines à Papiers",Manufacture de tapis d'Orient,3,metz; nancy; strasbourg
+secteurelectrique,secteurelectriquevoutesalger,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",Secteur électrique des Voûtes d'Alger,3,froment-guieysse-g; nerot-a; nerot-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,grandstravauxalgeriens,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Grands Travaux algériens,3,giraud-e; paris; vinson-j
+domainechapeaugendarme,domainesaintcharlesboufarik,Domaine du Chapeau de Gendarme,"Domaine Saint-Charles, Boufarik",3,borgeaud-h; froger-a; vinson-j
+grandstravauxalgeriens,tabacsalgeriens,Grands Travaux algériens,Tabacs algériens,3,borgeaud-l; vinson-j; yusuf-c
 constructionelectrique,mineschabetkohol,CONSTRUCTION ÉLECTRIQUE,Compagnie des mines de Chabet-Kohol,3,buhot-h; lebon-a; zafiropulo-d
 creditfoncieralgerietunisie,mineschabetkohol,Crédit foncier d'Algérie-Tunisie,Compagnie des mines de Chabet-Kohol,3,buhot-h; lebon-a; zafiropulo-d
 cheminsferroutesalgerie,creditfoncieralgerietunisie,Société des Chemins de fer sur routes d'Algérie,Crédit foncier d'Algérie-Tunisie,3,buhot-h; galicier-a; jourdanne-a
-etudesminieresindustrielles,exploitationsforestieresminierespetitekabylie,ÉTUDES MINIÈRES ET INDUSTRIELLES,Société d'Exploitations forestières et minières de la Petite-Kabylie,3,germain; joly; sepulchre-commissaires-mm-c-sepulchre-j
 cenpasoccentraleusinespapiers,senellemaubeuge,"CENPA, Soc. Centrale des Usines à Papiers",SENELLE-MAUBEUGE,3,mulhouse; roanne; roubaix
-minesalgerietunisieomnium,phosphatesconstantine,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Compagnie des Phosphates de Constantine,3,de-montureux; juge-a; kapferer-m
+minesbouthaleb,minesfermiliana,MINES DU BOU-THALEB,Société française des mines de fer Miliana,3,buurmans; lippens; urruty-f
 minesdjebelguendou,minesguelma,Société des mines du Djebel-Guendou,Société des mines de Guelma,3,boscher-a; chalupt-c; lyon-m
+algeriennepetrolestliouanet,petrolestliouanet,Société Algérienne des pétroles de Tliouanet,PÉTROLES de TLIOUANET,3,aguillon-j; homan-l; jordan-p
 phosphatesconstantine,unionfabriquesengraisproduitschimiquessuperphosphates,Compagnie des Phosphates de Constantine,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",3,gingembre-p; jordan-p; petit-l
-algerienne,phosphatesdyr,Compagnie algérienne,Compagnie des Phosphates du Dyr,3,bordet-l; morin-t; p-jurien-de-la-graviere
+algerienne,minesouastamesloula,Compagnie algérienne,Compagnie des mines de Ouasta et de Mesloula,3,champin; mirabaud-e; mirabaud-p
 minesbouthaleb,mineszaccar,MINES DU BOU-THALEB,MINES du ZACCAR,3,adm-mm-h-cardozo-pere; adm-ouenza; van-den-eckhoudt
-mselati,nordafricaincommercial,MSELATI,Nord-africain commercial,3,borgeaud-l; ed-borgeaud-commerce-de-soufres; jules-b
+mineszincguergour,zincguergour,Société des mines de zinc du Guergour,Zinc du Guergour,3,devise-f; faure-j; h-chabert
+1918domainesbenislimantablat,domainechapeaugendarme,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Domaine du Chapeau de Gendarme,3,borgeaud-h; borgeaud-l; chevallier-j
+tubiana,usinesdunescheragas,TUBIANA,Usines des Dunes de Chéragas,3,adm-mme-vve-j-merlo; dandrade-j; mallet-p
+manufacturetabacscigarescigarettes,manufacturetabacscigarescigarettesjbastos,"Manufacture de Tabacs, Cigares et Cigarettes","Manufacture de tabacs, cigares et cigarettes J. Bastos",3,bastos-j; perrot-e; varaigne-h
+domainesaintelouise,domainescaidessebt,Domaine Sainte-Louise,Domaines du Caid-Es-Sebt,3,germain-a; sept-merveilles; telemly
+banqueindustrielleafriquenord,industrielleafriquenordtraitementsousproduitsvigneolivier,Banque industrielle de l'Afrique du Nord,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,3,ferasson-l; navarre-h; saporta-g
+caboteursalgeriens,cargosalgeriens,Caboteurs algériens,Cargos algériens,3,coudray-a; mohring-f; pres-d-alger
 cenpasoccentraleusinespapiers,centraleusinespapier,"CENPA, Soc. Centrale des Usines à Papiers",Société centrale des usines à papier,3,maisant-b; saint-c; saint-d
-cheminsferroutesalgerie,minieredjebelfelten,Société des Chemins de fer sur routes d'Algérie,Société minière du Djebel-Felten,3,lambert-a; petit-j; tanon-a
 algerienneproduitschimiquesengrais,cheminsferroutesalgerie,Société Algérienne de produits chimiques et d'engrais,Société des Chemins de fer sur routes d'Algérie,3,jourdanne-a; mirabaud-e; pallier-j
+algerienneproduitschimiquesengrais,commercialeacconage,Société Algérienne de produits chimiques et d'engrais,Société Commerciale d'Acconage,3,bouffe-g; galoppe-r; marceron-m
+algerienneconstructionsindustriellestravauxart,constructionsindustriellestravauxartcit,Algérienne de constructions industrielles et travaux d'art,"CONSTRUCTIONS INDUSTRIELLES ET TRAVAUX d'ART, S.A.C.I.T.A",3,caquot-a; carret-e; pelnard-l
 creditfoncieralgerietunisie,foncieremediterranee,Crédit foncier d'Algérie-Tunisie,Compagnie Foncière de la Méditerranée,2,coudray-a; thevenet-c
+algerienneeclairageforce,tramwaysalgeriens,Société Algérienne d'éclairage et de force,Société des Tramways algériens,2,boulogne-g; mercier-g
 africaineminestransports,concessionnaireouenza,Société Africaine de Mines et transports,Société concessionnaire d'Ouenza,2,baptifaut-a; chabert-p
+algerienneetudesentreprisesagricolescommercialesindustrielles,distillerieliqueurmandarinebougie,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Distillerie de liqueur de mandarine de Bougie,2,brissonnet-e; giraud-e
+industrielleafriquenordtraitementsousproduitsvigneolivier,liegesproduitsnordafricainsalgerusinebouchonsbone,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",2,dubourdieu-l; mf
 alfa,alfasocfabricationpatescellulose,L'Alfa,"L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose",2,marlio-l; villet-f
-algeriennesels,mullerpasse19261928souscontrolegraengesberg,Compagnie Algérienne des sels,"Müller, passé en 1926-1928 sous le contrôle de Graengesberg",2,camargue; froges
-algerienneeclairageforce,unionelectriquegaziereafriquenord,Société Algérienne d'éclairage et de force,Union électrique et gazière de l'Afrique du Nord,2,boulogne-g; bucherer-h
-creditfoncieralgerietunisie,unionelectriquegaziereafriquenord,Crédit foncier d'Algérie-Tunisie,Union électrique et gazière de l'Afrique du Nord,2,boulogne-g; jourdanne-a
-algerienneglacehygieniqueentreposagefrigorifique,cheminsferestalgerien,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Compagnie des Chemins de fer de l'Est-Algérien,2,chev-lh; off-lh
-algerienneglacehygieniqueentreposagefrigorifique,fonciereimmobilierevillealger,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Compagnie Foncière et Immobilière de la Ville d'Alger,2,chev-lh; off-lh
-cheminsferestalgerien,fonciereimmobilierevillealger,Compagnie des Chemins de fer de l'Est-Algérien,Compagnie Foncière et Immobilière de la Ville d'Alger,2,chev-lh; off-lh
-banquealgerie,phosphatesconstantine,BANQUE DE L'ALGERIE,Compagnie des Phosphates de Constantine,2,berthault-p; schiaffino-l
-fonciereimmobilierefranceafriquenord,omniumminesusines,Société Foncière et Immobilière de France et de l'Afrique du Nord,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",2,ansbacher-t; schiaffino-l
-omniumminesusines,pfund,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",PFUND,2,de-valencay; schiaffino-l
-algeriennemateriauxconstruction,nordafricaineetudesentreprises,Société Algérienne de matériaux de construction,Société Nord-africaine d'études et d'entreprises,2,froment-guieysse-g; lemoigne-e
-africainearmement,constructionelectrique,Compagnie Africaine d'Armement,CONSTRUCTION ÉLECTRIQUE,2,godet-r; laminoirs-du-havre
-africainearmement,hutchinson,Compagnie Africaine d'Armement,HUTCHINSON,2,crighton; houet-p
+alfa,manufacturetapisorient,L'Alfa,Manufacture de tapis d'Orient,2,caron; nancy
+approvisionnementnordafricaine,fichet,Société d'Approvisionnement nord-africaine,FICHET,2,dijon; nancy
 cenpasoccentraleusinespapiers,fichet,"CENPA, Soc. Centrale des Usines à Papiers",FICHET,2,mulhouse; nancy
 chaines,fichet,CHAÎNES,FICHET,2,nancy; turin
-constructionelectrique,minesbouthaleb,CONSTRUCTION ÉLECTRIQUE,MINES DU BOU-THALEB,2,buhot-h; lebon-a
-creditfoncieralgerietunisie,minesbouthaleb,Crédit foncier d'Algérie-Tunisie,MINES DU BOU-THALEB,2,buhot-h; lebon-a
-cenpasoccentraleusinespapiers,feutresrok,"CENPA, Soc. Centrale des Usines à Papiers",FEUTRES ROK,2,mulhouse; tours
-feutresrok,senellemaubeuge,FEUTRES ROK,SENELLE-MAUBEUGE,2,mulhouse; reims
-royaleasturienneminesdirection,senellemaubeuge,"Cie Royale ASTURIENNE DES MINES, direction générale",SENELLE-MAUBEUGE,2,amiens; reims
+algeriennesels,mullerpasse19261928souscontrolegraengesberg,Compagnie Algérienne des sels,"Müller, passé en 1926-1928 sous le contrôle de Graengesberg",2,camargue; froges
+algerienneeclairageforce,unionelectriquegaziereafriquenord,Société Algérienne d'éclairage et de force,Union électrique et gazière de l'Afrique du Nord,2,boulogne-g; bucherer-h
+algeriennenavigationafriquenord,algeriennenavigationafriquenordcharlesschiaffino,Société algérienne de navigation pour l'Afrique du Nord,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",2,boulogne-g; godin-a
+creditfoncieralgerietunisie,unionelectriquegaziereafriquenord,Crédit foncier d'Algérie-Tunisie,Union électrique et gazière de l'Afrique du Nord,2,boulogne-g; jourdanne-a
+algerienneglacehygieniqueentreposagefrigorifique,mineschabetkohol,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Compagnie des mines de Chabet-Kohol,2,boussand; boussand-l
+algerienneglacehygieniqueentreposagefrigorifique,syndicatlyonnaisnordafricain,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Syndicat lyonnais nord-africain,2,boussand-h; boussand-l
+mineschabetkohol,syndicatlyonnaisnordafricain,Compagnie des mines de Chabet-Kohol,Syndicat lyonnais nord-africain,2,boussand-l; carnot-e
+alhambrarueisly,grandhoteloran,Société de l'Alhambra de la rue d'Isly,Grand Hôtel d'Oran,2,guiauchain-p; thibaud-j
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,algeriennenavigationafriquenordcharlesschiaffino,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew","Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",2,maniquet-vauberet-l; schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,phosphatesconstantine,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",Compagnie des Phosphates de Constantine,2,maniquet-vauberet-l; schiaffino-l
+algeriennenavigationafriquenordcharlesschiaffino,fonciereimmobilierefranceafriquenord,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Société Foncière et Immobilière de France et de l'Afrique du Nord,2,ansbacher-t; schiaffino-l
+algeriennenavigationafriquenordcharlesschiaffino,omniumminesusines,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie","Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",2,ansbacher-t; schiaffino-l
+banquealgerie,phosphatesconstantine,BANQUE DE L'ALGERIE,Compagnie des Phosphates de Constantine,2,berthault-p; schiaffino-l
+fonciereimmobilierefranceafriquenord,minesouedrabahais,Société Foncière et Immobilière de France et de l'Afrique du Nord,Société des mines de l'Oued-Rabah et d'Aïs,2,ansbacher-t; schiaffino-l
+fonciereimmobilierefranceafriquenord,omniumminesusines,Société Foncière et Immobilière de France et de l'Afrique du Nord,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",2,ansbacher-t; schiaffino-l
+fonciereimmobilierefranceafriquenord,phosphatesconstantine,Société Foncière et Immobilière de France et de l'Afrique du Nord,Compagnie des Phosphates de Constantine,2,ansbacher-t; schiaffino-l
+minesouedrabahais,omniumminesusines,Société des mines de l'Oued-Rabah et d'Aïs,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",2,ansbacher-t; schiaffino-l
+minesouedrabahais,phosphatesconstantine,Société des mines de l'Oued-Rabah et d'Aïs,Compagnie des Phosphates de Constantine,2,ansbacher-t; schiaffino-l
+omniumminesusines,pfund,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",PFUND,2,de-valencay; schiaffino-l
 minesalgerietunisieomnium,omniumminesalgerietunisie,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Omnium Société générale de mines d'Algérie-Tunisie,2,ansbacher-t; de-montureux
 minesalgerietunisieomnium,omniumminesusines,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",2,ansbacher-t; kapferer-m
 minesalgerietunisieomnium,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",2,ansbacher-t; juge-a
+minesouedrabahais,omniumminesalgerietunisie,Société des mines de l'Oued-Rabah et d'Aïs,Omnium Société générale de mines d'Algérie-Tunisie,2,ansbacher-t; peyerimhoff-de-fontenelle-h
+minesrarbousakamody,omniumminesalgerietunisie,Société des mines de Rarbou et Sakamody,Omnium Société générale de mines d'Algérie-Tunisie,2,ansbacher-t; talleyrand-perigord-p
 omniumminesalgerietunisie,omniumminesusines,Omnium Société générale de mines d'Algérie-Tunisie,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",2,ansbacher-t; de-valencay
+phosphatesconstantine,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Compagnie des Phosphates de Constantine,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",2,ansbacher-t; juge-a
+algeriennemateriauxconstruction,nordafricaineetudesentreprises,Société Algérienne de matériaux de construction,Société Nord-africaine d'études et d'entreprises,2,froment-guieysse-g; lemoigne-e
+caboteursalgeriens,regiefoncierevillealger,Caboteurs algériens,Régie foncière de la ville d'Alger,2,altairac-g; coudray-a
+grandhoteloran,grandstravauxalgeriens,Grand Hôtel d'Oran,Grands Travaux algériens,2,thibaud-j; vinson-j
+manufacturetabacscigarescigarettesjbastos,textilesafricains,"Manufacture de tabacs, cigares et cigarettes J. Bastos",Textiles africains,2,bastos-a; cabanel-j
+cheminsferroutesalgerie,grandstravauxalgeriens,Société des Chemins de fer sur routes d'Algérie,Grands Travaux algériens,2,jourdanne-a; vinson-j
+domainechapeaugendarme,grandstravauxalgeriens,Domaine du Chapeau de Gendarme,Grands Travaux algériens,2,borgeaud-l; vinson-j
+domainechapeaugendarme,tabacsalgeriens,Domaine du Chapeau de Gendarme,Tabacs algériens,2,borgeaud-l; vinson-j
+africainearmement,constructionelectrique,Compagnie Africaine d'Armement,CONSTRUCTION ÉLECTRIQUE,2,godet-r; laminoirs-du-havre
+africainearmement,hutchinson,Compagnie Africaine d'Armement,HUTCHINSON,2,crighton; houet-p
+constructionelectrique,minesbouthaleb,CONSTRUCTION ÉLECTRIQUE,MINES DU BOU-THALEB,2,buhot-h; lebon-a
+creditfoncieralgerietunisie,minesbouthaleb,Crédit foncier d'Algérie-Tunisie,MINES DU BOU-THALEB,2,buhot-h; lebon-a
+agricolealgerienne,tabacsalgeriens,Société Agricole Algérienne,Tabacs algériens,2,gronier-e; yusuf-c
+constructionelectrique,tabacsalgeriens,CONSTRUCTION ÉLECTRIQUE,Tabacs algériens,2,gronier-e; henri-c
+creditfoncieralgerietunisie,tabacsalgeriens,Crédit foncier d'Algérie-Tunisie,Tabacs algériens,2,gronier-e; henri-c
+carrosseriemoderne,ceresfabricationventetousengraisproduitsviticoles,La Carrosserie moderne,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",2,barbedette-f; borgeaud-j
+etudesminieresindustrielles,exploitationsforestieresminierespetitekabylie,ÉTUDES MINIÈRES ET INDUSTRIELLES,Société d'Exploitations forestières et minières de la Petite-Kabylie,2,germain; joly
+cenpasoccentraleusinespapiers,feutresrok,"CENPA, Soc. Centrale des Usines à Papiers",FEUTRES ROK,2,mulhouse; tours
+feutresrok,senellemaubeuge,FEUTRES ROK,SENELLE-MAUBEUGE,2,mulhouse; reims
+royaleasturienneminesdirection,senellemaubeuge,"Cie Royale ASTURIENNE DES MINES, direction générale",SENELLE-MAUBEUGE,2,amiens; reims
 minesbouthaleb,minieredjendli,MINES DU BOU-THALEB,Compagnie minière du Djendli,2,juge-a; urruty-f
 minieredjendli,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Compagnie minière du Djendli,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",2,juge-a; michel-c
-mineschellala,minieredjendli,Société des mines du Chellala,Compagnie minière du Djendli,2,jalabert-e; urruty-f
+minesfermiliana,minesferrouina,Société française des mines de fer Miliana,Société des mines de fer Rouina,2,bois-colombes; urruty-f
 minesouastamesloula,minieredjendli,Compagnie des mines de Ouasta et de Mesloula,Compagnie minière du Djendli,2,marlier-j; urruty-f
+mineschabetkohol,minesoranie,Compagnie des mines de Chabet-Kohol,Société des Mines de l'Oranie,2,chastel; ledoux
 mineszaccar,ouenza,MINES du ZACCAR,Société de l'Ouenza,2,baguenault-de-puchesse; kroller-a
-minierefrancoafricaine,minieremetallurgiquecaronte,Société Minière Franco-Africaine,Compagnie minière et métallurgique de Caronte,2,bronze; pres-bone-fonderies-a-gaillon
-desage,minieredjendli,DESAGE,Compagnie minière du Djendli,2,madeline-j; vallee-calamine
+ouenza,zaccarfer,Société de l'Ouenza,"Zaccar, fer",2,baguenault-de-puchesse; rotterdam
+manufacturetapisorient,senellemaubeuge,Manufacture de tapis d'Orient,SENELLE-MAUBEUGE,2,amiens; grenoble
+desage,detartrageconstructionsmecaniques,DESAGE,Cie de Détartrage et constructions mécaniques,2,georges-c; gregori
+entreprisemaritimecommerciale,etudescheminfertransafricain,L'Entreprise maritime et commerciale,Société d'études du Chemin de fer transafricain,2,dal-piaz-j; mante-t
 essur,exploitationforestiereminierepetitekabylie,ESSUR,EXPLOITATION FORESTIÈRE et MINIÈRE de la PETITE KABYLIE,2,joly-g; trousselle-r
 omniumminesalgerietunisie,pfund,Omnium Société générale de mines d'Algérie-Tunisie,PFUND,2,de-valencay; kapferer
+algerienne,minessoumahtafna,Compagnie algérienne,Société des mines de Soumah et de La Tafna,2,mirabaud-p; tarbe-des-sablons
 minesbouthaleb,zincguergour,MINES DU BOU-THALEB,Zinc du Guergour,2,faure-j; fevre-l
-mineszincguergour,zincguergour,Société des mines de zinc du Guergour,Zinc du Guergour,2,faure-j; h-chabert
+1918domainesbenislimantablat,grandstravauxalgeriens,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Grands Travaux algériens,2,borgeaud-l; giraud-e
+1918domainesbenislimantablat,nordafricainecimentslafarge,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Nord-Africaine des Ciments de Lafarge,2,borgeaud-h; borgeaud-l
 domainechapeaugendarme,nordafricainecimentslafarge,Domaine du Chapeau de Gendarme,Nord-Africaine des Ciments de Lafarge,2,borgeaud-h; borgeaud-l
+mselati,nordafricaincommercial,MSELATI,Nord-africain commercial,2,borgeaud-l; jules-b
+algerienneetudesentreprisesagricolescommercialesindustrielles,ascenseursmontechargeshydrauliquesvillealger,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien","Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",2,giraud-e; guerlet-a
+banquealgerie,mineszincguergour,BANQUE DE L'ALGERIE,Société des mines de zinc du Guergour,2,delamotte-g; galicier
 banquealgerie,cheminsferroutesalgerie,BANQUE DE L'ALGERIE,Société des Chemins de fer sur routes d'Algérie,2,galicier-a; morard-l
 banqueindustrielleafriquenord,cheminsferroutesalgerie,Banque industrielle de l'Afrique du Nord,Société des Chemins de fer sur routes d'Algérie,2,galicier-a; pellerin-de-latouche-g
 banqueindustrielleafriquenord,zincguergour,Banque industrielle de l'Afrique du Nord,Zinc du Guergour,2,galicier-a; galicier-l
 cheminsferroutesalgerie,zincguergour,Société des Chemins de fer sur routes d'Algérie,Zinc du Guergour,2,devise-f; galicier-a
 manufacturetabacscigarescigarettes,manufacturetabacscigarescigarettesbastos,"Manufacture de Tabacs, Cigares et Cigarettes","Manufacture de Tabacs, Cigares et Cigarettes Bastos",2,bastos-j; perrot-e
+chauxcimentsrivetalger,lafarge,Chaux et ciments de Rivet-Alger,Lafarge,2,daher-p; laboubee-s
+industrielleafriquenordtraitementsousproduitsvigneolivier,nordafricainecimentslafarge,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,Nord-Africaine des Ciments de Lafarge,2,ferasson-l; laboubee-s
+domainesaintelouise,domainesbenhassenvallouise,Domaine Sainte-Louise,Domaines de Ben-Hassen et de Val-Louise,2,sept-merveilles; telemly
+domainesbenhassenvallouise,domainescaidessebt,Domaines de Ben-Hassen et de Val-Louise,Domaines du Caid-Es-Sebt,2,sept-merveilles; telemly
+algerienneconstructionsnavalesmecaniques,immobiliereforteau,Société Algérienne de constructions navales et mécaniques,Immobilière du Fort-de-l'Eau,2,bernabe-h; gensollen-h
 cheminsferroutesalgerie,etudescheminfertransafricain,Société des Chemins de fer sur routes d'Algérie,Société d'études du Chemin de fer transafricain,2,noblemaire-g; pellerin-de-latouche-g
+banqueindustrielleafriquenord,nordafricainecimentslafarge,Banque industrielle de l'Afrique du Nord,Nord-Africaine des Ciments de Lafarge,2,ferasson-l; michaux-l
 liegeshamendaspetitekabylie,nordafricainecimentslafarge,Lièges des Hamendas et de la Petite Kabylie,Nord-Africaine des Ciments de Lafarge,2,boutier-a; ferasson-l
-caisseagricoletlemcen,creditagricoletlemcen,Caisse agricole de Tlemcen,Crédit agricole de Tlemcen,2,soipteur-g; thesmar-j
-minesboudjoudoun,minieredjebelfelten,Société des mines de Boudjoudoun,Société minière du Djebel-Felten,2,petit-j; tanon-a
+algeriennemeunerie,caboteursalgeriens,Compagnie Algérienne de Meunerie,Caboteurs algériens,2,mohring-f; pres-d-alger
+algeriennemeunerie,cargosalgeriens,Compagnie Algérienne de Meunerie,Cargos algériens,2,mohring-f; pres-d-alger
+caisseagricoletlemcen,creditagricoletlemcen,Caisse agricole de Tlemcen,Crédit agricole de Tlemcen,2,soipteur-g; thesmar
+cellulosesafriquenord,grandstravauxalgeriens,Société des Celluloses de l'Afrique française du Nord,Grands Travaux algériens,2,gautier; philibert-j
 algerienne,cheminsferroutesalgerie,Compagnie algérienne,Société des Chemins de fer sur routes d'Algérie,2,mirabaud-e; pallier-j
-algerienne,minesouastamesloula,Compagnie algérienne,Compagnie des mines de Ouasta et de Mesloula,2,champin; mirabaud-e
 vignoblesalgeriens,vignoblesmediterranee,Vignobles algériens,VIGNOBLES DE LA MÉDITERRANÉE,2,brachanet-l; lambert-a
 vignoblesalgeriens,vinsmidialgerie,Vignobles algériens,Compagnie générale des vins du Midi et d'Algérie,2,lambert-a; leppert-f
-chauxcimentsrivetalger,nordafricainecimentslafarge,Chaux et ciments de Rivet-Alger,Nord-Africaine des Ciments de Lafarge,2,laboubee-s; michaux-l
+etudescheminfertransafricain,phosphatesdjebelonk,Société d'études du Chemin de fer transafricain,Phosphates du Djebel-Onk,2,berthelot-a; legouez-r
+fusionneeliegeshamendaspetitekabylie,immobilierealgerie,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,Société Immobilière d'Algérie,2,boissieu-p; versailles
+algerienneproduitschimiquesengrais,commercialearmement,Société Algérienne de produits chimiques et d'engrais,Société Commerciale d'Armement,2,galoppe-r; marceron-m
+commercialeacconage,oranaisecharbonnages,Société Commerciale d'Acconage,Oranaise de Charbonnages,2,bouffe-g; fossorier-r
+concessionnaireminesouenza,concessionnaireouenza,Société Concessionnaire des mines d'Ouenza,Société concessionnaire d'Ouenza,2,kroller-a; muller-nico-g
 concessionnaireouenza,minessidimarouf,Société concessionnaire d'Ouenza,Société des mines du Sidi Marouf,2,jousselin-j; vassilliere-c
+creditfoncieralgerietunisie,fonciereimmobilierevillealger,Crédit foncier d'Algérie-Tunisie,Compagnie Foncière et Immobilière de la Ville d'Alger,2,castan-r; rouan-p
+raffineriessoufrereunies,vignoblesmediterraneedomainemonvilleduzerville,Raffineries de soufre réunies,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",2,boyer-e; roubaud-j
 minieredjebelfelten,minierenordafriquesaintetienne,Société minière du Djebel-Felten,"Société Minière du Nord de l'Afrique, Saint-Étienne",2,desportes-j; rey-herme-j
+1918domainesbenislimantablat,lassallas,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Lassallas,2,chevallier-j; dome-m
+industrielleimmobiliere,lassallas,Cie Industrielle et Immobilière,Lassallas,2,chevallier-c; chevallier-j
 domainechapeaugendarme,omniumminesalgerietunisie,Domaine du Chapeau de Gendarme,Omnium Société générale de mines d'Algérie-Tunisie,2,armand-h; deyron-l
+immobiliereagricoleharrach,industriebois,Société immobilière et agricole de l'Harrach,L'Industrie du bois,2,olivier-p; pasquier-m
+immobiliereagricoleharrach,unioncommercialeproducteurs,Société immobilière et agricole de l'Harrach,Union commerciale des producteurs,2,olivier-p; pasquier-m
 agricolealgeriennebertagna,etsbertagna,Société agricole algérienne Bertagna,Éts Bertagna,2,bertagna-j; prat-g
+fermesalgeriennes,fermesfrancaisestunisie,Société des Fermes algeriennes,Société des Fermes francaises de Tunisie,2,froment-p; viallet-l
+fusionneeliegeshamendaspetitekabylie,liegeshamendaspetitekabylie,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,Lièges des Hamendas et de la Petite Kabylie,2,chesnot-h; pyrent-de-la-prade
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,liegesproduitsnordafricainsalgerusinebouchonsbone,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",2,adam-v; borgeaud-c
+minesdjebelaomar,palestro,Société des mines du Djebel-Aomar,Palestro,2,mercier; parc-gatlif
+bouthaleb,minesbouthaleb,Bou-Thaleb,MINES DU BOU-THALEB,2,goyard-j; herbe-j
 phosphatesconstantine,unionelectriquegaziereafriquenord,Compagnie des Phosphates de Constantine,Union électrique et gazière de l'Afrique du Nord,2,aries-j; esteve-g
+approvisionnementnordafricaine,vinsmidialgeriebezierssete,Société d'Approvisionnement nord-africaine,"Cie générale des Vins du Midi et d'Algérie, Béziers, Sète",2,delhaize-r; gontard-a
+vinsmidialgerie,vinsmidialgeriebezierssete,Compagnie générale des vins du Midi et d'Algérie,"Cie générale des Vins du Midi et d'Algérie, Béziers, Sète",2,colas-e; delhaize-r
+abrifamilialoranais,miroiterieafriquenord,L'Abri familial oranais,Miroiterie de l’Afrique du Nord,1,fouque-l
+abrifamilialoranais,allianceafricaineassurancesreassurances,L'Abri familial oranais,"Alliance africaine, Compagnie française d'assurances et de réassurances",1,hernandez-j
 abrifamilialoranais,minoteriereneesclapezrelizane,L'Abri familial oranais,"Minoterie René Esclapez & Cie, Relizane",1,hernandez-j
+allianceafricaineassurancesreassurances,minoteriereneesclapezrelizane,"Alliance africaine, Compagnie française d'assurances et de réassurances","Minoterie René Esclapez & Cie, Relizane",1,hernandez-j
 acconagealgerien,chargeursalgeriensreunis,Compagnie d'Acconage algérien,Chargeurs algériens réunis,1,laurens-h
 acconagecharbonnagejullian,charbonnierenordafricain,Société d'Acconage et de charbonnage Jullian,Compagnie Charbonnière du Nord-Africain,1,laurens-j
+africaineculturesindustrielles,charbonnierenordafricain,Compagnie Africaine de cultures industrielles,Compagnie Charbonnière du Nord-Africain,1,stern-j
+africaineculturesindustrielles,chargeursalgeriensreunis,Compagnie Africaine de cultures industrielles,Chargeurs algériens réunis,1,stern-j
+charbonnierenordafricain,chargeursalgeriensreunis,Compagnie Charbonnière du Nord-Africain,Chargeurs algériens réunis,1,stern-j
+africaineculturesindustrielles,algerienneproduitschimiquesengrais,Compagnie Africaine de cultures industrielles,Société Algérienne de produits chimiques et d'engrais,1,philippar-e
+africaineculturesindustrielles,manufacturetabacscigarescigarettesbastos,Compagnie Africaine de cultures industrielles,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",1,philippar-e
+africaineculturesindustrielles,manufacturetabacscigarescigarettesjbastos,Compagnie Africaine de cultures industrielles,"Manufacture de tabacs, cigares et cigarettes J. Bastos",1,philippar-e
+algerienneproduitschimiquesengrais,manufacturetabacscigarescigarettesbastos,Société Algérienne de produits chimiques et d'engrais,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",1,philippar-e
+algerienneproduitschimiquesengrais,manufacturetabacscigarescigarettesjbastos,Société Algérienne de produits chimiques et d'engrais,"Manufacture de tabacs, cigares et cigarettes J. Bastos",1,philippar-e
+africaineculturesindustrielles,grandstravauxalgeriens,Compagnie Africaine de cultures industrielles,Grands Travaux algériens,1,asnieres
+africaineculturesindustrielles,groupevinicole,Compagnie Africaine de cultures industrielles,Groupe vinicole,1,asnieres
+grandstravauxalgeriens,groupevinicole,Grands Travaux algériens,Groupe vinicole,1,asnieres
+africainetravaux,algerienneautomobilesrenault,Société Africaine de Travaux,Société algérienne des automobiles Renault,1,thevenet-c
 africainetravaux,charbonnage,Société Africaine de Travaux,CHARBONNAGE,1,thevenet-c
+africainetravaux,commercialefrancoafricainecharbonnage,Société Africaine de Travaux,Société Commerciale Franco-Africaine de Charbonnage,1,thevenet-c
 africainetravaux,creditfoncieralgerietunisie,Société Africaine de Travaux,Crédit foncier d'Algérie-Tunisie,1,thevenet-c
 africainetravaux,foncieremediterranee,Société Africaine de Travaux,Compagnie Foncière de la Méditerranée,1,thevenet-c
+africainetravaux,hotelsaintgeorges,Société Africaine de Travaux,Hôtel Saint-Georges,1,thevenet-c
+algerienneautomobilesrenault,charbonnage,Société algérienne des automobiles Renault,CHARBONNAGE,1,thevenet-c
+algerienneautomobilesrenault,commercialefrancoafricainecharbonnage,Société algérienne des automobiles Renault,Société Commerciale Franco-Africaine de Charbonnage,1,thevenet-c
+algerienneautomobilesrenault,creditfoncieralgerietunisie,Société algérienne des automobiles Renault,Crédit foncier d'Algérie-Tunisie,1,thevenet-c
+algerienneautomobilesrenault,foncieremediterranee,Société algérienne des automobiles Renault,Compagnie Foncière de la Méditerranée,1,thevenet-c
+algerienneautomobilesrenault,hotelsaintgeorges,Société algérienne des automobiles Renault,Hôtel Saint-Georges,1,thevenet-c
+charbonnage,commercialefrancoafricainecharbonnage,CHARBONNAGE,Société Commerciale Franco-Africaine de Charbonnage,1,thevenet-c
 charbonnage,creditfoncieralgerietunisie,CHARBONNAGE,Crédit foncier d'Algérie-Tunisie,1,thevenet-c
 charbonnage,foncieremediterranee,CHARBONNAGE,Compagnie Foncière de la Méditerranée,1,thevenet-c
-africainetravaux,velvetrum,Société Africaine de Travaux,VELVET-RUM,1,ferrando-h
+charbonnage,hotelsaintgeorges,CHARBONNAGE,Hôtel Saint-Georges,1,thevenet-c
+commercialefrancoafricainecharbonnage,creditfoncieralgerietunisie,Société Commerciale Franco-Africaine de Charbonnage,Crédit foncier d'Algérie-Tunisie,1,thevenet-c
+commercialefrancoafricainecharbonnage,foncieremediterranee,Société Commerciale Franco-Africaine de Charbonnage,Compagnie Foncière de la Méditerranée,1,thevenet-c
+commercialefrancoafricainecharbonnage,hotelsaintgeorges,Société Commerciale Franco-Africaine de Charbonnage,Hôtel Saint-Georges,1,thevenet-c
+creditfoncieralgerietunisie,hotelsaintgeorges,Crédit foncier d'Algérie-Tunisie,Hôtel Saint-Georges,1,thevenet-c
+foncieremediterranee,hotelsaintgeorges,Compagnie Foncière de la Méditerranée,Hôtel Saint-Georges,1,thevenet-c
+africainetravaux,allianceafricaineassurancesreassurances,Société Africaine de Travaux,"Alliance africaine, Compagnie française d'assurances et de réassurances",1,ferrando-h
+africainetravaux,comptoirproduitsceramiques,Société Africaine de Travaux,Comptoir des produits céramiques,1,ferrando-h
+africainetravaux,djidjelliplage,Société Africaine de Travaux,Djidjelli-Plage,1,ferrando-h
+allianceafricaineassurancesreassurances,comptoirproduitsceramiques,"Alliance africaine, Compagnie française d'assurances et de réassurances",Comptoir des produits céramiques,1,ferrando-h
+allianceafricaineassurancesreassurances,djidjelliplage,"Alliance africaine, Compagnie française d'assurances et de réassurances",Djidjelli-Plage,1,ferrando-h
+comptoirproduitsceramiques,djidjelliplage,Comptoir des produits céramiques,Djidjelli-Plage,1,ferrando-h
 africaineliegealgerhusseindeyazazga,algerienneeclairageforce,"Compagnie Africaine du Liège, Alger, Hussein-Dey, Azazga",Société Algérienne d'éclairage et de force,1,mercier-g
+africaineliegealgerhusseindeyazazga,banquenationalecommerceindustrie,"Compagnie Africaine du Liège, Alger, Hussein-Dey, Azazga",Banque nationale pour le commerce et l'industrie,1,mercier-g
+africaineliegealgerhusseindeyazazga,tramwaysalgeriens,"Compagnie Africaine du Liège, Alger, Hussein-Dey, Azazga",Société des Tramways algériens,1,mercier-g
+algerienneeclairageforce,banquenationalecommerceindustrie,Société Algérienne d'éclairage et de force,Banque nationale pour le commerce et l'industrie,1,mercier-g
+banquenationalecommerceindustrie,tramwaysalgeriens,Banque nationale pour le commerce et l'industrie,Société des Tramways algériens,1,mercier-g
 africaineminestransports,banquealgerie,Société Africaine de Mines et transports,BANQUE DE L'ALGERIE,1,bloch-laine-f
 banquealgerie,ouenza,BANQUE DE L'ALGERIE,Société de l'Ouenza,1,bloch-laine-f
-airliquide,algerienneglacehygieniqueentreposagefrigorifique,L'Air liquide,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,1,cornut
-airliquide,distilleriebadoilmustapha,L'Air liquide,"Distillerie Badoil, Mustapha",1,brissonnet-e
+afrique,comptoirescomptesidibelabbes,L'Afrique française,Comptoir d'escompte de Sidi-Bel-Abbès,1,sidi-bel-abbes
+afrique,constructionelectrique,L'Afrique française,CONSTRUCTION ÉLECTRIQUE,1,sidi-bel-abbes
+afrique,expansionnordafricaine,L'Afrique française,Expansion nord-africaine,1,sidi-bel-abbes
+comptoirescomptesidibelabbes,constructionelectrique,Comptoir d'escompte de Sidi-Bel-Abbès,CONSTRUCTION ÉLECTRIQUE,1,sidi-bel-abbes
+comptoirescomptesidibelabbes,expansionnordafricaine,Comptoir d'escompte de Sidi-Bel-Abbès,Expansion nord-africaine,1,sidi-bel-abbes
+constructionelectrique,expansionnordafricaine,CONSTRUCTION ÉLECTRIQUE,Expansion nord-africaine,1,sidi-bel-abbes
+afrique,algerienneelevage,L'Afrique française,Société Algérienne d'élevage,1,levy-c
+afrique,entreprisealgerienne,L'Afrique française,L'Entreprise algérienne,1,levy-c
+algerienneelevage,entreprisealgerienne,Société Algérienne d'élevage,L'Entreprise algérienne,1,levy-c
+agricolelyonnaisenordafrique,charbonnierenordafricain,Société Agricole Lyonnaise du Nord de l'Afrique,Compagnie Charbonnière du Nord-Africain,1,brisson
+charbonnierenordafricain,cotonnierebonoise,Compagnie Charbonnière du Nord-Africain,Société Cotonnière Bônoise,1,brisson
+minesainkerma,mineszincguergour,Société des mines d'Aïn-Kerma,Société des mines de zinc du Guergour,1,faure
+airliquide,algerienneglacehygieniqueentreposagefrigorifique,L'Air liquide,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,1,cornut-e
+airliquide,immobiliereagricoleharrach,L'Air liquide,Société immobilière et agricole de l'Harrach,1,cornut-e
+algerienneglacehygieniqueentreposagefrigorifique,immobiliereagricoleharrach,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Société immobilière et agricole de l'Harrach,1,cornut-e
+airliquide,algerienneetudesentreprisesagricolescommercialesindustrielles,L'Air liquide,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",1,brissonnet-e
+airliquide,distillerieliqueurmandarinebougie,L'Air liquide,Distillerie de liqueur de mandarine de Bougie,1,brissonnet-e
 airliquide,expansionnordafricaine,L'Air liquide,Expansion nord-africaine,1,brissonnet-e
-distilleriebadoilmustapha,expansionnordafricaine,"Distillerie Badoil, Mustapha",Expansion nord-africaine,1,brissonnet-e
+airliquide,unioncommercialeproducteurs,L'Air liquide,Union commerciale des producteurs,1,brissonnet-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,expansionnordafricaine,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Expansion nord-africaine,1,brissonnet-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,unioncommercialeproducteurs,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Union commerciale des producteurs,1,brissonnet-e
+distillerieliqueurmandarinebougie,expansionnordafricaine,Distillerie de liqueur de mandarine de Bougie,Expansion nord-africaine,1,brissonnet-e
+distillerieliqueurmandarinebougie,unioncommercialeproducteurs,Distillerie de liqueur de mandarine de Bougie,Union commerciale des producteurs,1,brissonnet-e
+expansionnordafricaine,unioncommercialeproducteurs,Expansion nord-africaine,Union commerciale des producteurs,1,brissonnet-e
 airliquide,eclairagescommunaux,L'Air liquide,Compagnie des Éclairages communaux,1,claude-h
 airliquide,ascenseursmontechargeshydrauliquesvillealger,L'Air liquide,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",1,julien
+airliquide,alhambrarueisly,L'Air liquide,Société de l'Alhambra de la rue d'Isly,1,mf
+airliquide,approvisionnementnordafricaine,L'Air liquide,Société d'Approvisionnement nord-africaine,1,mf
+airliquide,caisseagricolecommercialeguelma,L'Air liquide,Caisse agricole et commerciale de Guelma,1,mf
+airliquide,industrielleafriquenordtraitementsousproduitsvigneolivier,L'Air liquide,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,mf
+airliquide,liegesproduitsnordafricainsalgerusinebouchonsbone,L'Air liquide,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,mf
+airliquide,tramwayselectriquesconstantine,L'Air liquide,Tramways électriques de Constantine,1,mf
+alhambrarueisly,approvisionnementnordafricaine,Société de l'Alhambra de la rue d'Isly,Société d'Approvisionnement nord-africaine,1,mf
+alhambrarueisly,caisseagricolecommercialeguelma,Société de l'Alhambra de la rue d'Isly,Caisse agricole et commerciale de Guelma,1,mf
+alhambrarueisly,industrielleafriquenordtraitementsousproduitsvigneolivier,Société de l'Alhambra de la rue d'Isly,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,mf
+alhambrarueisly,liegesproduitsnordafricainsalgerusinebouchonsbone,Société de l'Alhambra de la rue d'Isly,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,mf
+alhambrarueisly,tramwayselectriquesconstantine,Société de l'Alhambra de la rue d'Isly,Tramways électriques de Constantine,1,mf
+approvisionnementnordafricaine,caisseagricolecommercialeguelma,Société d'Approvisionnement nord-africaine,Caisse agricole et commerciale de Guelma,1,mf
+approvisionnementnordafricaine,industrielleafriquenordtraitementsousproduitsvigneolivier,Société d'Approvisionnement nord-africaine,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,mf
+approvisionnementnordafricaine,liegesproduitsnordafricainsalgerusinebouchonsbone,Société d'Approvisionnement nord-africaine,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,mf
+approvisionnementnordafricaine,tramwayselectriquesconstantine,Société d'Approvisionnement nord-africaine,Tramways électriques de Constantine,1,mf
+caisseagricolecommercialeguelma,industrielleafriquenordtraitementsousproduitsvigneolivier,Caisse agricole et commerciale de Guelma,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,mf
+caisseagricolecommercialeguelma,liegesproduitsnordafricainsalgerusinebouchonsbone,Caisse agricole et commerciale de Guelma,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,mf
+caisseagricolecommercialeguelma,tramwayselectriquesconstantine,Caisse agricole et commerciale de Guelma,Tramways électriques de Constantine,1,mf
+industrielleafriquenordtraitementsousproduitsvigneolivier,tramwayselectriquesconstantine,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,Tramways électriques de Constantine,1,mf
+liegesproduitsnordafricainsalgerusinebouchonsbone,tramwayselectriquesconstantine,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",Tramways électriques de Constantine,1,mf
 akkaresbelezma,algerienne,"Société d'Akkarès, Belezma",Compagnie algérienne,1,garbe-d
+ateliersreparationsmaritimesafriquenord,marmaro,Ateliers de réparations maritimes de l'Afrique du Nord,Marmaro,1,fevre-a
+ateliersreparationsmaritimesafriquenord,coqmaterielviticoleoleicoleaixprovence,Ateliers de réparations maritimes de l'Afrique du Nord,"Coq, matériel viticole et oléicole, Aix-en-Provence",1,rey-l
 alfa,cheddites,L'Alfa,CHEDDITES,1,bouchayer-h
 alfa,hydroelectriqueafriquenord,L'Alfa,Société Hydro-électrique de l'Afrique du Nord,1,manufactures
 alfa,expansionnordafricaine,L'Alfa,Expansion nord-africaine,1,martin-l
@@ -122,71 +297,230 @@ alfa,palestro,L'Alfa,Palestro,1,navarre-a
 alfa,algerienne,L'Alfa,Compagnie algérienne,1,marlio-l
 alfasocfabricationpatescellulose,algerienne,"L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose",Compagnie algérienne,1,marlio-l
 alfa,liege,L'Alfa,Société Française du Liège,1,roudy-a
+alfa,tramwayselectriquesoran,L'Alfa,Tramways électriques d'Oran,1,berthoulat-g
+alfa,approvisionnementnordafricaine,L'Alfa,Société d'Approvisionnement nord-africaine,1,nancy
+alfa,cenpasoccentraleusinespapiers,L'Alfa,"CENPA, Soc. Centrale des Usines à Papiers",1,nancy
+alfa,chaines,L'Alfa,CHAÎNES,1,nancy
+alfa,fichet,L'Alfa,FICHET,1,nancy
+alfa,secteurelectrique,L'Alfa,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,nancy
+approvisionnementnordafricaine,cenpasoccentraleusinespapiers,Société d'Approvisionnement nord-africaine,"CENPA, Soc. Centrale des Usines à Papiers",1,nancy
+approvisionnementnordafricaine,chaines,Société d'Approvisionnement nord-africaine,CHAÎNES,1,nancy
+approvisionnementnordafricaine,manufacturetapisorient,Société d'Approvisionnement nord-africaine,Manufacture de tapis d'Orient,1,nancy
+approvisionnementnordafricaine,secteurelectrique,Société d'Approvisionnement nord-africaine,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,nancy
+cenpasoccentraleusinespapiers,chaines,"CENPA, Soc. Centrale des Usines à Papiers",CHAÎNES,1,nancy
+cenpasoccentraleusinespapiers,secteurelectrique,"CENPA, Soc. Centrale des Usines à Papiers","Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,nancy
+chaines,manufacturetapisorient,CHAÎNES,Manufacture de tapis d'Orient,1,nancy
+chaines,secteurelectrique,CHAÎNES,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,nancy
+fichet,manufacturetapisorient,FICHET,Manufacture de tapis d'Orient,1,nancy
+fichet,secteurelectrique,FICHET,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,nancy
+manufacturetapisorient,secteurelectrique,Manufacture de tapis d'Orient,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,nancy
+achaque,alfa,Achaque,L'Alfa,1,caron
+achaque,manufacturetapisorient,Achaque,Manufacture de tapis d'Orient,1,caron
 aldegue,alfasocfabricationpatescellulose,ALDÉGUÉ,"L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose",1,pechiney
 alfasocfabricationpatescellulose,algeriennesels,"L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose",Compagnie Algérienne des sels,1,froges
 alfasocfabricationpatescellulose,mullerpasse19261928souscontrolegraengesberg,"L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose","Müller, passé en 1926-1928 sous le contrôle de Graengesberg",1,froges
-achaque,alfa,Achaque,L'Alfa,1,caron
+algeriennematerielagricole,cellulosesafriquenord,Société Algérienne de Matériel agricole,Société des Celluloses de l'Afrique française du Nord,1,deiss-g
+algeriennematerielagricole,carrosseriemoderne,Société Algérienne de Matériel agricole,La Carrosserie moderne,1,manent-j
+algeriennematerielagricole,domainequatrechemins,Société Algérienne de Matériel agricole,Domaine des Quatre-Chemins,1,manent-j
+carrosseriemoderne,domainequatrechemins,La Carrosserie moderne,Domaine des Quatre-Chemins,1,manent-j
+algeriennematerielagricole,caisseagricolecommercialeguelma,Société Algérienne de Matériel agricole,Caisse agricole et commerciale de Guelma,1,mf-porte-a
 algerienneeclairageforce,cheminsferestalgerien,Société Algérienne d'éclairage et de force,Compagnie des Chemins de fer de l'Est-Algérien,1,homberg-o
 algerienneeclairageforce,fournituresmilitaires,Société Algérienne d'éclairage et de force,Société générale de Fournitures militaires,1,homberg-o
 cheminsferestalgerien,fournituresmilitaires,Compagnie des Chemins de fer de l'Est-Algérien,Société générale de Fournitures militaires,1,homberg-o
 algerienneeclairageforce,cellulosesafriquenord,Société Algérienne d'éclairage et de force,Société des Celluloses de l'Afrique française du Nord,1,bouscasse-f
+algerienneeclairageforce,industrielleafriquenordtraitementsousproduitsvigneolivier,Société Algérienne d'éclairage et de force,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,bouscasse-f
+cellulosesafriquenord,industrielleafriquenordtraitementsousproduitsvigneolivier,Société des Celluloses de l'Afrique française du Nord,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,bouscasse-f
 algerienneeclairageforce,algeriennenavigationafriquenord,Société Algérienne d'éclairage et de force,Société algérienne de navigation pour l'Afrique du Nord,1,boulogne-g
+algerienneeclairageforce,algeriennenavigationafriquenordcharlesschiaffino,Société Algérienne d'éclairage et de force,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",1,boulogne-g
 algerienneeclairageforce,constructionelectrique,Société Algérienne d'éclairage et de force,CONSTRUCTION ÉLECTRIQUE,1,boulogne-g
 algerienneeclairageforce,regiefoncierevillealger,Société Algérienne d'éclairage et de force,Régie foncière de la ville d'Alger,1,boulogne-g
 algeriennenavigationafriquenord,constructionelectrique,Société algérienne de navigation pour l'Afrique du Nord,CONSTRUCTION ÉLECTRIQUE,1,boulogne-g
 algeriennenavigationafriquenord,creditfoncieralgerietunisie,Société algérienne de navigation pour l'Afrique du Nord,Crédit foncier d'Algérie-Tunisie,1,boulogne-g
 algeriennenavigationafriquenord,regiefoncierevillealger,Société algérienne de navigation pour l'Afrique du Nord,Régie foncière de la ville d'Alger,1,boulogne-g
+algeriennenavigationafriquenord,tramwaysalgeriens,Société algérienne de navigation pour l'Afrique du Nord,Société des Tramways algériens,1,boulogne-g
 algeriennenavigationafriquenord,unionelectriquegaziereafriquenord,Société algérienne de navigation pour l'Afrique du Nord,Union électrique et gazière de l'Afrique du Nord,1,boulogne-g
+algeriennenavigationafriquenordcharlesschiaffino,constructionelectrique,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",CONSTRUCTION ÉLECTRIQUE,1,boulogne-g
+algeriennenavigationafriquenordcharlesschiaffino,creditfoncieralgerietunisie,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Crédit foncier d'Algérie-Tunisie,1,boulogne-g
+algeriennenavigationafriquenordcharlesschiaffino,regiefoncierevillealger,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Régie foncière de la ville d'Alger,1,boulogne-g
+algeriennenavigationafriquenordcharlesschiaffino,tramwaysalgeriens,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Société des Tramways algériens,1,boulogne-g
+algeriennenavigationafriquenordcharlesschiaffino,unionelectriquegaziereafriquenord,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Union électrique et gazière de l'Afrique du Nord,1,boulogne-g
 constructionelectrique,regiefoncierevillealger,CONSTRUCTION ÉLECTRIQUE,Régie foncière de la ville d'Alger,1,boulogne-g
+constructionelectrique,tramwaysalgeriens,CONSTRUCTION ÉLECTRIQUE,Société des Tramways algériens,1,boulogne-g
 constructionelectrique,unionelectriquegaziereafriquenord,CONSTRUCTION ÉLECTRIQUE,Union électrique et gazière de l'Afrique du Nord,1,boulogne-g
+creditfoncieralgerietunisie,tramwaysalgeriens,Crédit foncier d'Algérie-Tunisie,Société des Tramways algériens,1,boulogne-g
+regiefoncierevillealger,tramwaysalgeriens,Régie foncière de la ville d'Alger,Société des Tramways algériens,1,boulogne-g
 regiefoncierevillealger,unionelectriquegaziereafriquenord,Régie foncière de la ville d'Alger,Union électrique et gazière de l'Afrique du Nord,1,boulogne-g
+tramwaysalgeriens,unionelectriquegaziereafriquenord,Société des Tramways algériens,Union électrique et gazière de l'Afrique du Nord,1,boulogne-g
 algerienneeclairageforce,foncieremediterranee,Société Algérienne d'éclairage et de force,Compagnie Foncière de la Méditerranée,1,leruste-h
 algerienneeclairageforce,cheminsferroutesalgerie,Société Algérienne d'éclairage et de force,Société des Chemins de fer sur routes d'Algérie,1,toche-c
-algerienneglacehygieniqueentreposagefrigorifique,mineschabetkohol,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Compagnie des mines de Chabet-Kohol,1,boussand-l
 algerienneglacehygieniqueentreposagefrigorifique,creditfoncieragricolealgerie,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Crédit foncier et agricole d'Algérie,1,tachet-j
 algerienneglacehygieniqueentreposagefrigorifique,distilleriebadoilmustapha,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,"Distillerie Badoil, Mustapha",1,tachet-j
 creditfoncieragricolealgerie,distilleriebadoilmustapha,Crédit foncier et agricole d'Algérie,"Distillerie Badoil, Mustapha",1,tachet-j
-algerienneglacehygieniqueentreposagefrigorifique,brasseriemalteriealgeriennemustaphainferieur,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur",1,chev-lh
-algerienneglacehygieniqueentreposagefrigorifique,raffineriessoufrereunies,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Raffineries de soufre réunies,1,chev-lh
-brasseriemalteriealgeriennemustaphainferieur,cheminsferestalgerien,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur",Compagnie des Chemins de fer de l'Est-Algérien,1,chev-lh
-brasseriemalteriealgeriennemustaphainferieur,fonciereimmobilierevillealger,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur",Compagnie Foncière et Immobilière de la Ville d'Alger,1,chev-lh
-brasseriemalteriealgeriennemustaphainferieur,raffineriessoufrereunies,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur",Raffineries de soufre réunies,1,chev-lh
-cheminsferestalgerien,raffineriessoufrereunies,Compagnie des Chemins de fer de l'Est-Algérien,Raffineries de soufre réunies,1,chev-lh
-fonciereimmobilierevillealger,raffineriessoufrereunies,Compagnie Foncière et Immobilière de la Ville d'Alger,Raffineries de soufre réunies,1,chev-lh
+algerienneglacehygieniqueentreposagefrigorifique,creditalgerien,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,"Crédit algérien, puis Crédit privé",1,pres-alger
+algerienneglacehygieniqueentreposagefrigorifique,cheminsferestalgerien,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Compagnie des Chemins de fer de l'Est-Algérien,1,off-lh
+algerienneglacehygieniqueentreposagefrigorifique,fonciereimmobilierevillealger,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Compagnie Foncière et Immobilière de la Ville d'Alger,1,off-lh
+cheminsferestalgerien,fonciereimmobilierevillealger,Compagnie des Chemins de fer de l'Est-Algérien,Compagnie Foncière et Immobilière de la Ville d'Alger,1,off-lh
+algerienneglacehygieniqueentreposagefrigorifique,vignoblesmediterranee,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,VIGNOBLES DE LA MÉDITERRANÉE,1,gabet-m
+algerienneglacehygieniqueentreposagefrigorifique,vignoblesmediterraneedomainemonvilleduzerville,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",1,gabet-m
+algerienneautomobilesrenault,transsaharienne,Société algérienne des automobiles Renault,Compagnie Générale Transsaharienne,1,huge-p
+algerienneautomobilesrenault,alhambrarueisly,Société algérienne des automobiles Renault,Société de l'Alhambra de la rue d'Isly,1,guiauchain-p
+algerienneautomobilesrenault,grandhoteloran,Société algérienne des automobiles Renault,Grand Hôtel d'Oran,1,guiauchain-p
+algerienneautomobilesrenault,grandshotelsafriquenord,Société algérienne des automobiles Renault,Grands Hôtels de l'Afrique du Nord,1,guiauchain-p
+alhambrarueisly,grandshotelsafriquenord,Société de l'Alhambra de la rue d'Isly,Grands Hôtels de l'Afrique du Nord,1,guiauchain-p
+grandhoteloran,grandshotelsafriquenord,Grand Hôtel d'Oran,Grands Hôtels de l'Afrique du Nord,1,guiauchain-p
+algeriennecamionnageautomobile,cheminsferestalgerien,Société Algérienne de Camionnage automobile,Compagnie des Chemins de fer de l'Est-Algérien,1,barriol-a
 algeriennenavigationafriquenordcharlesschiaffino,docksoran,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Docks d'Oran,1,x-a
+algeriennenavigationafriquenordcharlesschiaffino,grandstravauxalgeriens,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Grands Travaux algériens,1,x-a
+docksoran,grandstravauxalgeriens,Docks d'Oran,Grands Travaux algériens,1,x-a
+algerienneeaux,algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,Société Algérienne des eaux,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",1,schiaffino-l
+algerienneeaux,algeriennenavigationafriquenordcharlesschiaffino,Société Algérienne des eaux,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",1,schiaffino-l
+algerienneeaux,banquealgerie,Société Algérienne des eaux,BANQUE DE L'ALGERIE,1,schiaffino-l
+algerienneeaux,banqueindustrielleafriquenord,Société Algérienne des eaux,Banque industrielle de l'Afrique du Nord,1,schiaffino-l
+algerienneeaux,compagniesregionalesreuniesfabriquesengraisproduitschimiques,Société Algérienne des eaux,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,1,schiaffino-l
+algerienneeaux,domainesaintcharlesboufarik,Société Algérienne des eaux,"Domaine Saint-Charles, Boufarik",1,schiaffino-l
+algerienneeaux,fonciereimmobilierefranceafriquenord,Société Algérienne des eaux,Société Foncière et Immobilière de France et de l'Afrique du Nord,1,schiaffino-l
+algerienneeaux,minesouedrabahais,Société Algérienne des eaux,Société des mines de l'Oued-Rabah et d'Aïs,1,schiaffino-l
+algerienneeaux,omniumminesusines,Société Algérienne des eaux,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,schiaffino-l
+algerienneeaux,pfund,Société Algérienne des eaux,PFUND,1,schiaffino-l
+algerienneeaux,phosphatesconstantine,Société Algérienne des eaux,Compagnie des Phosphates de Constantine,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,banquealgerie,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",BANQUE DE L'ALGERIE,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,banqueindustrielleafriquenord,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",Banque industrielle de l'Afrique du Nord,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,compagniesregionalesreuniesfabriquesengraisproduitschimiques,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,domainesaintcharlesboufarik,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew","Domaine Saint-Charles, Boufarik",1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,fonciereimmobilierefranceafriquenord,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",Société Foncière et Immobilière de France et de l'Afrique du Nord,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,minesouedrabahais,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",Société des mines de l'Oued-Rabah et d'Aïs,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,omniumminesusines,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew","Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,pfund,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",PFUND,1,schiaffino-l
 algeriennenavigationafriquenordcharlesschiaffino,banquealgerie,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",BANQUE DE L'ALGERIE,1,schiaffino-l
 algeriennenavigationafriquenordcharlesschiaffino,banqueindustrielleafriquenord,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Banque industrielle de l'Afrique du Nord,1,schiaffino-l
 algeriennenavigationafriquenordcharlesschiaffino,compagniesregionalesreuniesfabriquesengraisproduitschimiques,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,1,schiaffino-l
-algeriennenavigationafriquenordcharlesschiaffino,fonciereimmobilierefranceafriquenord,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Société Foncière et Immobilière de France et de l'Afrique du Nord,1,schiaffino-l
-algeriennenavigationafriquenordcharlesschiaffino,omniumminesusines,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie","Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,schiaffino-l
+algeriennenavigationafriquenordcharlesschiaffino,domainesaintcharlesboufarik,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie","Domaine Saint-Charles, Boufarik",1,schiaffino-l
 algeriennenavigationafriquenordcharlesschiaffino,pfund,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",PFUND,1,schiaffino-l
-algeriennenavigationafriquenordcharlesschiaffino,phosphatesconstantine,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Compagnie des Phosphates de Constantine,1,schiaffino-l
 banquealgerie,compagniesregionalesreuniesfabriquesengraisproduitschimiques,BANQUE DE L'ALGERIE,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,1,schiaffino-l
+banquealgerie,domainesaintcharlesboufarik,BANQUE DE L'ALGERIE,"Domaine Saint-Charles, Boufarik",1,schiaffino-l
 banquealgerie,fonciereimmobilierefranceafriquenord,BANQUE DE L'ALGERIE,Société Foncière et Immobilière de France et de l'Afrique du Nord,1,schiaffino-l
+banquealgerie,minesouedrabahais,BANQUE DE L'ALGERIE,Société des mines de l'Oued-Rabah et d'Aïs,1,schiaffino-l
 banquealgerie,omniumminesusines,BANQUE DE L'ALGERIE,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,schiaffino-l
 banquealgerie,pfund,BANQUE DE L'ALGERIE,PFUND,1,schiaffino-l
 banqueindustrielleafriquenord,compagniesregionalesreuniesfabriquesengraisproduitschimiques,Banque industrielle de l'Afrique du Nord,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,1,schiaffino-l
+banqueindustrielleafriquenord,domainesaintcharlesboufarik,Banque industrielle de l'Afrique du Nord,"Domaine Saint-Charles, Boufarik",1,schiaffino-l
 banqueindustrielleafriquenord,fonciereimmobilierefranceafriquenord,Banque industrielle de l'Afrique du Nord,Société Foncière et Immobilière de France et de l'Afrique du Nord,1,schiaffino-l
+banqueindustrielleafriquenord,minesouedrabahais,Banque industrielle de l'Afrique du Nord,Société des mines de l'Oued-Rabah et d'Aïs,1,schiaffino-l
 banqueindustrielleafriquenord,omniumminesusines,Banque industrielle de l'Afrique du Nord,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,schiaffino-l
 banqueindustrielleafriquenord,pfund,Banque industrielle de l'Afrique du Nord,PFUND,1,schiaffino-l
 banqueindustrielleafriquenord,phosphatesconstantine,Banque industrielle de l'Afrique du Nord,Compagnie des Phosphates de Constantine,1,schiaffino-l
+compagniesregionalesreuniesfabriquesengraisproduitschimiques,domainesaintcharlesboufarik,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,"Domaine Saint-Charles, Boufarik",1,schiaffino-l
 compagniesregionalesreuniesfabriquesengraisproduitschimiques,fonciereimmobilierefranceafriquenord,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,Société Foncière et Immobilière de France et de l'Afrique du Nord,1,schiaffino-l
+compagniesregionalesreuniesfabriquesengraisproduitschimiques,minesouedrabahais,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,Société des mines de l'Oued-Rabah et d'Aïs,1,schiaffino-l
 compagniesregionalesreuniesfabriquesengraisproduitschimiques,omniumminesusines,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,schiaffino-l
 compagniesregionalesreuniesfabriquesengraisproduitschimiques,pfund,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,PFUND,1,schiaffino-l
 compagniesregionalesreuniesfabriquesengraisproduitschimiques,phosphatesconstantine,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,Compagnie des Phosphates de Constantine,1,schiaffino-l
+domainesaintcharlesboufarik,fonciereimmobilierefranceafriquenord,"Domaine Saint-Charles, Boufarik",Société Foncière et Immobilière de France et de l'Afrique du Nord,1,schiaffino-l
+domainesaintcharlesboufarik,minesouedrabahais,"Domaine Saint-Charles, Boufarik",Société des mines de l'Oued-Rabah et d'Aïs,1,schiaffino-l
+domainesaintcharlesboufarik,omniumminesusines,"Domaine Saint-Charles, Boufarik","Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,schiaffino-l
+domainesaintcharlesboufarik,pfund,"Domaine Saint-Charles, Boufarik",PFUND,1,schiaffino-l
+domainesaintcharlesboufarik,phosphatesconstantine,"Domaine Saint-Charles, Boufarik",Compagnie des Phosphates de Constantine,1,schiaffino-l
 fonciereimmobilierefranceafriquenord,pfund,Société Foncière et Immobilière de France et de l'Afrique du Nord,PFUND,1,schiaffino-l
-fonciereimmobilierefranceafriquenord,phosphatesconstantine,Société Foncière et Immobilière de France et de l'Afrique du Nord,Compagnie des Phosphates de Constantine,1,schiaffino-l
+minesouedrabahais,pfund,Société des mines de l'Oued-Rabah et d'Aïs,PFUND,1,schiaffino-l
+algeriennenavigationafriquenordcharlesschiaffino,minesalgerietunisieomnium,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",MINES D'ALGÉRIE-TUNISIE « OMNIUM »,1,ansbacher-t
+algeriennenavigationafriquenordcharlesschiaffino,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie","Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
+fonciereimmobilierefranceafriquenord,minesalgerietunisieomnium,Société Foncière et Immobilière de France et de l'Afrique du Nord,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,1,ansbacher-t
+fonciereimmobilierefranceafriquenord,minesrarbousakamody,Société Foncière et Immobilière de France et de l'Afrique du Nord,Société des mines de Rarbou et Sakamody,1,ansbacher-t
+fonciereimmobilierefranceafriquenord,omniumminesalgerietunisie,Société Foncière et Immobilière de France et de l'Afrique du Nord,Omnium Société générale de mines d'Algérie-Tunisie,1,ansbacher-t
+fonciereimmobilierefranceafriquenord,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Société Foncière et Immobilière de France et de l'Afrique du Nord,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
+minesalgerietunisieomnium,minesouedrabahais,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Société des mines de l'Oued-Rabah et d'Aïs,1,ansbacher-t
+minesalgerietunisieomnium,minesrarbousakamody,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Société des mines de Rarbou et Sakamody,1,ansbacher-t
+minesouedrabahais,minesrarbousakamody,Société des mines de l'Oued-Rabah et d'Aïs,Société des mines de Rarbou et Sakamody,1,ansbacher-t
+minesouedrabahais,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Société des mines de l'Oued-Rabah et d'Aïs,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
+minesrarbousakamody,omniumminesusines,Société des mines de Rarbou et Sakamody,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",1,ansbacher-t
+minesrarbousakamody,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Société des mines de Rarbou et Sakamody,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
+omniumminesalgerietunisie,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Omnium Société générale de mines d'Algérie-Tunisie,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
+omniumminesusines,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc","Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,minesrarbousakamody,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",Société des mines de Rarbou et Sakamody,1,maniquet-vauberet-l
+algeriennenavigationafriquenordcharlesschiaffino,algeriennepetrolestliouanet,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Société Algérienne des pétroles de Tliouanet,1,peyerimhoff-de-fontenelle-h
+algeriennepetrolestliouanet,minesouedrabahais,Société Algérienne des pétroles de Tliouanet,Société des mines de l'Oued-Rabah et d'Aïs,1,peyerimhoff-de-fontenelle-h
+algeriennepetrolestliouanet,omniumminesalgerietunisie,Société Algérienne des pétroles de Tliouanet,Omnium Société générale de mines d'Algérie-Tunisie,1,peyerimhoff-de-fontenelle-h
 algeriennenavigationafriquenord,millaul,Société algérienne de navigation pour l'Afrique du Nord,MILLAUL,1,th-ansbacher
 algeriennenavigationafriquenord,omniumminesalgerietunisie,Société algérienne de navigation pour l'Afrique du Nord,Omnium Société générale de mines d'Algérie-Tunisie,1,th-ansbacher
 algeriennenavigationafriquenord,phosphatesconstantine,Société algérienne de navigation pour l'Afrique du Nord,Compagnie des Phosphates de Constantine,1,th-ansbacher
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,creditalgerien,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew","Crédit algérien, puis Crédit privé",1,adolphe-e
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,banquecoxclimited,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew","Banque Cox & C°, Limited",1,hamilton
+algeriennemateriauxconstruction,secteurelectrique,Société Algérienne de matériaux de construction,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,froment-guieysse-g
 algeriennemateriauxconstruction,secteurelectriquevoutesalger,Société Algérienne de matériaux de construction,Secteur électrique des Voûtes d'Alger,1,froment-guieysse-g
+nordafricaineetudesentreprises,secteurelectrique,Société Nord-africaine d'études et d'entreprises,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,froment-guieysse-g
 nordafricaineetudesentreprises,secteurelectriquevoutesalger,Société Nord-africaine d'études et d'entreprises,Secteur électrique des Voûtes d'Alger,1,froment-guieysse-g
+algeriennepetrolesstandard,caboteursalgeriens,Compagnie Algérienne des Pétroles Standard,Caboteurs algériens,1,altairac-g
+algeriennepetrolesstandard,caveschateau,Compagnie Algérienne des Pétroles Standard,Caves du Château,1,altairac-g
+algeriennepetrolesstandard,fonciereimmobilieremaisoncarree,Compagnie Algérienne des Pétroles Standard,Société Foncière et Immobiliere de Maison-Carrée,1,altairac-g
 algeriennepetrolesstandard,regiefoncierevillealger,Compagnie Algérienne des Pétroles Standard,Régie foncière de la ville d'Alger,1,altairac-g
+caboteursalgeriens,caveschateau,Caboteurs algériens,Caves du Château,1,altairac-g
+caboteursalgeriens,fonciereimmobilieremaisoncarree,Caboteurs algériens,Société Foncière et Immobiliere de Maison-Carrée,1,altairac-g
+caveschateau,fonciereimmobilieremaisoncarree,Caves du Château,Société Foncière et Immobiliere de Maison-Carrée,1,altairac-g
+caveschateau,regiefoncierevillealger,Caves du Château,Régie foncière de la ville d'Alger,1,altairac-g
+fonciereimmobilieremaisoncarree,regiefoncierevillealger,Société Foncière et Immobiliere de Maison-Carrée,Régie foncière de la ville d'Alger,1,altairac-g
+algeriennetransportsparautomobiles,domainejulienguethna,Société Algérienne de Transports par automobiles,Domaine Julien de la Guethna,1,roche-l
+acconage,algeriennetransportsparautomobiles,ACCONAGE,Société Algérienne de Transports par automobiles,1,savon-r
+alhambrarueisly,grandstravauxalgeriens,Société de l'Alhambra de la rue d'Isly,Grands Travaux algériens,1,thibaud-j
+alhambrarueisly,fonciereimmobilieremaisoncarree,Société de l'Alhambra de la rue d'Isly,Société Foncière et Immobiliere de Maison-Carrée,1,tine-j
+allianceafricaineassurancesreassurances,manufacturetapismarabout,"Alliance africaine, Compagnie française d'assurances et de réassurances",Société des Manufacture de tapis du Marabout,1,scudier-r
+allianceafricaineassurancesreassurances,manufacturetabacscigarescigarettesbastos,"Alliance africaine, Compagnie française d'assurances et de réassurances","Manufacture de Tabacs, Cigares et Cigarettes Bastos",1,bastos-a
+allianceafricaineassurancesreassurances,manufacturetabacscigarescigarettesjbastos,"Alliance africaine, Compagnie française d'assurances et de réassurances","Manufacture de tabacs, cigares et cigarettes J. Bastos",1,bastos-a
+allianceafricaineassurancesreassurances,textilesafricains,"Alliance africaine, Compagnie française d'assurances et de réassurances",Textiles africains,1,bastos-a
+manufacturetabacscigarescigarettesbastos,textilesafricains,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",Textiles africains,1,bastos-a
+allianceafricaineassurancesreassurances,domainessaintpaul,"Alliance africaine, Compagnie française d'assurances et de réassurances",Domaines Saint-Paul,1,dalaise-a
+allianceafricaineassurancesreassurances,tramwaysalgeriens,"Alliance africaine, Compagnie française d'assurances et de réassurances",Société des Tramways algériens,1,dalaise-a
+domainessaintpaul,tramwaysalgeriens,Domaines Saint-Paul,Société des Tramways algériens,1,dalaise-a
+allianceafricaineassurancesreassurances,comptoirescompterelizane,"Alliance africaine, Compagnie française d'assurances et de réassurances",Comptoir d'escompte de Relizane,1,foucard-p
+algerienneconstructionsnavalesmecaniques,algerienneetudesentreprisesagricolescommercialesindustrielles,Société Algérienne de constructions navales et mécaniques,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",1,vinson-j
+algerienneconstructionsnavalesmecaniques,allianceafricaineassurancesreassurances,Société Algérienne de constructions navales et mécaniques,"Alliance africaine, Compagnie française d'assurances et de réassurances",1,vinson-j
+algerienneconstructionsnavalesmecaniques,carrieresalgeroises,Société Algérienne de constructions navales et mécaniques,Les Carrières algéroises,1,vinson-j
+algerienneconstructionsnavalesmecaniques,cheminsferroutesalgerie,Société Algérienne de constructions navales et mécaniques,Société des Chemins de fer sur routes d'Algérie,1,vinson-j
+algerienneconstructionsnavalesmecaniques,domainechapeaugendarme,Société Algérienne de constructions navales et mécaniques,Domaine du Chapeau de Gendarme,1,vinson-j
+algerienneconstructionsnavalesmecaniques,domainesaintcharlesboufarik,Société Algérienne de constructions navales et mécaniques,"Domaine Saint-Charles, Boufarik",1,vinson-j
+algerienneconstructionsnavalesmecaniques,grandhoteloran,Société Algérienne de constructions navales et mécaniques,Grand Hôtel d'Oran,1,vinson-j
+algerienneconstructionsnavalesmecaniques,grandstravauxalgeriens,Société Algérienne de constructions navales et mécaniques,Grands Travaux algériens,1,vinson-j
+algerienneconstructionsnavalesmecaniques,liegesproduitsnordafricainsalgerusinebouchonsbone,Société Algérienne de constructions navales et mécaniques,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+algerienneconstructionsnavalesmecaniques,tabacsalgeriens,Société Algérienne de constructions navales et mécaniques,Tabacs algériens,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,allianceafricaineassurancesreassurances,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien","Alliance africaine, Compagnie française d'assurances et de réassurances",1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,carrieresalgeroises,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Les Carrières algéroises,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,cheminsferroutesalgerie,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Société des Chemins de fer sur routes d'Algérie,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,domainechapeaugendarme,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Domaine du Chapeau de Gendarme,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,domainesaintcharlesboufarik,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien","Domaine Saint-Charles, Boufarik",1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,grandhoteloran,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Grand Hôtel d'Oran,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,liegesproduitsnordafricainsalgerusinebouchonsbone,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien","Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,tabacsalgeriens,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Tabacs algériens,1,vinson-j
+allianceafricaineassurancesreassurances,carrieresalgeroises,"Alliance africaine, Compagnie française d'assurances et de réassurances",Les Carrières algéroises,1,vinson-j
+allianceafricaineassurancesreassurances,cheminsferroutesalgerie,"Alliance africaine, Compagnie française d'assurances et de réassurances",Société des Chemins de fer sur routes d'Algérie,1,vinson-j
+allianceafricaineassurancesreassurances,domainechapeaugendarme,"Alliance africaine, Compagnie française d'assurances et de réassurances",Domaine du Chapeau de Gendarme,1,vinson-j
+allianceafricaineassurancesreassurances,domainesaintcharlesboufarik,"Alliance africaine, Compagnie française d'assurances et de réassurances","Domaine Saint-Charles, Boufarik",1,vinson-j
+allianceafricaineassurancesreassurances,grandhoteloran,"Alliance africaine, Compagnie française d'assurances et de réassurances",Grand Hôtel d'Oran,1,vinson-j
+allianceafricaineassurancesreassurances,grandstravauxalgeriens,"Alliance africaine, Compagnie française d'assurances et de réassurances",Grands Travaux algériens,1,vinson-j
+allianceafricaineassurancesreassurances,liegesproduitsnordafricainsalgerusinebouchonsbone,"Alliance africaine, Compagnie française d'assurances et de réassurances","Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+allianceafricaineassurancesreassurances,tabacsalgeriens,"Alliance africaine, Compagnie française d'assurances et de réassurances",Tabacs algériens,1,vinson-j
+carrieresalgeroises,cheminsferroutesalgerie,Les Carrières algéroises,Société des Chemins de fer sur routes d'Algérie,1,vinson-j
+carrieresalgeroises,domainechapeaugendarme,Les Carrières algéroises,Domaine du Chapeau de Gendarme,1,vinson-j
+carrieresalgeroises,domainesaintcharlesboufarik,Les Carrières algéroises,"Domaine Saint-Charles, Boufarik",1,vinson-j
+carrieresalgeroises,grandhoteloran,Les Carrières algéroises,Grand Hôtel d'Oran,1,vinson-j
+carrieresalgeroises,grandstravauxalgeriens,Les Carrières algéroises,Grands Travaux algériens,1,vinson-j
+carrieresalgeroises,liegesproduitsnordafricainsalgerusinebouchonsbone,Les Carrières algéroises,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+carrieresalgeroises,tabacsalgeriens,Les Carrières algéroises,Tabacs algériens,1,vinson-j
+cheminsferroutesalgerie,domainechapeaugendarme,Société des Chemins de fer sur routes d'Algérie,Domaine du Chapeau de Gendarme,1,vinson-j
+cheminsferroutesalgerie,domainesaintcharlesboufarik,Société des Chemins de fer sur routes d'Algérie,"Domaine Saint-Charles, Boufarik",1,vinson-j
+cheminsferroutesalgerie,grandhoteloran,Société des Chemins de fer sur routes d'Algérie,Grand Hôtel d'Oran,1,vinson-j
+cheminsferroutesalgerie,liegesproduitsnordafricainsalgerusinebouchonsbone,Société des Chemins de fer sur routes d'Algérie,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+cheminsferroutesalgerie,tabacsalgeriens,Société des Chemins de fer sur routes d'Algérie,Tabacs algériens,1,vinson-j
+domainechapeaugendarme,grandhoteloran,Domaine du Chapeau de Gendarme,Grand Hôtel d'Oran,1,vinson-j
+domainechapeaugendarme,liegesproduitsnordafricainsalgerusinebouchonsbone,Domaine du Chapeau de Gendarme,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+domainesaintcharlesboufarik,grandhoteloran,"Domaine Saint-Charles, Boufarik",Grand Hôtel d'Oran,1,vinson-j
+domainesaintcharlesboufarik,grandstravauxalgeriens,"Domaine Saint-Charles, Boufarik",Grands Travaux algériens,1,vinson-j
+domainesaintcharlesboufarik,liegesproduitsnordafricainsalgerusinebouchonsbone,"Domaine Saint-Charles, Boufarik","Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+domainesaintcharlesboufarik,tabacsalgeriens,"Domaine Saint-Charles, Boufarik",Tabacs algériens,1,vinson-j
+grandhoteloran,liegesproduitsnordafricainsalgerusinebouchonsbone,Grand Hôtel d'Oran,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+grandhoteloran,tabacsalgeriens,Grand Hôtel d'Oran,Tabacs algériens,1,vinson-j
+grandstravauxalgeriens,liegesproduitsnordafricainsalgerusinebouchonsbone,Grands Travaux algériens,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,vinson-j
+liegesproduitsnordafricainsalgerusinebouchonsbone,tabacsalgeriens,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",Tabacs algériens,1,vinson-j
 africainearmement,expansionnordafricaine,Compagnie Africaine d'Armement,Expansion nord-africaine,1,martin
 chaines,sidikamber,CHAÎNES,Sidi-Kamber,1,depots-a-lyon
-cenpasoccentraleusinespapiers,chaines,"CENPA, Soc. Centrale des Usines à Papiers",CHAÎNES,1,nancy
-chaines,manufacturetapisorient,CHAÎNES,Manufacture de tapis d'Orient,1,nancy
-fichet,manufacturetapisorient,FICHET,Manufacture de tapis d'Orient,1,nancy
 chaines,senellemaubeuge,CHAÎNES,SENELLE-MAUBEUGE,1,barcelone
 chaines,tissagesmecaniquesisere,CHAÎNES,TISSAGES MÉCANIQUES DE L'ISÈRE,1,barcelone
 senellemaubeuge,tissagesmecaniquesisere,SENELLE-MAUBEUGE,TISSAGES MÉCANIQUES DE L'ISÈRE,1,barcelone
@@ -202,11 +536,18 @@ leach,mineschabetkohol,LEACH,Compagnie des mines de Chabet-Kohol,1,lebon-a
 cheminsferroutesalgerie,constructionelectrique,Société des Chemins de fer sur routes d'Algérie,CONSTRUCTION ÉLECTRIQUE,1,buhot-h
 cheminsferroutesalgerie,minesbouthaleb,Société des Chemins de fer sur routes d'Algérie,MINES DU BOU-THALEB,1,buhot-h
 cheminsferroutesalgerie,mineschabetkohol,Société des Chemins de fer sur routes d'Algérie,Compagnie des mines de Chabet-Kohol,1,buhot-h
+cheminsferroutesalgerie,usineslavieconstantine,Société des Chemins de fer sur routes d'Algérie,Usines Lavie de Constantine,1,buhot-h
+constructionelectrique,usineslavieconstantine,CONSTRUCTION ÉLECTRIQUE,Usines Lavie de Constantine,1,buhot-h
+creditfoncieralgerietunisie,usineslavieconstantine,Crédit foncier d'Algérie-Tunisie,Usines Lavie de Constantine,1,buhot-h
+minesbouthaleb,usineslavieconstantine,MINES DU BOU-THALEB,Usines Lavie de Constantine,1,buhot-h
+mineschabetkohol,usineslavieconstantine,Compagnie des mines de Chabet-Kohol,Usines Lavie de Constantine,1,buhot-h
 constructionelectrique,entreprisealgerienne,CONSTRUCTION ÉLECTRIQUE,L'Entreprise algérienne,1,zafiropulo-d
+constructionelectrique,entreprisemaritimecommerciale,CONSTRUCTION ÉLECTRIQUE,L'Entreprise maritime et commerciale,1,zafiropulo-d
 constructionelectrique,petolatdijon,CONSTRUCTION ÉLECTRIQUE,PÉTOLAT-DIJON,1,zafiropulo-d
 constructionelectrique,petrolestliouanet,CONSTRUCTION ÉLECTRIQUE,PÉTROLES de TLIOUANET,1,zafiropulo-d
 constructionelectrique,raffineriessoufrereunies,CONSTRUCTION ÉLECTRIQUE,Raffineries de soufre réunies,1,zafiropulo-d
 creditfoncieralgerietunisie,entreprisealgerienne,Crédit foncier d'Algérie-Tunisie,L'Entreprise algérienne,1,zafiropulo-d
+creditfoncieralgerietunisie,entreprisemaritimecommerciale,Crédit foncier d'Algérie-Tunisie,L'Entreprise maritime et commerciale,1,zafiropulo-d
 creditfoncieralgerietunisie,petolatdijon,Crédit foncier d'Algérie-Tunisie,PÉTOLAT-DIJON,1,zafiropulo-d
 creditfoncieralgerietunisie,petrolestliouanet,Crédit foncier d'Algérie-Tunisie,PÉTROLES de TLIOUANET,1,zafiropulo-d
 creditfoncieralgerietunisie,raffineriessoufrereunies,Crédit foncier d'Algérie-Tunisie,Raffineries de soufre réunies,1,zafiropulo-d
@@ -214,19 +555,46 @@ entreprisealgerienne,mineschabetkohol,L'Entreprise algérienne,Compagnie des min
 entreprisealgerienne,petolatdijon,L'Entreprise algérienne,PÉTOLAT-DIJON,1,zafiropulo-d
 entreprisealgerienne,petrolestliouanet,L'Entreprise algérienne,PÉTROLES de TLIOUANET,1,zafiropulo-d
 entreprisealgerienne,raffineriessoufrereunies,L'Entreprise algérienne,Raffineries de soufre réunies,1,zafiropulo-d
+entreprisemaritimecommerciale,mineschabetkohol,L'Entreprise maritime et commerciale,Compagnie des mines de Chabet-Kohol,1,zafiropulo-d
+entreprisemaritimecommerciale,petolatdijon,L'Entreprise maritime et commerciale,PÉTOLAT-DIJON,1,zafiropulo-d
+entreprisemaritimecommerciale,petrolestliouanet,L'Entreprise maritime et commerciale,PÉTROLES de TLIOUANET,1,zafiropulo-d
+entreprisemaritimecommerciale,raffineriessoufrereunies,L'Entreprise maritime et commerciale,Raffineries de soufre réunies,1,zafiropulo-d
 mineschabetkohol,petolatdijon,Compagnie des mines de Chabet-Kohol,PÉTOLAT-DIJON,1,zafiropulo-d
 mineschabetkohol,petrolestliouanet,Compagnie des mines de Chabet-Kohol,PÉTROLES de TLIOUANET,1,zafiropulo-d
 mineschabetkohol,raffineriessoufrereunies,Compagnie des mines de Chabet-Kohol,Raffineries de soufre réunies,1,zafiropulo-d
 petolatdijon,raffineriessoufrereunies,PÉTOLAT-DIJON,Raffineries de soufre réunies,1,zafiropulo-d
 petrolestliouanet,raffineriessoufrereunies,PÉTROLES de TLIOUANET,Raffineries de soufre réunies,1,zafiropulo-d
 constructionelectrique,creditfoncieragricolealgerie,CONSTRUCTION ÉLECTRIQUE,Crédit foncier et agricole d'Algérie,1,warot-j
+agricolealgerienne,constructionelectrique,Société Agricole Algérienne,CONSTRUCTION ÉLECTRIQUE,1,gronier-e
+agricolealgerienne,creditfoncieralgerietunisie,Société Agricole Algérienne,Crédit foncier d'Algérie-Tunisie,1,gronier-e
 constructionelectrique,domainequatrechemins,CONSTRUCTION ÉLECTRIQUE,Domaine des Quatre-Chemins,1,henri-c
 creditfoncieralgerietunisie,domainequatrechemins,Crédit foncier d'Algérie-Tunisie,Domaine des Quatre-Chemins,1,henri-c
+domainequatrechemins,tabacsalgeriens,Domaine des Quatre-Chemins,Tabacs algériens,1,henri-c
 carrosseriemoderne,cellulosesafriquenord,La Carrosserie moderne,Société des Celluloses de l'Afrique française du Nord,1,barbedette-f
 carrosseriemoderne,constructionelectrique,La Carrosserie moderne,CONSTRUCTION ÉLECTRIQUE,1,barbedette-f
 carrosseriemoderne,creditfoncieralgerietunisie,La Carrosserie moderne,Crédit foncier d'Algérie-Tunisie,1,barbedette-f
+carrosseriemoderne,creditimmobilieralger,La Carrosserie moderne,Crédit immobilier d’Alger,1,barbedette-f
+carrosseriemoderne,typolitho,La Carrosserie moderne,La Typo-litho,1,barbedette-f
+cellulosesafriquenord,ceresfabricationventetousengraisproduitsviticoles,Société des Celluloses de l'Afrique française du Nord,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",1,barbedette-f
 cellulosesafriquenord,constructionelectrique,Société des Celluloses de l'Afrique française du Nord,CONSTRUCTION ÉLECTRIQUE,1,barbedette-f
 cellulosesafriquenord,creditfoncieralgerietunisie,Société des Celluloses de l'Afrique française du Nord,Crédit foncier d'Algérie-Tunisie,1,barbedette-f
+cellulosesafriquenord,creditimmobilieralger,Société des Celluloses de l'Afrique française du Nord,Crédit immobilier d’Alger,1,barbedette-f
+cellulosesafriquenord,typolitho,Société des Celluloses de l'Afrique française du Nord,La Typo-litho,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,constructionelectrique,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",CONSTRUCTION ÉLECTRIQUE,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,creditfoncieralgerietunisie,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",Crédit foncier d'Algérie-Tunisie,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,creditimmobilieralger,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",Crédit immobilier d’Alger,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,typolitho,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",La Typo-litho,1,barbedette-f
+constructionelectrique,creditimmobilieralger,CONSTRUCTION ÉLECTRIQUE,Crédit immobilier d’Alger,1,barbedette-f
+constructionelectrique,typolitho,CONSTRUCTION ÉLECTRIQUE,La Typo-litho,1,barbedette-f
+creditfoncieralgerietunisie,creditimmobilieralger,Crédit foncier d'Algérie-Tunisie,Crédit immobilier d’Alger,1,barbedette-f
+creditfoncieralgerietunisie,typolitho,Crédit foncier d'Algérie-Tunisie,La Typo-litho,1,barbedette-f
+creditimmobilieralger,typolitho,Crédit immobilier d’Alger,La Typo-litho,1,barbedette-f
+constructionelectrique,domainehaouchouedsaf,CONSTRUCTION ÉLECTRIQUE,Domaine du Haouch Oued Saf,1,blida
+creditfoncieralgerietunisie,domainehaouchouedsaf,Crédit foncier d'Algérie-Tunisie,Domaine du Haouch Oued Saf,1,blida
+constructionelectrique,minieremetallurgiquecaronte,CONSTRUCTION ÉLECTRIQUE,Compagnie minière et métallurgique de Caronte,1,saint-cloud
+constructionelectrique,meunieresersoutiaret,CONSTRUCTION ÉLECTRIQUE,"Société Meunière du Sersou, Tiaret",1,tiaret
+constructionelectrique,forceeclairagesaida,CONSTRUCTION ÉLECTRIQUE,Société de Force et d'éclairage de Saïda,1,saida
+entreprisesaeronautiques,minesferlarrath,Cie générale d'ENTREPRISES AÉRONAUTIQUES,Compagnie des mines de fer de Larrath,1,arnou-g
 cenpasoccentraleusinespapiers,houplain,"CENPA, Soc. Centrale des Usines à Papiers",HOUPLAIN,1,tours
 feutresrok,houplain,FEUTRES ROK,HOUPLAIN,1,tours
 feutresrok,sidikamber,FEUTRES ROK,Sidi-Kamber,1,cognac
@@ -237,14 +605,12 @@ feutresrok,tramwaysalgeriens,FEUTRES ROK,Société des Tramways algériens,1,mul
 fichet,senellemaubeuge,FICHET,SENELLE-MAUBEUGE,1,mulhouse
 fichet,tramwaysalgeriens,FICHET,Société des Tramways algériens,1,mulhouse
 senellemaubeuge,tramwaysalgeriens,SENELLE-MAUBEUGE,Société des Tramways algériens,1,mulhouse
+electricitebiskra,etudesminieresbougie,Société d'Électricité de Biskra,Société d'Études minières de Bougie,1,liege
+electricitebiskra,fichet,Société d'Électricité de Biskra,FICHET,1,liege
+etudesminieresbougie,fichet,Société d'Études minières de Bougie,FICHET,1,liege
 fichet,velvetrum,FICHET,VELVET-RUM,1,alexandrie
 houplain,manufacturetapisorient,HOUPLAIN,Manufacture de tapis d'Orient,1,calais
 hydroelectriqueafriquenord,leach,Société Hydro-électrique de l'Afrique du Nord,LEACH,1,lebon-p
-fonciereimmobilierefranceafriquenord,minesalgerietunisieomnium,Société Foncière et Immobilière de France et de l'Afrique du Nord,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,1,ansbacher-t
-fonciereimmobilierefranceafriquenord,omniumminesalgerietunisie,Société Foncière et Immobilière de France et de l'Afrique du Nord,Omnium Société générale de mines d'Algérie-Tunisie,1,ansbacher-t
-fonciereimmobilierefranceafriquenord,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Société Foncière et Immobilière de France et de l'Afrique du Nord,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
-omniumminesalgerietunisie,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Omnium Société générale de mines d'Algérie-Tunisie,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
-omniumminesusines,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc","Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,ansbacher-t
 minesalgerietunisieomnium,minesbouthaleb,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,MINES DU BOU-THALEB,1,juge-a
 minesalgerietunisieomnium,minieredjendli,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Compagnie minière du Djendli,1,juge-a
 minesalgerietunisieomnium,pfund,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,PFUND,1,juge-a
@@ -254,34 +620,48 @@ minesbouthaleb,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,MI
 minieredjendli,pfund,Compagnie minière du Djendli,PFUND,1,juge-a
 minieredjendli,phosphatesconstantine,Compagnie minière du Djendli,Compagnie des Phosphates de Constantine,1,juge-a
 pfund,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,PFUND,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,juge-a
-phosphatesconstantine,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,Compagnie des Phosphates de Constantine,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",1,juge-a
 millaul,minesalgerietunisieomnium,MILLAUL,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,1,de-montureux
-minesbouthaleb,minesoranie,MINES DU BOU-THALEB,Société des Mines de l'Oranie,1,chastel-a
-mineschabetkohol,minesoranie,Compagnie des mines de Chabet-Kohol,Société des Mines de l'Oranie,1,chastel-a
+minesbouthaleb,syndicatlyonnaisnordafricain,MINES DU BOU-THALEB,Syndicat lyonnais nord-africain,1,carnot-e
 minesbouthaleb,mineschellala,MINES DU BOU-THALEB,Société des mines du Chellala,1,urruty-f
 minesbouthaleb,minesferrouina,MINES DU BOU-THALEB,Société des mines de fer Rouina,1,urruty-f
+mineschellala,minesfermiliana,Société des mines du Chellala,Société française des mines de fer Miliana,1,urruty-f
 mineschellala,minesferrouina,Société des mines du Chellala,Société des mines de fer Rouina,1,urruty-f
 mineschellala,minesouastamesloula,Société des mines du Chellala,Compagnie des mines de Ouasta et de Mesloula,1,urruty-f
+minesfermiliana,minesouastamesloula,Société française des mines de fer Miliana,Compagnie des mines de Ouasta et de Mesloula,1,urruty-f
+minesfermiliana,minieredjendli,Société française des mines de fer Miliana,Compagnie minière du Djendli,1,urruty-f
 minesferrouina,minesouastamesloula,Société des mines de fer Rouina,Compagnie des mines de Ouasta et de Mesloula,1,urruty-f
 minesferrouina,minieredjendli,Société des mines de fer Rouina,Compagnie minière du Djendli,1,urruty-f
 minesdjebelguendou,minesoranie,Société des mines du Djebel-Guendou,Société des Mines de l'Oranie,1,chalupt-c
 minesguelma,minesoranie,Société des mines de Guelma,Société des Mines de l'Oranie,1,chalupt-c
 minesouastamesloula,mineszaccar,Compagnie des mines de Ouasta et de Mesloula,MINES du ZACCAR,1,baguenault-de-puchesse
 minesouastamesloula,ouenza,Compagnie des mines de Ouasta et de Mesloula,Société de l'Ouenza,1,baguenault-de-puchesse
+minesouastamesloula,zaccarfer,Compagnie des mines de Ouasta et de Mesloula,"Zaccar, fer",1,baguenault-de-puchesse
+minierefrancoafricaine,minieremetallurgiquecaronte,Société Minière Franco-Africaine,Compagnie minière et métallurgique de Caronte,1,bronze
+grandstravauxalgeriens,ouenza,Grands Travaux algériens,Société de l'Ouenza,1,marchal-c
+algeriennepetrolestliouanet,phosphatesconstantine,Société Algérienne des pétroles de Tliouanet,Compagnie des Phosphates de Constantine,1,jordan-p
+algeriennepetrolestliouanet,unionfabriquesengraisproduitschimiquessuperphosphates,Société Algérienne des pétroles de Tliouanet,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,jordan-p
 petolatdijon,phosphatesconstantine,PÉTOLAT-DIJON,Compagnie des Phosphates de Constantine,1,jordan-p
 petolatdijon,unionfabriquesengraisproduitschimiquessuperphosphates,PÉTOLAT-DIJON,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,jordan-p
 petrolestliouanet,phosphatesconstantine,PÉTROLES de TLIOUANET,Compagnie des Phosphates de Constantine,1,jordan-p
 petrolestliouanet,unionfabriquesengraisproduitschimiquessuperphosphates,PÉTROLES de TLIOUANET,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,jordan-p
+algeriennepetrolestliouanet,unionelectriquegaziereafriquenord,Société Algérienne des pétroles de Tliouanet,Union électrique et gazière de l'Afrique du Nord,1,aguillon-j
+algeriennepetrolestliouanet,zincguergour,Société Algérienne des pétroles de Tliouanet,Zinc du Guergour,1,aguillon-j
 petolatdijon,unionelectriquegaziereafriquenord,PÉTOLAT-DIJON,Union électrique et gazière de l'Afrique du Nord,1,aguillon-j
 petolatdijon,zincguergour,PÉTOLAT-DIJON,Zinc du Guergour,1,aguillon-j
 petrolestliouanet,unionelectriquegaziereafriquenord,PÉTROLES de TLIOUANET,Union électrique et gazière de l'Afrique du Nord,1,aguillon-j
 petrolestliouanet,zincguergour,PÉTROLES de TLIOUANET,Zinc du Guergour,1,aguillon-j
 unionelectriquegaziereafriquenord,zincguergour,Union électrique et gazière de l'Afrique du Nord,Zinc du Guergour,1,aguillon-j
+algeriennepetrolestliouanet,algerienneproduitschimiquesengrais,Société Algérienne des pétroles de Tliouanet,Société Algérienne de produits chimiques et d'engrais,1,beigbeder-d
 algerienneproduitschimiquesengrais,petolatdijon,Société Algérienne de produits chimiques et d'engrais,PÉTOLAT-DIJON,1,beigbeder-d
+banquealgerie,cartonneriesrochette,BANQUE DE L'ALGERIE,Cartonneries de La Rochette,1,franck
 banquealgerie,centraleusinespapier,BANQUE DE L'ALGERIE,Société centrale des usines à papier,1,franck
 banquealgerie,sanhadja,BANQUE DE L'ALGERIE,SANHADJA,1,franck
+cartonneriesrochette,centraleusinespapier,Cartonneries de La Rochette,Société centrale des usines à papier,1,franck
+cartonneriesrochette,sanhadja,Cartonneries de La Rochette,SANHADJA,1,franck
 centraleusinespapier,sanhadja,Société centrale des usines à papier,SANHADJA,1,franck
-manufacturetapisorient,senellemaubeuge,Manufacture de tapis d'Orient,SENELLE-MAUBEUGE,1,grenoble
+manufacturetapisorient,royaleasturienneminesdirection,Manufacture de tapis d'Orient,"Cie Royale ASTURIENNE DES MINES, direction générale",1,amiens
+banqueindustrielleafriquenord,cenpasoccentraleusinespapiers,Banque industrielle de l'Afrique du Nord,"CENPA, Soc. Centrale des Usines à Papiers",1,roubaix
+banqueindustrielleafriquenord,senellemaubeuge,Banque industrielle de l'Afrique du Nord,SENELLE-MAUBEUGE,1,roubaix
 cenpasoccentraleusinespapiers,palestro,"CENPA, Soc. Centrale des Usines à Papiers",Palestro,1,roanne
 palestro,senellemaubeuge,Palestro,SENELLE-MAUBEUGE,1,roanne
 cheddites,manufacturetapisorient,CHEDDITES,Manufacture de tapis d'Orient,1,level-j
@@ -291,13 +671,20 @@ manufacturetapisorient,sidikamber,Manufacture de tapis d'Orient,Sidi-Kamber,1,st
 manufacturetapisorient,tissagesmecaniquesisere,Manufacture de tapis d'Orient,TISSAGES MÉCANIQUES DE L'ISÈRE,1,strasbourg
 sidikamber,tissagesmecaniquesisere,Sidi-Kamber,TISSAGES MÉCANIQUES DE L'ISÈRE,1,strasbourg
 tissagesmecaniquesisere,tramwaysalgeriens,TISSAGES MÉCANIQUES DE L'ISÈRE,Société des Tramways algériens,1,geneve
+fermesalgeriennes,minesfer,Société des Fermes algeriennes,Société Française des mines de fer,1,pres-bone
+fermesalgeriennes,tramwaysalgeriens,Société des Fermes algeriennes,Société des Tramways algériens,1,pres-bone
 minesfer,tramwaysalgeriens,Société Française des mines de fer,Société des Tramways algériens,1,pres-bone
 desage,tramwaysalgeriens,DESAGE,Société des Tramways algériens,1,tarbes
-palestro,velvetrum,Palestro,VELVET-RUM,1,depots-a
+comptoirescomptemedea,velvetrum,Comptoir d'escompte de Médéa,VELVET-RUM,1,carron
+comptoirproduitsceramiques,velvetrum,Comptoir des produits céramiques,VELVET-RUM,1,ferrando
 etudescheminfertransafricain,internationalewagonslits,Société d'études du Chemin de fer transafricain,Cie internationale des WAGONS-LITS,1,homberg-a
 achaque,palestro,Achaque,Palestro,1,tanneries-de-f
 achaque,sidikamber,Achaque,Sidi-Kamber,1,agences
-carrosseriemoderne,domainequatrechemins,La Carrosserie moderne,Domaine des Quatre-Chemins,1,manent-j
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,carrosseriemoderne,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,La Carrosserie moderne,1,borgeaud-j
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,ceresfabricationventetousengraisproduitsviticoles,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",1,borgeaud-j
+clement,fonciereimmobilierevillealger,CLÉMENT,Compagnie Foncière et Immobilière de la Ville d'Alger,1,neuilly
+clement,grandstravauxalgeriens,CLÉMENT,Grands Travaux algériens,1,neuilly
+fonciereimmobilierevillealger,grandstravauxalgeriens,Compagnie Foncière et Immobilière de la Ville d'Alger,Grands Travaux algériens,1,neuilly
 clement,phosphatesdyr,CLÉMENT,Compagnie des Phosphates du Dyr,1,p-jurien-de-la-graviere
 algerienne,omniumminesalgerietunisie,Compagnie algérienne,Omnium Société générale de mines d'Algérie-Tunisie,1,saint-germain
 algerienne,tramwayselectriquesoran,Compagnie algérienne,Tramways électriques d'Oran,1,saint-germain
@@ -305,26 +692,81 @@ clement,omniumminesalgerietunisie,CLÉMENT,Omnium Société générale de mines 
 clement,tramwayselectriquesoran,CLÉMENT,Tramways électriques d'Oran,1,saint-germain
 omniumminesalgerietunisie,tramwayselectriquesoran,Omnium Société générale de mines d'Algérie-Tunisie,Tramways électriques d'Oran,1,saint-germain
 condat,millaul,CONDAT et Cie,MILLAUL,1,pdt-bone-guelma-t
+creditfoncieralgerietunisie,millaul,Crédit foncier d'Algérie-Tunisie,MILLAUL,1,pdt-bone-guelma-t
+desage,minieredjendli,DESAGE,Compagnie minière du Djendli,1,madeline-j
 entreprisealgerienne,etudescheminfertransafricain,L'Entreprise algérienne,Société d'études du Chemin de fer transafricain,1,mante-t
-entreprisemaritimecommerciale,etudescheminfertransafricain,L'Entreprise maritime et commerciale,Société d'études du Chemin de fer transafricain,1,mante-t
 cheminsferroutesalgerie,entreprisealgerienne,Société des Chemins de fer sur routes d'Algérie,L'Entreprise algérienne,1,thenard-l
 cheminsferroutesalgerie,entreprisemaritimecommerciale,Société des Chemins de fer sur routes d'Algérie,L'Entreprise maritime et commerciale,1,thenard-l
 entreprisealgerienne,ouledsellemainsmara,L'Entreprise algérienne,"Société des Ouled-Sellem, Aïn-Smara",1,oppenheim
+entreprisemaritimecommerciale,ouledsellemainsmara,L'Entreprise maritime et commerciale,"Société des Ouled-Sellem, Aïn-Smara",1,oppenheim
 hydrauliqueafrique,manufacturetabacscigarescigarettes,L'Hydraulique-Afrique,"Manufacture de Tabacs, Cigares et Cigarettes",1,gendre-e
 hydrauliqueafrique,regiefoncierevillealger,L'Hydraulique-Afrique,Régie foncière de la ville d'Alger,1,gendre-e
 manufacturetabacscigarescigarettes,regiefoncierevillealger,"Manufacture de Tabacs, Cigares et Cigarettes",Régie foncière de la ville d'Alger,1,gendre-e
 hydrauliqueafrique,immobilierebone,L'Hydraulique-Afrique,"Société Immobilière de Bône, puis Immobilière et Maritime de l’Afrique du Nord",1,michel
 millaul,pfund,MILLAUL,PFUND,1,kapferer
+algerienne,minesbouthaleb,Compagnie algérienne,MINES DU BOU-THALEB,1,mirabaud-p
 minesbouthaleb,minessoumahtafna,MINES DU BOU-THALEB,Société des mines de Soumah et de La Tafna,1,mirabaud-p
 minesouastamesloula,minessoumahtafna,Compagnie des mines de Ouasta et de Mesloula,Société des mines de Soumah et de La Tafna,1,mirabaud-p
+minesboudjoudoun,minesbouthaleb,Société des mines de Boudjoudoun,MINES DU BOU-THALEB,1,robellaz-f
+minesboudjoudoun,minesouastamesloula,Société des mines de Boudjoudoun,Compagnie des mines de Ouasta et de Mesloula,1,robellaz-f
 minesbouthaleb,mselati,MINES DU BOU-THALEB,MSELATI,1,rostand-b
+1918domainesbenislimantablat,distilleriesalgerie,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Distilleries d’Algerie,1,borgeaud-l
+1918domainesbenislimantablat,lafarge,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Lafarge,1,borgeaud-l
+1918domainesbenislimantablat,mselati,"S.A., 1918 Domaines des Beni Sliman, , Tablat",MSELATI,1,borgeaud-l
+1918domainesbenislimantablat,nordafricaincommercial,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Nord-africain commercial,1,borgeaud-l
+1918domainesbenislimantablat,tabacsalgeriens,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Tabacs algériens,1,borgeaud-l
+1918domainesbenislimantablat,warotfreres,"S.A., 1918 Domaines des Beni Sliman, , Tablat","Warot frères, puis Société Chantier Warot",1,borgeaud-l
+distilleriesalgerie,domainechapeaugendarme,Distilleries d’Algerie,Domaine du Chapeau de Gendarme,1,borgeaud-l
+distilleriesalgerie,grandstravauxalgeriens,Distilleries d’Algerie,Grands Travaux algériens,1,borgeaud-l
+distilleriesalgerie,lafarge,Distilleries d’Algerie,Lafarge,1,borgeaud-l
+distilleriesalgerie,mselati,Distilleries d’Algerie,MSELATI,1,borgeaud-l
+distilleriesalgerie,nordafricaincommercial,Distilleries d’Algerie,Nord-africain commercial,1,borgeaud-l
+distilleriesalgerie,nordafricainecimentslafarge,Distilleries d’Algerie,Nord-Africaine des Ciments de Lafarge,1,borgeaud-l
+distilleriesalgerie,tabacsalgeriens,Distilleries d’Algerie,Tabacs algériens,1,borgeaud-l
+distilleriesalgerie,warotfreres,Distilleries d’Algerie,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
+domainechapeaugendarme,lafarge,Domaine du Chapeau de Gendarme,Lafarge,1,borgeaud-l
 domainechapeaugendarme,mselati,Domaine du Chapeau de Gendarme,MSELATI,1,borgeaud-l
 domainechapeaugendarme,nordafricaincommercial,Domaine du Chapeau de Gendarme,Nord-africain commercial,1,borgeaud-l
+domainechapeaugendarme,warotfreres,Domaine du Chapeau de Gendarme,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
+grandstravauxalgeriens,lafarge,Grands Travaux algériens,Lafarge,1,borgeaud-l
+grandstravauxalgeriens,mselati,Grands Travaux algériens,MSELATI,1,borgeaud-l
+grandstravauxalgeriens,nordafricaincommercial,Grands Travaux algériens,Nord-africain commercial,1,borgeaud-l
+grandstravauxalgeriens,nordafricainecimentslafarge,Grands Travaux algériens,Nord-Africaine des Ciments de Lafarge,1,borgeaud-l
+grandstravauxalgeriens,warotfreres,Grands Travaux algériens,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
+lafarge,mselati,Lafarge,MSELATI,1,borgeaud-l
+lafarge,nordafricaincommercial,Lafarge,Nord-africain commercial,1,borgeaud-l
+lafarge,tabacsalgeriens,Lafarge,Tabacs algériens,1,borgeaud-l
+lafarge,warotfreres,Lafarge,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
 mselati,nordafricainecimentslafarge,MSELATI,Nord-Africaine des Ciments de Lafarge,1,borgeaud-l
+mselati,tabacsalgeriens,MSELATI,Tabacs algériens,1,borgeaud-l
+mselati,warotfreres,MSELATI,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
 nordafricaincommercial,nordafricainecimentslafarge,Nord-africain commercial,Nord-Africaine des Ciments de Lafarge,1,borgeaud-l
+nordafricaincommercial,tabacsalgeriens,Nord-africain commercial,Tabacs algériens,1,borgeaud-l
+nordafricaincommercial,warotfreres,Nord-africain commercial,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
+nordafricainecimentslafarge,tabacsalgeriens,Nord-Africaine des Ciments de Lafarge,Tabacs algériens,1,borgeaud-l
+nordafricainecimentslafarge,warotfreres,Nord-Africaine des Ciments de Lafarge,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
+tabacsalgeriens,warotfreres,Tabacs algériens,"Warot frères, puis Société Chantier Warot",1,borgeaud-l
 concessionnaireouenza,mselati,Société concessionnaire d'Ouenza,MSELATI,1,jules-b
 concessionnaireouenza,nordafricaincommercial,Société concessionnaire d'Ouenza,Nord-africain commercial,1,jules-b
+comptoirtextilecirta,mselati,Comptoir textile de Cirta,MSELATI,1,reutemann-a
 ascenseursmontechargeshydrauliquesvillealger,minierenordafriquesaintetienne,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger","Société Minière du Nord de l'Afrique, Saint-Étienne",1,joseph
+1918domainesbenislimantablat,algerienneetudesentreprisesagricolescommercialesindustrielles,"S.A., 1918 Domaines des Beni Sliman, , Tablat","Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",1,giraud-e
+1918domainesbenislimantablat,ascenseursmontechargeshydrauliquesvillealger,"S.A., 1918 Domaines des Beni Sliman, , Tablat","Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",1,giraud-e
+1918domainesbenislimantablat,distillerieliqueurmandarinebougie,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Distillerie de liqueur de mandarine de Bougie,1,giraud-e
+1918domainesbenislimantablat,francoasiatiquepetrolesalgerie,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Société Franco-Asiatique des Pétroles d’Algerie,1,giraud-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,francoasiatiquepetrolesalgerie,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Société Franco-Asiatique des Pétroles d’Algerie,1,giraud-e
+ascenseursmontechargeshydrauliquesvillealger,distillerieliqueurmandarinebougie,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",Distillerie de liqueur de mandarine de Bougie,1,giraud-e
+ascenseursmontechargeshydrauliquesvillealger,francoasiatiquepetrolesalgerie,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",Société Franco-Asiatique des Pétroles d’Algerie,1,giraud-e
+ascenseursmontechargeshydrauliquesvillealger,grandstravauxalgeriens,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",Grands Travaux algériens,1,giraud-e
+distillerieliqueurmandarinebougie,francoasiatiquepetrolesalgerie,Distillerie de liqueur de mandarine de Bougie,Société Franco-Asiatique des Pétroles d’Algerie,1,giraud-e
+distillerieliqueurmandarinebougie,grandstravauxalgeriens,Distillerie de liqueur de mandarine de Bougie,Grands Travaux algériens,1,giraud-e
+francoasiatiquepetrolesalgerie,grandstravauxalgeriens,Société Franco-Asiatique des Pétroles d’Algerie,Grands Travaux algériens,1,giraud-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,kieselguhr,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Kieselguhr,1,guerlet-a
+ascenseursmontechargeshydrauliquesvillealger,kieselguhr,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",Kieselguhr,1,guerlet-a
+audoisefutstransports,francoalgeriennelocationfutailles,Société Audoise de fûts et transports,Société Franco-Algérienne de Location de futailles,1,espallac-a
+banqueafriquepaysorient,foretscalle,Banque de l'Afrique française et des pays d'Orient,Forêts de La Calle,1,barris-du-penher-j
+banquealgerie,kieselguhr,BANQUE DE L'ALGERIE,Kieselguhr,1,giraud
+banquealgeriebanquealgerietunisiebanquealgerie,kieselguhr,"Banque de l'Algérie, Banque de l'Algérie et de la Tunisie, Banque de l'Algérie",Kieselguhr,1,giraud
 banquealgerie,creditalgerien,BANQUE DE L'ALGERIE,"Crédit algérien, puis Crédit privé",1,jourdan
 banquealgerie,creditfoncieralgerietunisie,BANQUE DE L'ALGERIE,Crédit foncier d'Algérie-Tunisie,1,galicier-a
 banquealgerie,manufacturetabacscigarescigarettesbastos,BANQUE DE L'ALGERIE,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",1,galicier-a
@@ -335,37 +777,96 @@ cheminsferroutesalgerie,manufacturetabacscigarescigarettesbastos,Société des C
 creditfoncieralgerietunisie,manufacturetabacscigarescigarettesbastos,Crédit foncier d'Algérie-Tunisie,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",1,galicier-a
 creditfoncieralgerietunisie,zincguergour,Crédit foncier d'Algérie-Tunisie,Zinc du Guergour,1,galicier-a
 manufacturetabacscigarescigarettesbastos,zincguergour,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",Zinc du Guergour,1,galicier-a
+banqueindustrielleafriquenord,mineszincguergour,Banque industrielle de l'Afrique du Nord,Société des mines de zinc du Guergour,1,delamotte-g
 aeriennefrancealgerie,banquealgerie,Compagnie Aérienne France-Algerie,BANQUE DE L'ALGERIE,1,sabatier-e
 aeriennefrancealgerie,banqueindustrielleafriquenord,Compagnie Aérienne France-Algerie,Banque industrielle de l'Afrique du Nord,1,sabatier-e
-banquealgerie,cheminfertranssaharien,BANQUE DE L'ALGERIE,Le Chemin de fer transsaharien,1,jean
-algerienneproduitschimiquesengrais,manufacturetabacscigarescigarettesbastos,Société Algérienne de produits chimiques et d'engrais,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",1,philippar-e
+banquealgerie,manufacturetapisorient,BANQUE DE L'ALGERIE,Manufacture de tapis d'Orient,1,levy-l
+banquealgerie,cheminfertranssaharien,BANQUE DE L'ALGERIE,Le Chemin de fer transsaharien,1,jean-h
+algerienneconstructionsindustriellestravauxart,chauxcimentsrivetalger,Algérienne de constructions industrielles et travaux d'art,Chaux et ciments de Rivet-Alger,1,laboubee-s
+algerienneconstructionsindustriellestravauxart,industrielleafriquenordtraitementsousproduitsvigneolivier,Algérienne de constructions industrielles et travaux d'art,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,laboubee-s
+algerienneconstructionsindustriellestravauxart,lafarge,Algérienne de constructions industrielles et travaux d'art,Lafarge,1,laboubee-s
+algerienneconstructionsindustriellestravauxart,manufacturetabacscigarescigarettesjbastos,Algérienne de constructions industrielles et travaux d'art,"Manufacture de tabacs, cigares et cigarettes J. Bastos",1,laboubee-s
+algerienneconstructionsindustriellestravauxart,nordafricainecimentslafarge,Algérienne de constructions industrielles et travaux d'art,Nord-Africaine des Ciments de Lafarge,1,laboubee-s
+chauxcimentsrivetalger,industrielleafriquenordtraitementsousproduitsvigneolivier,Chaux et ciments de Rivet-Alger,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,laboubee-s
+chauxcimentsrivetalger,manufacturetabacscigarescigarettesjbastos,Chaux et ciments de Rivet-Alger,"Manufacture de tabacs, cigares et cigarettes J. Bastos",1,laboubee-s
+industrielleafriquenordtraitementsousproduitsvigneolivier,lafarge,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,Lafarge,1,laboubee-s
+industrielleafriquenordtraitementsousproduitsvigneolivier,manufacturetabacscigarescigarettesjbastos,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,"Manufacture de tabacs, cigares et cigarettes J. Bastos",1,laboubee-s
+lafarge,manufacturetabacscigarescigarettesjbastos,Lafarge,"Manufacture de tabacs, cigares et cigarettes J. Bastos",1,laboubee-s
+manufacturetabacscigarescigarettesjbastos,nordafricainecimentslafarge,"Manufacture de tabacs, cigares et cigarettes J. Bastos",Nord-Africaine des Ciments de Lafarge,1,laboubee-s
+fouque,manufacturetabacscigarescigarettes,Fouque,"Manufacture de Tabacs, Cigares et Cigarettes",1,varaigne-h
+fouque,manufacturetabacscigarescigarettesjbastos,Fouque,"Manufacture de tabacs, cigares et cigarettes J. Bastos",1,varaigne-h
 banqueindustrielleafriquenord,manufacturetabacscigarescigarettes,Banque industrielle de l'Afrique du Nord,"Manufacture de Tabacs, Cigares et Cigarettes",1,galicier-l
 manufacturetabacscigarescigarettes,zincguergour,"Manufacture de Tabacs, Cigares et Cigarettes",Zinc du Guergour,1,galicier-l
+gazconstantine,manufacturetabacscigarescigarettes,Compagnie du Gaz de Constantine,"Manufacture de Tabacs, Cigares et Cigarettes",1,beaune-h
+1918domainesbenislimantablat,anciensetablissementsjulesborgeaudfilsnordafricaincommercial,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,1,borgeaud-h
+1918domainesbenislimantablat,domainesaintcharlesboufarik,"S.A., 1918 Domaines des Beni Sliman, , Tablat","Domaine Saint-Charles, Boufarik",1,borgeaud-h
+1918domainesbenislimantablat,manufacturetabacscigarescigarettes,"S.A., 1918 Domaines des Beni Sliman, , Tablat","Manufacture de Tabacs, Cigares et Cigarettes",1,borgeaud-h
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,domainechapeaugendarme,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,Domaine du Chapeau de Gendarme,1,borgeaud-h
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,domainesaintcharlesboufarik,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,"Domaine Saint-Charles, Boufarik",1,borgeaud-h
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,manufacturetabacscigarescigarettes,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,"Manufacture de Tabacs, Cigares et Cigarettes",1,borgeaud-h
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,nordafricainecimentslafarge,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,Nord-Africaine des Ciments de Lafarge,1,borgeaud-h
 domainechapeaugendarme,manufacturetabacscigarescigarettes,Domaine du Chapeau de Gendarme,"Manufacture de Tabacs, Cigares et Cigarettes",1,borgeaud-h
+domainesaintcharlesboufarik,manufacturetabacscigarescigarettes,"Domaine Saint-Charles, Boufarik","Manufacture de Tabacs, Cigares et Cigarettes",1,borgeaud-h
+domainesaintcharlesboufarik,nordafricainecimentslafarge,"Domaine Saint-Charles, Boufarik",Nord-Africaine des Ciments de Lafarge,1,borgeaud-h
 manufacturetabacscigarescigarettes,nordafricainecimentslafarge,"Manufacture de Tabacs, Cigares et Cigarettes",Nord-Africaine des Ciments de Lafarge,1,borgeaud-h
+domainesbenhassenvallouise,francoalgeriennecarburants,Domaines de Ben-Hassen et de Val-Louise,Société Franco-Algérienne des Carburants,1,voirol-c
+domainesaintelouise,grandshotelsafriquenord,Domaine Sainte-Louise,Grands Hôtels de l'Afrique du Nord,1,telemly
+domainesbenhassenvallouise,grandshotelsafriquenord,Domaines de Ben-Hassen et de Val-Louise,Grands Hôtels de l'Afrique du Nord,1,telemly
+domainescaidessebt,grandshotelsafriquenord,Domaines du Caid-Es-Sebt,Grands Hôtels de l'Afrique du Nord,1,telemly
 benedictinefecamp,cheminsferestalgerien,"La Bénédictine, Fécamp",Compagnie des Chemins de fer de l'Est-Algérien,1,watel-dehaynin-a
+algerienneconstructionsnavalesmecaniques,bernabefreres,Société Algérienne de constructions navales et mécaniques,Bernabé frères,1,bernabe-h
+bernabefreres,immobiliereforteau,Bernabé frères,Immobilière du Fort-de-l'Eau,1,bernabe-h
+banqueindustrielleafriquenord,banquenationalecommerceindustrie,Banque industrielle de l'Afrique du Nord,Banque nationale pour le commerce et l'industrie,1,pose-a
+banqueindustrielleafriquenord,centraleusinespapier,Banque industrielle de l'Afrique du Nord,Société centrale des usines à papier,1,pose-a
+banquenationalecommerceindustrie,centraleusinespapier,Banque nationale pour le commerce et l'industrie,Société centrale des usines à papier,1,pose-a
+banquenationalecommerceindustrie,cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,Banque nationale pour le commerce et l'industrie,"Cooperative agricole des agrumes, fruits et légumes de la Mitidja, El Affroun. — Confiturerie de Boufarik",1,germain-j
+approvisionnementnordafricaine,banquenationalecommerceindustrie,Société d'Approvisionnement nord-africaine,Banque nationale pour le commerce et l'industrie,1,mical-l
+algeriennevinsmousseuxnaturelsbirmandreis,boissonsgazeuseshygieniquesalger,"Société algérienne des Vins mousseux naturels, Birmandreis",Compagnie générale des Boissons gazeuses hygieniques d’Alger,1,birmandreis-d
 banqueindustrielleafriquenord,etudescheminfertransafricain,Banque industrielle de l'Afrique du Nord,Société d'études du Chemin de fer transafricain,1,pellerin-de-latouche-g
+banqueindustrielleafriquenord,chauxcimentsrivetalger,Banque industrielle de l'Afrique du Nord,Chaux et ciments de Rivet-Alger,1,michaux-l
 banqueindustrielleafriquenord,commercialeminiereafriquenord,Banque industrielle de l'Afrique du Nord,Société Commerciale et Minière pour l'Afrique du Nord,1,ferasson-l
 banqueindustrielleafriquenord,liegeshamendaspetitekabylie,Banque industrielle de l'Afrique du Nord,Lièges des Hamendas et de la Petite Kabylie,1,ferasson-l
-banqueindustrielleafriquenord,nordafricainecimentslafarge,Banque industrielle de l'Afrique du Nord,Nord-Africaine des Ciments de Lafarge,1,ferasson-l
+commercialeminiereafriquenord,industrielleafriquenordtraitementsousproduitsvigneolivier,Société Commerciale et Minière pour l'Afrique du Nord,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,ferasson-l
 commercialeminiereafriquenord,liegeshamendaspetitekabylie,Société Commerciale et Minière pour l'Afrique du Nord,Lièges des Hamendas et de la Petite Kabylie,1,ferasson-l
 commercialeminiereafriquenord,nordafricainecimentslafarge,Société Commerciale et Minière pour l'Afrique du Nord,Nord-Africaine des Ciments de Lafarge,1,ferasson-l
-banqueindustrielleafriquenord,centraleusinespapier,Banque industrielle de l'Afrique du Nord,Société centrale des usines à papier,1,pose-a
+industrielleafriquenordtraitementsousproduitsvigneolivier,liegeshamendaspetitekabylie,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,Lièges des Hamendas et de la Petite Kabylie,1,ferasson-l
+algerienne,brasseriemalteriealgeriennemustaphainferieur,Compagnie algérienne,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur",1,dollfus-galline-c
 brasseriemalteriealgeriennemustaphainferieur,distilleriebadoilmustapha,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur","Distillerie Badoil, Mustapha",1,charles
-carrieresalgeroises,cheminsferroutesalgerie,Les Carrières algéroises,Société des Chemins de fer sur routes d'Algérie,1,vinson-j
-carrieresalgeroises,domainechapeaugendarme,Les Carrières algéroises,Domaine du Chapeau de Gendarme,1,vinson-j
-cheminsferroutesalgerie,domainechapeaugendarme,Société des Chemins de fer sur routes d'Algérie,Domaine du Chapeau de Gendarme,1,vinson-j
+bruntortel,continentalecombustibles,"Brun, Tortel et Cie",Société Continentale des Combustibles,1,piotrowski-c
+algeriennemeunerie,etudeseconomiquesafriquenord,Compagnie Algérienne de Meunerie,Société d'Études economiques de l’Afrique du Nord,1,pres-d-alger
+caboteursalgeriens,etudeseconomiquesafriquenord,Caboteurs algériens,Société d'Études economiques de l’Afrique du Nord,1,pres-d-alger
+cargosalgeriens,etudeseconomiquesafriquenord,Cargos algériens,Société d'Études economiques de l’Afrique du Nord,1,pres-d-alger
+caboteursalgeriens,creditfoncieralgerietunisie,Caboteurs algériens,Crédit foncier d'Algérie-Tunisie,1,coudray-a
+caboteursalgeriens,foncieremediterranee,Caboteurs algériens,Compagnie Foncière de la Méditerranée,1,coudray-a
+cargosalgeriens,creditfoncieralgerietunisie,Cargos algériens,Crédit foncier d'Algérie-Tunisie,1,coudray-a
+cargosalgeriens,foncieremediterranee,Cargos algériens,Compagnie Foncière de la Méditerranée,1,coudray-a
+cargosalgeriens,regiefoncierevillealger,Cargos algériens,Régie foncière de la ville d'Alger,1,coudray-a
+foncieremediterranee,regiefoncierevillealger,Compagnie Foncière de la Méditerranée,Régie foncière de la ville d'Alger,1,coudray-a
+caboteursalgeriens,industriebois,Caboteurs algériens,L'Industrie du bois,1,el-biar
+caboteursalgeriens,unioncommercialeproducteurs,Caboteurs algériens,Union commerciale des producteurs,1,el-biar
 carrieresalgeroises,ouenza,Les Carrières algéroises,Société de l'Ouenza,1,jouvet
-cellulosesafriquenord,creditalgerien,Société des Celluloses de l'Afrique française du Nord,"Crédit algérien, puis Crédit privé",1,r-outin
+cellulosesafriquenord,etudeseconomiquesafriquenord,Société des Celluloses de l'Afrique française du Nord,Société d'Études economiques de l’Afrique du Nord,1,auriacombe
 cellulosesafriquenord,gisementsphosphatiersbordjrdir,Société des Celluloses de l'Afrique française du Nord,Société des Gisements phosphatiers de Bordj R’Dir,1,pellet-c
+cellulosesafriquenord,creditalgerien,Société des Celluloses de l'Afrique française du Nord,"Crédit algérien, puis Crédit privé",1,r-outin
 centraleusinespapier,creditfoncieralgerietunisie,Société centrale des usines à papier,Crédit foncier d'Algérie-Tunisie,1,imbert-l
 centraleusinespapier,minieredjebelfelten,Société centrale des usines à papier,Société minière du Djebel-Felten,1,bernard-p
+centraleexploitationsrecherchesminieressoukahras,minesbouthaleb,"Compagnie Centrale d'exploitations et recherches minières, à Souk-Ahras",MINES DU BOU-THALEB,1,pouquet
+centraleexploitationsrecherchesminieressoukahras,minieredjebelfelten,"Compagnie Centrale d'exploitations et recherches minières, à Souk-Ahras",Société minière du Djebel-Felten,1,pouquet
+centraleexploitationsrecherchesminieressoukahras,ouenza,"Compagnie Centrale d'exploitations et recherches minières, à Souk-Ahras",Société de l'Ouenza,1,pouquet
+minesbouthaleb,ouenza,MINES DU BOU-THALEB,Société de l'Ouenza,1,pouquet
+minieredjebelfelten,ouenza,Société minière du Djebel-Felten,Société de l'Ouenza,1,pouquet
+centralephosphatesbordjrdir,genevoisecoloniessuissessetif,Compagnie Centrale des Phosphates à Bordj'R'dir,Compagnie Genevoise des colonies suisses de Sétif,1,sautter-e
 centralephosphates,centralephosphatesbordjrdir,Cie centrale des PHOSPHATES,Compagnie Centrale des Phosphates à Bordj'R'dir,1,cheronnet-m
+cheminsferroutesalgerie,mineszincguergour,Société des Chemins de fer sur routes d'Algérie,Société des mines de zinc du Guergour,1,devise-f
+minesboudjoudoun,mineszincguergour,Société des mines de Boudjoudoun,Société des mines de zinc du Guergour,1,devise-f
 minesboudjoudoun,zincguergour,Société des mines de Boudjoudoun,Zinc du Guergour,1,devise-f
 algerienneproduitschimiquesengrais,minesouastamesloula,Société Algérienne de produits chimiques et d'engrais,Compagnie des mines de Ouasta et de Mesloula,1,mirabaud-e
 cheminsferroutesalgerie,minesouastamesloula,Société des Chemins de fer sur routes d'Algérie,Compagnie des mines de Ouasta et de Mesloula,1,mirabaud-e
+algerienneproduitschimiquesengrais,grandstravauxalgeriens,Société Algérienne de produits chimiques et d'engrais,Grands Travaux algériens,1,jourdanne-a
 algerienneproduitschimiquesengrais,unionelectriquegaziereafriquenord,Société Algérienne de produits chimiques et d'engrais,Union électrique et gazière de l'Afrique du Nord,1,jourdanne-a
 cheminsferroutesalgerie,unionelectriquegaziereafriquenord,Société des Chemins de fer sur routes d'Algérie,Union électrique et gazière de l'Afrique du Nord,1,jourdanne-a
+creditfoncieralgerietunisie,grandstravauxalgeriens,Crédit foncier d'Algérie-Tunisie,Grands Travaux algériens,1,jourdanne-a
+grandstravauxalgeriens,unionelectriquegaziereafriquenord,Grands Travaux algériens,Union électrique et gazière de l'Afrique du Nord,1,jourdanne-a
 cheminsferroutesalgerie,vignoblesalgeriens,Société des Chemins de fer sur routes d'Algérie,Vignobles algériens,1,lambert-a
 cheminsferroutesalgerie,vignoblesmediterranee,Société des Chemins de fer sur routes d'Algérie,VIGNOBLES DE LA MÉDITERRANÉE,1,lambert-a
 cheminsferroutesalgerie,vinsmidialgerie,Société des Chemins de fer sur routes d'Algérie,Compagnie générale des vins du Midi et d'Algérie,1,lambert-a
@@ -375,75 +876,183 @@ minieredjebelfelten,vinsmidialgerie,Société minière du Djebel-Felten,Compagni
 vignoblesmediterranee,vinsmidialgerie,VIGNOBLES DE LA MÉDITERRANÉE,Compagnie générale des vins du Midi et d'Algérie,1,lambert-a
 algeriennecreditbanque,algerienneproduitschimiquesengrais,Société nouvelle de la Compagnie algérienne de crédit et de banque,Société Algérienne de produits chimiques et d'engrais,1,pallier-j
 algeriennecreditbanque,cheminsferroutesalgerie,Société nouvelle de la Compagnie algérienne de crédit et de banque,Société des Chemins de fer sur routes d'Algérie,1,pallier-j
-etudescheminfertransafricain,phosphatesdjebelonk,Société d'études du Chemin de fer transafricain,Phosphates du Djebel-Onk,1,berthelot-a
 etudescheminfertransafricain,unionfabriquesengraisproduitschimiquessuperphosphates,Société d'études du Chemin de fer transafricain,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,berthelot-a
 phosphatesdjebelonk,unionfabriquesengraisproduitschimiquessuperphosphates,Phosphates du Djebel-Onk,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,berthelot-a
-charbonnierenordafricain,chargeursalgeriensreunis,Compagnie Charbonnière du Nord-Africain,Chargeurs algériens réunis,1,stern-j
+algeriennepetrolestliouanet,mineschabetkohol,Société Algérienne des pétroles de Tliouanet,Compagnie des mines de Chabet-Kohol,1,zafiropulo
+mineschabetkohol,ouenza,Compagnie des mines de Chabet-Kohol,Société de l'Ouenza,1,bauer
+charbonnierealgerienne,platrieresrovigo,Compagnie Charbonnière algérienne,Les Plâtrières de Rovigo,1,petersen
 chargeursalgeriensreunis,chauxcimentsouedfergoug,Chargeurs algériens réunis,Chaux et ciments de l'oued Fergoug,1,dreyfus-g
 algerienne,cheminsferouestalgerien,Compagnie algérienne,Compagnie des Chemins de fer de l'Ouest-Algérien,1,bordet-l
 algerienne,fournituresmilitaires,Compagnie algérienne,Société générale de Fournitures militaires,1,bordet-l
 cheminsferouestalgerien,fournituresmilitaires,Compagnie des Chemins de fer de l'Ouest-Algérien,Société générale de Fournitures militaires,1,bordet-l
 cheminsferouestalgerien,phosphatesdyr,Compagnie des Chemins de fer de l'Ouest-Algérien,Compagnie des Phosphates du Dyr,1,bordet-l
 fournituresmilitaires,phosphatesdyr,Société générale de Fournitures militaires,Compagnie des Phosphates du Dyr,1,bordet-l
+cheminsferouestalgerien,minesferrouina,Compagnie des Chemins de fer de l'Ouest-Algérien,Société des mines de fer Rouina,1,peytel-a
+creditalgerien,minesferrouina,"Crédit algérien, puis Crédit privé",Société des mines de fer Rouina,1,peytel-a
+aeriennefrancealgerie,minesferlarrath,Compagnie Aérienne France-Algerie,Compagnie des mines de fer de Larrath,1,dhe-p
 aeriennefrancealgerie,reseauaerientransafricain,Compagnie Aérienne France-Algerie,Société du Réseau aérien transafricain,1,dhe-p
+minesferlarrath,reseauaerientransafricain,Compagnie des mines de fer de Larrath,Société du Réseau aérien transafricain,1,dhe-p
+africainearmement,concessionnaireminesouenza,Compagnie Africaine d'Armement,Société Concessionnaire des mines d'Ouenza,1,versailles
+africainearmement,fusionneeliegeshamendaspetitekabylie,Compagnie Africaine d'Armement,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,1,versailles
+africainearmement,immobilierealgerie,Compagnie Africaine d'Armement,Société Immobilière d'Algérie,1,versailles
+africainearmement,ouenza,Compagnie Africaine d'Armement,Société de l'Ouenza,1,versailles
+concessionnaireminesouenza,fusionneeliegeshamendaspetitekabylie,Société Concessionnaire des mines d'Ouenza,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,1,versailles
+concessionnaireminesouenza,immobilierealgerie,Société Concessionnaire des mines d'Ouenza,Société Immobilière d'Algérie,1,versailles
+fusionneeliegeshamendaspetitekabylie,ouenza,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,Société de l'Ouenza,1,versailles
+immobilierealgerie,ouenza,Société Immobilière d'Algérie,Société de l'Ouenza,1,versailles
 algerienne,regiefoncierevillealger,Compagnie algérienne,Régie foncière de la ville d'Alger,1,fournier-p
 algeriennecreditbanque,regiefoncierevillealger,Société nouvelle de la Compagnie algérienne de crédit et de banque,Régie foncière de la ville d'Alger,1,fournier-p
-foncieremediterranee,regiefoncierevillealger,Compagnie Foncière de la Méditerranée,Régie foncière de la ville d'Alger,1,coudray-a
-commercialeacconage,commercialearmement,Société Commerciale d'Acconage,Société Commerciale d'Armement,1,thibaut-m
-algerienneproduitschimiquesengrais,commercialeacconage,Société Algérienne de produits chimiques et d'engrais,Société Commerciale d'Acconage,1,bouffe-g
+1918domainesbenislimantablat,agricolealgerienne,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Société Agricole Algérienne,1,narbonne-j
+1918domainesbenislimantablat,algeriennemeunerie,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Compagnie Algérienne de Meunerie,1,narbonne-j
+agricolealgerienne,algeriennemeunerie,Société Agricole Algérienne,Compagnie Algérienne de Meunerie,1,narbonne-j
+domainesaintcharlesboufarik,foncieremediterranee,"Domaine Saint-Charles, Boufarik",Compagnie Foncière de la Méditerranée,1,altairac-f
+cimentsportlandafriquenord,nordafricainecimentslafarge,Ciments Portland de l'Afrique du Nord,Nord-Africaine des Ciments de Lafarge,1,molinari-a
+algerienneproduitschimiquesengrais,commercialecharbonnagesentreprisesmaritimes,Société Algérienne de produits chimiques et d'engrais,Société Commerciale de Charbonnages et d’entreprises maritimes,1,marceron-m
+commercialeacconage,commercialecharbonnagesentreprisesmaritimes,Société Commerciale d'Acconage,Société Commerciale de Charbonnages et d’entreprises maritimes,1,marceron-m
+commercialearmement,commercialecharbonnagesentreprisesmaritimes,Société Commerciale d'Armement,Société Commerciale de Charbonnages et d’entreprises maritimes,1,marceron-m
 algerienneproduitschimiquesengrais,oranaisecharbonnages,Société Algérienne de produits chimiques et d'engrais,Oranaise de Charbonnages,1,bouffe-g
-commercialeacconage,oranaisecharbonnages,Société Commerciale d'Acconage,Oranaise de Charbonnages,1,bouffe-g
+algerienneproduitschimiquesengrais,phosphatesdyr,Société Algérienne de produits chimiques et d'engrais,Compagnie des Phosphates du Dyr,1,jurien-de-la-graviere-p
 algerienne,immobilierealgerie,Compagnie algérienne,Société Immobilière d'Algérie,1,germain-s
 algerienne,entreprisemaritimecommerciale,Compagnie algérienne,L'Entreprise maritime et commerciale,1,fabry-r
+algerienne,tramwayoranhammambouhadjarextensions,Compagnie algérienne,Tramway d'Oran à Hammam-Bou-Hadjar et extensions,1,saint-germain-m
+comptoirescomptemedea,coqmaterielviticoleoleicoleaixprovence,Comptoir d'escompte de Médéa,"Coq, matériel viticole et oléicole, Aix-en-Provence",1,jourdan-j
+comptoirescomptesidibelabbes,minessidimarouf,Comptoir d'escompte de Sidi-Bel-Abbès,Société des mines du Sidi Marouf,1,bellat-l
+comptoirescomptesidibelabbes,tuileriebriqueteriebelabbesiennesidibelabbes,Comptoir d'escompte de Sidi-Bel-Abbès,"Tuilerie-briqueterie La Bel-Abbesienne, Sidi-Bel-Abbès",1,bellat-l
+minessidimarouf,tuileriebriqueteriebelabbesiennesidibelabbes,Société des mines du Sidi Marouf,"Tuilerie-briqueterie La Bel-Abbesienne, Sidi-Bel-Abbès",1,bellat-l
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,ateliersfonderiecelestinducros,Anciens établissements Albert Stockhammer Comptoir technique algérien de machines et fournitures industrielles,Ateliers et fonderie Célestin Ducros,1,compose-de-a-membres
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,etslouisbilliard,Anciens établissements Albert Stockhammer Comptoir technique algérien de machines et fournitures industrielles,Éts Louis Billiard,1,compose-de-a-membres
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,minieremetallurgiquecaronte,Anciens établissements Albert Stockhammer Comptoir technique algérien de machines et fournitures industrielles,Compagnie minière et métallurgique de Caronte,1,compose-de-a-membres
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,oranaisefutaille,Anciens établissements Albert Stockhammer Comptoir technique algérien de machines et fournitures industrielles,Société Oranaise de Futaille,1,compose-de-a-membres
+ateliersfonderiecelestinducros,etslouisbilliard,Ateliers et fonderie Célestin Ducros,Éts Louis Billiard,1,compose-de-a-membres
+ateliersfonderiecelestinducros,minieremetallurgiquecaronte,Ateliers et fonderie Célestin Ducros,Compagnie minière et métallurgique de Caronte,1,compose-de-a-membres
+ateliersfonderiecelestinducros,oranaisefutaille,Ateliers et fonderie Célestin Ducros,Société Oranaise de Futaille,1,compose-de-a-membres
+etslouisbilliard,minieremetallurgiquecaronte,Éts Louis Billiard,Compagnie minière et métallurgique de Caronte,1,compose-de-a-membres
+etslouisbilliard,oranaisefutaille,Éts Louis Billiard,Société Oranaise de Futaille,1,compose-de-a-membres
+minieremetallurgiquecaronte,oranaisefutaille,Compagnie minière et métallurgique de Caronte,Société Oranaise de Futaille,1,compose-de-a-membres
+comptoirtextilecirta,tramwayselectriquesconstantine,Comptoir textile de Cirta,Tramways électriques de Constantine,1,nahon-a
+concessionnaireminesouenza,groupevinicole,Société Concessionnaire des mines d'Ouenza,Groupe vinicole,1,richard-j
+concessionnaireminesouenza,mineszaccar,Société Concessionnaire des mines d'Ouenza,MINES du ZACCAR,1,kroller-a
 concessionnaireouenza,mineszaccar,Société concessionnaire d'Ouenza,MINES du ZACCAR,1,kroller-a
-creditalgerien,minesferrouina,"Crédit algérien, puis Crédit privé",Société des mines de fer Rouina,1,peytel-a
+agricolealgerienne,cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,Société Agricole Algérienne,"Cooperative agricole des agrumes, fruits et légumes de la Mitidja, El Affroun. — Confiturerie de Boufarik",1,nouvion-g
+cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,domainechapeaugendarme,"Cooperative agricole des agrumes, fruits et légumes de la Mitidja, El Affroun. — Confiturerie de Boufarik",Domaine du Chapeau de Gendarme,1,froger-a
+cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,domainesaintcharlesboufarik,"Cooperative agricole des agrumes, fruits et légumes de la Mitidja, El Affroun. — Confiturerie de Boufarik","Domaine Saint-Charles, Boufarik",1,froger-a
+cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,fermesfrancaisestunisie,"Cooperative agricole des agrumes, fruits et légumes de la Mitidja, El Affroun. — Confiturerie de Boufarik",Société des Fermes francaises de Tunisie,1,charmetant-j
 creditalgerien,creditfoncieralgerietunisie,"Crédit algérien, puis Crédit privé",Crédit foncier d'Algérie-Tunisie,1,bernard-a
 creditalgerien,unionelectriquegaziereafriquenord,"Crédit algérien, puis Crédit privé",Union électrique et gazière de l'Afrique du Nord,1,pinson-e
 creditalgerien,industriellepetrolesafriquenord,"Crédit algérien, puis Crédit privé",Compagnie Industrielle des Pétroles de l'Afrique du Nord,1,d-audiffret-pasquier
 creditfoncieragricolealgerie,creditfoncieralgerietunisie,Crédit foncier et agricole d'Algérie,Crédit foncier d'Algérie-Tunisie,1,castan-r
 creditfoncieragricolealgerie,fonciereimmobilierevillealger,Crédit foncier et agricole d'Algérie,Compagnie Foncière et Immobilière de la Ville d'Alger,1,castan-r
-creditfoncieralgerietunisie,fonciereimmobilierevillealger,Crédit foncier d'Algérie-Tunisie,Compagnie Foncière et Immobilière de la Ville d'Alger,1,castan-r
-algerienneproduitschimiquesengrais,phosphatesdyr,Société Algérienne de produits chimiques et d'engrais,Compagnie des Phosphates du Dyr,1,a-l-article-des-statuts-c
-creditfoncieralgerietunisie,phosphatesdyr,Crédit foncier d'Algérie-Tunisie,Compagnie des Phosphates du Dyr,1,a-l-article-des-statuts-c
-minesbouthaleb,minieredjebelfelten,MINES DU BOU-THALEB,Société minière du Djebel-Felten,1,pouquet
-minesbouthaleb,ouenza,MINES DU BOU-THALEB,Société de l'Ouenza,1,pouquet
-minieredjebelfelten,ouenza,Société minière du Djebel-Felten,Société de l'Ouenza,1,pouquet
+fonciereimmobilierevillealger,regiefoncierevillealger,Compagnie Foncière et Immobilière de la Ville d'Alger,Régie foncière de la ville d'Alger,1,rouan-p
+creditfoncieralgerietunisie,industrielleafriquenordtraitementsousproduitsvigneolivier,Crédit foncier d'Algérie-Tunisie,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,dubourdieu-l
+creditfoncieralgerietunisie,liegesproduitsnordafricainsalgerusinebouchonsbone,Crédit foncier d'Algérie-Tunisie,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,dubourdieu-l
+creditimmobilieralger,oranaisefutaille,Crédit immobilier d’Alger,Société Oranaise de Futaille,1,martin-r
+depotgairard,raffineriessoufrereunies,Dépôt Gairard,Raffineries de soufre réunies,1,roubaud-j
+depotgairard,vignoblesmediterranee,Dépôt Gairard,VIGNOBLES DE LA MÉDITERRANÉE,1,roubaud-j
+depotgairard,vignoblesmediterraneedomainemonvilleduzerville,Dépôt Gairard,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",1,roubaud-j
+raffineriessoufrereunies,vignoblesmediterranee,Raffineries de soufre réunies,VIGNOBLES DE LA MÉDITERRANÉE,1,roubaud-j
+detartrageconstructionsmecaniques,unionvinicolenordafricaine,Cie de Détartrage et constructions mécaniques,Union vinicole nord-africaine,1,wilhelm-p
+distilleriebadoilmustapha,kieselguhr,"Distillerie Badoil, Mustapha",Kieselguhr,1,brissonnet
+distilleriesalgerie,unionvinicolenordafricaine,Distilleries d’Algerie,Union vinicole nord-africaine,1,trachsler-h
+minesboudjoudoun,tramwayselectriquesoran,Société des mines de Boudjoudoun,Tramways électriques d'Oran,1,petit
+minieredjebelfelten,tramwayselectriquesoran,Société minière du Djebel-Felten,Tramways électriques d'Oran,1,petit
+domaineautruchesdouaouda,tramwaysalgeriens,"Domaine des Autruches, Douaouda",Société des Tramways algériens,1,gallois-a
+domainechapeaugendarme,francoalgeriennecarburants,Domaine du Chapeau de Gendarme,Société Franco-Algérienne des Carburants,1,park-e
+domainechapeaugendarme,industrielleafriquenordtraitementsousproduitsvigneolivier,Domaine du Chapeau de Gendarme,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,1,boudin-j
+1918domainesbenislimantablat,industrielleimmobiliere,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Cie Industrielle et Immobilière,1,chevallier-j
+domainechapeaugendarme,industrielleimmobiliere,Domaine du Chapeau de Gendarme,Cie Industrielle et Immobilière,1,chevallier-j
+domainechapeaugendarme,lassallas,Domaine du Chapeau de Gendarme,Lassallas,1,chevallier-j
 domainechapeaugendarme,phosphatesconstantine,Domaine du Chapeau de Gendarme,Compagnie des Phosphates de Constantine,1,deyron-l
 domainechapeaugendarme,industriellepetrolesafriquenord,Domaine du Chapeau de Gendarme,Compagnie Industrielle des Pétroles de l'Afrique du Nord,1,lauriol-a
 domainechapeaugendarme,ouenza,Domaine du Chapeau de Gendarme,Société de l'Ouenza,1,lauriol-a
 industriellepetrolesafriquenord,ouenza,Compagnie Industrielle des Pétroles de l'Afrique du Nord,Société de l'Ouenza,1,lauriol-a
 domainechapeaugendarme,entreprises,Domaine du Chapeau de Gendarme,ENTREPRISES,1,alexis-p
+algerienneconstructionsnavalesmecaniques,domainesources,Société Algérienne de constructions navales et mécaniques,Société du Domaine des Sources,1,pelegri-g
+domainesaintelouise,mitidja,Domaine Sainte-Louise,La Mitidja,1,germain-a
+domainescaidessebt,mitidja,Domaines du Caid-Es-Sebt,La Mitidja,1,germain-a
+domainesaintcharlesboufarik,industriebois,"Domaine Saint-Charles, Boufarik",L'Industrie du bois,1,alger-a
+domainesaintcharlesboufarik,mitidja,"Domaine Saint-Charles, Boufarik",La Mitidja,1,alger-a
+industriebois,mitidja,L'Industrie du bois,La Mitidja,1,alger-a
 distributionenergieelectrique,domainesafricains,Compagnie Générale de Distribution d'énergie électrique,Domaines africains,1,feraud
+domaineskeroulisaintemouchent,mitidja,Domaines du Kéroulis à Aïn-Témouchent,La Mitidja,1,germain-r
+domaineseltaousarba,immobiliereagricoleharrach,"Domaines El Taous, L’Arba",Société immobilière et agricole de l'Harrach,1,olivier-p
+domaineseltaousarba,industriebois,"Domaines El Taous, L’Arba",L'Industrie du bois,1,olivier-p
+domaineseltaousarba,unioncommercialeproducteurs,"Domaines El Taous, L’Arba",Union commerciale des producteurs,1,olivier-p
+electricitesoukarhas,unionmaritimefrancealgerie,Société d'Électricité de Souk-Arhas,Union maritime France-Algérie,1,constitution-r
+electricitesoukarhas,omniumalgerienelectricitetebessa,Société d'Électricité de Souk-Arhas,"Omnium algérien d'électricité, Tébessa",1,bligny-j
 entreprisemaritimecommerciale,oranaisechauxcimentsoranarcole,L'Entreprise maritime et commerciale,"Compagnie Oranaise des Chaux et ciments, Oran-Arcole",1,x-o
+eschenauer,expansionnordafricaine,Eschenauer & Cie,Expansion nord-africaine,1,ricome-j
 agricolealgeriennebertagna,filtreriefrancoalgerienne,Société agricole algérienne Bertagna,Filtrerie franco-algérienne,1,prat-g
 etsbertagna,filtreriefrancoalgerienne,Éts Bertagna,Filtrerie franco-algérienne,1,prat-g
 agricolealgeriennebertagna,phosphatesconstantine,Société agricole algérienne Bertagna,Compagnie des Phosphates de Constantine,1,petit-l
 agricolealgeriennebertagna,unioncompagniesregionalesreuniesfabriquesengrais,Société agricole algérienne Bertagna,Union française et Compagnies régionales réunies de fabriques d'engrais et de,1,petit-l
 agricolealgeriennebertagna,unionfabriquesengraisproduitschimiquessuperphosphates,Société agricole algérienne Bertagna,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,petit-l
 phosphatesconstantine,unioncompagniesregionalesreuniesfabriquesengrais,Compagnie des Phosphates de Constantine,Union française et Compagnies régionales réunies de fabriques d'engrais et de,1,petit-l
+etudesminieresbougie,mineskabylie,Société d'Études minières de Bougie,Société des Mines de la Kabylie,1,simon-e
+expansionnordafricaine,fermedeloupysaintdenissig,Expansion nord-africaine,"Ferme Deloupy, Saint-Denis-du-Sig",1,raby-a
+filtreriefrancoalgerienne,unionmaritimefrancealgerie,Filtrerie franco-algérienne,Union maritime France-Algérie,1,plattard-g
 fonciereimmobilierevillealger,francoasiatiquepetrolesalgerie,Compagnie Foncière et Immobilière de la Ville d'Alger,Société Franco-Asiatique des Pétroles d’Algerie,1,gastu-j
+fonciereimmobilierevillealger,minesdjebelaomar,Compagnie Foncière et Immobilière de la Ville d'Alger,Société des mines du Djebel-Aomar,1,gastu-j
 fonciereimmobilierevillealger,sidikamber,Compagnie Foncière et Immobilière de la Ville d'Alger,Sidi-Kamber,1,gastu-j
+francoasiatiquepetrolesalgerie,minesdjebelaomar,Société Franco-Asiatique des Pétroles d’Algerie,Société des mines du Djebel-Aomar,1,gastu-j
 francoasiatiquepetrolesalgerie,sidikamber,Société Franco-Asiatique des Pétroles d’Algerie,Sidi-Kamber,1,gastu-j
+minesdjebelaomar,sidikamber,Société des mines du Djebel-Aomar,Sidi-Kamber,1,gastu-j
 fonciereimmobilierevillealger,phosphatesdyr,Compagnie Foncière et Immobilière de la Ville d'Alger,Compagnie des Phosphates du Dyr,1,matheron
+forestiereliegeouvreouedeloueb,liegeshamendaspetitekabylie,"Société Forestière du Liège ouvré, Oued-el-Oueb",Lièges des Hamendas et de la Petite Kabylie,1,ed-laroche-joubert
+distributionenergieelectrique,tramwaysalgeriens,Compagnie Générale de Distribution d'énergie électrique,Société des Tramways algériens,1,parsons
+algerienneetudesentreprisesagricolescommercialesindustrielles,grandshotelsafriquenord,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien",Grands Hôtels de l'Afrique du Nord,1,beard-du-dezert-o
+agricolealgerienne,grandstravauxalgeriens,Société Agricole Algérienne,Grands Travaux algériens,1,yusuf-c
+algerienneetudesentreprisesagricolescommercialesindustrielles,vinsmidialgeriebezierssete,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien","Cie générale des Vins du Midi et d'Algérie, Béziers, Sète",1,paris
+grandstravauxalgeriens,vinsmidialgeriebezierssete,Grands Travaux algériens,"Cie générale des Vins du Midi et d'Algérie, Béziers, Sète",1,paris
+algerienneconstructionsnavalesmecaniques,laitierealger,Société Algérienne de constructions navales et mécaniques,Société Laitière d’Alger,1,gensollen-h
+algerienneconstructionsnavalesmecaniques,minierekaolinsdjebeldebar,Société Algérienne de constructions navales et mécaniques,Société minière des Kaolins du Djebel-Debar,1,gensollen-h
+immobiliereforteau,laitierealger,Immobilière du Fort-de-l'Eau,Société Laitière d’Alger,1,gensollen-h
+immobiliereforteau,minierekaolinsdjebeldebar,Immobilière du Fort-de-l'Eau,Société minière des Kaolins du Djebel-Debar,1,gensollen-h
+laitierealger,minierekaolinsdjebeldebar,Société Laitière d’Alger,Société minière des Kaolins du Djebel-Debar,1,gensollen-h
+immobilierefrancooranaise,megisseriealgerienne,Compagnie Immobilière Franco-Oranaise,Mégisserie algérienne,1,emile-e
+industriellepetrolesafriquenord,lafarge,Compagnie Industrielle des Pétroles de l'Afrique du Nord,Lafarge,1,boutier-a
 industriellepetrolesafriquenord,liegeshamendaspetitekabylie,Compagnie Industrielle des Pétroles de l'Afrique du Nord,Lièges des Hamendas et de la Petite Kabylie,1,boutier-a
 industriellepetrolesafriquenord,nordafricainecimentslafarge,Compagnie Industrielle des Pétroles de l'Afrique du Nord,Nord-Africaine des Ciments de Lafarge,1,boutier-a
 industriellepetrolesafriquenord,regiefoncierevillealger,Compagnie Industrielle des Pétroles de l'Afrique du Nord,Régie foncière de la ville d'Alger,1,boutier-a
+lafarge,liegeshamendaspetitekabylie,Lafarge,Lièges des Hamendas et de la Petite Kabylie,1,boutier-a
+lafarge,regiefoncierevillealger,Lafarge,Régie foncière de la ville d'Alger,1,boutier-a
 liegeshamendaspetitekabylie,regiefoncierevillealger,Lièges des Hamendas et de la Petite Kabylie,Régie foncière de la ville d'Alger,1,boutier-a
 nordafricainecimentslafarge,regiefoncierevillealger,Nord-Africaine des Ciments de Lafarge,Régie foncière de la ville d'Alger,1,boutier-a
+liegesproduitsnordafricainsalgerusinebouchonsbone,minierekaolinsdjebeldebar,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",Société minière des Kaolins du Djebel-Debar,1,kempf-a
 fusionneeliegeshamendaspetitekabylie,liegesproduitsnordafricainsalgerusinebouchonsbone,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",1,m-lallemand
+approvisionnementnordafricaine,fusionneeliegeshamendaspetitekabylie,Société d'Approvisionnement nord-africaine,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,1,rousselot-e
+liegeshamendaspetitekabylie,mineskabylie,Lièges des Hamendas et de la Petite Kabylie,Société des Mines de la Kabylie,1,bargy-c
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,lucienborgeaud,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,Lucien Borgeaud & Cie,1,adam-v
+liegesproduitsnordafricainsalgerusinebouchonsbone,lucienborgeaud,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",Lucien Borgeaud & Cie,1,adam-v
 minieremzaita,phosphatesmzaita,Compagnie minière du M'Zaïta,"Compagnie des Phosphates du M'Zaïta, puis",1,dior
+minesfermiliana,phosphatesmzaita,Société française des mines de fer Miliana,"Compagnie des Phosphates du M'Zaïta, puis",1,rivaud
 minieremzaita,unioncompagniesregionalesreuniesfabriquesengrais,Compagnie minière du M'Zaïta,Union française et Compagnies régionales réunies de fabriques d'engrais et de,1,de-cenival-a
 minieremzaita,unionfabriquesengraisproduitschimiquessuperphosphates,Compagnie minière du M'Zaïta,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,de-cenival-a
 marmaro,ouenza,Marmaro,Société de l'Ouenza,1,hersent-g
+industrielleafriquenordtraitementsousproduitsvigneolivier,messagerieslittoral,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,Société des Messageries du Littoral,1,moucheront-p
 mineschellala,minesguelma,Société des mines du Chellala,Société des mines de Guelma,1,wilmotte-m
+minesguelma,minieremetallurgiquecaronte,Société des mines de Guelma,Compagnie minière et métallurgique de Caronte,1,lyon
+mineskabylie,mullerpasse19261928souscontrolegraengesberg,Société des Mines de la Kabylie,"Müller, passé en 1926-1928 sous le contrôle de Graengesberg",1,kberlin-g
+minesdjebelaomar,ouenza,Société des mines du Djebel-Aomar,Société de l'Ouenza,1,mercier
+ouenza,palestro,Société de l'Ouenza,Palestro,1,mercier
 mineschellala,minesdjebelforer,Société des mines du Chellala,Société des mines du Djebel-Forer,1,meyer-l
+mineschellala,tramwayselectriquesoran,Société des mines du Chellala,Tramways électriques d'Oran,1,cornudet-l
+minieredjendli,tramwayselectriquesoran,Compagnie minière du Djendli,Tramways électriques d'Oran,1,cornudet-l
+minesferlarrath,unionelectriquegaziereafriquenord,Compagnie des mines de fer de Larrath,Union électrique et gazière de l'Afrique du Nord,1,chatenet-j
 minesfermilliana,minesferrouina,Mines de fer de Milliana,Société des mines de fer Rouina,1,lippens-h
 minieredjendli,zincguergour,Compagnie minière du Djendli,Zinc du Guergour,1,riollot-j
-minieredjendli,tramwayselectriquesoran,Compagnie minière du Djendli,Tramways électriques d'Oran,1,cornudet-l
-raffineriessoufrereunies,vignoblesmediterranee,Raffineries de soufre réunies,VIGNOBLES DE LA MÉDITERRANÉE,1,roubaud-j
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,nordafricaincommercial,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,Nord-africain commercial,1,borgeaud-c
+liegesproduitsnordafricainsalgerusinebouchonsbone,nordafricaincommercial,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône",Nord-africain commercial,1,borgeaud-c
+omniumminesalgerietunisie,secteurelectrique,Omnium Société générale de mines d'Algérie-Tunisie,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,courbevoie
+phosphatesconstantine,secteurelectrique,Compagnie des Phosphates de Constantine,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger",1,courbevoie
+algerienneelevage,oranaisecharbonnages,Société Algérienne d'élevage,Oranaise de Charbonnages,1,levy
+probios,syndicatlyonnaisnordafricain,Probios,Syndicat lyonnais nord-africain,1,vogt-p
 regiefoncierevillealger,secteurelectriquevoutesalger,Régie foncière de la ville d'Alger,Secteur électrique des Voûtes d'Alger,1,richier-l
 regiefoncierevillealger,tramwayselectriquesoran,Régie foncière de la ville d'Alger,Tramways électriques d'Oran,1,henrion
+agricolealgerienne,algerienneconstructionsnavalesmecaniques,Société Agricole Algérienne,Société Algérienne de constructions navales et mécaniques,1,delrieu-e
 agricolefinancierealgerie,uniontransafricaine,Société Agricole et Financière d'Algérie,Union transafricaine,1,philouze-h
+approvisionnementnordafricaine,vinsmidialgerie,Société d'Approvisionnement nord-africaine,Compagnie générale des vins du Midi et d'Algérie,1,delhaize-r
 algerienneproduitschimiquesengrais,ouenza,Société Algérienne de produits chimiques et d'engrais,Société de l'Ouenza,1,mesnier-j
+ouenza,vignoblesmediterraneedomainemonvilleduzerville,Société de l'Ouenza,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",1,bernard
+tramwayoranhammambouhadjarextensions,tramwayselectriquesoran,Tramway d'Oran à Hammam-Bou-Hadjar et extensions,Tramways électriques d'Oran,1,hamoir-l
 unioncompagniesregionalesreuniesfabriquesengrais,unionelectriquegaziereafriquenord,Union française et Compagnies régionales réunies de fabriques d'engrais et de,Union électrique et gazière de l'Afrique du Nord,1,cipriani-p
 unionelectriquegaziereafriquenord,unionfabriquesengraisproduitschimiquessuperphosphates,Union électrique et gazière de l'Afrique du Nord,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",1,cipriani-p

@@ -1,6 +1,6 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
-mandel-a,Mandel,A. Mandel; Auguste Mandel,3,3,5,administrateur,1926,1936,mines et industries
-weber-j,Weber,J. Weber; J. Wéber; Jean Weber,2,2,5,administrateur,1926,1936,mines et industries
+mandel-a,Mandel,A. Mandel; Auguste Mandel,3,3,6,administrateur,1926,1936,mines et industries
+weber-j,Weber,J. Weber; J. Wéber; Jean Weber,2,2,7,administrateur,1926,1936,mines et industries
 joubert-a,Joubert,Andre Joubert; André Joubert,2,2,3,administrateur,1926,1951,mines et industries
 superville-m,Superville,Maurice Superville; Superville,2,2,3,administrateur,1903,1927,mines et industries
 asscher-l,Asscher,L. Asscher; Louis Asscher,2,2,3,administrateur,1950,1953,mines et industries
@@ -23,6 +23,7 @@ engeringh-c,Engeringh,Ch Engeringh; Ch. Engeringh,1,1,4,administrateur,1920,1927
 chocarne-p,Chocarne,Philippe Chocarne,1,1,3,administrateur,1932,1951,mines et industries
 p-pflieger-r,P. Pflieger,Robert P. Pflieger,1,1,3,administrateur,1932,1951,mines et industries
 lippens-h,Lippens,H. Lippens,1,1,3,administrateur,1920,1927,mines et industries
+mathias-a,Mathias,A. Mathias,1,1,3,administrateur,1929,1933,mines et industries
 delbeke-c,Delbeke,Charles Delbeke,1,1,2,administrateur,1930,1930,Commerce
 ph-chocarne,Ph. Chocarne,Ph. Chocarne,1,1,2,administrateur,1953,1964,mines et industries
 du-monceau-de-bergendael-j,du Monceau de Bergendael,Jean du Monceau de Bergendael,1,1,2,administrateur,1935,1964,mines et industries
@@ -39,10 +40,9 @@ delattre-a,Delattre,Achille Delattre,1,1,2,administrateur,1899,1902,mines et ind
 nogues-r,Noguès,Roger Noguès,1,1,2,administrateur,1899,1902,mines et industries
 henry-r,Henry,René Henry; René-Achille Henry,1,1,2,administrateur,1899,1902,mines et industries
 h-lippens,H Lippens,H Lippens,1,1,2,administrateur,1922,1925,mines et industries
-mathias-a,Mathias,A. Mathias,1,1,2,administrateur,1929,1933,mines et industries
+kenster-j,Kenster,J. Kenster,1,1,2,administrateur,1931,1933,mines et industries
 genestal-h,Genestal,Genestal; H. Genestal,1,1,2,vice_president,1903,1906,mines et industries
 mellier,Mellier,Mellier,1,1,2,administrateur,1903,1906,mines et industries
-a-l-article-des-statuts-c,à l'article des statuts,Conformément à l'article des statuts,1,1,2,administrateur,1910,1911,mines et industries
 vendeenne-de-bonneterie-f,vendéenne de bonneterie,Fabrique vendéenne de bonneterie,1,1,1,administrateur,1936,1936,mines et industries
 industrielle-de-l-afrique-equatoriale,industrielle de l'Afrique équatoriale,industrielle de l'Afrique équatoriale,1,1,1,administrateur,1936,1936,mines et industries
 tremois-r,Trémois,Robert Trémois,1,1,1,president,1936,1936,mines et industries
@@ -74,7 +74,6 @@ et-fernand-vigneron,et Fernand Vigneron,et Fernand Vigneron,1,1,1,administrateur
 eloy-l,Éloy,Louis Éloy,1,1,1,administrateur,1935,1935,mines et industries
 laurans-h,Laurans,H. Laurans,1,1,1,administrateur,1951,1951,mines et industries
 fr-h-terlinck,Fr. H. Terlinck,Fr. H. Terlinck,1,1,1,administrateur,1951,1951,mines et industries
-etabl-l,Établ. L,Établ. L,1,1,1,administrateur,1951,1951,mines et industries
 mulhouse,Mulhouse],Mulhouse],1,1,1,administrateur,1951,1951,mines et industries
 beau-c,Beau,Ch. Beau,1,1,1,president_directeur_general,1953,1953,mines et industries
 dewez-g,Dewez,Guy Dewez,1,1,1,administrateur,1953,1953,mines et industries
@@ -89,7 +88,6 @@ g-de-bellescize,G de Bellescize,G de Bellescize,1,1,1,administrateur,1931,1931,m
 h-bobichon,H Bobichon,H Bobichon,1,1,1,administrateur,1931,1931,mines et industries
 g-collet,G Collet,G Collet,1,1,1,administrateur,1931,1931,mines et industries
 nouzaret-j,Nouzaret,Jean Nouzaret,1,1,1,administrateur,1899,1899,mines et industries
-nouzaret-m-paul-durand,Nouzaret. M. Paul Durand,Nouzaret. M. Paul Durand,1,1,1,administrateur,1902,1902,mines et industries
 bolle,Bolle,Bolle,1,1,1,administrateur,1902,1902,mines et industries
 robert-smets,Robert-Smets,Robert-Smets,1,1,1,administrateur,1902,1902,mines et industries
 f-de-mont-serrat,F de Mont-Serrat,F de Mont-Serrat,1,1,1,administrateur,1922,1922,mines et industries
@@ -98,12 +96,9 @@ ph-millet-journaliste,Ph. Millet [journaliste,Ph. Millet [journaliste,1,1,1,admi
 successeur-de-son-pere-rene,successeur de son père René],successeur de son père René],1,1,1,administrateur,1922,1922,mines et industries
 pres-m-a-josse,Prés.: M. A Josse,Prés.: M. A Josse,1,1,1,administrateur,1925,1925,mines et industries
 adm-mm-ch-engeringh,Adm.: MM. Ch. Engeringh,Adm.: MM. Ch. Engeringh,1,1,1,administrateur,1925,1925,mines et industries
-de-la-reveliere-comptoirs-bambari,de la Revelière. Comptoirs: Bambari,de la Revelière. Comptoirs: Bambari,1,1,1,administrateur,1925,1925,mines et industries
 mobaye,Mobaye,Mobaye,1,1,1,administrateur,1925,1925,mines et industries
 kouango,Kouango,Kouango,1,1,1,administrateur,1925,1925,mines et industries
-kenster-j,Kenster,J. Kenster,1,1,1,administrateur,1933,1933,mines et industries
 keusters-j,Keusters,J.-M. Keusters,1,1,1,administrateur,1936,1936,mines et industries
-steinberg-n-b,Steinberg. N. B,Steinberg. N. B,1,1,1,administrateur,1936,1936,mines et industries
 pierre-o,Pierre,Octave Pierre,1,1,1,president,1951,1951,mines et industries
 pelissard,Pélissard,Pélissard,1,1,1,administrateur,1951,1951,mines et industries
 remy-martin,Rémy-Martin,Rémy-Martin,1,1,1,president,1903,1903,mines et industries
@@ -112,10 +107,7 @@ gratry,Gratry,Gratry,1,1,1,administrateur,1903,1903,mines et industries
 josse,Josse,Josse,1,1,1,administrateur,1903,1903,mines et industries
 raverat,Raverat,Raverat,1,1,1,administrateur,1903,1903,mines et industries
 siegfried,Siegfried,Siegfried,1,1,1,administrateur,1903,1903,mines et industries
-piot-non-seulement-la-kotto-se-maintiendra,Piot. Non seulement la Kotto se maintiendra,Piot. Non seulement la Kotto se maintiendra,1,1,1,administrateur,1903,1903,mines et industries
-n-est-que-momentanee-elle-est,n'est que momentanée. Elle est,n'est que momentanée. Elle est,1,1,1,administrateur,1906,1906,mines et industries
 gratry-j,Gratry,J. Gratry,1,1,1,administrateur,1906,1906,mines et industries
-siegfried-commissaires-mm-a-chaumier-e,Siegfried. Commissaires: MM. A. Chaumier,Ernest Siegfried. Commissaires: MM. A. Chaumier,1,1,1,administrateur,1906,1906,mines et industries
 louis-m,Louis,Louis,1,1,1,administrateur,1913,1913,mines et industries
 dewulf-v,Dewulf,Victor Dewulf,1,1,1,administrateur,1913,1913,mines et industries
 e-siegfried,E Siegfried,E Siegfried,1,1,1,president,1922,1922,mines et industries
@@ -133,7 +125,6 @@ laroche,Laroche,Laroche,1,1,1,administrateur,1900,1900,Commerce
 robin,Robin,Robin,1,1,1,administrateur,1900,1900,Commerce
 moracin,Moracin,Moracin,1,1,1,administrateur,1900,1900,Commerce
 et-armand-robin,et Armand Robin,et Armand Robin,1,1,1,administrateur,1900,1900,Commerce
-repartition-a-la-reserve,Répartition: % à la réserve,Répartition: % à la réserve,1,1,1,administrateur,1900,1900,Commerce
 pour-la-direction-en-france,% pour la direction en France,% pour la direction en France,1,1,1,administrateur,1900,1900,Commerce
 lombard-h,Lombard,H. Lombard,1,1,1,administrateur,1922,1922,mines et industries
 guegan-p,Guégan,P. Guégan,1,1,1,administrateur,1922,1922,mines et industries
@@ -147,5 +138,5 @@ romain-e,Romain,Élie Romain,1,1,1,administrateur,,,mines et industries
 raoui-nenard,RaouI Nénard. 6,RaouI Nénard. 6,1,1,1,administrateur,1951,1951,mines et industries
 mm-h-berger,… MM. H. Berger,… MM. H. Berger,1,1,1,president_directeur_general,1953,1953,mines et industries
 asscher-junior-l,Asscher Junior,L. Asscher Junior,1,1,1,administrateur,1953,1953,mines et industries
-duret,Duret,Duret,1,1,1,administrateur,1953,1953,mines et industries
+duret-f,Duret,Duret,1,1,1,administrateur,1953,1953,mines et industries
 leconte-de-l-isle,Leconte de l'Isle,Leconte de l'Isle,1,0,1,commissaire_aux_comptes,1900,1900,Commerce

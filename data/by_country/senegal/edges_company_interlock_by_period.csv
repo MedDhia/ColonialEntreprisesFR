@@ -1,8 +1,8 @@
 company_id_1,company_id_2,period,weight,shared_directors
 cheminferdakarsaintlouis,cheminferdakarstlouis,1914_1929,6,deves-p; guilliot-c; lorieux-l; pouyer-m; roland-gosselin-j; vieuxtemps
+huileriesrizeriesouestafricaines,silicocalcaireafricaine,1914_1929,4,fourneau-l; gaudart-r; legrand-r; oudot-l
 electricitesenegal,messageriesafricaines,1914_1929,3,delmas-p; maurel-l; robert-m
 minesfaleme,minesfalemegambie,1914_1929,3,de-batz-r; duchesne-fournet-p; legrand-g
-huileriesrizeriesouestafricaines,silicocalcaireafricaine,1914_1929,3,fourneau-l; gaudart-r; legrand-r
 banqueafriqueoccidentale,electricitesenegal,1914_1929,2,maurel-l; prom-l
 banqueafriqueoccidentale,salinssinesaloum,1914_1929,2,maurel-l; ph-delmas
 chauxcimentssenegal,messageriesafricaines,1914_1929,2,maurel-j; maurel-l
@@ -30,11 +30,13 @@ brasseriesouestafricain,hoteliereouestafricainchoa,1930_1944,2,lorfevre-j; orcel
 creditfoncierouestafricain,minesfaleme,1930_1944,2,merlin; merlin-m
 manutentionafricaine,salinssinesaloum,1930_1944,2,delmas-p; o-quin-p
 creditfoncierafriqueequatorialebrazzaville,creditfoncierouestafricain,1930_1944,1,poilay-e
+banqueafriqueoccidentale,creditfoncierouestafricain,1930_1944,1,nouvion-h
 banquecommercialeafricaine,creditfoncierouestafricain,1930_1944,1,bouvier-r
 creditfoncierouestafricain,eauxelectriciteouestafricain,1930_1944,1,davillier-j
 creditfoncierouestafricain,messageriesafricaines,1930_1944,1,decron-c
 minesfaleme,plantationscasamance,1930_1944,1,renoux-l
 messageriesafricaines,plantationscasamance,1930_1944,1,begouen-m
+commercialeafricainesuitepascalbuhan,messageriesafricaines,1930_1944,1,thube-a
 commercialeportsafricainsdakarabidjandoualamanutentionconsignationtransitcharbons,messageriesafricaines,1930_1944,1,marceron-m
 commerceafricain,lesieurafrique,1945_1962,5,bastin-j; lemaigre-dubreuil-j; lesieur-h; lesieur-p; tascher-c
 messageriesafricaines,messageriessenegal,1945_1962,3,delmas-p; durand-reville-l; villars-r
@@ -43,9 +45,11 @@ banquecommercialeafricaine,creditfoncierouestafricain,1945_1962,2,achard-g; poil
 manutentionafricaine,unionsenegalaiseindustriesmaritimes,1945_1962,2,delmas-p; delmas-r
 commercialeportsafricains,messageriesafricaines,1945_1962,2,fossorier-r; lemaignen-r
 commercialeportsafricains,messageriessenegal,1945_1962,2,dugue-p; moreau-neret-a
+banqueafriqueoccidentale,creditfoncierouestafricain,1945_1962,1,decron-c
+banqueafriqueoccidentale,messageriesafricaines,1945_1962,1,decron-c
+creditfoncierouestafricain,messageriesafricaines,1945_1962,1,decron-c
 colonialechauxcimentsof,travauxafricains,1945_1962,1,chemin-p
 colonialechauxcimentsof,colonialesac,1945_1962,1,corty-a
-creditfoncierouestafricain,messageriesafricaines,1945_1962,1,decron-c
 commercialeportsafricains,creditfoncierouestafricain,1945_1962,1,davillier-j
 commercialeportsafricains,eauxelectriciteouestafricain,1945_1962,1,davillier-j
 creditfoncierouestafricain,eauxelectriciteouestafricain,1945_1962,1,davillier-j

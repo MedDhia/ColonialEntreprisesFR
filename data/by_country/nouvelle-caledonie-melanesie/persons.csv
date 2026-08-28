@@ -1,12 +1,12 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 ballande-a,Ballande,A. Ballande; André Ballande,8,8,18,administrateur,1909,1951,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
 milliard-h,Milliard,H. Milliard; Henry Milliard,7,7,13,administrateur,1919,1964,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
-van-bree-f,Van Brée,F. Van Brée,7,7,10,administrateur,1922,1964,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
+van-bree-f,Van Brée,F. Van Brée,7,7,11,administrateur,1922,1964,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
 loste-h,Loste,H. Loste; H. Loste. 5; Henri Loste; Henry Loste,6,6,17,administrateur,1919,1953,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
-laroque-g,Laroque,G. Laroque; Gabriel Laroque,6,6,13,administrateur,1919,1937,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
-rougy-a,Rougy,A. Rougy; Abel Rougy,6,6,12,administrateur,1919,1937,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
+laroque-g,Laroque,G. Laroque; Gabriel Laroque,6,6,14,administrateur,1919,1937,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
+rougy-a,Rougy,A. Rougy; Abel Rougy,6,6,13,administrateur,1919,1937,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
+chavane-l,Chavane,Chavane; L. Chavane; Louis Chavane,6,6,10,administrateur,1909,1935,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
 berge,Berge,Berge,5,5,10,administrateur,1920,1937,Documentation générale (par ordre chronologique); Mines et métallurgie
-chavane-l,Chavane,Chavane; L. Chavane; Louis Chavane,5,5,9,administrateur,1909,1931,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
 chalas-e,Chalas,E. Chalas; Emile Chalas; Émile Chalas,4,4,11,administrateur,1919,1951,Autres sociétés; Documentation générale (par ordre chronologique); Mines et métallurgie
 berge-m,Berge,Maurice Berge,4,4,11,administrateur,1919,1951,Autres sociétés; Documentation générale (par ordre chronologique)
 jeannin-p,Jeannin,P. Jeannin; Pierre Jeannin,4,4,10,administrateur,1919,1951,Autres sociétés; Documentation générale (par ordre chronologique)
@@ -46,10 +46,10 @@ guerault-c,Guérault,Ch. Guérault; Charles Guérault,2,2,3,president,1924,1926,
 tassart-l,Tassart,Louis Tassart,2,2,3,vice_president,1924,1926,Autres sociétés; Documentation générale (par ordre chronologique)
 blache-p,Blaché,P. Blaché; Pierre Blaché,2,2,3,administrateur,1924,1926,Autres sociétés; Documentation générale (par ordre chronologique)
 aubry-o,Aubry,O. Aubry; Octave Aubry,2,2,3,administrateur,1924,1926,Autres sociétés; Documentation générale (par ordre chronologique)
+dewez,Dewez,Dewez,2,2,3,administrateur,1935,1937,Documentation générale (par ordre chronologique); Mines et métallurgie
 bernheim-l,Bernheim,L. Bernheim,2,2,3,administrateur,1910,1914,Mines et métallurgie
 forsyth-j,Forsyth,James Forsyth,2,2,2,administrateur,1922,1926,Documentation générale (par ordre chronologique)
 esq,Esq,Esq,2,2,2,administrateur,1922,1926,Documentation générale (par ordre chronologique)
-lieut-james-burns,Lieut. James Burns,Lieut. James Burns,2,2,2,administrateur,1922,1926,Documentation générale (par ordre chronologique)
 huet-a,Huet,A. Huet,2,2,2,administrateur,1922,1937,Documentation générale (par ordre chronologique)
 industrielles-e,industrielles,Entreprises industrielles,2,2,2,administrateur,1922,1951,Documentation générale (par ordre chronologique)
 chitarin-s,Chitarin,S. Chitarin,2,2,2,administrateur,1914,1922,Documentation générale (par ordre chronologique); Mines et métallurgie
@@ -60,7 +60,6 @@ barrau-a,Barrau,Adolphe Barrau,2,2,2,president,1926,1937,Documentation général
 poilay-e,Poilay,Edwin Poilay,2,2,2,administrateur,1926,1951,Documentation générale (par ordre chronologique)
 mauclet-j,Mauclet,Jean Mauclet,2,2,2,administrateur,1925,1926,Autres sociétés; Documentation générale (par ordre chronologique)
 hagen-n,Hagen,Nicolas Hagen,2,2,2,administrateur,1926,1937,Documentation générale (par ordre chronologique)
-dewez,Dewez,Dewez,2,2,2,administrateur,1936,1937,Documentation générale (par ordre chronologique); Mines et métallurgie
 loste,Loste,Loste,2,2,2,administrateur,1936,1937,Documentation générale (par ordre chronologique); Mines et métallurgie
 laurent,Laurent,Laurent,2,2,2,administrateur,1936,1937,Documentation générale (par ordre chronologique); Mines et métallurgie
 van-bree-v,Van-Brée,V. Van-Brée,2,2,2,administrateur,1936,1937,Documentation générale (par ordre chronologique); Mines et métallurgie
@@ -130,7 +129,6 @@ e-du-castel,É du Castel,É du Castel,1,1,2,president_directeur_general,1951,195
 h-dewez,H Dewez,H Dewez,1,1,2,vice_president,1951,1951,Documentation générale (par ordre chronologique); Mines et métallurgie
 j-puerari,J Puerari,J Puerari,1,1,2,administrateur,1951,1951,Documentation générale (par ordre chronologique); Mines et métallurgie
 d-etudes-minieres-en-extreme-orient-s,d'études minières en Extrême- Orient,Sté d'études minières en Extrême- Orient,1,1,2,administrateur,1951,1951,Documentation générale (par ordre chronologique); Mines et métallurgie
-repr-rothschild,repr. Rothschild],repr. Rothschild],1,1,2,administrateur,1951,1951,Documentation générale (par ordre chronologique); Mines et métallurgie
 ropadzi-a,Ropadzi,A. Ropadzi,1,1,2,president,1937,1951,Documentation générale (par ordre chronologique); Mines et métallurgie
 thurneyssen-g,Thurneyssen,G. Thurneyssen,1,1,2,administrateur,1937,1951,Documentation générale (par ordre chronologique); Mines et métallurgie
 meyer,Meyer,Meyer,1,1,2,administrateur,1937,1951,Documentation générale (par ordre chronologique); Mines et métallurgie
@@ -151,7 +149,6 @@ javary-p,Javary,P. Javary; P.-E. Javary,1,1,2,administrateur,1938,1940,Mines et 
 borduge-m,Borduge,Borduge,1,1,2,administrateur,1940,1945,Mines et métallurgie
 puerari-j,Puerari,J. Puerari,1,1,2,administrateur,1948,1953,Mines et métallurgie
 singer-f,Singer,F. M. Singer,1,1,2,administrateur,1911,1912,Mines et métallurgie
-courmes-statuts-deposes-chez-me-robin-a,Courmes. Statuts déposés chez Me Robin,A. Courmes. Statuts déposés chez Me Robin,1,1,2,administrateur,1911,1912,Mines et métallurgie
 burns-j,Burns,James Burns,1,1,1,administrateur,1922,1922,Documentation générale (par ordre chronologique)
 j-t-walker-h,J.-T. Walker,Hon J.-T. Walker,1,1,1,administrateur,1922,1922,Documentation générale (par ordre chronologique)
 hon-lord-inchcape-r,Hon. Lord Inchcape,Right Hon. Lord Inchcape,1,1,1,administrateur,1922,1922,Documentation générale (par ordre chronologique)
@@ -163,13 +160,11 @@ criny-de-verteuil-l,Criny de Verteuil,Léonce Criny de Verteuil,1,1,1,administra
 auvray-a,Auvray,A. Auvray,1,1,1,administrateur,1922,1922,Documentation générale (par ordre chronologique)
 f-van-bree,F Van Bree,F Van Bree,1,1,1,administrateur,1922,1922,Documentation générale (par ordre chronologique)
 g-laroque,G Laroque,G Laroque,1,1,1,administrateur,1922,1922,Documentation générale (par ordre chronologique)
-admin-pub-moutarde-diaphane-louit-freres,admin. Pub: MOUTARDE DIAPHANE LOUIT Frères,admin. Pub: MOUTARDE DIAPHANE LOUIT Frères,1,1,1,administrateur,1922,1922,Documentation générale (par ordre chronologique)
 hon-lord-inch-cape-r,Hon. Lord Inch- cape,Right Hon. Lord Inch- cape,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 theodore-c-amsden-esq,Théodore-C. Amsden Esq,Théodore-C. Amsden Esq,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 armstrong-l,Armstrong,L. Armstrong,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 allegre-r,Allègre,Robert Allègre,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 artaud-a,Artaud,Adrien Artaud,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
-etabl-ballande,Établ. Ballande,Établ. Ballande,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 gerdret-g,Gerdret,G. Gerdret,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 horton-g,Horton,Georges Horton,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 laivie-e,Laivie,E. Laivie,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
@@ -194,8 +189,6 @@ p-guiraud,P Guiraud,P Guiraud,1,1,1,administrateur,1926,1926,Documentation gén�
 aron-s,Aron,S. Aron,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 scote-f,Scote,F. Scote,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 laubreaux-h,Laubreaux,H. Laubreaux,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
-guiraud-ile-ambrym-paubreaux-p,Guiraud. Ile Ambrym: Paubreaux,P. Guiraud. Ile Ambrym: Paubreaux,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
-cams-coppens-ile-de-malo-balen,Cams. —- Coppens. Ile de Malo: Balen,Cams. —- Coppens. Ile de Malo: Balen,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 lachaize,Lachaize,Lachaize,1,1,1,administrateur,1926,1926,Documentation générale (par ordre chronologique)
 jameau-j,Jameau,J. Jameau,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
 pinelli-j,Pinelli,J. Pinelli,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
@@ -214,8 +207,6 @@ allard,Allard,Allard,1,1,1,administrateur,1937,1937,Documentation générale (pa
 descemet,Descemet,Descemet,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
 schoeffer,Schoeffer,Schoeffer,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
 willier,Willier,Willier,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
-raut-maison-barrau-g,Raut. MAISON BARRAU,Georges Raut. MAISON BARRAU,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
-a-b-c-e-edit-lieber-c,A. B. C. 5e édit. Lieber,Codes A. B. C. 5e édit. Lieber,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
 lugagne,Lugagne,Lugagne,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
 comptoirs-en-nouvelle-caledonie-b,COMPTOIRS en NOUVELLE-CALÉDONIE,Bentley COMPTOIRS en NOUVELLE-CALÉDONIE,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
 etc-exportation-cafes,etc. EXPORTATION: Cafés,etc. EXPORTATION: Cafés,1,1,1,administrateur,1937,1937,Documentation générale (par ordre chronologique)
@@ -230,20 +221,16 @@ fricotte,Fricotté,Fricotté,1,1,1,administrateur,1932,1932,Documentation géné
 frouin,Frouin,Frouin,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 houdie,Houdié,Houdié,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 montmartre-m,Montmartre,Mission Montmartre,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
-payet-puillet,Payet. Puillet,Payet. Puillet,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 de-preville,De Préville,De Préville,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 freres-r,frères,Rodin frères,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 rolland-o,Rolland,O. Rolland,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
-rossi-mme-vve-bladinieres-mele-hennequin,Rossi. Mme Vve Bladinières. Mélé: Hennequin,Rossi. Mme Vve Bladinières. Mélé: Hennequin,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 leeman,Leeman,Leeman,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 ed-poulllet,Ed. Poulllet,Ed. Poulllet,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
-pujol-tagade-paul-audrain,Pujol. Tagadé: Paul Audrain,Pujol. Tagadé: Paul Audrain,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 cacao-r,(cacao,Rimbert (cacao,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 goudard,Goudard,Goudard,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 rolland-cacao-e,Rolland (cacao,Émile Rolland (cacao,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 coprah-ile-d-api-naturel-freres-cafe,coprah). Île d'Api: Naturel frères (café,coprah). Île d'Api: Naturel frères (café,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 gomez,Gomez,Gomez,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
-galibert-ile-de-santo-maison-barrau,Galibert. Île de Santo: Maison Barrau,Galibert. Île de Santo: Maison Barrau,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 calonne,Calonne,Calonne,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 cassin-r,Cassin,Cassin,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 freres-c,frères,Coulon frères,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
@@ -254,14 +241,12 @@ catholique-de-port-olry-m,catholique de Port-Olry,Mission catholique de Port-Olr
 freres-n,frères,Naturel frères,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 ratard,Ratard,Ratard,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 russet,Russet,Russet,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
-chapuis-ile-d-aore-dedieu,Chapuis. Île d'Aoré.: Dedieu,Chapuis. Île d'Aoré.: Dedieu,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 ed-deplanque-cacao,Ed. Déplanque (cacao,Ed. Déplanque (cacao,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 douyere-j,Douyère,J.-B. Douyère,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 eug-gardel,Eug. Gardel,Eug. Gardel,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 mazoyer,Mazoyer,Mazoyer,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 renevier,Renevier,Renevier,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 gabriel,Gabriel,Gabriel,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
-gane-ile-pentecote-j-dupuy,Gané. Île Pentecôte: J. Dupuy,Gané. Île Pentecôte: J. Dupuy,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 grelier,Grelier,Grelier,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 combes-f,Combes,Combes,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 mayaud,Mayaud,Mayaud,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
@@ -276,9 +261,8 @@ savoie,Savoie,Savoie,1,1,1,administrateur,1932,1932,Documentation générale (pa
 theuil-l,Theuil,L. Theuil,1,1,1,administrateur,1932,1932,Documentation générale (par ordre chronologique)
 martinet-h,Martinet,H.-G. Martinet,1,1,1,president_directeur_general,1951,1951,Documentation générale (par ordre chronologique)
 dumait-a,Dumait,A. Dumait,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
-magnin-j,Magnin,Magnin,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
+magnin,Magnin,Magnin,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 klein-p,Klein,P. Klein,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
-francais-des-nouvelles-hebrides-nb-c,français des Nouvelles-Hébrides. N.B,Comptoirs français des Nouvelles-Hébrides. N.B,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 andre-l-ballande,André-L. Ballande,André-L. Ballande,1,1,1,president,1951,1951,Documentation générale (par ordre chronologique)
 bonneaud,Bonneaud,Bonneaud,1,1,1,vice_president,1951,1951,Documentation générale (par ordre chronologique)
 laroque,Laroque,Laroque,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
@@ -291,7 +275,6 @@ descemet-o,Descemet,O. Descemet,1,1,1,administrateur_delegue,1951,1951,Documenta
 allix,Allix,Allix,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 bodard-a,Bodard,A. Bodard,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 marchessou,Marchessou,Marchessou,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
-raut-il-g,Raut. Il,Georges Raut. Il,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 lessault-s,Lessault,Simon Lessault,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 benedic-e,Bénédic,Édouard Bénédic,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 chappuis-r,Chappuis,Roger Chappuis,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
@@ -302,10 +285,12 @@ selon-monde-des-affaires,selon Monde des affaires,selon Monde des affaires,1,1,1
 laroque-r,Laroque,Roger Laroque,1,1,1,president,1951,1951,Documentation générale (par ordre chronologique)
 imbault-p,Imbault,P. Imbault,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
 gaudriault-g,Gaudriault,G. Gaudriault,1,1,1,administrateur,1951,1951,Documentation générale (par ordre chronologique)
+pres-m-a-ballande,Prés.: M. A. Ballande,Prés.: M. A. Ballande,1,1,1,administrateur,1935,1935,Mines et métallurgie
+adm-del-m-berge,Adm.- dél.: M. Berge,Adm.- dél.: M. Berge,1,1,1,administrateur,1935,1935,Mines et métallurgie
+adm-mm-g-guiraud,Adm.: MM. G. Guiraud,Adm.: MM. G. Guiraud,1,1,1,administrateur,1935,1935,Mines et métallurgie
 chavanne-l,Chavanne,L. Chavanne,1,1,1,administrateur,1931,1931,Mines et métallurgie
 milliard-g,Milliard,G. Milliard,1,1,1,administrateur,1933,1933,Mines et métallurgie
 tandonnet-l,Tandonnet,L. Tandonnet,1,1,1,administrateur,1909,1909,Autres sociétés
-deposes-chez-me-chavane-s,déposés chez Me Chavane,Statuts déposés chez Me Chavane,1,1,1,administrateur,1909,1909,Autres sociétés
 chenorkian-j,Chenorkian,J. Chenorkian,1,1,1,administrateur,1931,1931,Autres sociétés
 wherler-s,Wherler,Samuel Wherler,1,1,1,administrateur,1903,1903,Mines et métallurgie
 pyne-s,Pyne,Salter Pyne,1,1,1,administrateur,1903,1903,Mines et métallurgie
@@ -320,7 +305,6 @@ armstrong-g,Armstrong,G. Armstrong,1,1,1,administrateur,1912,1912,Mines et méta
 mony-penny-w,Mony-Penny,W. Mony-Penny,1,1,1,administrateur,1912,1912,Mines et métallurgie
 bernheim-a,Bernheim,A. Bernheim,1,1,1,administrateur,1910,1910,Mines et métallurgie
 schmidt-a,Schmidt,A. Schmidt,1,1,1,administrateur,1910,1910,Mines et métallurgie
-deposes-chez-me-huillier-s,déposés chez Me Huillier,Statuts déposés chez Me Huillier,1,1,1,administrateur,1910,1910,Mines et métallurgie
 e-carbonnel,E Carbonnel,E Carbonnel,1,1,1,administrateur,1912,1912,Mines et métallurgie
 et-eugene-desoutter,et Eugène Desoutter,et Eugène Desoutter,1,1,1,administrateur,1920,1920,Mines et métallurgie
 wright-w,Wright,W. Wright,1,1,1,president,1901,1901,Mines et métallurgie
@@ -370,14 +354,12 @@ j-smith,-J. Smith,-J. Smith,1,1,1,administrateur,1882,1882,Mines et métallurgie
 solacroup-e,Solacroup,Émile Solacroup,1,1,1,administrateur,1882,1882,Mines et métallurgie
 lecarpentier-j,Lecarpentier,J.-B. Lecarpentier,1,1,1,administrateur,1882,1882,Mines et métallurgie
 ed-marbeau,Ed. Marbeau,Ed. Marbeau,1,1,1,administrateur,1882,1882,Mines et métallurgie
-marbeau-aine-commissaires-mm-ph-hebert-h,Marbeau aîné. Commissaires: MM. Ph. Hébert,H. Marbeau aîné. Commissaires: MM. Ph. Hébert,1,1,1,administrateur,1882,1882,Mines et métallurgie
 marbeau-p,Marbeau,Paul Marbeau,1,1,1,administrateur,1882,1882,Mines et métallurgie
 ephrussi,Ephrussi,Ephrussi,1,1,1,administrateur,1906,1906,Mines et métallurgie
 thirria,Thirria,Thirria,1,1,1,administrateur,1906,1906,Mines et métallurgie
 sionnest-g,Sionnest,Guyot- Sionnest,1,1,1,administrateur,1906,1906,Mines et métallurgie
 maneuvrier-e,Maneuvrier,Maneuvrier,1,1,1,administrateur,1906,1906,Mines et métallurgie
 g-mirabaud,G Mirabaud,G Mirabaud,1,1,1,administrateur,1906,1906,Mines et métallurgie
-aron-albert-vickers-commissaires-mm-lutscher-j,Aron. Albert Vickers. Commissaires: MM. Lutscher,Jules Aron. Albert Vickers. Commissaires: MM. Lutscher,1,1,1,administrateur,1906,1906,Mines et métallurgie
 installations,Installations,Installations,1,1,1,administrateur,1910,1910,Mines et métallurgie
 d-exploitation-m,d'exploitation,Matériel d'exploitation,1,1,1,administrateur,1910,1910,Mines et métallurgie
 immeubles-en-nouvelle-caledonie,immeubles en Nouvelle- Calédonie,immeubles en Nouvelle- Calédonie,1,1,1,administrateur,1910,1910,Mines et métallurgie
@@ -388,8 +370,6 @@ carrier-m,Carrier,Maurice Carrier,1,1,1,administrateur,1922,1922,Mines et métal
 ernest-guyot-sionnest-e,Ernest Guyot-Sionnest,Étienne- Ernest Guyot-Sionnest,1,1,1,administrateur,1922,1922,Mines et métallurgie
 de-la-ville-le-roulx-p,de La Ville Le Roulx,Pierre de La Ville Le Roulx,1,1,1,administrateur,1922,1922,Mines et métallurgie
 de-waru-m,de Waru,Maurice de Waru,1,1,1,administrateur,1922,1922,Mines et métallurgie
-administrateurs-commissaires-mm-paul-d-auvigny,administrateurs. Commissaires: MM. Paul d'Auvigny,administrateurs. Commissaires: MM. Paul d'Auvigny,1,1,1,administrateur,1922,1922,Mines et métallurgie
-pertes-cet-exercice-a-vu-s-etendre,pertes. Cet exercice a vu s'étendre,pertes. Cet exercice a vu s'étendre,1,1,1,administrateur,1922,1922,Mines et métallurgie
 adm-mm-l-allegre,Adm.: MM. L. Allègre,Adm.: MM. L. Allègre,1,1,1,administrateur,1938,1938,Mines et métallurgie
 chesneau-g,Chesneau,G. Chesneau,1,1,1,administrateur,1938,1938,Mines et métallurgie
 robilliard,Robilliard,Robilliard,1,1,1,administrateur,1948,1948,Mines et métallurgie
@@ -399,7 +379,6 @@ u-k-lacoste,U K. Lacoste,U K. Lacoste,1,1,1,administrateur,1953,1953,Mines et m�
 max-a,Max,A. Max,1,1,1,administrateur,1912,1912,Mines et métallurgie
 dubard-h,Dubard,H. Dubard,1,1,1,administrateur,1912,1912,Mines et métallurgie
 laparra-g,Laparra,G. Laparra,1,1,1,administrateur,1912,1912,Mines et métallurgie
-deposes-chez-me-charpentier-s,déposés chez Me Charpentier,Statuts déposés chez Me Charpentier,1,1,1,administrateur,1912,1912,Mines et métallurgie
 martini,MARTINI,MARTINI,1,1,1,administrateur,1914,1914,Mines et métallurgie
 dehesdin,DEHESDIN,DEHESDIN,1,1,1,administrateur,1914,1914,Mines et métallurgie
 pomerance-a,Pomérance,A. Pomérance,2,0,2,secretaire,1936,1937,Documentation générale (par ordre chronologique); Mines et métallurgie
@@ -409,4 +388,3 @@ a-noumea-l,à Nouméa,L. Vincent à Nouméa,1,0,1,directeur,1926,1926,Documentat
 berge-a-noumea-j,Berge à Nouméa,J. Berge à Nouméa,1,0,1,directeur,1937,1937,Documentation générale (par ordre chronologique)
 lutscher-f,Lutscher,Lutscher,1,0,1,commissaire_aux_comptes,1899,1899,Mines et métallurgie
 josat,Josat,Josat,1,0,1,commissaire_aux_comptes,1899,1899,Mines et métallurgie
-social-dix-millions-c,social: Dix millions,Capital social: Dix millions,1,0,1,commissaire_aux_comptes,1899,1899,Mines et métallurgie

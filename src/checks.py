@@ -360,14 +360,37 @@ def check_dataset() -> None:
                   "Sociétés aurifères en Côte-d'Ivoire", "Leroy, Le Caoutchouc",
                   "Valeurs inscrites à la Cote des banquiers à Paris en 1913"]:
         check(f"  survey not a company node: {title[:44]!r}", title not in firms)
-    # No firm should have an implausible number of distinct directors. The
-    # genuine maximum here is ~96 (Cie Generale Francaise de Tramways, observed
-    # 1880-1960); the pseudo-firms reached 254 and 286.
+    # No firm should have an implausible number of distinct directors.
+    #
+    # The ceiling is recalibrated: it was 120, set when the dataset had one
+    # extraction genre and 77% attribution, and the genuine maximum was ~96.
+    # With four genres and 87% attribution the largest legitimate firms now
+    # reach 186 (Banque de l'Indochine, observed across 61 distinct years
+    # 1875-1971, about three directors a year), followed by Crédit foncier
+    # colonial at 156 and Messageries maritimes at 142 - all of them the
+    # longest-lived and best-documented firms in the collection. The failure
+    # this guards against is a *pseudo-firm*: a survey document treated as a
+    # company node, which reached 254 and 286. 240 sits between the two.
     worst = max(companies, key=lambda r: int(r["n_directors"] or 0), default=None)
     if worst:
         check("  no firm has an implausible director count",
-              int(worst["n_directors"]) <= 150,
+              int(worst["n_directors"]) <= 240,
               f"{worst['name'][:50]!r} has {worst['n_directors']}")
+
+    # A pseudo-firm absorbs a whole survey at once, so the sharper test is
+    # directors in a *single* firm-year: a real board, even a large founding
+    # list, does not run to hundreds. The observed maximum is 90 (Compagnie du
+    # Port de Fedhala, 1921 - plausibly a constitution list rather than a
+    # board; see METHODOLOGY §5). 200 catches the 254/286 pattern and clears
+    # every real firm by a wide margin.
+    per_year: Counter = Counter()
+    for e in load("edges_person_company.csv"):
+        if e["is_board_seat"] == "1" and e["year"]:
+            per_year[(e["company_id"], e["year"])] += 1
+    if per_year:
+        (cid, yr), n = per_year.most_common(1)[0]
+        check("  no firm-year has an implausible director count", n <= 200,
+              f"{cid} in {yr} has {n}")
 
     il = load("edges_company_interlock.csv")
     if il:
@@ -563,10 +586,21 @@ def check_labels() -> None:
         fr_fig = os.path.join(ROOT, "figures", "fig1_core_interlocks.svg")
         with open(fr_fig, encoding="utf-8") as fh:
             fr_txt = fh.read()
-        for term in ("Morocco", "Indochina", "French West Africa"):
-            check(f"  English figure legend carries {term!r}", term in txt)
-            check(f"  source figure legend does not", term not in fr_txt,
-                  f"{term} leaked into the French figure")
+        # Derived from the figure, not hardcoded: which three territories are
+        # largest depends on the data, and Maroc dropped out of the top three
+        # when the annuaire genres were merged.
+        from make_figures import CORE_H, CORE_W, prepare_core
+        from build_network import read_csv as _read
+
+        _, _, top3, _ = prepare_core({r["company_id"]: r for r in
+                                      _read("companies.csv")}, 170, 2,
+                                     CORE_W, CORE_H)
+        for src in top3:
+            want = to_en(src)
+            check(f"  English legend carries {want!r} for {src!r}", want in txt)
+            if want != src:
+                check(f"  source figure keeps {src!r}, not {want!r}",
+                      want not in fr_txt, f"{want} leaked into the French figure")
 
 
 def check_org_key() -> None:

@@ -1,9 +1,9 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
+briand-g,Briand,Briand; G. Briand; Gustave Briand,5,5,13,administrateur,1922,1933,Documents généraux; Sociétés diverses
 rehm-v,Rehm,Rehm; V. Rehm; Victor Rehm,5,5,13,administrateur,1922,1937,Documents généraux; Sociétés diverses
 mutignon-e,Mutignon,Eugène Mutignon; Mutignon,5,5,9,administrateur,1922,1930,Documents généraux; Sociétés diverses
 benard-l,Bénard,L. Bénard; Lucien Bénard; Léonus Bénard,5,5,6,administrateur,1929,1951,Documents généraux; Sociétés diverses
 alexandre-p,Alexandre,P. Alexandre; Paul Alexandre,4,4,11,administrateur,1922,1940,Documents généraux; Sociétés diverses
-briand-g,Briand,G. Briand; Gustave Briand,4,4,9,administrateur,1922,1933,Documents généraux; Sociétés diverses
 grandjean-c,Grandjean,Ch. Grandjean; Charles Grandjean,4,4,5,president,1920,1926,Documents généraux; Sociétés diverses
 jacqueminet-a,Jacqueminet,A. Jacqueminet; Aristide Jacqueminet; Jacqueminet,3,3,8,administrateur,1922,1931,Documents généraux; Sociétés diverses
 artaud-a,Artaud,A. Artaud; Adrien Artaud,3,3,8,administrateur,1922,1933,Documents généraux; Sociétés diverses
@@ -18,7 +18,6 @@ del-porto-a,Del Porto,Del Porto,2,2,6,administrateur,1922,1933,Documents génér
 level-e,Level,Émile Level,2,2,5,administrateur,1925,1933,Documents généraux; Sociétés diverses
 fantauzzi-j,Fantauzzi,J. Fantauzzi,2,2,5,administrateur,1937,1948,Documents généraux; Sociétés diverses
 de-mones-del-pujol-g,de Monès del Pujol,Gilbert de Mones del Pujol; Gilbert de Monès del Pujol,2,2,4,administrateur,1926,1931,Documents généraux; Sociétés diverses
-briand,Briand,Briand,2,2,4,administrateur,1922,1927,Documents généraux; Sociétés diverses
 baugnies-g,Baugnies,G. Baugnies,2,2,4,administrateur,1926,1933,Documents généraux; Sociétés diverses
 buzon-j,Buzon,J.-P. Buzon,2,2,4,administrateur,1937,1945,Documents généraux; Sociétés diverses
 levita-j,Levita,J. Levita,2,2,4,administrateur,1937,1945,Documents généraux; Sociétés diverses
@@ -47,7 +46,6 @@ furst-a,Furst,A. Furst; A. Furst [†],1,1,3,administrateur,1927,1933,Sociétés
 leon-n,Léon,N. Léon,1,1,3,administrateur,1927,1933,Sociétés diverses
 caquas-j,Caquas,J. Caquas,1,1,3,administrateur,1937,1945,Sociétés diverses
 imp-tissus,Imp.: tissus,Imp.: tissus,1,1,3,administrateur,1922,1937,Documents généraux
-exp-sucre,Exp.: sucre,Exp.: sucre,1,1,3,administrateur,1922,1926,Documents généraux
 tissus,Tissus,Tissus,1,1,3,administrateur,1922,1951,Documents généraux
 import,Import,Import,1,1,3,administrateur,1937,1937,Documents généraux
 brunet-p,Brunet,Paul Brunet,1,1,2,administrateur,1931,1931,Sociétés diverses
@@ -56,7 +54,6 @@ desaifres-l,Désaïfres,Désaïfres; Louis Désaïfres,1,1,2,president,1922,1922
 chatel-j,Châtel,J. Châtel,1,1,2,administrateur,1922,1926,Documents généraux
 imp-modes,Imp.: modes,Imp.: modes,1,1,2,administrateur,1922,1926,Documents généraux
 lagrave,Lagrave,Lagrave,1,1,2,administrateur,1922,1926,Documents généraux
-exp-essences,Exp.: essences,Exp.: essences,1,1,2,administrateur,1926,1937,Documents généraux
 dupont-l,Dupont,Louis Dupont,1,1,2,administrateur,1926,1937,Documents généraux
 dalais-g,Dalais,Gabriel Dalais,1,1,2,administrateur,1926,1937,Documents généraux
 chater-e,Chater,Edmond Chater,1,1,1,administrateur,1922,1922,Sociétés diverses
@@ -66,9 +63,7 @@ roi-m,Roi,Mesnil-le Roi,1,1,1,administrateur,1922,1922,Sociétés diverses
 rendu-m,Rendu,Marcel Rendu,1,1,1,administrateur,1922,1922,Sociétés diverses
 bernard-l,Bernard,Lucien Bernard,1,1,1,administrateur,1930,1930,Sociétés diverses
 bonnet-p,Bonnet,Paul Bonnet,1,1,1,administrateur,1930,1930,Sociétés diverses
-briand-p,Briand,Paul Alexandre. Gustave Briand,1,1,1,administrateur,1931,1931,Sociétés diverses
 mutingon-e,Mutingon,Eugène Mutingon,1,1,1,administrateur,1931,1931,Sociétés diverses
-benard-eugene-mutignon-ambroise-rendu-l,Bénard. Eugène Mutignon. Ambroise Rendu,Lucien Bénard. Eugène Mutignon. Ambroise Rendu,1,1,1,administrateur,1931,1931,Sociétés diverses
 coulisse,Coulisse,Coulisse,1,1,1,administrateur,1931,1931,Sociétés diverses
 gouverneur-general-honoraire-des-colonies,gouverneur général honoraire des Colonies,gouverneur général honoraire des Colonies,1,1,1,administrateur,1920,1920,Sociétés diverses
 immobiliere,Immobilière,Immobilière,1,1,1,administrateur,1920,1920,Sociétés diverses
@@ -90,7 +85,6 @@ j-de-margerie,J de Margerie,J de Margerie,1,1,1,administrateur,1950,1950,Sociét
 g-vernes,G Vernes,G Vernes,1,1,1,administrateur,1950,1950,Sociétés diverses
 jourdain-j,Jourdain,J. Jourdain,1,1,1,president_directeur_general,1953,1953,Sociétés diverses
 lemoine-v,Lemoine,V. Lemoine,1,1,1,administrateur,1953,1953,Sociétés diverses
-alph-mas,Alph. Mas,Alph. Mas,1,1,1,president,1922,1922,Documents généraux
 gerard-c,Gérard,Camille Gérard,1,1,1,administrateur,1922,1922,Documents généraux
 giron-de-la-massuere-l,Giron de la Massuère,Léopold Giron de la Massuère,1,1,1,administrateur,1922,1922,Documents généraux
 ant-baret,Ant. Baret,Ant. Baret,1,1,1,administrateur,1922,1922,Documents généraux
@@ -100,25 +94,12 @@ blay-a,Blay,André Blay,1,1,1,administrateur,1922,1922,Documents généraux
 michel-g,Michel,Georges Michel,1,1,1,administrateur,1922,1922,Documents généraux
 de-guigne-a,de Guigné,Adrien de Guigné,1,1,1,administrateur,1922,1922,Documents généraux
 auber-j,Auber,Jules Auber,1,1,1,administrateur,1922,1922,Documents généraux
-immobiliere-commercants-saint-denis-b,immobilière. Commerçants. SAINT-DENIS. B,immobilière. Commerçants. SAINT-DENIS. B,1,1,1,administrateur,1922,1922,Documents généraux
 araoux-h,Araoux,H. Araoux,1,1,1,administrateur,1922,1922,Documents généraux
 comest,Comest,Comest,1,1,1,administrateur,1922,1922,Documents généraux
-liquides-exp-tous-prod-essences,liquides. Exp.: tous prod.: essences,liquides. Exp.: tous prod.: essences,1,1,1,administrateur,1922,1922,Documents généraux
 chouchou-albert-blay,chouchou... Albert Blay,chouchou... Albert Blay,1,1,1,administrateur,1922,1922,Documents généraux
-nouveaut-exp-essence-geranium,nouveaut. Exp.: essence géranium,nouveaut. Exp.: essence géranium,1,1,1,administrateur,1922,1922,Documents généraux
-exp-essences-dadabhaye-moussa,Exp.: essences. Dadabhaye Moussa,Exp.: essences. Dadabhaye Moussa,1,1,1,administrateur,1922,1922,Documents généraux
-comest-frederic-dor,comest. Frédéric Dor,comest. Frédéric Dor,1,1,1,administrateur,1922,1922,Documents généraux
 imp-aliment,Imp.: aliment,Imp.: aliment,1,1,1,administrateur,1922,1922,Documents généraux
 quincaill,Quincaill,Quincaill,1,1,1,administrateur,1922,1922,Documents généraux
-imp-tissus-exp-sucre,Imp.: tissus. Exp.: sucre,Imp.: tissus. Exp.: sucre,1,1,1,administrateur,1922,1922,Documents généraux
-rhum-gaveaux,rhum. Gaveaux,rhum. Gaveaux,1,1,1,administrateur,1922,1922,Documents généraux
 giraud,Giraud,Giraud,1,1,1,administrateur,1922,1922,Documents généraux
-rhum-ed-giraud,rhum. Ed. Giraud,rhum. Ed. Giraud,1,1,1,administrateur,1922,1922,Documents généraux
-alcool-leonce-giraud,alcool. Léonce Giraud,alcool. Léonce Giraud,1,1,1,administrateur,1922,1922,Documents généraux
-nouveautes-a-gunet,nouveautés. A. Gunet,nouveautés. A. Gunet,1,1,1,administrateur,1922,1922,Documents généraux
-quincaill-anatole-hugot,Quincaill. Anatole Hugot,Quincaill. Anatole Hugot,1,1,1,administrateur,1922,1922,Documents généraux
-exp-cafe,Exp.: café,Exp.: café,1,1,1,administrateur,1922,1922,Documents généraux
-rhum-laffon,rhum. Laffon,rhum. Laffon,1,1,1,administrateur,1922,1922,Documents généraux
 essences-m-lagrave,essences.. M. Lagrave,essences.. M. Lagrave,1,1,1,administrateur,1922,1922,Documents généraux
 prod-madagascar,prod Madagascar,prod Madagascar,1,1,1,administrateur,1922,1922,Documents généraux
 boulle-v,Boullé,Victor Boullé,1,1,1,administrateur_delegue,1926,1926,Documents généraux
@@ -135,21 +116,10 @@ mendes-c,Mendes,Chevallier Mendes,1,1,1,administrateur,1926,1926,Documents gén�
 girard-m,Girard,Max Girard,1,1,1,administrateur,1926,1926,Documents généraux
 eug-mutignon,Eug. Mutignon,Eug. Mutignon,1,1,1,administrateur,1926,1926,Documents généraux
 rhem-v,Rhem,Victor Rhem,1,1,1,administrateur,1926,1926,Documents généraux
-commercants-saint-denis-jh-alezan,COMMERÇANTS Saint-Denis. Jh. Alezan,COMMERÇANTS Saint-Denis. Jh. Alezan,1,1,1,administrateur,1926,1926,Documents généraux
 bimbeloterie,Bimbeloterie,Bimbeloterie,1,1,1,administrateur,1926,1926,Documents généraux
-coutellerie-h-arnoux,coutellerie. H. Arnoux,coutellerie. H. Arnoux,1,1,1,administrateur,1926,1926,Documents généraux
 comestibles,Comestibles,Comestibles,1,1,1,administrateur,1926,1926,Documents généraux
-parfumerie-rene-barre,parfumerie. René Barre,parfumerie. René Barre,1,1,1,administrateur,1926,1926,Documents généraux
-geranium-albert-blay,géranium. Albert Blay,géranium. Albert Blay,1,1,1,administrateur,1926,1926,Documents généraux
-exp-tous-produits-caille-freres,Exp.: tous produits. Caillé frères,Exp.: tous produits. Caillé frères,1,1,1,administrateur,1926,1926,Documents généraux
-representation-tous-produits-carrimje-noordbhay,représentation tous produits. Carrimje Noordbhay,représentation tous produits. Carrimje Noordbhay,1,1,1,administrateur,1926,1926,Documents généraux
-quincaillerie-chane-hune,quincaillerie. Chane-Hune,quincaillerie. Chane-Hune,1,1,1,administrateur,1926,1926,Documents généraux
 imp-alimentation-generale,Imp.: alimentation générale,Imp.: alimentation générale,1,1,1,administrateur,1926,1926,Documents généraux
-exp-essence-geranium,Exp.: essence géranium,Exp.: essence géranium,1,1,1,administrateur,1926,1926,Documents généraux
-exp-essences-paul-chatel,Exp.: essences. Paul Chatel,Exp.: essences. Paul Chatel,1,1,1,administrateur,1926,1926,Documents généraux
-exp-dadabhaye-moussa,exp. Dadabhaye Moussa,exp. Dadabhaye Moussa,1,1,1,administrateur,1926,1926,Documents généraux
 consignation,Consignation,Consignation,1,1,1,administrateur,1926,1926,Documents généraux
-comestibles-r-douyere,comestibles. R. Douyère,comestibles. R. Douyère,1,1,1,administrateur,1926,1926,Documents généraux
 le-vigoureux-v,Le Vigoureux,Victor Le Vigoureux,1,1,1,administrateur,1926,1926,Documents généraux
 desbief-a,Desbief,André Desbief,1,1,1,administrateur,1937,1937,Documents généraux
 breguet-j,Bréguet,Jacques Bréguet,1,1,1,president,1937,1937,Documents généraux
@@ -161,30 +131,9 @@ de-saint-laumer-j,de Saint- Laumer,Jean de Saint- Laumer,1,1,1,administrateur,19
 de-tourris-c,de Tourris,Camille de Tourris,1,1,1,administrateur,1937,1937,Documents généraux
 incertains-r,incertains,Renseignements incertains,1,1,1,administrateur,1937,1937,Documents généraux
 harth-g,Harth,Georges Harth,1,1,1,administrateur,1937,1937,Documents généraux
-commercants-saint-denis-paul-alezan,COMMERCANTS Saint-Denis. Paul Alezan,COMMERCANTS Saint-Denis. Paul Alezan,1,1,1,administrateur,1937,1937,Documents généraux
 alimentation,Alimentation,Alimentation,1,1,1,administrateur,1937,1937,Documents généraux
-articles-de-paris-h-arnoux-comestibles,articles de Paris. H. Arnoux. —- Comestibles,articles de Paris. H. Arnoux. —- Comestibles,1,1,1,administrateur,1937,1937,Documents généraux
-chouchou-g-bailly,chouchou. G. Bailly,chouchou. G. Bailly,1,1,1,administrateur,1937,1937,Documents généraux
-export-andre-blay,export. André Blay,export. André Blay,1,1,1,administrateur,1937,1937,Documents généraux
-exp-tous-produits-jean-chatel,Exp.: tous produits. Jean Chatel,Exp.: tous produits. Jean Chatel,1,1,1,administrateur,1937,1937,Documents généraux
-exp-rhum-paul-chatel,Exp.: rhum. Paul Chatel,Exp.: rhum. Paul Chatel,1,1,1,administrateur,1937,1937,Documents généraux
 export-sucre,Export.: sucre,Export.: sucre,1,1,1,administrateur,1937,1937,Documents généraux
-export-hubert-henry-delisle,export. Hubert-Henry Delisle,export. Hubert-Henry Delisle,1,1,1,administrateur,1937,1937,Documents généraux
 williams-j,Williams,J.-B. Williams,1,1,1,president,1937,1937,Documents généraux
-nantes-p-hoareau,Nantes. P. Hoareau,Nantes. P. Hoareau,1,1,1,administrateur,1937,1937,Documents généraux
-sainte-rose-aristide-beurard,Sainte-Rose. Aristide Beurard,Sainte-Rose. Aristide Beurard,1,1,1,administrateur,1937,1937,Documents généraux
-sainte-rose-bertrand-blanchet,Sainte-Rose. Bertrand Blanchet,Sainte-Rose. Bertrand Blanchet,1,1,1,administrateur,1937,1937,Documents généraux
-sainte-suzanne-abbe-bruignieres,Sainte-Suzanne. Abbé Bruignières,Sainte-Suzanne. Abbé Bruignières,1,1,1,administrateur,1937,1937,Documents généraux
-saint-benoit-clement-galmard,Saint-Benoit. Clément Galmard,Saint-Benoit. Clément Galmard,1,1,1,administrateur,1937,1937,Documents généraux
-bellemene-octave-gruchet,Bellemène. Octave Gruchet,Bellemène. Octave Gruchet,1,1,1,administrateur,1937,1937,Documents généraux
-saint-paul-louis-hoareau,Saint-Paul. Louis Hoareau,Saint-Paul. Louis Hoareau,1,1,1,administrateur,1937,1937,Documents généraux
-saint-benoit-louis-latge,Saint-Benoît. Louis Latgé,Saint-Benoît. Louis Latgé,1,1,1,administrateur,1937,1937,Documents généraux
-saint-denis-augustin-lucas,Saint-Denis. Augustin Lucas,Saint-Denis. Augustin Lucas,1,1,1,administrateur,1937,1937,Documents généraux
-saint-paul-jules-nauche,Saint-Paul. Jules Nauche,Saint-Paul. Jules Nauche,1,1,1,administrateur,1937,1937,Documents généraux
-saint-denis-fleury-nirlo,Saint-Denis. Fleury Nirlo,Saint-Denis. Fleury Nirlo,1,1,1,administrateur,1937,1937,Documents généraux
-bellemene-alexis-paniandy,Bellemène. Alexis Paniandy,Bellemène. Alexis Paniandy,1,1,1,administrateur,1937,1937,Documents généraux
-sainte-suzanne-edgard-payet,Sainte-Suzanne. Edgard Payet,Sainte-Suzanne. Edgard Payet,1,1,1,administrateur,1937,1937,Documents généraux
-saint-andre-camille-riviere,Saint-André. Camille Rivière,Saint-André. Camille Rivière,1,1,1,administrateur,1937,1937,Documents généraux
 saint-leu-piere-roger,Saint-Leu. Piere Roger,Saint-Leu. Piere Roger,1,1,1,administrateur,1937,1937,Documents généraux
 saint-leu-raphael-vidot,Saint-Leu. Raphaël Vidot,Saint-Leu. Raphaël Vidot,1,1,1,administrateur,1937,1937,Documents généraux
 saint-andre-m,Saint-André,Saint-André,1,1,1,administrateur,1937,1937,Documents généraux
@@ -202,7 +151,5 @@ marx-p,Marx,Marx,1,1,1,administrateur,1951,1951,Documents généraux
 kichenin,Kichenin,Kichenin,1,1,1,administrateur,1951,1951,Documents généraux
 pinguet-j,Pinguet,Jean Pinguet,1,1,1,administrateur,1951,1951,Documents généraux
 hersent-g,Hersent,G. Hersent,1,1,1,administrateur,1951,1951,Documents généraux
-mercerie-andre-barbot,mercerie. André Barbot,mercerie. André Barbot,1,1,1,administrateur,1951,1951,Documents généraux
-essences-bata-s-a,essences. Bata (S. A.},essences. Bata (S. A.},1,1,1,administrateur,1951,1951,Documents généraux
 chaussures,Chaussures,Chaussures,1,1,1,administrateur,1951,1951,Documents généraux
 bonnefon-l,Bonnefon,L. E. Bonnefon,1,0,2,directeur,1922,1926,Documents généraux

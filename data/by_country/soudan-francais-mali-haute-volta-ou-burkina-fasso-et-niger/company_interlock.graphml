@@ -15,13 +15,13 @@
     <node id="culturecotonniereniger">
       <data key="n_label">Compagnie de Culture cotonnière du Niger, puis Compagnie générale du Niger</data>
       <data key="n_sectors">Industrie</data>
-      <data key="n_n_directors">28</data>
+      <data key="n_n_directors">27</data>
       <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
     </node>
     <node id="culturesdiakandape">
       <data key="n_label">Cultures de Diakandapé</data>
       <data key="n_sectors">Industrie</data>
-      <data key="n_n_directors">29</data>
+      <data key="n_n_directors">25</data>
       <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
     </node>
     <node id="elevagenigerdire">
@@ -33,13 +33,13 @@
     <node id="etudesexplorationsoudan">
       <data key="n_label">Société d'Études et d’exploration du Soudan</data>
       <data key="n_sectors">Industrie</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
     </node>
     <node id="minieresoudan">
       <data key="n_label">Société Minière du Soudan français</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">4</data>
+      <data key="n_n_directors">3</data>
       <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
     </node>
     <node id="plantationsambidedisisal">
@@ -51,7 +51,7 @@
     <node id="plantationshautevoltasisal">
       <data key="n_label">Société des Plantations de la Haute-Volta, sisal</data>
       <data key="n_sectors">Industrie</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Soudan français (Mali, Haute-Volta — ou Burkina-Fasso — et Niger)</data>
     </node>
     <edge id="e0" source="agricoleindustriellesoudan" target="culturecotonniereniger">

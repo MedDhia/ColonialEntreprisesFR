@@ -1,256 +1,414 @@
 company_id,name,sectors,n_ties,n_directors,first_year,last_year
-creditfoncieralgerietunisie,Crédit foncier d'Algérie-Tunisie,"Banques et groupes financiers, assurances",205,85,1911,1953
-banquealgerie,BANQUE DE L'ALGERIE,"Banques et groupes financiers, assurances",134,76,1881,1948
-constructionelectrique,CONSTRUCTION ÉLECTRIQUE,Documents généraux (par ordre chronologique),79,75,1925,1925
-ouenza,Société de l'Ouenza,Documents généraux (par ordre chronologique); Mines et carrières,96,65,1910,1948
-minesbouthaleb,MINES DU BOU-THALEB,Documents généraux (par ordre chronologique); Mines et carrières,72,48,1910,1953
-creditalgerien,"Crédit algérien, puis Crédit privé","Banques et groupes financiers, assurances",118,46,1880,1951
-banqueindustrielleafriquenord,Banque industrielle de l'Afrique du Nord,"Banques et groupes financiers, assurances",110,45,1919,1950
-algerienne,Compagnie algérienne,"Banques et groupes financiers, assurances; Documents généraux (par ordre chronologique); Industries agro-alimentaires",113,43,1874,1953
-cheminsferouestalgerien,Compagnie des Chemins de fer de l'Ouest-Algérien,"Transports terrestres, garages automobiles et agricoles",94,42,1879,1942
-cheminsferroutesalgerie,Société des Chemins de fer sur routes d'Algérie,"Transports terrestres, garages automobiles et agricoles",105,41,1906,1953
-velvetrum,VELVET-RUM,Documents généraux (par ordre chronologique),39,39,1919,1919
-palestro,Palestro,Documents généraux (par ordre chronologique),35,35,1910,1910
-tramwayselectriquesoran,Tramways électriques d'Oran,"Transports terrestres, garages automobiles et agricoles",74,32,1901,1953
-senellemaubeuge,SENELLE-MAUBEUGE,Documents généraux (par ordre chronologique),32,32,1921,1921
-alfa,L'Alfa,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",45,29,1921,1945
-minesouastamesloula,Compagnie des mines de Ouasta et de Mesloula,Documents généraux (par ordre chronologique); Mines et carrières,73,28,1917,1948
-phosphatesconstantine,Compagnie des Phosphates de Constantine,Documents généraux (par ordre chronologique); Mines et carrières,68,28,1912,1953
-centraleusinespapier,Société centrale des usines à papier,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",41,28,1940,1953
-omniumminesalgerietunisie,Omnium Société générale de mines d'Algérie-Tunisie,Mines et carrières,50,27,1906,1953
-industriellepetrolesafriquenord,Compagnie Industrielle des Pétroles de l'Afrique du Nord,Pétrole et gaz,49,27,1922,1948
-regiefoncierevillealger,Régie foncière de la ville d'Alger,Foncières et immobilières,52,26,1937,1953
-mineskefoumtheboulprescalle,"Mines de Kef-Oum-Théboul, près La Calle",Mines et carrières,32,26,1856,1914
-minieredjebelfelten,Société minière du Djebel-Felten,Mines et carrières,49,25,1929,1953
-unionfabriquesengraisproduitschimiquessuperphosphates,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",Mines et carrières,48,25,1919,1944
-nordafricainecimentslafarge,Nord-Africaine des Ciments de Lafarge,"Bâtiment et travaux publics, matériaux de construction, céramique",43,24,1931,1953
+creditfoncieralgerietunisie,Crédit foncier d'Algérie-Tunisie,"Banques et groupes financiers, assurances",215,96,1912,1953
+constructionelectrique,CONSTRUCTION ÉLECTRIQUE,Documents généraux (par ordre chronologique),76,72,1925,1925
+banquealgerie,BANQUE DE L'ALGERIE,"Banques et groupes financiers, assurances",127,69,1881,1948
+ouenza,Société de l'Ouenza,Documents généraux (par ordre chronologique); Mines et carrières,118,66,1910,1948
+algerienne,Compagnie algérienne,"Banques et groupes financiers, assurances; Documents généraux (par ordre chronologique); Industries agro-alimentaires",146,55,1874,1953
+banqueindustrielleafriquenord,Banque industrielle de l'Afrique du Nord,"Banques et groupes financiers, assurances",128,47,1919,1953
+tramwaysalgeriens,Société des Tramways algériens,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",142,46,1907,1953
+minesbouthaleb,MINES DU BOU-THALEB,Documents généraux (par ordre chronologique); Mines et carrières,67,46,1910,1953
+creditalgerien,"Crédit algérien, puis Crédit privé","Banques et groupes financiers, assurances",121,45,1880,1951
+cheminsferroutesalgerie,Société des Chemins de fer sur routes d'Algérie,"Transports terrestres, garages automobiles et agricoles",120,42,1906,1953
+cheminsferouestalgerien,Compagnie des Chemins de fer de l'Ouest-Algérien,"Transports terrestres, garages automobiles et agricoles",95,42,1879,1942
+palestro,Palestro,Documents généraux (par ordre chronologique); Mines et carrières,45,38,1910,1926
+minieredjebelfelten,Société minière du Djebel-Felten,Mines et carrières,61,35,1922,1953
+velvetrum,VELVET-RUM,Documents généraux (par ordre chronologique),35,35,1919,1919
+alfa,L'Alfa,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",83,34,1921,1953
+tramwayselectriquesoran,Tramways électriques d'Oran,"Transports terrestres, garages automobiles et agricoles",85,33,1901,1953
+phosphatesconstantine,Compagnie des Phosphates de Constantine,Documents généraux (par ordre chronologique); Mines et carrières,75,33,1912,1953
+industriellepetrolesafriquenord,Compagnie Industrielle des Pétroles de l'Afrique du Nord,Pétrole et gaz,58,28,1922,1948
+senellemaubeuge,SENELLE-MAUBEUGE,Documents généraux (par ordre chronologique),27,27,1921,1921
+algerienneproduitschimiquesengrais,Société Algérienne de produits chimiques et d'engrais,Industries chimiques,73,26,1920,1953
+minesouastamesloula,Compagnie des mines de Ouasta et de Mesloula,Documents généraux (par ordre chronologique); Mines et carrières,71,26,1917,1948
+omniumminesalgerietunisie,Omnium Société générale de mines d'Algérie-Tunisie,Mines et carrières,58,26,1906,1953
+centraleusinespapier,Société centrale des usines à papier,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",38,26,1940,1953
+entreprisemaritimecommerciale,L'Entreprise maritime et commerciale,Transports maritimes et aériens,33,26,1921,1938
+manufacturetapisorient,Manufacture de tapis d'Orient,Cuirs et textiles; Documents généraux (par ordre chronologique),28,26,1919,1922
+regiefoncierevillealger,Régie foncière de la ville d'Alger,Foncières et immobilières,50,24,1937,1953
+minesfer,Société Française des mines de fer,Documents généraux (par ordre chronologique); Mines et carrières,31,24,1909,1932
 afriquenord,AFRIQUE DU NORD,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",30,24,1938,1938
-fichet,FICHET,Documents généraux (par ordre chronologique),24,24,1925,1925
-algerienneproduitschimiquesengrais,Société Algérienne de produits chimiques et d'engrais,Industries chimiques,58,23,1917,1953
+unionfabriquesengraisproduitschimiquessuperphosphates,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",Mines et carrières,46,23,1919,1944
+mineschabetkohol,Compagnie des mines de Chabet-Kohol,Mines et carrières,33,23,1911,1926
+mineskefoumtheboulprescalle,"Mines de Kef-Oum-Théboul, près La Calle",Mines et carrières,29,23,1856,1914
 cenpasoccentraleusinespapiers,"CENPA, Soc. Centrale des Usines à Papiers","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",26,23,1938,1938
-zincguergour,Zinc du Guergour,Mines et carrières,61,22,1914,1953
-unionelectriquegaziereafriquenord,Union électrique et gazière de l'Afrique du Nord,"Eau, gaz, électricité (Utilities)",35,22,1937,1945
-agricolealgeriennebertagna,Société agricole algérienne Bertagna,Industries agro-alimentaires,40,21,1931,1953
-hydrauliqueafrique,L'Hydraulique-Afrique,Documents généraux (par ordre chronologique),21,21,1910,1910
-algerienneeclairageforce,Société Algérienne d'éclairage et de force,"Eau, gaz, électricité (Utilities)",42,20,1933,1945
-tramwaysalgeriens,Société des Tramways algériens,"Documents généraux (par ordre chronologique); Transports terrestres, garages automobiles et agricoles",24,20,1907,1919
-sidikamber,Sidi-Kamber,Documents généraux (par ordre chronologique); Mines et carrières,21,20,1910,1938
+domainechapeaugendarme,Domaine du Chapeau de Gendarme,Industries agro-alimentaires,64,22,1920,1953
+mineszincguergour,Société des mines de zinc du Guergour,Mines et carrières,25,22,1922,1938
+nordafricainecimentslafarge,Nord-Africaine des Ciments de Lafarge,"Bâtiment et travaux publics, matériaux de construction, céramique",39,21,1931,1953
+phosphatesdyr,Compagnie des Phosphates du Dyr,Mines et carrières,27,21,1899,1938
+approvisionnementnordafricaine,Société d'Approvisionnement nord-africaine,Commerce,24,21,1922,1926
+fichet,FICHET,Documents généraux (par ordre chronologique),21,21,1925,1925
 aeriennefrancealgerie,Compagnie Aérienne France-Algerie,Transports maritimes et aériens,20,20,1925,1925
-secteurelectriquevoutesalger,Secteur électrique des Voûtes d'Alger,"Eau, gaz, électricité (Utilities)",50,19,1929,1953
-raffineriessoufrereunies,Raffineries de soufre réunies,Industries chimiques,46,19,1912,1953
-minieremzaita,Compagnie minière du M'Zaïta,Mines et carrières,34,19,1933,1953
-minierefrancoafricaine,Société Minière Franco-Africaine,Documents généraux (par ordre chronologique); Mines et carrières,29,19,1909,1925
-minesfer,Société Française des mines de fer,Documents généraux (par ordre chronologique); Mines et carrières,25,19,1909,1932
-phosphatesdyr,Compagnie des Phosphates du Dyr,Mines et carrières,24,19,1899,1938
+zincguergour,Zinc du Guergour,Mines et carrières,57,19,1914,1953
+algerienneeclairageforce,Société Algérienne d'éclairage et de force,"Eau, gaz, électricité (Utilities)",43,19,1922,1945
+unionelectriquegaziereafriquenord,Union électrique et gazière de l'Afrique du Nord,"Eau, gaz, électricité (Utilities)",32,19,1937,1945
+industrielleafriquenordtraitementsousproduitsvigneolivier,Société Industrielle de l'Afrique du Nord pour le traitement des sous-produits de la vigne et de l'olivier,Industries chimiques,28,19,1922,1926
+cheminsferestalgerien,Compagnie des Chemins de fer de l'Est-Algérien,"Transports terrestres, garages automobiles et agricoles",27,19,1906,1922
+fonciereimmobilierevillealger,Compagnie Foncière et Immobilière de la Ville d'Alger,Foncières et immobilières,24,19,1906,1922
+vinsmidialgeriebezierssete,"Cie générale des Vins du Midi et d'Algérie, Béziers, Sète",Commerce,24,19,1922,1926
 clement,CLÉMENT,Documents généraux (par ordre chronologique),19,19,1938,1938
-domainechapeaugendarme,Domaine du Chapeau de Gendarme,Industries agro-alimentaires,44,18,1920,1953
-vinsmidialgerie,Compagnie générale des vins du Midi et d'Algérie,Commerce,29,18,1933,1950
-fonciereimmobilierevillealger,Compagnie Foncière et Immobilière de la Ville d'Alger,Foncières et immobilières,24,18,1906,1913
-distilleriebadoilmustapha,"Distillerie Badoil, Mustapha",Industries agro-alimentaires,20,18,1888,1888
-condat,CONDAT et Cie,Documents généraux (par ordre chronologique),19,18,1938,1938
-cheminsferestalgerien,Compagnie des Chemins de fer de l'Est-Algérien,"Transports terrestres, garages automobiles et agricoles",26,17,1896,1906
-manufacturetapisorient,Manufacture de tapis d'Orient,Documents généraux (par ordre chronologique),18,17,1919,1919
-entreprisemaritimecommerciale,L'Entreprise maritime et commerciale,Transports maritimes et aériens,18,17,1921,1921
-petrolestliouanet,PÉTROLES de TLIOUANET,Pétrole et gaz,18,17,1925,1938
-houplain,HOUPLAIN,Documents généraux (par ordre chronologique),17,17,1925,1925
-internationalewagonslits,Cie internationale des WAGONS-LITS,Documents généraux (par ordre chronologique),17,17,1919,1919
-entreprisealgerienne,L'Entreprise algérienne,Documents généraux (par ordre chronologique),17,17,1938,1938
-minieredjendli,Compagnie minière du Djendli,Mines et carrières,52,16,1906,1938
-alfasocfabricationpatescellulose,"L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",16,16,1938,1938
-royaleasturienneminesdirection,"Cie Royale ASTURIENNE DES MINES, direction générale",Mines et carrières,16,16,1925,1925
+hydrauliqueafrique,L'Hydraulique-Afrique,Documents généraux (par ordre chronologique),19,19,1910,1910
+minesferrouina,Société des mines de fer Rouina,Mines et carrières,41,18,1914,1933
+minieremzaita,Compagnie minière du M'Zaïta,Mines et carrières,33,18,1933,1953
+cellulosesafriquenord,Société des Celluloses de l'Afrique française du Nord,"Documents généraux (par ordre chronologique); Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",24,18,1922,1925
+entreprisealgerienne,L'Entreprise algérienne,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",18,18,1922,1938
+minieredjendli,Compagnie minière du Djendli,Mines et carrières,55,17,1906,1938
+raffineriessoufrereunies,Raffineries de soufre réunies,Industries chimiques,43,17,1912,1953
+vinsmidialgerie,Compagnie générale des vins du Midi et d'Algérie,Commerce,28,17,1933,1950
+minierefrancoafricaine,Société Minière Franco-Africaine,Documents généraux (par ordre chronologique); Mines et carrières,26,17,1909,1925
+expansionnordafricaine,Expansion nord-africaine,"Banques et groupes financiers, assurances",25,17,1920,1924
+condat,CONDAT et Cie,Documents généraux (par ordre chronologique),18,17,1938,1938
+minieremetallurgiquecaronte,Compagnie minière et métallurgique de Caronte,Mines et carrières,18,17,1921,1925
+agricolealgeriennebertagna,Société agricole algérienne Bertagna,Industries agro-alimentaires,35,16,1931,1953
+filtreriefrancoalgerienne,Filtrerie franco-algérienne,Industries agro-alimentaires,33,16,1929,1938
+agricoleoranaise,Compagnie Agricole Oranaise,Industries agro-alimentaires,32,16,1919,1926
+grandstravauxalgeriens,Grands Travaux algériens,"Bâtiment et travaux publics, matériaux de construction, céramique",27,16,1922,1926
+tramwayselectriquesconstantine,Tramways électriques de Constantine,"Transports terrestres, garages automobiles et agricoles",23,16,1924,1926
 domainejulienguethna,Domaine Julien de la Guethna,Industries agro-alimentaires,16,16,1930,1930
-vignoblesmediterranee,VIGNOBLES DE LA MÉDITERRANÉE,Industries agro-alimentaires,35,15,1929,1953
-mineszincguergour,Société des mines de zinc du Guergour,Mines et carrières,18,15,1925,1938
-desage,DESAGE,Documents généraux (par ordre chronologique),15,15,1938,1938
-manufacturetabacscigarescigarettes,"Manufacture de Tabacs, Cigares et Cigarettes",Industries agro-alimentaires,15,15,1953,1953
+secteurelectriquevoutesalger,Secteur électrique des Voûtes d'Alger,"Eau, gaz, électricité (Utilities)",45,15,1929,1953
+allianceafricaineassurancesreassurances,"Alliance africaine, Compagnie française d'assurances et de réassurances","Banques et groupes financiers, assurances",32,15,1922,1926
+etudesminieresbougie,Société d'Études minières de Bougie,Mines et carrières,20,15,1910,1926
+algerienneetudesentreprisesagricolescommercialesindustrielles,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien","Banques et groupes financiers, assurances",19,15,1920,1926
+immobilierealgerie,Société Immobilière d'Algérie,Foncières et immobilières,19,15,1906,1926
+distilleriebadoilmustapha,"Distillerie Badoil, Mustapha",Industries agro-alimentaires,17,15,1888,1888
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,"Société Algérienne de Houilles et Agglomérés, Alger, Philippeville, Bougie, Ténès, Mostaganem et Arzew",Commerce,16,15,1922,1922
+alfasocfabricationpatescellulose,"L'ALFA, Soc. an. pour la fabrication des pâtes de cellulose","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",15,15,1938,1938
+houplain,HOUPLAIN,Documents généraux (par ordre chronologique),15,15,1925,1925
+internationalewagonslits,Cie internationale des WAGONS-LITS,Documents généraux (par ordre chronologique),15,15,1919,1919
 moulinscooperatifsmascara,Moulins coopératifs de Mascara,Industries agro-alimentaires,15,15,1930,1930
-filtreriefrancoalgerienne,Filtrerie franco-algérienne,Industries agro-alimentaires,30,14,1929,1934
-minesferrouina,Société des mines de fer Rouina,Mines et carrières,23,14,1914,1933
-expansionnordafricaine,Expansion nord-africaine,"Banques et groupes financiers, assurances",22,14,1920,1920
-africaineminestransports,Société Africaine de Mines et transports,Mines et carrières,20,14,1945,1953
-tissagesmecaniquesisere,TISSAGES MÉCANIQUES DE L'ISÈRE,Documents généraux (par ordre chronologique),14,14,1919,1919
-minessidimarouf,Société des mines du Sidi Marouf,Mines et carrières,24,13,1940,1953
-mineschabetkohol,Compagnie des mines de Chabet-Kohol,Mines et carrières,16,13,1911,1925
+minesferlarrath,Compagnie des mines de fer de Larrath,Mines et carrières,39,14,1914,1929
+manufacturetabacscigarescigarettesjbastos,"Manufacture de tabacs, cigares et cigarettes J. Bastos",Industries agro-alimentaires,23,14,1922,1938
+minesguelma,Société des mines de Guelma,Mines et carrières,23,14,1905,1910
+minesboudjoudoun,Société des mines de Boudjoudoun,Mines et carrières,16,14,1920,1926
+africainearmement,Compagnie Africaine d'Armement,Documents généraux (par ordre chronologique); Transports maritimes et aériens,15,14,1920,1926
+ascenseursmontechargeshydrauliquesvillealger,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",Transports maritimes et aériens,14,14,1889,1926
+manufacturetabacscigarescigarettes,"Manufacture de Tabacs, Cigares et Cigarettes",Industries agro-alimentaires,14,14,1953,1953
+vignoblesmediterranee,VIGNOBLES DE LA MÉDITERRANÉE,Industries agro-alimentaires,32,13,1929,1953
+africaineminestransports,Société Africaine de Mines et transports,Mines et carrières,18,13,1945,1953
+algerienneglacehygieniqueentreposagefrigorifique,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Industries agro-alimentaires,17,13,1899,1922
+immobilierefrancooranaise,Compagnie Immobilière Franco-Oranaise,Foncières et immobilières,17,13,1924,1926
+etudescheminfertransafricain,Société d'études du Chemin de fer transafricain,"Transports terrestres, garages automobiles et agricoles",15,13,1912,1926
 concessionnaireouenza,Société concessionnaire d'Ouenza,Mines et carrières,15,13,1931,1940
-cellulosesafriquenord,Société des Celluloses de l'Afrique française du Nord,"Documents généraux (par ordre chronologique); Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",14,13,1925,1925
-minesfermilliana,Mines de fer de Milliana,Mines et carrières,26,12,1940,1953
-nordafricaineentreprisesmaritimesalgerorannemours,"Société Nord-africaine d’entreprises maritimes, Alger, Oran, Nemours",Transports maritimes et aériens,14,12,1928,1939
-mineschabetballoutsoukahrras,Société générale des mines de Chabet-Ballout à Souk-Ahrras,Mines et carrières,13,12,1926,1931
-algerienneetudesentreprisesagricolescommercialesindustrielles,"Société Algérienne d’Études et d'entreprises agricoles, commerciales et industrielles, puis Crédit industriel algérien","Banques et groupes financiers, assurances",13,12,1920,1920
-domainesafricains,Domaines africains,Industries agro-alimentaires,12,12,1929,1932
-minieremetallurgiquecaronte,Compagnie minière et métallurgique de Caronte,Mines et carrières,12,12,1921,1925
+fusionneeliegeshamendaspetitekabylie,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",15,13,1921,1924
+sidikamber,Sidi-Kamber,Documents généraux (par ordre chronologique); Mines et carrières,14,13,1910,1938
+petrolestliouanet,PÉTROLES de TLIOUANET,Pétrole et gaz,14,13,1925,1938
+royaleasturienneminesdirection,"Cie Royale ASTURIENNE DES MINES, direction générale",Mines et carrières,13,13,1925,1925
+gazelectricitemostaganem,Société du Gaz et de l'électricité de Mostaganem,"Eau, gaz, électricité (Utilities)",13,13,1926,1926
+algeriennepetrolestliouanet,Société Algérienne des pétroles de Tliouanet,Pétrole et gaz,13,13,1926,1926
+minessidimarouf,Société des mines du Sidi Marouf,Mines et carrières,22,12,1940,1953
+chauxcimentsrivetalger,Chaux et ciments de Rivet-Alger,"Bâtiment et travaux publics, matériaux de construction, céramique",21,12,1922,1926
+genevoisecoloniessuissessetif,Compagnie Genevoise des colonies suisses de Sétif,Industries agro-alimentaires,19,12,1922,1926
+colonialeafriquenorddjamaa,"Compagnie Coloniale de l'Afrique du Nord, Djamaa",Industries agro-alimentaires,17,12,1925,1926
+minierekaolinsdjebeldebar,Société minière des Kaolins du Djebel-Debar,"Bâtiment et travaux publics, matériaux de construction, céramique",13,12,1921,1922
+desage,DESAGE,Documents généraux (par ordre chronologique),12,12,1938,1938
 liegeshamendaspetitekabylie,Lièges des Hamendas et de la Petite Kabylie,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",34,11,1937,1955
-foncieremediterranee,Compagnie Foncière de la Méditerranée,Foncières et immobilières,32,11,1937,1955
-algerienneglacehygieniqueentreposagefrigorifique,Compagnie Algérienne de glace hygiénique et d'entreposage frigorifique,Industries agro-alimentaires,16,11,1899,1899
+fermesfrancaisestunisie,Société des Fermes francaises de Tunisie,Industries agro-alimentaires,18,11,1922,1926
+minesfermiliana,Société française des mines de fer Miliana,Mines et carrières,17,11,1922,1938
+comptoirescomptesidibelabbes,Comptoir d'escompte de Sidi-Bel-Abbès,"Banques et groupes financiers, assurances",16,11,1926,1926
 charbonnierenordafricain,Compagnie Charbonnière du Nord-Africain,Commerce,15,11,1919,1920
-liege,Société Française du Liège,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",14,11,1929,1939
-agricoleoranaise,Compagnie Agricole Oranaise,Industries agro-alimentaires,13,11,1919,1919
-hutchinson,HUTCHINSON,Documents généraux (par ordre chronologique),12,11,1925,1925
+phosphatesmzaita,"Compagnie des Phosphates du M'Zaïta, puis",Mines et carrières,15,11,1910,1926
+airliquide,L'Air liquide,Industries chimiques,14,11,1920,1922
+nordafricaineentreprisesmaritimesalgerorannemours,"Société Nord-africaine d’entreprises maritimes, Alger, Oran, Nemours",Transports maritimes et aériens,13,11,1928,1939
+liege,Société Française du Liège,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",13,11,1929,1939
+algeriennesels,Compagnie Algérienne des sels,Mines et carrières,12,11,1924,1926
+liegesproduitsnordafricainsalgerusinebouchonsbone,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",12,11,1921,1926
 algeriennemateriauxconstruction,Société Algérienne de matériaux de construction,"Bâtiment et travaux publics, matériaux de construction, céramique",11,11,1928,1928
 millaul,MILLAUL,Documents généraux (par ordre chronologique),11,11,1910,1910
-etudescheminfertransafricain,Société d'études du Chemin de fer transafricain,"Transports terrestres, garages automobiles et agricoles",11,11,1912,1912
-distributionenergieelectrique,Compagnie Générale de Distribution d'énergie électrique,"Eau, gaz, électricité (Utilities)",11,11,1909,1909
-minesferlarrath,Compagnie des mines de fer de Larrath,Mines et carrières,33,10,1914,1929
+cotonnierebonoise,Société Cotonnière Bônoise,Industries agro-alimentaires,11,11,1926,1926
+domainesafricains,Domaines africains,Industries agro-alimentaires,11,11,1929,1931
+lassallas,Lassallas,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",11,11,1924,1924
+tuileriebriqueteriebelabbesiennesidibelabbes,"Tuilerie-briqueterie La Bel-Abbesienne, Sidi-Bel-Abbès","Bâtiment et travaux publics, matériaux de construction, céramique",11,11,1926,1926
+foncieremediterranee,Compagnie Foncière de la Méditerranée,Foncières et immobilières,30,10,1937,1955
 manufacturetabacscigarescigarettesbastos,"Manufacture de Tabacs, Cigares et Cigarettes Bastos",Industries agro-alimentaires,18,10,1914,1917
-minesguelma,Société des mines de Guelma,Mines et carrières,17,10,1905,1906
+1918domainesbenislimantablat,"S.A., 1918 Domaines des Beni Sliman, , Tablat",Industries agro-alimentaires,18,10,1922,1926
+mineschellala,Société des mines du Chellala,Documents généraux (par ordre chronologique); Mines et carrières,16,10,1910,1925
 marmaro,Marmaro,"Bâtiment et travaux publics, matériaux de construction, céramique",14,10,1927,1937
-africainearmement,Compagnie Africaine d'Armement,Documents généraux (par ordre chronologique); Transports maritimes et aériens,11,10,1920,1925
-banquealgeriebanquealgerietunisiebanquealgerie,"Banque de l'Algérie, Banque de l'Algérie et de la Tunisie, Banque de l'Algérie","Banques et groupes financiers, assurances",11,10,1879,1879
-unioncompagniesregionalesreuniesfabriquesengrais,Union française et Compagnies régionales réunies de fabriques d'engrais et de,Mines et carrières,11,10,1948,1948
-commercialefrancoalgerienne,Société COMMERCIALE FRANCO-ALGÉRIENNE,Documents généraux (par ordre chronologique),10,10,1925,1925
+algerienneelevage,Société Algérienne d'élevage,Industries agro-alimentaires,14,10,1926,1928
+messagerieslittoral,Société des Messageries du Littoral,"Transports terrestres, garages automobiles et agricoles",12,10,1922,1927
+hutchinson,HUTCHINSON,Documents généraux (par ordre chronologique),11,10,1925,1925
+banquenationalecommerceindustrie,Banque nationale pour le commerce et l'industrie,"Banques et groupes financiers, assurances",11,10,1948,1948
+tissagesmecaniquesisere,TISSAGES MÉCANIQUES DE L'ISÈRE,Documents généraux (par ordre chronologique),10,10,1919,1919
 achaque,Achaque,Documents généraux (par ordre chronologique),10,10,1938,1938
-ascenseursmontechargeshydrauliquesvillealger,"Société des Ascenseurs et monte-charges hydrauliques de la ville d'Alger, puis Ascenseurs monte-charges du port d'Alger",Transports maritimes et aériens,10,10,1889,1889
 cheminfertranssaharien,Le Chemin de fer transsaharien,"Transports terrestres, garages automobiles et agricoles",10,10,1942,1942
+concessionnaireminesouenza,Société Concessionnaire des mines d'Ouenza,Mines et carrières,10,10,1924,1926
+distributionenergieelectrique,Compagnie Générale de Distribution d'énergie électrique,"Eau, gaz, électricité (Utilities)",10,10,1909,1909
 commercialeminiereafriquenord,Société Commerciale et Minière pour l'Afrique du Nord,"Bâtiment et travaux publics, matériaux de construction, céramique",10,10,1935,1935
-mselati,MSELATI,Documents généraux (par ordre chronologique),16,9,1910,1910
-outillage,L'OUTILLAGE,Documents généraux (par ordre chronologique),15,9,1925,1925
-minesoranie,Société des Mines de l'Oranie,Documents généraux (par ordre chronologique); Mines et carrières,13,9,1925,1925
-algeriennecreditbanque,Société nouvelle de la Compagnie algérienne de crédit et de banque,"Banques et groupes financiers, assurances",12,9,1950,1950
-industriesagricolesmeauxnantesalgerie,"Société d'Industries agricoles de Meaux, Nantes et Algérie",Industries agro-alimentaires,12,9,1937,1942
+tramwayoranhammambouhadjarextensions,Tramway d'Oran à Hammam-Bou-Hadjar et extensions,"Transports terrestres, garages automobiles et agricoles",10,10,1908,1908
+minesfermilliana,Mines de fer de Milliana,Mines et carrières,23,9,1940,1953
+grandhoteloran,Grand Hôtel d'Oran,"Hôtellerie-restauration, tourisme",14,9,1922,1926
+oranaisecharbonnages,Oranaise de Charbonnages,Commerce,12,9,1926,1926
 abrifamilialoranais,L'Abri familial oranais,Foncières et immobilières,11,9,1928,1928
-entreprises,ENTREPRISES,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",10,9,1925,1925
-minierealgerienne,Société Minière Algérienne,Mines et carrières,10,9,1937,1945
-chaines,CHAÎNES,Documents généraux (par ordre chronologique),9,9,1925,1925
+algeriennetransportsparautomobiles,Société Algérienne de Transports par automobiles,"Transports terrestres, garages automobiles et agricoles",11,9,1922,1924
+francoasiatiquepetrolesalgerie,Société Franco-Asiatique des Pétroles d’Algerie,"Transports terrestres, garages automobiles et agricoles",11,9,1925,1926
+industriesagricolesmeauxnantesalgerie,"Société d'Industries agricoles de Meaux, Nantes et Algérie",Industries agro-alimentaires,11,9,1937,1942
+banquealgeriebanquealgerietunisiebanquealgerie,"Banque de l'Algérie, Banque de l'Algérie et de la Tunisie, Banque de l'Algérie","Banques et groupes financiers, assurances",10,9,1879,1879
+commercialeacconage,Société Commerciale d'Acconage,Transports maritimes et aériens,10,9,1922,1926
+electricitesoukarhas,Société d'Électricité de Souk-Arhas,"Eau, gaz, électricité (Utilities)",10,9,1922,1926
+unioncompagniesregionalesreuniesfabriquesengrais,Union française et Compagnies régionales réunies de fabriques d'engrais et de,Mines et carrières,10,9,1948,1948
 feutresrok,FEUTRES ROK,Documents généraux (par ordre chronologique),9,9,1925,1925
-chauxcimentsrivetalger,Chaux et ciments de Rivet-Alger,"Bâtiment et travaux publics, matériaux de construction, céramique",9,9,1923,1923
+centraleexploitationsrecherchesminieressoukahras,"Compagnie Centrale d'exploitations et recherches minières, à Souk-Ahras",Mines et carrières,9,9,1922,1922
 francoalgerienne,Compagnie Franco-algérienne,Industries agro-alimentaires,9,9,1879,1885
+comptoirescompteaffreville,Comptoir d'escompte d'Affreville,"Banques et groupes financiers, assurances",9,9,1926,1926
+cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,"Cooperative agricole des agrumes, fruits et légumes de la Mitidja, El Affroun. — Confiturerie de Boufarik",Industries agro-alimentaires,9,9,1926,1926
 mineszaccar,MINES du ZACCAR,Mines et carrières,9,9,1925,1925
 minierenordafriquesaintetienne,"Société Minière du Nord de l'Afrique, Saint-Étienne",Mines et carrières,9,9,1901,1901
 mitidja,La Mitidja,Industries agro-alimentaires,9,9,1929,1953
+algerienneconstructionsnavalesmecaniques,Société Algérienne de constructions navales et mécaniques,"Métallurgie, constructions navales",9,9,1922,1922
 forestierealgerienne,Société forestière algérienne,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",9,9,1869,1875
+syndicatlyonnaisnordafricain,Syndicat lyonnais nord-africain,Mines et carrières,20,8,1922,1926
+afrique,L'Afrique française,"Banques et groupes financiers, assurances",16,8,1922,1926
+minesoranie,Société des Mines de l'Oranie,Documents généraux (par ordre chronologique); Mines et carrières,15,8,1922,1925
+outillage,L'OUTILLAGE,Documents généraux (par ordre chronologique),14,8,1925,1925
+algeriennematerielagricole,Société Algérienne de Matériel agricole,Commerce,13,8,1922,1926
+algeriennecreditbanque,Société nouvelle de la Compagnie algérienne de crédit et de banque,"Banques et groupes financiers, assurances",11,8,1950,1950
+commercialearmement,Société Commerciale d'Armement,Transports maritimes et aériens,11,8,1922,1926
+hydroelectriqueafriquenord,Société Hydro-électrique de l'Afrique du Nord,"Eau, gaz, électricité (Utilities)",11,8,1923,1926
+vignoblesmediterraneedomainemonvilleduzerville,"Compagnie des Vignobles de la Méditerranée, domaine de Monville à Duzerville",Industries agro-alimentaires,11,8,1924,1926
 minescavallo,Société des mines de Cavallo,Mines et carrières,10,8,1921,1921
-probios,Probios,Industries pharmaceutiques et parachimie,10,8,1930,1930
-unionagricoleafrique,Union agricole d'Afrique,Industries agro-alimentaires,10,8,1898,1898
+algeriennecotonniere,Société Algérienne Cotonnière,Industries agro-alimentaires,9,8,1926,1926
+entreprises,ENTREPRISES,"Bâtiment et travaux publics, matériaux de construction, céramique; Documents généraux (par ordre chronologique)",9,8,1925,1925
 petolatdijon,PÉTOLAT-DIJON,Documents généraux (par ordre chronologique),9,8,1928,1928
-creditfoncieragricolealgerie,Crédit foncier et agricole d'Algérie,"Banques et groupes financiers, assurances",9,8,1882,1903
+boissonsgazeuseshygieniquesalger,Compagnie générale des Boissons gazeuses hygieniques d’Alger,Industries agro-alimentaires,9,8,1926,1926
+mineschabetballoutsoukahrras,Société générale des mines de Chabet-Ballout à Souk-Ahrras,Mines et carrières,9,8,1926,1931
+gazconstantine,Compagnie du Gaz de Constantine,"Eau, gaz, électricité (Utilities)",9,8,1926,1926
+etudesrecherchesexploitationpetrolesalgerie,"Société d'Études, de recherches et d'exploitation des pétroles en Algérie",Pétrole et gaz,9,8,1922,1922
+minierealgerienne,Société Minière Algérienne,Mines et carrières,9,8,1937,1945
 unionminierebordjredir,Union minière de Bordj-Redir,Mines et carrières,9,8,1920,1920
 africainetravaux,Société Africaine de Travaux,"Bâtiment et travaux publics, matériaux de construction, céramique",8,8,1924,1924
-airliquide,L'Air liquide,Industries chimiques,8,8,1920,1920
+algeriennenavigationafriquenordcharlesschiaffino,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Transports maritimes et aériens,8,8,1926,1944
+chaines,CHAÎNES,Documents généraux (par ordre chronologique),8,8,1925,1925
+commercialefrancoalgerienne,Société COMMERCIALE FRANCO-ALGÉRIENNE,Documents généraux (par ordre chronologique),8,8,1925,1925
 mendes,MENDÈS,Documents généraux (par ordre chronologique),8,8,1925,1925
-mineschellala,Société des mines du Chellala,Documents généraux (par ordre chronologique); Mines et carrières,8,8,1910,1925
 carrosseriemoderne,La Carrosserie moderne,Documents généraux (par ordre chronologique),8,8,1938,1938
-banqueunionnordafricaine,Banque de l'union nord-africaine,"Banques et groupes financiers, assurances",8,8,1940,1940
+caisseagricolecommercialeguelma,Caisse agricole et commerciale de Guelma,"Banques et groupes financiers, assurances",8,8,1926,1926
 africaineimportationcharbonsbriquettesnordpascalais,Société Africaine d’Importation de charbons et briquettes du Nord et du Pas-de-Calais,Commerce,8,8,1928,1928
-immobilierefrancooranaise,Compagnie Immobilière Franco-Oranaise,Foncières et immobilières,8,8,1924,1924
-brasseriemalteriealgeriennemustaphainferieur,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur",Industries agro-alimentaires,9,7,1893,1893
-comptoirescomptekabylieoccidentaledellys,"Comptoir d'escompte de la Kabylie occidentale, Dellys","Banques et groupes financiers, assurances",8,7,1879,1879
+domainesaintcharlesboufarik,"Domaine Saint-Charles, Boufarik",Industries agro-alimentaires,8,8,1926,1926
+agricolealgerienne,Société Agricole Algérienne,Industries agro-alimentaires,8,8,1922,1922
+domanialealgerienne,Domaniale algérienne,Industries agro-alimentaires,8,8,1926,1926
+tabacsalgeriens,Tabacs algériens,Industries agro-alimentaires,14,7,1922,1926
+forceeclairagesaida,Société de Force et d'éclairage de Saïda,"Eau, gaz, électricité (Utilities)",13,7,1926,1926
+mineskabylie,Société des Mines de la Kabylie,Mines et carrières,12,7,1948,1953
+mselati,MSELATI,Documents généraux (par ordre chronologique),10,7,1910,1910
+oasisnordafricain,Societe des Oasis du Nord-Africain,Industries agro-alimentaires,10,7,1922,1922
+probios,Probios,Industries pharmaceutiques et parachimie,9,7,1930,1930
+unionagricoleafrique,Union agricole d'Afrique,Industries agro-alimentaires,9,7,1898,1898
+creditfoncieragricolealgerie,Crédit foncier et agricole d'Algérie,"Banques et groupes financiers, assurances",8,7,1882,1903
 francoalgeriennelocationfutailles,Société Franco-Algérienne de Location de futailles,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",8,7,1919,1919
+zaccarfer,"Zaccar, fer",Mines et carrières,8,7,1938,1938
+secteurelectrique,"Compagnie du secteur électrique des —, puis Société industrielle des — Voûtes d'Alger","Eau, gaz, électricité (Utilities)",8,7,1926,1926
 acconagecharbonnagejullian,Société d'Acconage et de charbonnage Jullian,Transports maritimes et aériens,7,7,1920,1920
-algeriennecamionnageautomobile,Société Algérienne de Camionnage automobile,"Transports terrestres, garages automobiles et agricoles",7,7,1911,1911
-algeriennesels,Compagnie Algérienne des sels,Mines et carrières,7,7,1924,1924
-sanhadja,SANHADJA,Documents généraux (par ordre chronologique),7,7,1928,1928
-centralephosphates,Cie centrale des PHOSPHATES,Mines et carrières,7,7,1925,1925
-etudesminieresbougie,Société d'Études minières de Bougie,Mines et carrières,7,7,1910,1910
+banqueunionnordafricaine,Banque de l'union nord-africaine,"Banques et groupes financiers, assurances",7,7,1940,1940
+caboteursalgeriens,Caboteurs algériens,Transports maritimes et aériens,7,7,1926,1926
+comptoirproduitsceramiques,Comptoir des produits céramiques,Commerce,7,7,1926,1926
+comptoirescompteaintemouchent,Comptoir d'escompte d'Aïn-Temouchent,"Banques et groupes financiers, assurances",7,7,1926,1926
+comptoirescomptebatna,Nouveau Comptoir d'escompte de Batna,"Banques et groupes financiers, assurances",7,7,1926,1926
+comptoirescomptekabylieoccidentaledellys,"Comptoir d'escompte de la Kabylie occidentale, Dellys","Banques et groupes financiers, assurances",7,7,1879,1879
+comptoirescomptemarengo,Comptoir d'escompte de Marengo,"Banques et groupes financiers, assurances",7,7,1926,1926
+etudeseconomiquesafriquenord,Société d'Études economiques de l’Afrique du Nord,"Banques et groupes financiers, assurances",7,7,1922,1922
 gisementsphosphatiersbordjrdir,Société des Gisements phosphatiers de Bordj R’Dir,Mines et carrières,7,7,1909,1909
-mounaalimentationnordafricain,"La Mouna, Société française d'alimentation du Nord-Africain",Industries agro-alimentaires,7,7,1913,1913
-minesboudjoudoun,Société des mines de Boudjoudoun,Mines et carrières,7,7,1920,1920
+industrielleimmobiliere,Cie Industrielle et Immobilière,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",7,7,1924,1924
 omniumminesusines,"Omnium Mines et usines, puis Mines et Usines d'Algérie-Tunisie-Maroc",Mines et carrières,7,7,1924,1924
 phosphatessuperphospahtestebbaka,Société des Phosphates et superphospahtes de Tebbaka,Mines et carrières,7,7,1925,1925
 extensionportnemours,Société pour l'extension du Port de Nemours,Transports maritimes et aériens,7,7,1952,1952
-algerienneelevage,Société Algérienne d'élevage,Industries agro-alimentaires,7,7,1928,1928
+textilesafricains,Textiles africains,Cuirs et textiles,7,7,1922,1922
 uniontransafricaine,Union transafricaine,"Transports terrestres, garages automobiles et agricoles",7,7,1927,1927
-banquepopulaire,Banque populaire,"Banques et groupes financiers, assurances",12,6,1927,1930
+cartonneriesrochette,Cartonneries de La Rochette,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",16,6,1925,1953
+industriebois,L'Industrie du bois,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",10,6,1922,1926
 constructionsindustriellestravauxartcit,"CONSTRUCTIONS INDUSTRIELLES ET TRAVAUX d'ART, S.A.C.I.T.A","Bâtiment et travaux publics, matériaux de construction, céramique",9,6,1925,1925
 transsaharienne,Compagnie Générale Transsaharienne,"Transports terrestres, garages automobiles et agricoles",8,6,1923,1935
 caisseagricoletlemcen,Caisse agricole de Tlemcen,"Banques et groupes financiers, assurances",7,6,1901,1901
 centralephosphatesbordjrdir,Compagnie Centrale des Phosphates à Bordj'R'dir,Mines et carrières,7,6,1902,1902
-chauxcimentsouedfergoug,Chaux et ciments de l'oued Fergoug,"Bâtiment et travaux publics, matériaux de construction, céramique",7,6,1908,1921
 creditagricoletlemcen,Crédit agricole de Tlemcen,"Banques et groupes financiers, assurances",7,6,1901,1901
+agricolelyonnaisenordafrique,Société Agricole Lyonnaise du Nord de l'Afrique,Industries agro-alimentaires,6,6,1922,1922
+algeriennecamionnageautomobile,Société Algérienne de Camionnage automobile,"Transports terrestres, garages automobiles et agricoles",6,6,1911,1911
+algerienneeaux,Société Algérienne des eaux,"Eau, gaz, électricité (Utilities)",6,6,1926,1926
+alhambrarueisly,Société de l'Alhambra de la rue d'Isly,Loisirs,6,6,1926,1926
 aguilas,Compagnie d'Aguilas,Documents généraux (par ordre chronologique),6,6,1925,1925
 goodrich,GOODRICH,Documents généraux (par ordre chronologique),6,6,1925,1925
-mengual,MENGUAL,Documents généraux (par ordre chronologique),6,6,1910,1910
+sanhadja,SANHADJA,Documents généraux (par ordre chronologique),6,6,1928,1928
+bernabefreres,Bernabé frères,Commerce,6,6,1926,1926
 carrieresalgeroises,Les Carrières algéroises,"Bâtiment et travaux publics, matériaux de construction, céramique",6,6,1931,1931
-commercialearmement,Société Commerciale d'Armement,Transports maritimes et aériens,6,6,1922,1922
-francoasiatiquepetrolesalgerie,Société Franco-Asiatique des Pétroles d’Algerie,"Transports terrestres, garages automobiles et agricoles",6,6,1925,1925
+centralephosphates,Cie centrale des PHOSPHATES,Mines et carrières,6,6,1925,1925
+charbonnierealgerienne,Compagnie Charbonnière algérienne,Commerce,6,6,1926,1926
+comptoirescomptemascara,Comptoir d'escompte de Mascara,"Banques et groupes financiers, assurances",6,6,1926,1926
+comptoirescomptemedea,Comptoir d'escompte de Médéa,"Banques et groupes financiers, assurances",6,6,1926,1926
+creditimmobilieralger,Crédit immobilier d’Alger,"Banques et groupes financiers, assurances",6,6,1926,1926
+forestiereliegeouvreouedeloueb,"Société Forestière du Liège ouvré, Oued-el-Oueb","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",6,6,1953,1953
+foretssanhadjacollo,Forêts de Sanhadja et de Collo,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",6,6,1926,1926
 fournituresmilitaires,Société générale de Fournitures militaires,Cuirs et textiles,6,6,1889,1889
-domainehabramacta,Société du domaine de l'Habra et de la Macta,Industries agro-alimentaires,6,6,1887,1887
-minierekaolinsdjebeldebar,Société minière des Kaolins du Djebel-Debar,"Bâtiment et travaux publics, matériaux de construction, céramique",6,6,1921,1921
+groupevinicole,Groupe vinicole,Commerce,6,6,1926,1926
+immobilierealgeriennetunisienne,Immobilière Algérienne et Tunisienne,Foncières et immobilières,6,6,1926,1926
+jameslogie,James Logie & Cie,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",6,6,1926,1926
+mounaalimentationnordafricain,"La Mouna, Société française d'alimentation du Nord-Africain",Industries agro-alimentaires,6,6,1913,1913
 minescuivretenes,"Société des Mines de cuivre de Ténès, puis Mines de cuivre de Ténès",Mines et carrières,6,6,1929,1929
 minesraselma,Société des mines de Ras-el-Ma,Mines et carrières,6,6,1926,1926
+bouthaleb,Bou-Thaleb,Mines et carrières,6,6,1922,1924
 minoteriereneesclapezrelizane,"Minoterie René Esclapez & Cie, Relizane",Industries agro-alimentaires,6,6,1929,1929
 nordafricaineetudesentreprises,Société Nord-africaine d'études et d'entreprises,"Banques et groupes financiers, assurances",6,6,1926,1926
-immobilierealgerie,Société Immobilière d'Algérie,Foncières et immobilières,6,6,1906,1906
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,Anciens Établissements Jules Borgeaud & fils Nord-Africain Commercial,Commerce,6,6,1926,1926
+mullerpasse19261928souscontrolegraengesberg,"Müller, passé en 1926-1928 sous le contrôle de Graengesberg",Mines et carrières,6,6,1932,1948
+etszembra,Éts Zembra,Commerce,6,6,1926,1926
 minesalgerietunisieomnium,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Documents généraux (par ordre chronologique); Mines et carrières,10,5,1925,1925
+grandshotelsafriquenord,Grands Hôtels de l'Afrique du Nord,"Hôtellerie-restauration, tourisme",10,5,1922,1924
+phosphatesdjebelonk,Phosphates du Djebel-Onk,Mines et carrières,10,5,1909,1926
+banquepopulaire,Banque populaire,"Banques et groupes financiers, assurances",9,5,1927,1930
+lafarge,Lafarge,"Bâtiment et travaux publics, matériaux de construction, céramique",8,5,1937,1937
 reseauaerientransafricain,Société du Réseau aérien transafricain,Transports maritimes et aériens,8,5,1920,1925
+unioncommercialeproducteurs,Union commerciale des producteurs,Commerce,8,5,1922,1926
 compagniesregionalesreuniesfabriquesengraisproduitschimiques,Compagnies régionales réunies de fabriques d'engrais et de produits chimiques,Mines et carrières,7,5,1927,1927
-colonialeafriquenorddjamaa,"Compagnie Coloniale de l'Afrique du Nord, Djamaa",Industries agro-alimentaires,6,5,1925,1925
-eclairagescommunaux,Compagnie des Éclairages communaux,"Eau, gaz, électricité (Utilities)",6,5,1911,1911
-hydroelectriqueafriquenord,Société Hydro-électrique de l'Afrique du Nord,"Eau, gaz, électricité (Utilities)",6,5,1923,1923
-acconagealgerien,Compagnie d'Acconage algérien,Transports maritimes et aériens,5,5,1910,1910
+foretscalle,Forêts de La Calle,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",7,5,1926,1926
+immobiliereagricoleharrach,Société immobilière et agricole de l'Harrach,Industries agro-alimentaires,7,5,1922,1926
+usineslavieconstantine,Usines Lavie de Constantine,Industries agro-alimentaires,7,5,1922,1924
+africaineculturesindustrielles,Compagnie Africaine de cultures industrielles,Industries agro-alimentaires,6,5,1922,1926
+chauxcimentsouedfergoug,Chaux et ciments de l'oued Fergoug,"Bâtiment et travaux publics, matériaux de construction, céramique",6,5,1908,1921
+omniumalgerienelectricitetebessa,"Omnium algérien d'électricité, Tébessa","Eau, gaz, électricité (Utilities)",6,5,1924,1926
+romeoturneresposito,"Roméo, Turner et d'Esposito","Métallurgie, constructions navales",6,5,1926,1926
 africaineliegealgerhusseindeyazazga,"Compagnie Africaine du Liège, Alger, Hussein-Dey, Azazga","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",5,5,1929,1929
 desgenetaisfreresboitepostalenobolbec,"DESGENETAIS frères, Boîte postale no Bolbec",Industries agro-alimentaires,5,5,1925,1925
+algerienneautomobilesrenault,Société algérienne des automobiles Renault,"Transports terrestres, garages automobiles et agricoles",5,5,1924,1924
 algeriennepetrolesstandard,Compagnie Algérienne des Pétroles Standard,Commerce,5,5,1930,1930
 ateliersconstructionselectriquesdelle,Ateliers de constructions électriques DELLE,Documents généraux (par ordre chronologique),5,5,1925,1925
+mengual,MENGUAL,Documents généraux (par ordre chronologique),5,5,1910,1910
 pfund,PFUND,Documents généraux (par ordre chronologique),5,5,1910,1910
-banqueafriquepaysorient,Banque de l'Afrique française et des pays d'Orient,"Banques et groupes financiers, assurances",5,5,1912,1912
-banquecoxclimited,"Banque Cox & C°, Limited","Banques et groupes financiers, assurances",5,5,1918,1918
+autobusamperebehagle,Autobus d'Ampère et Béhagle,"Transports terrestres, garages automobiles et agricoles",5,5,1926,1926
+domainesbenhassenvallouise,Domaines de Ben-Hassen et de Val-Louise,Industries agro-alimentaires,5,5,1926,1926
 benedictinefecamp,"La Bénédictine, Fécamp",Industries agro-alimentaires,5,5,1930,1930
-chargeursalgeriensreunis,Chargeurs algériens réunis,Transports maritimes et aériens,5,5,1912,1912
-commercialeacconage,Société Commerciale d'Acconage,Transports maritimes et aériens,5,5,1922,1922
-domaineseltaousarba,"Domaines El Taous, L’Arba",Industries agro-alimentaires,5,5,1919,1919
+brasseriemalteriealgeriennemustaphainferieur,"Société de la Brasserie-Malterie algérienne, Mustapha-Inférieur",Industries agro-alimentaires,5,5,1893,1893
+warotfreres,"Warot frères, puis Société Chantier Warot","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",5,5,1926,1926
+fonciereconstantine,Compagnie Foncière de Constantine,Foncières et immobilières,5,5,1922,1922
+detartrageconstructionsmecaniques,Cie de Détartrage et constructions mécaniques,"Métallurgie, constructions navales",5,5,1926,1926
+distilleriesalgerie,Distilleries d’Algerie,Industries agro-alimentaires,5,5,1926,1926
+djidjelliplage,Djidjelli-Plage,"Hôtellerie-restauration, tourisme",5,5,1926,1926
+domainesaintelouise,Domaine Sainte-Louise,Industries agro-alimentaires,5,5,1926,1926
+eschenauer,Eschenauer & Cie,Commerce,5,5,1926,1926
 etsbertagna,Éts Bertagna,Industries agro-alimentaires,5,5,1929,1929
-francoalgerienneelectricitebatnaguelma,"Société Franco-Algérienne d'Électricité, Batna, Guelma","Eau, gaz, électricité (Utilities)",5,5,1891,1891
+domainehabramacta,Société du domaine de l'Habra et de la Macta,Industries agro-alimentaires,5,5,1887,1887
 mineraisfermagnetiquecollo,Compagnie des minerais de fer magnétique de Collo,Mines et carrières,5,5,1877,1877
-minesdjebelforer,Société des mines du Djebel-Forer,Mines et carrières,5,5,1909,1909
 minesdjebelguendou,Société des mines du Djebel-Guendou,Mines et carrières,5,5,1908,1908
-nordafricaincommercial,Nord-africain commercial,Commerce,5,5,1938,1938
-oranaisecharbonnages,Oranaise de Charbonnages,Commerce,5,5,,
-mullerpasse19261928souscontrolegraengesberg,"Müller, passé en 1926-1928 sous le contrôle de Graengesberg",Mines et carrières,5,5,1932,1932
+minesouedrabahais,Société des mines de l'Oued-Rabah et d'Aïs,Mines et carrières,5,5,1926,1926
+fouque,Fouque,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",5,5,1926,1926
+minesrarbousakamody,Société des mines de Rarbou et Sakamody,Mines et carrières,5,5,1926,1926
+algerienneconstructionsindustriellestravauxart,Algérienne de constructions industrielles et travaux d'art,"Bâtiment et travaux publics, matériaux de construction, céramique",5,5,1926,1926
+sahella,Sahella,Commerce,5,5,1926,1926
+materielautomobileculturebonephilipeville,"Société de Matériel automobile et de culture, Bône, Philipeville","Transports terrestres, garages automobiles et agricoles",5,5,1926,1926
 etablissementscholletnicollongobardi,"Établissements Chollet, Nicol et Longobardi","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",8,4,1933,1933
-cheminferboneguelmaprolongements,Compagnie du Chemin de fer de Bône à Guelma et prolongements,"Transports terrestres, garages automobiles et agricoles",7,4,1913,1914
+fonciereimmobilieremaisoncarree,Société Foncière et Immobiliere de Maison-Carrée,Foncières et immobilières,8,4,1922,1926
+cimentsportlandafriquenord,Ciments Portland de l'Afrique du Nord,"Bâtiment et travaux publics, matériaux de construction, céramique",6,4,1924,1926
+entreprisecommercialeafriquenord,Entreprise commerciale de l'Afrique du Nord,Commerce,6,4,1920,1922
+meunieresersoutiaret,"Société Meunière du Sersou, Tiaret",Industries agro-alimentaires,6,4,1926,1926
 algerienneconservesalimentaires,Société Algérienne de Conserves alimentaires,Industries agro-alimentaires,5,4,1901,1901
+cheminferboneguelmaprolongements,Compagnie du Chemin de fer de Bône à Guelma et prolongements,"Transports terrestres, garages automobiles et agricoles",5,4,1913,1914
+eclairagescommunaux,Compagnie des Éclairages communaux,"Eau, gaz, électricité (Utilities)",5,4,1911,1911
+acconagealgerien,Compagnie d'Acconage algérien,Transports maritimes et aériens,4,4,1910,1910
 minesainkerma,Société des mines d'Aïn-Kerma,Mines et carrières,4,4,1923,1923
 airalgerie,Air Algérie,Transports maritimes et aériens,4,4,1934,1934
-entreprisesaeronautiques,Cie générale d'ENTREPRISES AÉRONAUTIQUES,Documents généraux (par ordre chronologique),4,4,1925,1925
+algeriennecharbonnage,Compagnie Algérienne de Charbonnage,Commerce,4,4,1926,1926
 acconage,ACCONAGE,Documents généraux (par ordre chronologique),4,4,1938,1938
 cheddites,CHEDDITES,Documents généraux (par ordre chronologique),4,4,1938,1938
-sonnati,Sonnati,Documents généraux (par ordre chronologique),4,4,1910,1910
-tubiana,TUBIANA,Documents généraux (par ordre chronologique),4,4,1910,1910
+audoisefutstransports,Société Audoise de fûts et transports,"Transports terrestres, garages automobiles et agricoles",4,4,1924,1924
+banqueafriquepaysorient,Banque de l'Afrique française et des pays d'Orient,"Banques et groupes financiers, assurances",4,4,1912,1912
+banquecoxclimited,"Banque Cox & C°, Limited","Banques et groupes financiers, assurances",4,4,1918,1918
+bruntortel,"Brun, Tortel et Cie","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",4,4,1926,1926
+chargeursalgeriensreunis,Chargeurs algériens réunis,Transports maritimes et aériens,4,4,1912,1912
+algeriennemeunerie,Compagnie Algérienne de Meunerie,Industries agro-alimentaires,4,4,1926,1926
+ceresfabricationventetousengraisproduitsviticoles,"Compagnie Cérès, pour la fabrication et la vente de tous engrais et produits viticoles",Industries chimiques,4,4,1926,1926
+comptoiragricole,Comptoir agricole français,Commerce,4,4,1924,1924
+comptoirescompterelizane,Comptoir d'escompte de Relizane,"Banques et groupes financiers, assurances",4,4,1926,1926
+comptoirtextilecirta,Comptoir textile de Cirta,Commerce,4,4,1926,1926
+comptoirsachatblesdursalgeriens,Comptoirs d'achat des blés durs algériens,Commerce,4,4,1926,1926
+cotonniereagricoletolga,Compagnie Cotonnière et Agricole de Tolga,Industries agro-alimentaires,4,4,1926,1926
+distillerieliqueurmandarinebougie,Distillerie de liqueur de mandarine de Bougie,Industries agro-alimentaires,4,4,1922,1922
 domainequatrechemins,Domaine des Quatre-Chemins,Industries agro-alimentaires,4,4,1926,1926
-immobilierebone,"Société Immobilière de Bône, puis Immobilière et Maritime de l’Afrique du Nord",Foncières et immobilières,4,4,1920,1920
-phosphatesmzaita,"Compagnie des Phosphates du M'Zaïta, puis",Mines et carrières,4,4,1910,1910
+domainescaidessebt,Domaines du Caid-Es-Sebt,Industries agro-alimentaires,4,4,1926,1926
+domaineseltaousarba,"Domaines El Taous, L’Arba",Industries agro-alimentaires,4,4,1919,1919
+electricitebiskra,Société d'Électricité de Biskra,"Eau, gaz, électricité (Utilities)",4,4,1926,1926
+etablissementsalexandrerannou,Établissements Alexandre Rannou,Commerce,4,4,1926,1926
+fabreguettes,Fabreguettes,Industries agro-alimentaires,4,4,1926,1926
+commercialefrancoafricainecharbonnage,Société Commerciale Franco-Africaine de Charbonnage,Commerce,4,4,1926,1926
+francoalgerienneelectricitebatnaguelma,"Société Franco-Algérienne d'Électricité, Batna, Guelma","Eau, gaz, électricité (Utilities)",4,4,1891,1891
 minessoumahtafna,Société des mines de Soumah et de La Tafna,Mines et carrières,4,4,1867,1867
-minesfergourayasadouna,Société Mines de fer de Gouraya-Sadouna,Mines et carrières,4,4,1909,1909
-oasisnordafricain,Societe des Oasis du Nord-Africain,Industries agro-alimentaires,4,4,1922,1922
+minesdjebelforer,Société des mines du Djebel-Forer,Mines et carrières,4,4,1909,1909
+miroiterieafriquenord,Miroiterie de l’Afrique du Nord,"Bâtiment et travaux publics, matériaux de construction, céramique",4,4,1926,1926
+nordafricaincommercial,Nord-africain commercial,Commerce,4,4,1938,1938
 oranaisechauxcimentsoranarcole,"Compagnie Oranaise des Chaux et ciments, Oran-Arcole","Bâtiment et travaux publics, matériaux de construction, céramique",4,4,1920,1920
-phosphatesdjebelonk,Phosphates du Djebel-Onk,Mines et carrières,4,4,1909,1909
+manufacturetapismarabout,Société des Manufacture de tapis du Marabout,Cuirs et textiles,4,4,1922,1922
+typolitho,La Typo-litho,"Imprimerie, presse, édition",4,4,1926,1926
+unionmaritimefrancealgerie,Union maritime France-Algérie,Transports maritimes et aériens,4,4,1924,1924
 unionchimiquenordafricaine,Union chimique nord-africaine,Mines et carrières,4,4,1931,1931
 unionespagnolefabriquesengraisproduitschimiquessuperphosphates,"Union espagnole de fabriques d'engrais, de produits chimiques et de superphosphates",Mines et carrières,4,4,1910,1910
+unionvinicolenordafricaine,Union vinicole nord-africaine,Commerce,4,4,1926,1926
 vignoblesalgeriens,Vignobles algériens,Industries agro-alimentaires,4,4,1928,1928
-leach,LEACH,Documents généraux (par ordre chronologique),53,3,1925,1925
+leach,LEACH,Documents généraux (par ordre chronologique),49,3,1925,1925
 algeriennenavigationafriquenord,Société algérienne de navigation pour l'Afrique du Nord,Transports maritimes et aériens,12,3,1929,1948
+gazelectricitesidibelabbesextensions,Gaz et de l'électricité de Sidi-bel-Abbès et extensions,"Eau, gaz, électricité (Utilities)",6,3,1924,1926
+immobilierecommercialeagricolealgerieaintedeles,"Société Immobilière, Commerciale et Agricole d’Algérie, Aïn-Tédélès",Industries agro-alimentaires,6,3,1922,1926
+ateliersfonderiecelestinducros,Ateliers et fonderie Célestin Ducros,"Métallurgie, constructions navales",4,3,1926,1926
+kieselguhr,Kieselguhr,Mines et carrières,4,3,1921,1922
+minesdjebelaomar,Société des mines du Djebel-Aomar,Mines et carrières,4,3,1926,1926
 akkaresbelezma,"Société d'Akkarès, Belezma",Mines et carrières,3,3,1911,1911
-algeriennechauxcimentsusinepointepescade,"Compagnie Algérienne de chaux et ciments, usine de la Pointe-Pescade","Bâtiment et travaux publics, matériaux de construction, céramique",3,3,1913,1913
-algeriennecotonniere,Société Algérienne Cotonnière,Industries agro-alimentaires,3,3,1926,1926
 algeriennezinc,Société Algérienne du Zinc . Anc. Société nord-africaine du plomb,Mines et carrières,3,3,,
-etudesminieresindustrielles,ÉTUDES MINIÈRES ET INDUSTRIELLES,Documents généraux (par ordre chronologique),3,3,1925,1925
-charbonnage,CHARBONNAGE,Documents généraux (par ordre chronologique),3,3,1938,1938
+entreprisesaeronautiques,Cie générale d'ENTREPRISES AÉRONAUTIQUES,Documents généraux (par ordre chronologique),3,3,1925,1925
 magnol,MAGNOL,Documents généraux (par ordre chronologique),3,3,1910,1910
-banquefrancoalgerienne,Banque franco-algérienne,"Banques et groupes financiers, assurances",3,3,1910,1910
+tubiana,TUBIANA,Documents généraux (par ordre chronologique),3,3,1910,1910
+briqueteriestuileriesalma,Briqueteries et tuileries de l'Alma,"Bâtiment et travaux publics, matériaux de construction, céramique",3,3,1926,1926
+cargosalgeriens,Cargos algériens,Transports maritimes et aériens,3,3,1926,1926
+commercialecolonsalgeriens,Société Commerciale des Colons algériens,Industries agro-alimentaires,3,3,1922,1922
+coqmaterielviticoleoleicoleaixprovence,"Coq, matériel viticole et oléicole, Aix-en-Provence","Transports terrestres, garages automobiles et agricoles",3,3,1926,1926
 cotonsalgerie,Cotons d'Algérie,Industries agro-alimentaires,3,3,1908,1908
+depotgairard,Dépôt Gairard,Commerce,3,3,1926,1926
+domainesources,Société du Domaine des Sources,Industries agro-alimentaires,3,3,1926,1926
+domainehaouchouedsaf,Domaine du Haouch Oued Saf,Industries agro-alimentaires,3,3,1926,1926
+domainessaintpaul,Domaines Saint-Paul,Industries agro-alimentaires,3,3,1926,1926
 eldjezairimmeubles,El-Djezaïr Immeubles,Foncières et immobilières,3,3,1924,1924
-entreprisecommercialeafriquenord,Entreprise commerciale de l'Afrique du Nord,Commerce,3,3,1920,1920
 entreprisesboussiron,Entreprises Boussiron,"Bâtiment et travaux publics, matériaux de construction, céramique",3,3,1929,1929
-omniumalgerienelectricitetebessa,"Omnium algérien d'électricité, Tébessa","Eau, gaz, électricité (Utilities)",3,3,1924,1924
-oranaiseremorquageassistance,Société Oranaise de Remorquage et d'assistance,Transports maritimes et aériens,3,3,1938,1938
+etslouisbilliard,Éts Louis Billiard,"Métallurgie, constructions navales",3,3,1926,1926
+fermesalgeriennes,Société des Fermes algeriennes,Industries agro-alimentaires,3,3,1926,1926
+francealgerieexploitationdomainesagricolesviticoles,France-Algérie pour l’exploitation de domaines agricoles et viticoles,Industries agro-alimentaires,3,3,1926,1926
+hotelsaintgeorges,Hôtel Saint-Georges,"Hôtellerie-restauration, tourisme",3,3,1926,1926
+immobilierebone,"Société Immobilière de Bône, puis Immobilière et Maritime de l’Afrique du Nord",Foncières et immobilières,3,3,1920,1920
+immobiliereagha,Société Immobilière de l'Agha,Foncières et immobilières,3,3,1926,1926
+messageriesgrandekabylie,Messageries de la Grande-Kabylie,"Transports terrestres, garages automobiles et agricoles",3,3,1926,1926
+comptoiralgerienmetauxprecieux,Comptoir algérien de métaux précieux,Commerce,3,3,1926,1926
+minesfergourayasadouna,Société Mines de fer de Gouraya-Sadouna,Mines et carrières,3,3,1909,1909
+etschthiebautindustrialisationonyxaelkantaraexploitationonyxamayeur,Éts Ch. Thiébaut pour l’industrialisation des Onyxa d’El-Kantara et Société d’exploitation des Onyxa Mayeur,"Bâtiment et travaux publics, matériaux de construction, céramique",3,3,1926,1926
+oranaisefutaille,Société Oranaise de Futaille,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",3,3,1926,1926
 ouledsellemainsmara,"Société des Ouled-Sellem, Aïn-Smara",Mines et carrières,3,3,1911,1911
-exploitationsforestieresminierespetitekabylie,Société d'Exploitations forestières et minières de la Petite-Kabylie,Mines et carrières,3,3,1925,1925
-vieillemontagnealgerie,La Vieille-Montagne en Algérie,Mines et carrières,3,3,1914,1914
-algeriennemines,Société Algérienne de mines,Mines et carrières,2,2,1911,1911
-algeriennenavigationafriquenordcharlesschiaffino,"Société Algérienne de Navigation pour l'Afrique du Nord, Charles Schiaffino et Cie",Transports maritimes et aériens,2,2,1944,1944
+entreprisescommercialesindustriellesafriquenord,Entreprises commerciales et industrielles pour l'Afrique du Nord,Commerce,3,3,1924,1924
+usinesdunescheragas,Usines des Dunes de Chéragas,"Bâtiment et travaux publics, matériaux de construction, céramique",3,3,1938,1938
+immobiliereforteau,Immobilière du Fort-de-l'Eau,"Hôtellerie-restauration, tourisme",5,2,1925,1926
+ateliersreparationsmaritimesafriquenord,Ateliers de réparations maritimes de l'Afrique du Nord,"Métallurgie, constructions navales",2,2,1926,1926
+algeriennechauxcimentsusinepointepescade,"Compagnie Algérienne de chaux et ciments, usine de la Pointe-Pescade","Bâtiment et travaux publics, matériaux de construction, céramique",2,2,1913,1913
+algeroisefutstransports,"Société Algéroise de fûts-transports, puis Algéroise pour le commerce de vins et de fûts transports","Transports terrestres, garages automobiles et agricoles",2,2,1924,1924
+etudesminieresindustrielles,ÉTUDES MINIÈRES ET INDUSTRIELLES,Documents généraux (par ordre chronologique),2,2,1925,1925
+charbonnage,CHARBONNAGE,Documents généraux (par ordre chronologique),2,2,1938,1938
 essur,ESSUR,Documents généraux (par ordre chronologique),2,2,1938,1938
+sonnati,Sonnati,Documents généraux (par ordre chronologique),2,2,1910,1910
 minesboudoukha,Société des mines de Boudoukha,Mines et carrières,2,2,1953,1953
+banquefrancoalgerienne,Banque franco-algérienne,"Banques et groupes financiers, assurances",2,2,1910,1910
+caveschateau,Caves du Château,Commerce,2,2,1924,1926
+chauxcimentsravinbleu,Chaux et ciments du Ravin-Bleu,"Bâtiment et travaux publics, matériaux de construction, céramique",2,2,1924,1924
+commercialecharbonnagesentreprisesmaritimes,Société Commerciale de Charbonnages et d’entreprises maritimes,Commerce,2,2,1926,1926
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,Anciens établissements Albert Stockhammer Comptoir technique algérien de machines et fournitures industrielles,Commerce,2,2,1922,1922
+continentalecombustibles,Société Continentale des Combustibles,Commerce,2,2,1926,1926
 minieredjebelchelia,Société minière de Djebel-Chélia,Mines et carrières,2,2,1907,1907
-ateliersfonderiecelestinducros,Ateliers et fonderie Célestin Ducros,"Métallurgie, constructions navales",2,2,,
-cartonneriesrochette,Cartonneries de La Rochette,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",2,2,1925,1925
-minieredjebelgustar,Compagnie minière du Djebel-Gustar,Mines et carrières,2,2,,
-cheminsferparislyonmediterraneereseaualgerien,"Chemins de fer Paris-Lyon-Méditerranée, réseau algérien","Transports terrestres, garages automobiles et agricoles",2,2,1931,1931
+domaineautruchesdouaouda,"Domaine des Autruches, Douaouda",Industries agro-alimentaires,2,2,1926,1926
+domaineskeroulisaintemouchent,Domaines du Kéroulis à Aïn-Témouchent,Industries agro-alimentaires,2,2,1926,1926
+fermedeloupysaintdenissig,"Ferme Deloupy, Saint-Denis-du-Sig",Industries agro-alimentaires,2,2,1924,1924
+francoalgeriennewagonsfoudres,Société Franco-algérienne des Wagons-foudres,"Transports terrestres, garages automobiles et agricoles",2,2,1926,1926
+francoalgeriennecarburants,Société Franco-Algérienne des Carburants,Commerce,2,2,1922,1922
+lucienborgeaud,Lucien Borgeaud & Cie,Commerce,2,2,1926,1926
+megisseriealgerienne,Mégisserie algérienne,Cuirs et textiles,2,2,1924,1924
+oranaiseremorquageassistance,Société Oranaise de Remorquage et d'assistance,Transports maritimes et aériens,2,2,1938,1938
+platrieresrovigo,Les Plâtrières de Rovigo,"Bâtiment et travaux publics, matériaux de construction, céramique",2,2,1926,1926
+exploitationsforestieresminierespetitekabylie,Société d'Exploitations forestières et minières de la Petite-Kabylie,Mines et carrières,2,2,1925,1925
 exploitationforestiereminierepetitekabylie,EXPLOITATION FORESTIÈRE et MINIÈRE de la PETITE KABYLIE,Mines et carrières,2,2,1938,1938
 fonciereimmobilierefranceafriquenord,Société Foncière et Immobilière de France et de l'Afrique du Nord,Mines et carrières,2,2,1920,1920
-liegesproduitsnordafricainsalgerusinebouchonsbone,"Lièges et produits nord-africains, Alger. Usine de bouchons à Bône","Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",2,2,1921,1921
+laitierealger,Société Laitière d’Alger,Commerce,2,2,1926,1926
+tramwaysmessageriessahel,Tramways et messageries du Sahel,"Transports terrestres, garages automobiles et agricoles",2,2,1926,1926
+vieillemontagnealgerie,La Vieille-Montagne en Algérie,Mines et carrières,2,2,1914,1914
 aldegue,ALDÉGUÉ,Documents généraux (par ordre chronologique),10,1,1938,1938
 agricolefinancierealgerie,Société Agricole et Financière d'Algérie,"Banques et groupes financiers, assurances",4,1,1928,1928
 laminoirtrefilerieafriquegueconstantine,"Laminoir et tréfilerie d'Afrique, Gué-de-Constantine","Métallurgie, constructions navales",3,1,1942,1952
+algeriennemines,Société Algérienne de mines,Mines et carrières,1,1,1911,1911
 algerienneexploitationliege,Société Algérienne pour l'Exploitation du liège,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",1,1,1927,1927
 angloalgeriennemaritimecommerciale,Société Anglo-Algérienne Maritime et Commerciale,Commerce,1,1,1919,1919
 saidok,SAIDOK,Documents généraux (par ordre chronologique),1,1,1910,1910
@@ -260,29 +418,28 @@ domainesalgeriens,Société des Domaines algériens,Industries agro-alimentaires
 froidsec,Cie française du Froid sec,Industries agro-alimentaires,1,1,1919,1919
 grandsdomainesfrancealgerietunisie,"Grands Domaines de France, d’Algérie et de Tunisie",Industries agro-alimentaires,1,1,1895,1895
 immobilierehoteliereafriquenord,Société Immobilière et hôteliere de l’Afrique du Nord,"Hôtellerie-restauration, tourisme",1,1,1930,1930
-fusionneeliegeshamendaspetitekabylie,Société fusionnée des Lièges des Hamendas et de Petite-Kabylie,"Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",1,1,1921,1921
 miniereboumarouf,Société minière de Bou-Marouf,Mines et carrières,1,1,1942,1942
+minieredjebelgustar,Compagnie minière du Djebel-Gustar,Mines et carrières,1,1,,
 moulinskhroubkroubs,"Les Moulins du Khroub, Kroubs",Industries agro-alimentaires,1,1,,
-internationaleentreprisesexploitationselectriques,Société Internationale d’entreprises et exploitations électriques,"Eau, gaz, électricité (Utilities)",1,1,1900,1900
+cheminsferparislyonmediterraneereseaualgerien,"Chemins de fer Paris-Lyon-Méditerranée, réseau algérien","Transports terrestres, garages automobiles et agricoles",1,1,1931,1931
 algeriennevinsmousseuxnaturelsbirmandreis,"Société algérienne des Vins mousseux naturels, Birmandreis",Industries agro-alimentaires,1,1,,
 stationcentraleelectricitemascara,Station centrale d’électricité de Mascara,"Eau, gaz, électricité (Utilities)",1,1,1925,1925
 tachet,Tachet,Industries agro-alimentaires,1,1,1888,1888
+transitmaritimemarques,Transit maritime Marquès,Transports maritimes et aériens,1,1,1926,1926
+universelletabacs,Compagnie Universelle des Tabacs,Industries agro-alimentaires,1,1,1926,1926
 etudesexploitationsminierestadla,Société d'études et d'exploitations minières du Tadla,Mines et carrières,1,1,1951,1951
-auxiliairenavigation,Cie Auxiliaire de navigation,Documents généraux (par ordre chronologique),19,0,1925,1925
-bourgeois,BOURGEOIS,Documents généraux (par ordre chronologique),19,0,1938,1938
-daumas,Daumas & Cie,Documents généraux (par ordre chronologique),14,0,1925,1925
+auxiliairenavigation,Cie Auxiliaire de navigation,Documents généraux (par ordre chronologique),18,0,1925,1925
+bourgeois,BOURGEOIS,Documents généraux (par ordre chronologique),17,0,1938,1938
+daumas,Daumas & Cie,Documents généraux (par ordre chronologique),12,0,1925,1925
 voorhouthaye,"Voorhout, à La Haye",Documents généraux (par ordre chronologique),9,0,1925,1925
 havraisepeninsulairenavigationvapeur,Cie havraise péninsulaire de NAVIGATION A VAPEUR,Documents généraux (par ordre chronologique),5,0,1925,1925
-tonnellerie,TONNELLERIE,Documents généraux (par ordre chronologique),5,0,1919,1919
-etablissementsfauchonvilleplee,Établissements FAUCHON-VILLEPLÉE,Documents généraux (par ordre chronologique),5,0,1938,1938
-produitschimiques,PRODUITS CHIMIQUES,Documents généraux (par ordre chronologique),5,0,1910,1910
 miniereminebenihimmel,MINIÈRE ET MINE DES BÉNI-HIMMEL,Documents généraux (par ordre chronologique),4,0,1925,1925
+etablissementsfauchonvilleplee,Établissements FAUCHON-VILLEPLÉE,Documents généraux (par ordre chronologique),4,0,1938,1938
+tonnellerie,TONNELLERIE,Documents généraux (par ordre chronologique),3,0,1919,1919
 chausy,CHAUSY (A,"Documents généraux (par ordre chronologique); Métallurgie, constructions navales",3,0,1938,1944
-immobiliereforteau,Immobilière du Fort-de-l'Eau,"Hôtellerie-restauration, tourisme",3,0,1925,1925
 devrez,DEVREZ,Documents généraux (par ordre chronologique),2,0,1925,1925
+produitschimiques,PRODUITS CHIMIQUES,Documents généraux (par ordre chronologique),2,0,1910,1910
 minierebrademah,Société miniere de Brademah,Mines et carrières,2,0,1922,1922
-charbonnierealgerienne,Compagnie Charbonnière algérienne,Documents généraux (par ordre chronologique),1,0,1938,1938
 meley,MELEY,Documents généraux (par ordre chronologique),1,0,1910,1910
 valeretarsot,VALÈRE et TARSOT,Documents généraux (par ordre chronologique),1,0,1910,1910
-kieselguhr,Kieselguhr,Mines et carrières,1,0,1921,1921
 minesmouzaias,Compagnie des mines de Mouzaïas,Mines et carrières,1,0,1857,1857

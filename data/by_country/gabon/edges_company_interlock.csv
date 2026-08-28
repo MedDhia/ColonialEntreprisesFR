@@ -1,6 +1,6 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
+exploitationsforestieresafricaines,plantationspalmeraiesogooue,Compagnie Exploitations forestières africaines,Cie générale des Plantations et palmeraies de l'Ogooué,10,blancou-j; chassedieu; douzamy-j; levy-g; michenot-e; pila-j; weber-j; widhoff-a; zafiropulo; zafiropulo-d
 commercialeindustrielleagricolehautogooue,hautogooue,"Société commerciale, industrielle et agricole du Haut-Ogooué",HAUT-OGOOUÉ,10,barre-h; boissonnas-j; bungener-c; chabrieres-m; durand-reville-l; e-terquem; f-coquelle; lalande-e; o-barre; raoul-duval-j
-exploitationsforestieresafricaines,plantationspalmeraiesogooue,Compagnie Exploitations forestières africaines,Cie générale des Plantations et palmeraies de l'Ogooué,8,blancou-j; chassedieu; douzamy-j; michenot-e; pila-j; weber-j; widhoff-a; zafiropulo-d
 africaine,equatoriale,L'Africaine,L'Équatoriale,5,et-alfred-de-lenfernat-de-la-mothe; gillet-a; lefevre-c; pecqueur-w; videau-j
 forestiereabanga,unioncolonialeagricoleforestiere,Compagnie Forestière de l'Abanga,Union coloniale agricole et forestière,5,couriol-l; hayere-a; martin-g; schmidt-m; stahl-c
 hautebokoue,unionforestiereafricaine,Société de la Haute-Bokoué,Union forestière africaine,4,labat-r; levy-g; mizraki-m; vacheret-c
@@ -9,39 +9,46 @@ equatoriale,forestiereezanga,L'Équatoriale,Société Forestière d'Ezanga,4,gil
 forestiereabanga,unionforestiereafricaine,Compagnie Forestière de l'Abanga,Union forestière africaine,4,levy-g; mizraki-m; schmidt-m; vigneras-j
 africaine,commercialeafriqueequatoriale,L'Africaine,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",3,de-caplane-p; lefevre-c; pecqueur-w
 hautebokoue,plantationspalmeraiesogooue,Société de la Haute-Bokoué,Cie générale des Plantations et palmeraies de l'Ogooué,3,levy-g; mizraki-m; sterlin-y
+hautengounie,hautengounle,Compagnie de la Haute-N'Gounié,Cie de la HAUTE-N'GOUNlÉ,3,adm-mm-debionne; etc-commerce-d-importation; vergnes-a
 commercialeindustrielleagricolehautogooue,gabonaiseentreprisestransports,"Société commerciale, industrielle et agricole du Haut-Ogooué",Société Gabonaise d’Entreprises et de transports,3,barre-o; denfert-rochereau-a; enjalbert-p
 africaineplacagesportgentil,plantationspalmeraiesogooue,"Cie Africaine de placages, PORT-GENTIL, A",Cie générale des Plantations et palmeraies de l'Ogooué,2,dessombs-p; sellier-r
 agricolegabon,hautebokoue,Société agricole du Gabon,Société de la Haute-Bokoué,2,dagouret-j; vacheret-c
 commercialeafriqueequatoriale,equatoriale,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",L'Équatoriale,2,lefevre-c; pecqueur-w
 commercialeafriqueequatoriale,forestiereezanga,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",Société Forestière d'Ezanga,2,lefevre-c; pecqueur-w
-colonialecommerceindustrie,ngokosangha,Société Coloniale pour le Commerce et l'Industrie,"N’goko-Sangha, puis Société française Congo-Cameroun",2,gaboriaud-l; j-weber
-agricolecommercialebasogoue,colonialegabon,Société Agricole et Commerciale du Bas-Ogoué,Compagnie Coloniale du Gabon,2,carimantrand; mallet
+agricoleforestiereindustrielleafrique,exploitationsforestieresafricaines,"Société Agricole, Forestière et Industrielle pour l'Afrique",Compagnie Exploitations forestières africaines,2,fondere; zafiropulo
+agricoleforestiereindustrielleafrique,hautengounie,"Société Agricole, Forestière et Industrielle pour l'Afrique",Compagnie de la Haute-N'Gounié,2,gerdret-g; zafiropulo
 forestiereabanga,hautebokoue,Compagnie Forestière de l'Abanga,Société de la Haute-Bokoué,2,levy-g; mizraki-m
 forestiereabanga,plantationspalmeraiesogooue,Compagnie Forestière de l'Abanga,Cie générale des Plantations et palmeraies de l'Ogooué,2,levy-g; mizraki-m
 plantationspalmeraiesogooue,unionforestiereafricaine,Cie générale des Plantations et palmeraies de l'Ogooué,Union forestière africaine,2,levy-g; mizraki-m
+colonialecommerceindustrie,ngokosangha,Société Coloniale pour le Commerce et l'Industrie,"N’goko-Sangha, puis Société française Congo-Cameroun",2,gaboriaud-l; j-weber
+agricolecommercialebasogoue,colonialegabon,Société Agricole et Commerciale du Bas-Ogoué,Compagnie Coloniale du Gabon,2,carimantrand; mallet
 frsecongocameroun,ngokosangha,Cie frse des CONGO-CAMEROUN,"N’goko-Sangha, puis Société française Congo-Cameroun",2,cruchet-l; de-jessaint
 africaineplacagesportgentil,exploitationsforestieresafricaines,"Cie Africaine de placages, PORT-GENTIL, A",Compagnie Exploitations forestières africaines,1,hauser-e
 agricolegabon,unionforestiereafricaine,Société agricole du Gabon,Union forestière africaine,1,vacheret-c
+agricoleforestiereindustrielleafrique,commercialeafriqueequatoriale,"Société Agricole, Forestière et Industrielle pour l'Afrique","Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",1,superville-m
+agricoleforestiereindustrielleafrique,plantationsogooue,"Société Agricole, Forestière et Industrielle pour l'Afrique",Société des Plantations de l'Ogooué,1,superville-m
 commercialeafriqueequatoriale,plantationsogooue,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",Société des Plantations de l'Ogooué,1,superville-m
 agricoleforestiereindustrielleafrique,colonialecommerceindustrie,"Société Agricole, Forestière et Industrielle pour l'Afrique",Société Coloniale pour le Commerce et l'Industrie,1,fondere
-agricoleforestiereindustrielleafrique,exploitationsforestieresafricaines,"Société Agricole, Forestière et Industrielle pour l'Afrique",Compagnie Exploitations forestières africaines,1,fondere
 agricoleforestiereindustrielleafrique,gabon,"Société Agricole, Forestière et Industrielle pour l'Afrique",Compagnie Française du Gabon,1,fondere
 colonialecommerceindustrie,exploitationsforestieresafricaines,Société Coloniale pour le Commerce et l'Industrie,Compagnie Exploitations forestières africaines,1,fondere
 colonialecommerceindustrie,gabon,Société Coloniale pour le Commerce et l'Industrie,Compagnie Française du Gabon,1,fondere
 exploitationsforestieresafricaines,gabon,Compagnie Exploitations forestières africaines,Compagnie Française du Gabon,1,fondere
 exploitationsforestieresafricaines,plantationsogooue,Compagnie Exploitations forestières africaines,Société des Plantations de l'Ogooué,1,guynet-w
-colonialegabon,fermiereogoue,Compagnie Coloniale du Gabon,Compagnie Fermière de l'Ogoué,1,braillard-e
-gabon,hautengounie,Compagnie Française du Gabon,Compagnie de la Haute-N'Gounié,1,vergnes-a
-gabon,hautengounle,Compagnie Française du Gabon,Cie de la HAUTE-N'GOUNlÉ,1,vergnes-a
-hautengounie,hautengounle,Compagnie de la Haute-N'Gounié,Cie de la HAUTE-N'GOUNlÉ,1,vergnes-a
-agricolecommercialesettecama,hautengounie,Société Agricole et Commerciale du Setté Cama,Compagnie de la Haute-N'Gounié,1,deves
-agricoleforestiereindustrielleafrique,hautengounie,"Société Agricole, Forestière et Industrielle pour l'Afrique",Compagnie de la Haute-N'Gounié,1,zafiropulo
 agricoleforestiereindustrielleafrique,plantationspalmeraiesogooue,"Société Agricole, Forestière et Industrielle pour l'Afrique",Cie générale des Plantations et palmeraies de l'Ogooué,1,zafiropulo
+exploitationsforestieresafricaines,hautengounie,Compagnie Exploitations forestières africaines,Compagnie de la Haute-N'Gounié,1,zafiropulo
 hautengounie,plantationspalmeraiesogooue,Compagnie de la Haute-N'Gounié,Cie générale des Plantations et palmeraies de l'Ogooué,1,zafiropulo
+colonialegabon,exploitationsforestieresafricaines,Compagnie Coloniale du Gabon,Compagnie Exploitations forestières africaines,1,levy-g
 colonialegabon,forestiereabanga,Compagnie Coloniale du Gabon,Compagnie Forestière de l'Abanga,1,levy-g
 colonialegabon,hautebokoue,Compagnie Coloniale du Gabon,Société de la Haute-Bokoué,1,levy-g
 colonialegabon,plantationspalmeraiesogooue,Compagnie Coloniale du Gabon,Cie générale des Plantations et palmeraies de l'Ogooué,1,levy-g
 colonialegabon,unionforestiereafricaine,Compagnie Coloniale du Gabon,Union forestière africaine,1,levy-g
+exploitationsforestieresafricaines,forestiereabanga,Compagnie Exploitations forestières africaines,Compagnie Forestière de l'Abanga,1,levy-g
+exploitationsforestieresafricaines,hautebokoue,Compagnie Exploitations forestières africaines,Société de la Haute-Bokoué,1,levy-g
+exploitationsforestieresafricaines,unionforestiereafricaine,Compagnie Exploitations forestières africaines,Union forestière africaine,1,levy-g
+colonialegabon,fermiereogoue,Compagnie Coloniale du Gabon,Compagnie Fermière de l'Ogoué,1,braillard-e
+gabon,hautengounie,Compagnie Française du Gabon,Compagnie de la Haute-N'Gounié,1,vergnes-a
+gabon,hautengounle,Compagnie Française du Gabon,Cie de la HAUTE-N'GOUNlÉ,1,vergnes-a
+agricolecommercialesettecama,hautengounie,Société Agricole et Commerciale du Setté Cama,Compagnie de la Haute-N'Gounié,1,deves
 forestierelittoralgabonaisekuata,forestierelittoralgabonnais,"Société forestière du Littoral Gabonais, EKUATA","Société Forestière du littoral gabonnais, puis Forestière du littoral gabonais",1,tallon-p
 forestierelittoralgabonnais,multiplex,"Société Forestière du littoral gabonnais, puis Forestière du littoral gabonais",Multiplex,1,de-lustrac-j
 unioncolonialeagricoleforestiere,unionforestiereafricaine,Union coloniale agricole et forestière,Union forestière africaine,1,schmidt-m

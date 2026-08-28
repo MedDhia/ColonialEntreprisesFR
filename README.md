@@ -16,34 +16,35 @@ network can be sliced by period rather than collapsed into one static graph.
 > surviving press. Read [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) §6 before
 > publishing results — especially for any measure sensitive to missing data.
 >
-> **Extraction coverage.** Of 5,867 documents with usable text, **2,483 (42%)
-> yield at least one tie**; the other 58% hold 47% of the extracted characters
-> and contribute nothing. Most are a genre the parsers do not read — honours
-> lists, prose histories, biographical dictionaries — and some are real misses.
-> §2b of the methodology quantifies what is left on the table. Absence of a
-> firm from the network is not evidence that it had no board.
+> **Extraction coverage.** Of 5,867 documents with usable text, **3,594 (61%)
+> yield at least one tie** — up from 42% before the prose, annotation and
+> biographical parsers were added. The remaining 2,273 hold 26% of the
+> extracted characters and contribute nothing: mostly genres no parser reads
+> (honours lists, tariff schedules, balance-sheet-only extracts) plus real
+> misses. §2b of the methodology quantifies what is left on the table. Absence
+> of a firm from the network is not evidence that it had no board.
 >
-> **Boards reported in prose are extracted but not merged by default.** Most
-> of this collection is press extracts, which report board changes in running
-> text rather than in lists. `parse_prose.py` reads them — 14,251 ties, 8,421
-> person-firm pairs the structured parser never saw — into
-> `affiliations_prose.csv`. It is **opt-in** (`build_network.py --with-prose`)
-> because hand-auditing random samples puts its precision near 90%, against
-> the structured parser's high nineties. 23% of its rows independently
-> corroborate a pair the structured parser already found.
+> **Five extraction genres, all merged, all separable.** Every genre is in the
+> default network and every observation and two-mode edge carries
+> `source_genre`, so filtering to the structured evidence never needs a
+> rebuild (`--no-prose`, `--no-annotations`, `--no-biographical`,
+> `--no-person-index` also exist).
 >
-> **Four extraction genres, three of them opt-in.** The default network is
-> built from firm dossiers and the person-indexed annuaires. Three further
-> parsers write their own files and are included only on request, because each
-> is measurably less precise than the structured parser:
-> `--with-prose` (14,251 ties, ~90%), `--with-annotations` (1,637, ~94%) and
-> `--with-biographical` (3,052, ~93%). Precision figures come from
-> hand-checking random samples against source context; METHODOLOGY §4d–4f
-> gives the audits and the failures each one fixed.
+> | Genre | Ties | Precision | What it reads |
+> |---|---|---|---|
+> | `dossier` | 61,327 | highest | board lists under a firm heading |
+> | `person_index` | 15,625 | ~97% agreement with the source's own gloss | numbered annuaire indexes |
+> | `prose` | 12,498 | ~90% | board changes reported in sentences |
+> | `annotation` | 1,683 | ~94% | the compiler's inline notes |
+> | `biographical` | 1,514 | ~93% | biographical dictionaries (**undated**) |
+>
+> Precision figures come from hand-checking random samples against source
+> context. They locate an order of magnitude, not a second decimal.
+> METHODOLOGY §4c–4f gives each audit and the failures it fixed.
 >
 > **The network includes the Paris Bourse.** A large share of colonial firms
 > were publicly quoted, so `Annuaire Desfossés 1956` is a colonial source; it
-> contributes 16,131 ties and 1,889 firms, of which 11% also have dossier
+> contributes 15,625 ties and 1,889 firms, of which 11% also have dossier
 > evidence. The rest are metropolitan and foreign companies that colonial
 > directors also sat on — which is the point, but it means **this is no longer
 > a purely colonial universe**. Every edge carries `source_genre`, so
@@ -57,17 +58,19 @@ network can be sliced by period rather than collapsed into one static graph.
 | Documents with text extracted | **5,874 (99.2%)** — 46 are dead links on the site |
 | Territories | **62** countries / 13 index-page regions (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
 | Economic sectors | 108, as classified by the source |
-| Person → company ties | **77,479** — 61,348 from firm dossiers (77.3% of 79,343 parsed) plus 16,131 from the annuaire indexes |
-| Two-mode edge rows | **73,977**, 98.7% carrying a year |
-| Distinct people | **31,926** |
-| Companies | **10,434** (including firms known only from a directory or annuaire entry) |
-| Company interlock edges | **56,003** pooled, 37,171 within period |
-| Extraction genres | firm dossiers + person-indexed annuaires; `source_genre` on every edge |
-| Corporate directorships | 3,432 directed company → company edges |
+| Person → company ties | **99,353** — 61,327 from firm dossiers, 15,625 from the annuaire indexes, 12,498 from prose, 1,683 from annotations, 1,514 from biographies |
+| Two-mode edge rows | **91,772**, 97.4% carrying a year |
+| Distinct people | **35,158** |
+| Companies | **10,705** (including firms known only from a directory or annuaire entry) |
+| Company interlock edges | **79,897** pooled, 50,085 within period |
+| Extraction genres | 5, all merged; `source_genre` on every observation and edge |
+| Attribution | 87.1% of parsed ties resolve to a firm; `attribution` records how |
+| Corporate directorships | 3,698 directed company → company edges |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
 `data/processed/network_stats.csv` holds these figures per period. The
-versioned dataset is about 120 MB, most of it the two largest derived tables.
+versioned dataset is about 300 MB, most of it the person co-membership edge
+list and the two-mode GraphML.
 
 ## Quick start
 
@@ -134,11 +137,11 @@ Ottoman and Egyptian ones, since neither fits the binary. The evidence is the
 name plus the territory — onomastic inference, good for aggregate composition
 and **not** for claims about named individuals.
 
-The headline result is stark and is the point of the variable: of 31,926
-people, **146 (0.6%) carry an indigenous name**. By territory, board members
+The headline result is stark and is the point of the variable: of 35,158
+people, **231 (0.7%) carry an indigenous name**. By territory, board members
 with an indigenous name run at 1.0% in Morocco and Indochina, 0.4% in Algeria,
 and **0.0% in French Equatorial Africa, Gabon, Congo-Brazzaville and New
-Caledonia**. All 205 non-European codings are listed in
+Caledonia**. All 308 non-European codings are listed in
 `positionality_review.csv` for hand-checking.
 
 ### Figures
@@ -174,7 +177,7 @@ single city cannot be drawn as edges and are in the table instead.
 
 | | |
 |---|---|
-| `fig4_empire_network.svg` | **Every** firm sharing a director: 4,729 firms, 56,003 interlocks, nothing subsetted. Colour is territory. |
+| `fig4_empire_network.svg` | **Every** firm sharing a director: 5,839 firms, 79,897 interlocks, nothing subsetted. Colour is territory. |
 | `fig5_territory_matrix.svg` | The empire as a network of territories — 53 × 53 cells, each the number of directors sitting on boards in both. |
 | `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph — `algerie`, `tunisie`, `madagascar`, `indochine`, `senegal`, … |
 
@@ -250,7 +253,7 @@ src/
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            803 assertions on the parsers and the built dataset
+  checks.py            804 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -328,7 +331,7 @@ rules govern them, and they are worth knowing before you trust a number:
   similarity threshold.
 - **A coverage gap beats a fabricated attribution.** Where the parser cannot
   determine which firm a board belongs to, the tie is left unattributed and
-  excluded from the network — **17,995 of 79,343 parsed ties, 22.7%** — instead
+  excluded from the network — **9,567 of 74,238 parsed ties, 22.7%** — instead
   of being credited to the previous firm in the document. They stay in
   `affiliations.csv` with an empty `company_key`, so the gap is inspectable
   rather than hidden.

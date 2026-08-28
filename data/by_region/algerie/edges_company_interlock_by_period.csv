@@ -1,46 +1,280 @@
 company_id_1,company_id_2,period,weight,shared_directors
-constructionelectrique,creditfoncieralgerietunisie,1914_1929,25,affreville; ain-bessem; algerie-alger; anthoine-a; ariste-s; aumale; barbedette-f; blida; boufarick; bouira; buhot-h; castiglione; colea; douera; dubourdieu-l; eug-regnault; eymard-c; gronier-e; guyotville; henri-c; journault-e; lebon-a; rouiba; saliege-h; zafiropulo-d
-minesbouthaleb,mineschabetkohol,1914_1929,6,adm-mm-leon-boussand; buhot-h; carnot-e; chastel-a; f-ledoux; lebon-a
+constructionelectrique,creditfoncieralgerietunisie,1914_1929,25,affreville; ain-bessem; algerie-alger; anthoine-a; ariste-s; aumale; barbedette-f; blida; boufarick; bouira; buhot-h; castiglione; colea; douera; dubourdieu; eug-regnault; eymard-c; gronier-e; guyotville; henri-c; journault-e; lebon-a; rouiba; saliege-h; zafiropulo-d
+minesbouthaleb,mineschabetkohol,1914_1929,7,adm-mm-leon-boussand; buhot-h; carnot-e; chastel-a; f-ledoux; gittens-w; lebon-a
+omniumminesalgerietunisie,phosphatesconstantine,1914_1929,6,ansbacher-t; courbevoie; de-valencay; kapferer; montureux-a; talleyrand-perigord-p
+minesboudjoudoun,minieredjebelfelten,1914_1929,6,magnin; petit; petit-j; tanon; tanon-a; vacheron-a
+manufacturetabacscigarescigarettesbastos,manufacturetabacscigarescigarettesjbastos,1914_1929,5,bastos-a; bastos-j; bastos-l; perrot-e; philippar-e
 petolatdijon,petrolestliouanet,1914_1929,5,adm-mm-henri-de-peyerimhoff; chevaleau-e; homan-l; jordan-p; zafiropulo-d
-banquealgerie,banqueindustrielleafriquenord,1914_1929,4,boyer; galicier-a; moatti; th-rodocanachi
-etudesminieresindustrielles,exploitationsforestieresminierespetitekabylie,1914_1929,3,germain; joly; sepulchre-commissaires-mm-c-sepulchre-j
-minesalgerietunisieomnium,phosphatesconstantine,1914_1929,3,de-montureux; juge-a; kapferer-m
-omniumminesusines,phosphatesconstantine,1914_1929,3,de-valencay; kapferer-m; schiaffino-l
-cheminsferroutesalgerie,minesboudjoudoun,1914_1929,3,devise-f; janicot-x; tanon-a
-cheminsferouestalgerien,creditalgerien,1914_1929,3,favereaux-g; goudchaux-c; peytel-j
+mineschellala,minieredjendli,1914_1929,5,cornudet-l; fitoussi-e; gosse-l; jalabert-e; urruty-f
+algeriennepetrolestliouanet,petolatdijon,1914_1929,5,aguillon-j; beigbeder-d; homan-l; jordan-p; kennerley-hall-c
+banquealgerie,banqueindustrielleafriquenord,1914_1929,5,boyer; delamotte-g; galicier-a; moatti; th-rodocanachi
+cheminsferroutesalgerie,minesboudjoudoun,1914_1929,5,devise-f; janicot-x; magnin; tanon; tanon-a
+agricolelyonnaisenordafrique,cotonnierebonoise,1914_1929,4,brisson; pepin-j; sonnery; tarare
+minesalgerietunisieomnium,phosphatesconstantine,1914_1929,4,ansbacher-t; de-montureux; juge-a; kapferer-m
+omniumminesusines,phosphatesconstantine,1914_1929,4,ansbacher-t; de-valencay; kapferer-m; schiaffino-l
+industriebois,unioncommercialeproducteurs,1914_1929,4,el-biar; jomiau-e; olivier-p; pasquier-m
+cheminsferouestalgerien,creditalgerien,1914_1929,4,favereaux-g; goudchaux-c; peytel-a; peytel-j
+concessionnaireminesouenza,ouenza,1914_1929,4,drappier-g; kroller-a; muller-nico-g; versailles
+commercialeacconage,commercialearmement,1914_1929,4,galoppe-r; marceron-m; thibaut-a; thibaut-m
+vignoblesmediterranee,vignoblesmediterraneedomainemonvilleduzerville,1914_1929,3,francois-marsal-f; gabet-m; thierry-de-boccard
+algeriennenavigationafriquenordcharlesschiaffino,minesrarbousakamody,1914_1929,3,ansbacher-t; maniquet-vauberet-l; talleyrand-perigord-p
+algeriennenavigationafriquenordcharlesschiaffino,omniumminesalgerietunisie,1914_1929,3,ansbacher-t; peyerimhoff-de-fontenelle-h; talleyrand-perigord-p
+algeriennenavigationafriquenordcharlesschiaffino,phosphatesconstantine,1914_1929,3,ansbacher-t; maniquet-vauberet-l; talleyrand-perigord-p
+minesrarbousakamody,phosphatesconstantine,1914_1929,3,ansbacher-t; maniquet-vauberet-l; talleyrand-perigord-p
+secteurelectrique,secteurelectriquevoutesalger,1914_1929,3,froment-guieysse-g; nerot-a; nerot-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,grandstravauxalgeriens,1914_1929,3,giraud-e; paris; vinson-j
+grandstravauxalgeriens,tabacsalgeriens,1914_1929,3,borgeaud-l; vinson-j; yusuf-c
+domainesaintelouise,domainescaidessebt,1914_1929,3,germain-a; sept-merveilles; telemly
+caboteursalgeriens,cargosalgeriens,1914_1929,3,coudray-a; mohring-f; pres-d-alger
+cheminsferroutesalgerie,minieredjebelfelten,1914_1929,3,magnin; tanon; tanon-a
+algerienneproduitschimiquesengrais,commercialeacconage,1914_1929,3,bouffe-g; galoppe-r; marceron-m
+algerienneconstructionsindustriellestravauxart,constructionsindustriellestravauxartcit,1914_1929,3,caquot-a; carret-e; pelnard-l
+algerienneetudesentreprisesagricolescommercialesindustrielles,distillerieliqueurmandarinebougie,1914_1929,2,brissonnet-e; giraud-e
+industrielleafriquenordtraitementsousproduitsvigneolivier,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,2,dubourdieu-l; mf
+approvisionnementnordafricaine,fichet,1914_1929,2,dijon; nancy
+chaines,fichet,1914_1929,2,nancy; turin
+alhambrarueisly,grandhoteloran,1914_1929,2,guiauchain-p; thibaud-j
+algeriennenavigationafriquenordcharlesschiaffino,minesouedrabahais,1914_1929,2,ansbacher-t; peyerimhoff-de-fontenelle-h
+fonciereimmobilierefranceafriquenord,minesouedrabahais,1914_1929,2,ansbacher-t; schiaffino-l
+fonciereimmobilierefranceafriquenord,omniumminesusines,1914_1929,2,ansbacher-t; schiaffino-l
+fonciereimmobilierefranceafriquenord,phosphatesconstantine,1914_1929,2,ansbacher-t; schiaffino-l
+minesalgerietunisieomnium,omniumminesusines,1914_1929,2,ansbacher-t; kapferer-m
+minesouedrabahais,omniumminesalgerietunisie,1914_1929,2,ansbacher-t; peyerimhoff-de-fontenelle-h
+minesouedrabahais,omniumminesusines,1914_1929,2,ansbacher-t; schiaffino-l
+minesouedrabahais,phosphatesconstantine,1914_1929,2,ansbacher-t; schiaffino-l
+minesrarbousakamody,omniumminesalgerietunisie,1914_1929,2,ansbacher-t; talleyrand-perigord-p
+omniumminesalgerietunisie,omniumminesusines,1914_1929,2,ansbacher-t; de-valencay
+algeriennenavigationafriquenord,algeriennenavigationafriquenordcharlesschiaffino,1914_1929,2,boulogne-g; godin-a
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,phosphatesconstantine,1914_1929,2,maniquet-vauberet-l; schiaffino-l
 algeriennemateriauxconstruction,nordafricaineetudesentreprises,1914_1929,2,froment-guieysse-g; lemoigne-e
+grandhoteloran,grandstravauxalgeriens,1914_1929,2,thibaud-j; vinson-j
+manufacturetabacscigarescigarettesjbastos,textilesafricains,1914_1929,2,bastos-a; cabanel-j
 africainearmement,constructionelectrique,1914_1929,2,godet-r; laminoirs-du-havre
 africainearmement,hutchinson,1914_1929,2,crighton; houet-p
-chaines,fichet,1914_1929,2,nancy; turin
 constructionelectrique,minesbouthaleb,1914_1929,2,buhot-h; lebon-a
 constructionelectrique,mineschabetkohol,1914_1929,2,buhot-h; lebon-a
 creditfoncieralgerietunisie,minesbouthaleb,1914_1929,2,buhot-h; lebon-a
 creditfoncieralgerietunisie,mineschabetkohol,1914_1929,2,buhot-h; lebon-a
+agricolealgerienne,tabacsalgeriens,1914_1929,2,gronier-e; yusuf-c
+constructionelectrique,tabacsalgeriens,1914_1929,2,gronier-e; henri-c
+creditfoncieralgerietunisie,tabacsalgeriens,1914_1929,2,gronier-e; henri-c
+etudesminieresindustrielles,exploitationsforestieresminierespetitekabylie,1914_1929,2,germain; joly
 feutresrok,senellemaubeuge,1914_1929,2,mulhouse; reims
 royaleasturienneminesdirection,senellemaubeuge,1914_1929,2,amiens; reims
-fonciereimmobilierefranceafriquenord,omniumminesusines,1914_1929,2,ansbacher-t; schiaffino-l
-minesalgerietunisieomnium,omniumminesusines,1914_1929,2,ansbacher-t; kapferer-m
-omniumminesalgerietunisie,omniumminesusines,1914_1929,2,ansbacher-t; de-valencay
-mineschellala,minieredjendli,1914_1929,2,jalabert-e; urruty-f
+minesfermiliana,minesferrouina,1914_1929,2,bois-colombes; urruty-f
 minesouastamesloula,minieredjendli,1914_1929,2,marlier-j; urruty-f
+mineschabetkohol,minesoranie,1914_1929,2,chastel; ledoux
 mineszaccar,ouenza,1914_1929,2,baguenault-de-puchesse; kroller-a
-minierefrancoafricaine,minieremetallurgiquecaronte,1914_1929,2,bronze; pres-bone-fonderies-a-gaillon
-minesboudjoudoun,minieredjebelfelten,1914_1929,2,petit-j; tanon-a
-omniumminesalgerietunisie,phosphatesconstantine,1914_1929,2,de-valencay; kapferer
+algeriennepetrolestliouanet,petrolestliouanet,1914_1929,2,homan-l; jordan-p
+manufacturetapisorient,senellemaubeuge,1914_1929,2,amiens; grenoble
+1918domainesbenislimantablat,grandstravauxalgeriens,1914_1929,2,borgeaud-l; giraud-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,ascenseursmontechargeshydrauliquesvillealger,1914_1929,2,giraud-e; guerlet-a
+banquealgerie,mineszincguergour,1914_1929,2,delamotte-g; galicier
+domainesaintelouise,domainesbenhassenvallouise,1914_1929,2,sept-merveilles; telemly
+domainesbenhassenvallouise,domainescaidessebt,1914_1929,2,sept-merveilles; telemly
+algerienneconstructionsnavalesmecaniques,immobiliereforteau,1914_1929,2,bernabe-h; gensollen-h
+banqueindustrielleafriquenord,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,2,navarre-h; saporta-g
+algeriennemeunerie,caboteursalgeriens,1914_1929,2,mohring-f; pres-d-alger
+algeriennemeunerie,cargosalgeriens,1914_1929,2,mohring-f; pres-d-alger
+cellulosesafriquenord,grandstravauxalgeriens,1914_1929,2,gautier; philibert-j
+mineszincguergour,zincguergour,1914_1929,2,devise-f; h-chabert
+etudescheminfertransafricain,phosphatesdjebelonk,1914_1929,2,berthelot-a; legouez-r
+1918domainesbenislimantablat,domainechapeaugendarme,1914_1929,2,borgeaud-l; chevallier-j
+fusionneeliegeshamendaspetitekabylie,immobilierealgerie,1914_1929,2,boissieu-p; versailles
+algerienneproduitschimiquesengrais,commercialearmement,1914_1929,2,galoppe-r; marceron-m
+algerienne,algerienneproduitschimiquesengrais,1914_1929,2,demarest; jurien-de-la-graviere-p
+algerienne,phosphatesdyr,1914_1929,2,jurien-de-la-graviere-p; morin-t
+1918domainesbenislimantablat,lassallas,1914_1929,2,chevallier-j; dome-m
+industrielleimmobiliere,lassallas,1914_1929,2,chevallier-c; chevallier-j
+immobiliereagricoleharrach,industriebois,1914_1929,2,olivier-p; pasquier-m
+immobiliereagricoleharrach,unioncommercialeproducteurs,1914_1929,2,olivier-p; pasquier-m
+fermesalgeriennes,fermesfrancaisestunisie,1914_1929,2,froment-p; viallet-l
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,2,adam-v; borgeaud-c
+minesdjebelaomar,palestro,1914_1929,2,mercier; parc-gatlif
+bouthaleb,minesbouthaleb,1914_1929,2,goyard-j; herbe-j
+approvisionnementnordafricaine,vinsmidialgeriebezierssete,1914_1929,2,delhaize-r; gontard-a
+abrifamilialoranais,miroiterieafriquenord,1914_1929,1,fouque-l
+abrifamilialoranais,allianceafricaineassurancesreassurances,1914_1929,1,hernandez-j
 abrifamilialoranais,minoteriereneesclapezrelizane,1914_1929,1,hernandez-j
+allianceafricaineassurancesreassurances,minoteriereneesclapezrelizane,1914_1929,1,hernandez-j
 acconagecharbonnagejullian,charbonnierenordafricain,1914_1929,1,laurens-j
-africainetravaux,velvetrum,1914_1929,1,ferrando-h
+africaineculturesindustrielles,charbonnierenordafricain,1914_1929,1,stern-j
+africaineculturesindustrielles,algerienneproduitschimiquesengrais,1914_1929,1,philippar-e
+africaineculturesindustrielles,manufacturetabacscigarescigarettesbastos,1914_1929,1,philippar-e
+africaineculturesindustrielles,manufacturetabacscigarescigarettesjbastos,1914_1929,1,philippar-e
+algerienneproduitschimiquesengrais,manufacturetabacscigarescigarettesbastos,1914_1929,1,philippar-e
+algerienneproduitschimiquesengrais,manufacturetabacscigarescigarettesjbastos,1914_1929,1,philippar-e
+africaineculturesindustrielles,grandstravauxalgeriens,1914_1929,1,asnieres
+africaineculturesindustrielles,groupevinicole,1914_1929,1,asnieres
+grandstravauxalgeriens,groupevinicole,1914_1929,1,asnieres
+africainetravaux,algerienneautomobilesrenault,1914_1929,1,thevenet-c
+africainetravaux,commercialefrancoafricainecharbonnage,1914_1929,1,thevenet-c
+africainetravaux,hotelsaintgeorges,1914_1929,1,thevenet-c
+algerienneautomobilesrenault,commercialefrancoafricainecharbonnage,1914_1929,1,thevenet-c
+algerienneautomobilesrenault,hotelsaintgeorges,1914_1929,1,thevenet-c
+commercialefrancoafricainecharbonnage,hotelsaintgeorges,1914_1929,1,thevenet-c
+africainetravaux,allianceafricaineassurancesreassurances,1914_1929,1,ferrando-h
+africainetravaux,comptoirproduitsceramiques,1914_1929,1,ferrando-h
+africainetravaux,djidjelliplage,1914_1929,1,ferrando-h
+allianceafricaineassurancesreassurances,comptoirproduitsceramiques,1914_1929,1,ferrando-h
+allianceafricaineassurancesreassurances,djidjelliplage,1914_1929,1,ferrando-h
+comptoirproduitsceramiques,djidjelliplage,1914_1929,1,ferrando-h
+afrique,comptoirescomptesidibelabbes,1914_1929,1,sidi-bel-abbes
+afrique,constructionelectrique,1914_1929,1,sidi-bel-abbes
+afrique,expansionnordafricaine,1914_1929,1,sidi-bel-abbes
+comptoirescomptesidibelabbes,constructionelectrique,1914_1929,1,sidi-bel-abbes
+comptoirescomptesidibelabbes,expansionnordafricaine,1914_1929,1,sidi-bel-abbes
+constructionelectrique,expansionnordafricaine,1914_1929,1,sidi-bel-abbes
+afrique,algerienneelevage,1914_1929,1,levy-c
+afrique,entreprisealgerienne,1914_1929,1,levy-c
+algerienneelevage,entreprisealgerienne,1914_1929,1,levy-c
+agricolelyonnaisenordafrique,charbonnierenordafricain,1914_1929,1,brisson
+charbonnierenordafricain,cotonnierebonoise,1914_1929,1,brisson
+minesainkerma,mineszincguergour,1914_1929,1,faure
+airliquide,algerienneglacehygieniqueentreposagefrigorifique,1914_1929,1,cornut-e
+airliquide,immobiliereagricoleharrach,1914_1929,1,cornut-e
+algerienneglacehygieniqueentreposagefrigorifique,immobiliereagricoleharrach,1914_1929,1,cornut-e
+airliquide,algerienneetudesentreprisesagricolescommercialesindustrielles,1914_1929,1,brissonnet-e
+airliquide,distillerieliqueurmandarinebougie,1914_1929,1,brissonnet-e
 airliquide,expansionnordafricaine,1914_1929,1,brissonnet-e
+airliquide,unioncommercialeproducteurs,1914_1929,1,brissonnet-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,expansionnordafricaine,1914_1929,1,brissonnet-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,unioncommercialeproducteurs,1914_1929,1,brissonnet-e
+distillerieliqueurmandarinebougie,expansionnordafricaine,1914_1929,1,brissonnet-e
+distillerieliqueurmandarinebougie,unioncommercialeproducteurs,1914_1929,1,brissonnet-e
+expansionnordafricaine,unioncommercialeproducteurs,1914_1929,1,brissonnet-e
+airliquide,alhambrarueisly,1914_1929,1,mf
+airliquide,approvisionnementnordafricaine,1914_1929,1,mf
+airliquide,caisseagricolecommercialeguelma,1914_1929,1,mf
+airliquide,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,mf
+airliquide,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,mf
+airliquide,tramwayselectriquesconstantine,1914_1929,1,mf
+alhambrarueisly,approvisionnementnordafricaine,1914_1929,1,mf
+alhambrarueisly,caisseagricolecommercialeguelma,1914_1929,1,mf
+alhambrarueisly,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,mf
+alhambrarueisly,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,mf
+alhambrarueisly,tramwayselectriquesconstantine,1914_1929,1,mf
+approvisionnementnordafricaine,caisseagricolecommercialeguelma,1914_1929,1,mf
+approvisionnementnordafricaine,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,mf
+approvisionnementnordafricaine,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,mf
+approvisionnementnordafricaine,tramwayselectriquesconstantine,1914_1929,1,mf
+caisseagricolecommercialeguelma,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,mf
+caisseagricolecommercialeguelma,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,mf
+caisseagricolecommercialeguelma,tramwayselectriquesconstantine,1914_1929,1,mf
+industrielleafriquenordtraitementsousproduitsvigneolivier,tramwayselectriquesconstantine,1914_1929,1,mf
+liegesproduitsnordafricainsalgerusinebouchonsbone,tramwayselectriquesconstantine,1914_1929,1,mf
+ateliersreparationsmaritimesafriquenord,coqmaterielviticoleoleicoleaixprovence,1914_1929,1,rey-l
 alfa,hydroelectriqueafriquenord,1914_1929,1,manufactures
 alfa,expansionnordafricaine,1914_1929,1,martin-l
 alfa,liege,1914_1929,1,roudy-a
-algeriennenavigationafriquenord,phosphatesconstantine,1914_1929,1,th-ansbacher
-algeriennenavigationafriquenord,constructionelectrique,1914_1929,1,boulogne-g
-algeriennemateriauxconstruction,secteurelectriquevoutesalger,1914_1929,1,froment-guieysse-g
-nordafricaineetudesentreprises,secteurelectriquevoutesalger,1914_1929,1,froment-guieysse-g
-africainearmement,expansionnordafricaine,1914_1929,1,martin
+alfa,approvisionnementnordafricaine,1914_1929,1,nancy
+alfa,chaines,1914_1929,1,nancy
+alfa,fichet,1914_1929,1,nancy
+alfa,manufacturetapisorient,1914_1929,1,nancy
+alfa,secteurelectrique,1914_1929,1,nancy
+approvisionnementnordafricaine,chaines,1914_1929,1,nancy
+approvisionnementnordafricaine,manufacturetapisorient,1914_1929,1,nancy
+approvisionnementnordafricaine,secteurelectrique,1914_1929,1,nancy
 chaines,manufacturetapisorient,1914_1929,1,nancy
+chaines,secteurelectrique,1914_1929,1,nancy
 fichet,manufacturetapisorient,1914_1929,1,nancy
+fichet,secteurelectrique,1914_1929,1,nancy
+manufacturetapisorient,secteurelectrique,1914_1929,1,nancy
+algeriennematerielagricole,cellulosesafriquenord,1914_1929,1,deiss-g
+algeriennematerielagricole,domainequatrechemins,1914_1929,1,manent-j
+algeriennematerielagricole,caisseagricolecommercialeguelma,1914_1929,1,mf-porte-a
+algerienneglacehygieniqueentreposagefrigorifique,syndicatlyonnaisnordafricain,1914_1929,1,boussand-h
+algerienneglacehygieniqueentreposagefrigorifique,vignoblesmediterranee,1914_1929,1,gabet-m
+algerienneglacehygieniqueentreposagefrigorifique,vignoblesmediterraneedomainemonvilleduzerville,1914_1929,1,gabet-m
+algerienneautomobilesrenault,alhambrarueisly,1914_1929,1,guiauchain-p
+algerienneautomobilesrenault,grandhoteloran,1914_1929,1,guiauchain-p
+algerienneautomobilesrenault,grandshotelsafriquenord,1914_1929,1,guiauchain-p
+alhambrarueisly,grandshotelsafriquenord,1914_1929,1,guiauchain-p
+grandhoteloran,grandshotelsafriquenord,1914_1929,1,guiauchain-p
+algeriennenavigationafriquenordcharlesschiaffino,fonciereimmobilierefranceafriquenord,1914_1929,1,ansbacher-t
+algeriennenavigationafriquenordcharlesschiaffino,minesalgerietunisieomnium,1914_1929,1,ansbacher-t
+algeriennenavigationafriquenordcharlesschiaffino,omniumminesusines,1914_1929,1,ansbacher-t
+fonciereimmobilierefranceafriquenord,minesalgerietunisieomnium,1914_1929,1,ansbacher-t
+fonciereimmobilierefranceafriquenord,minesrarbousakamody,1914_1929,1,ansbacher-t
+fonciereimmobilierefranceafriquenord,omniumminesalgerietunisie,1914_1929,1,ansbacher-t
+minesalgerietunisieomnium,minesouedrabahais,1914_1929,1,ansbacher-t
+minesalgerietunisieomnium,minesrarbousakamody,1914_1929,1,ansbacher-t
+minesalgerietunisieomnium,omniumminesalgerietunisie,1914_1929,1,ansbacher-t
+minesouedrabahais,minesrarbousakamody,1914_1929,1,ansbacher-t
+minesrarbousakamody,omniumminesusines,1914_1929,1,ansbacher-t
+algeriennenavigationafriquenord,constructionelectrique,1914_1929,1,boulogne-g
+algeriennenavigationafriquenordcharlesschiaffino,constructionelectrique,1914_1929,1,boulogne-g
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,algeriennenavigationafriquenordcharlesschiaffino,1914_1929,1,maniquet-vauberet-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,minesrarbousakamody,1914_1929,1,maniquet-vauberet-l
+algeriennenavigationafriquenordcharlesschiaffino,algeriennepetrolestliouanet,1914_1929,1,peyerimhoff-de-fontenelle-h
+algeriennepetrolestliouanet,minesouedrabahais,1914_1929,1,peyerimhoff-de-fontenelle-h
+algeriennepetrolestliouanet,omniumminesalgerietunisie,1914_1929,1,peyerimhoff-de-fontenelle-h
+algeriennenavigationafriquenord,phosphatesconstantine,1914_1929,1,th-ansbacher
+algerienneeaux,algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,1914_1929,1,schiaffino-l
+algerienneeaux,compagniesregionalesreuniesfabriquesengraisproduitschimiques,1914_1929,1,schiaffino-l
+algerienneeaux,domainesaintcharlesboufarik,1914_1929,1,schiaffino-l
+algerienneeaux,fonciereimmobilierefranceafriquenord,1914_1929,1,schiaffino-l
+algerienneeaux,minesouedrabahais,1914_1929,1,schiaffino-l
+algerienneeaux,omniumminesusines,1914_1929,1,schiaffino-l
+algerienneeaux,phosphatesconstantine,1914_1929,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,compagniesregionalesreuniesfabriquesengraisproduitschimiques,1914_1929,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,domainesaintcharlesboufarik,1914_1929,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,fonciereimmobilierefranceafriquenord,1914_1929,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,minesouedrabahais,1914_1929,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,omniumminesusines,1914_1929,1,schiaffino-l
+compagniesregionalesreuniesfabriquesengraisproduitschimiques,domainesaintcharlesboufarik,1914_1929,1,schiaffino-l
+compagniesregionalesreuniesfabriquesengraisproduitschimiques,fonciereimmobilierefranceafriquenord,1914_1929,1,schiaffino-l
+compagniesregionalesreuniesfabriquesengraisproduitschimiques,minesouedrabahais,1914_1929,1,schiaffino-l
+compagniesregionalesreuniesfabriquesengraisproduitschimiques,omniumminesusines,1914_1929,1,schiaffino-l
+compagniesregionalesreuniesfabriquesengraisproduitschimiques,phosphatesconstantine,1914_1929,1,schiaffino-l
+domainesaintcharlesboufarik,fonciereimmobilierefranceafriquenord,1914_1929,1,schiaffino-l
+domainesaintcharlesboufarik,minesouedrabahais,1914_1929,1,schiaffino-l
+domainesaintcharlesboufarik,omniumminesusines,1914_1929,1,schiaffino-l
+domainesaintcharlesboufarik,phosphatesconstantine,1914_1929,1,schiaffino-l
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,creditalgerien,1914_1929,1,adolphe-e
+algeriennehouillesagglomeresalgerphilippevillebougietenesmostaganemarzew,banquecoxclimited,1914_1929,1,hamilton
+algeriennemateriauxconstruction,secteurelectrique,1914_1929,1,froment-guieysse-g
+algeriennemateriauxconstruction,secteurelectriquevoutesalger,1914_1929,1,froment-guieysse-g
+nordafricaineetudesentreprises,secteurelectrique,1914_1929,1,froment-guieysse-g
+nordafricaineetudesentreprises,secteurelectriquevoutesalger,1914_1929,1,froment-guieysse-g
+alhambrarueisly,grandstravauxalgeriens,1914_1929,1,thibaud-j
+alhambrarueisly,fonciereimmobilieremaisoncarree,1914_1929,1,tine-j
+allianceafricaineassurancesreassurances,manufacturetapismarabout,1914_1929,1,scudier-r
+allianceafricaineassurancesreassurances,manufacturetabacscigarescigarettesbastos,1914_1929,1,bastos-a
+allianceafricaineassurancesreassurances,manufacturetabacscigarescigarettesjbastos,1914_1929,1,bastos-a
+allianceafricaineassurancesreassurances,textilesafricains,1914_1929,1,bastos-a
+manufacturetabacscigarescigarettesbastos,textilesafricains,1914_1929,1,bastos-a
+allianceafricaineassurancesreassurances,domainessaintpaul,1914_1929,1,dalaise-a
+allianceafricaineassurancesreassurances,tramwaysalgeriens,1914_1929,1,dalaise-a
+domainessaintpaul,tramwaysalgeriens,1914_1929,1,dalaise-a
+allianceafricaineassurancesreassurances,comptoirescompterelizane,1914_1929,1,foucard-p
+algerienneconstructionsnavalesmecaniques,algerienneetudesentreprisesagricolescommercialesindustrielles,1914_1929,1,vinson-j
+algerienneconstructionsnavalesmecaniques,allianceafricaineassurancesreassurances,1914_1929,1,vinson-j
+algerienneconstructionsnavalesmecaniques,domainesaintcharlesboufarik,1914_1929,1,vinson-j
+algerienneconstructionsnavalesmecaniques,grandhoteloran,1914_1929,1,vinson-j
+algerienneconstructionsnavalesmecaniques,grandstravauxalgeriens,1914_1929,1,vinson-j
+algerienneconstructionsnavalesmecaniques,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,vinson-j
+algerienneconstructionsnavalesmecaniques,tabacsalgeriens,1914_1929,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,allianceafricaineassurancesreassurances,1914_1929,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,domainesaintcharlesboufarik,1914_1929,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,grandhoteloran,1914_1929,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,vinson-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,tabacsalgeriens,1914_1929,1,vinson-j
+allianceafricaineassurancesreassurances,domainesaintcharlesboufarik,1914_1929,1,vinson-j
+allianceafricaineassurancesreassurances,grandhoteloran,1914_1929,1,vinson-j
+allianceafricaineassurancesreassurances,grandstravauxalgeriens,1914_1929,1,vinson-j
+allianceafricaineassurancesreassurances,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,vinson-j
+allianceafricaineassurancesreassurances,tabacsalgeriens,1914_1929,1,vinson-j
+domainesaintcharlesboufarik,grandhoteloran,1914_1929,1,vinson-j
+domainesaintcharlesboufarik,grandstravauxalgeriens,1914_1929,1,vinson-j
+domainesaintcharlesboufarik,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,vinson-j
+domainesaintcharlesboufarik,tabacsalgeriens,1914_1929,1,vinson-j
+grandhoteloran,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,vinson-j
+grandhoteloran,tabacsalgeriens,1914_1929,1,vinson-j
+grandstravauxalgeriens,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,vinson-j
+liegesproduitsnordafricainsalgerusinebouchonsbone,tabacsalgeriens,1914_1929,1,vinson-j
+africainearmement,expansionnordafricaine,1914_1929,1,martin
+cellulosesafriquenord,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,bouscasse-f
 chaines,senellemaubeuge,1914_1929,1,barcelone
 chaines,tissagesmecaniquesisere,1914_1929,1,barcelone
 senellemaubeuge,tissagesmecaniquesisere,1914_1929,1,barcelone
@@ -52,14 +286,40 @@ cheminsferroutesalgerie,constructionelectrique,1914_1929,1,buhot-h
 cheminsferroutesalgerie,creditfoncieralgerietunisie,1914_1929,1,buhot-h
 cheminsferroutesalgerie,minesbouthaleb,1914_1929,1,buhot-h
 cheminsferroutesalgerie,mineschabetkohol,1914_1929,1,buhot-h
+cheminsferroutesalgerie,usineslavieconstantine,1914_1929,1,buhot-h
+constructionelectrique,usineslavieconstantine,1914_1929,1,buhot-h
+creditfoncieralgerietunisie,usineslavieconstantine,1914_1929,1,buhot-h
+minesbouthaleb,usineslavieconstantine,1914_1929,1,buhot-h
+mineschabetkohol,usineslavieconstantine,1914_1929,1,buhot-h
 constructionelectrique,petolatdijon,1914_1929,1,zafiropulo-d
 constructionelectrique,petrolestliouanet,1914_1929,1,zafiropulo-d
 creditfoncieralgerietunisie,petolatdijon,1914_1929,1,zafiropulo-d
 creditfoncieralgerietunisie,petrolestliouanet,1914_1929,1,zafiropulo-d
+agricolealgerienne,constructionelectrique,1914_1929,1,gronier-e
+agricolealgerienne,creditfoncieralgerietunisie,1914_1929,1,gronier-e
 constructionelectrique,domainequatrechemins,1914_1929,1,henri-c
 creditfoncieralgerietunisie,domainequatrechemins,1914_1929,1,henri-c
+domainequatrechemins,tabacsalgeriens,1914_1929,1,henri-c
+cellulosesafriquenord,ceresfabricationventetousengraisproduitsviticoles,1914_1929,1,barbedette-f
 cellulosesafriquenord,constructionelectrique,1914_1929,1,barbedette-f
 cellulosesafriquenord,creditfoncieralgerietunisie,1914_1929,1,barbedette-f
+cellulosesafriquenord,creditimmobilieralger,1914_1929,1,barbedette-f
+cellulosesafriquenord,typolitho,1914_1929,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,constructionelectrique,1914_1929,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,creditfoncieralgerietunisie,1914_1929,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,creditimmobilieralger,1914_1929,1,barbedette-f
+ceresfabricationventetousengraisproduitsviticoles,typolitho,1914_1929,1,barbedette-f
+constructionelectrique,creditimmobilieralger,1914_1929,1,barbedette-f
+constructionelectrique,typolitho,1914_1929,1,barbedette-f
+creditfoncieralgerietunisie,creditimmobilieralger,1914_1929,1,barbedette-f
+creditfoncieralgerietunisie,typolitho,1914_1929,1,barbedette-f
+creditimmobilieralger,typolitho,1914_1929,1,barbedette-f
+constructionelectrique,domainehaouchouedsaf,1914_1929,1,blida
+creditfoncieralgerietunisie,domainehaouchouedsaf,1914_1929,1,blida
+constructionelectrique,minieremetallurgiquecaronte,1914_1929,1,saint-cloud
+constructionelectrique,meunieresersoutiaret,1914_1929,1,tiaret
+constructionelectrique,forceeclairagesaida,1914_1929,1,saida
+entreprisesaeronautiques,minesferlarrath,1914_1929,1,arnou-g
 feutresrok,houplain,1914_1929,1,tours
 feutresrok,royaleasturienneminesdirection,1914_1929,1,reims
 feutresrok,fichet,1914_1929,1,mulhouse
@@ -67,30 +327,55 @@ feutresrok,tramwaysalgeriens,1914_1929,1,mulhouse
 fichet,senellemaubeuge,1914_1929,1,mulhouse
 fichet,tramwaysalgeriens,1914_1929,1,mulhouse
 senellemaubeuge,tramwaysalgeriens,1914_1929,1,mulhouse
+electricitebiskra,etudesminieresbougie,1914_1929,1,liege
+electricitebiskra,fichet,1914_1929,1,liege
+etudesminieresbougie,fichet,1914_1929,1,liege
 fichet,velvetrum,1914_1929,1,alexandrie
 houplain,manufacturetapisorient,1914_1929,1,calais
 hydroelectriqueafriquenord,leach,1914_1929,1,lebon-p
-fonciereimmobilierefranceafriquenord,minesalgerietunisieomnium,1914_1929,1,ansbacher-t
-fonciereimmobilierefranceafriquenord,omniumminesalgerietunisie,1914_1929,1,ansbacher-t
-minesalgerietunisieomnium,omniumminesalgerietunisie,1914_1929,1,ansbacher-t
 minesalgerietunisieomnium,minesbouthaleb,1914_1929,1,juge-a
 minesalgerietunisieomnium,minieredjendli,1914_1929,1,juge-a
 minesbouthaleb,minieredjendli,1914_1929,1,juge-a
 minesbouthaleb,phosphatesconstantine,1914_1929,1,juge-a
 minieredjendli,phosphatesconstantine,1914_1929,1,juge-a
-minesbouthaleb,minesoranie,1914_1929,1,chastel-a
-mineschabetkohol,minesoranie,1914_1929,1,chastel-a
+minesbouthaleb,syndicatlyonnaisnordafricain,1914_1929,1,carnot-e
+mineschabetkohol,syndicatlyonnaisnordafricain,1914_1929,1,carnot-e
+mineschellala,minesfermiliana,1914_1929,1,urruty-f
 mineschellala,minesferrouina,1914_1929,1,urruty-f
 mineschellala,minesouastamesloula,1914_1929,1,urruty-f
+minesfermiliana,minesouastamesloula,1914_1929,1,urruty-f
+minesfermiliana,minieredjendli,1914_1929,1,urruty-f
 minesferrouina,minesouastamesloula,1914_1929,1,urruty-f
 minesferrouina,minieredjendli,1914_1929,1,urruty-f
 minesouastamesloula,mineszaccar,1914_1929,1,baguenault-de-puchesse
 minesouastamesloula,ouenza,1914_1929,1,baguenault-de-puchesse
+minierefrancoafricaine,minieremetallurgiquecaronte,1914_1929,1,bronze
+grandstravauxalgeriens,ouenza,1914_1929,1,marchal-c
+algeriennepetrolestliouanet,algerienneproduitschimiquesengrais,1914_1929,1,beigbeder-d
 algerienneproduitschimiquesengrais,petolatdijon,1914_1929,1,beigbeder-d
-manufacturetapisorient,senellemaubeuge,1914_1929,1,grenoble
+manufacturetapisorient,royaleasturienneminesdirection,1914_1929,1,amiens
+banqueindustrielleafriquenord,senellemaubeuge,1914_1929,1,roubaix
 manufacturetapisorient,tissagesmecaniquesisere,1914_1929,1,strasbourg
 tissagesmecaniquesisere,tramwaysalgeriens,1914_1929,1,geneve
+fermesalgeriennes,minesfer,1914_1929,1,pres-bone
+fermesalgeriennes,tramwaysalgeriens,1914_1929,1,pres-bone
 minesfer,tramwaysalgeriens,1914_1929,1,pres-bone
+comptoirescomptemedea,velvetrum,1914_1929,1,carron
+comptoirproduitsceramiques,velvetrum,1914_1929,1,ferrando
+1918domainesbenislimantablat,algerienneetudesentreprisesagricolescommercialesindustrielles,1914_1929,1,giraud-e
+1918domainesbenislimantablat,ascenseursmontechargeshydrauliquesvillealger,1914_1929,1,giraud-e
+1918domainesbenislimantablat,distillerieliqueurmandarinebougie,1914_1929,1,giraud-e
+1918domainesbenislimantablat,francoasiatiquepetrolesalgerie,1914_1929,1,giraud-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,francoasiatiquepetrolesalgerie,1914_1929,1,giraud-e
+ascenseursmontechargeshydrauliquesvillealger,distillerieliqueurmandarinebougie,1914_1929,1,giraud-e
+ascenseursmontechargeshydrauliquesvillealger,francoasiatiquepetrolesalgerie,1914_1929,1,giraud-e
+ascenseursmontechargeshydrauliquesvillealger,grandstravauxalgeriens,1914_1929,1,giraud-e
+distillerieliqueurmandarinebougie,francoasiatiquepetrolesalgerie,1914_1929,1,giraud-e
+distillerieliqueurmandarinebougie,grandstravauxalgeriens,1914_1929,1,giraud-e
+francoasiatiquepetrolesalgerie,grandstravauxalgeriens,1914_1929,1,giraud-e
+algerienneetudesentreprisesagricolescommercialesindustrielles,kieselguhr,1914_1929,1,guerlet-a
+ascenseursmontechargeshydrauliquesvillealger,kieselguhr,1914_1929,1,guerlet-a
+audoisefutstransports,francoalgeriennelocationfutailles,1914_1929,1,espallac-a
 banquealgerie,creditalgerien,1914_1929,1,jourdan
 banquealgerie,creditfoncieralgerietunisie,1914_1929,1,galicier-a
 banquealgerie,manufacturetabacscigarescigarettesbastos,1914_1929,1,galicier-a
@@ -101,58 +386,193 @@ banqueindustrielleafriquenord,zincguergour,1914_1929,1,galicier-a
 creditfoncieralgerietunisie,manufacturetabacscigarescigarettesbastos,1914_1929,1,galicier-a
 creditfoncieralgerietunisie,zincguergour,1914_1929,1,galicier-a
 manufacturetabacscigarescigarettesbastos,zincguergour,1914_1929,1,galicier-a
+banqueindustrielleafriquenord,mineszincguergour,1914_1929,1,delamotte-g
+algerienneconstructionsindustriellestravauxart,chauxcimentsrivetalger,1914_1929,1,laboubee-s
+algerienneconstructionsindustriellestravauxart,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,laboubee-s
+algerienneconstructionsindustriellestravauxart,manufacturetabacscigarescigarettesjbastos,1914_1929,1,laboubee-s
+chauxcimentsrivetalger,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,laboubee-s
+chauxcimentsrivetalger,manufacturetabacscigarescigarettesjbastos,1914_1929,1,laboubee-s
+industrielleafriquenordtraitementsousproduitsvigneolivier,manufacturetabacscigarescigarettesjbastos,1914_1929,1,laboubee-s
+fouque,manufacturetabacscigarescigarettesjbastos,1914_1929,1,varaigne-h
+domainesbenhassenvallouise,francoalgeriennecarburants,1914_1929,1,voirol-c
+domainesaintelouise,grandshotelsafriquenord,1914_1929,1,telemly
+domainesbenhassenvallouise,grandshotelsafriquenord,1914_1929,1,telemly
+domainescaidessebt,grandshotelsafriquenord,1914_1929,1,telemly
+algerienneconstructionsnavalesmecaniques,bernabefreres,1914_1929,1,bernabe-h
+bernabefreres,immobiliereforteau,1914_1929,1,bernabe-h
 banqueindustrielleafriquenord,cheminsferroutesalgerie,1914_1929,1,pellerin-de-latouche-g
+banqueindustrielleafriquenord,chauxcimentsrivetalger,1914_1929,1,michaux-l
+bruntortel,continentalecombustibles,1914_1929,1,piotrowski-c
+algeriennemeunerie,etudeseconomiquesafriquenord,1914_1929,1,pres-d-alger
+caboteursalgeriens,etudeseconomiquesafriquenord,1914_1929,1,pres-d-alger
+cargosalgeriens,etudeseconomiquesafriquenord,1914_1929,1,pres-d-alger
+caboteursalgeriens,industriebois,1914_1929,1,el-biar
+caboteursalgeriens,unioncommercialeproducteurs,1914_1929,1,el-biar
+caboteursalgeriens,caveschateau,1914_1929,1,altairac-g
+caboteursalgeriens,fonciereimmobilieremaisoncarree,1914_1929,1,altairac-g
+caveschateau,fonciereimmobilieremaisoncarree,1914_1929,1,altairac-g
+cellulosesafriquenord,etudeseconomiquesafriquenord,1914_1929,1,auriacombe
 cellulosesafriquenord,creditalgerien,1914_1929,1,r-outin
+cheminsferroutesalgerie,mineszincguergour,1914_1929,1,devise-f
 cheminsferroutesalgerie,zincguergour,1914_1929,1,devise-f
+minesboudjoudoun,mineszincguergour,1914_1929,1,devise-f
 minesboudjoudoun,zincguergour,1914_1929,1,devise-f
 cheminsferroutesalgerie,entreprisemaritimecommerciale,1914_1929,1,thenard-l
-cheminsferroutesalgerie,minieredjebelfelten,1914_1929,1,tanon-a
+etudescheminfertransafricain,unionfabriquesengraisproduitschimiquessuperphosphates,1914_1929,1,berthelot-a
+phosphatesdjebelonk,unionfabriquesengraisproduitschimiquessuperphosphates,1914_1929,1,berthelot-a
+entreprisemaritimecommerciale,etudescheminfertransafricain,1914_1929,1,dal-piaz-j
+algeriennepetrolestliouanet,mineschabetkohol,1914_1929,1,zafiropulo
+mineschabetkohol,ouenza,1914_1929,1,bauer
+1918domainesbenislimantablat,distilleriesalgerie,1914_1929,1,borgeaud-l
+1918domainesbenislimantablat,tabacsalgeriens,1914_1929,1,borgeaud-l
+1918domainesbenislimantablat,warotfreres,1914_1929,1,borgeaud-l
+distilleriesalgerie,domainechapeaugendarme,1914_1929,1,borgeaud-l
+distilleriesalgerie,grandstravauxalgeriens,1914_1929,1,borgeaud-l
+distilleriesalgerie,tabacsalgeriens,1914_1929,1,borgeaud-l
+distilleriesalgerie,warotfreres,1914_1929,1,borgeaud-l
+domainechapeaugendarme,grandstravauxalgeriens,1914_1929,1,borgeaud-l
+domainechapeaugendarme,tabacsalgeriens,1914_1929,1,borgeaud-l
+domainechapeaugendarme,warotfreres,1914_1929,1,borgeaud-l
+grandstravauxalgeriens,warotfreres,1914_1929,1,borgeaud-l
+tabacsalgeriens,warotfreres,1914_1929,1,borgeaud-l
+charbonnierealgerienne,platrieresrovigo,1914_1929,1,petersen
 algerienne,cheminsferouestalgerien,1914_1929,1,bordet-l
+aeriennefrancealgerie,minesferlarrath,1914_1929,1,dhe-p
 aeriennefrancealgerie,reseauaerientransafricain,1914_1929,1,dhe-p
-commercialeacconage,commercialearmement,1914_1929,1,thibaut-m
-algerienne,algerienneproduitschimiquesengrais,1914_1929,1,demarest
+minesferlarrath,reseauaerientransafricain,1914_1929,1,dhe-p
+africainearmement,concessionnaireminesouenza,1914_1929,1,versailles
+africainearmement,fusionneeliegeshamendaspetitekabylie,1914_1929,1,versailles
+africainearmement,immobilierealgerie,1914_1929,1,versailles
+africainearmement,ouenza,1914_1929,1,versailles
+concessionnaireminesouenza,fusionneeliegeshamendaspetitekabylie,1914_1929,1,versailles
+concessionnaireminesouenza,immobilierealgerie,1914_1929,1,versailles
+fusionneeliegeshamendaspetitekabylie,ouenza,1914_1929,1,versailles
+immobilierealgerie,ouenza,1914_1929,1,versailles
+1918domainesbenislimantablat,agricolealgerienne,1914_1929,1,narbonne-j
+1918domainesbenislimantablat,algeriennemeunerie,1914_1929,1,narbonne-j
+agricolealgerienne,algeriennemeunerie,1914_1929,1,narbonne-j
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,ceresfabricationventetousengraisproduitsviticoles,1914_1929,1,borgeaud-j
+algerienneproduitschimiquesengrais,commercialecharbonnagesentreprisesmaritimes,1914_1929,1,marceron-m
+commercialeacconage,commercialecharbonnagesentreprisesmaritimes,1914_1929,1,marceron-m
+commercialearmement,commercialecharbonnagesentreprisesmaritimes,1914_1929,1,marceron-m
+commercialeacconage,oranaisecharbonnages,1914_1929,1,fossorier-r
+algerienneproduitschimiquesengrais,phosphatesdyr,1914_1929,1,jurien-de-la-graviere-p
 algerienne,entreprisemaritimecommerciale,1914_1929,1,fabry-r
-compagniesregionalesreuniesfabriquesengraisproduitschimiques,fonciereimmobilierefranceafriquenord,1914_1929,1,schiaffino-l
-compagniesregionalesreuniesfabriquesengraisproduitschimiques,omniumminesusines,1914_1929,1,schiaffino-l
-compagniesregionalesreuniesfabriquesengraisproduitschimiques,phosphatesconstantine,1914_1929,1,schiaffino-l
-fonciereimmobilierefranceafriquenord,phosphatesconstantine,1914_1929,1,schiaffino-l
+comptoirescomptemedea,coqmaterielviticoleoleicoleaixprovence,1914_1929,1,jourdan-j
+comptoirescomptesidibelabbes,tuileriebriqueteriebelabbesiennesidibelabbes,1914_1929,1,bellat-l
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,ateliersfonderiecelestinducros,1914_1929,1,compose-de-a-membres
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,etslouisbilliard,1914_1929,1,compose-de-a-membres
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,minieremetallurgiquecaronte,1914_1929,1,compose-de-a-membres
+anciensetablissementsalbertstockhammercomptoirtechniquealgerienmachinesfournituresindustrielles,oranaisefutaille,1914_1929,1,compose-de-a-membres
+ateliersfonderiecelestinducros,etslouisbilliard,1914_1929,1,compose-de-a-membres
+ateliersfonderiecelestinducros,minieremetallurgiquecaronte,1914_1929,1,compose-de-a-membres
+ateliersfonderiecelestinducros,oranaisefutaille,1914_1929,1,compose-de-a-membres
+etslouisbilliard,minieremetallurgiquecaronte,1914_1929,1,compose-de-a-membres
+etslouisbilliard,oranaisefutaille,1914_1929,1,compose-de-a-membres
+minieremetallurgiquecaronte,oranaisefutaille,1914_1929,1,compose-de-a-membres
+comptoirtextilecirta,tramwayselectriquesconstantine,1914_1929,1,nahon-a
+concessionnaireminesouenza,groupevinicole,1914_1929,1,richard-j
+concessionnaireminesouenza,mineszaccar,1914_1929,1,kroller-a
+agricolealgerienne,cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,1914_1929,1,nouvion-g
+cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,domainesaintcharlesboufarik,1914_1929,1,froger-a
+cooperativeagricoleagrumesfruitslegumesmitidjaelaffrounconfiturerieboufarik,fermesfrancaisestunisie,1914_1929,1,charmetant-j
+creditfoncieralgerietunisie,grandstravauxalgeriens,1914_1929,1,jourdanne-a
+creditimmobilieralger,oranaisefutaille,1914_1929,1,martin-r
+depotgairard,vignoblesmediterraneedomainemonvilleduzerville,1914_1929,1,roubaud-j
+detartrageconstructionsmecaniques,unionvinicolenordafricaine,1914_1929,1,wilhelm-p
+distilleriesalgerie,unionvinicolenordafricaine,1914_1929,1,trachsler-h
+domainechapeaugendarme,francoalgeriennecarburants,1914_1929,1,park-e
+domainechapeaugendarme,industrielleafriquenordtraitementsousproduitsvigneolivier,1914_1929,1,boudin-j
+1918domainesbenislimantablat,industrielleimmobiliere,1914_1929,1,chevallier-j
+domainechapeaugendarme,industrielleimmobiliere,1914_1929,1,chevallier-j
+domainechapeaugendarme,lassallas,1914_1929,1,chevallier-j
+algerienneconstructionsnavalesmecaniques,domainesources,1914_1929,1,pelegri-g
+domainesaintelouise,mitidja,1914_1929,1,germain-a
+domainescaidessebt,mitidja,1914_1929,1,germain-a
+1918domainesbenislimantablat,anciensetablissementsjulesborgeaudfilsnordafricaincommercial,1914_1929,1,borgeaud-h
+1918domainesbenislimantablat,domainesaintcharlesboufarik,1914_1929,1,borgeaud-h
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,domainesaintcharlesboufarik,1914_1929,1,borgeaud-h
+domainesaintcharlesboufarik,industriebois,1914_1929,1,alger-a
+domaineskeroulisaintemouchent,mitidja,1914_1929,1,germain-r
+domaineseltaousarba,immobiliereagricoleharrach,1914_1929,1,olivier-p
+domaineseltaousarba,industriebois,1914_1929,1,olivier-p
+domaineseltaousarba,unioncommercialeproducteurs,1914_1929,1,olivier-p
+electricitesoukarhas,unionmaritimefrancealgerie,1914_1929,1,constitution-r
+electricitesoukarhas,omniumalgerienelectricitetebessa,1914_1929,1,bligny-j
 entreprisemaritimecommerciale,oranaisechauxcimentsoranarcole,1914_1929,1,x-o
+eschenauer,expansionnordafricaine,1914_1929,1,ricome-j
+expansionnordafricaine,fermedeloupysaintdenissig,1914_1929,1,raby-a
+fonciereimmobilierevillealger,grandstravauxalgeriens,1914_1929,1,neuilly
+francoasiatiquepetrolesalgerie,minesdjebelaomar,1914_1929,1,gastu-j
+algerienneetudesentreprisesagricolescommercialesindustrielles,grandshotelsafriquenord,1914_1929,1,beard-du-dezert-o
+agricolealgerienne,grandstravauxalgeriens,1914_1929,1,yusuf-c
+algerienneetudesentreprisesagricolescommercialesindustrielles,vinsmidialgeriebezierssete,1914_1929,1,paris
+grandstravauxalgeriens,vinsmidialgeriebezierssete,1914_1929,1,paris
+algerienneconstructionsnavalesmecaniques,laitierealger,1914_1929,1,gensollen-h
+algerienneconstructionsnavalesmecaniques,minierekaolinsdjebeldebar,1914_1929,1,gensollen-h
+immobiliereforteau,laitierealger,1914_1929,1,gensollen-h
+immobiliereforteau,minierekaolinsdjebeldebar,1914_1929,1,gensollen-h
+laitierealger,minierekaolinsdjebeldebar,1914_1929,1,gensollen-h
+immobilierefrancooranaise,megisseriealgerienne,1914_1929,1,emile-e
+liegesproduitsnordafricainsalgerusinebouchonsbone,minierekaolinsdjebeldebar,1914_1929,1,kempf-a
 fusionneeliegeshamendaspetitekabylie,liegesproduitsnordafricainsalgerusinebouchonsbone,1914_1929,1,m-lallemand
+approvisionnementnordafricaine,fusionneeliegeshamendaspetitekabylie,1914_1929,1,rousselot-e
+anciensetablissementsjulesborgeaudfilsnordafricaincommercial,lucienborgeaud,1914_1929,1,adam-v
+liegesproduitsnordafricainsalgerusinebouchonsbone,lucienborgeaud,1914_1929,1,adam-v
+minesfermiliana,phosphatesmzaita,1914_1929,1,rivaud
+industrielleafriquenordtraitementsousproduitsvigneolivier,messagerieslittoral,1914_1929,1,moucheront-p
+minesboudjoudoun,minesouastamesloula,1914_1929,1,robellaz-f
+minesdjebelaomar,ouenza,1914_1929,1,mercier
+ouenza,palestro,1914_1929,1,mercier
 minieredjendli,zincguergour,1914_1929,1,riollot-j
-mineszincguergour,zincguergour,1914_1929,1,h-chabert
+omniumminesalgerietunisie,secteurelectrique,1914_1929,1,courbevoie
+phosphatesconstantine,secteurelectrique,1914_1929,1,courbevoie
+algerienneelevage,oranaisecharbonnages,1914_1929,1,levy
+agricolealgerienne,algerienneconstructionsnavalesmecaniques,1914_1929,1,delrieu-e
 agricolefinancierealgerie,uniontransafricaine,1914_1929,1,philouze-h
 algerienneproduitschimiquesengrais,ouenza,1914_1929,1,mesnier-j
+ouenza,vignoblesmediterraneedomainemonvilleduzerville,1914_1929,1,bernard
+condat,creditfoncieralgerietunisie,1930_1944,13,adm-del-m-e-gronier; adm-m-d-zafiropulo; c-h; e-philippar; e-regnault; g-saint-rene-tallandier; h-buhot; j-delarue; l-dubourdieu; mohamed-el-guebbas; pdt-bone-guelma-t; r-de-caix; x-loisy
+entreprisealgerienne,entreprisemaritimecommerciale,1930_1944,13,adm-mm-r-fabry; d-estienne-d-orves; djebel-felten; fr-estier; g-gravier; g-noblemaire; h-giraud; mante-t; marseille; oppenheim; pres-m-j-dal-piaz; thenard-l; zafiropulo-d
 algerienne,clement,1930_1944,5,j-de-sayve; l-odier; p-jurien-de-la-graviere; r-fabry; saint-germain
 banquealgerie,banqueindustrielleafriquenord,1930_1944,5,boyer-p; ernest-picard-p; galicier-a; moatti; sabatier-e
+lafarge,nordafricainecimentslafarge,1930_1944,5,borgeaud-l; boutier-a; daher-p; ewbank; laboubee-s
 afriquenord,commercialeminiereafriquenord,1930_1944,5,lemaigre-dubreuil-r; morin-g; mourgnot-p; salvane-l; thomas-e
 cheminsferroutesalgerie,minieredjebelfelten,1930_1944,3,lambert-a; petit-j; tanon-a
 algerienneproduitschimiquesengrais,creditfoncieralgerietunisie,1930_1944,3,jourdanne-a; renaudin-l; trelat-m
 algerienneeclairageforce,creditfoncieralgerietunisie,1930_1944,2,boulogne-g; loisy-x
+algerienneeclairageforce,tramwaysalgeriens,1930_1944,2,boulogne-g; mercier-g
 algerienneeclairageforce,unionelectriquegaziereafriquenord,1930_1944,2,boulogne-g; bucherer-h
 creditfoncieralgerietunisie,regiefoncierevillealger,1930_1944,2,boulogne-g; rouan-p
 creditfoncieralgerietunisie,unionelectriquegaziereafriquenord,1930_1944,2,boulogne-g; jourdanne-a
-desage,minieredjendli,1930_1944,2,madeline-j; vallee-calamine
 essur,exploitationforestiereminierepetitekabylie,1930_1944,2,joly-g; trousselle-r
 cheminsferroutesalgerie,creditfoncieralgerietunisie,1930_1944,2,buhot-h; jourdanne-a
 algerienne,algerienneproduitschimiquesengrais,1930_1944,2,jurien-de-la-graviere-p; mirabaud-e
 algerienne,cheminsferroutesalgerie,1930_1944,2,mirabaud-e; pallier-j
 algerienneproduitschimiquesengrais,cheminsferroutesalgerie,1930_1944,2,jourdanne-a; mirabaud-e
 concessionnaireouenza,minessidimarouf,1930_1944,2,jousselin-j; vassilliere-c
+concessionnaireouenza,ouenza,1930_1944,2,chabert-p; rydbeck-o
 phosphatesconstantine,unionfabriquesengraisproduitschimiquessuperphosphates,1930_1944,2,jordan-p; petit-l
+alfa,cheddites,1930_1944,1,bouchayer-h
+achaque,alfa,1930_1944,1,caron
+alfa,alfasocfabricationpatescellulose,1930_1944,1,villet-f
 aldegue,alfasocfabricationpatescellulose,1930_1944,1,pechiney
 alfasocfabricationpatescellulose,mullerpasse19261928souscontrolegraengesberg,1930_1944,1,froges
 alfasocfabricationpatescellulose,algerienne,1930_1944,1,marlio-l
-alfa,alfasocfabricationpatescellulose,1930_1944,1,villet-f
-alfa,cheddites,1930_1944,1,bouchayer-h
-achaque,alfa,1930_1944,1,caron
 algerienneeclairageforce,regiefoncierevillealger,1930_1944,1,boulogne-g
+creditfoncieralgerietunisie,tramwaysalgeriens,1930_1944,1,boulogne-g
+regiefoncierevillealger,tramwaysalgeriens,1930_1944,1,boulogne-g
 regiefoncierevillealger,unionelectriquegaziereafriquenord,1930_1944,1,boulogne-g
+tramwaysalgeriens,unionelectriquegaziereafriquenord,1930_1944,1,boulogne-g
 algerienneeclairageforce,cheminsferroutesalgerie,1930_1944,1,toche-c
 algeriennenavigationafriquenordcharlesschiaffino,phosphatesconstantine,1930_1944,1,schiaffino-l
 algeriennepetrolesstandard,regiefoncierevillealger,1930_1944,1,altairac-g
 charbonnage,creditfoncieralgerietunisie,1930_1944,1,thevenet-c
+desage,minieredjendli,1930_1944,1,madeline-j
 creditfoncieralgerietunisie,entreprisealgerienne,1930_1944,1,zafiropulo-d
+creditfoncieralgerietunisie,entreprisemaritimecommerciale,1930_1944,1,zafiropulo-d
 cheminsferroutesalgerie,entreprisealgerienne,1930_1944,1,thenard-l
+cheminsferroutesalgerie,entreprisemaritimecommerciale,1930_1944,1,thenard-l
 banquealgerie,cheminsferroutesalgerie,1930_1944,1,morard-l
 banqueindustrielleafriquenord,commercialeminiereafriquenord,1930_1944,1,ferasson-l
 banqueindustrielleafriquenord,liegeshamendaspetitekabylie,1930_1944,1,ferasson-l
@@ -169,7 +589,6 @@ algerienneproduitschimiquesengrais,unionelectriquegaziereafriquenord,1930_1944,1
 cheminsferroutesalgerie,unionelectriquegaziereafriquenord,1930_1944,1,jourdanne-a
 cheminsferroutesalgerie,vinsmidialgerie,1930_1944,1,lambert-a
 minieredjebelfelten,vinsmidialgerie,1930_1944,1,lambert-a
-concessionnaireouenza,ouenza,1930_1944,1,chabert-p
 concessionnaireouenza,nordafricaincommercial,1930_1944,1,jules-b
 creditalgerien,minesferrouina,1930_1944,1,peytel-a
 creditalgerien,unionelectriquegaziereafriquenord,1930_1944,1,pinson-e
@@ -177,15 +596,21 @@ minesbouthaleb,minieredjebelfelten,1930_1944,1,pouquet
 minesbouthaleb,ouenza,1930_1944,1,pouquet
 minieredjebelfelten,ouenza,1930_1944,1,pouquet
 domainechapeaugendarme,phosphatesconstantine,1930_1944,1,deyron-l
+domainechapeaugendarme,lafarge,1930_1944,1,borgeaud-l
 domainechapeaugendarme,nordafricaincommercial,1930_1944,1,borgeaud-l
 domainechapeaugendarme,nordafricainecimentslafarge,1930_1944,1,borgeaud-l
+lafarge,nordafricaincommercial,1930_1944,1,borgeaud-l
 nordafricaincommercial,nordafricainecimentslafarge,1930_1944,1,borgeaud-l
 domainechapeaugendarme,ouenza,1930_1944,1,lauriol-a
 agricolealgeriennebertagna,filtreriefrancoalgerienne,1930_1944,1,prat-g
 agricolealgeriennebertagna,phosphatesconstantine,1930_1944,1,petit-l
 agricolealgeriennebertagna,unionfabriquesengraisproduitschimiquessuperphosphates,1930_1944,1,petit-l
+industriellepetrolesafriquenord,lafarge,1930_1944,1,boutier-a
 industriellepetrolesafriquenord,nordafricainecimentslafarge,1930_1944,1,boutier-a
 minesbouthaleb,minieredjendli,1930_1944,1,juge-a
+minesfermiliana,minesferrouina,1930_1944,1,urruty-f
+minesfermiliana,minesouastamesloula,1930_1944,1,urruty-f
+minesfermiliana,minieredjendli,1930_1944,1,urruty-f
 minesferrouina,minesouastamesloula,1930_1944,1,urruty-f
 minesferrouina,minieredjendli,1930_1944,1,urruty-f
 minesouastamesloula,minieredjendli,1930_1944,1,urruty-f
@@ -205,6 +630,9 @@ africaineminestransports,banquealgerie,1945_1962,1,bloch-laine-f
 banquealgerie,ouenza,1945_1962,1,bloch-laine-f
 algerienneeclairageforce,unionelectriquegaziereafriquenord,1945_1962,1,bucherer-h
 algerienneeclairageforce,foncieremediterranee,1945_1962,1,leruste-h
+algerienneeclairageforce,banquenationalecommerceindustrie,1945_1962,1,mercier-g
+algerienneeclairageforce,tramwaysalgeriens,1945_1962,1,mercier-g
+banquenationalecommerceindustrie,tramwaysalgeriens,1945_1962,1,mercier-g
 banquealgerie,cheminsferroutesalgerie,1945_1962,1,morard-l
 banqueindustrielleafriquenord,phosphatesconstantine,1945_1962,1,schiaffino-l
 banqueindustrielleafriquenord,manufacturetabacscigarescigarettes,1945_1962,1,galicier-l
@@ -212,10 +640,12 @@ domainechapeaugendarme,manufacturetabacscigarescigarettes,1945_1962,1,borgeaud-h
 domainechapeaugendarme,nordafricainecimentslafarge,1945_1962,1,borgeaud-h
 manufacturetabacscigarescigarettes,nordafricainecimentslafarge,1945_1962,1,borgeaud-h
 manufacturetabacscigarescigarettes,regiefoncierevillealger,1945_1962,1,gendre-e
+banqueindustrielleafriquenord,banquenationalecommerceindustrie,1945_1962,1,pose-a
+banqueindustrielleafriquenord,centraleusinespapier,1945_1962,1,pose-a
+banquenationalecommerceindustrie,centraleusinespapier,1945_1962,1,pose-a
 banqueindustrielleafriquenord,liegeshamendaspetitekabylie,1945_1962,1,ferasson-l
 banqueindustrielleafriquenord,nordafricainecimentslafarge,1945_1962,1,ferasson-l
 liegeshamendaspetitekabylie,nordafricainecimentslafarge,1945_1962,1,ferasson-l
-banqueindustrielleafriquenord,centraleusinespapier,1945_1962,1,pose-a
 centraleusinespapier,creditfoncieralgerietunisie,1945_1962,1,imbert-l
 centraleusinespapier,minieredjebelfelten,1945_1962,1,bernard-p
 algerienne,cheminsferroutesalgerie,1945_1962,1,pallier-j
@@ -233,41 +663,40 @@ algerienneproduitschimiquesengrais,minesouastamesloula,1945_1962,1,mirabaud-e
 domainechapeaugendarme,industriellepetrolesafriquenord,1945_1962,1,lauriol-a
 domainechapeaugendarme,ouenza,1945_1962,1,lauriol-a
 industriellepetrolesafriquenord,ouenza,1945_1962,1,lauriol-a
+forestiereliegeouvreouedeloueb,liegeshamendaspetitekabylie,1945_1962,1,ed-laroche-joubert
 industriellepetrolesafriquenord,liegeshamendaspetitekabylie,1945_1962,1,boutier-a
 industriellepetrolesafriquenord,regiefoncierevillealger,1945_1962,1,boutier-a
 liegeshamendaspetitekabylie,regiefoncierevillealger,1945_1962,1,boutier-a
+liegeshamendaspetitekabylie,mineskabylie,1945_1962,1,bargy-c
 minieremzaita,unioncompagniesregionalesreuniesfabriquesengrais,1945_1962,1,de-cenival-a
 phosphatesconstantine,unioncompagniesregionalesreuniesfabriquesengrais,1945_1962,1,petit-l
 raffineriessoufrereunies,vignoblesmediterranee,1945_1962,1,roubaud-j
 unioncompagniesregionalesreuniesfabriquesengrais,unionelectriquegaziereafriquenord,1945_1962,1,cipriani-p
-banquealgerie,banquealgeriebanquealgerietunisiebanquealgerie,pre_1914,9,alcay; alphandery; berthon; fils-h; giraud; lassallas; marchessaux; obitz; tachet-censeurs-mm-blasselle
-cheminsferouestalgerien,creditalgerien,pre_1914,4,favereaux-g; goudchaux-c; leop-see; peytel
+banquealgerie,banquealgeriebanquealgerietunisiebanquealgerie,pre_1914,8,alcay; alphandery; berthon; fils-h; giraud; lassallas; marchessaux; obitz
+cheminsferouestalgerien,creditalgerien,pre_1914,3,favereaux-g; goudchaux-c; peytel
 minesdjebelguendou,minesguelma,pre_1914,3,boscher-a; chalupt-c; lyon-m
-algerienneglacehygieniqueentreposagefrigorifique,cheminsferestalgerien,pre_1914,2,chev-lh; off-lh
-algerienneglacehygieniqueentreposagefrigorifique,fonciereimmobilierevillealger,pre_1914,2,chev-lh; off-lh
-cheminsferestalgerien,fonciereimmobilierevillealger,pre_1914,2,chev-lh; off-lh
-caisseagricoletlemcen,creditagricoletlemcen,pre_1914,2,soipteur-g; thesmar-j
+algerienne,minessoumahtafna,pre_1914,2,mirabaud-p; tarbe-des-sablons
+caisseagricoletlemcen,creditagricoletlemcen,pre_1914,2,soipteur-g; thesmar
 creditfoncieralgerietunisie,mineschabetkohol,pre_1914,2,buhot-h; zafiropulo-d
+algerienne,phosphatesdyr,pre_1914,2,barrot-f; bordet-l
 acconagealgerien,chargeursalgeriensreunis,pre_1914,1,laurens-h
 akkaresbelezma,algerienne,pre_1914,1,garbe-d
 algerienneglacehygieniqueentreposagefrigorifique,mineschabetkohol,pre_1914,1,boussand-l
 algerienneglacehygieniqueentreposagefrigorifique,creditfoncieragricolealgerie,pre_1914,1,tachet-j
 algerienneglacehygieniqueentreposagefrigorifique,distilleriebadoilmustapha,pre_1914,1,tachet-j
 creditfoncieragricolealgerie,distilleriebadoilmustapha,pre_1914,1,tachet-j
-algerienneglacehygieniqueentreposagefrigorifique,brasseriemalteriealgeriennemustaphainferieur,pre_1914,1,chev-lh
-algerienneglacehygieniqueentreposagefrigorifique,raffineriessoufrereunies,pre_1914,1,chev-lh
-brasseriemalteriealgeriennemustaphainferieur,cheminsferestalgerien,pre_1914,1,chev-lh
-brasseriemalteriealgeriennemustaphainferieur,fonciereimmobilierevillealger,pre_1914,1,chev-lh
-brasseriemalteriealgeriennemustaphainferieur,raffineriessoufrereunies,pre_1914,1,chev-lh
-cheminsferestalgerien,raffineriessoufrereunies,pre_1914,1,chev-lh
-fonciereimmobilierevillealger,raffineriessoufrereunies,pre_1914,1,chev-lh
+algerienneglacehygieniqueentreposagefrigorifique,cheminsferestalgerien,pre_1914,1,off-lh
+algerienneglacehygieniqueentreposagefrigorifique,fonciereimmobilierevillealger,pre_1914,1,off-lh
+cheminsferestalgerien,fonciereimmobilierevillealger,pre_1914,1,off-lh
 millaul,phosphatesconstantine,pre_1914,1,th-ansbacher
 millaul,pfund,pre_1914,1,kapferer
+algerienne,minesbouthaleb,pre_1914,1,mirabaud-p
 minesbouthaleb,minessoumahtafna,pre_1914,1,mirabaud-p
 minesbouthaleb,mselati,pre_1914,1,rostand-b
 pfund,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,pre_1914,1,juge-a
 ascenseursmontechargeshydrauliquesvillealger,minierenordafriquesaintetienne,pre_1914,1,joseph
 banquealgerie,creditalgerien,pre_1914,1,jourdan
+algerienne,brasseriemalteriealgeriennemustaphainferieur,pre_1914,1,dollfus-galline-c
 brasseriemalteriealgeriennemustaphainferieur,distilleriebadoilmustapha,pre_1914,1,charles
 etudescheminfertransafricain,phosphatesdjebelonk,pre_1914,1,berthelot-a
 creditfoncieralgerietunisie,etudescheminfertransafricain,pre_1914,1,lebon-a
@@ -277,7 +706,6 @@ chargeursalgeriensreunis,chauxcimentsouedfergoug,pre_1914,1,dreyfus-g
 cheminsferestalgerien,fournituresmilitaires,pre_1914,1,homberg-o
 algerienne,cheminsferouestalgerien,pre_1914,1,bordet-l
 algerienne,fournituresmilitaires,pre_1914,1,bordet-l
-algerienne,phosphatesdyr,pre_1914,1,bordet-l
 cheminsferouestalgerien,fournituresmilitaires,pre_1914,1,bordet-l
 cheminsferouestalgerien,phosphatesdyr,pre_1914,1,bordet-l
 fournituresmilitaires,phosphatesdyr,pre_1914,1,bordet-l
@@ -287,9 +715,10 @@ omniumminesalgerietunisie,tramwayselectriquesoran,pre_1914,1,saint-germain
 creditfoncieragricolealgerie,creditfoncieralgerietunisie,pre_1914,1,castan-r
 creditfoncieragricolealgerie,fonciereimmobilierevillealger,pre_1914,1,castan-r
 creditfoncieralgerietunisie,fonciereimmobilierevillealger,pre_1914,1,castan-r
-creditfoncieralgerietunisie,phosphatesdyr,pre_1914,1,a-l-article-des-statuts-c
 fonciereimmobilierevillealger,phosphatesdyr,pre_1914,1,matheron
+distributionenergieelectrique,tramwaysalgeriens,pre_1914,1,parsons
 mineschellala,minesguelma,pre_1914,1,wilmotte-m
 mineschellala,minesdjebelforer,pre_1914,1,meyer-l
 minieredjendli,unionespagnolefabriquesengraisproduitschimiquessuperphosphates,pre_1914,1,michel-c
 omniumminesalgerietunisie,phosphatesconstantine,pre_1914,1,genebrias-de-fredaigue-g
+tramwayoranhammambouhadjarextensions,tramwayselectriquesoran,pre_1914,1,hamoir-l
