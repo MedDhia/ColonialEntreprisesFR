@@ -790,7 +790,8 @@ def check_annotation_resolver() -> None:
     # specific, checkable, wrong claim.
     cid, _, method = resolve("Mines", index, by_first)
     eq("  a note matching several firms is dropped", cid, "")
-    check("  ...and says why", method in {"single_token", "ambiguous_2"}, method)
+    check("  ...and says why",
+          method in {"single_token", "generic_single_token", "ambiguous_2"}, method)
 
     path = os.path.join(PROC_DIR, "affiliations_annotations.csv")
     if not os.path.exists(path):
@@ -801,6 +802,51 @@ def check_annotation_resolver() -> None:
     check("  no tie points back at the firm it was read from", not self_ref,
           str(len(self_ref)))
     eq("  every row is tagged", {r["source_genre"] for r in rows}, {"annotation"})
+
+
+def check_biographies() -> None:
+    """Stage 3e: person-scoped entries in biographical dictionaries."""
+    from parse_biographies import affiliations_in, entries, split_list
+
+    print("biographical parser", file=sys.stderr)
+
+    doc = ("ACCAMBRAY (Léon), député\n"
+           "[Administrateur : Compagnie céramique française (nommé mai 1921), "
+           "Compagnie africaine de commerce]\n"
+           "UNE ROSETTE BIEN PLACÉE (L'affaire)\n"
+           "[administrateur de la Société fiduciaire de contrôle]\n"
+           "ASPE-FLEURIMONT (Lucien)\n"
+           "[administrateur de la Société fiduciaire de contrôle]\n")
+    got = [name for name, _ in entries(doc)]
+    check("  reads a capitalised entry header", any("ACCAMBRAY" in g for g in got))
+    # A headline in capitals has the same shape as an entry header.
+    check("  a capitalised headline is not a person",
+          not any("ROSETTE" in g for g in got), str(got))
+
+    # The parenthetical qualifier is not part of the company name.
+    eq("  a company list splits on top-level commas only",
+       split_list("Compagnie céramique française (nommé mai 1921), Banque X"),
+       ["Compagnie céramique française", "Banque X"])
+
+    roles = dict((n, r) for r, n in affiliations_in(
+        "[Administrateur : Compagnie céramique française]"))
+    eq("  a labelled list yields the role",
+       roles.get("Compagnie céramique française"), "administrateur")
+    roles = dict((n, r) for r, n in affiliations_in(
+        "président de la Société fiduciaire de contrôle"))
+    check("  a governed noun phrase yields the role",
+          any(r == "president" for r in roles.values()), str(roles))
+
+    path = os.path.join(PROC_DIR, "affiliations_biographical.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_biographical.csv")
+    check("  produced ties", len(rows) > 1000, str(len(rows)))
+    bad = [r for r in rows if not r["company_key"] or not r["person_key"]]
+    check("  every row is fully attributed", not bad, str(len(bad)))
+    eq("  every row is tagged", {r["source_genre"] for r in rows}, {"biographical"})
+    # These entries give a career, not a board list for a year.
+    eq("  biographical ties carry no year", {r["year"] for r in rows}, {""})
 
 
 def check_geocoding() -> None:
@@ -1089,6 +1135,7 @@ def main() -> None:
         check_person_index()
         check_prose_parser()
         check_annotation_resolver()
+        check_biographies()
         check_geocoding()
         check_figures()
 

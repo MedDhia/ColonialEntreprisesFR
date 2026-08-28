@@ -97,7 +97,23 @@ JUNK_NAME_RE = re.compile(
     r"|\bpolytechnic"
     r"|\bv\.-pdt\b"
     r"|\bn[ée]\s+en\s+\d{4}"
-    r"|\bfils\s+de\b")
+    r"|\bfils\s+de\b"
+    r"|%"                                      # "% Rhin et Rhône" - a fragment
+    r"|\.\s+[a-zé]")                           # a sentence continues: prose, not a name
+
+# A single token that names a whole industry rather than a firm. "Compagnie du
+# port" reduces to ["port"] and matched a company literally called Port;
+# "Coloniale" matched "La Nouvelle Coloniale". These resolve for the wrong
+# reason - the token is generic, so an exact whole-name match is coincidence.
+GENERIC_SINGLE = {
+    "port", "ports", "mines", "mine", "banque", "credit", "comptoir", "docks",
+    "coloniale", "colonial", "coloniales", "immobiliere", "fonciere",
+    "agricole", "maritime", "industrielle", "commerciale", "africaine",
+    "algerienne", "marocaine", "tunisienne", "indochinoise", "transports",
+    "tramways", "electrique", "energie", "eaux", "sucrerie", "sucreries",
+    "plantations", "domaines", "forestiere", "miniere", "minier", "navigation",
+    "assurances", "immobilier", "union", "omnium", "syndicat", "office",
+}
 
 
 PLACE_FOLD: set[str] = set()
@@ -169,6 +185,8 @@ def resolve(note: str, index, by_first: dict[str, list[int]]) -> tuple[str, str,
     # prefixes "Armandon & Cie", "Zafiropulo" prefixed an unrelated agency.
     # One token resolves only on an exact whole-name match.
     if len(nt) == 1:
+        if nt[0] in GENERIC_SINGLE or len(nt[0]) < MIN_DISTINCTIVE:
+            return "", "", "generic_single_token"
         exact = [(cid, name) for cid, name, toks in index
                  if content(toks) == nt]
         if len({cid for cid, _ in exact}) == 1:

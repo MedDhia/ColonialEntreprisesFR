@@ -45,6 +45,8 @@ Ten stages, each resumable, each writing its own outputs:
 3c. **`parse_prose.py`** — boards reported in running prose (§4d). Opt-in.
 3d. **`resolve_annotations.py`** — the compiler's inline affiliation notes,
    resolved against the company list (§4e). Opt-in; runs after stage 4.
+3e. **`parse_biographies.py`** — biographical dictionaries (§4f). Opt-in;
+   runs after stage 4.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
@@ -64,7 +66,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (794 assertions).
+`checks.py` validates the parsers and the built dataset (803 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -91,15 +93,15 @@ The last row is the real gap, and it is not one thing:
   `Annuaire Desfossés 1956` alone, a document that previously yielded zero.
 - **Biographical dictionaries** (*Qui êtes-vous ? 1924*, *Légion d'honneur en
   Indochine*), where affiliations sit in a bracketed `[Administrateur : …]`
-  block after fielded prose. **Still unread.**
+  block after fielded prose. Stage 3e reads these — see §4f.
 - **Honours lists** (*Mérite agricole*, 1.1M characters). These score high on
   role vocabulary but carry *occupations*, not directorships — "propriétaire
   et colon", "vétérinaire à Oran". Correctly excluded; counting them would
   inflate the network with ties that do not exist.
 
-Two further gaps are quantified elsewhere: **17,995 parsed ties (22.7%)** are
-dropped for want of an identifiable firm (§5), and **6,394 annotation leads**
-sit unverified in `candidate_ties_from_annotations.csv`.
+One further gap is quantified elsewhere: **17,995 parsed ties (22.7%)** are
+dropped for want of an identifiable firm (§5). The compiler's annotation leads
+are now resolved as far as they go (§4e).
 
 ### The extraction trap
 
@@ -411,6 +413,34 @@ better matching.
 Opt-in via `build_network.py --with-annotations`, because this is the
 compiler's assertion rather than a transcribed board list, and it carries no
 year of its own beyond the observation it sits beside.
+
+## 4f. Biographical dictionaries
+
+*Qui êtes-vous ? 1924* and *Légion d'honneur en Indochine* are person-indexed:
+a name in capitals, fielded prose, and a bracketed block of affiliations the
+compiler added. None of the three earlier parsers can read them.
+`parse_ties.py` wants a board list under a firm heading; here the heading is a
+person. `parse_person_index.py` wants numbered references; here the companies
+are named. `parse_prose.py` wants an inline `M.`/`MM.` marker; here the person
+is the entry header and is never named again.
+
+What stage 3e adds is **person-scoped segmentation**: the document is split at
+the capitalised surname headers, and every role construction inside an entry is
+attributed to that entry's person. Company names are resolved with the prefix
+matcher from §4e. **3,052 ties over 717 firms and 686 people**, hand-audited
+at roughly 93%.
+
+Two guards were added from the audit. A capitalised *headline* has exactly the
+shape of an entry header — "UNE ROSETTE BIEN PLACÉE (L'affaire)" was read as a
+person — so headers containing ordinary French function words are rejected.
+And a single generic token is not a firm: "Compagnie du port" reduces to
+*port* and matched a company literally called *Port*; "Coloniale" matched *La
+Nouvelle Coloniale*. That fix improved §4e as well.
+
+**These ties carry no year**, and `checks.py` asserts it. A biographical entry
+gives a career, not a board as it stood in a given year, so including them
+adds edges that no period slice can place. That alone is reason enough to keep
+the stage opt-in: `build_network.py --with-biographical`.
 
 ## 5. Dating and attributing ties
 

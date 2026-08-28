@@ -158,6 +158,17 @@ stage 4; `prefix`, `prefix_exact_length` and `exact_single_token` from the
 abbreviation matcher. Hand-audited at roughly 94%. Not in the default network
 — `build_network.py --with-annotations`. See METHODOLOGY §4e.
 
+### `affiliations_biographical.csv` — from biographical dictionaries (3,052)
+
+Written by `src/parse_biographies.py` (stage 3e) from *Qui êtes-vous ? 1924*,
+*Légion d'honneur en Indochine* and similar. Same columns as
+`affiliations.csv`, plus `match_method` and `source_genre = "biographical"`.
+
+**`year` is always empty.** The entry gives a career, not a board as it stood
+in a particular year, so these ties cannot be placed in a period. Not in the
+default network — `build_network.py --with-biographical`. Hand-audited at
+roughly 93%; see METHODOLOGY §4f.
+
 ### `org_affiliations.csv` — company → company board ties as observed
 
 Same shape, for board members that are companies rather than people

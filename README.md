@@ -32,6 +32,15 @@ network can be sliced by period rather than collapsed into one static graph.
 > the structured parser's high nineties. 23% of its rows independently
 > corroborate a pair the structured parser already found.
 >
+> **Four extraction genres, three of them opt-in.** The default network is
+> built from firm dossiers and the person-indexed annuaires. Three further
+> parsers write their own files and are included only on request, because each
+> is measurably less precise than the structured parser:
+> `--with-prose` (14,251 ties, ~90%), `--with-annotations` (1,637, ~94%) and
+> `--with-biographical` (3,052, ~93%). Precision figures come from
+> hand-checking random samples against source context; METHODOLOGY §4d–4f
+> gives the audits and the failures each one fixed.
+>
 > **The network includes the Paris Bourse.** A large share of colonial firms
 > were publicly quoted, so `Annuaire Desfossés 1956` is a colonial source; it
 > contributes 16,131 ties and 1,889 firms, of which 11% also have dossier
@@ -229,6 +238,7 @@ src/
   parse_person_index.py stage 3b inverted indexes -> person -> company ties
   parse_prose.py       stage 3c prose      -> boards reported in running text
   resolve_annotations.py stage 3d notes    -> the compiler's inline affiliations
+  parse_biographies.py stage 3e biographical dictionaries -> career affiliations
   build_network.py     stage 4  ties         -> nodes, edges, projections, GraphML
   split_by_country.py  stage 5  dataset      -> per-territory bundles
   code_positionality.py stage 6 people       -> colonial / native coding
@@ -240,7 +250,7 @@ src/
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            794 assertions on the parsers and the built dataset
+  checks.py            803 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -271,6 +281,7 @@ python3 src/parse_ties.py                     # ~6 min
 python3 src/parse_person_index.py             # ~1 min, person-indexed annuaires
 python3 src/parse_prose.py                    # ~4 min, prose-reported boards
 python3 src/resolve_annotations.py            # after stage 4; inline notes
+python3 src/parse_biographies.py              # after stage 4; Qui êtes-vous ?, etc.
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding

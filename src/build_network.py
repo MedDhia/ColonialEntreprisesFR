@@ -374,6 +374,9 @@ def main() -> None:
                     help="skip GraphML export above this node count")
     ap.add_argument("--no-person-index", action="store_true",
                     help="exclude stage 3b (the annuaire indexes) from the network")
+    ap.add_argument("--with-biographical", action="store_true",
+                    help="include stage 3e (biographical dictionaries). Off by "
+                         "default; these ties carry no year.")
     ap.add_argument("--with-annotations", action="store_true",
                     help="include stage 3d (the compiler's inline affiliation "
                          "notes, resolved). Off by default.")
@@ -435,6 +438,15 @@ def main() -> None:
             r.setdefault("sector", "")
         affiliations += [r for r in an if r["company_key"] and r["person_key"]]
         print(f"annotation rows merged: {len(an):,}", file=sys.stderr)
+
+    # Stage 3e: biographical dictionaries. Opt-in, and note these ties are
+    # undated - the entry gives a career, not a board list for a given year.
+    if args.with_biographical:
+        bio = read_csv("affiliations_biographical.csv")
+        for r in bio:
+            r.setdefault("source_genre", "biographical")
+        affiliations += [r for r in bio if r["company_key"] and r.get("person_key")]
+        print(f"biographical rows merged: {len(bio):,}", file=sys.stderr)
 
     for r in affiliations + org_aff:
         r.setdefault("source_genre", "dossier")
