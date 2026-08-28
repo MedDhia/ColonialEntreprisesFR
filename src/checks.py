@@ -475,6 +475,134 @@ def check_splits() -> None:
         check(f"  {level}: no bundle mixes territories", not leaks, "; ".join(leaks[:3]))
 
 
+def check_layout() -> None:
+    """Unit checks on the figure geometry, no data needed.
+
+    Both guard bugs that made a figure lie rather than crash: an outlier that
+    squashed every other node into a dot, and labels drawn off the canvas.
+    """
+    print("make_figures geometry", file=sys.stderr)
+    from make_figures import _text_width, normalise, radius
+
+    # A spring layout typically throws one node far out. Fitting to the true
+    # extremes then collapses the rest; the robust fit must not.
+    pos = {f"n{i}": (i / 100.0, i / 100.0) for i in range(40)}
+    pos["far"] = (60.0, 60.0)
+    naive = normalise(pos, 300, 300, pad=10)
+    robust = normalise(pos, 300, 300, pad=10, robust=0.03)
+
+    def spread(p):
+        xs = [v[0] for k, v in p.items() if k != "far"]
+        return max(xs) - min(xs)
+
+    check("  naive fit collapses the body of the layout", spread(naive) < 10,
+          f"spread {spread(naive):.1f}")
+    check("  robust fit keeps the body spread out", spread(robust) > 200,
+          f"spread {spread(robust):.1f}")
+    # Clamping keeps the outlier on the canvas rather than off it.
+    for name, p in (("naive", naive), ("robust", robust)):
+        inside = all(0 <= x <= 300 and 0 <= y <= 300 for x, y in p.values())
+        check(f"  {name} fit leaves every node on the canvas", inside)
+
+    # Area-proportional sizing: four times the degree is twice the radius,
+    # net of the floor. Never a linear radius, which over-reads big nodes.
+    r_lo, r_mid, r_hi = radius(0, 0, 100), radius(25, 0, 100), radius(100, 0, 100)
+    check("  radius is area-proportional",
+          abs((r_mid - r_lo) * 2 - (r_hi - r_lo)) < 0.01,
+          f"{r_lo:.2f} {r_mid:.2f} {r_hi:.2f}")
+    check("  text width estimate grows with the string",
+          _text_width("Banque de l'Indochine", 11) > _text_width("Banque", 11) > 0)
+
+
+def check_figures() -> None:
+    """The rendered figures must be well-formed, on-canvas and comparable."""
+    import xml.etree.ElementTree as ET
+
+    fig_dir = os.path.join(ROOT, "figures")
+    if not os.path.isdir(fig_dir):
+        return
+    print("figures", file=sys.stderr)
+    from make_figures import PALETTE, _text_width
+
+    svgs = ["fig1_core_interlocks.svg", "fig2_by_period.svg", "fig3_ego_indochine.svg"]
+    for name in svgs:
+        path = os.path.join(fig_dir, name)
+        if not os.path.exists(path):
+            check(f"  {name} exists", False)
+            continue
+        try:
+            root = ET.parse(path).getroot()
+        except Exception as exc:  # noqa: BLE001
+            check(f"  {name} is well-formed XML", False, str(exc))
+            continue
+        check(f"  {name} is well-formed XML", True)
+        w, h = (float(v) for v in root.get("viewBox").split()[2:])
+        ns = "{http://www.w3.org/2000/svg}"
+
+        # Nodes on the canvas. A node drawn outside the viewBox is invisible
+        # and silently drops a firm from the figure.
+        off = [
+            (c.get("cx"), c.get("cy"))
+            for c in root.iter(f"{ns}circle")
+            if not (0 <= float(c.get("cx")) <= w and 0 <= float(c.get("cy")) <= h)
+        ]
+        check(f"  {name}: every node is inside the canvas", not off, str(off[:3]))
+
+        # Labels on the canvas, measured the way the renderer measures them.
+        # Margin labels used to run off the right edge and get clipped.
+        clipped = []
+        for t in root.iter(f"{ns}text"):
+            x = float(t.get("x", 0))
+            size = float(t.get("font-size", 11))
+            tw = _text_width("".join(t.itertext()), size)
+            x0 = x - tw if t.get("text-anchor") == "end" else x
+            if x0 < -0.5 or x0 + tw > w + 0.5:
+                clipped.append(("".join(t.itertext())[:24], round(x0), round(x0 + tw)))
+        check(f"  {name}: no label is clipped by the canvas", not clipped,
+              str(clipped[:3]))
+
+        # The all-pairs cap: at most three categorical hues, plus grey.
+        allowed = set(PALETTE["light"]["series"]) | {
+            PALETTE["light"]["other"], PALETTE["light"]["surface"],
+            PALETTE["light"]["edge"], "none",
+        }
+        extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - allowed
+        check(f"  {name}: no colour outside the validated palette", not extra,
+              str(sorted(extra)[:3]))
+
+    # Small multiples must share one coordinate frame, or a reader comparing
+    # panels is comparing two different maps.
+    path = os.path.join(fig_dir, "fig2_by_period.svg")
+    if os.path.exists(path):
+        root = ET.parse(path).getroot()
+        ns = "{http://www.w3.org/2000/svg}"
+        seen: dict[str, set] = {}
+        for g in root.iter(f"{ns}g"):
+            for c in g.iter(f"{ns}circle"):
+                cid = c.get("data-id")
+                if cid:
+                    seen.setdefault(cid, set()).add((c.get("cx"), c.get("cy")))
+        moved = {k: v for k, v in seen.items() if len(v) > 1}
+        check("  fig2: a firm sits at the same point in every panel", not moved,
+              str(list(moved)[:3]))
+        check("  fig2: panels share firms to compare",
+              any(len(v) >= 1 for v in seen.values()) and len(seen) > 20,
+              f"{len(seen)} firms")
+
+    page = os.path.join(fig_dir, "interlock_network.html")
+    if os.path.exists(page):
+        with open(page, encoding="utf-8") as fh:
+            html_text = fh.read()
+        # Identity must never be colour-alone: a legend and a table view ship
+        # with the figure, and light-mode aqua's contrast WARN obliges them.
+        for token in ('<table', 'class="legend"', 'class="tooltip"',
+                      "prefers-color-scheme"):
+            check(f"  page carries {token}", token in html_text)
+        check("  page is self-contained (no external fetch)",
+              "http://" not in html_text.replace("http://www.w3.org", ""),
+              "external URL in page")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--unit", action="store_true", help="parser checks only")
@@ -484,11 +612,13 @@ def main() -> None:
     check_urls()
     check_titles()
     check_citations()
+    check_layout()
     if not args.unit:
         check_extraction()
         check_dataset()
         check_positionality()
         check_splits()
+        check_figures()
 
     total = CHECKS["passed"] + CHECKS["failed"]
     print(f"\n{CHECKS['passed']}/{total} checks passed", file=sys.stderr)

@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Four stages, each resumable, each writing its own outputs:
+Seven stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -43,8 +43,9 @@ Four stages, each resumable, each writing its own outputs:
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
+7. **`make_figures.py`** — network → `figures/`, HTML and SVG (§5d).
 
-`checks.py` validates the parsers and the built dataset (163 assertions).
+`checks.py` validates the parsers and the built dataset (188 assertions).
 
 ### The extraction trap
 
@@ -315,6 +316,53 @@ often that happens, so 0.6% is a **lower bound**. And the same-surname
 same-initial merging described in §4 applies here too — the Hui-Bon-Hoa family
 appears as six nodes, some of which may be one person.
 
+## 5d. Drawing the network
+
+`src/make_figures.py` writes `figures/`. Three decisions there are analytical
+rather than cosmetic, and each of them can distort a reading of the data.
+
+**The whole graph is never drawn.** At `weight >= 1` the interlock network is
+3,085 firms and 39,523 edges: rendered as a node-link diagram it is a solid
+disc that shows only that the ink is dense. Every figure is an explicit
+subset, and the subset rule is printed with the figure. Figure 1 raises the
+threshold to two shared directors, takes the largest component, and keeps the
+170 firms of highest weighted degree — 1,162 interlocks. Reading a *global*
+property such as density or centralisation off that picture is a mistake; the
+figure is a map of the core, and the numbers for the whole graph are in
+`network_stats.csv`.
+
+**Colour is capped at three territories, not eight.** In a bar chart any two
+categorical colours are adjacent only along the axis; in a node-link diagram
+any two nodes can end up touching, so the palette must survive an all-pairs
+separation test rather than an adjacent-pairs one. That caps the categorical
+slots at three. Firms are coloured by their first territory, folded to
+Indochine, Maroc and Afrique occidentale française — the three largest in the
+core — with everything else a recessive grey that is *not* a fourth category
+and must not be read as one. The palette is checked with the validator, in
+both light and dark surfaces, rather than judged by eye; light-mode aqua sits
+below 3:1 on the surface, so the figure ships direct labels on the largest
+nodes and a full table view rather than relying on the hue alone.
+
+**Small multiples share one layout, computed once.** Figure 2 draws one panel
+per period. The obvious implementation — lay out and normalise each period's
+subgraph independently — rescales every panel to fill its box, which made the
+1914–1929 panel (1,764 interlocks) look *smaller* than pre-1914 (299): the
+visual encoding then contradicts the data. The layout is instead computed
+once on the union of all periods and each panel draws its own edges at those
+fixed coordinates, with one size scale throughout. A firm therefore sits in
+the same place in every panel and the panels are directly comparable. The
+normalisation also fits to a central percentile band rather than the extremes,
+because a spring layout throws one or two nodes far out and scaling to the
+true min/max squashes everything else into a dot; the outliers are clamped to
+the frame, which is why a panel occasionally shows a node pinned at a corner.
+
+An empty region of a period panel means no *recorded* shared directorship
+then, which is a statement about the collection and not about the firms — the
+same caveat as §6, and the reason the panels carry their tie counts as text.
+Layouts use a fixed seed, so the figures are reproducible; a spring layout has
+no meaningful axes and distance between unconnected nodes carries no
+information.
+
 ## 6. Validity — read this before using the data
 
 **It is a sample of statements, not a census of boards.** A firm's absence
@@ -379,6 +427,9 @@ python3 src/fetch_extract.py                    # ~1.5 h, ~21 GB transferred, re
 python3 src/fetch_extract.py --retry-failed     # sweep transient network errors
 python3 src/parse_ties.py                       # ~6 min
 python3 src/build_network.py                    # ~3 min
+python3 src/split_by_country.py                 # ~2 min, per-territory bundles
+python3 src/code_positionality.py               # ~1 min, positionality coding
+python3 src/make_figures.py                     # ~1 min, figures/
 python3 src/checks.py                           # must pass
 ```
 

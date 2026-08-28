@@ -107,6 +107,25 @@ and **0.0% in French Equatorial Africa, Gabon, Congo-Brazzaville and New
 Caledonia**. All 205 non-European codings are listed in
 `positionality_review.csv` for hand-checking.
 
+### Figures
+
+`figures/interlock_network.html` is a self-contained page — open it in a
+browser, no server and no build step — with three figures, hover tooltips, a
+table view of the core firms and a dark mode. The same three are versioned as
+standalone SVGs for papers.
+
+| | |
+|---|---|
+| `fig1_core_interlocks.svg` | The core interlock network: 170 firms, 1,162 ties at two or more shared directors, coloured by territory and sized by weighted degree. |
+| `fig2_by_period.svg` | The same network by period, five panels on one shared layout — 299 ties before 1914, 1,764 in 1914–1929, 116 after 1962. |
+| `fig3_ego_indochine.svg` | The interlock neighbourhood of a single firm, the Banque de l'Indochine by default. |
+
+Regenerate with `python3 src/make_figures.py`; `--top`, `--min-weight` and
+`--ego` change the subset. **Read a figure as a map of the core, not of the
+whole graph** — each is an explicit subset, and no figure is a basis for a
+global claim about density or centralisation. METHODOLOGY §5d sets out the
+three choices that could otherwise mislead.
+
 ### Which edge file to use
 
 Start from **`edges_person_company.csv`** — everything else is derived from it.
@@ -127,7 +146,8 @@ src/
   build_network.py     stage 4  ties         -> nodes, edges, projections, GraphML
   split_by_country.py  stage 5  dataset      -> per-territory bundles
   code_positionality.py stage 6 people       -> colonial / native coding
-  checks.py            163 assertions on the parsers and the built dataset
+  make_figures.py      stage 7  network      -> figures (HTML + SVG)
+  checks.py            188 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -138,6 +158,9 @@ data/
 docs/
   CODEBOOK.md          every file, every variable, every value list
   METHODOLOGY.md       construction, coding decisions, validity limitations
+figures/
+  interlock_network.html  three figures, interactive, self-contained
+  fig*.svg                the same figures standalone, for papers
 examples/
   explore.py           worked tour of the dataset
 ```
@@ -152,6 +175,7 @@ python3 src/parse_ties.py                     # ~6 min
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
+python3 src/make_figures.py                   # ~1 min, figures/
 python3 src/checks.py                         # must pass
 ```
 

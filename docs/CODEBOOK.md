@@ -399,6 +399,50 @@ above `--graphml-max-nodes`.
 
 ---
 
+## 4c. Figures
+
+`src/make_figures.py` (stage 7) writes `figures/`. Nothing downstream reads
+them; they are outputs, regenerated from `data/processed/` in about a minute.
+
+| File | Contents |
+|---|---|
+| `interlock_network.html` | All three figures in one self-contained page — no network access, no build step. Hover tooltips on every node, a sortable table view of the 170 core firms, and a light/dark pair that follows the reader's system setting. |
+| `fig1_core_interlocks.svg` | Figure 1, standalone, light mode. |
+| `fig2_by_period.svg` | Figure 2, standalone, light mode. |
+| `fig3_ego_indochine.svg` | Figure 3, standalone, light mode. |
+
+**Figure 1 — the core interlock network.** 170 firms and 1,162 interlocks:
+`edges_company_interlock.csv` filtered to `weight >= 2` (two or more shared
+directors), largest component, top 170 by weighted degree. Node area is
+weighted degree, edge opacity and width are the number of shared directors,
+colour is the firm's first territory folded to the three largest — Indochine,
+Maroc, Afrique occidentale française — plus a recessive grey "Other" that is
+not a category. The fourteen largest nodes are labelled in the side margins
+with leader lines.
+
+**Figure 2 — small multiples by period.** One panel per `PERIODS` value, from
+`edges_company_interlock_by_period.csv` at the same `weight >= 2`: pre-1914
+299 ties, 1914–1929 1,764, 1930–1944 1,621, 1945–1962 681, post-1962 116. All
+five panels share one layout and one size scale, so position is comparable
+across panels and panel density tracks the tie counts printed beneath.
+
+**Figure 3 — an ego network.** The interlock neighbourhood of one firm,
+`--ego "Banque de l'Indochine"` by default; the focal firm is coloured, its
+neighbours grey.
+
+```bash
+python3 src/make_figures.py                     # defaults
+python3 src/make_figures.py --top 250 --min-weight 3 --ego "Compagnie du Niger"
+```
+
+`--top` sets the node count in figure 1, `--min-weight` the shared-director
+threshold everywhere, `--ego` the focal firm of figure 3 (matched on
+`companies.csv` name). Layout seeds are fixed, so the same arguments give the
+same figure. See METHODOLOGY §5d for why the subset, the three-colour cap and
+the shared layout are what they are.
+
+---
+
 ## 5. Value lists
 
 ### `role`
