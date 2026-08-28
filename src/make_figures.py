@@ -72,6 +72,23 @@ PALETTE = {
     },
 }
 
+# A third "mode" that emits CSS custom properties instead of literal colours,
+# so one SVG serves both themes. Inside an HTML page that defines the
+# variables this halves the markup: the light and dark renderings of a figure
+# differ only in colour, and inlining both put 7 MB of duplicate geometry into
+# the territory gallery. Standalone SVG files still use the literal modes -
+# there is no page to define the variables.
+PALETTE["vars"] = {
+    "surface": "var(--surface)",
+    "text_primary": "var(--text-primary)",
+    "text_secondary": "var(--text-secondary)",
+    "text_muted": "var(--text-muted)",
+    "hairline": "var(--hairline)",
+    "series": ["var(--s1)", "var(--s2)", "var(--s3)"],
+    "other": "var(--other)",
+    "edge": "var(--edge)",
+}
+
 
 # --- graph construction --------------------------------------------------
 def build_interlock_graph(min_weight: int):
@@ -161,26 +178,38 @@ def radius(weighted_degree: float, lo: float, hi: float) -> float:
 
 
 def draw_network(nodes, edges, width, height, mode, label_top=0, font=11.0,
-                 label_margin=0.0):
-    """Return SVG body for one node-link panel. `nodes` carries x, y, r, color."""
+                 label_margin=0.0, edge_opacity=1.0, node_ring=2.0):
+    """Return SVG body for one node-link panel. `nodes` carries x, y, r, color.
+
+    `edge_opacity` scales the edge ink and `node_ring` the surface ring around
+    each node. Both exist for the whole-graph figure: at 39,523 edges and
+    3,085 nodes the defaults tuned for a 170-node core fill the canvas solid,
+    and the shape of the graph — the thing that figure is for — disappears.
+    """
     p = PALETTE[mode]
     out = []
     # Edges first, hairline and recessive, opacity scaled by shared directors.
-    out.append(f'<g stroke="{p["edge"]}" fill="none">')
+    # Batched into one path per (width, opacity) bucket rather than one <line>
+    # each: at 39,523 edges the per-element markup was 5 MB of the empire
+    # figure alone, and the rendering is identical.
+    buckets: dict[tuple[str, str], list[str]] = defaultdict(list)
     for a, b, w in edges:
-        op = min(0.16 + 0.12 * (w - 1), 0.62)
-        sw = min(0.6 + 0.28 * (w - 1), 2.0)
-        out.append(
-            f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" '
-            f'stroke-width="{sw:.2f}" stroke-opacity="{op:.2f}"/>'
-        )
+        op = min(0.16 + 0.12 * (w - 1), 0.62) * edge_opacity
+        sw = min(0.6 + 0.28 * (w - 1), 2.0) * min(1.0, edge_opacity * 2)
+        buckets[(f"{sw:.2f}", f"{op:.3f}")].append(
+            f"M{a[0]:.1f} {a[1]:.1f}L{b[0]:.1f} {b[1]:.1f}")
+    out.append(f'<g stroke="{p["edge"]}" fill="none">')
+    for (sw, op), segs in buckets.items():
+        out.append(f'<path d="{"".join(segs)}" stroke-width="{sw}" '
+                   f'stroke-opacity="{op}"/>')
     out.append("</g>")
-    # Nodes, each with a 2px surface ring so overlaps stay readable.
+    # Nodes, each with a surface ring so overlaps stay readable.
     out.append("<g>")
     for n in nodes:
         out.append(
             f'<circle class="nd" data-id="{esc(n["id"])}" cx="{n["x"]:.1f}" cy="{n["y"]:.1f}" '
-            f'r="{n["r"]:.2f}" fill="{n["color"]}" stroke="{p["surface"]}" stroke-width="2"/>'
+            f'r="{n["r"]:.2f}" fill="{n["color"]}" stroke="{p["surface"]}" '
+            f'stroke-width="{node_ring:g}"/>'
         )
     out.append("</g>")
     # Selective direct labels. In a core this dense there is no free space
@@ -223,6 +252,26 @@ def _text_width(text: str, font: float) -> float:
     return raw * _WIDTH_SAFETY
 
 
+def trim_to_width(text: str, font: float, avail: float, floor: int = 10) -> str:
+    """Shorten `text` until it fits `avail` px, ellipsising if anything went.
+
+    The ellipsis is measured inside the loop, not bolted on after it. Adding it
+    afterwards is the obvious version and it is wrong: the returned string is
+    then wider than the space it was fitted to, which put every trimmed
+    territory label a few pixels past the canvas edge.
+    """
+    if _text_width(text, font) <= avail:
+        return text
+    out = text
+    while len(out) > floor and _text_width(_ellipsise(out), font) > avail:
+        out = out[:-2]
+    return _ellipsise(out)
+
+
+def _ellipsise(text: str) -> str:
+    return text.rstrip(" ,-’'(") + "…"
+
+
 def _margin_labels(nodes, label_top, font, width, height, margin):
     """Stack labels down the left and right margins with leader lines."""
     ranked = sorted(nodes, key=lambda n: -n["r"])[:label_top]
@@ -256,23 +305,77 @@ def _margin_labels(nodes, label_top, font, width, height, margin):
             # Trim to the space actually available between the label anchor
             # and the canvas edge, so nothing is clipped.
             avail = (lx - 6) if side == "left" else (width - lx - 6)
-            text = n["label"]
-            while _text_width(text, font) > avail and len(text) > 10:
-                text = text[:-2]
-            if text != n["label"]:
-                text = text.rstrip(" ,-\u2019'") + "\u2026"
-            out.append((lx, ly, anchor, text, edge_x, n["y"]))
+            out.append((lx, ly, anchor, trim_to_width(n["label"], font, avail),
+                        edge_x, n["y"]))
     return out
 
 
-def svg_document(body: str, width: float, height: float, mode: str, title: str) -> str:
+LEGEND_H = 38.0
+
+
+def legend_svg(items, width: float, y: float, mode: str, font: float = 12.5) -> str:
+    """A swatch-and-label row. Standalone SVGs leave the page's HTML legend
+    behind, so without this one identity would rest on colour alone."""
     p = PALETTE[mode]
-    return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {height:.0f}" '
-        f'width="{width:.0f}" height="{height:.0f}" role="img" aria-label="{esc(title)}">'
-        f'<rect width="{width:.0f}" height="{height:.0f}" fill="{p["surface"]}"/>'
-        f"{body}</svg>"
-    )
+    out = [f'<g font-size="{font}" font-family="ui-sans-serif,system-ui,sans-serif" '
+           f'fill="{p["text_secondary"]}">']
+    x = 0.0
+    for colour, label in items:
+        out.append(
+            f'<circle cx="{x + 5:.1f}" cy="{y - font * 0.34:.1f}" r="5" fill="{colour}"/>'
+            f'<text x="{x + 16:.1f}" y="{y:.1f}">{esc(label)}</text>'
+        )
+        x += 16 + _text_width(label, font) + 26
+    out.append("</g>")
+    return "".join(out)
+
+
+CAPTION_FONT = 11.5
+CAPTION_LEAD = 15.0
+
+
+def wrap_to_width(text: str, font: float, avail: float) -> list[str]:
+    """Greedy word wrap. SVG has no flow text, so a caption longer than the
+    canvas is simply clipped unless it is broken into lines here."""
+    lines, cur = [], ""
+    for word in text.split():
+        trial = f"{cur} {word}".strip()
+        if cur and _text_width(trial, font) > avail:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = trial
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def svg_document(body: str, width: float, height: float, mode: str, title: str,
+                 legend=None, caption: str = "") -> str:
+    p = PALETTE[mode]
+    lines = wrap_to_width(caption, CAPTION_FONT, width - 8) if caption else []
+    extra = (LEGEND_H if legend else 0.0) + (len(lines) * CAPTION_LEAD + 8 if lines else 0.0)
+    total = height + extra
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.0f} {total:.0f}" '
+        f'width="{width:.0f}" height="{total:.0f}" role="img" aria-label="{esc(title)}">',
+        f'<title>{esc(title)}</title>',
+        f'<rect width="{width:.0f}" height="{total:.0f}" fill="{p["surface"]}"/>',
+        body,
+    ]
+    if legend:
+        parts.append(legend_svg(legend, width, height + 22, mode))
+    if lines:
+        y0 = height + (LEGEND_H if legend else 0.0) + CAPTION_FONT + 4
+        parts.append(
+            f'<g font-size="{CAPTION_FONT}" '
+            f'font-family="ui-sans-serif,system-ui,sans-serif" fill="{p["text_muted"]}">'
+            + "".join(f'<text x="0" y="{y0 + i * CAPTION_LEAD:.1f}">{esc(ln)}</text>'
+                      for i, ln in enumerate(lines))
+            + "</g>"
+        )
+    parts.append("</svg>")
+    return "".join(parts)
 
 
 # --- figure builders ------------------------------------------------------
@@ -706,26 +809,38 @@ def main() -> None:
         fh.write(page)
     print(f"wrote {os.path.relpath(out, ROOT)}", file=sys.stderr)
 
-    # Standalone SVGs for papers, light mode.
-    for name, body, w, h, title in [
+    # Standalone SVGs for papers, light mode. Each carries its own legend and
+    # caption: outside the page there is no other place for them, and identity
+    # must never rest on colour alone.
+    lp = PALETTE["light"]
+    core_legend = [(lp["series"][i], t) for i, t in enumerate(top3)]
+    core_legend.append((lp["other"], "Other territory"))
+    for name, body, w, h, title, legend, caption in [
         ("fig1_core_interlocks",
          draw_network(colourise([dict(n) for n in core_nodes], "light"),
                       core_edges, W, H, "light", label_top=14, font=11.5,
                       label_margin=LABEL_MARGIN),
-         W, H, "Core interlock network"),
+         W, H, "Core interlock network", core_legend,
+         f"{len(core_nodes)} firms, {len(core_edges):,} interlocks at two or more "
+         f"shared directors \u2014 the core of a graph of {stats['n_firms_graph']:,} "
+         f"firms. Node area is weighted degree."),
         ("fig2_by_period",
          panels_svg(panels, "light"),
-         PANELS_W, PANELS_H, "Interlock networks by period"),
+         PANELS_W, PANELS_H, "Interlock networks by period", None,
+         "One shared layout and one size scale throughout, so panels are comparable."),
         ("fig3_ego_indochine",
-         draw_network([dict(n, color=PALETTE["light"]["series"][0] if n["slot"] == 0
-                            else PALETTE["light"]["other"]) for n in ego["nodes"]],
+         draw_network([dict(n, color=lp["series"][0] if n["slot"] == 0
+                            else lp["other"]) for n in ego["nodes"]],
                       ego["edges"], EGO_W, EGO_H, "light", label_top=16, font=11,
                       label_margin=LABEL_MARGIN),
-         EGO_W, EGO_H, f"Interlock neighbourhood of {ego['target_name']}"),
+         EGO_W, EGO_H, f"Interlock neighbourhood of {ego['target_name']}",
+         [(lp["series"][0], ego["target_name"]), (lp["other"], "Interlocked firm")],
+         f"{len(ego['nodes']) - 1} firms sharing at least two directors with "
+         f"{ego['target_name']}."),
     ]:
         path = os.path.join(FIG_DIR, f"{name}.svg")
         with open(path, "w", encoding="utf-8") as fh:
-            fh.write(svg_document(body, w, h, "light", title))
+            fh.write(svg_document(body, w, h, "light", title, legend, caption))
         print(f"wrote {os.path.relpath(path, ROOT)}", file=sys.stderr)
 
     print(f"\ncore figure: {len(core_nodes)} firms, {len(core_edges)} interlocks, "

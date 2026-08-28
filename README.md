@@ -109,10 +109,11 @@ Caledonia**. All 205 non-European codings are listed in
 
 ### Figures
 
-`figures/interlock_network.html` is a self-contained page — open it in a
-browser, no server and no build step — with three figures, hover tooltips, a
-table view of the core firms and a dark mode. The same three are versioned as
-standalone SVGs for papers.
+Two self-contained pages — open either in a browser, no server and no build
+step — with hover tooltips, table views and a dark mode. Every figure is also
+versioned as a standalone SVG for papers.
+
+**`figures/interlock_network.html`** — the core of the network.
 
 | | |
 |---|---|
@@ -120,11 +121,28 @@ standalone SVGs for papers.
 | `fig2_by_period.svg` | The same network by period, five panels on one shared layout — 299 ties before 1914, 1,764 in 1914–1929, 116 after 1962. |
 | `fig3_ego_indochine.svg` | The interlock neighbourhood of a single firm, the Banque de l'Indochine by default. |
 
-Regenerate with `python3 src/make_figures.py`; `--top`, `--min-weight` and
-`--ego` change the subset. **Read a figure as a map of the core, not of the
-whole graph** — each is an explicit subset, and no figure is a basis for a
-global claim about density or centralisation. METHODOLOGY §5d sets out the
-three choices that could otherwise mislead.
+**`figures/territory_networks.html`** — the whole empire, and every territory.
+
+| | |
+|---|---|
+| `fig4_empire_network.svg` | **Every** firm sharing a director: 3,085 firms, 39,523 interlocks, nothing subsetted. Colour is territory. |
+| `fig5_territory_matrix.svg` | The empire as a network of territories — 53 × 53 cells, each the number of directors sitting on boards in both. |
+| `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph. |
+
+```bash
+python3 src/make_figures.py             # figs 1-3, ~1 min
+python3 src/make_territory_figures.py   # figs 4-5 and the 42, ~1 min
+```
+
+`--top`, `--min-weight` and `--ego` change what figures 1–3 draw;
+`--level region` switches the territory figures to the 12 index-page regions.
+
+**Figures 1–3 are maps of the core, not of the whole graph** — each is an
+explicit subset, and none is a basis for a global claim about density or
+centralisation. Figure 4 is the whole graph but too dense to read firm by
+firm; it answers whether the empire's boards were one integrated elite or
+separate territorial ones. METHODOLOGY §5d sets out the choices in both that
+could otherwise mislead.
 
 ### Which edge file to use
 
@@ -146,8 +164,10 @@ src/
   build_network.py     stage 4  ties         -> nodes, edges, projections, GraphML
   split_by_country.py  stage 5  dataset      -> per-territory bundles
   code_positionality.py stage 6 people       -> colonial / native coding
-  make_figures.py      stage 7  network      -> figures (HTML + SVG)
-  checks.py            188 assertions on the parsers and the built dataset
+  make_figures.py      stage 7  network      -> core figures (HTML + SVG)
+  make_territory_figures.py
+                       stage 8  network      -> empire and per-territory figures
+  checks.py            422 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -159,8 +179,10 @@ docs/
   CODEBOOK.md          every file, every variable, every value list
   METHODOLOGY.md       construction, coding decisions, validity limitations
 figures/
-  interlock_network.html  three figures, interactive, self-contained
+  interlock_network.html  figures 1-3, interactive, self-contained
+  territory_networks.html figures 4-5 and all 42 territories
   fig*.svg                the same figures standalone, for papers
+  by_country/             one SVG per territory
 examples/
   explore.py           worked tour of the dataset
 ```
@@ -175,7 +197,8 @@ python3 src/parse_ties.py                     # ~6 min
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
-python3 src/make_figures.py                   # ~1 min, figures/
+python3 src/make_figures.py                   # ~1 min, core figures
+python3 src/make_territory_figures.py         # ~1 min, empire + per-territory
 python3 src/checks.py                         # must pass
 ```
 

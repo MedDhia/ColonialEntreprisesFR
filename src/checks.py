@@ -514,6 +514,21 @@ def check_layout() -> None:
           _text_width("Banque de l'Indochine", 11) > _text_width("Banque", 11) > 0)
 
 
+def _texts_with_size(node, ns, inherited=11.0):
+    """Yield (text element, effective font size).
+
+    `font-size` is set on the enclosing <g>, not on each <text>, so reading it
+    off the element alone measures every label at the default 11px. That is
+    what made the check flag 10.5px territory labels as overflowing: it was
+    measuring a font nobody renders.
+    """
+    size = float(node.get("font-size", inherited))
+    if node.tag == f"{ns}text":
+        yield node, size
+    for child in node:
+        yield from _texts_with_size(child, ns, size)
+
+
 def check_figures() -> None:
     """The rendered figures must be well-formed, on-canvas and comparable."""
     import xml.etree.ElementTree as ET
@@ -524,7 +539,14 @@ def check_figures() -> None:
     print("figures", file=sys.stderr)
     from make_figures import PALETTE, _text_width
 
-    svgs = ["fig1_core_interlocks.svg", "fig2_by_period.svg", "fig3_ego_indochine.svg"]
+    import glob as _glob
+
+    svgs = ["fig1_core_interlocks.svg", "fig2_by_period.svg", "fig3_ego_indochine.svg",
+            "fig4_empire_network.svg", "fig5_territory_matrix.svg"]
+    # Every per-territory figure gets the same geometry guards. They are
+    # generated in a loop, so a bug in one is a bug in forty.
+    svgs += sorted(os.path.relpath(f, fig_dir)
+                   for f in _glob.glob(os.path.join(fig_dir, "by_country", "*.svg")))
     for name in svgs:
         path = os.path.join(fig_dir, name)
         if not os.path.exists(path):
@@ -551,17 +573,27 @@ def check_figures() -> None:
         # Labels on the canvas, measured the way the renderer measures them.
         # Margin labels used to run off the right edge and get clipped.
         clipped = []
-        for t in root.iter(f"{ns}text"):
-            x = float(t.get("x", 0))
-            size = float(t.get("font-size", 11))
+        for t, size in _texts_with_size(root, ns):
             tw = _text_width("".join(t.itertext()), size)
+            if t.get("transform"):
+                # Rotated -90 about its anchor: it grows upward, so the bound
+                # that matters is the top of the canvas, not the right edge.
+                y = float(t.get("y", 0))
+                if y - tw < -0.5:
+                    clipped.append(("".join(t.itertext())[:24], "rotated", round(y - tw)))
+                continue
+            x = float(t.get("x", 0))
             x0 = x - tw if t.get("text-anchor") == "end" else x
             if x0 < -0.5 or x0 + tw > w + 0.5:
                 clipped.append(("".join(t.itertext())[:24], round(x0), round(x0 + tw)))
         check(f"  {name}: no label is clipped by the canvas", not clipped,
               str(clipped[:3]))
 
-        # The all-pairs cap: at most three categorical hues, plus grey.
+        # The all-pairs cap: at most three categorical hues, plus grey. The
+        # sequential ramp is allowed only on rects (the matrix cells) - a node
+        # coloured from a magnitude ramp would be encoding twice.
+        from make_territory_figures import SEQ
+
         allowed = set(PALETTE["light"]["series"]) | {
             PALETTE["light"]["other"], PALETTE["light"]["surface"],
             PALETTE["light"]["edge"], "none",
@@ -569,6 +601,10 @@ def check_figures() -> None:
         extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - allowed
         check(f"  {name}: no colour outside the validated palette", not extra,
               str(sorted(extra)[:3]))
+        extra_r = ({r.get("fill") for r in root.iter(f"{ns}rect")}
+                   - allowed - set(SEQ["light"]))
+        check(f"  {name}: no rect colour outside the palette", not extra_r,
+              str(sorted(x for x in extra_r if x)[:3]))
 
     # Small multiples must share one coordinate frame, or a reader comparing
     # panels is comparing two different maps.
@@ -589,18 +625,82 @@ def check_figures() -> None:
               any(len(v) >= 1 for v in seen.values()) and len(seen) > 20,
               f"{len(seen)} firms")
 
-    page = os.path.join(fig_dir, "interlock_network.html")
-    if os.path.exists(page):
+    # Figure 4 is captioned "every firm". Assert that literally: the drawn
+    # node count must equal the interlock graph's, or the caption is a lie.
+    path = os.path.join(fig_dir, "fig4_empire_network.svg")
+    if os.path.exists(path):
+        from make_figures import build_interlock_graph
+
+        G = build_interlock_graph(1)
+        root = ET.parse(path).getroot()
+        ns = "{http://www.w3.org/2000/svg}"
+        drawn = {c.get("data-id") for c in root.iter(f"{ns}circle") if c.get("data-id")}
+        eq("  fig4 draws every firm in the interlock graph",
+           len(drawn), G.number_of_nodes())
+        check("  fig4 draws the firms the graph has, not others",
+              drawn == set(G.nodes()), str(sorted(drawn ^ set(G.nodes()))[:3]))
+
+    # Same guarantee per territory, against that territory's own bundle.
+    from make_territory_figures import read_bundle_edges
+
+    bad, checked = [], 0
+    for f in _glob.glob(os.path.join(fig_dir, "by_country", "*.svg")):
+        slug = os.path.basename(f)[:-4]
+        rows = read_bundle_edges("country", slug)
+        want = {r["company_id_1"] for r in rows} | {r["company_id_2"] for r in rows}
+        root = ET.parse(f).getroot()
+        ns = "{http://www.w3.org/2000/svg}"
+        got = {c.get("data-id") for c in root.iter(f"{ns}circle") if c.get("data-id")}
+        checked += 1
+        if got != want:
+            bad.append(f"{slug}: drew {len(got)} of {len(want)}")
+    check(f"  every territory figure draws its whole bundle ({checked} figures)",
+          not bad, "; ".join(bad[:3]))
+
+    # A territory with interlocks must have a figure; one without must not.
+    with open(os.path.join(ROOT, "data", "by_country", "territory_manifest.csv"),
+              encoding="utf-8", newline="") as fh:
+        manifest = list(csv.DictReader(fh))
+    have = {os.path.basename(f)[:-4]
+            for f in _glob.glob(os.path.join(fig_dir, "by_country", "*.svg"))}
+    missing = [r["slug"] for r in manifest
+               if int(r["n_interlock_edges"]) > 0 and r["slug"] not in have]
+    check("  every territory with an interlock has a figure", not missing,
+          str(missing[:4]))
+    spurious = [r["slug"] for r in manifest
+                if int(r["n_interlock_edges"]) == 0 and r["slug"] in have]
+    check("  no figure for a territory with no interlock", not spurious,
+          str(spurious[:4]))
+
+    # The matrix is an undirected relation, so both triangles must be drawn:
+    # a half-filled matrix reads as an asymmetric one.
+    path = os.path.join(fig_dir, "fig5_territory_matrix.svg")
+    if os.path.exists(path):
+        root = ET.parse(path).getroot()
+        ns = "{http://www.w3.org/2000/svg}"
+        pairs = Counter()
+        for r in root.iter(f"{ns}rect"):
+            if r.get("data-a"):
+                pairs[(r.get("data-a"), r.get("data-b"), r.get("data-v"))] += 1
+        check("  fig5 draws both triangles for every pair",
+              pairs and all(v == 2 for v in pairs.values()),
+              str([k for k, v in pairs.items() if v != 2][:2]))
+
+    for page_name in ("interlock_network.html", "territory_networks.html"):
+        page = os.path.join(fig_dir, page_name)
+        if not os.path.exists(page):
+            continue
         with open(page, encoding="utf-8") as fh:
-            html_text = fh.read()
-        # Identity must never be colour-alone: a legend and a table view ship
-        # with the figure, and light-mode aqua's contrast WARN obliges them.
+            txt = fh.read()
         for token in ('<table', 'class="legend"', 'class="tooltip"',
                       "prefers-color-scheme"):
-            check(f"  page carries {token}", token in html_text)
-        check("  page is self-contained (no external fetch)",
-              "http://" not in html_text.replace("http://www.w3.org", ""),
+            check(f"  {page_name} carries {token}", token in txt)
+        check(f"  {page_name} is self-contained (no external fetch)",
+              "http://" not in txt.replace("http://www.w3.org", ""),
               "external URL in page")
+
+    # Identity must never rest on colour alone: the legend, the table view and
+    # the dark-mode pair above are what the palette's contrast WARN obliges.
 
 
 def main() -> None:
