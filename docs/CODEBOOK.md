@@ -511,7 +511,7 @@ them; they are outputs, regenerated from `data/processed/` in about a minute.
 | `fig2_by_period.svg` | Figure 2, standalone, light mode. |
 | `fig3_ego_indochine.svg` | Figure 3, standalone, light mode. |
 
-**Figure 1 — the core interlock network.** 170 firms and 1,403 interlocks:
+**Figure 1 — the core interlock network.** 170 firms and 1,401 interlocks:
 `edges_company_interlock.csv` filtered to `weight >= 2` (two or more shared
 directors), largest component, top 170 by weighted degree. Node area is
 weighted degree, edge opacity and width are the number of shared directors,

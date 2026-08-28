@@ -38,7 +38,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from make_figures import (  # noqa: E402
     FIG_DIR, LABEL_MARGIN, PALETTE, ROOT, build_interlock_graph, draw_network,
-    esc, layout, normalise, radius, svg_document, territory_of, trim_to_width,
+    esc, layout, normalise, ordered_subgraph, radius, svg_document,
+    territory_of, trim_to_width,
 )
 from build_network import read_csv  # noqa: E402
 from common import ensure_dir  # noqa: E402
@@ -75,9 +76,13 @@ def layout_with_strip(G, width, height, pad, pad_x, seed, iterations,
     """
     import networkx as nx
 
-    comps = sorted(nx.connected_components(G), key=len, reverse=True)
-    giant = G.subgraph(comps[0]).copy()
-    rest = [sorted(c) for c in comps[1:]]
+    # Sort each component's members as well as the components themselves: a
+    # component is a set, and a set of strings iterates in hash order, which
+    # made the layout differ between runs. See `ordered_subgraph`.
+    comps = sorted((sorted(c) for c in nx.connected_components(G)),
+                   key=lambda c: (-len(c), c[0]))
+    giant = ordered_subgraph(G, comps[0])
+    rest = comps[1:]
     body_h = height - (strip_h if rest else 0.0)
     pos = normalise(layout(giant, seed=seed, iterations=iterations),
                     width, body_h, pad=pad, pad_x=pad_x, robust=robust)
