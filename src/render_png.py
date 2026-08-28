@@ -2,6 +2,7 @@
 
     python3 src/render_png.py                 # every SVG under figures/
     python3 src/render_png.py --scale 3       # for print
+    python3 src/render_png.py --lang en       # just the English tree
     python3 src/render_png.py --only algerie tunisie
 
 Each `<name>.svg` becomes `<name>.png` beside it, so the pair is always
@@ -47,9 +48,14 @@ def svg_size(path: str) -> tuple[int, int]:
     return round(float(m.group(1))), round(float(m.group(2)))
 
 
-def figures(only: list[str] | None) -> list[str]:
-    paths = sorted(glob.glob(os.path.join(FIG_DIR, "*.svg")))
-    paths += sorted(glob.glob(os.path.join(FIG_DIR, "by_*", "*.svg")))
+def figures(only: list[str] | None, lang: str = "all") -> list[str]:
+    # Recursive, so figures/en/ and figures/en/by_country/ are picked up
+    # without a second list to keep in step with the figure scripts.
+    paths = sorted(glob.glob(os.path.join(FIG_DIR, "**", "*.svg"), recursive=True))
+    if lang == "fr":
+        paths = [p for p in paths if os.sep + "en" + os.sep not in p]
+    elif lang == "en":
+        paths = [p for p in paths if os.sep + "en" + os.sep in p]
     if only:
         wanted = {o.lower().removesuffix(".svg") for o in only}
         paths = [p for p in paths
@@ -63,9 +69,11 @@ def main() -> None:
     ap.add_argument("--scale", type=float, default=2.0,
                     help="pixel ratio; 2 is good on screen, 3 for print")
     ap.add_argument("--only", nargs="*", help="render just these (by file stem)")
+    ap.add_argument("--lang", choices=("all", "fr", "en"), default="all",
+                    help="restrict to one language tree")
     args = ap.parse_args()
 
-    paths = figures(args.only)
+    paths = figures(args.only, args.lang)
     if not paths:
         raise SystemExit("no matching SVGs in figures/")
 

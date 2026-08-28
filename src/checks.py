@@ -529,6 +529,46 @@ def _texts_with_size(node, ns, inherited=11.0):
         yield from _texts_with_size(child, ns, size)
 
 
+def check_labels() -> None:
+    """Every French category in the data must have an English label."""
+    from labels import coverage, to_en
+
+    print("English labels", file=sys.stderr)
+    docs = load("documents.csv")
+    for kind, col in (("territory", "country"), ("region", "region"),
+                      ("sector", "sector")):
+        gaps = coverage((d[col] for d in docs), kind)
+        check(f"  every {kind} has an English label", not gaps, str(gaps[:4]))
+
+    # A few spot translations, so a corrupted or truncated table is caught
+    # rather than silently falling back to the French.
+    for src, want in (("Maroc", "Morocco"), ("Indochine", "Indochina"),
+                      ("Afrique occidentale française", "French West Africa"),
+                      ("Algérie", "Algeria"), ("Tunisie", "Tunisia")):
+        eq(f"  {src} -> {want}", to_en(src), want)
+
+    # Firm names are legal names, not descriptions: translating them would
+    # invent names that appear in no archive. The English figures must carry
+    # them through unchanged.
+    en_fig = os.path.join(ROOT, "figures", "en", "fig1_core_interlocks.svg")
+    if os.path.exists(en_fig):
+        with open(en_fig, encoding="utf-8") as fh:
+            txt = fh.read()
+        check("  English figures keep firm names in French",
+              "Banque de l\u2019Indochine" in txt or "Banque de l'Indochine" in txt,
+              "ego firm name missing from the English figure")
+        # Assert on the English strings, not the absence of the French ones:
+        # a firm in this corpus is literally labelled "Maroc", so "no Maroc
+        # anywhere" fails on a correct figure.
+        fr_fig = os.path.join(ROOT, "figures", "fig1_core_interlocks.svg")
+        with open(fr_fig, encoding="utf-8") as fh:
+            fr_txt = fh.read()
+        for term in ("Morocco", "Indochina", "French West Africa"):
+            check(f"  English figure legend carries {term!r}", term in txt)
+            check(f"  source figure legend does not", term not in fr_txt,
+                  f"{term} leaked into the French figure")
+
+
 def check_figures() -> None:
     """The rendered figures must be well-formed, on-canvas and comparable."""
     import xml.etree.ElementTree as ET
@@ -541,12 +581,10 @@ def check_figures() -> None:
 
     import glob as _glob
 
-    svgs = ["fig1_core_interlocks.svg", "fig2_by_period.svg", "fig3_ego_indochine.svg",
-            "fig4_empire_network.svg", "fig5_territory_matrix.svg"]
-    # Every per-territory figure gets the same geometry guards. They are
-    # generated in a loop, so a bug in one is a bug in forty.
-    svgs += sorted(os.path.relpath(f, fig_dir)
-                   for f in _glob.glob(os.path.join(fig_dir, "by_country", "*.svg")))
+    # Every figure gets the same geometry guards, in every language tree.
+    # They are generated in a loop, so a bug in one is a bug in ninety-four.
+    svgs = sorted(os.path.relpath(f, fig_dir) for f in
+                  _glob.glob(os.path.join(fig_dir, "**", "*.svg"), recursive=True))
     for name in svgs:
         path = os.path.join(fig_dir, name)
         if not os.path.exists(path):
@@ -686,7 +724,22 @@ def check_figures() -> None:
               pairs and all(v == 2 for v in pairs.values()),
               str([k for k, v in pairs.items() if v != 2][:2]))
 
-    for page_name in ("interlock_network.html", "territory_networks.html"):
+    # The English tree must mirror the source tree file for file: a partial
+    # translation is worse than none, because the gap is invisible.
+    en_dir = os.path.join(fig_dir, "en")
+    if os.path.isdir(en_dir):
+        fr = {os.path.relpath(f, fig_dir) for f in
+              _glob.glob(os.path.join(fig_dir, "**", "*.svg"), recursive=True)
+              if os.sep + "en" + os.sep not in f}
+        en = {os.path.relpath(f, en_dir) for f in
+              _glob.glob(os.path.join(en_dir, "**", "*.svg"), recursive=True)}
+        eq("  the English tree mirrors the source tree", len(en), len(fr))
+        check("  no figure is missing from the English tree", en == fr,
+              str(sorted(fr - en)[:3]))
+
+    for page_name in ("interlock_network.html", "territory_networks.html",
+                      os.path.join("en", "interlock_network.html"),
+                      os.path.join("en", "territory_networks.html")):
         page = os.path.join(fig_dir, page_name)
         if not os.path.exists(page):
             continue
@@ -733,6 +786,7 @@ def main() -> None:
     check_titles()
     check_citations()
     check_layout()
+    check_labels()
     if not args.unit:
         check_extraction()
         check_dataset()

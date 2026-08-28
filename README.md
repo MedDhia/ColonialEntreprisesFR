@@ -129,14 +129,26 @@ versioned as a standalone SVG for papers.
 | `fig5_territory_matrix.svg` | The empire as a network of territories — 53 × 53 cells, each the number of directors sitting on boards in both. |
 | `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph — `algerie`, `tunisie`, `madagascar`, `indochine`, `senegal`, … |
 
-Every figure is versioned twice: `<name>.svg` and `<name>.png` beside it,
-one network per file. The PNGs are 2× (retina-sharp on screen, fine printed a
+Every figure is versioned four ways: `<name>.svg` and `<name>.png` beside it,
+and the same pair again under `figures/en/` with the territory and sector
+labels in English. The PNGs are 2× (retina-sharp on screen, fine printed a
 page wide) and are what GitHub previews inline.
+
+**Firm and person names are never translated.** *Banque de l'Indochine* is a
+legal name, not a description; an English "Bank of Indochina" would be a name
+that appears in no archive. What the English figures translate is the
+classification vocabulary — territories, regions, sectors — which is
+description, and for which *Morocco* and *French West Africa* are the standard
+forms in English-language scholarship. The mapping for all 183 categories is
+`data/reference/labels_en.csv`, joinable on any `country`, `region` or
+`sector` column.
 
 ```bash
 python3 src/make_figures.py             # figs 1-3, ~1 min
 python3 src/make_territory_figures.py   # figs 4-5 and the 42, ~1 min
-python3 src/render_png.py               # all 47 as PNG, ~40 s
+python3 src/render_png.py               # all as PNG, ~90 s
+python3 src/make_figures.py --lang en           # the English set
+python3 src/make_territory_figures.py --lang en
 ```
 
 `--top`, `--min-weight` and `--ego` change what figures 1–3 draw;
@@ -181,7 +193,8 @@ src/
   make_territory_figures.py
                        stage 8  network      -> empire and per-territory figures
   render_png.py        stage 9  figures      -> PNG, one network per file
-  checks.py            425 assertions on the parsers and the built dataset
+  labels.py            English labels for the French category vocabulary
+  checks.py            687 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -197,6 +210,7 @@ figures/
   territory_networks.html figures 4-5 and all 42 territories
   fig*.svg, fig*.png      the same figures standalone, for papers
   by_country/             one SVG and one PNG per territory
+  en/                     the same figures with English category labels
 examples/
   explore.py           worked tour of the dataset
 ```
@@ -213,7 +227,9 @@ python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
 python3 src/make_figures.py                   # ~1 min, core figures
 python3 src/make_territory_figures.py         # ~1 min, empire + per-territory
-python3 src/render_png.py                     # ~40 s, PNG of every figure
+python3 src/make_figures.py --lang en          # English label set
+python3 src/make_territory_figures.py --lang en
+python3 src/render_png.py                     # ~90 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```
 

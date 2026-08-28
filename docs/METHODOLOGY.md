@@ -48,7 +48,15 @@ Nine stages, each resumable, each writing its own outputs:
    territory matrix and one figure per territory (§5d).
 9. **`render_png.py`** — every figure → PNG, one network per file.
 
-`checks.py` validates the parsers and the built dataset (425 assertions).
+Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
+tree with the territory, region and sector labels in English. Firm and person
+names are left in French throughout: a company's name is a legal name rather
+than a description, and an English rendering of it would be a string that
+appears in no archive or authority file. The category vocabulary is a
+description and is translated, in `data/reference/labels_en.csv` — 183 rows,
+which `checks.py` asserts is complete against the data.
+
+`checks.py` validates the parsers and the built dataset (687 assertions).
 
 ### The extraction trap
 
@@ -480,7 +488,9 @@ python3 src/split_by_country.py                 # ~2 min, per-territory bundles
 python3 src/code_positionality.py               # ~1 min, positionality coding
 python3 src/make_figures.py                     # ~1 min, core figures
 python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
-python3 src/render_png.py                       # ~40 s, PNG of every figure
+python3 src/make_figures.py --lang en            # English label set
+python3 src/make_territory_figures.py --lang en
+python3 src/render_png.py                       # ~90 s, PNG of every figure
 python3 src/checks.py                           # must pass
 ```
 

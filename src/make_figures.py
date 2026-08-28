@@ -38,6 +38,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from build_network import PERIODS, read_csv  # noqa: E402
 from common import ensure_dir  # noqa: E402
+from labels import LANGS, localise  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIG_DIR = os.path.join(ROOT, "figures")
@@ -554,7 +555,8 @@ def panels_svg(panels, mode: str) -> str:
     return "\n".join(out)
 
 
-def render_page(core_nodes, core_edges, top3, panels, ego, stats) -> str:
+def render_page(core_nodes, core_edges, top3, panels, ego, stats,
+                lang: str = "fr") -> str:
     n_union = max((p["n_firms"] for p in panels), default=0)
     lp, dp = PALETTE["light"], PALETTE["dark"]
     W, H = CORE_W, CORE_H
@@ -572,7 +574,8 @@ def render_page(core_nodes, core_edges, top3, panels, ego, stats) -> str:
                             label_margin=LABEL_MARGIN)
 
     node_json = json.dumps({n["id"]: {
-        "name": n["label"], "territory": n["territory"], "degree": n["degree"],
+        "name": n["label"], "territory": localise(n["territory"], lang),
+        "degree": n["degree"],
         "wdeg": n["wdeg"], "sectors": n.get("sectors", ""), "years": n.get("years", ""),
         "n_directors": n.get("n_directors", ""),
     } for n in core_nodes})
@@ -583,7 +586,8 @@ def render_page(core_nodes, core_edges, top3, panels, ego, stats) -> str:
     ) + '<span class="lg" role="listitem"><i style="background:var(--other)"></i>Other territory</span>'
 
     table_rows = "".join(
-        f"<tr><td>{esc(n['label'])}</td><td>{esc(n['territory'])}</td>"
+        f"<tr><td>{esc(n['label'])}</td>"
+        f"<td>{esc(localise(n['territory'], lang))}</td>"
         f"<td class='n'>{n['degree']}</td><td class='n'>{n['wdeg']}</td>"
         f"<td>{esc(n.get('sectors',''))}</td></tr>"
         for n in sorted(core_nodes, key=lambda n: -n["wdeg"])
@@ -776,9 +780,14 @@ def main() -> None:
     ap.add_argument("--min-weight", type=int, default=2,
                     help="minimum shared directors for an edge to be drawn")
     ap.add_argument("--ego", default="Banque de l'Indochine")
+    ap.add_argument("--lang", choices=LANGS, default="fr",
+                    help="language of the category labels; 'en' writes figures/en/")
     args = ap.parse_args()
 
-    ensure_dir(FIG_DIR)
+    # Source labels stay in figures/; the English set is a parallel tree, so
+    # neither overwrites the other and both can be cited.
+    out_dir = FIG_DIR if args.lang == "fr" else os.path.join(FIG_DIR, "en")
+    ensure_dir(out_dir)
     companies = {r["company_id"]: r for r in read_csv("companies.csv")}
     W, H = CORE_W, CORE_H
 
@@ -803,8 +812,8 @@ def main() -> None:
         "pct_native": f"{100 * native / len(pos_rows):.1f}%" if pos_rows else "n/a",
     }
 
-    page = render_page(core_nodes, core_edges, top3, panels, ego, stats)
-    out = os.path.join(FIG_DIR, "interlock_network.html")
+    page = render_page(core_nodes, core_edges, top3, panels, ego, stats, args.lang)
+    out = os.path.join(out_dir, "interlock_network.html")
     with open(out, "w", encoding="utf-8") as fh:
         fh.write(page)
     print(f"wrote {os.path.relpath(out, ROOT)}", file=sys.stderr)
@@ -813,7 +822,8 @@ def main() -> None:
     # caption: outside the page there is no other place for them, and identity
     # must never rest on colour alone.
     lp = PALETTE["light"]
-    core_legend = [(lp["series"][i], t) for i, t in enumerate(top3)]
+    core_legend = [(lp["series"][i], localise(t, args.lang))
+                   for i, t in enumerate(top3)]
     core_legend.append((lp["other"], "Other territory"))
     for name, body, w, h, title, legend, caption in [
         ("fig1_core_interlocks",
@@ -838,7 +848,7 @@ def main() -> None:
          f"{len(ego['nodes']) - 1} firms sharing at least two directors with "
          f"{ego['target_name']}."),
     ]:
-        path = os.path.join(FIG_DIR, f"{name}.svg")
+        path = os.path.join(out_dir, f"{name}.svg")
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(svg_document(body, w, h, "light", title, legend, caption))
         print(f"wrote {os.path.relpath(path, ROOT)}", file=sys.stderr)

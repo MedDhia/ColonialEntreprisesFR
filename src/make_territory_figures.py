@@ -42,6 +42,7 @@ from make_figures import (  # noqa: E402
 )
 from build_network import read_csv  # noqa: E402
 from common import ensure_dir  # noqa: E402
+from labels import LANGS, localise  # noqa: E402
 
 EMPIRE_W, EMPIRE_H = 1500.0, 1000.0
 STRIP_H = 74.0          # band along the bottom for the residual components
@@ -215,7 +216,7 @@ MATRIX_LABEL = 236.0
 MATRIX_FONT = 11.0
 
 
-def matrix_svg(m, mode):
+def matrix_svg(m, mode, lang: str = "fr"):
     p = PALETTE[mode]
     seq = SEQ[mode]
     ts = m["territories"]
@@ -232,7 +233,8 @@ def matrix_svg(m, mode):
         colour = seq[step]
         for x, y in ((j, i), (i, j)):     # symmetric, both triangles drawn
             out.append(
-                f'<rect class="mc" data-a="{esc(a)}" data-b="{esc(b)}" data-v="{v}" '
+                f'<rect class="mc" data-a="{esc(localise(a, lang))}" '
+                f'data-b="{esc(localise(b, lang))}" data-v="{v}" '
                 f'x="{x * CELL:.1f}" y="{y * CELL:.1f}" '
                 f'width="{CELL - 2:.1f}" height="{CELL - 2:.1f}" fill="{colour}"/>'
             )
@@ -251,7 +253,7 @@ def matrix_svg(m, mode):
         # Both axes read outward from the grid, so both are bounded by the
         # same margin. Soudan francais's full label is 65 characters and ran
         # clean off the canvas before this.
-        label = trim_to_width(t, MATRIX_FONT, MATRIX_LABEL - 12)
+        label = trim_to_width(localise(t, lang), MATRIX_FONT, MATRIX_LABEL - 12)
         y = MATRIX_LABEL + i * CELL + CELL / 2 + 3
         out.append(f'<text x="{MATRIX_LABEL - 8:.0f}" y="{y:.1f}" '
                    f'text-anchor="end">{esc(label)}</text>')
@@ -297,7 +299,8 @@ def territory_height(n_firms: int) -> float:
     return TERR_H if n_firms >= 25 else 420.0 if n_firms >= 8 else 250.0
 
 
-def build_territory(level, slug, name, width, height=None, n_in_bundle=0):
+def build_territory(level, slug, name, width, height=None, n_in_bundle=0,
+                    label=None):
     """One territory's complete interlock graph - no threshold, no top-N."""
     import networkx as nx
 
@@ -331,7 +334,8 @@ def build_territory(level, slug, name, width, height=None, n_in_bundle=0):
     } for n_ in G.nodes()]
     edges = [(pos[a], pos[b], d["weight"]) for a, b, d in G.edges(data=True)]
     return dict(
-        meta, slug=slug, name=name, nodes=nodes, edges=edges, height=height,
+        meta, slug=slug, name=name, label=label or name, nodes=nodes,
+        edges=edges, height=height,
         n_firms=n, n_edges=G.number_of_edges(), n_in_bundle=n_in_bundle,
         top=sorted(nodes, key=lambda x: -x["wdeg"])[:5],
     )
@@ -381,41 +385,43 @@ def load_manifest(level):
 
 
 # --- the gallery page ------------------------------------------------------
-def render_gallery(empire, matrix, territories, empty, level) -> str:
+def render_gallery(empire, matrix, territories, empty, level,
+                   lang: str = "fr") -> str:
     lp, dp = PALETTE["light"], PALETTE["dark"]
     seq_light = "".join(f"    --q{i + 1}:{c};\n" for i, c in enumerate(SEQ["light"]))
     seq_dark = "".join(f"    --q{i + 1}:{c};\n" for i, c in enumerate(SEQ["dark"]))
-    m_body, m_h, m_total = matrix_svg(matrix, "vars")
+    m_body, m_h, m_total = matrix_svg(matrix, "vars", lang)
 
     emp_legend = "".join(
         f'<span class="lg" role="listitem"><i style="background:var(--s{i + 1})"></i>'
-        f'{esc(t)} ({empire["shares"][t] * 100:.0f}%)</span>'
+        f'{esc(localise(t, lang))} ({empire["shares"][t] * 100:.0f}%)</span>'
         for i, t in enumerate(empire["top3"])
     ) + ('<span class="lg" role="listitem"><i style="background:var(--other)"></i>'
          'Other territory</span>')
 
-    node_json = json.dumps({n["id"]: [n["label"], n["territory"], n["degree"],
-                                      int(n["wdeg"])] for n in empire["nodes"]})
+    node_json = json.dumps({n["id"]: [n["label"], localise(n["territory"], lang),
+                                      n["degree"], int(n["wdeg"])]
+                            for n in empire["nodes"]})
 
     cards = []
     for t in territories:
         top = ", ".join(esc(n["label"]) for n in t["top"][:3])
         cards.append(f"""
 <section class="card" id="t-{esc(t['slug'])}">
-  <h3>{esc(t['name'])}</h3>
+  <h3>{esc(t['label'])}</h3>
   <p class="sub">{esc(territory_caption(t))}</p>
   <div class="fig">
-    {svg_document(territory_svg(t, 'vars'), TERR_W, t['height'], 'vars', esc(t['name']) + ' interlock network')}
+    {svg_document(territory_svg(t, 'vars'), TERR_W, t['height'], 'vars', esc(t['label']) + ' interlock network')}
   </div>
   <p class="note">Best connected: {top}. <a href="by_country/{esc(t['slug'])}.svg">SVG</a></p>
 </section>""")
 
     toc = " ".join(
-        f'<a href="#t-{esc(t["slug"])}">{esc(t["name"])} <b>{t["n_firms"]}</b></a>'
+        f'<a href="#t-{esc(t["slug"])}">{esc(t["label"])} <b>{t["n_firms"]}</b></a>'
         for t in territories)
 
     rows = "".join(
-        f"<tr><td>{esc(t['name'])}</td><td>{t['n_firms']:,}</td>"
+        f"<tr><td>{esc(t['label'])}</td><td>{t['n_firms']:,}</td>"
         f"<td>{t['n_edges']:,}</td><td>{t['n_components']}</td>"
         f"<td>{t['n_giant']:,}</td></tr>"
         for t in territories)
@@ -601,10 +607,14 @@ def main() -> None:
                     help="skip territories with fewer interlocked firms")
     ap.add_argument("--skip-empire", action="store_true",
                     help="territory figures only (the empire layout is slow)")
+    ap.add_argument("--lang", choices=LANGS, default="fr",
+                    help="language of the category labels; 'en' writes figures/en/")
     args = ap.parse_args()
 
     ensure_dir(FIG_DIR)
-    out_dir = os.path.join(FIG_DIR, f"by_{args.level}")
+    base = FIG_DIR if args.lang == "fr" else os.path.join(FIG_DIR, "en")
+    ensure_dir(base)
+    out_dir = os.path.join(base, f"by_{args.level}")
     ensure_dir(out_dir)
     companies = {r["company_id"]: r for r in read_csv("companies.csv")}
     lp = PALETTE["light"]
@@ -613,9 +623,10 @@ def main() -> None:
     if not args.skip_empire:
         print("laying out the whole interlock graph (~1 min)...", file=sys.stderr)
         empire = build_empire(companies, EMPIRE_W, EMPIRE_H)
-        legend = [(lp["series"][i], t) for i, t in enumerate(empire["top3"])]
+        legend = [(lp["series"][i], localise(t, args.lang))
+                  for i, t in enumerate(empire["top3"])]
         legend.append((lp["other"], "Other territory"))
-        path = os.path.join(FIG_DIR, "fig4_empire_network.svg")
+        path = os.path.join(base, "fig4_empire_network.svg")
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(svg_document(
                 empire_svg(empire, "light"), EMPIRE_W, EMPIRE_H, "light",
@@ -627,8 +638,8 @@ def main() -> None:
         print(f"wrote {os.path.relpath(path, ROOT)}", file=sys.stderr)
 
     matrix = build_matrix()
-    body, _, total = matrix_svg(matrix, "light")
-    path = os.path.join(FIG_DIR, "fig5_territory_matrix.svg")
+    body, _, total = matrix_svg(matrix, "light", args.lang)
+    path = os.path.join(base, "fig5_territory_matrix.svg")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(svg_document(
             body, MATRIX_LABEL + len(matrix["territories"]) * CELL + 40, total,
@@ -642,25 +653,28 @@ def main() -> None:
 
     territories, empty = [], []
     for row in load_manifest(args.level):
+        label = localise(row["territory"], args.lang,
+                         "territory" if args.level == "country" else "region")
         t = build_territory(args.level, row["slug"], row["territory"],
-                            TERR_W, None, int(row["n_companies"]))
+                            TERR_W, None, int(row["n_companies"]), label)
         if t is None or t["n_firms"] < args.min_firms:
-            empty.append(row["territory"])
+            empty.append(label)
             continue
         territories.append(t)
         p = os.path.join(out_dir, f"{row['slug']}.svg")
         with open(p, "w", encoding="utf-8") as fh:
             fh.write(svg_document(
                 territory_svg(t, "light"), TERR_W, t["height"], "light",
-                f"{row['territory']} interlock network", None,
+                f"{t['label']} interlock network", None,
                 territory_caption(t)))
     territories.sort(key=lambda t: -t["n_edges"])
     print(f"wrote {len(territories)} territory figures to "
           f"{os.path.relpath(out_dir, ROOT)}", file=sys.stderr)
 
     if empire is not None:
-        page = render_gallery(empire, matrix, territories, empty, args.level)
-        p = os.path.join(FIG_DIR, "territory_networks.html")
+        page = render_gallery(empire, matrix, territories, empty, args.level,
+                              args.lang)
+        p = os.path.join(base, "territory_networks.html")
         with open(p, "w", encoding="utf-8") as fh:
             fh.write(page)
         print(f"wrote {os.path.relpath(p, ROOT)}", file=sys.stderr)
