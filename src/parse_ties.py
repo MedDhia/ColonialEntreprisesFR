@@ -72,10 +72,12 @@ ROLE_RULES: list[tuple[str, str]] = [
     (r"pr[eé]sident[- ]?directeur[- ]g[eé]n[eé]ral|p\.?-?d\.?-?g\.?\b|pdt\.?-?dir\.?|"
      r"pr[eé]sid\.?-?dir\.?", "president_directeur_general"),
     (r"vice-?pr[eé]sident[s]?|vice-?pr[eé]sid\.?|v\.?-?pr[eé]sid\.?|vice-?pr[eé]s\.?", "vice_president"),
-    (r"pr[eé]sident[e]?[s]?\b|pr[eé]sid\.?|pr[eé]st\.?|\bpdt\.?\b", "president"),
-    (r"administrateur[s]?[- ]d[eé]l[eé]gu[eé][es]?|admin\.?-?d[eé]l\.?|adm\.?\s*d[eé]l\.?|"
+    # "pres." keeps its period: bare "pres" is the preposition "pres de".
+    (r"pr[eé]sident[e]?[s]?\b|pr[eé]sid\.?|pr[eé]st\.?|\bpdt\.?\b|\bpr[eé]s\.", "president"),
+    (r"administrateur[s]?[- ]d[eé]l[eé]gu[eé][es]?|adm(?:in)?\.?[-\s]*d[eé]l[eé]?g?\.?|"
      r"administrateur[s]?[- ]directeur[s]?", "administrateur_delegue"),
-    (r"directeur[s]?\s+g[eé]n[eé]ra(?:l|ux)|dir\.?\s*g[eé]n\.?|directrice\s+g[eé]n[eé]rale",
+    (r"directeur[s]?\s+g[eé]n[eé]ra(?:l|ux)|direct(?:eurs?)?\.?\s*g[eé]n\.?|"
+     r"dir\.?\s*g[eé]n\.?|directrice\s+g[eé]n[eé]rale",
      "directeur_general"),
     (r"commissaire[s]?\s+(?:aux\s+comptes|des\s+comptes)|commiss\.?\s+aux\s+comptes|"
      r"commissaire[s]?\s+suppl[eé]ant[s]?", "commissaire_aux_comptes"),
@@ -200,8 +202,29 @@ HISTORY_NOTE_RE = re.compile(
     re.I,
 )
 # Inline directory entry: "AEC 1922-519 - Ste generale des abattoirs ...".
+# The page number is written three ways: "AEC 1922-519 - Name",
+# "AEC 1922. - 489 - Name" and "AEC 1922. 495 - Name". Only the first matched,
+# so 17 entries across 11 documents never anchored and their boards fell to
+# whichever firm was in scope.
 AEC_RE = re.compile(
-    rf"\bAEC\s*(?P<year>{YEAR})\s*[-–—]\s*(?P<page>\d{{1,4}})\s*[-–—]\s*(?P<name>[^\n]{{3,140}})"
+    rf"\bAEC\s*(?P<year>{YEAR})\s*\.?\s*(?:[-–—]\s*)?(?P<page>\d{{1,4}})\s*[-–—]\s*"
+    rf"(?P<name>[^\n]{{3,140}})"
+)
+# Once an AEC listing is running, the compiler stops repeating the prefix and
+# gives the page alone: "509 - Sté des briqueteries de Fedhala". Unanchored,
+# those entries' boards went to whichever firm was still in scope.
+#
+# Three digits, or an explicit "[= NNN]" correction. The annuaire runs to
+# 800-1,200 pages, so a real reference is three digits; the one- and two-digit
+# matches are enumerated clauses in legal prose - "3 - Modifications diverses
+# aux articles 4, 8...", "5 - Que l'imprimeur a estimé que...". Requiring three
+# digits took a hand-checked sample from 44 matches at roughly 60% precision to
+# 19 at 19 of 19. An en/em dash only, and on the same line as the number: a
+# hyphen makes "1877-Démissionnaire le 16 mai" and a life date look like an
+# entry.
+AEC_BARE_PAGE_RE = re.compile(
+    r"(?m)^(?:\d{3}|\d{1,3}[ ]*\[=[ ]*\d{1,4}[ ]*\])[ ]*[–—][ ]*"
+    r"(?P<name>[A-ZÉÈÀÂÎÔÛÇ«\"][^\n]{3,90})"
 )
 # "Annuaire Desfosses, 1945, p. 765 : Societe africaine de mines"
 DESFOSSES_RE = re.compile(
@@ -235,10 +258,84 @@ DASH_ENTRY_RE = re.compile(
 # Annuaire industriel entry: the firm's name in capitals at the start of a line,
 # followed by the inverted generic head in parentheses:
 #   "ABATTOIRS MUNICIPAUX ET INDUSTRIELS AU MAROC (Soc. gen. des), siege adm. :"
+# Anchored with (?m)^ rather than (?:^|\n) so that `m.start()` is the first
+# character of the line, not the newline before it. With the old form this
+# pattern reported a position one character earlier than
+# ANNUAIRE_INDUS_ENTRY_RE for the same notice head, so the two never collided
+# and the anchor de-duplication below silently did nothing: 357 head pairs
+# differed by exactly one character.
 CAPS_ENTRY_RE = re.compile(
-    r"(?:^|\n)(?P<name>[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ0-9\s'’&.\-«»]{5,90}?)\s*"
+    r"(?m)^(?P<name>[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ0-9\s'’&.\-«»]{5,90}?)\s*"
     r"\((?P<head>[^)\n]{2,60})\)"
 )
+
+# The *Annuaire industriel* proper. Its notices are alphabetised on a keyword,
+# so the head is inverted and the rest of the legal name sits in parentheses:
+#
+#     ALLUMETTES (Soc. indo-chinoise forestiere et des), 41, bd de Magenta...
+#     BANQUE de l'INDOCHINE, 96, bd Haussmann, Paris, 8e. ...
+#
+# Both are notice heads; only the first has a parenthetical. CAPS_ENTRY_RE
+# requires one, so "BANQUE de l'INDOCHINE" did not anchor and its board was
+# credited to the previous notice - which is how one firm-year came to hold 83
+# directors. Here the parenthetical is optional and the address comma (or the
+# period of "(Societe). 53, cours...") terminates the head.
+#
+# The lowercase connectors have to be inside the keyword: the annuaire prints
+# "ETAINS et WOLFRAM du TONKIN" as one alphabetised keyword, and cutting at the
+# first lowercase word would name the firm "Etains".
+# The keyword is a run of capitalised words, and three things join them:
+#
+#   a particle chain   "BANQUE de l'INDOCHINE"     two particles, not one
+#   a plain space      "CULTURES TROPICALES"
+#   a comma           "FORGES, ATELIERS et CHANTIERS d'INDOCHINE"
+#
+# All three had to be handled before the head could be read whole. Requiring a
+# capital straight after "de" left the first unanchored; treating the comma as
+# the head's terminator named the third firm "Forges".
+#
+# The comma is only a separator when an ALL-CAPS word follows it. The address
+# comma is followed by a street number or a mixed-case word - ", Bureau : 119,
+# bd Haussmann" - so the run stops there on its own. Every separator is a
+# literal space class rather than \s, which keeps a head from crossing a
+# newline into the next notice.
+_INDUS_CAP = r"[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ0-9'’\-]{1,}"
+_INDUS_PARTICLE = r"(?:de|du|des|d[’']|l[’']|le|la|les|au|aux|en|sur|et|[àa])"
+_INDUS_SEP = rf"(?:[ ]+{_INDUS_PARTICLE}(?:[ ]+{_INDUS_PARTICLE})*[ ]*|[ ]*,[ ]*|[ ]+)"
+ANNUAIRE_INDUS_ENTRY_RE = re.compile(
+    rf"(?m)^(?P<kw>{_INDUS_CAP}(?:{_INDUS_SEP}{_INDUS_CAP})*)"
+    rf"(?:[ ]*\((?P<paren>[^)\n]{{2,110}})\))?[ ]*[,.]"
+)
+# Every notice ends with the publisher's internal classification number, which
+# the annuaire itself explains: "Les chiffres entre parentheses a la fin de
+# chaque notice servent a notre classement interieur". It is the one entry
+# boundary this genre states outright, so it is used to detect the genre.
+ANNUAIRE_INDUS_TERM_RE = re.compile(r"\(\d{1,2}-\d{4,6}\)")
+MIN_INDUS_TERMINATORS = 5
+APOSTROPHES = ("'", "’")
+
+
+def annuaire_indus_name(kw: str, paren: str | None) -> str:
+    """Undo the annuaire's alphabetisation inversion.
+
+    "ALLUMETTES (Soc. indo-chinoise forestiere et des)" is the notice for the
+    *Societe indo-chinoise forestiere et des allumettes*: the parenthetical is
+    the head of the name and the capitalised keyword is its tail. Joining them
+    in that order recovers a name that resolves against the company list; the
+    printed order does not.
+
+    Casing is left as printed. The keyword is upper-case because the annuaire
+    alphabetises on it, and lowering it correctly needs to know which tokens
+    are proper nouns - "COTONNIERE de TOLGA" is a descriptor plus a place.
+    Since `org_key` folds case anyway, a wrong guess would cost display quality
+    for no matching gain, so no guess is made.
+    """
+    kw = clean_text(kw).strip(" ,.;:")
+    if not paren:
+        return kw
+    paren = clean_text(paren).strip(" ,.;:")
+    joiner = "" if paren.endswith(APOSTROPHES) else " "
+    return f"{paren}{joiner}{kw}"
 
 # Field labels that must never be mistaken for a company name by an anchor.
 ANCHOR_NOT_A_NAME_RE = re.compile(
@@ -350,16 +447,52 @@ class Anchor:
         self.page = page
 
 
+# Which anchor wins when two match the same position. Lower is stronger. A
+# dated source beats an undated entry head, and a genre-specific entry pattern
+# beats the generic capitals one.
+ANCHOR_PRECEDENCE = {
+    "citation": 0,
+    "aec_entry": 1,
+    "directory_entry": 2,
+    "annuaire_header": 3,
+    "numbered_entry": 4,
+    "annuaire_industriel_entry": 5,
+    "caps_entry": 6,
+    "dash_entry": 7,
+}
+
+
+def is_annuaire_industriel(text: str) -> bool:
+    """True for the *Annuaire industriel* genre, by its own entry terminator."""
+    return len(ANNUAIRE_INDUS_TERM_RE.findall(text)) >= MIN_INDUS_TERMINATORS
+
+
 def find_anchors(text: str, is_annuaire: bool) -> list[Anchor]:
     anchors: list[Anchor] = []
+    industriel = is_annuaire_industriel(text)
 
     for m in ANNUAIRE_HEADER_RE.finditer(text):
         anchors.append(Anchor(m.start(), "annuaire_header", m.group("year"),
                               "Annuaire des entreprises coloniales"))
+    aec_years: list[tuple[int, str]] = []
     for m in AEC_RE.finditer(text):
+        aec_years.append((m.start(), m.group("year")))
         anchors.append(Anchor(m.start(), "aec_entry", m.group("year"),
                               f"AEC {m.group('year')}, p. {m.group('page')}",
                               clean_anchor_company(m.group("name")), m.group("page")))
+    if aec_years:
+        # A bare page belongs to the listing it sits in, so it takes the year of
+        # the nearest AEC entry *before* it, not the document's first. The
+        # Fedhala dossier reprints AEC 1922 and then AEC 1951; taking the first
+        # stamped the two 1951 entries (pages 826 and 857 - only a volume that
+        # long has them) as 1922, a 29-year error on four board seats.
+        for m in AEC_BARE_PAGE_RE.finditer(text):
+            name = clean_anchor_company(m.group("name"))
+            if not name:
+                continue
+            year = next((y for pos, y in reversed(aec_years) if pos < m.start()),
+                        aec_years[0][1])
+            anchors.append(Anchor(m.start(), "aec_entry", year, f"AEC {year}", name))
     for m in DESFOSSES_RE.finditer(text):
         pub = clean_text(m.group("pub"))
         anchors.append(Anchor(m.start(), "directory_entry", m.group("year"),
@@ -374,6 +507,17 @@ def find_anchors(text: str, is_annuaire: bool) -> list[Anchor]:
         for m in NUMBERED_ENTRY_RE.finditer(text):
             anchors.append(Anchor(m.start(), "numbered_entry", "", "",
                                   clean_anchor_company(m.group("name")), m.group("num")))
+    if industriel:
+        # This genre's own head pattern, which segments where CAPS_ENTRY_RE
+        # cannot. Registered before it so that on a tie the more specific
+        # anchor wins the position.
+        for m in ANNUAIRE_INDUS_ENTRY_RE.finditer(text):
+            name = clean_anchor_company(
+                annuaire_indus_name(m.group("kw"), m.group("paren")))
+            if name:
+                anchors.append(Anchor(m.start(), "annuaire_industriel_entry",
+                                      "", "", name))
+    if is_annuaire:
         # Annuaire industriel style: name in capitals, generic head in parens.
         for m in CAPS_ENTRY_RE.finditer(text):
             head = clean_text(m.group("head"))
@@ -389,12 +533,39 @@ def find_anchors(text: str, is_annuaire: bool) -> list[Anchor]:
             if name:
                 anchors.append(Anchor(m.start(), "dash_entry", "", "", name))
 
-    anchors.sort(key=lambda a: a.pos)
-    return anchors
+    # Two patterns can match the same notice head - CAPS_ENTRY_RE and this
+    # genre's own. Keeping both would insert a zero-length segment and let the
+    # weaker name win, so one anchor per position, most specific first.
+    anchors.sort(key=lambda a: (a.pos, ANCHOR_PRECEDENCE.get(a.kind, 99)))
+    deduped: list[Anchor] = []
+    for a in anchors:
+        if deduped and deduped[-1].pos == a.pos:
+            continue
+        deduped.append(a)
+    return deduped
 
 
-def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[dict]:
-    """Split a document into dated, company-attributed segments."""
+# Anchors that introduce a *structured* directory entry. Inside a single-firm
+# dossier these are that firm's own entry, so an unparseable entry name can
+# safely fall back to the dossier's company. A `citation` is not on this list:
+# a press extract inside a dossier may be about anyone, and one sampled case
+# was a concession application by a man who sat on no board at all.
+DOSSIER_FALLBACK_KINDS = {"directory_entry", "aec_entry", "numbered_entry",
+                          "annuaire_header"}
+
+
+def build_segments(text: str, is_annuaire: bool, default_company: str,
+                   dossier_fallback: bool = False) -> list[dict]:
+    """Split a document into dated, company-attributed segments.
+
+    `dossier_fallback` recovers attribution in a single-firm dossier. The
+    anchor rules below deliberately blank the company when a directory entry's
+    name cannot be validated, because in a multi-firm annuaire keeping the
+    previous firm credits it with the next firm's board. But in a dossier
+    *about one firm*, that same blanking discards ties whose owner is known
+    from the catalogue title - 7,729 of them. The caller passes True only for
+    a company dossier that is not itself an annuaire.
+    """
     anchors = find_anchors(text, is_annuaire)
     segments: list[dict] = []
 
@@ -427,7 +598,8 @@ def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[d
             }
         )
 
-    entry_kinds = {"aec_entry", "numbered_entry", "directory_entry", "caps_entry", "dash_entry"}
+    entry_kinds = {"aec_entry", "numbered_entry", "directory_entry", "caps_entry",
+                   "dash_entry", "annuaire_industriel_entry"}
     # Position of the entry anchor that put the current company in scope, and
     # whether the company came from an entry rather than from the document.
     entry_pos = -1
@@ -461,6 +633,11 @@ def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[d
         if from_entry and entry_pos >= 0 and a.pos - entry_pos > MAX_ENTRY_SCOPE:
             company = ""
 
+        attribution = "anchor" if company else ""
+        if not company and dossier_fallback and a.kind in DOSSIER_FALLBACK_KINDS:
+            company = default_company
+            attribution = "dossier_fallback"
+
         segments.append(
             {
                 "start": a.pos,
@@ -469,6 +646,7 @@ def build_segments(text: str, is_annuaire: bool, default_company: str) -> list[d
                 "source": cur_source,
                 "company": company,
                 "anchor": a.kind,
+                "attribution": attribution,
                 "page": a.page,
             }
         )
@@ -493,6 +671,56 @@ PROSE_VERB_RE = re.compile(
     r"s'[eé]l[eè]ve|comprend|figure|permet|doit|peut|vient)\b",
     re.I,
 )
+
+
+# Field labels, balance-sheet prose and addresses that survive name parsing
+# and become "people". These were always in the data but sat harmlessly
+# unattributed; recovering attribution (see build_segments) would promote them
+# into real edges, so they are dropped outright - which also removes 3,209
+# that were already attributed before that change.
+# A role label the list parser swallowed, ahead of the name it introduces. The
+# label is captured, not just removed: it states the role of the name behind it,
+# and the enclosing list's role is usually a different one. Discarding it filed
+# 199 "Adm.:" rows as `president` and 113 "Prés.:" rows as `administrateur`.
+#
+# The separators are all loose because the sources abbreviate inconsistently:
+# "Prés:. M. J. Garcin" puts the period on the wrong side of the colon,
+# "Adm.-dél.:" hyphenates where "adm. dél." spaces, and "direct. gén.:" splits
+# a two-word title across an abbreviation point.
+_LABEL_SEP = r"[-.\s]*"
+MEMBER_LABEL_PREFIX_RE = re.compile(
+    r"^\s*(?P<label>"
+    r"v(?:ice)?" + _LABEL_SEP + r"pr[ée]s(?:id)?(?:ent)?e?s?|"
+    r"adm(?:in)?(?:istrateurs?)?\.?" + _LABEL_SEP +
+    r"(?:d[ée]l[ée]gu[ée]e?s?|dél\.?|dels?)|"
+    r"adm(?:in)?(?:istrateurs?)?|"
+    r"pr[ée]s(?:id)?(?:ent)?e?s?|"
+    r"direct(?:eurs?|rices?)?\.?" + _LABEL_SEP + r"g[ée]n(?:[ée]ral)?e?s?|"
+    r"direct(?:eurs?|rices?)?|dir|d\.?\s*g|"
+    r"g[ée]rants?|censeurs?|secr[ée]taires?|"
+    r"commissaires?(?:" + _LABEL_SEP + r"aux" + _LABEL_SEP + r"comptes)?|"
+    r"fond[ée]s?\s+de\s+pouvoirs?|repr[ée]sentants?|mandataires?"
+    r")\s*\.?\s*:\s*\.?\s*", re.I)
+MEMBER_JUNK_RE = re.compile(
+    r"\b(capital|commissaires?|propri[ée]taires?|si[èe]ge|statuts|exercice|"
+    r"dividende|assembl[ée]e|bilan|r[ée]serves?|archives|galeries|"
+    r"nomm[ée]s?\s+pour|pris\s+parmi|n[ée]\s+[àa]\s|fr[èe]re\s+d|"
+    r"conseil|administration|exp\.)", re.I)
+MEMBER_ADDRESS_RE = re.compile(
+    r",\s*(?:r\.|bd|av\.|rue|boulevard|avenue|place|quai)\s|\bparc\s+de\b", re.I)
+# A period after a word of four or more letters, then a capital: a swallowed
+# sentence boundary. Four letters, because "Ed. Bousquet" and "F. Urruty" are
+# ordinary names and a shorter rule flags 22,560 of them.
+MEMBER_SENTENCE_RE = re.compile(r"[^\W\d_]{4,}\.\s+[A-ZÉÈÀÂÎÔÛÇ]")
+
+
+def member_is_junk(name: str) -> bool:
+    """True when a parsed 'person' is really a field label, an address or prose."""
+    if not name:
+        return True
+    return bool(MEMBER_JUNK_RE.search(name)
+                or MEMBER_ADDRESS_RE.search(name)
+                or MEMBER_SENTENCE_RE.search(name))
 
 
 def _fragment_is_namelike(frag: str) -> bool:
@@ -649,9 +877,12 @@ def parse_board_list(body: str, default_role: str) -> list[dict]:
             group_role = canonical_role(lead.group(1))
             group = lead.group(2)
 
-        # Trailing role phrase applying to every name in the group.
+        # Trailing role phrase applying to every name in the group. The comma
+        # split has to protect annotations for the same reason the 'et' split
+        # does, or a bracketed note containing a comma is torn in two.
         tail_role = ""
-        parts = [p for p in re.split(r"\s*,\s*", group) if p.strip()]
+        guarded, restore_group = _protect_annotations(group)
+        parts = [restore_group(p) for p in re.split(r"\s*,\s*", guarded) if p.strip()]
         if parts:
             last = parts[-1].strip(" .")
             cr = canonical_role(last)
@@ -673,24 +904,34 @@ def parse_board_list(body: str, default_role: str) -> list[dict]:
     return members
 
 
-def _split_names(raw: str) -> list[str]:
-    """Split a comma-part into individual names, respecting 'et' and brackets."""
-    raw = raw.strip()
-    if not raw:
-        return []
-    # Protect bracketed annotations from the 'et' split.
+def _protect_annotations(raw: str):
+    """Replace bracketed spans with placeholders, and return a restorer.
+
+    Annotations contain commas and the word "et" - "[Wm. H. Muller et Cie,
+    Rotterdam]" holds both - so any split on either boundary cuts them in half.
+    The near half keeps the name and a dangling "[", the far half is pure
+    residue: 1,367 parsed "people" were fragments like "Rotterdam]" and
+    "censeur Ste generale]".
+    """
     holes: list[str] = []
 
     def stash(m):
         holes.append(m.group(0))
         return f"\x00{len(holes) - 1}\x00"
 
-    protected = ANNOT_RE.sub(stash, raw)
-    pieces = re.split(r"\s+et\s+|\s*&\s*", protected)
-
     def restore(s: str) -> str:
         return re.sub(r"\x00(\d+)\x00", lambda m: holes[int(m.group(1))], s)
 
+    return ANNOT_RE.sub(stash, raw), restore
+
+
+def _split_names(raw: str) -> list[str]:
+    """Split a comma-part into individual names, respecting 'et' and brackets."""
+    raw = raw.strip()
+    if not raw:
+        return []
+    protected, restore = _protect_annotations(raw)
+    pieces = re.split(r"\s+et\s+|\s*&\s*", protected)
     return [restore(p).strip() for p in pieces if restore(p).strip()]
 
 
@@ -702,17 +943,44 @@ def _make_member(frag: str, role: str) -> dict | None:
     if STOP_FRAGMENT_RE.match(frag) or ADDRESS_RE.match(frag):
         return None
 
-    # Expand the sources' in-place initial convention ("R(oger) Savon") before
-    # annotations are read, otherwise "(oger)" is mistaken for an annotation
-    # and the forename is destroyed.
-    from names import EXPANDED_INITIAL_RE
+    # Fold in the forenames the compiler supplied, before annotations are read,
+    # otherwise "[eorges]" is mistaken for an annotation and the forename is
+    # destroyed. Both of his conventions: expansion in place ("G[eorges]
+    # Hersent") and a whole forename ahead of the surname ("[Charles]
+    # Michel-Cote").
+    from names import EXPANDED_INITIAL_RE, expand_leading_forename
 
     frag = EXPANDED_INITIAL_RE.sub(r"\1\2", frag)
+    frag = expand_leading_forename(frag)
     annotations = [clean_text(a or b) for a, b in ANNOT_RE.findall(frag)]
     bare = ANNOT_RE.sub(" ", frag)
+    # A role label swallowed into the fragment: "Adm.: MM. Henri Girche",
+    # "Direct.: M. Patrick O'Quin", "Fonde de pouvoirs: Marcel Penicaud". These
+    # carry a real name behind the label, so the label is stripped rather than
+    # the row discarded - 1,514 rows held a colon and every hand-checked one was
+    # of this shape. LEADING_MM_RE then removes the "MM." the label left behind,
+    # so this has to run first.
+    #
+    # The label also *overrides* the role inherited from the enclosing list. It
+    # is the more specific statement: a "Prés.:" inside a run of administrateurs
+    # names the president, and taking the run's role instead is simply wrong.
+    label = MEMBER_LABEL_PREFIX_RE.match(bare)
+    if label:
+        # The separator swallows the abbreviation's period, and several role
+        # rules need it - "pres." is the president, bare "pres" is the
+        # preposition - so a failed lookup is retried with it restored.
+        text = label.group("label")
+        labelled = canonical_role(text) or canonical_role(text + ".")
+        if labelled:
+            role = labelled
+        bare = bare[label.end():]
     bare = LEADING_MM_RE.sub("", bare).strip(" .,;:")
     bare = re.sub(r"\s+", " ", bare).strip(" .,;:")
     if not bare or len(bare) < 3:
+        return None
+    # A colon that survived the strip means a field label this rule does not
+    # know, not a person: no name in the corpus contains one.
+    if ":" in bare:
         return None
 
     # Surname-first register with a trailing annotation: "SAVON (Robert)(de
@@ -838,6 +1106,7 @@ def main() -> None:
     report: list[dict] = []
 
     company_names: dict[str, dict] = {}
+    n_junk = 0
     person_records: dict[str, dict] = defaultdict(
         lambda: {"person_key": "", "names": set(), "surname": "", "given": set(), "n_ties": 0}
     )
@@ -873,7 +1142,11 @@ def main() -> None:
             # entry anchor names an actual firm.
             default_company = ""
 
-        segments = build_segments(text, annuaire, default_company)
+        # A single-firm dossier can recover attribution from its own title;
+        # an annuaire cannot, and a thematic document has no subject firm.
+        fallback = (doc["entry_type"] == "company" and not annuaire
+                    and bool(default_company))
+        segments = build_segments(text, annuaire, default_company, fallback)
 
         n_ties = 0
         for seg in segments:
@@ -905,6 +1178,7 @@ def main() -> None:
                         "year": seg["year"],
                         "source_ref": seg["source"],
                         "anchor_type": seg["anchor"],
+                        "attribution": seg.get("attribution", ""),
                         "trigger": trigger,
                         "annotation": mem["annotation"],
                         "region": doc["region"],
@@ -914,6 +1188,8 @@ def main() -> None:
                     if mem["member_type"] == "organisation":
                         row["member_key"] = mem["entity_key"]
                         org_affiliations.append(row)
+                    elif member_is_junk(mem["name_clean"]):
+                        n_junk += 1
                     else:
                         row["person_key"] = mem["entity_key"]
                         row["surname"] = mem["surname"]
@@ -987,7 +1263,8 @@ def main() -> None:
     _write(f"affiliations{sfx}.csv", affiliations,
            ["doc_id", "company_key", "company_name", "person_key", "name_clean", "surname",
             "given", "role", "year", "source_ref", "annotation", "region", "country",
-            "sector", "anchor_type", "trigger", "parse_note", "member_raw"])
+            "sector", "anchor_type", "attribution", "trigger", "parse_note",
+            "member_raw"])
     _write(f"org_affiliations{sfx}.csv", org_affiliations,
            ["doc_id", "company_key", "company_name", "member_key", "name_clean", "role",
             "year", "source_ref", "annotation", "region", "country", "sector",

@@ -1,10 +1,10 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 aupied-c,Aupied,C. Aupied; Ch. Aupied; Charles Aupied; Charles-Émile Aupied,4,4,7,administrateur,1926,1950,Entreprises diverses
 revel-c,Revel,Ch. Revel; Charles Revel; Revel,4,4,6,administrateur,1925,1927,Entreprises diverses
-luc-a,Luc,Albert Luc; Luc,4,4,5,administrateur,1926,1927,Entreprises diverses
 joyer-a,Joyer,A. Joyer; André Joyer; Joyer,3,3,5,administrateur,1927,1950,Entreprises diverses
 hagen-n,Hagen,N. Hagen; Nicolas Hagen,3,3,5,administrateur,1927,1950,Entreprises diverses
 francais-des-nouvelles-hebrides-c,français des Nouvelles-Hébrides,Comptoirs Français des Nouvelles-Hébrides; Comptoirs français des Nouvelles- Hébrides; Comptoirs français des Nouvelles-Hébrides,3,3,5,administrateur,1926,1951,Entreprises diverses
+luc-a-albert,Luc,Albert Luc,3,3,4,administrateur,1926,1927,Entreprises diverses
 girot-h,Girot,H. Girot; Henri Girot; Henri-François Girot,3,3,4,administrateur,1926,1927,Entreprises diverses
 picanon-e,Picanon,Picanon; Édouard Picanon,3,3,4,administrateur,1927,1950,Entreprises diverses
 miniere-des-nouvelles-hebrides,minière des Nouvelles-Hébrides,minière des Nouvelles- Hébrides; minière des Nouvelles-Hébrides,3,3,4,administrateur,1927,1927,Entreprises diverses
@@ -13,14 +13,15 @@ renault-a,Renault,A. Renault; Augustin Renault; Augustin-Paul-Eugène Renault,2,
 gouin-a,Goüin,A. Goüin; Adolphe Gouin; Adolphe Goüin,2,2,3,administrateur,1926,1927,Entreprises diverses
 milliard-h,Milliard,Henry Milliard,2,2,3,administrateur,1924,1937,Entreprises diverses
 loste-h,Loste,H. Loste; Henry Loste,2,2,3,administrateur,1930,1937,Entreprises diverses
-raoul-duval-e,Raoul-Duval,E. Raoul-Duval; Edgard Raoul-Duval,2,2,2,administrateur,1927,1950,Entreprises diverses
 jeannin-p,Jeannin,P. Jeannin; Pierre Jeannin,2,2,2,administrateur,1930,1937,Entreprises diverses
 p-forveille-imprimeur-de-titres-paris-rodez,? P. Forveille imprimeur de titres Paris-Rodez,? P. Forveille imprimeur de titres Paris-Rodez,2,2,2,administrateur,1927,1927,Entreprises diverses
 mercet-e,Mercet,Émile Mercet,2,2,2,administrateur,1901,1901,Entreprises diverses
 criny-de-verteuil-l,Criny de Verteuil,Criny de Verteuil; Léonce Criny de Verteuil,2,2,2,administrateur,1911,1922,Entreprises diverses
+dumait-a,Dumait,A. Dumait,1,1,4,administrateur,1945,1953,Entreprises diverses
 arnavon-j,Arnavon,Arnavon; Jacques Arnavon,1,1,4,administrateur,1925,1951,Entreprises diverses
+martinet-h,Martinet,H. G. Martinet; H.-G. Martinet,1,1,3,president_directeur_general,1948,1953,Entreprises diverses
+magnin,Magnin,Magnin,1,1,3,administrateur,1948,1953,Entreprises diverses
 collier-de-la-marliere,Collier de la Marlière,Collier de la Marlière,1,1,3,administrateur,1925,1935,Entreprises diverses
-artaud-a,Artaud,A. Artaud; Adrien Artaud,1,1,2,administrateur,1926,1926,Entreprises diverses
 perles-g,Perlès,G. Perlès,1,1,2,administrateur,1940,1950,Entreprises diverses
 pinelli-j,Pinelli,J. Pinelli; J.-P. Pinelli,1,1,2,administrateur,1934,1940,Entreprises diverses
 laroque-g,Laroque,Gabriel Laroque,1,1,2,president,1924,1937,Entreprises diverses
@@ -28,25 +29,30 @@ berge-m,Berge,Maurice Berge,1,1,2,administrateur,1924,1937,Entreprises diverses
 bonneaud-a,Bonneaud,Albert Bonneaud,1,1,2,administrateur,1924,1937,Entreprises diverses
 corbin-de-mangoux-a,Corbin de Mangoux,Corbin de Mangoux,1,1,2,president,1935,1951,Entreprises diverses
 herbette-f,Herbette,François Herbette,1,1,2,administrateur,1935,1951,Entreprises diverses
+luc-a,Luc,Luc,1,1,2,administrateur,1927,1927,Entreprises diverses
 bonneaud-h,Bonneaud,Henry Bonneaud,1,1,2,administrateur,1930,1930,Entreprises diverses
 raut-g,Raut,Georges Raut,1,1,2,administrateur,1930,1930,Entreprises diverses
 laurent-v,Laurent,Victor Laurent,1,1,1,administrateur,1926,1926,Entreprises diverses
 el-monassine,76. El Monassine,76. El Monassine,1,1,1,administrateur,1926,1926,Entreprises diverses
-et-de-marie-simon-polytechnicien-charg,et de Marie Simon. Polytechnicien. Charg,et de Marie Simon. Polytechnicien. Charg,1,1,1,administrateur,1926,1926,Entreprises diverses
+artaud-a-adrien,Artaud,Adrien Artaud,1,1,1,administrateur,1926,1926,Entreprises diverses
 laurent,Laurent,Laurent,1,1,1,administrateur,1926,1926,Entreprises diverses
+artaud-a,Artaud,A. Artaud,1,1,1,administrateur,1926,1926,Entreprises diverses
 dezarnaulds-j,DEZARNAULDS,J. B. B. DEZARNAULDS,1,1,1,administrateur,1882,1882,Entreprises diverses
 droit-de-timbre-acquitte-par-abonnement-p,Droit de timbre acquitté par abonnement,Droit de timbre acquitté par abonnement,1,1,1,administrateur,,,Entreprises diverses
 plcanon-e,Plcanon,Édouard Plcanon,1,1,1,administrateur,1928,1928,Entreprises diverses
 el-mouassine,El Mouassine,El Mouassine,1,1,1,administrateur,1928,1928,Entreprises diverses
 peries-g,PerIès,Georges PerIès,1,1,1,administrateur,1928,1928,Entreprises diverses
 renault-e,Renault,E. Renault,1,1,1,administrateur,1950,1950,Entreprises diverses
+raoul-duval-e,Raoul-Duval,E. Raoul-Duval,1,1,1,administrateur,1950,1950,Entreprises diverses
 jameau-j,Jameau,J. Jameau,1,1,1,administrateur,1934,1934,Entreprises diverses
 maguin,Maguin. 11,Maguin. 11,1,1,1,administrateur,1934,1934,Entreprises diverses
-aux-parts-service-financier,% aux parts. Service financier,% aux parts. Service financier,1,1,1,administrateur,1940,1940,Entreprises diverses
+cruchon-dupeyrat,Cruchon-Dupeyrat,Cruchon-Dupeyrat,1,1,1,administrateur,1945,1945,Entreprises diverses
+klein-p,Klein,P. Klein,1,1,1,administrateur,1948,1948,Entreprises diverses
+cruchon-dupeyrat-suppl,Cruchon-Dupeyrat suppl,Cruchon-Dupeyrat suppl,1,1,1,administrateur,1953,1953,Entreprises diverses
 tremeau-m,Trémeau,Maurice Trémeau,1,1,1,administrateur,1927,1927,Entreprises diverses
+raoul-duval-e-edgard,Raoul-Duval,Edgard Raoul-Duval,1,1,1,administrateur,1927,1927,Entreprises diverses
 de-schweitzer-j,de Schweitzer,Jacques de Schweitzer,1,1,1,administrateur,1927,1927,Entreprises diverses
 et-hermann-louis-du-pasquier,et Hermann-Louis du Pasquier,et Hermann-Louis du Pasquier,1,1,1,president,1927,1927,Entreprises diverses
-ibid-frere-jumeau-d-etienne,ibid.). Frère jumeau d'Étienne,ibid.). Frère jumeau d'Étienne,1,1,1,president,1927,1927,Entreprises diverses
 gouverneur-de-la-nouvelle-caledonie,gouverneur de la Nouvelle-Calédonie,gouverneur de la Nouvelle-Calédonie,1,1,1,president,1927,1927,Entreprises diverses
 ad-unger,Ad. Unger,Ad. Unger,1,1,1,administrateur,1924,1924,Entreprises diverses
 milliard-monsieur-adolphe-trambouze-h,Milliard Monsieur Adolphe Trambouze,H. Milliard Monsieur Adolphe Trambouze,1,1,1,administrateur,1937,1937,Entreprises diverses
@@ -59,13 +65,10 @@ poilay,Poilay,Poilay,1,1,1,administrateur,1925,1925,Entreprises diverses
 poilay-e,Poilay,Edwin Poilay,1,1,1,administrateur,1926,1926,Entreprises diverses
 indochinoise-de-commerce-s,indochinoise de commerce,Sté indochinoise de commerce,1,1,1,administrateur,1926,1926,Entreprises diverses
 caillard-e,Caillard,Edmond Caillard,1,1,1,administrateur,1935,1935,Entreprises diverses
-francais-des-nouvelles-hebrides-nb-c,français des Nouvelles-Hébrides. N.B,Comptoirs français des Nouvelles-Hébrides. N.B,1,1,1,administrateur,1951,1951,Entreprises diverses
 renault,Renault,Renault,1,1,1,administrateur,1927,1927,Entreprises diverses
-bachelet,Bachelet,Bachelet,1,1,1,administrateur,1927,1927,Entreprises diverses
+bachelet-h,Bachelet,Bachelet,1,1,1,administrateur,1927,1927,Entreprises diverses
 ed-picanon,Ed. Picanon,Ed. Picanon,1,1,1,administrateur,1927,1927,Entreprises diverses
-const-renault,Const. Renault,Const. Renault,1,1,1,administrateur,1927,1927,Entreprises diverses
-bachelet-statuts-deposes-chez-me-breuilland,Bachelet. Statuts déposés chez Me Breuilland,Bachelet. Statuts déposés chez Me Breuilland,1,1,1,administrateur,1927,1927,Entreprises diverses
-merlin-m,Merlin,Martial Merlin,1,1,1,administrateur,1927,1927,Entreprises diverses
+merlin-m-martial,Merlin,Martial Merlin,1,1,1,administrateur,1927,1927,Entreprises diverses
 duval-r,Duval,Raoul Duval,1,1,1,administrateur,1927,1927,Entreprises diverses
 du-emile-mercet-p,du Émile Mercet,Paul du Émile Mercet,1,1,1,administrateur,1901,1901,Entreprises diverses
 saint-petersbourg,Saint-Pétersbourg,Saint-Pétersbourg,1,1,1,administrateur,1901,1901,Entreprises diverses
@@ -75,17 +78,17 @@ mesdames-pelatan,mesdames Pelatan,mesdames Pelatan,1,1,1,administrateur,1911,191
 jouannin,Jouannin,Jouannin,1,1,1,administrateur,1911,1911,Entreprises diverses
 laure,Laure,Laure,1,1,1,administrateur,1911,1911,Entreprises diverses
 auvray,Auvray,Auvray,1,1,1,administrateur,1911,1911,Entreprises diverses
-fischer,Fischer,Fischer,1,1,1,administrateur,1911,1911,Entreprises diverses
+fischer-a,Fischer,Fischer,1,1,1,administrateur,1911,1911,Entreprises diverses
 higginson-j,Higginson,J.-G. Higginson,1,1,1,administrateur,1911,1911,Entreprises diverses
 ozoux-c,Ozoux,Charles Ozoux,1,1,1,president,1922,1922,Entreprises diverses
 pelatan-e,Pelatan,Élisabeth Pelatan,1,1,1,administrateur,1922,1922,Entreprises diverses
 higginson-g,Higginson,Gustave Higginson,1,1,1,administrateur,1922,1922,Entreprises diverses
 faure-e,Faure,Émile Faure,1,1,1,administrateur,1922,1922,Entreprises diverses
 auvray-a,Auvray,A. Auvray,1,1,1,administrateur_delegue,1922,1922,Entreprises diverses
-thaly,Thaly,Thaly,1,1,1,president,1951,1951,Entreprises diverses
-descemet-o,Descemet,O. Descemet,1,1,1,administrateur,1951,1951,Entreprises diverses
+thaly-g,Thaly,Thaly,1,1,1,president,1951,1951,Entreprises diverses
+descemet-o,Descemet,O. Descemet,1,1,1,administrateur_delegue,1951,1951,Entreprises diverses
 allix,Allix,Allix,1,1,1,administrateur,1951,1951,Entreprises diverses
-maillet,Maillet,Maillet,1,1,1,administrateur,1951,1951,Entreprises diverses
+maillet-r,Maillet,Maillet,1,1,1,administrateur,1951,1951,Entreprises diverses
 bodard-a,Bodard,A. Bodard,1,1,1,administrateur,1951,1951,Entreprises diverses
 marchessou,Marchessou,Marchessou,1,1,1,administrateur,1951,1951,Entreprises diverses
 imp-cogery-a,? Imp. Cogery,? Imp. Cogery,1,1,1,administrateur,1959,1959,Entreprises diverses

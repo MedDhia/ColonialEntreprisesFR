@@ -15,11 +15,11 @@
     <node id="naltagua">
       <data key="n_label">Naltagua</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Chili</data>
     </node>
     <edge id="e0" source="minescuivrenaltagua" target="naltagua">
-      <data key="e_weight">1</data>
+      <data key="e_weight">5</data>
     </edge>
   </graph>
 </graphml>

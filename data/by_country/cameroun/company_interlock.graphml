@@ -18,10 +18,22 @@
       <data key="n_n_directors">5</data>
       <data key="n_territory">Cameroun</data>
     </node>
+    <node id="bongolalokundjenyong">
+      <data key="n_label">Bongola-Lokundje-N'Yong</data>
+      <data key="n_sectors">industries agro-alimentaires</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Cameroun</data>
+    </node>
+    <node id="bongolalokundji">
+      <data key="n_label">Bongola-Lokundji</data>
+      <data key="n_sectors">industries agro-alimentaires</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Cameroun</data>
+    </node>
     <node id="caoutchoucscacaoscameroun">
       <data key="n_label">Société des Caoutchoucs et cacaos du Cameroun</data>
       <data key="n_sectors">industries agro-alimentaires</data>
-      <data key="n_n_directors">15</data>
+      <data key="n_n_directors">21</data>
       <data key="n_territory">Cameroun</data>
     </node>
     <node id="colonialedistributionenergieelectrique">
@@ -69,25 +81,34 @@
     <node id="tabacscameroun">
       <data key="n_label">Cie des Tabacs du Cameroun, puis Tabacs et plantations du Cameroun, puis Plantations de Nyombé-Penja</data>
       <data key="n_sectors">industries agro-alimentaires</data>
-      <data key="n_n_directors">18</data>
+      <data key="n_n_directors">17</data>
       <data key="n_territory">Cameroun</data>
     </node>
     <edge id="e0" source="palmeraiescameroun" target="tabacscameroun">
       <data key="e_weight">11</data>
     </edge>
     <edge id="e1" source="pastoraleafricaine" target="pastoralecommercialeafricaine">
-      <data key="e_weight">4</data>
+      <data key="e_weight">5</data>
     </edge>
-    <edge id="e2" source="africaineindustrielleforestiere" target="colonialedistributionenergieelectrique">
+    <edge id="e2" source="bongolalokundjenyong" target="bongolalokundji">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e3" source="africaineindustrielleforestiere" target="colonialedistributionenergieelectrique">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e3" source="materielcolonial" target="plantationsfoumbankouti">
+    <edge id="e4" source="materielcolonial" target="plantationsfoumbankouti">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e4" source="agricoleforestierecameroun" target="caoutchoucscacaoscameroun">
+    <edge id="e5" source="agricoleforestierecameroun" target="caoutchoucscacaoscameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e5" source="cotonnierenordcamerountchad" target="palmeraiescameroun">
+    <edge id="e6" source="bongolalokundjenyong" target="caoutchoucscacaoscameroun">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e7" source="bongolalokundji" target="caoutchoucscacaoscameroun">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e8" source="cotonnierenordcamerountchad" target="palmeraiescameroun">
       <data key="e_weight">1</data>
     </edge>
   </graph>

@@ -9,13 +9,13 @@
     <node id="banquefrancochinoisecommerceindustrie">
       <data key="n_label">Banque franco-chinoise pour le commerce et l'industrie</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">34</data>
+      <data key="n_n_directors">32</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="banqueindustriellechine">
       <data key="n_label">La Banque industrielle de Chine</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">43</data>
+      <data key="n_n_directors">41</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="extremeorient">
@@ -27,19 +27,19 @@
     <node id="grandstravauxpekin">
       <data key="n_label">Grands Travaux de Pékin</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="navigationfrancochinoise">
       <data key="n_label">Compagnie de navigation franco-chinoise</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">5</data>
+      <data key="n_n_directors">3</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="olivier">
       <data key="n_label">Olivier &amp; Cie</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="pekinsyndicateltd">
@@ -48,49 +48,61 @@
       <data key="n_n_directors">26</data>
       <data key="n_territory">Chine</data>
     </node>
+    <node id="pekinsyndicateoupekingsyndicate">
+      <data key="n_label">Pekin Syndicate ou Peking Syndicate</data>
+      <data key="n_sectors">Sociétés françaises ou à participation française</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Chine</data>
+    </node>
     <node id="poursuitescontredirigeantsbanqueindustriellechine">
       <data key="n_label">Les poursuites contre les dirigeants de la Banque industrielle de Chine</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">14</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="tramwayseclairageelectriquesshanghai">
       <data key="n_label">Compagnie française de Tramways et d’éclairage électriques de Shanghaï</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">23</data>
+      <data key="n_n_directors">21</data>
       <data key="n_territory">Chine</data>
     </node>
-    <edge id="e0" source="banqueindustriellechine" target="grandstravauxpekin">
-      <data key="e_weight">3</data>
+    <edge id="e0" source="pekinsyndicateltd" target="pekinsyndicateoupekingsyndicate">
+      <data key="e_weight">7</data>
     </edge>
     <edge id="e1" source="banqueindustriellechine" target="poursuitescontredirigeantsbanqueindustriellechine">
-      <data key="e_weight">3</data>
+      <data key="e_weight">4</data>
     </edge>
-    <edge id="e2" source="banqueindustriellechine" target="navigationfrancochinoise">
+    <edge id="e2" source="banqueindustriellechine" target="grandstravauxpekin">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e3" source="banqueindustriellechine" target="pekinsyndicateltd">
+    <edge id="e3" source="banqueindustriellechine" target="navigationfrancochinoise">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e4" source="banquefrancochinoisecommerceindustrie" target="banqueindustriellechine">
+    <edge id="e4" source="banqueindustriellechine" target="pekinsyndicateltd">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e5" source="banquefrancochinoisecommerceindustrie" target="banqueindustriellechine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e5" source="grandstravauxpekin" target="pekinsyndicateltd">
+    <edge id="e6" source="grandstravauxpekin" target="pekinsyndicateltd">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e6" source="banqueindustriellechine" target="extremeorient">
+    <edge id="e7" source="banqueindustriellechine" target="extremeorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e7" source="navigationfrancochinoise" target="poursuitescontredirigeantsbanqueindustriellechine">
+    <edge id="e8" source="navigationfrancochinoise" target="poursuitescontredirigeantsbanqueindustriellechine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e8" source="grandstravauxpekin" target="poursuitescontredirigeantsbanqueindustriellechine">
+    <edge id="e9" source="grandstravauxpekin" target="poursuitescontredirigeantsbanqueindustriellechine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e9" source="extremeorient" target="olivier">
+    <edge id="e10" source="extremeorient" target="olivier">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e10" source="pekinsyndicateltd" target="tramwayseclairageelectriquesshanghai">
+    <edge id="e11" source="pekinsyndicateltd" target="tramwayseclairageelectriquesshanghai">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e12" source="pekinsyndicateoupekingsyndicate" target="tramwayseclairageelectriquesshanghai">
       <data key="e_weight">1</data>
     </edge>
   </graph>

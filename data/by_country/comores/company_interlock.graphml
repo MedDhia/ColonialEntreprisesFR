@@ -15,7 +15,7 @@
     <node id="colonialebambao">
       <data key="n_label">Société Coloniale de Bambao, puis Comores-Bambao</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">21</data>
+      <data key="n_n_directors">16</data>
       <data key="n_territory">Comores</data>
     </node>
     <node id="colonialebambaobambao">
@@ -33,17 +33,17 @@
     <node id="grandecomore">
       <data key="n_label">Grande-Comore</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">10</data>
       <data key="n_territory">Comores</data>
     </node>
     <edge id="e0" source="colonialebambao" target="colonialebambaobambao">
       <data key="e_weight">6</data>
     </edge>
     <edge id="e1" source="colonialebambao" target="etablissementsantoinechirisproduitsaromatiqueschimiques">
-      <data key="e_weight">2</data>
+      <data key="e_weight">3</data>
     </edge>
     <edge id="e2" source="colonialebambao" target="grandecomore">
-      <data key="e_weight">2</data>
+      <data key="e_weight">3</data>
     </edge>
     <edge id="e3" source="civilefomboni" target="colonialebambao">
       <data key="e_weight">1</data>

@@ -9,7 +9,7 @@
     <node id="banquefonciereegyptelandbankegyptalexandrie">
       <data key="n_label">Banque foncière d'Égypte Land Bank of Egypt, Alexandrie</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">36</data>
       <data key="n_territory">Égypte</data>
     </node>
     <node id="caissehypothecaireegypte">
@@ -18,34 +18,43 @@
       <data key="n_n_directors">30</data>
       <data key="n_territory">Égypte</data>
     </node>
+    <node id="creditfoncieregyptien">
+      <data key="n_label">Crédit foncier égyptien</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">67</data>
+      <data key="n_territory">Égypte</data>
+    </node>
     <node id="creditfoncierorient">
       <data key="n_label">Crédit foncier d'Orient</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">36</data>
+      <data key="n_n_directors">30</data>
       <data key="n_territory">Égypte</data>
     </node>
     <node id="landbankegypt">
       <data key="n_label">LAND BANK OF EGYPT</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">11</data>
+      <data key="n_n_directors">10</data>
       <data key="n_territory">Égypte</data>
     </node>
     <node id="unionfonciereegypte">
       <data key="n_label">Union foncière d'Égypte</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">51</data>
       <data key="n_territory">Égypte</data>
     </node>
-    <edge id="e0" source="caissehypothecaireegypte" target="creditfoncierorient">
+    <edge id="e0" source="banquefonciereegyptelandbankegyptalexandrie" target="unionfonciereegypte">
+      <data key="e_weight">6</data>
+    </edge>
+    <edge id="e1" source="caissehypothecaireegypte" target="creditfoncierorient">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e1" source="banquefonciereegyptelandbankegyptalexandrie" target="unionfonciereegypte">
-      <data key="e_weight">2</data>
-    </edge>
     <edge id="e2" source="banquefonciereegyptelandbankegyptalexandrie" target="landbankegypt">
-      <data key="e_weight">1</data>
+      <data key="e_weight">5</data>
     </edge>
     <edge id="e3" source="landbankegypt" target="unionfonciereegypte">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e4" source="creditfoncieregyptien" target="unionfonciereegypte">
       <data key="e_weight">1</data>
     </edge>
   </graph>

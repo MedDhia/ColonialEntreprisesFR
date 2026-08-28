@@ -1,14 +1,14 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
-colonialeagricolecommercialeindustriellesucreriescoloniales,sucreriescoloniales,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales",Sucreries coloniales,25,alexandre-p; artaud-a; aupetit-a; barnaud-p; baugnies-g; boulloche-l; briand-g; buzon-j; castelnau-p; chabanne-l; devies-m; fantauzzi-j; faure-beaulieu-b; grandjean-c; guionin-h; jacqueminet-a; labarrere-a; level-e; levita-j; marbeau-p; mutignon-e; rehm-v; richemond-j; schneider-c; vernes-g
-colonialeagricolecommercialeindustriellesucreriescoloniales,sucreriescolonialescolonialeagricolecommerciale,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales","Sucreries coloniales (Société coloniale, agricole, commerciale et",12,alexandre-p; artaud-a; baugnies; boulloche-l; briand-g; ehrmann-h; grandjean-c; labarrere-a; mobiliere-s; mutignon-e; nissim-l; rehm-v
-sucreriescoloniales,sucreriescolonialescolonialeagricolecommerciale,Sucreries coloniales,"Sucreries coloniales (Société coloniale, agricole, commerciale et",8,alexandre-p; artaud-a; boulloche-l; briand-g; grandjean-c; labarrere-a; mutignon-e; rehm-v
+colonialeagricolecommercialeindustriellesucreriescoloniales,sucreriescoloniales,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales",Sucreries coloniales,23,alexandre-p; barnaud-p; baugnies-g; boulloche-l; briand-g; buzon-j; castelnau-p; chabanne-l; devies-m; fantauzzi-j; faure-beaulieu-b; grandjean-c; guionin-h; jacqueminet-a; labarrere-a; level-e; levita-j; marbeau-p; mutignon-e; rehm-v; richemond-j; schneider-c; vernes-g
+colonialeagricolecommercialeindustriellesucreriescoloniales,sucreriescolonialescolonialeagricolecommerciale,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales","Sucreries coloniales (Société coloniale, agricole, commerciale et",13,alexandre-p; artaud-a-adrien; baugnies-g; boulloche-l; briand-g; ehrmann-h; grandjean-c; jacqueminet-a; labarrere-a; mobiliere-s; mutignon-e; nissim-l; rehm-v
+sucreriescoloniales,sucreriescolonialescolonialeagricolecommerciale,Sucreries coloniales,"Sucreries coloniales (Société coloniale, agricole, commerciale et",9,alexandre-p; baugnies-g; boulloche-l; briand-g; grandjean-c; jacqueminet-a; labarrere-a; mutignon-e; rehm-v
 colonialeagricolecommercialeindustriellesucreriescoloniales,rhumspurs,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales",Compagnie des Rhums purs,6,alexandre-p; briand-g; de-mones-del-pujol-g; jacqueminet-a; mutignon-e; rehm-v
 rhumspurs,sucreriescoloniales,Compagnie des Rhums purs,Sucreries coloniales,6,alexandre-p; benard-l; briand-g; jacqueminet-a; mutignon-e; rehm-v
-creditfonciercolonial,sucreriescoloniales,Crédit foncier colonial,Sucreries coloniales,5,briand; del-porto-a; grandjean-c; mutignon-e; rehm-v
-rhumspurs,sucreriescolonialescolonialeagricolecommerciale,Compagnie des Rhums purs,"Sucreries coloniales (Société coloniale, agricole, commerciale et",4,alexandre-p; briand-g; mutignon-e; rehm-v
-colonialeagricolecommercialeindustriellesucreriescoloniales,creditfonciercolonial,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales",Crédit foncier colonial,4,baugnies; grandjean-c; mutignon-e; rehm-v
-creditfonciercolonial,sucreriescolonialescolonialeagricolecommerciale,Crédit foncier colonial,"Sucreries coloniales (Société coloniale, agricole, commerciale et",4,baugnies; grandjean-c; mutignon-e; rehm-v
-creditfonciercolonial,rhumspurs,Crédit foncier colonial,Compagnie des Rhums purs,2,mutignon-e; rehm-v
+creditfonciercolonial,sucreriescoloniales,Crédit foncier colonial,Sucreries coloniales,6,briand-g; del-porto-a; grandjean-c; jacqueminet-a; mutignon-e; rehm-v
+rhumspurs,sucreriescolonialescolonialeagricolecommerciale,Compagnie des Rhums purs,"Sucreries coloniales (Société coloniale, agricole, commerciale et",5,alexandre-p; briand-g; jacqueminet-a; mutignon-e; rehm-v
+colonialeagricolecommercialeindustriellesucreriescoloniales,creditfonciercolonial,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales",Crédit foncier colonial,5,briand-g; grandjean-c; jacqueminet-a; mutignon-e; rehm-v
+creditfonciercolonial,sucreriescolonialescolonialeagricolecommerciale,Crédit foncier colonial,"Sucreries coloniales (Société coloniale, agricole, commerciale et",5,briand-g; grandjean-c; jacqueminet-a; mutignon-e; rehm-v
+creditfonciercolonial,rhumspurs,Crédit foncier colonial,Compagnie des Rhums purs,4,briand-g; jacqueminet-a; mutignon-e; rehm-v
 parisbourbondeveloppementrelationsentre,parisbourbondeveloppementrelationsentrefrance,Paris-Bourbon (Société anon. pour le développement des relations entre la,Paris-Bourbon (Sté anon. pour le développement des relations entre la France,2,benard-l; decler-c
 agencecentraleparis,saintdenis,Agence centrale à PARIS,SAINT-DENIS,2,cornu-h; rabot-j
 parisbourbondeveloppementrelationsentre,raphaeldouyere,Paris-Bourbon (Société anon. pour le développement des relations entre la,Raphaël Douyère,1,benard-l
@@ -20,6 +20,4 @@ parisbourbondeveloppementrelationsentrefrance,sucreriescoloniales,Paris-Bourbon 
 raphaeldouyere,rhumspurs,Raphaël Douyère,Compagnie des Rhums purs,1,benard-l
 raphaeldouyere,sucreriescoloniales,Raphaël Douyère,Sucreries coloniales,1,benard-l
 banquereunion,saintdenis,Banque de la Réunion,SAINT-DENIS,1,foucque-a
-grandsbois,hydroelectriquereunionhe,Société anon. des Grands-Bois,Société hydro-électrique de la Réunion (S.H.E,1,hugot-a
-grandsbois,raphaeldouyere,Société anon. des Grands-Bois,Raphaël Douyère,1,hugot-a
-hydroelectriquereunionhe,raphaeldouyere,Société hydro-électrique de la Réunion (S.H.E,Raphaël Douyère,1,hugot-a
+grandsbois,hydroelectriquereunionhe,Société anon. des Grands-Bois,Société hydro-électrique de la Réunion (S.H.E,1,hugot-a-anatole

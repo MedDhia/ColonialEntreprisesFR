@@ -9,13 +9,13 @@
     <node id="banquefrancoserbe">
       <data key="n_label">Banque franco-serbe</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Serbie-Yougoslavie</data>
     </node>
     <node id="exploitationsminieresserbie">
       <data key="n_label">Société d’Exploitations minières en Serbie</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">14</data>
       <data key="n_territory">Serbie-Yougoslavie</data>
     </node>
     <edge id="e0" source="banquefrancoserbe" target="exploitationsminieresserbie">

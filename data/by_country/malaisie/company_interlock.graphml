@@ -9,7 +9,7 @@
     <node id="etainskinta">
       <data key="n_label">Société des Étains de Kinta</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">26</data>
+      <data key="n_n_directors">22</data>
       <data key="n_territory">Malaisie</data>
     </node>
     <node id="etainsmalaisie">
@@ -27,7 +27,7 @@
     <node id="minesetainperak">
       <data key="n_label">Société des Mines d'étain de Pérak</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Malaisie</data>
     </node>
     <node id="tandjongmalimrubbercoutanjongmalimrubberc">
@@ -37,15 +37,12 @@
       <data key="n_territory">Malaisie</data>
     </node>
     <edge id="e0" source="etainskinta" target="etainsmalaisie">
-      <data key="e_weight">5</data>
+      <data key="e_weight">4</data>
     </edge>
     <edge id="e1" source="etainskinta" target="minesetainperak">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e2" source="etainsmalaisie" target="minesetainperak">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e3" source="kualalumpurrubbercompanyltd" target="tandjongmalimrubbercoutanjongmalimrubberc">
+    <edge id="e2" source="kualalumpurrubbercompanyltd" target="tandjongmalimrubbercoutanjongmalimrubberc">
       <data key="e_weight">1</data>
     </edge>
   </graph>

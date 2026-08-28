@@ -38,6 +38,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from build_network import PERIODS, read_csv  # noqa: E402
 from common import ensure_dir  # noqa: E402
+from labels import LANGS, localise  # noqa: E402
+import centrality  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIG_DIR = os.path.join(ROOT, "figures")
@@ -416,6 +418,41 @@ def prepare_core(companies, top_n, min_weight, width, height):
     return nodes, edges, top3, K
 
 
+def build_centrality_view(core_nodes, cent):
+    """Figure 1's firms and layout, resized by betweenness.
+
+    Deliberately the *same* node set and the *same* coordinates as figure 1,
+    with only the size encoding swapped. Laying it out afresh would produce a
+    picture that differs in two ways at once and let neither be read; holding
+    everything but the encoding fixed makes the difference between the two
+    figures the finding — which firms grow, which shrink.
+
+    Betweenness comes from `centrality.py`, computed on the whole interlock
+    graph. A firm's score here is its brokerage in the empire, not within the
+    170 drawn.
+    """
+    vals = {}
+    for n in core_nodes:
+        rec = cent.get(n["id"], {})
+        vals[n["id"]] = float(rec.get("betweenness", 0.0) or 0.0)
+    lo, hi = (min(vals.values()), max(vals.values())) if vals else (0.0, 1.0)
+
+    out = []
+    for n in core_nodes:
+        rec = cent.get(n["id"], {})
+        bt = vals[n["id"]]
+        gap = int(rec.get("broker_gap", 0) or 0)
+        out.append(dict(
+            n,
+            betweenness=bt,
+            bt_rank=int(rec.get("betweenness_rank", 0) or 0),
+            deg_rank=int(rec.get("degree_rank", 0) or 0),
+            broker_gap=gap,
+            r=radius(bt, lo, hi),
+        ))
+    return out, lo, hi
+
+
 def colourise(nodes, mode):
     p = PALETTE[mode]
     for n in nodes:
@@ -554,13 +591,19 @@ def panels_svg(panels, mode: str) -> str:
     return "\n".join(out)
 
 
-def render_page(core_nodes, core_edges, top3, panels, ego, stats) -> str:
+def render_page(core_nodes, core_edges, top3, panels, ego, stats,
+                lang: str = "fr", cent_nodes=None) -> str:
     n_union = max((p["n_firms"] for p in panels), default=0)
     lp, dp = PALETTE["light"], PALETTE["dark"]
     W, H = CORE_W, CORE_H
 
     def core_svg(mode):
         nodes = colourise([dict(n) for n in core_nodes], mode)
+        return draw_network(nodes, core_edges, W, H, mode, label_top=14, font=11.5,
+                            label_margin=LABEL_MARGIN)
+
+    def cent_svg(mode):
+        nodes = colourise([dict(n) for n in cent_nodes], mode)
         return draw_network(nodes, core_edges, W, H, mode, label_top=14, font=11.5,
                             label_margin=LABEL_MARGIN)
 
@@ -571,8 +614,12 @@ def render_page(core_nodes, core_edges, top3, panels, ego, stats) -> str:
         return draw_network(nodes, ego["edges"], EGO_W, EGO_H, mode, label_top=16, font=11,
                             label_margin=LABEL_MARGIN)
 
+    bt_of = {n["id"]: n for n in (cent_nodes or [])}
     node_json = json.dumps({n["id"]: {
-        "name": n["label"], "territory": n["territory"], "degree": n["degree"],
+        "name": n["label"], "territory": localise(n["territory"], lang),
+        "betweenness": f"{bt_of.get(n['id'], {}).get('betweenness', 0):.5f}",
+        "bt_rank": bt_of.get(n["id"], {}).get("bt_rank", ""),
+        "degree": n["degree"],
         "wdeg": n["wdeg"], "sectors": n.get("sectors", ""), "years": n.get("years", ""),
         "n_directors": n.get("n_directors", ""),
     } for n in core_nodes})
@@ -583,8 +630,11 @@ def render_page(core_nodes, core_edges, top3, panels, ego, stats) -> str:
     ) + '<span class="lg" role="listitem"><i style="background:var(--other)"></i>Other territory</span>'
 
     table_rows = "".join(
-        f"<tr><td>{esc(n['label'])}</td><td>{esc(n['territory'])}</td>"
+        f"<tr><td>{esc(n['label'])}</td>"
+        f"<td>{esc(localise(n['territory'], lang))}</td>"
         f"<td class='n'>{n['degree']}</td><td class='n'>{n['wdeg']}</td>"
+        f"<td class='n'>{bt_of.get(n['id'], {}).get('betweenness', 0):.5f}</td>"
+        f"<td class='n'>{bt_of.get(n['id'], {}).get('bt_rank', '')}</td>"
         f"<td>{esc(n.get('sectors',''))}</td></tr>"
         for n in sorted(core_nodes, key=lambda n: -n["wdeg"])
     )
@@ -694,8 +744,32 @@ directors. The full graph ({stats['n_interlocks']:,} ties over {stats['n_firms_g
 firms) is not drawn: at that size a node-link diagram is an unreadable
 hairball, so the figure shows its core and the table carries the rest.</p>
 <div id="tablewrap"><table><thead><tr><th>Firm</th><th>Territory</th>
-<th class="n">Interlocks</th><th class="n">Shared directorships</th><th>Sector</th>
-</tr></thead><tbody>{table_rows}</tbody></table></div>
+<th class="n">Interlocks</th><th class="n">Shared directorships</th>
+<th class="n">Betweenness</th><th class="n">Rank (of {stats['n_firms_graph_all']:,})</th>
+<th>Sector</th></tr></thead><tbody>{table_rows}</tbody></table></div>
+
+<h2>The same firms, sized by brokerage</h2>
+<p class="sub">Identical to the figure above — same {len(core_nodes)} firms,
+same coordinates — with one encoding changed: node size is now <b>betweenness
+centrality</b> rather than shared directorships. Betweenness counts how often
+a firm lies on the shortest path between two firms that share no director of
+their own. Holding everything else fixed means the difference between the two
+pictures <i>is</i> the finding: which firms grow, and which shrink.</p>
+<div class="bar"><span class="legend" role="list" aria-label="Legend: territory">{legend_items}</span></div>
+<div class="fig">
+  <div class="light-only">{svg_document(cent_svg('light'), W, H, 'light', 'Core interlock network sized by betweenness')}</div>
+  <div class="dark-only">{svg_document(cent_svg('dark'), W, H, 'dark', 'Core interlock network sized by betweenness')}</div>
+</div>
+<p class="note">Betweenness is computed on the <b>whole</b> interlock graph
+({stats['n_firms_graph_all']:,} firms, {stats['n_interlocks']:,} ties), exactly
+and unweighted, then displayed on this slice — the shortest paths that matter
+run through firms outside any core one might draw, so computing it on the 170
+would be a different quantity under the same name. Edge weight here counts
+shared directors, which is a strength rather than a distance, so feeding it to
+a shortest-path algorithm would make the closest pairs look furthest apart;
+the binary graph is the standard treatment. Full scores for all
+{stats['n_firms_graph_all']:,} firms are in
+<code>data/processed/company_centrality.csv</code>.</p>
 
 <h2>How the network changed over time</h2>
 <p class="sub">All five panels share one layout and one size scale, so a firm
@@ -733,6 +807,7 @@ const tip = document.getElementById('tip');
 function show(e, id) {{
   const d = DATA[id]; if (!d) return;
   tip.innerHTML = '<b>' + d.name + '</b><br><span>' + d.territory + '</span><br>' +
+    '<span>betweenness ' + d.betweenness + ' (rank ' + d.bt_rank + ')</span><br>' +
     d.degree + ' interlocks &middot; ' + d.wdeg + ' shared directorships' +
     (d.n_directors ? '<br><span>' + d.n_directors + ' directors recorded</span>' : '') +
     (d.years && d.years !== '-' ? '<br><span>observed ' + d.years + '</span>' : '') +
@@ -776,9 +851,14 @@ def main() -> None:
     ap.add_argument("--min-weight", type=int, default=2,
                     help="minimum shared directors for an edge to be drawn")
     ap.add_argument("--ego", default="Banque de l'Indochine")
+    ap.add_argument("--lang", choices=LANGS, default="fr",
+                    help="language of the category labels; 'en' writes figures/en/")
     args = ap.parse_args()
 
-    ensure_dir(FIG_DIR)
+    # Source labels stay in figures/; the English set is a parallel tree, so
+    # neither overwrites the other and both can be cited.
+    out_dir = FIG_DIR if args.lang == "fr" else os.path.join(FIG_DIR, "en")
+    ensure_dir(out_dir)
     companies = {r["company_id"]: r for r in read_csv("companies.csv")}
     W, H = CORE_W, CORE_H
 
@@ -788,6 +868,9 @@ def main() -> None:
     ego = build_ego(companies, args.ego, args.min_weight, EGO_W, EGO_H)
     if ego is None:
         raise SystemExit(f"no firm matching {args.ego!r} in the interlock graph")
+
+    cent = centrality.load()
+    cent_nodes, bt_lo, bt_hi = build_centrality_view(core_nodes, cent)
 
     people = read_csv("persons_resolved.csv")
     pos_rows = read_csv("person_positionality.csv")
@@ -800,11 +883,13 @@ def main() -> None:
         "n_ties": len(read_csv("edges_person_company.csv")),
         "n_docs": len(read_csv("documents.csv")),
         "n_firms_graph": full.number_of_nodes(),
+        "n_firms_graph_all": sum(1 for r in cent.values() if r["in_giant"] == "1"),
         "pct_native": f"{100 * native / len(pos_rows):.1f}%" if pos_rows else "n/a",
     }
 
-    page = render_page(core_nodes, core_edges, top3, panels, ego, stats)
-    out = os.path.join(FIG_DIR, "interlock_network.html")
+    page = render_page(core_nodes, core_edges, top3, panels, ego, stats,
+                       args.lang, cent_nodes)
+    out = os.path.join(out_dir, "interlock_network.html")
     with open(out, "w", encoding="utf-8") as fh:
         fh.write(page)
     print(f"wrote {os.path.relpath(out, ROOT)}", file=sys.stderr)
@@ -813,7 +898,8 @@ def main() -> None:
     # caption: outside the page there is no other place for them, and identity
     # must never rest on colour alone.
     lp = PALETTE["light"]
-    core_legend = [(lp["series"][i], t) for i, t in enumerate(top3)]
+    core_legend = [(lp["series"][i], localise(t, args.lang))
+                   for i, t in enumerate(top3)]
     core_legend.append((lp["other"], "Other territory"))
     for name, body, w, h, title, legend, caption in [
         ("fig1_core_interlocks",
@@ -828,6 +914,15 @@ def main() -> None:
          panels_svg(panels, "light"),
          PANELS_W, PANELS_H, "Interlock networks by period", None,
          "One shared layout and one size scale throughout, so panels are comparable."),
+        ("fig6_core_betweenness",
+         draw_network(colourise([dict(n) for n in cent_nodes], "light"),
+                      core_edges, W, H, "light", label_top=14, font=11.5,
+                      label_margin=LABEL_MARGIN),
+         W, H, "Core interlock network sized by betweenness", core_legend,
+         f"The same {len(core_nodes)} firms and the same layout as figure 1, "
+         f"sized by betweenness centrality instead of shared directorships. "
+         f"Betweenness computed exactly and unweighted on the whole interlock "
+         f"graph ({stats['n_firms_graph_all']:,} firms), then displayed here."),
         ("fig3_ego_indochine",
          draw_network([dict(n, color=lp["series"][0] if n["slot"] == 0
                             else lp["other"]) for n in ego["nodes"]],
@@ -838,13 +933,19 @@ def main() -> None:
          f"{len(ego['nodes']) - 1} firms sharing at least two directors with "
          f"{ego['target_name']}."),
     ]:
-        path = os.path.join(FIG_DIR, f"{name}.svg")
+        path = os.path.join(out_dir, f"{name}.svg")
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(svg_document(body, w, h, "light", title, legend, caption))
         print(f"wrote {os.path.relpath(path, ROOT)}", file=sys.stderr)
 
     print(f"\ncore figure: {len(core_nodes)} firms, {len(core_edges)} interlocks, "
           f"territories {top3}", file=sys.stderr)
+    movers = sorted(cent_nodes, key=lambda n: -n["broker_gap"])[:5]
+    print(f"betweenness {bt_lo:.5f}-{bt_hi:.5f}; biggest brokers in the core:",
+          file=sys.stderr)
+    for n in movers:
+        print(f"  bt #{n['bt_rank']:<5d} deg #{n['deg_rank']:<5d} {n['label'][:52]}",
+              file=sys.stderr)
     for p in panels:
         print(f"  {p['period']:12s} {p['n_edges_total']:6,} interlocks", file=sys.stderr)
 

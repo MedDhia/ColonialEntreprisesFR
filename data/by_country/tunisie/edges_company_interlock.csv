@@ -1,114 +1,296 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
-mineszaghouan,minieredjebellorbeus,MINES DE ZAGHOUAN,Compagnie minière du Djebel-Lorbeus,9,clerc-l; damour-a; desforges-adm-ac-rombas-p; dreux-a; gerini-d; michel-c; pdt-nanceienne-cic; riollot-j; tricon-m
-salinesdjiboutimadagascar,salinesdjiboutisfaxmadagascar,Salines de Djibouti et de Madagascar,"Salines de Djibouti, Sfax et Madagascar",9,bouvier-r; de-flers-f; guesde-p; homberg-o; jambon-c; mingois-g; plion-a; rousset-bert-h; verhille-h
-phosphatescheminfergafsa,tunisiennephosphatesdjebelmdilla,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,Compagnie tunisienne des Phosphates du Djebel-M'dilla,7,carnot-e; davis-e; heuzey-c; philippar-e; sautter-r; vairon-c; zafiropulo-d
-phosphatescheminfergafsa,portstunissoussesfax,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,"Compagnie des Ports de Tunis, Sousse et Sfax",6,administrateurs-direct-a-tunis; berengier-m; exploitation-des-ports-de-tunis; j-dollfus-fils-de-jules; j-loutrel; l-boulle
-phosphatestunisiens,portstunissoussesfax,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .","Compagnie des Ports de Tunis, Sousse et Sfax",6,administrateurs-direct-a-tunis; berengier-m; boulle-l; dollfus-j; exploitation-des-ports-de-tunis; loutrel-j
-auget,bazina,AUGET,Société française du Bazina,6,a-walewski; adm-mm-champin; e-weiss; f-robellaz; heurteau-c; mine-de-plomb-au-djebel-bazina
+cheminsfertunisiens,fermierecheminsfertunisiens,Chemins de fer tunisiens,Cie Fermière des chemins de fer tunisiens,13,boulle-l; brugere-j; ferrand-c; fouquet-j; georges-picot-c; herscher-e; jurien-de-la-graviere-p; lacour-gayet-j; lorieux; philippar-e; saint-romas-j; thureau; trelat
+salinesdjiboutimadagascar,salinesdjiboutisfaxmadagascar,Salines de Djibouti et de Madagascar,"Salines de Djibouti, Sfax et Madagascar",11,bouvier-r; de-flers-f; dehecq; guesde-p; homberg-o; jambon-c; mingois-g; plion-a; plion-a-antoine; rousset-bert-h; verhille-h
+gafsa,phosphatescheminsfergafsa,Gafsa,Compagnie des phosphates et chemins de fer de Gafsa,9,ascherson-c; boissonnas-j; mauclere-e; mirabaud-a; mirabaud-e; molinos-l; pelle-m; vignes-c; walewski-a
+djebeldjerissa,socdjebeldjerissa,Société du Djebel-Djerissa,Soc. du DJEBEL-DJERISSA,8,bordet; de-dietrich; de-joannis-e; de-nervo-l; heurteau; mallet-e-ernest; pres-tunis; puerari
+minesdouaria,syndicatminesdjebeltrozzadjebelserdj,Société des mines de Douaria,Syndicat des MINES du DJEBEL-TROZZA et DJEBEL SERDJ,8,chailley-bert-p; combeau-e; gaillochet-h; harth-p; isnel-p; pacquement-a; vincent-a; vincent-l
+batiment,bazina,BATIMENT,Société française du Bazina,8,champin; d-eichthal-w; dardes-a; heurteau-c; mine-de-plomb-au-djebel-bazina; robellaz-f; walewski-a; weiss-e
+djebeldjerissa,gafsa,Société du Djebel-Djerissa,Gafsa,7,basset-f; bordet-l; boulogne-g; bouruet-aubertot-h; hay-a; lafond-h; mauclere-e
+atelierschantiersmaritimestunisie,commercialetunisienne,Ateliers et chantiers maritimes de Tunisie,Société Commerciale Tunisienne,6,bouffe-g; fossorier-r; marceron-m; savon; savon-a-albert; savon-r-roger
+atelierschantiersmaritimestunisie,foncierafricain,Ateliers et chantiers maritimes de Tunisie,Foncier africain français,6,bouffe-g; fossorier-r; marceron-m; savon-a-albert; savon-h; savon-r-roger
+huileriessaheltunisien,socgenhuileriessaheltunisien,Société générale des Huileries du Sahel tunisien,Soc. gén. des HUILERIES DU SAHEL TUNISIEN,6,cottet-b; guis-h; jouve-g; querry-p; sonnery-j; sonnery-r
+minesdjebelressas,socminesdjebelressas,Société des mines du Djebel-Ressas,Soc. des MINES DU DJEBEL-RESSAS,6,boscher-a; cambefort-c; chalupt-c; de-dietrich-a; ledoux-f; urruty-f
+minesmetalliquesbeja,socminesmetalliquesbeja,Société Française de mines métalliques de Béja,Soc. française des MINES MÉTALLIQUES DE BÉJA,6,bouchacourt; courbis-e; genthon-l; guitton; raverot; rey-herme
+batiment,minierebazina,BATIMENT,"Société minière du Bazina, puis Bazina",6,champin; dardes-a; heurteau-c; robellaz-f; walewski-a; weiss-e
+bazina,minierebazina,Société française du Bazina,"Société minière du Bazina, puis Bazina",6,champin; dardes-a; heurteau-c; robellaz-f; walewski-a; weiss-e
+commercialetunisienne,foncierafricain,Société Commerciale Tunisienne,Foncier africain français,5,bouffe-g; fossorier-r; marceron-m; savon-a-albert; savon-r-roger
+minesfedjeladoum,socminesfedjeladoum,Société des mines de Fedj-el-Adoum,Soc. des MINES de FEDJ-EL-ADOUM,5,chabert-h; choppin-de-janvry-j; faure-f-frederic; faure-j; hackenberger-p
+minesplombzinckohol,socminesplombzinckohol,Société des Mines de plomb et de zinc du Kohol,Soc. des mines de plomb et de zinc du KOHOL,5,duriez-h; pasquier; reveilhac-l; schnerb-h; titos-d
+salinesdjibouti,salinesdjiboutisfaxmadagascar,Société des salines de Djibouti,"Salines de Djibouti, Sfax et Madagascar",5,guesde-p; homberg-o; jambon-c; mingois-g; radziwill-l
 huileriefrancotunisienne,huileriessaheltunisien,Huilerie franco-tunisienne,Société générale des Huileries du Sahel tunisien,4,cottet-b; fould-j; guis-h; querry-p
-kohol,minesplombzinckohol,KOHOL,Société des Mines de plomb et de zinc du Kohol,4,duriez-h; pasquier-a; reveilhac-l; schnerb-h
-milazzo,minesdjebelressas,MILAZZO,Société des mines du Djebel-Ressas,4,adm-mm-andre-boscher; f-ledoux; f-urruty; tupin-galene-g
+antoinemilazzo,minesalgerietunisieomnium,Antoine MILAZZO,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,4,de-gunzburg-p; de-montureux; juge-a; th-ansbacher
+minesdjebelhallouf,socfrseminesdjebelhallouf,MINES du DJEBEL HALLOUF,Soc. an. frse des MINES du DJEBEL-HALLOUF,4,bourdillon-l; gittens-w; michenot-e; zafiropulo-d
+1911djebelhallouf,djebelhalloufsocfes,"S.A., 1911 Djebel Hallouf",DJEBEL HALLOUF (Soc. an. Fes,4,bourdillon-l; gittens-w; michenot-e; zafiropulo-g
+gazregiecointeresseeeauxtunis,immobilieretunisienne,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,Société Immobilière tunisienne,4,flury-herard-r; hackenberger-p; petsche-a; siegler-j
+energieelectriquevillebizerte,portbizerte,Société d'Énergie électrique de la ville de Bizerte,Société du Port de Bizerte,4,hersent-g; hersent-g-georges; hersent-j; thomas-g
+commercialeafricaine,olivettesmaiana,Commerciale Africaine,Société des Olivettes du Maïana,4,jullien-de-pommerol-f; martin-a-auguste; martinier; renoux-h
+olivettesmaiana,omniumimmobiliertunisien,Société des Olivettes du Maïana,Omnium immobilier tunisien,4,jullien-de-pommerol-f; martin-a-auguste; renoux-h; usannaz-joris-m
 dalmatienne,phosphatestunisiens,La Dalmatienne,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",4,fraenkel; gillet-p; lupo-l; malvezzi-g
+francotunisienneimmobiliereagricolecommerciale,sidichemmak,"Société Franco-Tunisienne Immobilière, Agricole et Commerciale",Société Sidi Chemmak,4,maurice-e; raty-f; roederer-j; rte-d-orthez
 salinesdjibouti,salinesdjiboutimadagascar,Société des salines de Djibouti,Salines de Djibouti et de Madagascar,4,guesde-p; homberg-o; jambon-c; mingois-g
-salinesdjibouti,salinesdjiboutisfaxmadagascar,Société des salines de Djibouti,"Salines de Djibouti, Sfax et Madagascar",4,guesde-p; homberg-o; jambon-c; mingois-g
-africainearmement,foncierafricain,Compagnie Africaine d'Armement,Foncier africain français,3,bouffe-g; marceron-m; savon-a
-djebeldjerissa,gafsa,Société du Djebel-Djerissa,Gafsa,3,bordet-l; bouruet-aubertot-h; mauclere-e
-djebeldjerissa,phosphatescheminsfergafsa,Société du Djebel-Djerissa,Compagnie des phosphates et chemins de fer de Gafsa,3,beigbeder-d; bordet-l; de-nervo-l
-gafsa,phosphatescheminsfergafsa,Gafsa,Compagnie des phosphates et chemins de fer de Gafsa,3,bordet-l; molinos-l; roux-j
-djebelhalloufsocfes,minesalgerietunisieomnium,DJEBEL HALLOUF (Soc. an. Fes,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,3,adm-mm-e-michenot; bourdillon-l; gittens-w
-phosphatescheminfergafsa,phosphatestunisiens,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",3,administrateurs-direct-a-tunis; berengier-m; exploitation-des-ports-de-tunis
-minesfedjeladoum,tabourin,Société des mines de Fedj-el-Adoum,Tabourin,3,adm-mm-h-chabert; choppin-de-janvry-j; f-faure
-mineszaghouan,mineszincainnouba,MINES DE ZAGHOUAN,Société des mines de zinc d'Aïn-Nouba,2,duceux-o; duval-f
-africainearmement,afriquenord,Compagnie Africaine d'Armement,AFRIQUE DU NORD,2,gorchs-chacou-f; marceron-m
-etablissementsluchaire,fichet,Établissements LUCHAIRE,FICHET,2,naples; sofia
-milazzo,minesalgerietunisieomnium,MILAZZO,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,2,de-montureux; th-ansbacher
-djebelhalloufsocfes,escande,DJEBEL HALLOUF (Soc. an. Fes,"Escande & Cie, puis Richy et Warkin",2,gittens-w; zafiropulo-g
-escande,menzeldjemil,"Escande & Cie, puis Richy et Warkin",MENZEL-DJEMIL,2,gittens-w; zafiropulo-d
-escande,metallurgiquetunisie,"Escande & Cie, puis Richy et Warkin",Métallurgique de Tunisie,2,gittens-w; zafiropulo-d
-menzeldjemil,metallurgiquetunisie,MENZEL-DJEMIL,Métallurgique de Tunisie,2,gittens-w; zafiropulo-d
-djebelhalloufsocfes,minesdjebelhallouf,DJEBEL HALLOUF (Soc. an. Fes,MINES du DJEBEL HALLOUF,2,adm-mm-e-michenot; bourdillon-l
-minesalgerietunisieomnium,minesdjebelhallouf,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,MINES du DJEBEL HALLOUF,2,adm-mm-e-michenot; bourdillon-l
-michenot,tabourin,Michenot,Tabourin,2,combeau-e; gaillochet
-escande,phosphatescheminfergafsa,"Escande & Cie, puis Richy et Warkin",Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,2,davis-e; zafiropulo-d
-escande,tunisiennephosphatesdjebelmdilla,"Escande & Cie, puis Richy et Warkin",Compagnie tunisienne des Phosphates du Djebel-M'dilla,2,davis-e; zafiropulo-d
+huileriefrancotunisienne,socgenhuileriessaheltunisien,Huilerie franco-tunisienne,Soc. gén. des HUILERIES DU SAHEL TUNISIEN,3,cottet-b; guis-h; querry-p
+beniniguez,metallurgiquetunisie,Benini GUEZ,Métallurgique de Tunisie,3,gittens-w; michenot-e; zafiropulo-d
+beniniguez,minesdjebelhallouf,Benini GUEZ,MINES du DJEBEL HALLOUF,3,gittens-w; michenot-e; zafiropulo-d
+beniniguez,socfrseminesdjebelhallouf,Benini GUEZ,Soc. an. frse des MINES du DJEBEL-HALLOUF,3,gittens-w; michenot-e; zafiropulo-d
+beniniguez,tunisiennephosphatesdjebelmdilla,Benini GUEZ,Compagnie tunisienne des Phosphates du Djebel-M'dilla,3,carnot-e; davis-e; zafiropulo-d
+commercialetunisienne,tunisiennephosphatesdjebelmdilla,Société Commerciale Tunisienne,Compagnie tunisienne des Phosphates du Djebel-M'dilla,3,philippar-e; trelat-m; zafiropulo-d
+metallurgiquetunisie,minesdjebelhallouf,Métallurgique de Tunisie,MINES du DJEBEL HALLOUF,3,gittens-w; michenot-e; zafiropulo-d
+metallurgiquetunisie,socfrseminesdjebelhallouf,Métallurgique de Tunisie,Soc. an. frse des MINES du DJEBEL-HALLOUF,3,gittens-w; michenot-e; zafiropulo-d
+1911djebelhallouf,beniniguez,"S.A., 1911 Djebel Hallouf",Benini GUEZ,3,gittens-w; michenot-e; zafiropulo-g
+1911djebelhallouf,minesdjebelhallouf,"S.A., 1911 Djebel Hallouf",MINES du DJEBEL HALLOUF,3,bourdillon-l; gittens-w; michenot-e
+1911djebelhallouf,socfrseminesdjebelhallouf,"S.A., 1911 Djebel Hallouf",Soc. an. frse des MINES du DJEBEL-HALLOUF,3,bourdillon-l; gittens-w; michenot-e
+beniniguez,djebelhalloufsocfes,Benini GUEZ,DJEBEL HALLOUF (Soc. an. Fes,3,gittens-w; michenot-e; zafiropulo-g
+djebelhalloufsocfes,minesdjebelhallouf,DJEBEL HALLOUF (Soc. an. Fes,MINES du DJEBEL HALLOUF,3,bourdillon-l; gittens-w; michenot-e
+djebelhalloufsocfes,socfrseminesdjebelhallouf,DJEBEL HALLOUF (Soc. an. Fes,Soc. an. frse des MINES du DJEBEL-HALLOUF,3,bourdillon-l; gittens-w; michenot-e
+banquetunisie,minesfedjeladoum,Banque de Tunisie,Société des mines de Fedj-el-Adoum,3,faure; faure-j; hackenberger-p
+minesfedjeladoum,minierekanguet,Société des mines de Fedj-el-Adoum,"Société minière du Kanguet, puis Société nouvelle du Kanguet",3,faure; faure-f-frederic; faure-j
+bazina,gafsa,Société française du Bazina,Gafsa,3,champin; mirabaud-p; walewski-a
+centresud,omniumimmobiliertunisien,Centre et Sud,Omnium immobilier tunisien,3,baizeau-l; martin-a-auguste; superieur-b
+djimla,etablissementsschwichbaizeau,Société de Djimla,Établissements Schwich et Baizeau,3,baizeau-l; jullien-de-pommerol-f; rte-de-l-ariana
+djimla,omniumimmobiliertunisien,Société de Djimla,Omnium immobilier tunisien,3,baizeau-l; jullien-de-pommerol-f; martin-a-auguste
+djimla,ruraletunisienne,Société de Djimla,La Rurale Tunisienne,3,baizeau-l; marcille-r; rte-de-l-ariana
+etablissementsschwichbaizeau,omniumimmobiliertunisien,Établissements Schwich et Baizeau,Omnium immobilier tunisien,3,baizeau-l; jullien-de-pommerol-f; superieur-b
+commercialeafricaine,omniumimmobiliertunisien,Commerciale Africaine,Omnium immobilier tunisien,3,jullien-de-pommerol-f; martin-a-auguste; renoux-h
+djimla,olivettesmaiana,Société de Djimla,Société des Olivettes du Maïana,3,jullien-de-pommerol-f; martin-a-auguste; rte-de-l-ariana
+etsboyoud,omniumimmobiliertunisien,Ets Boyoud,Omnium immobilier tunisien,3,renoux-h; superieur-b; usannaz-joris-m
+etablissementsschwichbaizeau,olivettesmaiana,Établissements Schwich et Baizeau,Société des Olivettes du Maïana,3,jullien-de-pommerol-f; martinier; rte-de-l-ariana
+etsboyoud,olivettesmaiana,Ets Boyoud,Société des Olivettes du Maïana,3,martinier; renoux-h; usannaz-joris-m
+djebeldjerissa,minesferkroumirienefzas,Société du Djebel-Djerissa,Société des mines de fer de Kroumirie et des Nefzas,3,beigbeder-d; milius-j; nervo-l
+djebeldjerissa,phosphatescheminsfergafsa,Société du Djebel-Djerissa,Compagnie des phosphates et chemins de fer de Gafsa,3,beigbeder-d; mauclere-e; nervo-l
+agricoleimmobilierefrancoafricaine,agricoleimmobilierefrancoafricaineenfida,Société agricole et immobilière franco-africaine,Société agricole et immobilière franco-africaine Enfida,3,gavoty-a; montamat-a; zarifi
+mines,minesgarnalfaya,"Société des mines de, puis Société minière et agricole du Garn-Alfaya",Mines de Garn-Alfaya,3,achalme-p; grandidier-g; rodocanachi-e
+fermiereminessidibouaouane,sidibouaouane,Société fermière des mines de Sidi-Bou-Aouane,Sidi-Bou-Aouane,3,biver; boissier; bousquet
+agricoleimmobilieretunisienne,olivettessudtunisien,Agricole Immobiliere Tunisienne,Société des Olivettes du Sud-Tunisien,2,carrier-c; delarue-a
+mineszincainnouba,socnouvmineszaghouan,Société des mines de zinc d'Aïn-Nouba,Soc. nouv. anon. des MINES DE ZAGHOUAN,2,duceux-o; duval-f
+etablissementsluchaire,socalsaciennefilaturetissagejute,Établissements LUCHAIRE,Soc. alsacienne de FILATURE et de TISSAGE de JUTE,2,naples; sofia
+1911djebelhallouf,metallurgiquetunisie,"S.A., 1911 Djebel Hallouf",Métallurgique de Tunisie,2,gittens-w; michenot-e
+1911djebelhallouf,tunisiennefonciereagricole,"S.A., 1911 Djebel Hallouf","Société Tunisienne, foncière, agricole",2,gittens-w; zafiropulo-g
+beniniguez,tunisiennefonciereagricole,Benini GUEZ,"Société Tunisienne, foncière, agricole",2,gittens-w; zafiropulo-g
+djebelhalloufsocfes,metallurgiquetunisie,DJEBEL HALLOUF (Soc. an. Fes,Métallurgique de Tunisie,2,gittens-w; michenot-e
+djebelhalloufsocfes,tunisiennefonciereagricole,DJEBEL HALLOUF (Soc. an. Fes,"Société Tunisienne, foncière, agricole",2,gittens-w; zafiropulo-g
+metallurgiquetunisie,tunisiennefonciereagricole,Métallurgique de Tunisie,"Société Tunisienne, foncière, agricole",2,gittens-w; valenza-f
+djebeldjerissa,minesdjebelressas,Société du Djebel-Djerissa,Société des mines du Djebel-Ressas,2,cambefort-c; lyon-m
+foncieretunisie,fonderiesmegrinefilialemetallgeselschaft,Compagnie Foncière de Tunisie,"Société des Fonderies de Mégrine, filiale de la Metallgeselschaft, puis de Peñarroya",2,bellay-r; urruty-f
+minesdouaria,mineskefchambi,Société des mines de Douaria,Société des mines du Kef-Chambi,2,gaillochet-h; vincent-a
+mineskefchambi,syndicatminesdjebeltrozzadjebelserdj,Société des mines du Kef-Chambi,Syndicat des MINES du DJEBEL-TROZZA et DJEBEL SERDJ,2,gaillochet-h; vincent-a
+minesdouaria,tunisienneminieremetallurgique,Société des mines de Douaria,Société Tunisienne Minière et Métallurgique,2,pacquement-a; vincent-a
+syndicatminesdjebeltrozzadjebelserdj,tunisienneminieremetallurgique,Syndicat des MINES du DJEBEL-TROZZA et DJEBEL SERDJ,Société Tunisienne Minière et Métallurgique,2,pacquement-a; vincent-a
+boujaber,minieredjebellorbeus,BOU-JABER,Compagnie minière du Djebel-Lorbeus,2,arlet-j; paris-m
+banquetunisie,minierekanguet,Banque de Tunisie,"Société minière du Kanguet, puis Société nouvelle du Kanguet",2,faure; faure-j
 cheminsfertunisiens,commercialetunisienne,Chemins de fer tunisiens,Société Commerciale Tunisienne,2,loisy-x; philippar-e
-auget,banquetunisie,AUGET,Banque de Tunisie,2,hackenberger-p; halphen-h
-banquetunisie,minesfedjeladoum,Banque de Tunisie,Société des mines de Fedj-el-Adoum,2,hackenberger-p; p-hackenberger
-minesfedjeladoum,minierekanguet,Société des mines de Fedj-el-Adoum,"Société minière du Kanguet, puis Société nouvelle du Kanguet",2,f-faure; faure-j
-energieelectriquevillebizerte,phosphatestunisiens,Société d'Énergie électrique de la ville de Bizerte,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",2,hersent-g; hersent-j
 cheminsfertunisiens,tramwaystunis,Chemins de fer tunisiens,Tramways de Tunis,2,boulle-l; brugere-j
+fermierecheminsfertunisiens,tramwaystunis,Cie Fermière des chemins de fer tunisiens,Tramways de Tunis,2,boulle-l; brugere-j
+banquetunisie,socminesfedjeladoum,Banque de Tunisie,Soc. des MINES de FEDJ-EL-ADOUM,2,faure-j; hackenberger-p
+minierekanguet,socminesfedjeladoum,"Société minière du Kanguet, puis Société nouvelle du Kanguet",Soc. des MINES de FEDJ-EL-ADOUM,2,faure-f-frederic; faure-j
+gazregiecointeresseeeauxtunis,minesfedjeladoum,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,Société des mines de Fedj-el-Adoum,2,hackenberger; hackenberger-p
+minesfedjeladoum,minesferkroumirienefzas,Société des mines de Fedj-el-Adoum,Société des mines de fer de Kroumirie et des Nefzas,2,faure-j-joseph; hackenberger-p
+batiment,phosphatescheminsfergafsa,BATIMENT,Compagnie des phosphates et chemins de fer de Gafsa,2,d-eichthal-w; walewski-a
+bazina,phosphatescheminsfergafsa,Société française du Bazina,Compagnie des phosphates et chemins de fer de Gafsa,2,d-eichthal-w; walewski-a
+batiment,gafsa,BATIMENT,Gafsa,2,champin; walewski-a
+gafsa,minierebazina,Gafsa,"Société minière du Bazina, puis Bazina",2,champin; walewski-a
+minierebazina,phosphatescheminsfergafsa,"Société minière du Bazina, puis Bazina",Compagnie des phosphates et chemins de fer de Gafsa,2,champin-m; walewski-a
+centresud,colonisationouedramel,Centre et Sud,Société de Colonisation de l’Oued Ramel,2,baizeau-l; martin-a-auguste
+centresud,djimla,Centre et Sud,Société de Djimla,2,baizeau-l; martin-a-auguste
+centresud,etablissementsschwichbaizeau,Centre et Sud,Établissements Schwich et Baizeau,2,baizeau-l; superieur-b
+colonisationouedramel,djimla,Société de Colonisation de l’Oued Ramel,Société de Djimla,2,baizeau-l; martin-a-auguste
+colonisationouedramel,omniumimmobiliertunisien,Société de Colonisation de l’Oued Ramel,Omnium immobilier tunisien,2,baizeau-l; martin-a-auguste
+etablissementsschwichbaizeau,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Établissements Schwich et Baizeau,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,2,baizeau-l; martinier
+etablissementsschwichbaizeau,ruraletunisienne,Établissements Schwich et Baizeau,La Rurale Tunisienne,2,baizeau-l; rte-de-l-ariana
+etablissementsschwichbaizeau,tunisoiseindustrielle,Établissements Schwich et Baizeau,La Tunisoise Industrielle,2,baizeau-l; martinier
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,tunisoiseindustrielle,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,La Tunisoise Industrielle,2,baizeau-l; martinier
+auxiliairecommerceagriculture,commercialeafriquenord,Société Auxiliaire du Commerce et de l’agriculture,Société de Commerciale de l'Afrique du Nord,2,cittanova; cittanova-j
+auxiliairecommerceagriculture,maritimetunisienne,Société Auxiliaire du Commerce et de l’agriculture,Cie Maritime Tunisienne,2,cittanova; cittanova-j
+commercialeafriquenord,maritimetunisienne,Société de Commerciale de l'Afrique du Nord,Cie Maritime Tunisienne,2,cittanova; cittanova-j
 banquetunisie,vignobleszayana,Banque de Tunisie,Société des Vignobles de Zayana,2,grandam-h; nataf-a
-bazina,gafsa,Société française du Bazina,Gafsa,2,champin; mirabaud-p
 phosphatescheminsfergafsa,portstunissoussesfax,Compagnie des phosphates et chemins de fer de Gafsa,"Compagnie des Ports de Tunis, Sousse et Sfax",2,dollfus; wiriot
+commercialeafricaine,djimla,Commerciale Africaine,Société de Djimla,2,jullien-de-pommerol-f; martin-a-auguste
+etablissementsschwichbaizeau,etsboyoud,Établissements Schwich et Baizeau,Ets Boyoud,2,martinier; superieur-b
+commercialeafricaine,etablissementsschwichbaizeau,Commerciale Africaine,Établissements Schwich et Baizeau,2,jullien-de-pommerol-f; martinier
+commercialeafricaine,etsboyoud,Commerciale Africaine,Ets Boyoud,2,martinier; renoux-h
+commercialeafricaine,morellivet,Commerciale Africaine,Morel & Livet,2,jullien-de-pommerol-f; martinier
+comptoirminesgrandstravaux,etablissementsschwichbaizeau,Comptoir des mines et des grands travaux,Établissements Schwich et Baizeau,2,delcroix-e; martinier
+etablissementsschwichbaizeau,morellivet,Établissements Schwich et Baizeau,Morel & Livet,2,jullien-de-pommerol-f; martinier
+morellivet,olivettesmaiana,Morel & Livet,Société des Olivettes du Maïana,2,jullien-de-pommerol-f; martinier
+minesferkroumirienefzas,phosphatescheminsfergafsa,Société des mines de fer de Kroumirie et des Nefzas,Compagnie des phosphates et chemins de fer de Gafsa,2,beigbeder-d; nervo-l
+fermiereelectriquesousse,huileriessaheltunisien,Société Fermiere de la Compagnie électrique de Sousse,Société générale des Huileries du Sahel tunisien,2,gouttenoire-j; guillemard-r-robert
+foncierefrancotunisienne,immobilierenordafricaineferryville,Société Foncière Franco-Tunisienne,"Société Immobilière Nord-Africaine, Ferryville",2,moret-e-emile; pepin-de-bonnerive-e
+immeubleslyonnaisferryville,immobilierenordafricaineferryville,Immeubles lyonnais de Ferryville,"Société Immobilière Nord-Africaine, Ferryville",2,moret-e-emile; pepin-a
+gazregiecointeresseeeauxtunis,nordafricaineelectricitegazeaux,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,"Société Nord-Africaine d'Électricité, gaz et eaux",2,flury-herard-r; siegler-j
+immobilieretunisienne,nordafricaineelectricitegazeaux,Société Immobilière tunisienne,"Société Nord-Africaine d'Électricité, gaz et eaux",2,flury-herard-r; siegler-j
 phosphatesaintagabougamouche,stationshivernalesafricaines,Compagnie des Phosphates d'Aïn-Taga et Bou-Gamouche,Stations hivernales africaines,2,attia-g; lecore-carpentier
-mineszaghouan,tabourin,MINES DE ZAGHOUAN,Tabourin,1,duceux-o
-mineszincainnouba,tabourin,Société des mines de zinc d'Aïn-Nouba,Tabourin,1,duceux-o
-afriquenord,foncierafricain,AFRIQUE DU NORD,Foncier africain français,1,marceron-m
-africainearmement,commercialetunisienne,Compagnie Africaine d'Armement,Société Commerciale Tunisienne,1,henri-c
-boujaber,minierenordafricain,BOU-JABER,Société Minière du Nord-Africain,1,asnieres
-boujaber,velvetrum,BOU-JABER,VELVET-RUM,1,gerard-p
-gafsa,unionfrancosyriennecomptoirsmediterraneens,Gafsa,Union franco-syrienne COMPTOIRS FRANÇAIS MÉDITERRANÉENS,1,boulogne-g
-commercialetunisienne,djebeldjerissa,Société Commerciale Tunisienne,Société du Djebel-Djerissa,1,pdt-bone-guelma-t
+minessidibouaouane,sidibouaouane,Société des mines de Sidi-Bou-Aouane,Sidi-Bou-Aouane,2,biver; bousquet-j
+exploitationsminieressidibouaouane,sidibouaouane,Société d'exploitations minières de Sidi-Bou-Aouane,Sidi-Bou-Aouane,2,bongarts-lebbe-h; bousquet-j
+tunisiennepetroles,tunisiennetransportcarburants,Société Tunisienne des Petroles,Société Tunisienne pour le Transport de carburants,2,cirier-f; gaudiani-a
+acconagecharbonstunisie,maritimetunisienne,Société d'Acconage et de charbons de Tunisie,Cie Maritime Tunisienne,1,pico-j
+acconagecharbonstunisie,huileriesraffineriesafricaines,Société d'Acconage et de charbons de Tunisie,Huileries et raffineries africaines,1,boccara-e
+agricoleimmobilieretunisienne,moulinebbaksour,Agricole Immobiliere Tunisienne,Moulin d’Ebba-Ksour,1,delarue-a
+moulinebbaksour,olivettessudtunisien,Moulin d’Ebba-Ksour,Société des Olivettes du Sud-Tunisien,1,delarue-a
+atelierschantiersmaritimestunisie,djebeldjerissa,Ateliers et chantiers maritimes de Tunisie,Société du Djebel-Djerissa,1,gorchs-chacou-f
+boulonneriesbognybraux,fonciereagricole,BOULONNERIES de BOGNY-BRAUX,Foncière et Agricole Française,1,asnieres
+boulonneriesbognybraux,minierenordafricain,BOULONNERIES de BOGNY-BRAUX,Société Minière du Nord-Africain,1,asnieres
+fonciereagricole,minierenordafricain,Foncière et Agricole Française,Société Minière du Nord-Africain,1,asnieres
+boulonneriesbognybraux,socvelvetrum,BOULONNERIES de BOGNY-BRAUX,Soc. an. du VELVET-RUM,1,gerard-p
 djebeldjerissa,metallurgiquemegrine,Société du Djebel-Djerissa,Société Métallurgique de Mégrine,1,pres-tunis
-feutresrok,fichet,FEUTRES ROK,FICHET,1,mulhouse
-escande,fichet,"Escande & Cie, puis Richy et Warkin",FICHET,1,succursales
-fichet,velvetrum,FICHET,VELVET-RUM,1,alexandrie
+metallurgiquemegrine,socdjebeldjerissa,Société Métallurgique de Mégrine,Soc. du DJEBEL-DJERISSA,1,pres-tunis
+nebida,socalsaciennefilaturetissagejute,Société de Nebida,Soc. alsacienne de FILATURE et de TISSAGE de JUTE,1,liege
+socalsaciennefilaturetissagejute,socvelvetrum,Soc. alsacienne de FILATURE et de TISSAGE de JUTE,Soc. an. du VELVET-RUM,1,alexandrie
+antoinemilazzo,minesgarnalfaya,Antoine MILAZZO,Mines de Garn-Alfaya,1,juge-a
 minesalgerietunisieomnium,minesgarnalfaya,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Mines de Garn-Alfaya,1,juge-a
-djebelhalloufsocfes,menzeldjemil,DJEBEL HALLOUF (Soc. an. Fes,MENZEL-DJEMIL,1,gittens-w
-djebelhalloufsocfes,metallurgiquetunisie,DJEBEL HALLOUF (Soc. an. Fes,Métallurgique de Tunisie,1,gittens-w
-escande,minesalgerietunisieomnium,"Escande & Cie, puis Richy et Warkin",MINES D'ALGÉRIE-TUNISIE « OMNIUM »,1,gittens-w
-menzeldjemil,minesalgerietunisieomnium,MENZEL-DJEMIL,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,1,gittens-w
-metallurgiquetunisie,minesalgerietunisieomnium,Métallurgique de Tunisie,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,1,gittens-w
+beniniguez,commercialetunisienne,Benini GUEZ,Société Commerciale Tunisienne,1,zafiropulo-d
+commercialetunisienne,metallurgiquetunisie,Société Commerciale Tunisienne,Métallurgique de Tunisie,1,zafiropulo-d
+commercialetunisienne,minesdjebelhallouf,Société Commerciale Tunisienne,MINES du DJEBEL HALLOUF,1,zafiropulo-d
+commercialetunisienne,socfrseminesdjebelhallouf,Société Commerciale Tunisienne,Soc. an. frse des MINES du DJEBEL-HALLOUF,1,zafiropulo-d
+metallurgiquetunisie,tunisiennephosphatesdjebelmdilla,Métallurgique de Tunisie,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,zafiropulo-d
+minesdjebelhallouf,tunisiennephosphatesdjebelmdilla,MINES du DJEBEL HALLOUF,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,zafiropulo-d
+socfrseminesdjebelhallouf,tunisiennephosphatesdjebelmdilla,Soc. an. frse des MINES du DJEBEL-HALLOUF,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,zafiropulo-d
+minesdjebelhallouf,tunisiennefonciereagricole,MINES du DJEBEL HALLOUF,"Société Tunisienne, foncière, agricole",1,gittens-w
+socfrseminesdjebelhallouf,tunisiennefonciereagricole,Soc. an. frse des MINES du DJEBEL-HALLOUF,"Société Tunisienne, foncière, agricole",1,gittens-w
+djebeldjerissa,socminesdjebelressas,Société du Djebel-Djerissa,Soc. des MINES DU DJEBEL-RESSAS,1,cambefort-c
 foncieretunisie,minesdjebelressas,Compagnie Foncière de Tunisie,Société des mines du Djebel-Ressas,1,urruty-f
 foncieretunisie,phosphatestunisiens,Compagnie Foncière de Tunisie,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,urruty-f
+foncieretunisie,socminesdjebelressas,Compagnie Foncière de Tunisie,Soc. des MINES DU DJEBEL-RESSAS,1,urruty-f
+fonderiesmegrinefilialemetallgeselschaft,minesdjebelressas,"Société des Fonderies de Mégrine, filiale de la Metallgeselschaft, puis de Peñarroya",Société des mines du Djebel-Ressas,1,urruty-f
+fonderiesmegrinefilialemetallgeselschaft,phosphatestunisiens,"Société des Fonderies de Mégrine, filiale de la Metallgeselschaft, puis de Peñarroya","Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,urruty-f
+fonderiesmegrinefilialemetallgeselschaft,socminesdjebelressas,"Société des Fonderies de Mégrine, filiale de la Metallgeselschaft, puis de Peñarroya",Soc. des MINES DU DJEBEL-RESSAS,1,urruty-f
 minesdjebelressas,phosphatestunisiens,Société des mines du Djebel-Ressas,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,urruty-f
-michenot,minesdouaria,Michenot,Société des mines de Douaria,1,combeau-e
-minesdouaria,tabourin,Société des mines de Douaria,Tabourin,1,combeau-e
-michenot,mineskefchambi,Michenot,Société des mines du Kef-Chambi,1,gaillochet
-mineskefchambi,tabourin,Société des mines du Kef-Chambi,Tabourin,1,gaillochet
-mineszaghouan,tunisiennecultures,MINES DE ZAGHOUAN,Société Tunisienne de cultures,1,clerc-l
+phosphatestunisiens,socminesdjebelressas,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",Soc. des MINES DU DJEBEL-RESSAS,1,urruty-f
+minieredjebellorbeus,phosphatestunisiens,Compagnie minière du Djebel-Lorbeus,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,michel-c
 minieredjebellorbeus,tunisiennecultures,Compagnie minière du Djebel-Lorbeus,Société Tunisienne de cultures,1,clerc-l
-mineszaghouan,minierekanguet,MINES DE ZAGHOUAN,"Société minière du Kanguet, puis Société nouvelle du Kanguet",1,riollot-j
 minieredjebellorbeus,minierekanguet,Compagnie minière du Djebel-Lorbeus,"Société minière du Kanguet, puis Société nouvelle du Kanguet",1,riollot-j
-fermiereminessidibouaouane,minierekanguet,Société fermière des mines de Sidi-Bou-Aouane,"Société minière du Kanguet, puis Société nouvelle du Kanguet",1,boissier
-menzeldjemil,phosphatescheminfergafsa,MENZEL-DJEMIL,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,zafiropulo-d
-menzeldjemil,tunisiennephosphatesdjebelmdilla,MENZEL-DJEMIL,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,zafiropulo-d
-metallurgiquetunisie,phosphatescheminfergafsa,Métallurgique de Tunisie,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,zafiropulo-d
-metallurgiquetunisie,tunisiennephosphatesdjebelmdilla,Métallurgique de Tunisie,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,zafiropulo-d
-cheminsfertunisiens,phosphatescheminfergafsa,Chemins de fer tunisiens,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,philippar-e
+cheminsfertunisiens,etudeshautsfourneauxacieriestunisie,Chemins de fer tunisiens,Société d'Études des hauts fourneaux et aciéries en Tunisie,1,philippar-e
 cheminsfertunisiens,tunisiennephosphatesdjebelmdilla,Chemins de fer tunisiens,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,philippar-e
-commercialetunisienne,phosphatescheminfergafsa,Société Commerciale Tunisienne,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,1,philippar-e
-commercialetunisienne,tunisiennephosphatesdjebelmdilla,Société Commerciale Tunisienne,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,philippar-e
-phosphatescheminfergafsa,phosphatescheminsfergafsa,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,Compagnie des phosphates et chemins de fer de Gafsa,1,sautter-r
+commercialetunisienne,etudeshautsfourneauxacieriestunisie,Société Commerciale Tunisienne,Société d'Études des hauts fourneaux et aciéries en Tunisie,1,philippar-e
+commercialetunisienne,fermierecheminsfertunisiens,Société Commerciale Tunisienne,Cie Fermière des chemins de fer tunisiens,1,philippar-e
+etudeshautsfourneauxacieriestunisie,fermierecheminsfertunisiens,Société d'Études des hauts fourneaux et aciéries en Tunisie,Cie Fermière des chemins de fer tunisiens,1,philippar-e
+etudeshautsfourneauxacieriestunisie,tunisiennephosphatesdjebelmdilla,Société d'Études des hauts fourneaux et aciéries en Tunisie,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,philippar-e
+fermierecheminsfertunisiens,tunisiennephosphatesdjebelmdilla,Cie Fermière des chemins de fer tunisiens,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,philippar-e
 phosphatescheminsfergafsa,tunisiennephosphatesdjebelmdilla,Compagnie des phosphates et chemins de fer de Gafsa,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,sautter-r
-afriquenord,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,AFRIQUE DU NORD,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,savon
-auget,minesfedjeladoum,AUGET,Société des mines de Fedj-el-Adoum,1,hackenberger-p
-commercialetunisienne,energieelectriquevillebizerte,Société Commerciale Tunisienne,Société d'Énergie électrique de la ville de Bizerte,1,buhot-h
-minierekanguet,tabourin,"Société minière du Kanguet, puis Société nouvelle du Kanguet",Tabourin,1,f-faure
-minesgarnalfaya,minierefrancotunisienne,Mines de Garn-Alfaya,Compagnie Minière franco-tunisienne,1,pouquet
-cheminsfertunisiens,phosphatestunisiens,Chemins de fer tunisiens,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,boulle-l
-cheminsfertunisiens,portstunissoussesfax,Chemins de fer tunisiens,"Compagnie des Ports de Tunis, Sousse et Sfax",1,boulle-l
-phosphatestunisiens,tramwaystunis,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",Tramways de Tunis,1,boulle-l
-portstunissoussesfax,tramwaystunis,"Compagnie des Ports de Tunis, Sousse et Sfax",Tramways de Tunis,1,boulle-l
-foncierafricain,phosphatestunisiens,Foncier africain français,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,loutrel-j
-foncierafricain,portstunissoussesfax,Foncier africain français,"Compagnie des Ports de Tunis, Sousse et Sfax",1,loutrel-j
-groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,sibelhassen,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,SI BEL-HASSEN,1,baizeau-l
-bazina,minierebazina,Société française du Bazina,"Société minière du Bazina, puis Bazina",1,champin
-gafsa,minierebazina,Gafsa,"Société minière du Bazina, puis Bazina",1,champin
 foncieretunisie,tunisiennephosphatesdjebelmdilla,Compagnie Foncière de Tunisie,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,fitoussi-e
-cheminsfertunisiens,djebeldjerissa,Chemins de fer tunisiens,Société du Djebel-Djerissa,1,trelat-m
-boujaber,minieredjebellorbeus,BOU-JABER,Compagnie minière du Djebel-Lorbeus,1,arlet-j
+phosphatescheminsfergafsa,phosphatesdyr,Compagnie des phosphates et chemins de fer de Gafsa,Compagnie des Phosphates du Dyr,1,bordet-l-lucien
+cheminsfertunisiens,phosphatesdyr,Chemins de fer tunisiens,Compagnie des Phosphates du Dyr,1,jurien-de-la-graviere-p
+fermierecheminsfertunisiens,phosphatesdyr,Cie Fermière des chemins de fer tunisiens,Compagnie des Phosphates du Dyr,1,jurien-de-la-graviere-p
+beniniguez,phosphatesdyr,Benini GUEZ,Compagnie des Phosphates du Dyr,1,morin-t
+cheminsfertunisiens,portstunissoussesfax,Chemins de fer tunisiens,"Compagnie des Ports de Tunis, Sousse et Sfax",1,boulle-l
+fermierecheminsfertunisiens,portstunissoussesfax,Cie Fermière des chemins de fer tunisiens,"Compagnie des Ports de Tunis, Sousse et Sfax",1,boulle-l
+portstunissoussesfax,tramwaystunis,"Compagnie des Ports de Tunis, Sousse et Sfax",Tramways de Tunis,1,boulle-l
+foncierafricain,portstunissoussesfax,Foncier africain français,"Compagnie des Ports de Tunis, Sousse et Sfax",1,loutrel-j
+banquetunisie,gazregiecointeresseeeauxtunis,Banque de Tunisie,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,1,hackenberger-p
+banquetunisie,immobilieretunisienne,Banque de Tunisie,Société Immobilière tunisienne,1,hackenberger-p
+banquetunisie,minesferkroumirienefzas,Banque de Tunisie,Société des mines de fer de Kroumirie et des Nefzas,1,hackenberger-p
+gazregiecointeresseeeauxtunis,minesferkroumirienefzas,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,Société des mines de fer de Kroumirie et des Nefzas,1,hackenberger-p
+gazregiecointeresseeeauxtunis,socminesfedjeladoum,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,Soc. des MINES de FEDJ-EL-ADOUM,1,hackenberger-p
+immobilieretunisienne,minesfedjeladoum,Société Immobilière tunisienne,Société des mines de Fedj-el-Adoum,1,hackenberger-p
+immobilieretunisienne,minesferkroumirienefzas,Société Immobilière tunisienne,Société des mines de fer de Kroumirie et des Nefzas,1,hackenberger-p
+immobilieretunisienne,socminesfedjeladoum,Société Immobilière tunisienne,Soc. des MINES de FEDJ-EL-ADOUM,1,hackenberger-p
+minesferkroumirienefzas,socminesfedjeladoum,Société des mines de fer de Kroumirie et des Nefzas,Soc. des MINES de FEDJ-EL-ADOUM,1,hackenberger-p
+commercialetunisienne,energieelectriquevillebizerte,Société Commerciale Tunisienne,Société d'Énergie électrique de la ville de Bizerte,1,buhot-h
+commercialetunisienne,djebeldjerissa,Société Commerciale Tunisienne,Société du Djebel-Djerissa,1,trelat-m
+djebeldjerissa,tunisiennephosphatesdjebelmdilla,Société du Djebel-Djerissa,Compagnie tunisienne des Phosphates du Djebel-M'dilla,1,trelat-m
+commercialetunisienne,tunisiennemagasinsgenerauxentrepots,Société Commerciale Tunisienne,Société Tunisienne de magasins généraux et entrepôts,1,dubourdieu-l
+mineskefchambi,tunisienneminieremetallurgique,Société des mines du Kef-Chambi,Société Tunisienne Minière et Métallurgique,1,vincent-a
+immobilieremaroc,minesfedjeladoum,Société Immobilière au Maroc,Société des mines de Fedj-el-Adoum,1,chabert-h
+immobilieremaroc,socminesfedjeladoum,Société Immobilière au Maroc,Soc. des MINES de FEDJ-EL-ADOUM,1,chabert-h
+minierefrancotunisienne,phosphatestunisiens,Compagnie Minière franco-tunisienne,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,bursaux-p
+centresud,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Centre et Sud,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,baizeau-l
+centresud,ruraletunisienne,Centre et Sud,La Rurale Tunisienne,1,baizeau-l
+centresud,socsibelhassen,Centre et Sud,Soc. de SI BEL-HASSEN,1,baizeau-l
+centresud,tunisoiseindustrielle,Centre et Sud,La Tunisoise Industrielle,1,baizeau-l
+colonisationouedramel,etablissementsschwichbaizeau,Société de Colonisation de l’Oued Ramel,Établissements Schwich et Baizeau,1,baizeau-l
+colonisationouedramel,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Société de Colonisation de l’Oued Ramel,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,baizeau-l
+colonisationouedramel,ruraletunisienne,Société de Colonisation de l’Oued Ramel,La Rurale Tunisienne,1,baizeau-l
+colonisationouedramel,socsibelhassen,Société de Colonisation de l’Oued Ramel,Soc. de SI BEL-HASSEN,1,baizeau-l
+colonisationouedramel,tunisoiseindustrielle,Société de Colonisation de l’Oued Ramel,La Tunisoise Industrielle,1,baizeau-l
+djimla,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Société de Djimla,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,baizeau-l
+djimla,socsibelhassen,Société de Djimla,Soc. de SI BEL-HASSEN,1,baizeau-l
+djimla,tunisoiseindustrielle,Société de Djimla,La Tunisoise Industrielle,1,baizeau-l
+etablissementsschwichbaizeau,socsibelhassen,Établissements Schwich et Baizeau,Soc. de SI BEL-HASSEN,1,baizeau-l
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,omniumimmobiliertunisien,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,Omnium immobilier tunisien,1,baizeau-l
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,ruraletunisienne,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,La Rurale Tunisienne,1,baizeau-l
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,socsibelhassen,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,Soc. de SI BEL-HASSEN,1,baizeau-l
+omniumimmobiliertunisien,ruraletunisienne,Omnium immobilier tunisien,La Rurale Tunisienne,1,baizeau-l
+omniumimmobiliertunisien,socsibelhassen,Omnium immobilier tunisien,Soc. de SI BEL-HASSEN,1,baizeau-l
+omniumimmobiliertunisien,tunisoiseindustrielle,Omnium immobilier tunisien,La Tunisoise Industrielle,1,baizeau-l
+ruraletunisienne,socsibelhassen,La Rurale Tunisienne,Soc. de SI BEL-HASSEN,1,baizeau-l
+ruraletunisienne,tunisoiseindustrielle,La Rurale Tunisienne,La Tunisoise Industrielle,1,baizeau-l
+socsibelhassen,tunisoiseindustrielle,Soc. de SI BEL-HASSEN,La Tunisoise Industrielle,1,baizeau-l
+atelierschantiersmaritimestunisie,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Ateliers et chantiers maritimes de Tunisie,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,savon
+commercialetunisienne,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Société Commerciale Tunisienne,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,savon
+banquetunisie,immobiliereitalo,Banque de Tunisie,Société Immobilière Italo-Française,1,donati-a
+belgeminesdjebelslatadjebelhameima,belgeminesreunies,Société belge des mines du Djebel-Slata et Djebel-Hameïma,Société belge des Mines réunies,1,rolin-b
+belgeminesreunies,phosphatescheminsfergafsa,Société belge des Mines réunies,Compagnie des phosphates et chemins de fer de Gafsa,1,wiriot
+belgeminesreunies,portstunissoussesfax,Société belge des Mines réunies,"Compagnie des Ports de Tunis, Sousse et Sfax",1,wiriot
+centresud,commercialeafricaine,Centre et Sud,Commerciale Africaine,1,martin-a-auguste
+centresud,olivettesmaiana,Centre et Sud,Société des Olivettes du Maïana,1,martin-a-auguste
+colonisationouedramel,commercialeafricaine,Société de Colonisation de l’Oued Ramel,Commerciale Africaine,1,martin-a-auguste
+colonisationouedramel,olivettesmaiana,Société de Colonisation de l’Oued Ramel,Société des Olivettes du Maïana,1,martin-a-auguste
+centresud,etsboyoud,Centre et Sud,Ets Boyoud,1,superieur-b
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,nebida,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,Société de Nebida,1,lamarche
+commercialeafricaine,comptoirminesgrandstravaux,Commerciale Africaine,Comptoir des mines et des grands travaux,1,martinier
+commercialeafricaine,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Commerciale Africaine,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,martinier
+commercialeafricaine,tunisoiseindustrielle,Commerciale Africaine,La Tunisoise Industrielle,1,martinier
+comptoirminesgrandstravaux,etsboyoud,Comptoir des mines et des grands travaux,Ets Boyoud,1,martinier
+comptoirminesgrandstravaux,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Comptoir des mines et des grands travaux,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,martinier
+comptoirminesgrandstravaux,morellivet,Comptoir des mines et des grands travaux,Morel & Livet,1,martinier
+comptoirminesgrandstravaux,olivettesmaiana,Comptoir des mines et des grands travaux,Société des Olivettes du Maïana,1,martinier
+comptoirminesgrandstravaux,tunisoiseindustrielle,Comptoir des mines et des grands travaux,La Tunisoise Industrielle,1,martinier
+etsboyoud,groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,Ets Boyoud,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,1,martinier
+etsboyoud,morellivet,Ets Boyoud,Morel & Livet,1,martinier
+etsboyoud,tunisoiseindustrielle,Ets Boyoud,La Tunisoise Industrielle,1,martinier
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,morellivet,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,Morel & Livet,1,martinier
+groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,olivettesmaiana,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,Société des Olivettes du Maïana,1,martinier
+morellivet,tunisoiseindustrielle,Morel & Livet,La Tunisoise Industrielle,1,martinier
+olivettesmaiana,tunisoiseindustrielle,Société des Olivettes du Maïana,La Tunisoise Industrielle,1,martinier
+djimla,morellivet,Société de Djimla,Morel & Livet,1,jullien-de-pommerol-f
+morellivet,omniumimmobiliertunisien,Morel & Livet,Omnium immobilier tunisien,1,jullien-de-pommerol-f
+cheminsfertunisiens,djebeldjerissa,Chemins de fer tunisiens,Société du Djebel-Djerissa,1,trelat
+djebeldjerissa,fermierecheminsfertunisiens,Société du Djebel-Djerissa,Cie Fermière des chemins de fer tunisiens,1,trelat
+1911djebelhallouf,minesdjebeltouila,"S.A., 1911 Djebel Hallouf",Compagnie des mines du Djebel-Touila,1,maliges-a
+1911djebelhallouf,immeubleslyonnaisferryville,"S.A., 1911 Djebel Hallouf",Immeubles lyonnais de Ferryville,1,mf-p
+1911djebelhallouf,immobilieretunisie,"S.A., 1911 Djebel Hallouf",Société Immobilière de Tunisie,1,mf-p
+1911djebelhallouf,salinestunisie,"S.A., 1911 Djebel Hallouf",Société des Salines de Tunisie,1,mf-p
+1911djebelhallouf,tunisienneminieremetallurgique,"S.A., 1911 Djebel Hallouf",Société Tunisienne Minière et Métallurgique,1,mf-p
+immeubleslyonnaisferryville,immobilieretunisie,Immeubles lyonnais de Ferryville,Société Immobilière de Tunisie,1,mf-p
+immeubleslyonnaisferryville,salinestunisie,Immeubles lyonnais de Ferryville,Société des Salines de Tunisie,1,mf-p
+immeubleslyonnaisferryville,tunisienneminieremetallurgique,Immeubles lyonnais de Ferryville,Société Tunisienne Minière et Métallurgique,1,mf-p
+immobilieretunisie,salinestunisie,Société Immobilière de Tunisie,Société des Salines de Tunisie,1,mf-p
+immobilieretunisie,tunisienneminieremetallurgique,Société Immobilière de Tunisie,Société Tunisienne Minière et Métallurgique,1,mf-p
+salinestunisie,tunisienneminieremetallurgique,Société des Salines de Tunisie,Société Tunisienne Minière et Métallurgique,1,mf-p
+minesdjebelressas,nebida,Société des mines du Djebel-Ressas,Société de Nebida,1,wilmotte-m
 domainepotinville,recherchesminieresfalta,Domaine de Potinville,Société de Recherches minières du Falta,1,moline-b
-domainepotinville,tunisiennecultures,Domaine de Potinville,Société Tunisienne de cultures,1,belloy
+domainepotinville,tunisiennecultures,Domaine de Potinville,Société Tunisienne de cultures,1,belloy-m
 cheminsfertunisiens,energieelectriquevillebizerte,Chemins de fer tunisiens,Société d'Énergie électrique de la ville de Bizerte,1,brugere-j
 cheminsfertunisiens,tunisiennecultures,Chemins de fer tunisiens,Société Tunisienne de cultures,1,brugere-j
+energieelectriquevillebizerte,fermierecheminsfertunisiens,Société d'Énergie électrique de la ville de Bizerte,Cie Fermière des chemins de fer tunisiens,1,brugere-j
 energieelectriquevillebizerte,tramwaystunis,Société d'Énergie électrique de la ville de Bizerte,Tramways de Tunis,1,brugere-j
 energieelectriquevillebizerte,tunisiennecultures,Société d'Énergie électrique de la ville de Bizerte,Société Tunisienne de cultures,1,brugere-j
+fermierecheminsfertunisiens,tunisiennecultures,Cie Fermière des chemins de fer tunisiens,Société Tunisienne de cultures,1,brugere-j
 tramwaystunis,tunisiennecultures,Tramways de Tunis,Société Tunisienne de cultures,1,brugere-j
+etudeshautsfourneauxacieriestunisie,tramwaystunis,Société d'Études des hauts fourneaux et aciéries en Tunisie,Tramways de Tunis,1,baldauff-j
 exploitationsminierestunisie,minesdjebeltabouna,Exploitations minières en Tunisie,Société des mines du Djebel-Tabouna,1,ginier-e
 cheminsfertunisiens,foncierafricain,Chemins de fer tunisiens,Foncier africain français,1,saint-romas-j
+fermierecheminsfertunisiens,foncierafricain,Cie Fermière des chemins de fer tunisiens,Foncier africain français,1,saint-romas-j
+fermiereelectriquesousse,salinestunisie,Société Fermiere de la Compagnie électrique de Sousse,Société des Salines de Tunisie,1,clabe-h
+fermiereelectriquesousse,gazregiecointeresseeeauxtunis,Société Fermiere de la Compagnie électrique de Sousse,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,1,durand
+alimentationtunisiennehammamlif,fonciereagricole,"Société d'Alimentation tunisienne, Hammam-Lif",Foncière et Agricole Française,1,compose-de-a-membres
+alimentationtunisiennehammamlif,motoculturenordafricaine,"Société d'Alimentation tunisienne, Hammam-Lif",La Motoculture nord-africaine,1,compose-de-a-membres
+alimentationtunisiennehammamlif,phosphatestunisiens,"Société d'Alimentation tunisienne, Hammam-Lif","Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,compose-de-a-membres
+fonciereagricole,motoculturenordafricaine,Foncière et Agricole Française,La Motoculture nord-africaine,1,compose-de-a-membres
+fonciereagricole,phosphatestunisiens,Foncière et Agricole Française,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,compose-de-a-membres
+motoculturenordafricaine,phosphatestunisiens,La Motoculture nord-africaine,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,compose-de-a-membres
+foncierefrancotunisienne,immeubleslyonnaisferryville,Société Foncière Franco-Tunisienne,Immeubles lyonnais de Ferryville,1,moret-e-emile
+fonderiesmegrinefilialemetallgeselschaft,tunisienneminieremetallurgique,"Société des Fonderies de Mégrine, filiale de la Metallgeselschaft, puis de Peñarroya",Société Tunisienne Minière et Métallurgique,1,chastel-a
 gafsa,minesgarnalfaya,Gafsa,Mines de Garn-Alfaya,1,hibon-e
+gazregiecointeresseeeauxtunis,minesnefate,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,Société des mines de Nefate,1,hackenberger
+minesfedjeladoum,minesnefate,Société des mines de Fedj-el-Adoum,Société des mines de Nefate,1,hackenberger
+gazregiecointeresseeeauxtunis,immobilieremaroc,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,Société Immobilière au Maroc,1,hackenberger-h
+boujaber,tunisiennelineriesfeuillette,BOU-JABER,Société tunisienne des Lineries Feuillette,1,roudy-a
+minesgarnalfaya,minierefrancotunisienne,Mines de Garn-Alfaya,Compagnie Minière franco-tunisienne,1,pouquet
 minesnefate,minierekanguet,Société des mines de Nefate,"Société minière du Kanguet, puis Société nouvelle du Kanguet",1,maugras-g
+fermiereminessidibouaouane,minesnefate,Société fermière des mines de Sidi-Bou-Aouane,Société des mines de Nefate,1,boissier
+minesnefate,sidibouaouane,Société des mines de Nefate,Sidi-Bou-Aouane,1,boissier
+olivettesmaiana,ruraletunisienne,Société des Olivettes du Maïana,La Rurale Tunisienne,1,rte-de-l-ariana
 phosphatesgouraia,stationshivernalesafricaines,Phosphates de Gouraïa,Stations hivernales africaines,1,roubaud
+phosphatesmaknassy,phosphatestunisiens,Phosphates de Maknassy,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",1,donegani-g
+phosphatesouartane,tunisiennepetroles,Compagnie des Phosphates des Ouartane,Société Tunisienne des Petroles,1,legrand
 fermiereminessidibouaouane,minessidibouaouane,Société fermière des mines de Sidi-Bou-Aouane,Société des mines de Sidi-Bou-Aouane,1,biver
 exploitationsminieressidibouaouane,minessidibouaouane,Société d'exploitations minières de Sidi-Bou-Aouane,Société des mines de Sidi-Bou-Aouane,1,bousquet-j

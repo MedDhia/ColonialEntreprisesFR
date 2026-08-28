@@ -9,19 +9,19 @@
     <node id="africainecommercerepresentation">
       <data key="n_label">Société africaine de commerce et de représentation</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">5</data>
+      <data key="n_n_directors">4</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="afriqueorientale">
       <data key="n_label">Compagnie de l'Afrique Orientale</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">17</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="afriqueorientalemaritimecommerciale">
       <data key="n_label">Cie de l'AFRIQUE ORIENTALE MARITIME ET COMMERCIALE</data>
       <data key="n_sectors">Sociétés</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="approvisionnementsgenerauxdjibouti">
@@ -33,19 +33,19 @@
     <node id="cheminferfrancoethiopiendjiboutiaddisabeba">
       <data key="n_label">Compagnie du Chemin de fer franco-éthiopien de Djibouti à Addis-Abeba</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">50</data>
+      <data key="n_n_directors">44</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="commercialeabyssinie">
       <data key="n_label">Société Commerciale d’Abyssinie</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="cotesomalis">
       <data key="n_label">Compagnie française de la Côte des Somalis</data>
       <data key="n_sectors">Sociétés</data>
-      <data key="n_n_directors">16</data>
+      <data key="n_n_directors">17</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="creditindustrielafricain">
@@ -57,19 +57,19 @@
     <node id="industrielledjibouti">
       <data key="n_label">Société Industrielle de Djibouti</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">15</data>
+      <data key="n_n_directors">17</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="maritimeafriqueorientale">
       <data key="n_label">Compagnie Maritime de l'Afrique Orientale</data>
       <data key="n_sectors">Documents généraux; Sociétés</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">12</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="minassian">
       <data key="n_label">Minassian et Cie</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">3</data>
+      <data key="n_n_directors">2</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="navigationmerrouge">
@@ -81,7 +81,7 @@
     <node id="salinesdjibouti">
       <data key="n_label">Société des salines de Djibouti</data>
       <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">27</data>
+      <data key="n_n_directors">12</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="salinesdjiboutisfaxmadagascar">
@@ -97,7 +97,7 @@
       <data key="n_territory">Djibouti</data>
     </node>
     <edge id="e0" source="approvisionnementsgenerauxdjibouti" target="maritimeafriqueorientale">
-      <data key="e_weight">5</data>
+      <data key="e_weight">6</data>
     </edge>
     <edge id="e1" source="afriqueorientale" target="afriqueorientalemaritimecommerciale">
       <data key="e_weight">5</data>
@@ -111,7 +111,7 @@
     <edge id="e4" source="afriqueorientale" target="navigationmerrouge">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e5" source="afriqueorientale" target="industrielledjibouti">
+    <edge id="e5" source="industrielledjibouti" target="salinesdjibouti">
       <data key="e_weight">4</data>
     </edge>
     <edge id="e6" source="afriqueorientale" target="cotesomalis">
@@ -132,10 +132,10 @@
     <edge id="e11" source="afriqueorientalemaritimecommerciale" target="approvisionnementsgenerauxdjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e12" source="afriqueorientalemaritimecommerciale" target="industrielledjibouti">
+    <edge id="e12" source="afriqueorientale" target="industrielledjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e13" source="industrielledjibouti" target="salinesdjibouti">
+    <edge id="e13" source="afriqueorientalemaritimecommerciale" target="industrielledjibouti">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e14" source="salinesdjibouti" target="salinesdjiboutisfaxmadagascar">
@@ -189,19 +189,19 @@
     <edge id="e30" source="commercialeabyssinie" target="navigationmerrouge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e31" source="cotesomalis" target="industrielledjibouti">
+    <edge id="e31" source="afriqueorientalemaritimecommerciale" target="navigationmerrouge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e32" source="industrielledjibouti" target="maritimeafriqueorientale">
+    <edge id="e32" source="cotesomalis" target="industrielledjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e33" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="industrielledjibouti">
+    <edge id="e33" source="industrielledjibouti" target="maritimeafriqueorientale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e34" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="salinesdjibouti">
+    <edge id="e34" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="industrielledjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e35" source="afriqueorientalemaritimecommerciale" target="navigationmerrouge">
+    <edge id="e35" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="salinesdjibouti">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e36" source="creditindustrielafricain" target="salinsmidisalinesdjibouti">

@@ -1,50 +1,62 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
-occidentaleafricaine,scieriesafricaines,L'Occidentale Africaine,Compagnie des Scieries africaines,19,anthoine-f; bernheim-l; bocquet-j; bricard-l; cassagnac-j; chevallier-du-buisson-r; et-paul-paillet; experton-p; fouque-j; fourn-g; fousse-p; gast-a; haas-a; klotz-e; nemos-e; vigne-r; vizioz-d; vizioz-g; vizioz-j
+occidentaleafricaine,scieriesafricaines,L'Occidentale Africaine,Compagnie des Scieries africaines,19,anthoine-f; bernheim-l-leon; bocquet-j; bricard-l; cassagnac-j; chevallier-du-buisson-r; et-paul-paillet; experton-p-pierre; fouque-j-jean; fourn-g; fousse-p; gast-a; haas-a; klotz-e; nemos-e; vigne-r; vizioz-d; vizioz-g; vizioz-j
 alsaciennecoteivoire,occidentaleafricaine,Société Alsacienne de la Côte d’Ivoire,L'Occidentale Africaine,8,anthoine-f; bocquet-j; bonfils-e; bricard-l; fourn-g; fousse-p; nemos-e; vizioz-g
+forestiereequatoriale,uniontropicaleplantations,Compagnie Forestière équatoriale,Union tropicale de plantations,8,daudier-e; de-beaumont-j; de-rivaud-r; gregoire-sainte-marie-r; japhet-e; michaux-r; ph-langlois-berthelot; schoofs-m
 brasseriescoteivoire,renegastondreyfus,Société des Brasseries de la Côte-d'Ivoire,René Gaston-Dreyfus,7,curral-j; dayan-l; faivre-h; glacieres-de-l-indochine; kreiss-p; monnier-c; orcel-j
 alsaciennecoteivoire,scieriesafricaines,Société Alsacienne de la Côte d’Ivoire,Compagnie des Scieries africaines,7,anthoine-f; bocquet-j; bricard-l; fourn-g; fousse-p; nemos-e; vizioz-g
-forestiereequatoriale,uniontropicaleplantations,Compagnie Forestière équatoriale,Union tropicale de plantations,7,daudier-e; de-beaumont-j; de-rivaud-r; japhet-e; michaux-r; ph-langlois-berthelot; schoofs-m
+plantationselima,plantationselimacafeiersaboisso,Plantations d'Élima,"Société des Plantations d'Élima, caféiers à Aboisso",7,beynis-e; bord-b; bretigniere-m; caquas-j; deloffre-g; faucheux-j; guibert-g-georges
 actionjouissance,importationboisexotiques,ACTION DE JOUISSANCE,Société d'Importation de bois exotiques,5,levy-g; marguet-a; merle; mizraki-m; vivier-e
 etablissementscharlesperinaud,exportationcoloniale,Établissements Charles Périnaud,Société d'exportation coloniale,5,duvernet-h; duvernet-j; jeanne-henriette-duvernet; martin-v; tardivat-h
-huileriesafricaines,huileriesafricainesdrewin,Huileries africaines,"Société des Huileries africaines, Drewin",5,giraud-r; hallet-a; pernotte-j; rosa-e; van-de-velde-w
-boiscoteivoire,transitgrandlahou,Compagnie des Bois de la Côte-d'Ivoire,Société de Transit de Grand-Lahou,4,levy-g; martin-e; mizraki-m; plagelat-l
-forestiereindenie,transitgrandlahou,Compagnie Forestière de l'Indénié,Société de Transit de Grand-Lahou,4,calcat-f; levy-g; martin-e; plagelat-l
+kong,plantationselimacafeiersaboisso,Compagnie française de Kong,"Société des Plantations d'Élima, caféiers à Aboisso",4,bretigniere-m; calcat-f-fernand; levy-g; mizraki-m
 colonialebandama,plantationssorotona,Compagnie Coloniale du Bandama,Société des Plantations de Sorotona,4,baye-l; cayron-g; eliautou-e; mandel-a
 africainefinanciereagricole,uniontropicaleplantations,Société africaine financière et agricole,Union tropicale de plantations,4,japhet-e; pirlet-l; schoofs; smekens-a
-jeanweber,plantationstanoe,Jean Weber,Société des plantations de la Tanoé,4,allibaud-j; crivelli; legourd-a; weber
-culturesextremeorient,culturesextremeorientafrique,Cie française des cultures d'Extrême-Orient,"Cie française des Cultures d'Extrême-Orient et d'Afrique, puis Compagnie générale africaine",4,ducasse-p; grivelle-g; lamarque; marchal-g
+huileriesafricaines,huileriesafricainesdrewin,Huileries africaines,"Société des Huileries africaines, Drewin",4,giraud-r; hallet-a; pernotte-j; rosa-e
+kokumbocoltd,minierefoncierebandama,Kokumbo Co. Ltd,Société minière et foncière du Bandama,4,frot-h; halphen-j-julien; oppenheim-s; simonnet-g
+jeanweber,plantationstanoe,Jean Weber,Société des plantations de la Tanoé,4,allibaud-j; crivelli-a; legourd-a; weber
+culturesextremeorient,culturesextremeorientafrique,Cie française des cultures d'Extrême-Orient,"Cie française des Cultures d'Extrême-Orient et d'Afrique, puis Compagnie générale africaine",4,ducasse-p; grivelle-g; lamarque-m; marchal-g
 boiscoteivoire,kong,Compagnie des Bois de la Côte-d'Ivoire,Compagnie française de Kong,3,levy-g; mizraki-m; picanon-e
-boiscoteivoire,forestiereindenie,Compagnie des Bois de la Côte-d'Ivoire,Compagnie Forestière de l'Indénié,3,levy-g; martin-e; plagelat-l
-forestiereindenie,plantationshuileriesbingerville,Compagnie Forestière de l'Indénié,Société des Plantations et huileries de Bingerville,3,lemaitre-r; plagelat-l; pognon-l
 actionjouissance,kong,ACTION DE JOUISSANCE,Compagnie française de Kong,3,levy-g; mizraki-m; vivier-e
-forestiereindenie,kong,Compagnie Forestière de l'Indénié,Compagnie française de Kong,3,calcat-f; callot-t; levy-g
-forestiereindenie,plantationsreuniesouestafricain,Compagnie Forestière de l'Indénié,Plantations réunies de l'Ouest-Africain,3,calcat-f; et-maurice-mizraki; levy-g
+actionjouissance,plantationselimacafeiersaboisso,ACTION DE JOUISSANCE,"Société des Plantations d'Élima, caféiers à Aboisso",3,levy-g; merle; mizraki-m
+boiscoteivoire,forestiereindenie,Compagnie des Bois de la Côte-d'Ivoire,Compagnie Forestière de l'Indénié,3,levy-g; martin-e-edouard; plagelat-l
+boiscoteivoire,importationboisexotiques,Compagnie des Bois de la Côte-d'Ivoire,Société d'Importation de bois exotiques,3,levy-g; mizraki-m; plagelat-l
+boiscoteivoire,transitgrandlahou,Compagnie des Bois de la Côte-d'Ivoire,Société de Transit de Grand-Lahou,3,levy-g; mizraki-m; plagelat-l
+forestiereindenie,importationboisexotiques,Compagnie Forestière de l'Indénié,Société d'Importation de bois exotiques,3,lemaitre-r; levy-g; plagelat-l
+forestiereindenie,kong,Compagnie Forestière de l'Indénié,Compagnie française de Kong,3,calcat-f-fernand; callot-t; levy-g
+forestiereindenie,plantationselimacafeiersaboisso,Compagnie Forestière de l'Indénié,"Société des Plantations d'Élima, caféiers à Aboisso",3,calcat-f-fernand; deloffre-g; levy-g
+forestiereindenie,plantationsreuniesouestafricain,Compagnie Forestière de l'Indénié,Plantations réunies de l'Ouest-Africain,3,calcat-f-fernand; et-maurice-mizraki; levy-g
 importationboisexotiques,kong,Société d'Importation de bois exotiques,Compagnie française de Kong,3,levy-g; mizraki-m; vivier-e
-kong,plantationsreuniesouestafricain,Compagnie française de Kong,Plantations réunies de l'Ouest-Africain,3,calcat-f; levy-g; merle-m
-kong,transitgrandlahou,Compagnie française de Kong,Société de Transit de Grand-Lahou,3,calcat-f; levy-g; mizraki-m
+importationboisexotiques,plantationselimacafeiersaboisso,Société d'Importation de bois exotiques,"Société des Plantations d'Élima, caféiers à Aboisso",3,levy-g; merle; mizraki-m
+importationboisexotiques,transitgrandlahou,Société d'Importation de bois exotiques,Société de Transit de Grand-Lahou,3,levy-g; mizraki-m; plagelat-l
+kong,plantationsreuniesouestafricain,Compagnie française de Kong,Plantations réunies de l'Ouest-Africain,3,calcat-f-fernand; levy-g; merle-m
+plantationselimacafeiersaboisso,transitgrandlahou,"Société des Plantations d'Élima, caféiers à Aboisso",Société de Transit de Grand-Lahou,3,guibert-g-georges; levy-g; mizraki-m
+forestiereindenie,plantationshuileriesbingerville,Compagnie Forestière de l'Indénié,Société des Plantations et huileries de Bingerville,3,lemaitre-r; plagelat-l; pognon-l
+importationboisexotiques,plantationshuileriesbingerville,Société d'Importation de bois exotiques,Société des Plantations et huileries de Bingerville,3,lemaitre-r; mizraki-m; plagelat-l
+kong,minierefoncierebandama,Compagnie française de Kong,Société minière et foncière du Bandama,3,halphen-j-julien; mizraki-m; simonnet-g
 forestieresassandra,transitgrandlahou,Compagnie Forestière de Sassandra,Société de Transit de Grand-Lahou,3,calcat-f; mounier-p; vialle-j
-minierealangouacoteivoire,minieresanwicoteivoire,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,Société Minière du Sanwi et de la Côte-d'Ivoire,3,h-lippens; roulina-c; vallee-siege-social-a-paris-h
 forestiereafrique,occidentaleafricaine,Compagnie Forestière de l'Afrique française,L'Occidentale Africaine,3,cassagnac-j; vizioz-g; vizioz-j
 forestiereafrique,scieriesafricaines,Compagnie Forestière de l'Afrique française,Compagnie des Scieries africaines,3,cassagnac-j; vizioz-g; vizioz-j
 cafesproduitscoloniauxcapro,forestiereindenie,« Cafés et produits coloniaux français » CAPRO,Compagnie Forestière de l'Indénié,3,deloffre-g; lemaitre-r; pognon-l
+huileriesafricaines,huileriesplantationscoteivoire,Huileries africaines,Société française des Huileries et plantations de la Côte-d’Ivoire,3,delsaux-p; mathon-e; toulemonde-l
+kokumbocoltd,kong,Kokumbo Co. Ltd,Compagnie française de Kong,3,halphen-j-julien; simonnet-g; terquem-m
 commercialeafrique,exploitationscommercialesafricaines,La Commerciale de l'Afrique française,Compagnie d'Exploitations commerciales africaines,2,guiraud-a; lavril-m
 commercialeafrique,importationboisexotiques,La Commerciale de l'Afrique française,Société d'Importation de bois exotiques,2,joubert-j; lavril-m
-boiscoteivoire,plantationshuileriesbingerville,Compagnie des Bois de la Côte-d'Ivoire,Société des Plantations et huileries de Bingerville,2,mizraki-m; plagelat-l
-plantationshuileriesbingerville,transitgrandlahou,Société des Plantations et huileries de Bingerville,Société de Transit de Grand-Lahou,2,mizraki-m; plagelat-l
 actionjouissance,boiscoteivoire,ACTION DE JOUISSANCE,Compagnie des Bois de la Côte-d'Ivoire,2,levy-g; mizraki-m
 actionjouissance,transitgrandlahou,ACTION DE JOUISSANCE,Société de Transit de Grand-Lahou,2,levy-g; mizraki-m
-boiscoteivoire,importationboisexotiques,Compagnie des Bois de la Côte-d'Ivoire,Société d'Importation de bois exotiques,2,levy-g; mizraki-m
-importationboisexotiques,transitgrandlahou,Société d'Importation de bois exotiques,Société de Transit de Grand-Lahou,2,levy-g; mizraki-m
-plantationsreuniesouestafricain,transitgrandlahou,Plantations réunies de l'Ouest-Africain,Société de Transit de Grand-Lahou,2,calcat-f; levy-g
-kong,minierefoncierebandama,Compagnie française de Kong,Société minière et foncière du Bandama,2,halphen-j; mizraki-m
+boiscoteivoire,plantationselimacafeiersaboisso,Compagnie des Bois de la Côte-d'Ivoire,"Société des Plantations d'Élima, caféiers à Aboisso",2,levy-g; mizraki-m
+forestiereindenie,transitgrandlahou,Compagnie Forestière de l'Indénié,Société de Transit de Grand-Lahou,2,levy-g; plagelat-l
+kong,transitgrandlahou,Compagnie française de Kong,Société de Transit de Grand-Lahou,2,levy-g; mizraki-m
+plantationselimacafeiersaboisso,plantationsreuniesouestafricain,"Société des Plantations d'Élima, caféiers à Aboisso",Plantations réunies de l'Ouest-Africain,2,calcat-f-fernand; levy-g
+boiscoteivoire,plantationshuileriesbingerville,Compagnie des Bois de la Côte-d'Ivoire,Société des Plantations et huileries de Bingerville,2,mizraki-m; plagelat-l
+plantationshuileriesbingerville,transitgrandlahou,Société des Plantations et huileries de Bingerville,Société de Transit de Grand-Lahou,2,mizraki-m; plagelat-l
 kong,plantationshuileriesbingerville,Compagnie française de Kong,Société des Plantations et huileries de Bingerville,2,merle-m; mizraki-m
 consolidatedgoldfieldsivorycoast,minierebondoukoucoteivoire,The Consolidated Goldfields of the Ivory Coast,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,2,boucher-e; richard-j
-minierebondoukoucoteivoire,miniereindeniecoteivoire,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,2,richard-j; vallee-siege-social-a-paris-h
+consolidatedgoldfieldsivorycoast,miniereindeniecoteivoire,The Consolidated Goldfields of the Ivory Coast,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,2,boucher-e; richard-j
+minierebondoukoucoteivoire,miniereindeniecoteivoire,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,2,boucher-e; richard-j
+minierealangouacoteivoire,minieresanwicoteivoire,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,Société Minière du Sanwi et de la Côte-d'Ivoire,2,lippens-h; roulina-c
 cafesproduitscoloniauxcapro,plantationshuileriesbingerville,« Cafés et produits coloniaux français » CAPRO,Société des Plantations et huileries de Bingerville,2,lemaitre-r; pognon-l
+comptoirimportationboisafricains,forestiereindenie,Comptoir d'importation des bois africains,Compagnie Forestière de l'Indénié,2,dudet-e; lemaitre-r
 huileriesafricaines,uniontropicaleplantations,Huileries africaines,Union tropicale de plantations,2,de-rivaud-o; rosa-e
-huileriesafricaines,huileriesplantationscoteivoire,Huileries africaines,Société française des Huileries et plantations de la Côte-d’Ivoire,2,delsaux-p; toulemonde-l
-kokumbocoltd,minierefoncierebandama,Kokumbo Co. Ltd,Société minière et foncière du Bandama,2,h-frot; j-halphen
-kokumbocoltd,kong,Kokumbo Co. Ltd,Compagnie française de Kong,2,g-simonnet; terquem
+ivorycoastgoldfields,minierecoteivoire,Ivory Coast Goldfields,Société Minière de la Côte-d'Ivoire,2,lyon-m; ward-r
 plantationshuileriesbingerville,plantationsreuniesouestafricain,Société des Plantations et huileries de Bingerville,Plantations réunies de l'Ouest-Africain,2,imp-fano-emonet-c; merle-m
 exploitationscommercialesafricaines,plantationstanoe,Compagnie d'Exploitations commerciales africaines,Société des plantations de la Tanoé,1,doumic-j
 commercialeafrique,etablissementsrobertgonfreville,La Commerciale de l'Afrique française,Établissements Robert Gonfreville,1,lavril-m
@@ -56,23 +68,19 @@ agricolecoteivoire,lorrainecoteivoirenancy,Société Agricole de la Côte d'Ivoi
 actionjouissance,forestiereindenie,ACTION DE JOUISSANCE,Compagnie Forestière de l'Indénié,1,levy-g
 actionjouissance,plantationsreuniesouestafricain,ACTION DE JOUISSANCE,Plantations réunies de l'Ouest-Africain,1,levy-g
 boiscoteivoire,plantationsreuniesouestafricain,Compagnie des Bois de la Côte-d'Ivoire,Plantations réunies de l'Ouest-Africain,1,levy-g
-forestiereindenie,importationboisexotiques,Compagnie Forestière de l'Indénié,Société d'Importation de bois exotiques,1,levy-g
 importationboisexotiques,plantationsreuniesouestafricain,Société d'Importation de bois exotiques,Plantations réunies de l'Ouest-Africain,1,levy-g
+plantationsreuniesouestafricain,transitgrandlahou,Plantations réunies de l'Ouest-Africain,Société de Transit de Grand-Lahou,1,levy-g
 actionjouissance,minierefoncierebandama,ACTION DE JOUISSANCE,Société minière et foncière du Bandama,1,mizraki-m
 actionjouissance,plantationshuileriesbingerville,ACTION DE JOUISSANCE,Société des Plantations et huileries de Bingerville,1,mizraki-m
 boiscoteivoire,minierefoncierebandama,Compagnie des Bois de la Côte-d'Ivoire,Société minière et foncière du Bandama,1,mizraki-m
 importationboisexotiques,minierefoncierebandama,Société d'Importation de bois exotiques,Société minière et foncière du Bandama,1,mizraki-m
-importationboisexotiques,plantationshuileriesbingerville,Société d'Importation de bois exotiques,Société des Plantations et huileries de Bingerville,1,mizraki-m
+minierefoncierebandama,plantationselimacafeiersaboisso,Société minière et foncière du Bandama,"Société des Plantations d'Élima, caféiers à Aboisso",1,mizraki-m
 minierefoncierebandama,plantationshuileriesbingerville,Société minière et foncière du Bandama,Société des Plantations et huileries de Bingerville,1,mizraki-m
 minierefoncierebandama,transitgrandlahou,Société minière et foncière du Bandama,Société de Transit de Grand-Lahou,1,mizraki-m
-boissassandra,occidentaleafricaine,Société des Bois de Sassandra,L'Occidentale Africaine,1,klotz-e
-boissassandra,scieriesafricaines,Société des Bois de Sassandra,Compagnie des Scieries africaines,1,klotz-e
+plantationselimacafeiersaboisso,plantationshuileriesbingerville,"Société des Plantations d'Élima, caféiers à Aboisso",Société des Plantations et huileries de Bingerville,1,mizraki-m
 agricolecommercialeindustriellebadikahacacib,colonialecoteivoire,"Compagnie Agricole, Commerciale et Industrielle de Badikaha CACIB)",Compagnie Coloniale de la Côte-d’Ivoire,1,schmidt-g
 agricoleafricaine,etablissementscharlesperinaud,Société Agricole Africaine,Établissements Charles Périnaud,1,duvernet-h
 agricoleafricaine,exportationcoloniale,Société Agricole Africaine,Société d'exportation coloniale,1,duvernet-h
-forestiereindenie,forestieresassandra,Compagnie Forestière de l'Indénié,Compagnie Forestière de Sassandra,1,calcat-f
-forestieresassandra,kong,Compagnie Forestière de Sassandra,Compagnie française de Kong,1,calcat-f
-forestieresassandra,plantationsreuniesouestafricain,Compagnie Forestière de Sassandra,Plantations réunies de l'Ouest-Africain,1,calcat-f
 africainefinanciereagricole,miniereafema,Société africaine financière et agricole,Compagnie Minière de l’Afema,1,lejeune-c
 africainefinanciereagricole,miniereouestafricaineaboisso,Société africaine financière et agricole,"Compagnie Minière ouest-africaine, Aboisso",1,lejeune-c
 miniereafema,miniereouestafricaineaboisso,Compagnie Minière de l’Afema,"Compagnie Minière ouest-africaine, Aboisso",1,lejeune-c
@@ -81,7 +89,6 @@ commercialeafrique,miniereouestafricaineaboisso,La Commerciale de l'Afrique fran
 importationboisexotiques,miniereouestafricaineaboisso,Société d'Importation de bois exotiques,"Compagnie Minière ouest-africaine, Aboisso",1,joubert-j
 consolidatedgoldfieldsivorycoast,explorationexploitationminieresafrique,The Consolidated Goldfields of the Ivory Coast,"Société d'Exploration et d'exploitation minières de l’Afrique française, puis Essika",1,richard-j
 consolidatedgoldfieldsivorycoast,minierebassanwicoteivoire,The Consolidated Goldfields of the Ivory Coast,Compagnie Minière du Bas-Sanwi et de la Côte-d’Ivoire,1,richard-j
-consolidatedgoldfieldsivorycoast,miniereindeniecoteivoire,The Consolidated Goldfields of the Ivory Coast,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,1,richard-j
 consolidatedgoldfieldsivorycoast,ouestafricain,The Consolidated Goldfields of the Ivory Coast,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],1,richard-j
 explorationexploitationminieresafrique,minierebassanwicoteivoire,"Société d'Exploration et d'exploitation minières de l’Afrique française, puis Essika",Compagnie Minière du Bas-Sanwi et de la Côte-d’Ivoire,1,richard-j
 explorationexploitationminieresafrique,minierebondoukoucoteivoire,"Société d'Exploration et d'exploitation minières de l’Afrique française, puis Essika",Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,1,richard-j
@@ -92,8 +99,11 @@ minierebassanwicoteivoire,miniereindeniecoteivoire,Compagnie Minière du Bas-San
 minierebassanwicoteivoire,ouestafricain,Compagnie Minière du Bas-Sanwi et de la Côte-d’Ivoire,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],1,richard-j
 minierebondoukoucoteivoire,ouestafricain,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],1,richard-j
 miniereindeniecoteivoire,ouestafricain,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],1,richard-j
-consolidatedgoldfieldsivorycoast,minierealangouacoteivoire,The Consolidated Goldfields of the Ivory Coast,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,1,h-lippens
-consolidatedgoldfieldsivorycoast,minieresanwicoteivoire,The Consolidated Goldfields of the Ivory Coast,Société Minière du Sanwi et de la Côte-d'Ivoire,1,h-lippens
+consolidatedgoldfieldsivorycoast,prospectioncoteivoire,The Consolidated Goldfields of the Ivory Coast,Société de Prospection de la Côte-d’Ivoire,1,boucher-e
+minierebondoukoucoteivoire,prospectioncoteivoire,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,Société de Prospection de la Côte-d’Ivoire,1,boucher-e
+miniereindeniecoteivoire,prospectioncoteivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,Société de Prospection de la Côte-d’Ivoire,1,boucher-e
+consolidatedgoldfieldsivorycoast,minierealangouacoteivoire,The Consolidated Goldfields of the Ivory Coast,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,1,lippens-h
+consolidatedgoldfieldsivorycoast,minieresanwicoteivoire,The Consolidated Goldfields of the Ivory Coast,Société Minière du Sanwi et de la Côte-d'Ivoire,1,lippens-h
 domainekokumbo,miniereindustrielleimmobilierecoteivoire,Compagnie du Domaine de Kokumbo,"Minière, Industrielle et Immobilière de la Côte-d'Ivoire",1,tezier-h
 exploitationsforestieresagricolescoteivoire,forestiereindenie,Exploitations forestières et agricoles de la Côte d’Ivoire,Compagnie Forestière de l'Indénié,1,pujol-j
 forestiereafrique,unioncolonialeelectricite,Compagnie Forestière de l'Afrique française,Union coloniale d'électricité,1,cassagnac-j
@@ -101,22 +111,23 @@ occidentaleafricaine,unioncolonialeelectricite,L'Occidentale Africaine,Union col
 scieriesafricaines,unioncolonialeelectricite,Compagnie des Scieries africaines,Union coloniale d'électricité,1,cassagnac-j
 alsaciennecoteivoire,forestiereafrique,Société Alsacienne de la Côte d’Ivoire,Compagnie Forestière de l'Afrique française,1,vizioz-g
 africainefinanciereagricole,forestiereequatoriale,Société africaine financière et agricole,Compagnie Forestière équatoriale,1,japhet-e
+cafesproduitscoloniauxcapro,comptoirimportationboisafricains,« Cafés et produits coloniaux français » CAPRO,Comptoir d'importation des bois africains,1,lemaitre-r
+cafesproduitscoloniauxcapro,importationboisexotiques,« Cafés et produits coloniaux français » CAPRO,Société d'Importation de bois exotiques,1,lemaitre-r
+comptoirimportationboisafricains,importationboisexotiques,Comptoir d'importation des bois africains,Société d'Importation de bois exotiques,1,lemaitre-r
+comptoirimportationboisafricains,plantationshuileriesbingerville,Comptoir d'importation des bois africains,Société des Plantations et huileries de Bingerville,1,lemaitre-r
 cafesproduitscoloniauxcapro,plantationselima,« Cafés et produits coloniaux français » CAPRO,Plantations d'Élima,1,deloffre-g
+cafesproduitscoloniauxcapro,plantationselimacafeiersaboisso,« Cafés et produits coloniaux français » CAPRO,"Société des Plantations d'Élima, caféiers à Aboisso",1,deloffre-g
 forestiereindenie,plantationselima,Compagnie Forestière de l'Indénié,Plantations d'Élima,1,deloffre-g
 huileriesafricainesdrewin,uniontropicaleplantations,"Société des Huileries africaines, Drewin",Union tropicale de plantations,1,rosa-e
 importationboisexotiques,ouestafricain,Société d'Importation de bois exotiques,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],1,lambert
-comptoirimportationboisafricains,importationboisexotiques,Comptoir d'importation des bois africains,Société d'Importation de bois exotiques,1,r-lemaitre
-ivorycoastgoldfields,minierecoteivoire,Ivory Coast Goldfields,Société Minière de la Côte-d'Ivoire,1,lyon-m
 ivorycoastgoldfields,minesorindenie,Ivory Coast Goldfields,Société des Mines d’or de l'Indénié,1,goldschmidt-a
+ivorycoastgoldfields,minesorplacersbiano,Ivory Coast Goldfields,Mines d’or et placers de Biano,1,goldschmidt-a
+minesorindenie,minesorplacersbiano,Société des Mines d’or de l'Indénié,Mines d’or et placers de Biano,1,goldschmidt-a
 kokumbocoltd,miniereafriqueoccidentale,Kokumbo Co. Ltd,Société Minière de l'Afrique occidentale,1,bento-y-vieira
-kong,plantationselima,Compagnie française de Kong,Plantations d'Élima,1,bretigniere-m
+kokumbocoltd,miniereindustrielleimmobilierecoteivoire,Kokumbo Co. Ltd,"Minière, Industrielle et Immobilière de la Côte-d'Ivoire",1,frot-h
 minierefoncierebandama,miniereindustrielleimmobilierecoteivoire,Société minière et foncière du Bandama,"Minière, Industrielle et Immobilière de la Côte-d'Ivoire",1,frot-h
+kong,plantationselima,Compagnie française de Kong,Plantations d'Élima,1,bretigniere-m
 minesorindenie,ouestafricain,Société des Mines d’or de l'Indénié,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],1,henry
-minierealangouacoteivoire,minierebondoukoucoteivoire,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,1,vallee-siege-social-a-paris-h
-minierealangouacoteivoire,miniereindeniecoteivoire,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,1,vallee-siege-social-a-paris-h
-minierebondoukoucoteivoire,minieresanwicoteivoire,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,Société Minière du Sanwi et de la Côte-d'Ivoire,1,vallee-siege-social-a-paris-h
-miniereindeniecoteivoire,minieresanwicoteivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,Société Minière du Sanwi et de la Côte-d'Ivoire,1,vallee-siege-social-a-paris-h
-miniereindeniecoteivoire,prospectioncoteivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,Société de Prospection de la Côte-d’Ivoire,1,e-boucher
 kong,plantationsreuniesouestafricainp,Compagnie française de Kong,Plantations réunies de l'Ouest-Africain (P,1,merle-m
 plantationshuileriesbingerville,plantationsreuniesouestafricainp,Société des Plantations et huileries de Bingerville,Plantations réunies de l'Ouest-Africain (P,1,merle-m
 plantationsreuniesouestafricain,plantationsreuniesouestafricainp,Plantations réunies de l'Ouest-Africain,Plantations réunies de l'Ouest-Africain (P,1,merle-m
@@ -125,8 +136,12 @@ commercialeindustrielleagricolepalmeraiesafricaines,plantationstanoe,"Société 
 commercialeindustrielleagricolepalmeraiesafricaines,commercialeindustriellepalmeraiesafricaines,"Société commerciale, industrielle et agricole des Palmeraies africaines",Société commerciale et industrielle des palmeraies africaines,1,durrieu
 commercialeindustriellepalmeraiesafricaines,plantationstanoecafeiers,Société commerciale et industrielle des palmeraies africaines,"Plantations de la Tanoé, caféiers",1,weber-j
 anyama,commercialeindustriellepalmeraiesafricaines,Société d'Anyama,Société commerciale et industrielle des palmeraies africaines,1,guynet-w
-plantationselima,plantationsreuniesouestafricainp,Plantations d'Élima,Plantations réunies de l'Ouest-Africain (P,1,guibert-g
+plantationselima,plantationsreuniesouestafricainp,Plantations d'Élima,Plantations réunies de l'Ouest-Africain (P,1,guibert-g-georges
+plantationselima,transitgrandlahou,Plantations d'Élima,Société de Transit de Grand-Lahou,1,guibert-g-georges
+plantationselimacafeiersaboisso,plantationsreuniesouestafricainp,"Société des Plantations d'Élima, caféiers à Aboisso",Plantations réunies de l'Ouest-Africain (P,1,guibert-g-georges
+plantationsreuniesouestafricainp,transitgrandlahou,Plantations réunies de l'Ouest-Africain (P,Société de Transit de Grand-Lahou,1,guibert-g-georges
 jeanweber,plantationstanoecafeiers,Jean Weber,"Plantations de la Tanoé, caféiers",1,legourd-a
 plantationstanoe,plantationstanoecafeiers,Société des plantations de la Tanoé,"Plantations de la Tanoé, caféiers",1,legourd-a
 agricoleafricaine,plantationstanoe,Société Agricole Africaine,Société des plantations de la Tanoé,1,poncin-h
 miniereagricolemarcory,plantationsreuniesouestafricain,"Société Minière et Agricole de Marcory, puis Minière et Agricole de la Côte-d'Ivoire",Plantations réunies de l'Ouest-Africain,1,p-forveille-imprimeur-de-titres-paris-rodez
+prospectioncoteivoire,syndicatouestafricain,Société de Prospection de la Côte-d’Ivoire,Syndicat Ouest-Africain,1,pinel-l

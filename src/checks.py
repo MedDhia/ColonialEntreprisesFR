@@ -188,6 +188,149 @@ def check_citations() -> None:
     eq("  delegate identified", roles.get("Wladimir Archawski"), "administrateur_delegue")
     check("  plain administrator", roles.get("Victor Berti") == "administrateur", str(roles))
 
+    print("parse_ties bracketed forenames and annotations", file=sys.stderr)
+    # One board list from the Fedhala dossier that exercised four failures at
+    # once: an annotation containing a comma, an annotation containing "et",
+    # an in-place expanded initial, and a leading supplied forename.
+    body = ("MM. J.-B. Hersent [ép. Anne-Marie Thomas, sœur de Georges], présid. ; "
+            "G[eorges] Hersent, v.-présid. ; "
+            "A[nthony] Kroller [Wm. H. Müller et Cie, Rotterdam ], "
+            "[Charles] Michel-Côte, sir John Pilter [Phosphates Océanie]")
+    got = [m["name_clean"] for m in P.parse_board_list(body, "administrateur")]
+    for want in ["Georges Hersent", "Anthony Kroller", "Charles Michel-Côte"]:
+        check(f"  forename recovered: {want!r}", want in got, str(got))
+    # The comma inside "[... et Cie, Rotterdam]" used to split the annotation in
+    # two and leave "Rotterdam ]" as a board member.
+    check("  no annotation residue parsed as a person",
+          not any("]" in n or "[" in n for n in got), str(got))
+    check("  kinship note did not enter the surname",
+          not any("Anne-Marie" in n for n in got), str(got))
+
+    # The guard on the leading form: only an attested forename folds in.
+    for frag, want in [("E[ugène] Hausermann [ECP][Hersent]", "Eugène Hausermann"),
+                       ("[Charles] Michel-Côte", "Charles Michel-Côte")]:
+        m = P._make_member(frag, "administrateur")
+        eq(f"  {frag[:26]!r} parsed", m and m["name_clean"], want)
+    m = P._make_member("[Phosphates] Océanie", "administrateur")
+    check("  a non-forename bracket is not folded in",
+          not m or "Phosphates" not in m["name_clean"], str(m))
+
+    print("parse_ties entry anchors", file=sys.stderr)
+    # The Annuaire industriel alphabetises on a keyword and parenthesises the
+    # rest of the name. Reading the head whole, and putting it back in the right
+    # order, is what keeps one notice from collecting the next one's board.
+    heads = [
+        ("ALLUMETTES (Soc. indo-chinoise forestière et des), 41, bd de Magenta,",
+         "Soc. indo-chinoise forestière et des ALLUMETTES"),
+        # No parenthetical, two particles between the capitals. This is the case
+        # CAPS_ENTRY_RE could not see, and its board went to the notice above.
+        ("BANQUE de l'INDOCHINE, 96, bd Haussmann, Paris, 8e. T. Europe 48-00",
+         "BANQUE de l'INDOCHINE"),
+        # The keyword itself contains commas; cutting at the first one named
+        # this firm "Forges".
+        ("FORGES, ATELIERS et CHANTIERS d'INDOCHINE, Bureau : 119, bd Haussmann,",
+         "FORGES, ATELIERS et CHANTIERS d'INDOCHINE"),
+        ("CULTURES TROPICALES (Soc. Indochinoise des), 51. r. d'Anjou, Paris, 8e.",
+         "Soc. Indochinoise des CULTURES TROPICALES"),
+        ("AGRICOLE de THANH-TUY-HA (Société). 53, cours Pierre-Puget, Marseille",
+         "Société AGRICOLE de THANH-TUY-HA"),
+        # A parenthetical ending in an apostrophe joins with no space.
+        ("ACCONAGE (Soc. Nord-Africaine d'), Alger.",
+         "Soc. Nord-Africaine d'ACCONAGE"),
+    ]
+    for text, want in heads:
+        m = P.ANNUAIRE_INDUS_ENTRY_RE.match(text)
+        check(f"  head matches {text[:34]!r}", bool(m))
+        if m:
+            eq(f"  head rebuilt {text[:26]!r}",
+               P.annuaire_indus_name(m.group("kw"), m.group("paren")), want)
+
+    # All three ways the compiler writes an AEC page reference. Only the first
+    # was matched, so 17 entries across 11 documents anchored nowhere.
+    for text in ("AEC 1922-519 - Sté générale des abattoirs, PARIS",
+                 "AEC 1922. — 489 — Cie du port de Fedhala, 60, rue de Londres",
+                 "AEC 1922. 495 — Manufacture marocaine de calorifuges"):
+        check(f"  AEC entry matches {text[:26]!r}", bool(P.AEC_RE.search(text)))
+
+    # Once the listing is running the prefix is dropped and only the page is
+    # printed. Three digits, because the annuaire runs to 800-1,200 pages and
+    # the short numbers are enumerated clauses in legal prose.
+    for text in ("509 — Sté des briqueteries de Fedhala, 60, rue de Londres",
+                 "35 [= 64] — Sté d'études marocaines pour le commerce"):
+        check(f"  bare page matches {text[:28]!r}",
+              bool(P.AEC_BARE_PAGE_RE.search(text)))
+    for text in ("3 — Modifications diverses aux articles 4, 8 12, 13, 15",
+                 "5 — Que l'imprimeur a estimé que l'auteur, en tant que",
+                 "1877-Démissionnaire le 16 mai 1877.",
+                 "1894-Sainte-Adresse, Seine-Inférieure, 1919), fille d'un"):
+        check(f"  bare page rejects {text[:28]!r}",
+              not P.AEC_BARE_PAGE_RE.search(text))
+
+    # A bare page takes the year of the nearest AEC entry *before* it. Taking
+    # the document's first stamped the Fedhala dossier's two 1951 entries as
+    # 1922 - a 29-year error on four board seats.
+    two_volume = ("AEC 1922. — 489 — Cie du port de Fedhala, rue de Londres\n"
+                  "509 — Sté des briqueteries de Fedhala, rue de Londres\n"
+                  "AEC 1951. — 819 — Cie du port de Fédala (C.P.F), rue de Liège\n"
+                  "826 — Les Conserveries marocaines (COSMAR)\n")
+    years = {a.company: a.year for a in P.find_anchors(two_volume, False)
+             if a.kind == "aec_entry"}
+    eq("  bare page before the 1951 entry keeps 1922",
+       years.get("Sté des briqueteries de Fedhala"), "1922")
+    eq("  bare page after the 1951 entry takes 1951",
+       years.get("Les Conserveries marocaines (COSMAR)")
+       or years.get("Les Conserveries marocaines"), "1951")
+
+    # Both head patterns must report the same offset for the same notice, or
+    # the anchor de-duplication below them silently does nothing.
+    head = "ALLUMETTES (Soc. indo-chinoise forestière et des), 41, bd de Magenta,\n"
+    doc = "x\n" + head
+    caps = [m.start() for m in P.CAPS_ENTRY_RE.finditer(doc)]
+    ind = [m.start() for m in P.ANNUAIRE_INDUS_ENTRY_RE.finditer(doc)]
+    check("  caps and industriel heads agree on the offset",
+          bool(caps) and bool(ind) and caps[0] == ind[0], f"{caps} vs {ind}")
+
+    print("parse_ties swallowed role labels", file=sys.stderr)
+    # The label states the role of the name behind it and overrides the role
+    # inherited from the enclosing list. Discarding it filed 199 "Adm.:" rows
+    # as president and 113 "Prés.:" rows as administrateur.
+    for frag, name, role in [
+            ("Adm.: MM. Henri Girche", "Henri Girche", "administrateur"),
+            ("Prés.: M. J. Garcin", "J. Garcin", "president"),
+            ("Prés:. M. J. Garcin", "J. Garcin", "president"),
+            ("Adm.-dél.: M. Jean Dupont", "Jean Dupont", "administrateur_delegue"),
+            ("direct. gén.: M. Léon Blum", "Léon Blum", "directeur_general"),
+            ("Censeurs: MM. Paul Reynaud", "Paul Reynaud", "censeur"),
+            ("administrateur-délégué: M. René Cassin", "René Cassin",
+             "administrateur_delegue")]:
+        m = P._make_member(frag, "administrateur")
+        eq(f"  {frag[:26]!r} name", m and m["name_clean"], name)
+        eq(f"  {frag[:26]!r} role", m and m["role"], role)
+    # "pres." is the president; bare "pres" is the preposition "pres de".
+    for text in ("près de Paris", "à près de 3 millions", "situé près du port"):
+        eq(f"  {text!r} is not a role", P.canonical_role(text), "")
+
+    print("parse_ties member labels", file=sys.stderr)
+    # A swallowed role label hides a real name; strip it rather than lose the
+    # tie. What is left after the strip must contain no colon.
+    for text, want in [("Adm.: MM. Henri Girche", "Henri Girche"),
+                       ("prés.:M. J. Bardoux", "J. Bardoux"),
+                       ("Prés:. M. J. Garcin", "J. Garcin"),
+                       ("Direct.: M. Patrick O'Quin", "Patrick O'Quin"),
+                       ("Fondé de pouvoirs: Marcel Pénicaud", "Marcel Pénicaud")]:
+        got = P.MEMBER_LABEL_PREFIX_RE.sub("", text)
+        from names import LEADING_MM_RE
+
+        got = LEADING_MM_RE.sub("", got).strip(" .,;:")
+        eq(f"  label stripped from {text[:24]!r}", got, want)
+    for text in ("comptoirs: Bordeaux", "Imp.: sucre",
+                 "personnalités bien connues: Joanny Peytel"):
+        got = P.MEMBER_LABEL_PREFIX_RE.sub("", text)
+        check(f"  field value still rejected {text[:24]!r}", ":" in got)
+    # An ordinary name must survive both rules untouched.
+    for text in ("Pierre Barris", "Ed. Bousquet", "A. R. Fontaine"):
+        eq(f"  name untouched {text!r}", P.MEMBER_LABEL_PREFIX_RE.sub("", text), text)
+
     # Narrative prose must not be mined for names.
     prose = ("est autorisé à émettre des obligations jusqu'à concurrence de 800.000 fr. "
              "Les statuts ont été modifiés en conséquence, sous la condition suspensive "
@@ -360,14 +503,94 @@ def check_dataset() -> None:
                   "Sociétés aurifères en Côte-d'Ivoire", "Leroy, Le Caoutchouc",
                   "Valeurs inscrites à la Cote des banquiers à Paris en 1913"]:
         check(f"  survey not a company node: {title[:44]!r}", title not in firms)
-    # No firm should have an implausible number of distinct directors. The
-    # genuine maximum here is ~96 (Cie Generale Francaise de Tramways, observed
-    # 1880-1960); the pseudo-firms reached 254 and 286.
+    # No firm should have an implausible number of distinct directors.
+    #
+    # The ceiling is recalibrated: it was 120, set when the dataset had one
+    # extraction genre and 77% attribution, and the genuine maximum was ~96.
+    # With four genres and 87% attribution the largest legitimate firms now
+    # reach 186 (Banque de l'Indochine, observed across 61 distinct years
+    # 1875-1971, about three directors a year), followed by Crédit foncier
+    # colonial at 156 and Messageries maritimes at 142 - all of them the
+    # longest-lived and best-documented firms in the collection. The failure
+    # this guards against is a *pseudo-firm*: a survey document treated as a
+    # company node, which reached 254 and 286. 240 sits between the two.
     worst = max(companies, key=lambda r: int(r["n_directors"] or 0), default=None)
     if worst:
         check("  no firm has an implausible director count",
-              int(worst["n_directors"]) <= 150,
+              int(worst["n_directors"]) <= 240,
               f"{worst['name'][:50]!r} has {worst['n_directors']}")
+
+    # A pseudo-firm absorbs a whole survey at once, so the sharper test is
+    # directors in a *single* firm-year: a real board, even a large founding
+    # list, does not run to hundreds.
+    #
+    # This ceiling was 200, chosen when the observed maximum was 83 (Compagnie
+    # du Port de Fedhala, 1921) and read as a possible constitution list. It was
+    # not: the Fedhala dossier reprints AEC entries for a dozen *other* firms
+    # under shorthand heads that no anchor matched, so one firm collected a
+    # dozen boards. With those heads anchored the dossier parser's own maximum
+    # is 52; the merged network still reaches 82, on a pseudo-firm the annuaire
+    # key names as several undertakings at once ("Houilleres du bassin de la
+    # Loire + Houilleres des Cevennes..."). The ceiling is 90, so the headroom
+    # is 8, not 38. Loosening it should mean a real large board was found, not
+    # a re-run of either bug.
+    per_year: Counter = Counter()
+    for e in load("edges_person_company.csv"):
+        if e["is_board_seat"] == "1" and e["year"]:
+            per_year[(e["company_id"], e["year"])] += 1
+    if per_year:
+        (cid, yr), n = per_year.most_common(1)[0]
+        check("  no firm-year has an implausible director count", n <= 90,
+              f"{cid} in {yr} has {n}")
+
+    # No person's name contains a colon, in *any* genre. The recoverable ones
+    # ("Adm.: MM. Henri Girche") are stripped back to the name and the rest
+    # rejected. Scanning only affiliations.csv missed 20 rows in the person
+    # index and 6 resolved surnames, which came from a different parser.
+    colon = []
+    for f in ("affiliations.csv", "affiliations_person_index.csv",
+              "affiliations_prose.csv", "affiliations_annotations.csv",
+              "affiliations_biographical.csv", "persons_resolved.csv"):
+        for r in load(f):
+            for col in ("name_clean", "surname"):
+                if ":" in (r.get(col) or ""):
+                    colon.append((f, r[col]))
+    check("  no member name carries a field label", not colon,
+          f"{len(colon)} do, e.g. {colon[0][0]} {colon[0][1][:34]!r}" if colon else "")
+
+    # Annotation residue in a name means a bracketed note was split across a
+    # comma or an "et" again. It was 1,367 rows before the split learned to
+    # protect them; the remainder are unbalanced brackets in the source itself.
+    aff = load("affiliations.csv")
+    residue = [a for a in aff if "[" in a["name_clean"] or "]" in a["name_clean"]]
+    check("  little annotation residue in names", len(residue) <= 400,
+          f"{len(residue)} rows, e.g. {residue[0]['name_clean'][:40]!r}" if residue else "")
+
+    # The compiler supplies forenames in brackets. If this drops sharply, the
+    # bracket conventions have stopped being read and the person splitter loses
+    # the evidence it works from.
+    full = sum(1 for a in aff if len(a["given"].replace(".", "").strip()) > 2)
+    check("  full forenames recovered on a large share of ties",
+          full >= 0.40 * len(aff), f"{full} of {len(aff)}")
+
+    # Person resolution runs in both directions, and both must stay visible in
+    # the crosswalk: folding merges, splitting separates.
+    res = load("person_resolution.csv")
+    rules = Counter(r["rule"] for r in res)
+    check("  crosswalk records folds", rules["folded_unique_initial"] > 0, str(dict(rules)))
+    check("  crosswalk records splits",
+          rules["split_incompatible_forenames"] > 0, str(dict(rules)))
+    split_rows = [r for r in res if r["rule"] == "split_incompatible_forenames"]
+    check("  every split names the forenames it separated",
+          all(r["split_forenames"] for r in split_rows))
+    # A split key must yield distinct nodes, and the initial-only residue must
+    # remain its own node rather than being handed to either man.
+    pid = {p["person_id"] for p in load("persons_resolved.csv")}
+    for stem, a, b in [("hersent-g", "georges", "gilbert"),
+                       ("delmas-p", "philippe", "pierre")]:
+        check(f"  {stem} split into {a} and {b}",
+              f"{stem}-{a}" in pid and f"{stem}-{b}" in pid)
+        check(f"  {stem} keeps an unresolved residue node", stem in pid)
 
     il = load("edges_company_interlock.csv")
     if il:
@@ -452,6 +675,18 @@ def check_splits() -> None:
         attributed = sum(1 for r in aff if r["company_key"] and r["person_key"])
         eq(f"  {level}: ties partition the dataset", total, attributed)
 
+        # The bundles promise person ids that match the top-level files. They
+        # did not for a while: this stage recomputed the resolution over
+        # `affiliations.csv` alone while stage 4 resolved over all five genres,
+        # so a fold or a split could differ. It now reads stage 4's crosswalk.
+        top = {p["person_id"] for p in load("persons_resolved.csv")}
+        stray = set()
+        for f in sorted(_glob.glob(os.path.join(root, "*", "persons.csv")))[:80]:
+            with open(f, encoding="utf-8", newline="") as fh:
+                stray |= {r["person_id"] for r in csv.DictReader(fh)} - top
+        check(f"  {level}: bundle person ids exist at the top level", not stray,
+              f"{len(stray)} do not, e.g. {sorted(stray)[:3]}")
+
         # Every bundle's GraphML must load, same guard as the main graphs.
         bad = []
         for f in _glob.glob(os.path.join(root, "*", "company_interlock.graphml")):
@@ -529,6 +764,396 @@ def _texts_with_size(node, ns, inherited=11.0):
         yield from _texts_with_size(child, ns, size)
 
 
+def check_labels() -> None:
+    """Every French category in the data must have an English label."""
+    from labels import coverage, to_en
+
+    print("English labels", file=sys.stderr)
+    docs = load("documents.csv")
+    for kind, col in (("territory", "country"), ("region", "region"),
+                      ("sector", "sector")):
+        gaps = coverage((d[col] for d in docs), kind)
+        check(f"  every {kind} has an English label", not gaps, str(gaps[:4]))
+
+    # A few spot translations, so a corrupted or truncated table is caught
+    # rather than silently falling back to the French.
+    for src, want in (("Maroc", "Morocco"), ("Indochine", "Indochina"),
+                      ("Afrique occidentale française", "French West Africa"),
+                      ("Algérie", "Algeria"), ("Tunisie", "Tunisia")):
+        eq(f"  {src} -> {want}", to_en(src), want)
+
+    # Firm names are legal names, not descriptions: translating them would
+    # invent names that appear in no archive. The English figures must carry
+    # them through unchanged.
+    en_fig = os.path.join(ROOT, "figures", "en", "fig1_core_interlocks.svg")
+    if os.path.exists(en_fig):
+        with open(en_fig, encoding="utf-8") as fh:
+            txt = fh.read()
+        check("  English figures keep firm names in French",
+              "Banque de l\u2019Indochine" in txt or "Banque de l'Indochine" in txt,
+              "ego firm name missing from the English figure")
+        # Assert on the English strings, not the absence of the French ones:
+        # a firm in this corpus is literally labelled "Maroc", so "no Maroc
+        # anywhere" fails on a correct figure.
+        fr_fig = os.path.join(ROOT, "figures", "fig1_core_interlocks.svg")
+        with open(fr_fig, encoding="utf-8") as fh:
+            fr_txt = fh.read()
+        # Derived from the figure, not hardcoded: which three territories are
+        # largest depends on the data, and Maroc dropped out of the top three
+        # when the annuaire genres were merged.
+        from make_figures import CORE_H, CORE_W, prepare_core
+        from build_network import read_csv as _read
+
+        _, _, top3, _ = prepare_core({r["company_id"]: r for r in
+                                      _read("companies.csv")}, 170, 2,
+                                     CORE_W, CORE_H)
+        for src in top3:
+            want = to_en(src)
+            check(f"  English legend carries {want!r} for {src!r}", want in txt)
+            if want != src:
+                check(f"  source figure keeps {src!r}, not {want!r}",
+                      want not in fr_txt, f"{want} leaked into the French figure")
+
+
+def check_org_key() -> None:
+    """org_key must not be defeated by the name's own opening words."""
+    print("names.org_key", file=sys.stderr)
+    cases = [
+        # The predecessor clause is a *tail*. A name that opens with it used to
+        # be consumed whole: Peyrissac, a major AOF trading house, lost 72
+        # observations this way.
+        ("Anciens Établissements Ch. Peyrissac et Cie", "anciensetablissementschpeyrissac"),
+        ("Anciens Établissements Eiffel", "anciensetablissementseiffel"),
+        # Mid-word matches: "anc" inside "Blanc", "ex" inside "Alex".
+        ("Grande Maison de Blanc", "grandemaisonblanc"),
+        ("Alex. Bury. Cie minière", "alexburyminiere"),
+        ("Société Altex", "altex"),
+        # A real trailing predecessor clause is still stripped.
+        ("Compagnie du Maroc (anciennement Société marocaine)", "maroc"),
+        # All-stopword names get a slug rather than an empty key...
+        ("Société générale", "societegenerale"),
+        # ...but a bare legal form is not a firm and must stay unkeyed.
+        ("Société", ""),
+        ("Société anon.", ""),
+        ("Compagnie", ""),
+        # Unchanged behaviour on ordinary names.
+        ("Banque de l'Indochine", "banqueindochine"),
+    ]
+    for raw, want in cases:
+        eq(f"  org_key({raw[:34]!r})", org_key(raw), want)
+
+
+def check_person_index() -> None:
+    """The inverted-index parser: its two failure modes are silent."""
+    from parse_person_index import (REF_RE, gloss_agrees, role_of,
+                                    split_name, strip_brackets)
+
+    print("person-index parser", file=sys.stderr)
+
+    # Failure mode 1: numbers inside bracketed notes read as company
+    # references. Life dates fall squarely in the company-number range, so a
+    # fabricated tie looks entirely plausible.
+    entry = "Abinal (Patrice)[1883-1961][ing.-conseil, anc. adm.], 1613 (Applications)."
+    stripped = strip_brackets(entry)
+    check("  bracketed life dates are stripped before refs are read",
+          "1883" not in stripped and "1961" not in stripped and "1613" in stripped,
+          repr(stripped))
+    name, rest = split_name(stripped)
+    refs = [n for n, _ in REF_RE.findall(rest or "")]
+    eq("  only the real reference survives", refs, ["1613"])
+
+    # Failure mode 2: an unmatched '[' pairs with a ']' far below and the
+    # regex deletes most of the document - which looks like a clean parse of
+    # a much smaller source rather than like an error.
+    runaway = "A (x), 11 (one).\n" + "B [unclosed, 22 (two).\n" + "C (y), 33 (three).\n"
+    out = strip_brackets(runaway)
+    check("  an unmatched bracket does not eat the document",
+          len(out) > 0.8 * len(runaway) and "33" in out,
+          f"{len(out)} of {len(runaway)} chars survived")
+
+    # The genre guarantees "Surname (Given)". The general parser guesses, and
+    # on "Baert (J.)" it guesses backwards - forename "Baert", surname "J." -
+    # so 148 distinct people collapsed onto the key `j-b` and generated
+    # thousands of interlock edges between firms that never shared a director.
+    from parse_person_index import parse_index_name
+    for raw, surname, key in [
+        ("Baert (J.)", "Baert", "baert-j"),
+        ("Bailly (J.)", "Bailly", "bailly-j"),
+        ("Achard (Georges-P.)", "Achard", "achard-g"),
+        ("Abaza (Mohamed Aziz)", "Abaza", "abaza-m"),
+        ("Abadie", "Abadie", "abadie"),
+        # A trailing particle belongs in front of the surname.
+        ("Abs (P. d\u2019)", "d'Abs", "d-abs-p"),
+        ("Aboville (J. d\u2019)", "d'Aboville", "d-aboville-j"),
+    ]:
+        got = parse_index_name(raw)
+        eq(f"  parse_index_name({raw!r}).surname", got["surname"], surname)
+        eq(f"  parse_index_name({raw!r}).key", got["person_key"], key)
+    keys = {parse_index_name(f"{s} (J.)")["person_key"]
+            for s in ("Baert", "Bagage", "Bailly", "Balaresque")}
+    eq("  four different B-surnames give four different keys", len(keys), 4)
+
+    # Role abbreviations peculiar to the annuaire.
+    for gloss, want in (("comm. cptes Pyrites de Huelva", "commissaire_aux_comptes"),
+                        ("pdt Nestlé Alimentana", "president"),
+                        ("v.-pdt Crédit sarrois", "vice_president"),
+                        ("dga BAO", "directeur_general"),
+                        ("censeur Bq Algérie", "censeur"),
+                        ("Land bank of Egypt", "administrateur")):
+        eq(f"  role_of({gloss[:22]!r})", role_of(gloss), want)
+
+    check("  gloss agreement detects a mismatch",
+          gloss_agrees("Bq comm. afr.", "Banque commerciale africaine") is True
+          and gloss_agrees("Nestlé", "Chemins de fer du Maroc") is False)
+
+    path = os.path.join(PROC_DIR, "affiliations_person_index.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_person_index.csv")
+    check("  produced a substantial number of ties", len(rows) > 5000, str(len(rows)))
+    nokey = [r for r in rows if not r["company_key"]]
+    check("  every row resolves to a company", not nokey, str(len(nokey)))
+    nolink = [r for r in rows if not r["person_key"] and not r["member_key"]]
+    check("  every row has a person or a corporate member", not nolink,
+          str(len(nolink)))
+    brackets = [r for r in rows if "[" in r["company_name"]]
+    check("  editorial notes are stripped from company names", not brackets,
+          str([r["company_name"][:40] for r in brackets[:2]]))
+
+    report = load("person_index_report.csv")
+    for r in report:
+        rate = float(r["gloss_agreement"])
+        check(f"  {r['title'][:34]}: gloss agreement >= 0.90", rate >= 0.90,
+              f"{rate:.3f} - the numbering may be misaligned")
+        check(f"  {r['title'][:34]}: key is substantial",
+              int(r["n_key_companies"]) > 500, r["n_key_companies"])
+
+
+def check_prose_parser() -> None:
+    """Stage 3c. Each case is an error the hand audit actually found."""
+    from parse_prose import extract, names_from
+
+    print("prose parser", file=sys.stderr)
+
+    def people(text, company="Société des Mines de Zellidja"):
+        out = []
+        for names, role, trigger, _ in extract(text, company, []):
+            out += [(n, role) for n in names]
+        return out
+
+    # Works at all.
+    got = people("MM. Georges Thomas et Dal Piaz ont été réélus administrateurs.")
+    eq("  reads an appointment in prose", sorted(n for n, _ in got),
+       ["Dal Piaz", "Georges Thomas"])
+
+    # A *singular* role after a run names only the last person. Reading it as
+    # the whole run made eleven presidents of one company.
+    got = people("MM. Meunier, Guibal, Godard, Billiard, président.")
+    eq("  a singular role after a list binds the last name only",
+       [n for n, _ in got], ["Billiard"])
+    got = people("MM. Lutscher et Vigouroux, administrateurs.")
+    eq("  a plural role binds the whole list", len(got), 2)
+
+    # A non-compete clause uses the role words in the negative.
+    eq("  a non-compete clause appoints nobody",
+       people("M. Borgeaud s'interdit de diriger comme gérant, directeur."), [])
+
+    # Decorations and addresses sit exactly where a name sits.
+    check("  a decoration is not a person",
+          "commandeur de la Légion d'honneur" not in names_from(
+              "M. Antoine Nunzi, commandeur de la Légion d'honneur"))
+    check("  a street address is not a person",
+          not any("rue" in n.lower() for n in names_from(
+              "M. Joseph de Traversay, demeurant à Paris, 10, rue de Laborde")))
+
+    # Presiding a meeting is not holding a board seat.
+    eq("  a mayor chairing a meeting is not the board president",
+       people("sous la présidence de M. Louis Martin, maire"), [])
+    check("  a chairman of the board is kept",
+          any(r == "president" for _, r in people(
+              "sous la présidence de M. Guynet, président du conseil "
+              "d'administration")))
+
+    # An occupation between the name and the role means the role is not held
+    # at this firm.
+    eq("  an occupation between name and role rejects the match",
+       people("M. Willot, inspecteur général des Postes, président"), [])
+
+    path = os.path.join(PROC_DIR, "affiliations_prose.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_prose.csv")
+    check("  prose file is substantial", len(rows) > 5000, str(len(rows)))
+    bad = [r for r in rows if not r["company_key"] or not r["person_key"]]
+    check("  every prose row is fully attributed", not bad, str(len(bad)))
+    eq("  every prose row is tagged",
+       {r["source_genre"] for r in rows}, {"prose"})
+
+
+def check_annotation_resolver() -> None:
+    """Stage 3d: abbreviation matching, and the guards it needed."""
+    from resolve_annotations import (JUNK_NAME_RE, build_index, content,
+                                     matches, resolve, tokens)
+
+    print("annotation resolver", file=sys.stderr)
+
+    # Prefix matching in order, which is what lets an abbreviation resolve.
+    check("  'cotonn st quentin' prefixes 'cotonniere de saint quentin'",
+          matches(content(tokens("Cotonn. St-Quentin")),
+                  content(tokens("Cotonnière de Saint-Quentin"))))
+    check("  'cie gen transatl' prefixes the full name",
+          matches(content(tokens("Cie gén. transatl")),
+                  content(tokens("Compagnie générale transatlantique"))))
+    check("  out-of-order tokens do not match",
+          not matches(content(tokens("quentin cotonn")),
+                      content(tokens("Cotonnière de Saint-Quentin"))))
+
+    # The junk filter must not be case-insensitive: under re.I a "^[a-z]"
+    # class matches an uppercase initial, and the first version of this
+    # pattern rejected every company name in the file.
+    for good in ("Banque de l'Indochine", "Compagnie Générale des colonies",
+                 "L'Air liquide", "Société des Messageries maritimes",
+                 "Omnium lyonnais"):
+        check(f"  JUNK_NAME_RE keeps {good[:28]!r}", not JUNK_NAME_RE.search(good))
+    for junk in ("G., 1921-22 min. Int., 1928-30 min. Instruc.",
+                 "Xavier Loisy: polytechnicien"):
+        check(f"  JUNK_NAME_RE rejects {junk[:28]!r}", bool(JUNK_NAME_RE.search(junk)))
+
+    index = build_index([
+        {"company_id": "banqueindochine", "name": "Banque de l'Indochine"},
+        {"company_id": "mineszellidja", "name": "Société des Mines de Zellidja"},
+        {"company_id": "minesbouthaleb", "name": "Société des Mines du Bou-Thaleb"},
+    ])
+    from collections import defaultdict as _dd
+    by_first = _dd(list)
+    for i, (_, _, tk) in enumerate(index):
+        for t in set(content(tk) or tk):
+            by_first[t[:2]].append(i)
+
+    cid, _, method = resolve("Bq de l'Indochine", index, by_first)
+    eq("  'Bq de l'Indochine' resolves", cid, "banqueindochine")
+    # "Mines" alone prefixes both mining firms: guessing would manufacture a
+    # specific, checkable, wrong claim.
+    cid, _, method = resolve("Mines", index, by_first)
+    eq("  a note matching several firms is dropped", cid, "")
+    check("  ...and says why",
+          method in {"single_token", "generic_single_token", "ambiguous_2"}, method)
+
+    path = os.path.join(PROC_DIR, "affiliations_annotations.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_annotations.csv")
+    check("  resolver produced ties", len(rows) > 500, str(len(rows)))
+    self_ref = [r for r in rows if r["company_key"] == r["from_company_id"]]
+    check("  no tie points back at the firm it was read from", not self_ref,
+          str(len(self_ref)))
+    eq("  every row is tagged", {r["source_genre"] for r in rows}, {"annotation"})
+
+
+def check_biographies() -> None:
+    """Stage 3e: person-scoped entries in biographical dictionaries."""
+    from parse_biographies import affiliations_in, entries, split_list
+
+    print("biographical parser", file=sys.stderr)
+
+    doc = ("ACCAMBRAY (Léon), député\n"
+           "[Administrateur : Compagnie céramique française (nommé mai 1921), "
+           "Compagnie africaine de commerce]\n"
+           "UNE ROSETTE BIEN PLACÉE (L'affaire)\n"
+           "[administrateur de la Société fiduciaire de contrôle]\n"
+           "ASPE-FLEURIMONT (Lucien)\n"
+           "[administrateur de la Société fiduciaire de contrôle]\n")
+    got = [name for name, _ in entries(doc)]
+    check("  reads a capitalised entry header", any("ACCAMBRAY" in g for g in got))
+    # A headline in capitals has the same shape as an entry header.
+    check("  a capitalised headline is not a person",
+          not any("ROSETTE" in g for g in got), str(got))
+
+    # The parenthetical qualifier is not part of the company name.
+    eq("  a company list splits on top-level commas only",
+       split_list("Compagnie céramique française (nommé mai 1921), Banque X"),
+       ["Compagnie céramique française", "Banque X"])
+
+    roles = dict((n, r) for r, n in affiliations_in(
+        "[Administrateur : Compagnie céramique française]"))
+    eq("  a labelled list yields the role",
+       roles.get("Compagnie céramique française"), "administrateur")
+    roles = dict((n, r) for r, n in affiliations_in(
+        "président de la Société fiduciaire de contrôle"))
+    check("  a governed noun phrase yields the role",
+          any(r == "president" for r in roles.values()), str(roles))
+
+    path = os.path.join(PROC_DIR, "affiliations_biographical.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_biographical.csv")
+    check("  produced ties", len(rows) > 1000, str(len(rows)))
+    bad = [r for r in rows if not r["company_key"] or not r["person_key"]]
+    check("  every row is fully attributed", not bad, str(len(bad)))
+    eq("  every row is tagged", {r["source_genre"] for r in rows}, {"biographical"})
+    # These entries give a career, not a board list for a year.
+    eq("  biographical ties carry no year", {r["year"] for r in rows}, {""})
+
+
+def check_geocoding() -> None:
+    """The city gazetteer and the address parser."""
+    from geocode import fold, head_office_prefix, load_gazetteer, match_city
+
+    print("geocoding", file=sys.stderr)
+    index, cities = load_gazetteer()
+    check("  gazetteer loads", len(cities) > 100, f"{len(cities)} cities")
+
+    bad = [c for c, r in cities.items()
+           if not (-90 <= float(r["lat"]) <= 90 and -180 <= float(r["lon"]) <= 180)]
+    check("  every city has plausible coordinates", not bad, str(bad[:3]))
+    at_null = [c for c, r in cities.items()
+               if abs(float(r["lat"])) < 0.01 and abs(float(r["lon"])) < 0.01]
+    check("  no city sits at Null Island", not at_null, str(at_null[:3]))
+
+    # The failure this parser exists to prevent: Paris street names include
+    # rue de Rome, rue de Constantinople and rue d'Alger, so searching a whole
+    # head-office string for city names puts Paris firms in Italy.
+    for raw, want in [
+        ("Paris, 1, rue de Stockholm. Tél. : LAB. 18-34", "Paris"),
+        ("Paris, 12, rue de Rome", "Paris"),
+        ("Paris, 5, rue d'Alger", "Paris"),
+        ("Paris, 40, rue de Constantinople", "Paris"),
+        ("le siège social est à Saïgon", "Saïgon"),
+        ("CASABLANCA (Maroc)", "Casablanca"),
+        ("Alger, 3, boulevard Baudin", "Alger"),
+    ]:
+        eq(f"  {raw[:34]!r} -> {want}",
+           match_city(head_office_prefix(raw), index), want)
+
+    eq("  fold() is accent-insensitive", fold("Saïgon"), fold("Saigon"))
+    eq("  fold() is case-insensitive", fold("DAKAR"), fold("Dakar"))
+
+    path = os.path.join(PROC_DIR, "company_places.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("company_places.csv")
+    placed = [r for r in rows if r["city"]]
+    unknown = sorted({r["city"] for r in placed} - set(cities))
+    check("  every placed city is in the gazetteer", not unknown, str(unknown[:3]))
+    nocoord = [r["company_id"] for r in placed if not r["lat"] or not r["lon"]]
+    check("  every placed firm has coordinates", not nocoord, str(nocoord[:3]))
+    check("  coverage is reported, not silently total",
+          0 < len(placed) < len(rows),
+          f"{len(placed)} of {len(rows)} - a total is suspicious")
+
+    edges_path = os.path.join(PROC_DIR, "edges_city_interlock.csv")
+    if os.path.exists(edges_path):
+        edges = load("edges_city_interlock.csv")
+        # Parenthesised: `a | b - c` binds as `a | (b - c)`, which would only
+        # ever check the second column.
+        seen = ({e["city_1"] for e in edges} | {e["city_2"] for e in edges})
+        stray = sorted(seen - set(cities))
+        check("  city edges reference known cities", not stray, str(stray[:3]))
+        self_loops = [e for e in edges if e["city_1"] == e["city_2"]]
+        check("  city edges are between distinct cities", not self_loops,
+              f"{len(self_loops)} self-loops - within-city ties belong in the table")
+
+
 def check_figures() -> None:
     """The rendered figures must be well-formed, on-canvas and comparable."""
     import xml.etree.ElementTree as ET
@@ -541,12 +1166,10 @@ def check_figures() -> None:
 
     import glob as _glob
 
-    svgs = ["fig1_core_interlocks.svg", "fig2_by_period.svg", "fig3_ego_indochine.svg",
-            "fig4_empire_network.svg", "fig5_territory_matrix.svg"]
-    # Every per-territory figure gets the same geometry guards. They are
-    # generated in a loop, so a bug in one is a bug in forty.
-    svgs += sorted(os.path.relpath(f, fig_dir)
-                   for f in _glob.glob(os.path.join(fig_dir, "by_country", "*.svg")))
+    # Every figure gets the same geometry guards, in every language tree.
+    # They are generated in a loop, so a bug in one is a bug in ninety-four.
+    svgs = sorted(os.path.relpath(f, fig_dir) for f in
+                  _glob.glob(os.path.join(fig_dir, "**", "*.svg"), recursive=True))
     for name in svgs:
         path = os.path.join(fig_dir, name)
         if not os.path.exists(path):
@@ -686,7 +1309,22 @@ def check_figures() -> None:
               pairs and all(v == 2 for v in pairs.values()),
               str([k for k, v in pairs.items() if v != 2][:2]))
 
-    for page_name in ("interlock_network.html", "territory_networks.html"):
+    # The English tree must mirror the source tree file for file: a partial
+    # translation is worse than none, because the gap is invisible.
+    en_dir = os.path.join(fig_dir, "en")
+    if os.path.isdir(en_dir):
+        fr = {os.path.relpath(f, fig_dir) for f in
+              _glob.glob(os.path.join(fig_dir, "**", "*.svg"), recursive=True)
+              if os.sep + "en" + os.sep not in f}
+        en = {os.path.relpath(f, en_dir) for f in
+              _glob.glob(os.path.join(en_dir, "**", "*.svg"), recursive=True)}
+        eq("  the English tree mirrors the source tree", len(en), len(fr))
+        check("  no figure is missing from the English tree", en == fr,
+              str(sorted(fr - en)[:3]))
+
+    for page_name in ("interlock_network.html", "territory_networks.html",
+                      os.path.join("en", "interlock_network.html"),
+                      os.path.join("en", "territory_networks.html")):
         page = os.path.join(fig_dir, page_name)
         if not os.path.exists(page):
             continue
@@ -702,6 +1340,26 @@ def check_figures() -> None:
     # Identity must never rest on colour alone: the legend, the table view and
     # the dark-mode pair above are what the palette's contrast WARN obliges.
 
+    # Every figure must exist as a raster too, and the raster must be current.
+    # A stale PNG beside a rebuilt SVG is the failure mode worth catching:
+    # it looks like a figure and shows the previous run's data.
+    missing, stale, tiny = [], [], []
+    for svg in svgs:
+        svg_path = os.path.join(fig_dir, svg)
+        png_path = svg_path[:-4] + ".png"
+        if not os.path.exists(svg_path):
+            continue
+        if not os.path.exists(png_path):
+            missing.append(svg)
+        elif os.path.getmtime(png_path) < os.path.getmtime(svg_path) - 1:
+            stale.append(svg)
+        elif os.path.getsize(png_path) < 3000:
+            tiny.append(svg)
+    check(f"  every figure has a PNG ({len(svgs)} figures)", not missing,
+          str(missing[:4]))
+    check("  no PNG is older than its SVG", not stale, str(stale[:4]))
+    check("  no PNG is suspiciously small", not tiny, str(tiny[:4]))
+
 
 def main() -> None:
     ap = argparse.ArgumentParser()
@@ -713,11 +1371,18 @@ def main() -> None:
     check_titles()
     check_citations()
     check_layout()
+    check_labels()
+    check_org_key()
     if not args.unit:
         check_extraction()
         check_dataset()
         check_positionality()
         check_splits()
+        check_person_index()
+        check_prose_parser()
+        check_annotation_resolver()
+        check_biographies()
+        check_geocoding()
         check_figures()
 
     total = CHECKS["passed"] + CHECKS["failed"]

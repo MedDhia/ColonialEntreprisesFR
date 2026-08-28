@@ -1,18 +1,18 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
-approvisionnementsgenerauxdjibouti,maritimeafriqueorientale,Société d’Approvisionnements généraux à Djibouti,Compagnie Maritime de l'Afrique Orientale,5,gimon-c; gorchs-chacou-f; michel-cote-c; philippar-g; pilliard-m
+approvisionnementsgenerauxdjibouti,maritimeafriqueorientale,Société d’Approvisionnements généraux à Djibouti,Compagnie Maritime de l'Afrique Orientale,6,gimon-c; gorchs-chacou-f; michel-cote-c; philippar-g; pilliard-m; roussel-f
 afriqueorientale,afriqueorientalemaritimecommerciale,Compagnie de l'Afrique Orientale,Cie de l'AFRIQUE ORIENTALE MARITIME ET COMMERCIALE,5,gimon-c; gorchs-chacou-f; hachette-r; moulin-p; senn-o
 afriqueorientale,approvisionnementsgenerauxdjibouti,Compagnie de l'Afrique Orientale,Société d’Approvisionnements généraux à Djibouti,4,gimon-c; gorchs-chacou-f; hachette-r; michel-cote-c
 afriqueorientale,maritimeafriqueorientale,Compagnie de l'Afrique Orientale,Compagnie Maritime de l'Afrique Orientale,4,bouffe-g; gimon-c; gorchs-chacou-f; michel-cote-c
 afriqueorientale,navigationmerrouge,Compagnie de l'Afrique Orientale,Compagnie française de Navigation en mer Rouge,4,bouffe-g; gorchs-chacou-f; lamotte-m; michel-cote-c
-afriqueorientale,industrielledjibouti,Compagnie de l'Afrique Orientale,Société Industrielle de Djibouti,4,gimon-c; hachette-r; moulin-a; moulin-p
+industrielledjibouti,salinesdjibouti,Société Industrielle de Djibouti,Société des salines de Djibouti,4,homberg-o; jambon-c; mingois-g; provot-g
 afriqueorientale,cotesomalis,Compagnie de l'Afrique Orientale,Compagnie française de la Côte des Somalis,3,gimon-c; gorchs-chacou-f; michel-cote-c
 approvisionnementsgenerauxdjibouti,cotesomalis,Société d’Approvisionnements généraux à Djibouti,Compagnie française de la Côte des Somalis,3,gimon-c; gorchs-chacou-f; michel-cote-c
 cotesomalis,maritimeafriqueorientale,Compagnie française de la Côte des Somalis,Compagnie Maritime de l'Afrique Orientale,3,gimon-c; gorchs-chacou-f; michel-cote-c
 cotesomalis,navigationmerrouge,Compagnie française de la Côte des Somalis,Compagnie française de Navigation en mer Rouge,3,et-rene-hachette; gorchs-chacou-f; michel-cote-c
 maritimeafriqueorientale,navigationmerrouge,Compagnie Maritime de l'Afrique Orientale,Compagnie française de Navigation en mer Rouge,3,bouffe-g; gorchs-chacou-f; michel-cote-c
 afriqueorientalemaritimecommerciale,approvisionnementsgenerauxdjibouti,Cie de l'AFRIQUE ORIENTALE MARITIME ET COMMERCIALE,Société d’Approvisionnements généraux à Djibouti,3,gimon-c; gorchs-chacou-f; hachette-r
+afriqueorientale,industrielledjibouti,Compagnie de l'Afrique Orientale,Société Industrielle de Djibouti,3,gimon-c; hachette-r; moulin-p
 afriqueorientalemaritimecommerciale,industrielledjibouti,Cie de l'AFRIQUE ORIENTALE MARITIME ET COMMERCIALE,Société Industrielle de Djibouti,3,gimon-c; hachette-r; moulin-p
-industrielledjibouti,salinesdjibouti,Société Industrielle de Djibouti,Société des salines de Djibouti,3,homberg-o; jambon-c; mingois-g
 salinesdjibouti,salinesdjiboutisfaxmadagascar,Société des salines de Djibouti,"Salines de Djibouti, Sfax et Madagascar",3,guesde-p; jambon-c; mingois-g
 approvisionnementsgenerauxdjibouti,navigationmerrouge,Société d’Approvisionnements généraux à Djibouti,Compagnie française de Navigation en mer Rouge,2,gorchs-chacou-f; michel-cote-c
 cheminferfrancoethiopiendjiboutiaddisabeba,commercialeabyssinie,Compagnie du Chemin de fer franco-éthiopien de Djibouti à Addis-Abeba,Société Commerciale d’Abyssinie,2,famin; michel-cote-c
@@ -30,11 +30,11 @@ cheminferfrancoethiopiendjiboutiaddisabeba,navigationmerrouge,Compagnie du Chemi
 commercialeabyssinie,cotesomalis,Société Commerciale d’Abyssinie,Compagnie française de la Côte des Somalis,1,michel-cote-c
 commercialeabyssinie,maritimeafriqueorientale,Société Commerciale d’Abyssinie,Compagnie Maritime de l'Afrique Orientale,1,michel-cote-c
 commercialeabyssinie,navigationmerrouge,Société Commerciale d’Abyssinie,Compagnie française de Navigation en mer Rouge,1,michel-cote-c
+afriqueorientalemaritimecommerciale,navigationmerrouge,Cie de l'AFRIQUE ORIENTALE MARITIME ET COMMERCIALE,Compagnie française de Navigation en mer Rouge,1,gorchs-chacou-f
 cotesomalis,industrielledjibouti,Compagnie française de la Côte des Somalis,Société Industrielle de Djibouti,1,gimon-c
 industrielledjibouti,maritimeafriqueorientale,Société Industrielle de Djibouti,Compagnie Maritime de l'Afrique Orientale,1,gimon-c
 cheminferfrancoethiopiendjiboutiaddisabeba,industrielledjibouti,Compagnie du Chemin de fer franco-éthiopien de Djibouti à Addis-Abeba,Société Industrielle de Djibouti,1,homberg-o
 cheminferfrancoethiopiendjiboutiaddisabeba,salinesdjibouti,Compagnie du Chemin de fer franco-éthiopien de Djibouti à Addis-Abeba,Société des salines de Djibouti,1,homberg-o
-afriqueorientalemaritimecommerciale,navigationmerrouge,Cie de l'AFRIQUE ORIENTALE MARITIME ET COMMERCIALE,Compagnie française de Navigation en mer Rouge,1,gorchs-chacou-f
 creditindustrielafricain,salinsmidisalinesdjibouti,Crédit industriel africain,Cie des Salins du Midi et des Salines de Djibouti,1,rousset-bert-h
 africainecommercerepresentation,salinsmidisalinesdjibouti,Société africaine de commerce et de représentation,Cie des Salins du Midi et des Salines de Djibouti,1,lemaignen-r
 africainecommercerepresentation,minassian,Société africaine de commerce et de représentation,Minassian et Cie,1,savon-l

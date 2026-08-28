@@ -27,6 +27,8 @@ Three decisions worth knowing, all of them consequential:
    then applied to each slice.** Resolving within each slice would give the
    same individual a different id in Morocco and in Indochina, which would
    silently destroy exactly the transcolonial careers this dataset is for.
+   The ids are *read* from `person_resolution.csv` rather than recomputed, so
+   they are stage 4's own decisions and cannot drift from the top-level files.
 
 3. **`Empire (transversal)` is not a country.** It is the source's grouping for
    firms and groups operating across several colonies, and it is the largest
@@ -52,7 +54,7 @@ from build_network import (  # noqa: E402
     BOARD_ROLES,
     period_of,
     read_csv,
-    resolve_persons,
+    person_id_for,
     write_graphml,
 )
 from common import ensure_dir, slugify  # noqa: E402
@@ -318,11 +320,24 @@ def run_level(level: str, min_ties: int) -> list[dict]:
     companies = read_csv("companies.csv")
     company_names = {c["company_id"]: c["name"] for c in companies}
 
-    # Person ids resolved once, globally - see the module docstring.
+    # Person ids come from stage 4's crosswalk rather than being recomputed
+    # here. Recomputing looked equivalent and was not: this stage sees only
+    # `affiliations.csv`, while stage 4 resolves over all five genres, so the
+    # two ran on different key populations and could disagree about a fold or a
+    # split. The bundles promise ids that match the top-level files, so they
+    # have to be stage 4's ids.
+    res = read_csv("person_resolution.csv")
+    if not res:
+        raise SystemExit("person_resolution.csv missing - run src/build_network.py first")
+    mapping = {r["person_key"]: r["person_key_resolved"] for r in res}
+    splits: dict[str, set] = {}
+    for r in res:
+        if r.get("split_forenames"):
+            splits[r["person_key_resolved"]] = set(r["split_forenames"].split("; "))
+
     usable = [r for r in affiliations if r["company_key"] and r["person_key"]]
-    mapping, _ = resolve_persons(usable)
     for r in usable:
-        r["person_id"] = mapping.get(r["person_key"], r["person_key"])
+        r["person_id"] = person_id_for(r, mapping, splits)
         r["period"] = period_of(r["year"])
         r["is_board_seat"] = 1 if r["role"] in BOARD_ROLES else 0
 

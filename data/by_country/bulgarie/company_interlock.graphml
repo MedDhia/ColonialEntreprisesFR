@@ -9,17 +9,17 @@
     <node id="miniereindustrielleplakalnitza">
       <data key="n_label">Société minière et industrielle de Plakalnitza</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">15</data>
+      <data key="n_n_directors">16</data>
       <data key="n_territory">Bulgarie</data>
     </node>
     <node id="plakalnitza">
       <data key="n_label">PLAKALNITZA</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">18</data>
+      <data key="n_n_directors">14</data>
       <data key="n_territory">Bulgarie</data>
     </node>
     <edge id="e0" source="miniereindustrielleplakalnitza" target="plakalnitza">
-      <data key="e_weight">5</data>
+      <data key="e_weight">9</data>
     </edge>
   </graph>
 </graphml>

@@ -1,115 +1,171 @@
 company_id,name,sectors,n_ties,n_directors,first_year,last_year
-gafsa,Gafsa,Mines,131,49,1920,1953
-banquetunisie,Banque de Tunisie,"Banques et groupes financiers, assurances",63,43,1886,1951
-banqueitalienneescomptebancaitalianadiscontorome,"Banque italienne d'escompte Banca italiana di sconto, Rome","Banques et groupes financiers, assurances",37,32,1920,1922
-phosphatestunisiens,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",Documents généraux (par ordre chronologique); Mines,41,30,1938,1948
-boujaber,BOU-JABER,Documents généraux (par ordre chronologique); Mines,34,30,1925,1928
-minierekanguet,"Société minière du Kanguet, puis Société nouvelle du Kanguet",Documents généraux (par ordre chronologique); Mines,58,29,1912,1950
-etablissementsluchaire,Établissements LUCHAIRE,Documents généraux (par ordre chronologique),31,29,1925,1925
-tramwaystunis,Tramways de Tunis,"Eau, gaz, électricité (Utilities)",66,27,1914,1953
-exploitationsminierestunisie,Exploitations minières en Tunisie,Mines,37,27,1927,1948
-phosphatescheminfergafsa,Cie des PHOSPHATES ET DU CHEMIN DE FER DE GAFSA,Documents généraux (par ordre chronologique),33,27,1944,1944
-cheminsfertunisiens,Chemins de fer tunisiens,"Transports terrestres, garages automobiles et agricoles",50,26,1931,1953
-fichet,FICHET,Documents généraux (par ordre chronologique),26,26,1925,1925
-vignobleszayana,Société des Vignobles de Zayana,Industries agro-alimentaires,50,23,1927,1953
-velvetrum,VELVET-RUM,Documents généraux (par ordre chronologique),23,23,1921,1921
-huileriessaheltunisien,Société générale des Huileries du Sahel tunisien,Documents généraux (par ordre chronologique); Industries agro-alimentaires,57,22,1895,1953
-minesgarnalfaya,Mines de Garn-Alfaya,Mines,56,22,1917,1953
-tunisiennecultures,Société Tunisienne de cultures,Industries agro-alimentaires,56,22,1927,1953
-djebeldjerissa,Société du Djebel-Djerissa,Documents généraux (par ordre chronologique); Mines,39,21,1907,1933
-portstunissoussesfax,"Compagnie des Ports de Tunis, Sousse et Sfax",Transports maritimes et aériens,50,20,1897,1938
-dalmatienne,La Dalmatienne,Mines,29,20,1940,1948
-minieredjebellorbeus,Compagnie minière du Djebel-Lorbeus,Mines,20,20,1913,1925
-phosphatescheminsfergafsa,Compagnie des phosphates et chemins de fer de Gafsa,Mines,20,20,1898,1906
-minesmetalliquesbeja,Société Française de mines métalliques de Béja,Documents généraux (par ordre chronologique); Mines,34,18,1902,1944
-commercialetunisienne,Société Commerciale Tunisienne,Documents généraux (par ordre chronologique),19,17,1938,1938
-escande,"Escande & Cie, puis Richy et Warkin",Documents généraux (par ordre chronologique),17,17,1938,1938
-salinesdjiboutimadagascar,Salines de Djibouti et de Madagascar,Mines,39,16,1929,1945
-bazina,Société française du Bazina,Mines,26,16,1937,1948
-minesdjebelressas,Société des mines du Djebel-Ressas,Documents généraux (par ordre chronologique); Mines,25,16,1906,1938
-tabourin,Tabourin,Documents généraux (par ordre chronologique),15,15,1938,1938
-minierefrancotunisienne,Compagnie Minière franco-tunisienne,Documents généraux (par ordre chronologique); Mines,23,14,1907,1938
-salinesdjiboutisfaxmadagascar,"Salines de Djibouti, Sfax et Madagascar",Mines,22,14,1914,1947
+banquetunisie,Banque de Tunisie,"Banques et groupes financiers, assurances; Documents généraux (par ordre chronologique)",81,46,1892,1951
+gafsa,Gafsa,Mines,127,45,1920,1953
+djebeldjerissa,Société du Djebel-Djerissa,Mines,91,35,1917,1953
+phosphatescheminsfergafsa,Compagnie des phosphates et chemins de fer de Gafsa,Mines,33,32,1898,1926
+minieredjebellorbeus,Compagnie minière du Djebel-Lorbeus,Documents généraux (par ordre chronologique); Mines,49,29,1913,1926
+banqueitalienneescomptebancaitalianadiscontorome,"Banque italienne d'escompte Banca italiana di sconto, Rome","Banques et groupes financiers, assurances",34,29,1920,1922
+minierekanguet,"Société minière du Kanguet, puis Société nouvelle du Kanguet",Documents généraux (par ordre chronologique); Mines,62,28,1912,1950
+gazregiecointeresseeeauxtunis,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,"Documents généraux (par ordre chronologique); Eau, gaz, électricité (Utilities)",74,26,1887,1948
+tramwaystunis,Tramways de Tunis,"Eau, gaz, électricité (Utilities)",64,26,1914,1953
+phosphatestunisiens,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",Mines,37,26,1926,1948
+etablissementsluchaire,Établissements LUCHAIRE,Documents généraux (par ordre chronologique),25,25,1925,1925
+minesgarnalfaya,Mines de Garn-Alfaya,Mines,56,24,1917,1953
+cheminsfertunisiens,Chemins de fer tunisiens,"Transports terrestres, garages automobiles et agricoles",46,23,1931,1953
+commercialetunisienne,Société Commerciale Tunisienne,Documents généraux (par ordre chronologique); Transports maritimes et aériens,28,23,1922,1938
+vignobleszayana,Société des Vignobles de Zayana,Industries agro-alimentaires,49,22,1927,1953
+socvelvetrum,Soc. an. du VELVET-RUM,Documents généraux (par ordre chronologique),21,21,1921,1921
+tunisiennepetroles,Société Tunisienne des Petroles,Commerce; Pétrole et gaz,25,20,1920,1926
+huileriessaheltunisien,Société générale des Huileries du Sahel tunisien,Industries agro-alimentaires,52,19,1895,1953
+exploitationsminierestunisie,Exploitations minières en Tunisie,Mines,34,19,1927,1948
+socalsaciennefilaturetissagejute,Soc. alsacienne de FILATURE et de TISSAGE de JUTE,Documents généraux (par ordre chronologique),19,19,1925,1925
+tunisiennecultures,Société Tunisienne de cultures,Industries agro-alimentaires,51,18,1927,1953
+salinesdjiboutisfaxmadagascar,"Salines de Djibouti, Sfax et Madagascar",Mines,34,18,1914,1947
+minesmetalliquesbeja,Société Française de mines métalliques de Béja,Mines,28,18,1902,1925
+dalmatienne,La Dalmatienne,Mines,26,18,1940,1948
+commercialeafriquenord,Société de Commerciale de l'Afrique du Nord,Industries agro-alimentaires,23,18,1919,1922
+portstunissoussesfax,"Compagnie des Ports de Tunis, Sousse et Sfax",Documents généraux (par ordre chronologique); Transports maritimes et aériens,60,17,1897,1944
+salinesdjiboutimadagascar,Salines de Djibouti et de Madagascar,Mines,37,16,1929,1945
+bazina,Société française du Bazina,Mines,27,16,1937,1948
+boulonneriesbognybraux,BOULONNERIES de BOGNY-BRAUX,Documents généraux (par ordre chronologique),18,16,1925,1925
+floridienne,La Floridienne,Mines,17,16,1926,1926
+minesplombzinckohol,Société des Mines de plomb et de zinc du Kohol,Mines,23,15,1924,1938
 recherchesminieresfalta,Société de Recherches minières du Falta,Mines,16,14,1929,1951
-mineszaghouan,MINES DE ZAGHOUAN,Documents généraux (par ordre chronologique),14,14,1925,1925
-domainepotinville,Domaine de Potinville,Industries agro-alimentaires,24,13,1937,1958
-commercialeafriquenord,Société de Commerciale de l'Afrique du Nord,Industries agro-alimentaires,16,13,1919,1919
-stationshivernalesafricaines,Stations hivernales africaines,"Hôtellerie, tourisme",14,13,1900,1912
-gazregiecointeresseeeauxtunis,Compagnie du Gaz et régie co-intéressée des eaux de Tunis,"Eau, gaz, électricité (Utilities)",23,11,1887,1942
-agricoleimmobilierefrancoafricaine,Société agricole et immobilière franco-africaine,Industries agro-alimentaires,20,11,1940,1948
-tunisiennepetroles,Société Tunisienne des Petroles,Pétrole et gaz,14,11,1920,1920
-auget,AUGET,Documents généraux (par ordre chronologique),12,11,1938,1938
-phosphates,Cie des PHOSPHATES,Documents généraux (par ordre chronologique),12,11,1938,1938
+tunisiennephosphatesdjebelmdilla,Compagnie tunisienne des Phosphates du Djebel-M'dilla,Documents généraux (par ordre chronologique); Mines,47,13,1925,1944
+fermierecheminsfertunisiens,Cie Fermière des chemins de fer tunisiens,"Transports terrestres, garages automobiles et agricoles",34,13,1924,1933
+minesdjebelressas,Société des mines du Djebel-Ressas,Mines,24,13,1906,1938
+minierefrancotunisienne,Compagnie Minière franco-tunisienne,Documents généraux (par ordre chronologique); Mines,21,13,1907,1938
+immobilieretunisie,Société Immobilière de Tunisie,Industries agro-alimentaires; Sociétés foncières et immobilières,19,13,1892,1926
+salinestunisie,Société des Salines de Tunisie,Mines,17,13,1920,1926
+belgeminesreunies,Société belge des Mines réunies,Mines,15,13,1922,1922
+mines,"Société des mines de, puis Société minière et agricole du Garn-Alfaya",Mines,15,13,1922,1926
+nebida,Société de Nebida,Mines,15,13,1922,1922
+portbizerte,Société du Port de Bizerte,Documents généraux (par ordre chronologique); Transports maritimes et aériens,13,13,1926,1938
+1911djebelhallouf,"S.A., 1911 Djebel Hallouf",Mines,13,13,1912,1922
+tunisiennelineriesfeuillette,Société tunisienne des Lineries Feuillette,Industries diverses,13,13,1920,1922
+atelierschantiersmaritimestunisie,Ateliers et chantiers maritimes de Tunisie,Documents généraux (par ordre chronologique); Industries diverses,24,12,1922,1938
+domainepotinville,Domaine de Potinville,Industries agro-alimentaires,22,12,1937,1958
+fermiereelectriquesousse,Société Fermiere de la Compagnie électrique de Sousse,"Eau, gaz, électricité (Utilities)",15,12,1922,1926
+minesfedjeladoum,Société des mines de Fedj-el-Adoum,Mines,14,12,1911,1938
+stationshivernalesafricaines,Stations hivernales africaines,"Hôtellerie, tourisme",13,12,1900,1912
+beniniguez,Benini GUEZ,Documents généraux (par ordre chronologique),12,12,1938,1938
+sidibouaouane,Sidi-Bou-Aouane,Mines,24,11,1922,1937
+agricoleimmobilierefrancoafricaineenfida,Société agricole et immobilière franco-africaine Enfida,Industries agro-alimentaires,16,11,1922,1926
+syndicatminesdjebeltrozzadjebelserdj,Syndicat des MINES du DJEBEL-TROZZA et DJEBEL SERDJ,Documents généraux (par ordre chronologique),15,11,1925,1938
+huileriefrancotunisienne,Huilerie franco-tunisienne,Documents généraux (par ordre chronologique); Industries agro-alimentaires,11,11,1926,1938
+etablissementskern,Etablissements KERN,Documents généraux (par ordre chronologique),11,11,1938,1938
 foncierafricain,Foncier africain français,Sociétés foncières et immobilières,11,11,1928,1928
-tunisiennephosphatesdjebelmdilla,Compagnie tunisienne des Phosphates du Djebel-M'dilla,Mines,11,10,1925,1925
-feutresrok,FEUTRES ROK,Documents généraux (par ordre chronologique),10,10,1925,1925
-michenot,Michenot,Documents généraux (par ordre chronologique),10,10,1925,1925
+energieelectriquevillebizerte,Société d'Énergie électrique de la ville de Bizerte,"Eau, gaz, électricité (Utilities)",22,10,1911,1953
+agricoleimmobilierefrancoafricaine,Société agricole et immobilière franco-africaine,Industries agro-alimentaires,18,10,1940,1948
+minesdouaria,Société des mines de Douaria,Mines,13,10,1910,1938
 groupeschwichbaizeauavecparticipationminoritairelafargecimentsartificielstunisiens,groupe Schwich et Baizeau avec participation minoritaire de Lafarge Ciments artificiels tunisiens,"Bâtiment et travaux publics, matériaux de construction, céramique",10,10,1932,1932
 creditfonciertunisie,Crédit foncier de Tunisie,"Banques et groupes financiers, assurances",10,10,1881,1906
 phosphatesaintagabougamouche,Compagnie des Phosphates d'Aïn-Taga et Bou-Gamouche,Mines,10,10,1907,1907
-tunisiennelineriesfeuillette,Société tunisienne des Lineries Feuillette,Industries diverses,10,10,1920,1920
-energieelectriquevillebizerte,Société d'Énergie électrique de la ville de Bizerte,"Eau, gaz, électricité (Utilities)",19,9,1911,1953
-industrielle,Compagnie générale industrielle,Documents généraux (par ordre chronologique),14,9,1938,1938
-exploitationsminieressidibouaouane,Société d'exploitations minières de Sidi-Bou-Aouane,Mines,14,9,1940,1953
-huileriefrancotunisienne,Huilerie franco-tunisienne,Documents généraux (par ordre chronologique),11,9,1938,1938
-unionfrancosyriennecomptoirsmediterraneens,Union franco-syrienne COMPTOIRS FRANÇAIS MÉDITERRANÉENS,Documents généraux (par ordre chronologique),10,9,1925,1925
-minesalgerietunisieomnium,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Documents généraux (par ordre chronologique),9,9,1925,1925
-aerienne,Compagnie Aérienne française,Documents généraux (par ordre chronologique),9,9,1938,1938
-milazzo,MILAZZO,Documents généraux (par ordre chronologique),9,9,1938,1938
+immobilierenordafricaineferryville,"Société Immobilière Nord-Africaine, Ferryville",Sociétés foncières et immobilières,15,9,1922,1926
+metallurgiquetunisie,Métallurgique de Tunisie,Documents généraux (par ordre chronologique); Industries diverses,12,9,1926,1938
+mineszincainnouba,Société des mines de zinc d'Aïn-Nouba,Mines,11,9,1911,1925
+belgeminesdjebelslatadjebelhameima,Société belge des mines du Djebel-Slata et Djebel-Hameïma,Mines,9,9,1922,1922
 francotunisiennecommercialeindustrielleagricole,"Société Franco-Tunisienne Commerciale, Industrielle et Agricole",Industries agro-alimentaires,9,9,1904,1904
-afriquenord,AFRIQUE DU NORD,Documents généraux (par ordre chronologique),8,8,1938,1938
-minesfedjeladoum,Société des mines de Fedj-el-Adoum,Mines,8,8,1911,1938
-phosphatesmaknassy,Phosphates de Maknassy,Mines,8,8,1910,1917
-mineszincainnouba,Société des mines de zinc d'Aïn-Nouba,Mines,10,7,1911,1925
-africainearmement,Compagnie Africaine d'Armement,Documents généraux (par ordre chronologique),7,7,1925,1925
-produitschimiquesengrais,PRODUITS CHIMIQUES ET D'ENGRAIS,Documents généraux (par ordre chronologique),7,7,1944,1944
+huileriesraffineriesafricaines,Huileries et raffineries africaines,Industries agro-alimentaires,9,9,1926,1926
+boujaber,BOU-JABER,Mines,9,9,1927,1928
+minierebazina,"Société minière du Bazina, puis Bazina",Mines,9,8,1923,1926
+socdjebeldjerissa,Soc. du DJEBEL-DJERISSA,Documents généraux (par ordre chronologique),8,8,1925,1925
+aerienne,Compagnie Aérienne française,Documents généraux (par ordre chronologique),8,8,1938,1938
+batiment,BATIMENT,Documents généraux (par ordre chronologique),8,8,1938,1938
+maritimetunisienne,Cie Maritime Tunisienne,Transports maritimes et aériens,8,8,1926,1926
+etudeshautsfourneauxacieriestunisie,Société d'Études des hauts fourneaux et aciéries en Tunisie,Industries diverses,8,8,1926,1926
+fonderiesmegrinefilialemetallgeselschaft,"Société des Fonderies de Mégrine, filiale de la Metallgeselschaft, puis de Peñarroya",Industries diverses,8,8,1914,1926
+immeubleslyonnaisferryville,Immeubles lyonnais de Ferryville,Sociétés foncières et immobilières,8,8,1926,1926
+nordafricaineelectricitegazeaux,"Société Nord-Africaine d'Électricité, gaz et eaux","Eau, gaz, électricité (Utilities)",8,8,1926,1926
+phosphatesdyr,Compagnie des Phosphates du Dyr,Documents généraux (par ordre chronologique),9,7,1944,1944
+djebeldjegaga,Société Djebel-Djegaga,Mines,9,7,1923,1926
+corderiesseine,CORDERIES DE LA SEINE,Documents généraux (par ordre chronologique),8,7,1925,1925
+francotunisienneimmobiliereagricolecommerciale,"Société Franco-Tunisienne Immobilière, Agricole et Commerciale",Sociétés foncières et immobilières,7,7,1926,1926
+minesferkroumirienefzas,Société des mines de fer de Kroumirie et des Nefzas,Mines,7,7,1922,1922
+omniumimmobiliertunisien,Omnium immobilier tunisien,Industries agro-alimentaires,7,7,1926,1926
 phosphatesgouraia,Phosphates de Gouraïa,Mines,7,7,1911,1911
-minesplombzinckohol,Société des Mines de plomb et de zinc du Kohol,Mines,7,7,1924,1924
-safti,SAFTI,Documents généraux (par ordre chronologique),26,6,1921,1921
-tunisiennegazcomprimes,Société Tunisienne de Gaz comprimés,Industries diverses,6,6,1914,1914
-alfastunisiens,Compagnie Générale des Alfas tunisiens,"Bois meubles, papier",6,6,,
-goodrich,GOODRICH,Documents généraux (par ordre chronologique),6,6,1925,1925
-kohol,KOHOL,Documents généraux (par ordre chronologique),6,6,1938,1938
-minesdjebelsekarna,Société des mines du Djebel-Sekarna,Documents généraux (par ordre chronologique),6,6,1938,1938
+phosphatesmaknassy,Phosphates de Maknassy,Mines,7,7,1910,1917
+minesdjebeltouila,Compagnie des mines du Djebel-Touila,Documents généraux (par ordre chronologique); Mines,13,6,1912,1938
+socminesdjebelressas,Soc. des MINES DU DJEBEL-RESSAS,Documents généraux (par ordre chronologique),9,6,1925,1938
+acconagecharbonstunisie,Société d'Acconage et de charbons de Tunisie,Transports maritimes et aériens,7,6,1926,1926
+socfrsebfgoodrich,Soc. frse B. F GOODRICH,Documents généraux (par ordre chronologique),6,6,1925,1925
+socgenhuileriessaheltunisien,Soc. gén. des HUILERIES DU SAHEL TUNISIEN,Documents généraux (par ordre chronologique),6,6,1925,1925
+socminesmetalliquesbeja,Soc. française des MINES MÉTALLIQUES DE BÉJA,Documents généraux (par ordre chronologique),6,6,1944,1944
+sacunion,SAC-UNION,Documents généraux (par ordre chronologique),6,6,1944,1944
+socminesplombzinckohol,Soc. des mines de plomb et de zinc du KOHOL,Documents généraux (par ordre chronologique),6,6,1938,1938
 chauxcimentsfranceafriquenord,Société des Chaux et Ciments France-Afrique du Nord,"Bâtiment et travaux publics, matériaux de construction, céramique",6,6,1929,1929
-fonderiesmegrinefilialemetallgeselschaft,"Société des Fonderies de Mégrine, filiale de la Metallgeselschaft, puis de Peñarroya",Industries diverses,6,6,1914,1914
-salinestunisie,Société des Salines de Tunisie,Mines,6,6,1920,1920
+fonciereagricole,Foncière et Agricole Française,Industries agro-alimentaires,6,6,1922,1922
+olivettesmaiana,Société des Olivettes du Maïana,Industries agro-alimentaires,6,6,1926,1926
+olivettessudtunisien,Société des Olivettes du Sud-Tunisien,Industries agro-alimentaires,6,6,1926,1926
+phosphatesouartane,Compagnie des Phosphates des Ouartane,Mines,6,6,1920,1922
+etablissementsschwichbaizeau,Établissements Schwich et Baizeau,"Bâtiment et travaux publics, matériaux de construction, céramique",6,6,1926,1926
+sidichemmak,Société Sidi Chemmak,"Banques et groupes financiers, assurances",6,6,1926,1926
 minierenordafricain,Société Minière du Nord-Africain,Mines,6,6,1937,1937
-minesdjebeltouila,Compagnie des mines du Djebel-Touila,Mines,7,5,1912,1938
+tunisiennemagasinsgenerauxentrepots,Société Tunisienne de magasins généraux et entrepôts,"Transports terrestres, garages automobiles et agricoles",6,6,1926,1926
+socfrsetransactionsinternationalessafti,Soc. an. frse de transactions internationales SAFTI,Documents généraux (par ordre chronologique),23,5,1921,1921
+exploitationsminieressidibouaouane,Société d'exploitations minières de Sidi-Bou-Aouane,Mines,10,5,1940,1953
+foncieretunisie,Compagnie Foncière de Tunisie,Sociétés foncières et immobilières,7,5,1924,1926
+tunisienneminieremetallurgique,Société Tunisienne Minière et Métallurgique,Industries diverses,7,5,1922,1926
+alfastunisiens,Compagnie Générale des Alfas tunisiens,"Bois meubles, papier",5,5,,
+minesalgerietunisieomnium,MINES D'ALGÉRIE-TUNISIE « OMNIUM »,Documents généraux (par ordre chronologique),5,5,1925,1925
+antoinemilazzo,Antoine MILAZZO,Documents généraux (par ordre chronologique),5,5,1938,1938
+socminesdjebelsekarna,Soc. des MINES du DJEBEL-SEKARNA,Documents généraux (par ordre chronologique),5,5,1938,1938
+socminesfedjeladoum,Soc. des MINES de FEDJ-EL-ADOUM,Documents généraux (par ordre chronologique),5,5,1938,1938
+centresud,Centre et Sud,Industries agro-alimentaires,5,5,1926,1926
 minieredjebelboumouss,Société minière du Djebel-Bou-Mouss,Mines,5,5,1928,1928
-djebeldjegaga,Société Djebel-Djegaga,Mines,5,5,1923,1923
-1911djebelhallouf,"S.A., 1911 Djebel Hallouf",Mines,5,5,1912,1912
-immobilieremaroc,Société Immobilière au Maroc,"Eau, gaz, électricité (Utilities)",5,5,1951,1951
+etsboyoud,Ets Boyoud,"Bois meubles, papier",5,5,1926,1926
 hydrauliquetunisienne,Société Hydraulique Tunisienne,"Bâtiment et travaux publics, matériaux de construction, céramique",5,5,1920,1920
-minesdouaria,Société des mines de Douaria,Mines,5,5,1910,1910
+immobilieretunisienne,Société Immobilière tunisienne,Sociétés foncières et immobilières,5,5,1926,1926
+minesnefate,Société des mines de Nefate,Mines,5,5,1913,1922
+djimla,Société de Djimla,Industries agro-alimentaires,5,5,1926,1926
 salinesdjibouti,Société des salines de Djibouti,Mines,5,5,1927,1927
-mineskefchambi,Société des mines du Kef-Chambi,Mines,5,4,1909,1909
-cheddites,CHEDDITES,Documents généraux (par ordre chronologique),4,4,1938,1938
-entreprisesmaritimes,Société Française d'Entreprises maritimes,Documents généraux (par ordre chronologique),4,4,1938,1938
+agricoleimmobilieretunisienne,Agricole Immobiliere Tunisienne,Industries agro-alimentaires,4,4,1926,1926
+tunisiennegazcomprimes,Société Tunisienne de Gaz comprimés,Industries diverses,4,4,1914,1914
+socfrseminesdjebelhallouf,Soc. an. frse des MINES du DJEBEL-HALLOUF,Documents généraux (par ordre chronologique),4,4,1925,1925
+colonisationouedramel,Société de Colonisation de l’Oued Ramel,Industries agro-alimentaires,4,4,1926,1926
+commercialeafricaine,Commerciale Africaine,Commerce,4,4,1926,1926
 minesdjebelhallouf,MINES du DJEBEL HALLOUF,Mines,4,4,1925,1925
 djebelhalloufsocfes,DJEBEL HALLOUF (Soc. an. Fes,Mines,4,4,1938,1938
+francotunisienneentreprisestravauxmetalliques,Société Franco-Tunisienne d’Entreprises et de travaux métalliques,Industries diverses,4,4,1922,1922
+immobilieremaroc,Société Immobilière au Maroc,"Eau, gaz, électricité (Utilities)",4,4,1951,1951
+industrieschimiquespharmaceutiquesjarmon,Société d'industries chimiques et pharmaceutiques Jarmon & Cie,Industries diverses,4,4,1926,1926
 minesdjebeldiss,Société des mines du Djebel-Diss,Mines,4,4,1928,1928
-minesdjebeltabouna,Société des mines du Djebel-Tabouna,Mines,4,4,1937,1937
-phosphatesouartane,Compagnie des Phosphates des Ouartane,Mines,4,4,1920,1920
-salinessfax,Salines de Sfax,Mines,4,4,1912,1912
+mineskefchambi,Société des mines du Kef-Chambi,Mines,4,4,1909,1909
+navigationpechetunisie,Société de Navigation et de pêche en Tunisie,Transports maritimes et aériens,4,4,1926,1926
+ruraletunisienne,La Rurale Tunisienne,Industries agro-alimentaires,4,4,1926,1926
+tunisiennefonciereagricole,"Société Tunisienne, foncière, agricole",Industries agro-alimentaires,4,4,1926,1926
 tunisiennefonciereagricoleindustrielle,"Compagnie Tunisienne, foncière, agricole et industrielle",Industries agro-alimentaires,4,4,1890,1890
+tunisiennetransportcarburants,Société Tunisienne pour le Transport de carburants,Transports maritimes et aériens,4,4,1926,1926
 minessidibouaouane,Société des mines de Sidi-Bou-Aouane,Mines,6,3,1929,1931
 fermiereminessidibouaouane,Société fermière des mines de Sidi-Bou-Aouane,Mines,6,3,1929,1931
-foncieretunisie,Compagnie Foncière de Tunisie,Sociétés foncières et immobilières,3,3,1924,1924
-huileriessavonneriestunisie,Compagnie française des Huileries et savonneries de Tunisie,Industries agro-alimentaires,3,3,1911,1911
+alimentationtunisiennehammamlif,"Société d'Alimentation tunisienne, Hammam-Lif",Industries agro-alimentaires,4,3,1922,1922
+socgenexplosifscheddites,Soc. gén. d'explosifs CHEDDITES,Documents généraux (par ordre chronologique),3,3,1938,1938
+comptoirminesgrandstravaux,Comptoir des mines et des grands travaux,Commerce,3,3,1926,1926
+foncierefrancotunisienne,Société Foncière Franco-Tunisienne,Sociétés foncières et immobilières,3,3,1926,1926
+forestiereagricolekefdjemil,Forestière et Agricole du Kef Djemil,Industries agro-alimentaires,3,3,1926,1926
+immobiliereitalo,Société Immobilière Italo-Française,Sociétés foncières et immobilières,3,3,1926,1926
+metallurgiquemegrine,Société Métallurgique de Mégrine,Industries diverses,3,3,1909,1909
+minesdjebeltabouna,Société des mines du Djebel-Tabouna,Mines,3,3,1937,1937
+moulinebbaksour,Moulin d’Ebba-Ksour,Industries agro-alimentaires,3,3,1926,1926
+salinessfax,Salines de Sfax,Mines,3,3,1912,1912
 salinssoliman,Salins de Soliman,Mines,3,3,1911,1911
-menzeldjemil,MENZEL-DJEMIL,Documents généraux (par ordre chronologique),3,2,1938,1938
-metallurgiquetunisie,Métallurgique de Tunisie,Industries diverses,3,2,1938,1938
-sibelhassen,SI BEL-HASSEN,Documents généraux (par ordre chronologique),2,2,1938,1938
-minierebazina,"Société minière du Bazina, puis Bazina",Mines,2,2,1923,1923
+tunisoiseindustrielle,La Tunisoise Industrielle,"Bâtiment et travaux publics, matériaux de construction, céramique",3,3,1922,1922
+fonciereagricolevignoblessoukelkhemis,Société foncière et agricole des Vignobles de Souk-el-Khemis,Industries agro-alimentaires,3,3,1926,1926
+socnouvmineszaghouan,Soc. nouv. anon. des MINES DE ZAGHOUAN,Documents généraux (par ordre chronologique),2,2,1925,1925
+auxiliairecommerceagriculture,Société Auxiliaire du Commerce et de l’agriculture,"Transports terrestres, garages automobiles et agricoles",2,2,1926,1926
+domainemegrine,Domaine de Mégrine,Industries agro-alimentaires,2,2,1922,1922
 eauxthermalesdomainekorbous,Compagnie des Eaux thermales et du domaine de Korbous,Santé,2,2,,
-metallurgiquemegrine,Société Métallurgique de Mégrine,Industries diverses,2,2,1909,1909
-minesnefate,Société des mines de Nefate,Mines,2,2,1913,1913
-immobilieretunisie,Société Immobilière de Tunisie,Industries agro-alimentaires,2,2,1892,1892
-thonairebordjkhadidja,Thonaire de Bordj-Khadidja,Industries agro-alimentaires,2,2,,
-entreprises,ENTREPRISES,Documents généraux (par ordre chronologique),1,1,1938,1938
-monastierienne,MONASTIÈRIENNE,Documents généraux (par ordre chronologique),1,1,1938,1938
+etshugon,Éts Hugon,Commerce,2,2,1926,1926
+etsvconstantin,Ets V. Constantin & Cie,"Eau, gaz, électricité (Utilities)",2,2,1926,1926
+huileriessavonneriestunisie,Compagnie française des Huileries et savonneries de Tunisie,Industries agro-alimentaires,2,2,1911,1911
+morellivet,Morel & Livet,"Bois meubles, papier",2,2,1926,1926
+socfeutresrok,Soc. an. des FEUTRES ROK,Documents généraux (par ordre chronologique),11,1,1925,1925
+socfrseentreprisesmaritimes,Soc. frse d'ENTREPRISES MARITIMES,Documents généraux (par ordre chronologique),1,1,1938,1938
+socsibelhassen,Soc. de SI BEL-HASSEN,Documents généraux (par ordre chronologique),1,1,1938,1938
 magasinsgenerauxentrepotreeltunis,Magasins généraux et entrepôt réel de Tunis,Transports maritimes et aériens,1,1,1907,1907
-auxiliairenavigation,Cie Auxiliaire de navigation,Documents généraux (par ordre chronologique),20,0,1944,1944
-georgessprecher,Georges Sprecher,Commerce,3,0,1933,1933
+motoculturenordafricaine,La Motoculture nord-africaine,"Transports terrestres, garages automobiles et agricoles",1,1,1922,1922
+thonairebordjkhadidja,Thonaire de Bordj-Khadidja,Industries agro-alimentaires,1,1,,
+auxiliairenavigation,Cie Auxiliaire de navigation,Documents généraux (par ordre chronologique),19,0,1944,1944
+socindustrielle,Soc. an INDUSTRIELLE,Documents généraux (par ordre chronologique),2,0,1938,1938
+georgessprecher,Georges Sprecher,Commerce,2,0,1933,1933
 coloniale,La Nouvelle Coloniale,"Banques et groupes financiers, assurances",2,0,1927,1927

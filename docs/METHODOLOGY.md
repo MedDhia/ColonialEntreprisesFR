@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Eight stages, each resumable, each writing its own outputs:
+Ten stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -40,14 +40,79 @@ Eight stages, each resumable, each writing its own outputs:
    plus `text_extraction.csv`.
 3. **`parse_ties.py`** — text → `affiliations.csv`, `org_affiliations.csv`,
    `company_attributes.csv`, `doc_references.csv`.
+3b. **`parse_person_index.py`** — inverted indexes → person → company ties
+   the dossier parser cannot see (§2b).
+3c. **`parse_prose.py`** — boards reported in running prose (§4d).
+3d. **`resolve_annotations.py`** — the compiler's inline affiliation notes,
+   resolved against the company list (§4e). Needs `companies.csv`, so it runs
+   after a first pass of stage 4.
+3e. **`parse_biographies.py`** — biographical dictionaries (§4f). Also runs
+   after a first pass of stage 4.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
+   All five genres are merged by default; `--no-person-index`, `--no-prose`,
+   `--no-annotations` and `--no-biographical` drop one each.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
+6b. **`centrality.py`** — interlock graph → exact betweenness per firm (§5e).
+6c. **`geocode.py`** — addresses → a city per firm, below colony level (§5f).
 7. **`make_figures.py`** — network → the core figures, HTML and SVG (§5d).
 8. **`make_territory_figures.py`** — network → the whole-empire figure, the
    territory matrix and one figure per territory (§5d).
+9. **`render_png.py`** — every figure → PNG, one network per file.
+10. **`make_geo_figure.py`** — places → the interlock network on the map (§5f).
 
-`checks.py` validates the parsers and the built dataset (422 assertions).
+Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
+tree with the territory, region and sector labels in English. Firm and person
+names are left in French throughout: a company's name is a legal name rather
+than a description, and an English rendering of it would be a string that
+appears in no archive or authority file. The category vocabulary is a
+description and is translated, in `data/reference/labels_en.csv` — 183 rows,
+which `checks.py` asserts is complete against the data.
+
+`checks.py` validates the parsers and the built dataset (876 assertions).
+
+## 2b. What is *not* extracted
+
+Extraction of the PDFs is near-complete: 5,867 of 5,920 documents (99.2%), the
+rest dead links. Turning that text into ties is not.
+
+Four denominators are easy to confuse, so they are stated once here and used
+consistently: **5,920** documents are catalogued, **5,874** have a text file,
+**5,867** extract cleanly, and **5,863** carry usable text — the four that fall
+out hold under 200 characters, a header and nothing else. Tie coverage is
+measured against that last figure. **3,592 of the 5,863 (61%) yield at least
+one tie**; the other 2,271 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
+(42%) and 47% — stages 3b–3e, below, are what closed the gap. This section
+says what is still in the residue, because a reader is otherwise entitled to
+assume the pipeline saw everything.
+
+Sorting the 2,271 zero-tie documents by how much board vocabulary they
+contain (the same counting rule as before, so the rows are comparable):
+
+| Role words in the text | Documents | Was | Reading |
+|---|---|---|---|
+| none | 499 | 563 | genuinely no board data |
+| 1–4 | 722 | 986 | a passing mention in prose |
+| 5–24 | 792 | 1,307 | mostly honours lists and prose histories |
+| 25 or more | 256 | 530 | a different genre the parsers do not read |
+
+The last row is the real gap, and it is not one thing:
+
+- **Inverted indexes.** The entry is a person and the list is of companies,
+  keyed by number to a companion list. `parse_ties.py` cannot see these at
+  all. Stage 3b now reads them — see §4c — and recovers 15,679 ties from
+  `Annuaire Desfossés 1956` alone, a document that previously yielded zero.
+- **Biographical dictionaries** (*Qui êtes-vous ? 1924*, *Légion d'honneur en
+  Indochine*), where affiliations sit in a bracketed `[Administrateur : …]`
+  block after fielded prose. Stage 3e reads these — see §4f.
+- **Honours lists** (*Mérite agricole*, 1.1M characters). These score high on
+  role vocabulary but carry *occupations*, not directorships — "propriétaire
+  et colon", "vétérinaire à Oran". Correctly excluded; counting them would
+  inflate the network with ties that do not exist.
+
+One further gap is quantified elsewhere: **9,136 parsed ties (12.5%)** are
+dropped for want of an identifiable firm (§5). The compiler's annotation leads
+are now resolved as far as they go (§4e).
 
 ### The extraction trap
 
@@ -131,8 +196,19 @@ initials, then leading recognised forenames, with a positional fallback for
 forenames not on the list. Handled registers: initials (`A. R. Fontaine`),
 surname-first with parentheses (`PHILIPPAR (Edmond)`) and without
 (`Chabert Pierre`), nobiliary and Dutch/German particles (`de Margerie`,
-`Van Nierop`), and the sources' in-place expanded initials
-(`P(aul) Delorme`).
+`Van Nierop`), and the two ways the compiler restores a forename the source
+abbreviated — expanding an initial in place (`G[eorges] Hersent`) and
+supplying the whole name ahead of the surname (`[Charles] Michel-Côte`).
+
+Those two conventions were, for most of this dataset's life, thrown away. The
+rule accepted only parentheses, `P(aul) Delorme` — a form that occurs **zero**
+times in the corpus — while the bracketed form occurs 7,802 times and the
+leading form 7,388. All 15,190 were read as annotations and discarded, which
+matters more than a lost forename: the person splitter below works from
+exactly this evidence. Recovering them raised the share of ties carrying a
+full forename to 47%. The leading form is the ambiguous one, since
+`[Phosphates] Océanie` has the same shape, so the bracketed word must be an
+attested forename before it folds in.
 
 Two refusals are deliberate. After an honorific, a name followed by a
 particle is **not** split — `baron Carton de Wiart` keeps `Carton de Wiart`
@@ -142,20 +218,57 @@ inside the surname, so `Carlos de Barros Soares Branco` becomes one surname
 rather than a guess.
 
 `person_key` = normalised surname + first given initial (`fontaine-a`).
-`build_network.py` then applies **one** further fold: a surname-only key is
-merged into a surname-plus-initial key when that key is unique for the
-surname *and* the combined observation years fit within a 60-year career.
-`Katz` folds into `katz-m`; it would not if an `E. Katz` also existed, nor if
-the years implied a 90-year career. Refusals are recorded as
-`unfolded_ambiguous` or `unfolded_year_span` in `person_resolution.csv`,
-which is the complete audit trail.
+`build_network.py` then resolves it in **both** directions, and records every
+decision in `person_resolution.csv`.
 
-**What this does not do.** Two contemporaries who share a surname and a first
-initial are one node. Given the composition of this elite — Fontaine,
-Hersent, Denis, Gradis and Homberg all appear as families operating across
-several firms — that is a real and unquantified source of inflated degree.
-The countermeasure available to you is `merged_keys`, `name_variants` and the
-year span on every person node.
+**Folding**, for keys that are too fine. A surname-only key is merged into a
+surname-plus-initial key when that key is unique for the surname *and* the
+combined observation years fit within a 60-year career. `Katz` folds into
+`katz-m`; it would not if an `E. Katz` also existed, nor if the years implied
+a 90-year career. Refusals are recorded as `unfolded_ambiguous` or
+`unfolded_year_span`.
+
+**Splitting**, for keys that are too coarse — which is what the key format
+otherwise gets wrong, and it was the largest known defect in this dataset.
+Because the key carries only the first *initial*, Georges Hersent and Gilbert
+Hersent were one node, and every firm one of them sat on appeared to interlock
+with every firm the other sat on. Measured on the variant lists, **619 person
+nodes (1.8%) merged forenames that cannot belong to one man, and they carried
+7.0% of all observations.**
+
+Where a key's observations name two such forenames, each named observation
+moves to its own key (`hersent-g-georges`, `hersent-g-gilbert`) and the
+initial-only observations stay behind on `hersent-g`, which now means "a
+G. Hersent, unresolved". They are **not** handed to the commoner of the two,
+for the same reason an ambiguous fold is refused: a coverage gap beats a
+fabricated identification.
+
+Two forenames count as incompatible only when **both are independently
+attested in the forename reference list** and neither is a prefix or a
+one-edit variant of the other. That guard is what makes the split safe, and
+two cases show why it is needed. *Anathase* and *Athanase* Roudy are one man
+— the compiler himself writes "[Athanase, dit souvent] Anathase" — and a
+transposition is not caught by an edit-distance test. *Démétrius* and
+*Dimitri* Zafiropulo are one man under two transliterations of a Greek name.
+Neither pair is two entries in the list, so neither splits. Splitting one man
+into two nodes is the more damaging error, so the rule errs towards leaving a
+key merged: it declines `Charles`/`Clifford` Michel too, where the two
+probably *are* different people.
+
+The effect is to remove interlocks that never existed, with no observation
+lost — every tie is still present, merely attributed to a narrower node.
+Measured on its own, against the same input, the split removes **5,682**
+interlock edges. The net change to the built network is smaller, **2,940**,
+because the forename recovery described above lands in the same release and
+pulls the other way: it collapses keys such as `hersent-ep-anne-marie-thomas-j`,
+built from a kinship note the parser had folded into a surname, back into the
+real person, and those merges create edges of their own.
+
+**What this still does not do.** Two contemporaries who share a surname *and*
+a forename remain one node, as do two who are only ever named by initial. The
+countermeasures available to you are `given_variants`, the year span on every
+person node, and `person_resolution.csv`, in which every fold and split is
+reversible.
 
 ### Firms
 
@@ -173,17 +286,252 @@ others, so instead every plausible pair is written to
 splits one firm's degree across two nodes**, which matters for centrality and
 for component structure.
 
+## 4c. Reading the inverted indexes
+
+`src/parse_person_index.py` handles the genre §2b identifies: the entry is a
+person, the list is of companies, and the companies are numbered rather than
+named:
+
+```
+Achard (Georges-P.), 107 (dga BAO), 207 (Bq comm. afr.), 238 (Créd. fonc.
+    Ouest-Afric.), 1776 (Cult. Diakandapé).
+```
+
+The numbers key into a companion document that lists the firms in order —
+`107. Banque de l'Afrique occidentale` — so the pair is a complete, resolvable
+affiliation dataset. It produced **15,679 person ties plus 452 corporate ties,
+9,111 people and 1,889 firms** where the dossier parser produced none.
+
+**The trap.** Entries carry bracketed notes, and those notes contain numbers:
+`Abinal (Patrice)[1883-1961][ing.-conseil…], 1613 (…)`. The life dates 1883
+and 1961 are both valid company numbers, so a naive scan turns them into
+directorships that are entirely plausible and entirely invented. There are
+2,628 numbers inside brackets in that one document. Bracketed spans are
+therefore removed before any number is read, and a reference is accepted only
+in list position.
+
+Removing them is itself delicate. The document contains exactly one unmatched
+`[`; a regex that pairs it with the next `]` deletes **87% of the file**, which
+presents as a clean parse of a much smaller source rather than as an error. A
+bounded, depth-counting scan replaces the regex, and `checks.py` tests both
+failure modes directly.
+
+**How the result is verified rather than asserted.** Most references carry the
+compiler's own abbreviation of the firm — `107 (dga BAO)` — which is an
+independent statement of what the number means. Every glossed reference is
+scored for token overlap against the name the key gives. Agreement is **97%**;
+a misaligned numbering would collapse it, and `checks.py` enforces a floor of
+0.90. Roles come from the same gloss, with abbreviations peculiar to this
+source: `comm. cptes` is a statutory auditor, not a director, and 2,461 rows
+turn on that distinction alone.
+
+**Scope: merged, and what that changes.** `Annuaire Desfossés 1956` lists the
+companies quoted on the Paris Bourse. A large share of colonial firms were
+publicly quoted, so this is a colonial source — excluding it to avoid
+admitting some non-colonial firms would drop real colonial boards. It is
+therefore merged into the network by default.
+
+The consequence must be stated plainly: **this is no longer a purely colonial
+universe.** 1,889 firms enter from the annuaire, of which 11% also have
+dossier evidence; the remainder are metropolitan and foreign companies. That
+is not noise — it is the rest of the portfolio of the same directors, which is
+what an interlocking-directorate study wants — but a reader who assumes every
+node is a colonial enterprise will be wrong. Every observation and every
+two-mode edge carries `source_genre`, so filtering to `dossier` recovers the
+previous scope exactly, and `build_network.py --no-person-index` rebuilds
+without it.
+
+Two further asymmetries follow from merging one dense source into many sparse
+ones. The annuaire is a **complete snapshot of one year (1956)**, where the
+dossiers are scattered extracts across a century: the 1945–62 period therefore
+has far better board coverage than any other, and a time series of density or
+degree across periods is measuring the sources as much as the economy. And
+because a complete board list generates every pair among its members, the
+annuaire contributes interlocks at a rate the dossier evidence cannot match.
+Compare periods with `source_genre` held constant, or not at all.
+
+### The bug that merging exposed
+
+The first merge produced 162,349 interlocks, 122,693 of them in 1945–62. That
+spike was not a finding. `parse_person_name` reads `Baert (J.)` backwards —
+"Baert" as the forename, "J." as the surname — because in the dossier genre
+that shape is genuinely ambiguous. In *this* genre it is not: the format is
+`Surname (Given)` throughout. So 148 distinct people collapsed onto the key
+`j-b`, which then held 119 board seats and generated some 7,000 interlock
+edges between firms that never shared a director.
+
+Stage 3b now parses the name with the format it is guaranteed rather than
+inferring it, and moves a trailing particle to the front — `Abs (P. d')` is
+P. d'Abs, not a person called "P. d'". Distinct people went from 3,929 to
+9,111 and the most-seated individual from 119 boards to 26. `checks.py` tests
+that four different B-surnames with the initial J. produce four different
+keys, because that is the assertion the bug violated.
+
+### A bug this stage exposed in `org_key`
+
+`org_key("Anciens Établissements Ch. Peyrissac et Cie")` returned an empty
+string. The rule that strips a trailing predecessor clause — "(anciennement
+Société X)" — ends in `.*$`, so on a name that *opens* with that vocabulary it
+matched at position 0 and consumed the whole name. Peyrissac is a substantial
+AOF trading house and lost 72 observations to it. The same pattern matched
+`anc` inside "Bl**anc**" and `ex` inside "Al**ex**.", truncating those names
+mid-word.
+
+The rule now fires only when real name text precedes it, and a name made
+entirely of legal forms falls back to a slug of the whole string — except
+where that slug is *itself* only a legal form ("Société"), which stays
+unkeyed rather than becoming a node several unrelated observations pile into.
+Twenty company identifiers changed, all of them corrections; 36 previously
+unkeyable firms now resolve.
+
+## 4d. Boards reported in prose
+
+Most of this collection is press extracts, and the press reports boards in
+sentences, not lists:
+
+> Les administrateurs sortants, MM. le comte de Germiny, J. Stewart,
+> G. Alberti, J. Alexander, ont été réélus.
+
+`parse_ties.py` will not touch that, by design — an early version triggered on
+the bare phrase *conseil d'administration* wherever it appeared and produced
+thousands of directors out of ordinary sentences. `parse_prose.py` reads the
+prose with three conditions required together: an explicit person marker
+(`MM.`, `M.`, or an appointment verb), an explicit role word in the same
+clause, and every candidate name passing the same shape test the structured
+parser uses. It yields **14,305 ties over 2,523 firms**, of which 8,421
+person-firm pairs are new.
+
+**Attribution was never the hard part.** For a firm dossier the subject
+company is the catalogue title, which the segmenter already carries. The
+missing piece was only finding the people.
+
+**Precision is the hard part, and it is measured rather than assumed.** Random
+samples were hand-checked against their source context, in three rounds. The
+first scored roughly 70%, the second 75%, the third around 90%. Each round
+named a specific failure, and each is now a regression test:
+
+| Failure | Example | Fix |
+|---|---|---|
+| Singular role applied to a whole run | "MM. Meunier, Guibal, Godard, Billiard, président" made four presidents | A singular role binds the last name only; a plural one binds the run |
+| Non-compete clause read as appointment | "s'interdisent de diriger comme gérants, directeurs" | Negated clauses reject the match |
+| Decoration read as a person | "M. Nunzi, commandeur de la Légion d'honneur" | Honours vocabulary rejected |
+| Address read as a person | "demeurant à Paris, 10, rue de Laborde" | Street vocabulary rejected |
+| Meeting chair read as board president | "sous la présidence de M. Louis Martin, maire" | Requires "président du conseil" |
+| Occupation between name and role | "M. Willot, inspecteur général des Postes, président" | An occupation in the run rejects the match |
+| Truncated names | "sous la présidence de M. Albert Thomas" yielded "Alb" | Lazy quantifiers given explicit terminators |
+
+Two caveats on that figure. It comes from samples of twenty, so it locates the
+right order of magnitude and not a second decimal place. And "correct" was
+judged against the surrounding sentence, which establishes that the text says
+what the parser recorded — not that the source was right.
+
+**This stage is in the default network**, and every row is tagged
+`source_genre = "prose"` so `--no-prose` (or a filter on the built edge list)
+recovers the structured-only network exactly. Merging it is the right default
+because the alternative is worse: press extracts are the bulk of this
+collection, and excluding them meant excluding most of what the compiler
+actually assembled. The ~90% precision is a real cost and is why the tag
+exists on every row rather than only in this document. That 23% of its rows
+independently corroborate a pair the structured parser already found is a
+useful signal: noise would not concentrate on pairs another method also
+produced.
+
+## 4e. The compiler's own affiliation notes
+
+Board lists carry the compiler's identification of a director's *other* seats,
+beside the name: `A. R. Fontaine (Distill. Indoch.)`. That is interlock
+evidence stated by the source. Stage 4 emits 21,904 of these as candidates and resolves 3,680 of them
+(16.8%) directly — exact names and catalogue acronyms — because the note is
+abbreviated where the company name is not.
+
+`resolve_annotations.py` matches by **token prefix, in order**: every note
+token must prefix a name token, and in sequence. "Cotonn. St-Quentin" resolves
+to *Cotonnière de Saint-Quentin*; "Bq de Madagascar" to *Banque de
+Madagascar*. Prefix matching needs no list of abbreviations, which matters
+because the compiler invents them freely. Result: **1,646 ties over 502 firms**,
+hand-audited at roughly 94%.
+
+Three refusals do most of the work for precision. A note matching several
+firms is dropped rather than resolved to the likeliest — "Mines" prefixes
+dozens of names, and choosing one manufactures a specific, checkable, wrong
+claim. A single token resolves only on an exact whole-name match, because
+"Armand" prefixes *Armandon & Cie* and "Zafiropulo" prefixed an unrelated
+agency. And a note that is a territory is never a firm: "Afrique Équatoriale
+Française" was matching *Société Générale Française de l'Afrique équatoriale*.
+
+The stage also filters out target company nodes whose "name" is really a
+biographical fragment — the parsers occasionally promote a prose span, and
+matching against one such node turns a single bad node into many bad ties.
+Writing that filter reproduced a bug already documented in `names.py`: under
+`re.IGNORECASE` a `[a-z]` character class matches uppercase too, so a rule
+meant to catch lowercase openings rejected *every* company name in the file,
+including the Banque de l'Indochine. `checks.py` now pins five real names
+against it.
+
+Two resolution rates appear above and they measure different stages, which is
+worth keeping straight. Stage 4 resolves **3,680 of its 21,904 raw candidate
+rows (16.8%)** by exact name and catalogue acronym. Stage 3d then runs the
+prefix matcher over the **20,354** distinct notes that remain and recovers
+**1,676 (8%)** more.
+
+Why that second rate is so low: 4,218 of those notes name the firm the
+observation already belongs to, and 8,242 name a company absent from this
+corpus — many are
+metropolitan firms the collection never covers. Neither is recoverable by
+better matching.
+
+Merged by default and tagged `source_genre = "annotation"`; `--no-annotations`
+drops it. Two properties are worth keeping in view when using these rows: the
+tie is the compiler's assertion rather than a transcribed board list, and it
+carries no year of its own beyond the observation it sits beside.
+
+## 4f. Biographical dictionaries
+
+*Qui êtes-vous ? 1924* and *Légion d'honneur en Indochine* are person-indexed:
+a name in capitals, fielded prose, and a bracketed block of affiliations the
+compiler added. None of the three earlier parsers can read them.
+`parse_ties.py` wants a board list under a firm heading; here the heading is a
+person. `parse_person_index.py` wants numbered references; here the companies
+are named. `parse_prose.py` wants an inline `M.`/`MM.` marker; here the person
+is the entry header and is never named again.
+
+What stage 3e adds is **person-scoped segmentation**: the document is split at
+the capitalised surname headers, and every role construction inside an entry is
+attributed to that entry's person. Company names are resolved with the prefix
+matcher from §4e. **3,167 ties over 725 firms and 696 people**, hand-audited
+at roughly 93%.
+
+Two guards were added from the audit. A capitalised *headline* has exactly the
+shape of an entry header — "UNE ROSETTE BIEN PLACÉE (L'affaire)" was read as a
+person — so headers containing ordinary French function words are rejected.
+And a single generic token is not a firm: "Compagnie du port" reduces to
+*port* and matched a company literally called *Port*; "Coloniale" matched *La
+Nouvelle Coloniale*. That fix improved §4e as well.
+
+**These ties carry no year**, and `checks.py` asserts it. A biographical entry
+gives a career, not a board as it stood in a given year, so these edges land
+in the `undated` slice and no period slice can place them. They are merged by
+default — the pooled network is where they belong, and dropping a whole genre
+to protect the period slices would cost more than it saves — but any analysis
+that turns on timing should filter them out with `--no-biographical` or on
+`source_genre == "biographical"`.
+
 ## 5. Dating and attributing ties
 
 A document is split at **anchors** — points that fix a date, a source, or a
 company. Text between one anchor and the next inherits that anchor's
 attributes. Anchors are dated press citations, inline directory entries
 (`AEC 1922-519 —`, `Annuaire Desfossés, 1945`), numbered directory entries,
-capitalised *Annuaire industriel* headings, and the "local companies"
-register. Board lists inside a segment are then found by explicit list
-markers and parsed into person/role pairs.
+*Annuaire industriel* notice heads, capitalised headings, and the "local
+companies" register. Board lists inside a segment are then found by explicit
+list markers and parsed into person/role pairs.
 
-Three failure modes were found by inspecting output rather than code, and each
+Two anchors can match the same position, so each has a precedence: a dated
+source beats an undated entry head, and a genre-specific entry pattern beats
+the generic capitals one. Without it the weaker name won and a zero-length
+segment was inserted between them.
+
+Four failure modes were found by inspecting output rather than code, and each
 one shaped the design:
 
 **Prose read as lists.** A case-insensitive `conseil d'administration` trigger
@@ -215,6 +563,73 @@ misattribution into a visible coverage gap, which is why **~10% of parsed
 person-ties carry no `company_key`** and are excluded from the network. That
 gap is the price of not fabricating attributions, and it is recorded rather
 than hidden.
+
+**An unread entry head, and the mega-board it builds.** Some firm-years held
+40 to 90 directors. The methodology used to guess that these were constitution
+or subscriber lists — a plausible reading, and wrong. Reading the source for
+the worst case, *Compagnie du Port de Fedhala* with 83 directors in 1921,
+showed a dossier that reprints the AEC 1922 entries for a dozen *other* firms
+under a heading the compiler wrote as `ET UNE KYRIELLE DE SOCIÉTÉS…`. None of
+those entry heads matched an anchor, so a cork factory's board, a metalwork
+shop's board and ten more all landed on the port company. The same shape
+explains the *Annuaire industriel* cases, for a different reason: that
+publication alphabetises each notice on a keyword and puts the rest of the
+legal name in parentheses —
+
+```
+ALLUMETTES (Soc. indo-chinoise forestière et des), 41, bd de Magenta, Paris…
+BANQUE de l'INDOCHINE, 96, bd Haussmann, Paris, 8e…
+FORGES, ATELIERS et CHANTIERS d'INDOCHINE, Bureau : 119, bd Haussmann…
+```
+
+— and the anchor for it required the parenthetical, so the second notice never
+anchored and the Banque de l'Indochine's board was credited to a match factory.
+Three separate reading errors had to be fixed together: the parenthetical is
+optional; particles chain, so `de l'` is one link and not two; and the keyword
+itself may contain commas, so cutting at the first one named the third firm
+*Forges*. The name is then rebuilt by inversion — parenthetical first, keyword
+second — which recovers *Société indo-chinoise forestière et des allumettes*
+and, for 42% of heads, a firm already in the dataset. Casing is left as the
+annuaire printed it, because lowering `COTONNIÈRE de TOLGA` correctly needs to
+know that one word is a descriptor and the other a place, and `org_key` folds
+case anyway.
+
+Two smaller reading errors in the same family: the AEC page reference is
+written three ways (`AEC 1922-519 —`, `AEC 1922. — 489 —`, `AEC 1922. 495 —`)
+and only the first was matched; and once a listing is running the compiler
+drops the prefix and prints the page alone (`509 — Sté des briqueteries de
+Fedhala`). The bare-page form needs a guard, because short numbers are
+enumerated clauses in legal prose — *"3 — Modifications diverses aux articles
+4, 8, 12"*. Requiring three digits, which every real reference has since the
+annuaire runs to 800–1,200 pages, took a hand-checked sample from 44 matches at
+roughly 60% precision to 19 at 19 of 19.
+
+The largest firm-year the dossier parser produces falls from 83 directors to
+52, and the ceiling in `checks.py` from 200 to 90. One firm-year in the
+*merged* network still reaches 82, and it has a different cause worth stating
+rather than smoothing: the annuaire's own numbered key sometimes gives one
+entry to several firms at once, joined with a plus sign —
+`Houillères du bassin de la Loire + Houillères des Cévennes… du Dauphiné`.
+Those 82 people are the boards of three nationalised coal undertakings pooled
+into one pseudo-firm. **22 companies have such a combined name, carrying 185
+of 90,861 two-mode edges (0.20%).** They are left as the source wrote them:
+splitting a name on a plus sign would also cut the ones where it separates a
+firm from its depot rather than from another firm, and the affected share is
+too small to justify guessing. Filter on a `+` in `name` to drop them.
+
+The lesson is the one this section keeps repeating: an implausible number is a
+parsing report before it is a historical finding, and the cheapest way to tell
+them apart is to read the source.
+
+**A role label read as a person.** 1,514 parsed members contained a colon —
+`Adm.: MM. Henri Girche`, `Direct.: M. Patrick O'Quin`, `Imp.: sucre`. Every
+hand-checked one was a swallowed directory field label, but they split in two:
+most hide a real name behind the label, and some are a field *value* and no
+person at all. Discarding all 1,514 would have thrown away real ties, so the
+label is stripped and the name kept; a colon surviving the strip means a label
+this rule does not know, and no name in the corpus contains one, so the row is
+rejected. `checks.py` asserts that no member name carries a colon, and that
+`Ed. Bousquet` and `A. R. Fontaine` pass through untouched.
 
 Related filters: periodical titles (which sit inside citations) and
 balance-sheet captions (which sit in tables next to boards) are rejected as
@@ -277,7 +692,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 24,458 names
+**Every obvious rule is wrong.** Each was measured against all 33,580 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -324,11 +739,11 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-3,085 firms and 39,523 edges: rendered as a node-link diagram it is a solid
+5,862 firms and 76,893 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
-170 firms of highest weighted degree — 1,162 interlocks. Reading a *global*
+170 firms of highest weighted degree — 1,403 interlocks. Reading a *global*
 property such as density or centralisation off that picture is a mistake; the
 figure is a map of the core, and the numbers for the whole graph are in
 `network_stats.csv`.
@@ -348,7 +763,7 @@ nodes and a full table view rather than relying on the hue alone.
 **Small multiples share one layout, computed once.** Figure 2 draws one panel
 per period. The obvious implementation — lay out and normalise each period's
 subgraph independently — rescales every panel to fill its box, which made the
-1914–1929 panel (1,764 interlocks) look *smaller* than pre-1914 (299): the
+1914–1929 panel (2,943 interlocks) look *smaller* than pre-1914 (479): the
 visual encoding then contradicts the data. The layout is instead computed
 once on the union of all periods and each panel draws its own edges at those
 fixed coordinates, with one size scale throughout. A firm therefore sits in
@@ -371,14 +786,14 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 3,085 firms and 39,523 interlocks.** At that density a
+**Figure 4 draws all 5,862 firms and 76,893 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
 territory folded to the three largest, and the answer the figure gives is
 "both" — Indochine, Maroc and AOF each hold a visibly distinct lobe, joined
 through a dense mixed core. Node radii are 42% of the core figure's and edge
-ink 42% of its opacity, because the settings tuned for 170 nodes render 3,085
+ink 42% of its opacity, because the settings tuned for 170 nodes render 3,550
 as a solid disc.
 
 **Nothing is dropped to make the picture tidy.** 98.5% of the firms sit in one
@@ -390,15 +805,15 @@ graph's, for figure 4 and for each of the 42 territory figures, so the claim
 is enforced rather than merely intended.
 
 **Figure 5 is a matrix, not a node-link diagram.** Aggregated to territories
-the graph is small (53 nodes) and nearly complete (713 of 1,378 possible pairs
+the graph is small (54 nodes) and nearly complete (863 of 1,431 possible pairs
 share at least one director), which is exactly the regime where a node-link
 diagram degenerates into a scribble and a matrix becomes readable. The cell is
 the count of directors holding board seats in both territories; rows and
 columns are ordered by size, which is what makes the core-periphery structure
 legible. Two things to know before reading it: the shading steps by **rank,
 not linearly**, because the counts are heavily skewed and a linear ramp would
-put everything but the top two pairs — Maroc–Algérie at 1,086 shared
-directors and Maroc–Indochine at 1,024 — in the palest step; and a firm listed in two territories contributes its whole board to
+put everything but the top two pairs — Maroc–Indochine at 4,477 shared
+directors and Maroc–Algérie at 4,439 — in the palest step; and a firm listed in two territories contributes its whole board to
 both, which is the tie being counted rather than an artefact — a
 Paris-registered firm operating in Morocco and Indochina genuinely links them.
 
@@ -410,6 +825,97 @@ joint layout let three stragglers shrink Senegal's 39-firm main component to a
 quarter of the frame. Twelve territories get no figure because no two of their
 firms share a director — recorded and listed on the page rather than omitted,
 since that is a fact about the collection's coverage, not about the territory.
+
+## 5e. Betweenness, and what it is measuring here
+
+`src/centrality.py` writes `company_centrality.csv`. Degree counts how many
+firms a firm shares directors with. Betweenness counts how often it lies on
+the shortest path between two firms that share no director of their own — so
+it picks out **brokers** rather than hubs, and a firm with a modest board can
+score highly if it is the only thing joining two blocs. Figure 6 draws it on
+figure 1's node set and layout, so the two can be read against each other.
+
+Three decisions determine the numbers.
+
+**Computed on the whole graph, displayed on a slice.** Betweenness is a global
+property: the shortest paths that matter run through firms outside any core
+one might draw. It is computed on the giant component of the interlock graph
+at `weight >= 1` (5,776 firms, 76,893 ties) and then displayed on whatever
+subset a figure shows. Recomputing it on the 170 drawn firms would yield a
+different quantity wearing the same name, and would systematically flatter
+firms that happen to sit in the middle of that particular selection.
+
+**Exact, not sampled.** `networkx` will estimate betweenness from *k* pivot
+nodes in a few seconds; the exact Brandes computation takes about a minute at
+this size, which is affordable. Nothing in the file is an estimate, so no
+sampling error needs reporting.
+
+**Unweighted.** Edge weight in this graph is the number of shared directors —
+a measure of tie *strength*. Shortest-path algorithms read weights as
+*distances*, so passing the weight through unchanged would make the most
+heavily interlocked pairs of firms count as the furthest apart, exactly
+inverting the intended meaning. Inverting the weight (`1/w`) is defensible and
+would give a different, also-defensible ranking; the binary graph is the
+standard treatment in the interlocking-directorate literature and is what is
+used here. Anyone wanting the weighted variant has the edge list.
+
+**The caveats from §6 carry over, and one is sharpened.** Betweenness is more
+sensitive to missing data than degree is: a single unobserved tie can reroute
+many shortest paths, so a firm's score depends on ties this collection happens
+to record. It also inherits the entity-resolution limits of §4 — an unmerged
+duplicate splits a firm's brokerage across two nodes, and a wrongly merged
+surname invents brokerage that no one exercised. Read the ranking as a
+description of this network, not of the colonial economy.
+
+## 5f. Placing firms below the level of the colony
+
+The source files a firm under a territory. That unit hides two things worth
+seeing: that Saigon and Hanoi were substantially separate business worlds
+inside one *Indochine*, and that a large share of "colonial" firms were run
+from Paris. `src/geocode.py` recovers the city; `make_geo_figure.py` draws the
+interlock network over it, with position meaning location rather than
+connection.
+
+**Two fields, in order of trust.** `place_listed` comes from the catalogue
+title and is a clean city name (1,581 firms). `head_office_observed` is
+transcribed prose — *"Paris, 1, rue de Stockholm. Tél. : LAB. 18-34"* — and
+covers 1,589. The first is preferred; the second is parsed only where the
+first is absent, and `source_field` records which was used so the weaker half
+can be dropped.
+
+**Why a prefix is parsed rather than the whole string.** A head-office line is
+`<city>, <street address>`, and Paris street names include *rue de Rome*, *rue
+de Constantinople* and *rue d'Alger*. Searching the full string for city names
+would relocate Paris firms to Italy, Turkey and Algeria — a bug that would
+look like a finding. The string is cut at the first digit or street word and
+only the prefix is matched, which is also why *"le siège social est à Paris"*
+resolves correctly. `checks.py` asserts all four of those cases.
+
+**The gazetteer is curated, not geocoded.** `data/reference/places_geo.csv`
+holds 176 cities with coordinates, territory and variant spellings. It is
+hand-built because the names are historical — Bône not Annaba, Tourane not Da
+Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
+reliably. It is an input: editing it changes the output.
+
+**Coverage: 3,170 of 10,537 firms (30%), and 1,943 of the 5,862 in the
+interlock graph (33%).** The map draws those. It is not a map of the empire's
+firms but of the ones whose address survived, and the unplaced 67% are absent
+rather than assumed.
+
+**Three readings the figure would otherwise invite, and why they are wrong.**
+A head office is not an operation: a rubber plantation in Cochinchina run from
+a Paris office appears at Paris, which is a true fact about control and a
+false one about production. A city's size on the map is firms *recorded* there,
+inheriting all of §6's coverage unevenness. And ties within a single city
+cannot be drawn — an edge from Paris to Paris is a dot — so the 5,146
+within-city interlocks appear as a table column rather than on the map, against
+1,100 drawn city pairs; a reader who counts only the lines undercounts the
+network badly.
+
+The headline result survives all three: 37% of placed firms in the interlock
+graph were run from Paris, more than the next eleven cities combined (Alger
+147, Saïgon 135, Casablanca 127, Hanoï 56, Tunis 52 against Paris's 732), and
+the heaviest lines radiate from Paris rather than running between colonies.
 
 ## 6. Validity — read this before using the data
 
@@ -477,8 +983,13 @@ python3 src/parse_ties.py                       # ~6 min
 python3 src/build_network.py                    # ~3 min
 python3 src/split_by_country.py                 # ~2 min, per-territory bundles
 python3 src/code_positionality.py               # ~1 min, positionality coding
+python3 src/centrality.py                       # ~1 min, exact betweenness
+python3 src/geocode.py                          # place firms at city level
 python3 src/make_figures.py                     # ~1 min, core figures
 python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
+python3 src/make_figures.py --lang en            # English label set
+python3 src/make_territory_figures.py --lang en
+python3 src/render_png.py                       # ~90 s, PNG of every figure
 python3 src/checks.py                           # must pass
 ```
 
