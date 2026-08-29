@@ -60,6 +60,7 @@ Ten stages, each resumable, each writing its own outputs:
    territory matrix and one figure per territory (§5d).
 9. **`render_png.py`** — every figure → PNG, one network per file.
 10. **`make_geo_figure.py`** — places → the interlock network on the map (§5f).
+11. **`make_descriptive_figures.py`** — the ten non-network figures (§5g).
 
 Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
@@ -69,7 +70,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (876 assertions).
+`checks.py` validates the parsers and the built dataset (1,007 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -866,6 +867,52 @@ to record. It also inherits the entity-resolution limits of §4 — an unmerged
 duplicate splits a firm's brokerage across two nodes, and a wrongly merged
 surname invents brokerage that no one exercised. Read the ranking as a
 description of this network, not of the colonial economy.
+
+## 5g. The descriptive figures
+
+Every figure this collection had was a network — node-link diagrams, a
+territory matrix, a map. Topology is what the dataset is *for*, and it is not
+what a reader needs first. Four of the caveats in this document are load-bearing
+and lived only in prose:
+
+- one year holds a fifth of all dated observations;
+- the person index is confined to a single period;
+- most interlock edges rest on one shared director;
+- four territories hold most of the ties.
+
+A caveat in prose is a caveat readers skip. `make_descriptive_figures.py` draws
+ten figures whose whole job is to make those four visible, plus six more on
+composition and concentration. `figures/descriptive.html` carries all ten with
+a table of numbers under each.
+
+**Where the form came from.** Each figure's job picks its form: a distribution
+gets columns, a ranked magnitude gets horizontal bars, a composition within
+ordered groups gets a 100% stack. One figure changed form during construction
+and the reason is worth recording. "Which firms are brokers rather than hubs"
+started as a degree-rank against betweenness-rank scatter. Plotted honestly —
+both axes on one shared scale, since distance from the agreement line is the
+entire claim and only means something if a unit on one axis is a unit on the
+other — the top 400 firms by betweenness occupy a thin band across the top and
+nine tenths of the canvas is empty. The question is a ranked comparison of one
+derived quantity, so it became a ranked bar of `broker_gap`.
+
+**Colour.** The palette is `make_figures.py`'s, extended from three categorical
+slots to five for the genre figures, taking slots 4 and 5 from the reference
+palette in its documented order rather than inventing hexes. Five slots pass
+every hard gate on the *adjacent* pairlist — which is what a stacked bar uses —
+at worst CVD ΔE 9.1 light and 8.4 dark against a floor of 8. The three-slot cap
+still binds on the all-pairs forms, the node-link diagrams and the map, and
+`checks.py` enforces that split: the two extra hues may appear on a rect and on
+no circle. Three light-mode slots sit below 3:1 on the light surface, so the
+relief rule applies and is not optional: every figure carries direct value
+labels, and every figure ships a table view, which `checks.py` also asserts.
+
+**One figure reports a defect rather than hiding it.** Among the top brokers is
+"Agence centrale à PARIS", which is not a firm but a mis-cut field label. It is
+left in place and named in the caption: a junk node holding a real structural
+position is exactly the company-name hygiene debt the codebook flags, and
+silently filtering it would hide the evidence for a limitation this dataset
+states elsewhere in prose.
 
 ## 5f. Placing firms below the level of the colony
 

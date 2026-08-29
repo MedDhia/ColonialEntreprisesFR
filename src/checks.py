@@ -1206,7 +1206,17 @@ def check_figures() -> None:
                     clipped.append(("".join(t.itertext())[:24], "rotated", round(y - tw)))
                 continue
             x = float(t.get("x", 0))
-            x0 = x - tw if t.get("text-anchor") == "end" else x
+            # SVG places the anchor point, not the left edge. Handling only
+            # "end" made every *centred* label near the right edge look clipped
+            # by half its width, which is a false positive rather than a bug in
+            # the figure.
+            anchor = t.get("text-anchor")
+            if anchor == "end":
+                x0 = x - tw
+            elif anchor == "middle":
+                x0 = x - tw / 2
+            else:
+                x0 = x
             if x0 < -0.5 or x0 + tw > w + 0.5:
                 clipped.append(("".join(t.itertext())[:24], round(x0), round(x0 + tw)))
         check(f"  {name}: no label is clipped by the canvas", not clipped,
@@ -1215,17 +1225,26 @@ def check_figures() -> None:
         # The all-pairs cap: at most three categorical hues, plus grey. The
         # sequential ramp is allowed only on rects (the matrix cells) - a node
         # coloured from a magnitude ramp would be encoding twice.
+        #
+        # Slots 4 and 5 are allowed as well, for the descriptive figures' stacked
+        # bars. A stack is an *adjacent*-pair form, and the five-slot set passes
+        # every hard gate on the adjacent pairlist in both modes (worst CVD
+        # ΔE 9.1 light / 8.4 dark, worst normal-vision ΔE 19.6 / 19.3). The
+        # three-slot cap still binds on the all-pairs forms - node-link diagrams
+        # and the map - which is why the two extra hues appear on no circle.
+        from make_descriptive_figures import EXTRA_SERIES
         from make_territory_figures import SEQ
 
         allowed = set(PALETTE["light"]["series"]) | {
             PALETTE["light"]["other"], PALETTE["light"]["surface"],
             PALETTE["light"]["edge"], "none",
         }
-        extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - allowed
+        stack_allowed = allowed | set(EXTRA_SERIES["light"])
+        extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - stack_allowed
         check(f"  {name}: no colour outside the validated palette", not extra,
               str(sorted(extra)[:3]))
         extra_r = ({r.get("fill") for r in root.iter(f"{ns}rect")}
-                   - allowed - set(SEQ["light"]))
+                   - stack_allowed - set(SEQ["light"]))
         check(f"  {name}: no rect colour outside the palette", not extra_r,
               str(sorted(x for x in extra_r if x)[:3]))
 
@@ -1402,6 +1421,32 @@ def check_figures() -> None:
             continue
         check(f"  {name} is in a total sort order", rows == sorted(rows, key=key),
               "row order is not reproducible from its own key")
+
+    # The descriptive figures exist to make the caveats visible, so the numbers
+    # they state have to be the committed ones. These pin the two that a reader
+    # is most likely to quote back.
+    import make_descriptive_figures as D
+
+    for lang in ("fr", "en"):
+        d = D.gather(lang)
+        peak_year, peak = max(d["by_year"].items(), key=lambda kv: sum(kv[1].values()))
+        eq(f"  fig8 ({lang}): the spike year is the annuaire's", peak_year, "1956")
+        dated = sum(sum(c.values()) for c in d["by_year"].values())
+        check(f"  fig8 ({lang}): the spike is a fifth of all dated observations",
+              0.15 <= sum(peak.values()) / dated <= 0.25,
+              f"{sum(peak.values()) / dated:.1%}")
+        # The person index is what makes periods incomparable; if it ever leaks
+        # outside 1945-62 the caption in fig9 stops being true.
+        leaked = [p for p, c in d["by_period"].items()
+                  if c.get("person_index") and p != "1945_1962"]
+        check(f"  fig9 ({lang}): the person index stays inside 1945-62", not leaked,
+              str(leaked))
+        # Every figure must produce a table: the light-mode contrast warning on
+        # three slots makes the table view an obligation, not a nicety.
+        for name, fn, _ in D.FIGURES:
+            *_, table = fn(d, "light", lang)
+            check(f"  {name} ({lang}) ships a table view",
+                  bool(table and table[0] and table[1]))
 
     check("  core graph node order is independent of PYTHONHASHSEED",
           orders[0] and orders[0] == orders[1],

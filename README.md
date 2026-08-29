@@ -177,6 +177,24 @@ Two self-contained pages — open either in a browser, no server and no build
 step — with hover tooltips, table views and a dark mode. Every figure is also
 versioned as a standalone SVG for papers.
 
+**`figures/descriptive.html`** — ten figures on what the data *is*, before any
+network measure. Every other figure in this repository is a network; these are
+the distributions and compositions a reader needs first, and each carries its
+numbers in a table view beneath it.
+
+| | |
+|---|---|
+| `fig8_ties_by_year.svg` | Dated observations per year, stacked by source genre. **1956 alone holds 19% of them** — one annuaire, read end to end. The spike is the shape of the source, not of the history. |
+| `fig9_genre_by_period.svg` | Genre composition within each period. The person index falls entirely inside 1945–1962, so comparing periods without holding `source_genre` constant compares two ways of reading the archive. |
+| `fig10_seats_per_person.svg` | Board seats per person, log scale. 16,784 people hold exactly one; the best-connected 1% hold 12%. |
+| `fig11_board_size.svg` | Directors observed per firm-year. The mass sits at 3–12; the tail past 30 marks notices where several firms were run together. |
+| `fig12_ties_by_territory.svg` | Ties per territory. Four territories hold most of them — absence elsewhere is a fact about the collection. |
+| `fig13_ties_by_sector.svg` | Ties per sector, with the catalogue's "Documents généraux" filing heading excluded rather than shown as the largest industry. |
+| `fig14_roles.svg` | Role composition. `administrateur` is also the default when a list qualifies nobody, so it pools qualified and unqualified seats. |
+| `fig15_positionality.svg` | Indigenous share by territory, for those with 60+ recorded members. 21 sit at 0.0%. |
+| `fig16_brokers_vs_hubs.svg` | The firms whose betweenness rank most exceeds their degree rank. A broker is not a hub. |
+| `fig17_interlock_weight.svg` | Shared directors per interlock edge. **84% rest on a single person**, so one entity-resolution error removes the edge. |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -280,7 +298,7 @@ src/
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
   labels.py            English labels for the French category vocabulary
-  checks.py            876 assertions on the parsers and the built dataset
+  checks.py            1,007 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
