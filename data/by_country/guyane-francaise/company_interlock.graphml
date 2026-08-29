@@ -30,6 +30,12 @@
       <data key="n_n_directors">13</data>
       <data key="n_territory">Guyane française</data>
     </node>
+    <node id="commercialefactoreriesguyanes">
+      <data key="n_label">Société Commerciale des Factoreries des Guyanes</data>
+      <data key="n_sectors">Commerce</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
     <node id="comptoirsgenerauxguyane">
       <data key="n_label">Comptoirs généraux de la Guyane, puis Comptoirs généraux des colonies</data>
       <data key="n_sectors">Commerce</data>
@@ -66,6 +72,12 @@
       <data key="n_n_directors">16</data>
       <data key="n_territory">Guyane française</data>
     </node>
+    <node id="minieredragagesguyane">
+      <data key="n_label">Compagnie Minière et de Dragages de Guyane</data>
+      <data key="n_sectors">Mines et placers</data>
+      <data key="n_n_directors">4</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
     <node id="miniereroura">
       <data key="n_label">Compagnie Minière de Roura</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
@@ -90,6 +102,12 @@
       <data key="n_n_directors">2</data>
       <data key="n_territory">Guyane française</data>
     </node>
+    <node id="southamericangoldfieldslimitedsalisbury">
+      <data key="n_label">The South American Goldfields Limited, Salisbury</data>
+      <data key="n_sectors">Mines et placers</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
     <node id="stelieadieuvat">
       <data key="n_label">Société nouvelle de St-Élie et Adieu-Vat</data>
       <data key="n_sectors">Documentation générale; Mines et placers</data>
@@ -102,10 +120,16 @@
       <data key="n_n_directors">13</data>
       <data key="n_territory">Guyane française</data>
     </node>
+    <node id="syndicatmana">
+      <data key="n_label">Syndicat Mana</data>
+      <data key="n_sectors">Mines et placers</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Guyane française</data>
+    </node>
     <node id="theresia">
       <data key="n_label">« La Thérésia »</data>
       <data key="n_sectors">Documentation générale</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Guyane française</data>
     </node>
     <node id="unionminierehautemana">
@@ -138,34 +162,46 @@
     <edge id="e7" source="saintelieadieuvat" target="stelieadieuvat">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e8" source="cotonniereguyane" target="franceguyane">
+    <edge id="e8" source="minieredragagesguyane" target="southamericangoldfieldslimitedsalisbury">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e9" source="southamericangoldfieldslimitedsalisbury" target="syndicatmana">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e10" source="cotonniereguyane" target="franceguyane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e9" source="cotonniereguyane" target="miniereroura">
+    <edge id="e11" source="cotonniereguyane" target="miniereroura">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e10" source="colonialeproduitstannants" target="miniereroura">
+    <edge id="e12" source="colonialeproduitstannants" target="miniereroura">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e11" source="colonialetonnellerie" target="miniereroura">
+    <edge id="e13" source="colonialetonnellerie" target="miniereroura">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e12" source="miniereroura" target="theresia">
+    <edge id="e14" source="miniereroura" target="theresia">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e13" source="cotonniereguyane" target="sucriereagricoleguyane">
+    <edge id="e15" source="cotonniereguyane" target="sucriereagricoleguyane">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e14" source="colonialeagricoleminiere" target="saintelieadieuvat">
+    <edge id="e16" source="colonialeagricoleminiere" target="saintelieadieuvat">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e15" source="colonialeagricoleminiere" target="stelieadieuvat">
+    <edge id="e17" source="colonialeagricoleminiere" target="stelieadieuvat">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e16" source="colonialeagricoleminiere" target="unionminierehautemana">
+    <edge id="e18" source="colonialeagricoleminiere" target="unionminierehautemana">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e17" source="comptoirsgenerauxguyane" target="sucriereagricoleguyane">
+    <edge id="e19" source="comptoirsgenerauxguyane" target="sucriereagricoleguyane">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e20" source="commercialefactoreriesguyanes" target="minieredragagesguyane">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e21" source="commercialefactoreriesguyanes" target="southamericangoldfieldslimitedsalisbury">
       <data key="e_weight">1</data>
     </edge>
   </graph>

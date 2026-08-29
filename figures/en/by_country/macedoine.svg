@@ -1,18 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 288" width="1120" height="288" role="img" aria-label="Macedonia interlock network"><title>Macedonia interlock network</title><rect width="1120" height="288" fill="#fcfcfb"/><g stroke="#c9c8c2" fill="none">
-<path d="M345.0 220.0L517.9 30.0" stroke-width="1.72" stroke-opacity="0.620"/>
-<path d="M345.0 220.0L775.0 131.6" stroke-width="0.60" stroke-opacity="0.160"/>
-<path d="M517.9 30.0L775.0 131.6" stroke-width="1.44" stroke-opacity="0.520"/>
+<path d="M410.6 162.0L530.7 30.0" stroke-width="1.72" stroke-opacity="0.620"/>
+<path d="M410.6 162.0L709.4 100.6" stroke-width="0.60" stroke-opacity="0.160"/>
+<path d="M530.7 30.0L709.4 100.6" stroke-width="1.44" stroke-opacity="0.520"/>
+<path d="M553.5 221.0L566.5 221.0" stroke-width="0.88" stroke-opacity="0.280"/>
 </g>
 <g>
-<circle class="nd" data-id="immobiliereindustriellebatiment" cx="345.0" cy="220.0" r="11.27" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
-<circle class="nd" data-id="immobiliereregieterrainssalonique" cx="517.9" cy="30.0" r="18.15" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
-<circle class="nd" data-id="portsaloniqueottomaneconstruction" cx="775.0" cy="131.6" r="4.40" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="immobiliereindustriellebatiment" cx="410.6" cy="162.0" r="14.79" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="immobiliereregieterrainssalonique" cx="530.7" cy="30.0" r="18.15" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="portsaloniqueottomaneconstruction" cx="709.4" cy="100.6" r="13.40" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="banquesalonique" cx="553.5" cy="221.0" r="4.40" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="mineskassandra" cx="566.5" cy="221.0" r="4.40" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
 </g>
-<line x1="218.0" y1="113.1" x2="498.7" y2="30.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
-<line x1="218.0" y1="130.1" x2="332.7" y2="220.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
-<line x1="902.0" y1="121.6" x2="780.4" y2="131.6" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="218.0" y1="104.6" x2="511.6" y2="30.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="218.0" y1="121.6" x2="394.8" y2="162.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="218.0" y1="138.6" x2="548.1" y2="221.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="902.0" y1="113.1" x2="723.8" y2="100.6" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="902.0" y1="130.1" x2="571.9" y2="221.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
 <g font-size="10.5" font-family="ui-sans-serif,system-ui,sans-serif" fill="#0b0b0b">
-<text x="222.0" y="116.5" text-anchor="end">Compagnie Immobilière et de Régie d…</text>
-<text x="222.0" y="133.5" text-anchor="end">Compagnie immobilière et industrielle…</text>
-<text x="898.0" y="125.0" text-anchor="start">Port de Salonique (Société ottomane…</text>
-</g><g font-size="11.5" font-family="ui-sans-serif,system-ui,sans-serif" fill="#8a8983"><text x="0" y="265.5">3 firms, 3 interlocks, 1 component (largest 3). Node area is weighted degree; every firm is labelled. The other 5 firms in this territory&#x27;s bundle share no director with another and</text><text x="0" y="280.5">so have no place in an interlock network.</text></g></svg>
+<text x="222.0" y="108.0" text-anchor="end">Compagnie Immobilière et de Régie d…</text>
+<text x="222.0" y="125.0" text-anchor="end">Compagnie immobilière et industrielle…</text>
+<text x="222.0" y="142.0" text-anchor="end">Banque de Salonique</text>
+<text x="898.0" y="116.5" text-anchor="start">Port de Salonique (Société ottomane…</text>
+<text x="898.0" y="133.5" text-anchor="start">Société des mines de Kassandra</text>
+</g><line x1="40" y1="198" x2="1080" y2="198" stroke="#e6e5e1" stroke-width="1"/><text x="1080" y="193" text-anchor="end" font-size="11" font-family="ui-sans-serif,system-ui,sans-serif" fill="#8a8983">2 firms in 1 component unconnected to the main graph</text><g font-size="11.5" font-family="ui-sans-serif,system-ui,sans-serif" fill="#8a8983"><text x="0" y="265.5">5 firms, 4 interlocks, 2 components (largest 3). Node area is weighted degree; every firm is labelled. The other 5 firms in this territory&#x27;s bundle share no director with another and</text><text x="0" y="280.5">so have no place in an interlock network.</text></g></svg>

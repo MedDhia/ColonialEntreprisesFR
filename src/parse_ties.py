@@ -164,6 +164,183 @@ TRIGGERS: list[tuple[re.Pattern, str, str]] = [
     (re.compile(r"\bDir\.\s*(?:g[eé]n\.)?\s*:"), "directeur", "dir_abbrev"),
 ]
 
+# --- the directory line register -----------------------------------------
+# A whole family of North African and metropolitan annuaires prints a board one
+# member per line, surname first with the forename parenthesised and an address
+# after the comma:
+#
+#     Conseil d'administration
+#     composé de 3 à 6 membres, nommés pour 3 ans, propriétaires de 50 actions.
+#     ASSIS (Henri), à Oran ;
+#     GERMAIN (Pierre), 1, r. Élisée-Reclus, Alger ; pdt, adm. délégué ;
+#     MM. LEDOUX (F.), président, 12, place Vendôme, Paris (1er).
+#
+# `looks_like_name_list` splits on ";" and "," and asks what share of the parts
+# are name-shaped. In this register the commas separate a name from its
+# *address*, so a six-member board splits into twenty-odd parts of which five
+# are names, the ratio fails, and the whole list is discarded. That single
+# mismatch is the largest remaining extraction gap in the corpus: 13,909 lines
+# of this shape across 1,401 documents, of which 390 documents yielded no ties
+# at all. The Crédit foncier d'Algérie et de Tunisie's *Annuaire des valeurs de
+# l'Afrique du Nord* is the biggest single instance, which is why Algeria,
+# Tunisia and Morocco were the worst-covered territories in the network.
+_LINE_PARTICLE = r"(?:de|du|des|d[’']|le|la|les|van|von|di|del|della|el|ben|bel|ould)"
+LINE_MEMBER_RE = re.compile(
+    r"(?m)^[ \t]*(?:MM?\.\s*)?"
+    rf"(?P<surname>(?:{_LINE_PARTICLE}\s+)?"
+    r"[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ0-9'’\-]*"
+    rf"(?:[ ](?:{_LINE_PARTICLE}|[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ'’\-]*)){{0,4}})"
+    r"[ \t]*\((?P<given>[^)\n]{1,44})\)"
+    r"[ \t\xa0]*,(?P<tail>[^\n]*)$"
+)
+# What may sit inside the parentheses. A place, a date or a pure number there
+# means the line is a cross-reference or a table row, not a member.
+LINE_GIVEN_BAD_RE = re.compile(
+    r"^\s*(?:\d|[ivxlc]+\s*$|18\d\d|19\d\d|20\d\d|"
+    r"suite|voir|ex-|anc(?:ien)?\.?|groupe|ex)", re.I)
+
+# Headings that stand alone on their line with no colon after them. The same
+# directories print "Conseil d'administration" or "Commissaires aux comptes" as
+# a bare line above the members, which none of the punctuation-anchored triggers
+# above can see.
+BARE_HEADINGS: list[tuple[str, str, str]] = [
+    (r"CONSEIL\s+D['’]ADMINISTRATION", "administrateur", "bare_conseil"),
+    (r"Conseil\s+d['’]administration", "administrateur", "bare_conseil"),
+    (r"CONSEIL\s+DE\s+SURVEILLANCE|Conseil\s+de\s+surveillance",
+     "conseil_surveillance", "bare_surveillance"),
+    (r"ADMINISTRATEURS?|Administrateurs", "administrateur", "bare_administrateurs"),
+    (r"COMMISSAIRES?\s+AUX\s+COMPTES|Commissaires?\s+aux\s+comptes",
+     "commissaire_aux_comptes", "bare_commissaires"),
+    (r"CENSEURS?|Censeurs?", "censeur", "bare_censeurs"),
+    (r"DIRECTION|Direction", "directeur", "bare_direction"),
+    (r"G[EÉ]RANTS?|G[eé]rants?", "gerant", "bare_gerants"),
+]
+BARE_TRIGGERS = [
+    (re.compile(rf"(?m)^[ \t]*(?:{pat})[ \t]*$"), role, name)
+    for pat, role, name in BARE_HEADINGS
+]
+# The same set as a terminator: a bare "Commissaires aux comptes" ends the run
+# of administrateurs above it, and without this the auditors below would be
+# recorded as directors.
+BARE_HEADING_ANY_RE = re.compile(
+    r"(?m)^[ \t]*(?:" + "|".join(pat for pat, _, _ in BARE_HEADINGS) + r")[ \t]*$")
+
+
+def normalise_line_name(surname: str, given: str) -> str:
+    """`ASSIS (Henri)` -> `Henri Assis`, in the order the name parser expects.
+
+    Done here rather than left to `_make_member`'s surname-first fallback,
+    which only folds the parenthetical back when it is a recognised forename:
+    `LEDOUX (F.)` came out as the key `ledouxf`, and `de SINCAY (F.)` was
+    dropped entirely because the lowercase particle broke its all-caps test.
+    Inside this register the shape is known with certainty, so the reordering
+    is done explicitly.
+    """
+    given = re.split(r"\s*[,;]\s*", given.strip())[0].strip()
+    if not given or LINE_GIVEN_BAD_RE.match(given):
+        return ""
+    # The compiler prints surnames in caps; title-case them so the name parser
+    # is not asked to tell a surname from a shout.
+    def cap(tok: str) -> str:
+        if re.fullmatch(rf"{_LINE_PARTICLE}", tok, re.I):
+            return tok.lower()
+        if not tok.isupper():
+            return tok
+        # Each hyphen segment takes its own capital: one pass over
+        # ARNAUD-JEANTI gives "Arnaud-jeanti", which is a different surname.
+        return "-".join(w[:1].upper() + w[1:].lower() for w in tok.split("-"))
+    sur = " ".join(cap(t) for t in surname.split())
+    giv = " ".join(cap(t) for t in given.split())
+    return f"{giv} {sur}".strip()
+
+
+def looks_like_line_list(body: str) -> bool:
+    """True when the body is the one-member-per-line directory register."""
+    return len(LINE_MEMBER_RE.findall(body)) >= 2
+
+
+# A footnote marker the compiler's PDFs drop onto a line of their own between
+# two members. It is not a member and it does not end the list.
+FOOTNOTE_LINE_RE = re.compile(r"^\s*\d{1,3}\s*$")
+# The clause a bare heading may carry before its members begin.
+QUALIFYING_CLAUSE_RE = re.compile(
+    r"(?i)\b(?:compos[eé]|membres?|nomm[eé]s?|[eé]lus?|ans|actions?|"
+    r"propri[eé]taires?|MM\.|Messieurs)\b")
+
+
+def bare_heading_body(tail: str, max_lines: int = 26) -> str:
+    """The run of member lines under a heading that carries no punctuation.
+
+    Every other trigger ends with a colon or a dash, so the list it introduces
+    can be taken as a fixed window and bounded by the next field label. A bare
+    heading has no such anchor, and on a first pass the same fixed window ran
+    straight past the board into whatever followed it: a staff roster
+    ("D. CAPELLE, chef-comptable"), a footnote biography, and in one case a
+    marriage announcement three pages later. Hand-checking put precision at
+    about 60%, against 90%+ for every other genre in this pipeline.
+
+    The run is therefore walked line by line and stops at the first line that
+    carries no comma and no semicolon. Every genuine member line in this corpus
+    has one or the other — a name is followed by an address, a role or a
+    separator — while the headings that end a list ("Comité de direction",
+    "COMMISSAIRES AUX COMPTES", "DONNÉES FINANCIÈRES") have neither. The cost
+    is the occasional member printed without punctuation; the gain is that a
+    list ends where it actually ends.
+    """
+    out: list[str] = []
+    started = False
+    for i, line in enumerate(tail.split("\n")[:max_lines]):
+        s = line.strip()
+        if not s or FOOTNOTE_LINE_RE.match(s):
+            # Blank lines and stray footnote digits sit *inside* the run.
+            out.append(line)
+            continue
+        if "," in s or ";" in s:
+            started = True
+            out.append(line)
+            continue
+        # Before the first member the heading may be qualified — "composé de
+        # 3 à 6 membres, nommés pour 3 ans" — but only that. Admitting any
+        # unpunctuated line here glued together the one-name-per-line lists
+        # that carry no punctuation at all, and produced members called
+        # "Jean Claude Palu Meriem Zine".
+        if not started and i < 3 and QUALIFYING_CLAUSE_RE.search(s):
+            out.append(line)
+            continue
+        break
+    return "\n".join(out).strip()
+
+
+def parse_line_list(body: str, default_role: str) -> list[dict]:
+    """Parse the line register, one member per matching line.
+
+    Lines that do not match are skipped rather than fought over: the heading is
+    routinely followed by a clause ("composé de 3 à 6 membres, nommés pour 3
+    ans") and the list by a stray footnote digit, and neither is a member.
+    """
+    members: list[dict] = []
+    for m in LINE_MEMBER_RE.finditer(body):
+        name = normalise_line_name(m.group("surname"), m.group("given"))
+        if not name:
+            continue
+        # A role may follow the address, either in its own ";" field
+        # ("; pdt, adm. délégué ;") or as the field right after the name
+        # ("MM. LEDOUX (F.), président, 12, place Vendôme").
+        role = default_role
+        tail = m.group("tail")
+        fields = [f.strip(" .,;") for f in re.split(r"[;,]", tail) if f.strip(" .,;")]
+        for f in fields:
+            cr = canonical_role(f) or canonical_role(f + ".")
+            if cr and len(f.split()) <= 4:
+                role = cr
+                break
+        rec = _make_member(name, role)
+        if rec:
+            rec["member_raw"] = clean_text(m.group(0).strip())
+            members.append(rec)
+    return members
+
+
 # Field labels used by the directories; they terminate a board list.
 FIELD_LABEL_RE = re.compile(
     r"(?:^|\n)\s*(?:Capital|Objet|Exp|Agences|Succursales|Bilan|Dividendes|Si[eè]ge|"
@@ -780,12 +957,18 @@ def find_board_lists(segment_text: str) -> list[tuple[str, str, str]]:
     every tie by its number of matching patterns.
     """
     candidates: list[tuple[int, int, str, str, str]] = []
-    for rx, default_role, name in TRIGGERS:
+    bare = {name for _, _, name in BARE_TRIGGERS}
+    for rx, default_role, name in TRIGGERS + BARE_TRIGGERS:
         for m in rx.finditer(segment_text):
             start = m.end()
             tail = segment_text[start : start + MAX_LIST_CHARS]
+            if name in bare:
+                tail = bare_heading_body(tail)
             cut = len(tail)
-            for term in (FIELD_LABEL_RE, SEPARATOR_RE):
+            # A bare role heading below this one ends the list: without it the
+            # auditors under "Commissaires aux comptes" join the run of
+            # directors above them.
+            for term in (FIELD_LABEL_RE, SEPARATOR_RE, BARE_HEADING_ANY_RE):
                 t = term.search(tail)
                 if t and t.start() < cut:
                     cut = t.start()
@@ -793,7 +976,9 @@ def find_board_lists(segment_text: str) -> list[tuple[str, str, str]]:
             if nxt and nxt.start() < cut:
                 cut = nxt.start()
             body = tail[:cut].strip()
-            if len(body) < 4 or not looks_like_name_list(body):
+            if len(body) < 4:
+                continue
+            if not (looks_like_name_list(body) or looks_like_line_list(body)):
                 continue
             candidates.append((m.start(), start + len(body), body, default_role, name))
 
@@ -842,6 +1027,7 @@ GENERIC_FRAGMENT_RE = re.compile(
     r"^(?:achat|vente|commerce|industrie|travaux\s+publics?|transports?|importation|"
     r"exportation|agriculture|[eé]levage|banque|assurances?|immobilier|mines?|"
     r"exploitation|fabrication|production|repr[eé]sentation|imp|impr|imprimerie|"
+    r"manufactures?|forges?|ateliers?|usines?|caf[eé]|docks?|entrep[oô]ts?|"
     r"capital|objet|si[eè]ge|actions?|obligations?|dividendes?|exercice|bilan|"
     r"francs?|piastres?|total|divers|non)\.?$",
     re.I,
@@ -857,6 +1043,10 @@ def parse_board_list(body: str, default_role: str) -> list[dict]:
         MM. Georges Despret, presid. ; Wladimir Archawski, admin.-del. ;
         Mathieu Angelini, Victor Berti, ... , administrateurs.
     """
+    # The line register has to be read before `tidy_fragment` collapses the
+    # newlines it depends on.
+    if looks_like_line_list(body):
+        return parse_line_list(body, default_role)
     body = tidy_fragment(body)
     body = re.sub(r"^\s*[:—–-]\s*", "", body)
     members: list[dict] = []
@@ -974,6 +1164,10 @@ def _make_member(frag: str, role: str) -> dict | None:
         if labelled:
             role = labelled
         bare = bare[label.end():]
+    # Ordinal numbering from an enumerated list of founders or subscribers:
+    # "13° M. Salomon Van Dyck, industriel". The number is the list's, not the
+    # man's, and left in place it became part of his name.
+    bare = re.sub(r"^\s*\d{1,3}\s*[°º]\s*", "", bare)
     bare = LEADING_MM_RE.sub("", bare).strip(" .,;:")
     bare = re.sub(r"\s+", " ", bare).strip(" .,;:")
     if not bare or len(bare) < 3:

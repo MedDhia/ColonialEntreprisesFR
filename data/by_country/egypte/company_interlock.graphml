@@ -15,7 +15,7 @@
     <node id="caissehypothecaireegypte">
       <data key="n_label">Caisse hypothécaire d'Égypte</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">30</data>
+      <data key="n_n_directors">32</data>
       <data key="n_territory">Égypte</data>
     </node>
     <node id="creditfoncieregyptien">
@@ -54,7 +54,10 @@
     <edge id="e3" source="landbankegypt" target="unionfonciereegypte">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e4" source="creditfoncieregyptien" target="unionfonciereegypte">
+    <edge id="e4" source="caissehypothecaireegypte" target="creditfoncieregyptien">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e5" source="creditfoncieregyptien" target="unionfonciereegypte">
       <data key="e_weight">1</data>
     </edge>
   </graph>

@@ -2,7 +2,7 @@ company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
 eauxelectriciteindochine,indochinoiseelectricite,Compagnie des Eaux et d'électricité de l'Indochine,Société Indochinoise d'électricité,17,allain; allain-m; allain-p; baudouin-p; chaumier-a; devaux-p-paul; dior-j; drouin-p; guillanton-a; hermenier-g; homberg-o; maxime-robert-j; plante-a; teissier-du-cros; teissier-du-cros-e; thion-de-la-chaume-r-rene; trives-f
 plantationscaoutchoucsumatra,tapanoelie,Société des Plantations de caoutchouc de Sumatra,Tapanoëlie,15,bernard-j; bernard-j-jacques; cavadia-j; cavadia-t; donnet-l; engeringh-c; engeringh-h; laloux-ancion-h; laloux-h; ligtenberg-h; osterrieth-p; swart-a; thys-e; van-romburgh-p; vereecken-h
 distilleriesiindochine,distilleriesindochine,Société française des Distilleries de I'Indochine,Distilleries de l’Indochine,13,borduge-m; boyaval-l; calmette-a; chapsal; fontaine-l-leonard; guesde-p; homberg-o; le-gallen-m; quesnel-j; samson-e; schwob-d-hericourt-g; schwob-d-hericourt-j-jean; thion-de-la-chaume-r-rene
-indochinoiseculturestropicales,socindochinoiseculturestropicales,Société Indochinoise des Cultures tropicales,Soc. Indochinoise des CULTURES TROPICALES,13,angoulvant-g; bouvier-r; budop; dufay-h; generale-d; ginestet; hiep-hoa; homberg-o; lithiby-j; rocca-e; sibilat-r; simoni-p; sud-ginestet
+indochinoiseculturestropicales,socindochinoiseculturestropicales,Société Indochinoise des Cultures tropicales,Soc. Indochinoise des CULTURES TROPICALES,13,angoulvant-g-gabriel; bouvier-r; budop; dufay-h; generale-d; ginestet; hiep-hoa; homberg-o; lithiby-j; rocca-e; sibilat-r; simoni-p; sud-ginestet
 poinsardveyret,rizeriesextremeorient,POINSARD et VEYRET,Rizeries d'Extrême-Orient,13,aymard-c; bondonneau-h; e-worms; gavoty-c; gigandet-e; grammont-m-maxime; grand-dufay-h; michel-c; rauzy-p-paul; rocca; triadou-c; ville-e; ville-p
 industrielleexportationextremeorient,mmhbaudonmonygrenierjchaussonpboyegpincemin,Société Industrielle d'Exportation en Extrême-Orient,"MM. H. Baudon de Mony, A. Grenier, J. Chausson, P. Boyé, G. Pincemin et Cie",13,baudon-de-mony-x; begue-l; boye-p; chaumeil-j; chausson-j; colombier-l-louis; ducamp-a; gouvy; grenier-a-anselme; klehe-r; millie-g; pincemin; subra-r
 minieremetallurgiqueindochinemineschodienfonderiezincquangyen,socminesetainhauttonkin,"Cie Minière et métallurgique de l'Indochine, mines à Cho-Diên, fonderie de zinc à Quang-Yên",Soc. des MINES D'ÉTAIN DU HAUT-TONKIN,13,bault-g; belugou-l; de-sincay-e; harth-p; hauzeur-l; le-bret-j; lecuvre-f; ledoux-f; merigeault-e; robellaz-f; st-paul-de-sincay-g; thion-de-la-chaume; vincent-a
@@ -19,6 +19,7 @@ transportsautomobilescentreannam,urbainefonciereindochinoise,Société des Trans
 hydrauliqueasie,hydrauliqueasiesaigoncorr,L'Hydraulique-Asie,L'HYDRAULIQUE-ASIE Saïgon. Corr,11,carrere; carrere-g; charles; crepines; legrand-r; malcor; mazet; mazet-e; teissier-du-cros-e; water-c-i; water-co-i
 ufeo,unionfinanciereextremeorient,UFEO,Union financière d'Extrême-Orient,11,agabriel-l; baillet-g; bonnardel-j; chantrel-j; g-rene-laederich; hadengue-y; laederich-g; le-montreer-g; loisy-x; prangey-h; prangey-h-henri
 kalitengah,tapanoelie,Kalitengah,Tapanoëlie,11,bernard-j; bernard-j-jacques; boyer-j; cavadia-t; donnet-l; engeringh-c; engeringh-h; laloux-h; osterrieth-p; swart-a; vereecken-h
+banqueindochine,charbonnagestonkin,Banque de l’Indochine,Charbonnages du Tonkin,10,baudouin-p; de-monplanet; de-monplanet-a; deschamp-j; deschamps-j; deschamps-j-joseph; georges-picot-c; minost-e; simon-s; thelier-h
 energieelectriqueindochinoise,tramways,Énergie électrique indochinoise,Compagnie Générale Française de Tramways,10,allain; allain-m; baron-r-roger; chaumier; chaumier-a; dervieu; dervieu-p; hermenier; hermenier-g; manus-m
 indochinoiseelectricite,tramways,Société Indochinoise d'électricité,Compagnie Générale Française de Tramways,10,allain; allain-m; allain-p; chaumier; chaumier-a; hermenier; hermenier-g; manus-m; mellier; trives-f
 indochinoiseculturestropicales,plantationskantroioukantroy,Société Indochinoise des Cultures tropicales,Plantations de Kantroï ou Kantroy,10,d-ursel-a; de-laboulaye-e; deschars-l; gerard-r; guesde-p; lejeune-c; perles-g; rheims-j; rueff-g; vannier-j
@@ -27,30 +28,29 @@ leonblondeaux,manufacturesindochinoisescigarettes,Léon Blondeaux,Manufactures i
 fonciererizicolesoctrang,rizicolesoctrang,Société foncière et rizicole de Soctrang,Société rizicole de Soctrang,10,bertrand-g-georges; bertrand-g-gustave; beyssac-c; blanchard; jean-duclos-j; mazet-e; mazet-j; meslier-a; nguyen-van-cua; nguyen-van-vinh
 kalitengah,pacouda,Kalitengah,Pacouda,10,bernard-j; bernard-j-jacques; engeringh-c; engeringh-h; laloux-g; laloux-h; osterrieth-p; swart-a; varsavaux-h; vereecken-h
 kalitengah,plantationscaoutchoucsumatra,Kalitengah,Société des Plantations de caoutchouc de Sumatra,10,bernard-j; bernard-j-jacques; cavadia-t; donnet-l; engeringh-c; engeringh-h; laloux-h; osterrieth-p; swart-a; vereecken-h
-banqueindochine,charbonnagestonkin,Banque de l’Indochine,Charbonnages du Tonkin,9,baudouin-p; de-monplanet-a; deschamp-j; deschamps-j; deschamps-j-joseph; georges-picot-c; minost-e; simon-s; thelier-h
 chalandageremorquageindochine,sacric,Chalandage et remorquage de l’Indochine,SACRIC,9,bernard-p; chone; giscard-d-estaing-e; gregoire; guesde-p; homberg-o; papillon-p; roque-p; simoni-p
 delignon,etablissementsdelignon,DELIGNON,Société anon. des Établissements L. Delignon,9,boulant-a; chapsal-f; chaumier-a; delignon-l; fontaine-l-leonard; simoni-p; thierry-mieg-g; thion-de-la-chaume-r-rene; toche-c
 commercialeindochine,rizeriesextremeorient,Société Commerciale française de l'Indochine,Rizeries d'Extrême-Orient,9,derre; ed-worms; joly-j; michel-c; moore-h; rauzy-p-paul; ville-e; ville-p; worms-e
 rizeriesextremeorient,rizeriesindochinoises,Rizeries d'Extrême-Orient,Rizeries indochinoises,9,derre; ed-worms; gigandet-e; michel-c; moore-h; rauzy-p-paul; ville-e; ville-p; worms-e
 ccneo,commercenavigationextremeorient,CCNEO,Cie de commerce et de navigation d'Extrême-Orient,9,allatini-g; arnaud-de-vogue; boyaval-l; fernandez-g; hoffet-h; jessula-d; launay-l; milne-j; waespe-f
+chauxhydrauliqueslangtho,cimentsportlandartificielsindochine,Chaux hydrauliques du Lang-Tho,Ciments Portland artificiels de l'Indochine,9,candlot-c; candlot-e; ferrant-m; ferrant-r; lebreton-f; marchegay-a; perpignani-n; thion-de-la-chaume-r-rene; thomann-p
 etainscammon,socetainscammon,Société des Étains du Cammon,Soc. des ÉTAINS du CAMMON,9,bardoux-j; bonnardel-j; buffet-a; chanove-j; dans-la-province-du-cammon-m; de-solages-c; dubost; petin-h; thion-de-la-chaume
 indochinoiseculturestropicales,mimot,Société Indochinoise des Cultures tropicales,Mimot,9,bernard-f; d-ursel-a; d-ursel-f; deschars-l; dewez-h; guesde-p; rheims-j; rueff-g; vannier-j
 unionelectriqueindochine,unionminiereindochinoise,Union électrique d’Indochine,Union minière indochinoise,9,briault-g; coupard-c; de-chambure-h; de-flers-f; faure-j-joseph; furiet-c; pichon-e; pietri-s; thiebaut-l
 agricolethescafeskontumannam,gcolin,Compagnie agricole des Thés et Cafés du Kontum-Annam,G. Colin,9,bietz-a; caffort-l-leon; grammont-m-maxime; lambert-a; le-gallen-m; legrand-r; maspero-g; oudot-l; saint-girons
 creditmobilierindochinois,creditmobilierindochinoisexploitationmonts,Crédit mobilier indochinois,"Crédit mobilier indochinois, Société d'exploitation des Monts-de",9,agabriel-l; bernard-p; boudon-r-robert; de-chambure-h; gannay-p; goury-du-roslan-r; guesde-p; laurent-j-jean; nouailhetas-a
-indochinoisecommerce,sicaf,Société Indochinoise de Commerce,SICAF,9,arnaud-de-vogue; d-eichthal-r; d-ursel-f; guesde-p; hachette-r; laroche-c; lenoir-g; letondot-c; van-regemorter
+indochinoisecommerce,sicaf,Société Indochinoise de Commerce,SICAF,9,arnaud-de-vogue; d-eichthal-r; d-ursel-f; guesde-p; hachette-r-rene; laroche-c; lenoir-g; letondot-c; van-regemorter-m
 manufacturesindochinoisescigarettes,messageriesfluvialescochinchine,Manufactures indochinoises de cigarettes,Messageries fluviales de Cochinchine,9,ed-pfeiffer; foy-s; guesde-p; kaleski-g; karcher-l; laurent-j; orio; picard-g; rueff-g
 caoutchoucsmekong,caoutchoucsmekongsaigonsoccap30,Cie des CAOUTCHOUCS du MÉKONG,"Cie des CAOUTCHOUCS du MÉKONG, Saïgon. Soc. an. au cap. de 30",9,atthalin; carrere; ectors-j-jean; langlois; legrand-r; mazet-e; outrey-e; perrot-j; petithuguenin-p
-caoutchoucsmekongindochinoise,indochinoiseculturecaoutchoucsmekong,Cie des caoutchoucs du Mékong (Société indochinoise de,Société indochinoise de culture Cie des caoutchoucs du Mékong,9,atthalin-a; carrere-g; champion-g-gilbert; de-beaumont-j; ectors-m; jullien-a; langlois-berthelot-p; mazet-e; petithuguenin-p
+caoutchoucsmekongindochinoise,indochinoiseculturecaoutchoucsmekong,Cie des caoutchoucs du Mékong (Société indochinoise de,Société indochinoise de culture Cie des caoutchoucs du Mékong,9,atthalin-a; carrere-g; champion-g-gilbert; de-beaumont-j; ectors-m; jullien-a-armand; langlois-berthelot-p; mazet-e; petithuguenin-p
 indochineluminescenceradio,indochinephonoradio,Société Indochine Luminescence et Radio,"Indochine Phono et radio, puis Indochine luminescence et radio",9,bedat-de-monlaur-p; benignus-m; bunel-h; cordonnier; furiet-c; langlois; langlois-s; merlet-l; nesty-p
-banqueindochine,tabacsindochine,Banque de l’Indochine,Tabacs d’Indochine,8,girod; homberg; homberg-a; homberg-o; simon; simon-s; stern; stern-e
 caoutchoucsindochine,soccaoutchoucindochine,Société des caoutchoucs de l'Indochine,Soc. des CAOUTCHOUC de l'INDO-CHINE,8,bergougnan-r-raymond; bernard-f; cibot-p; clerc-l; goutet-g; hallet-a; homberg-o; thion-de-la-chaume-r-rene
 caoutchoucsindochinelocninh,soccaoutchoucindochine,"Société des Caoutchoucs de l'Indochine, Loc-Ninh",Soc. des CAOUTCHOUC de l'INDO-CHINE,8,bernard-f; cibot-p; clerc-l; fauconnier-h; goutet-g; goutet-p; hallet-a; homberg-o
 distilleriesindochine,marchandisescoursroute,Distilleries de l’Indochine,Marchandises en cours de route,8,boyaval-l; calmette; chapsal; d-hericourt-s; fontaine-a; homberg-o; perreau; thion-de-la-chaume
 etainswolframtonkin,fermiereetainsextremeorient,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",Compagnie Fermière des Étains d'Extrême-Orient,8,bardoux-j; belugou-l; brard-r; de-lafaulotte-a-alexandre; mallet-a; petin-j; thion-de-la-chaume-r-rene; wolfram-du-tonkin
+ccneo,plantationsloc,CCNEO,Plantations d’An-Loc,8,ascoli-v; bloch-a; de-vogue-r; fernandez-g; girard-e; hoffet-h; jessula-d; launay-l
 rizindochinedenisfreres,unioncommercialeindochinoiseafricaine,Riz d'Indochine Denis frères,L'Union commerciale indochinoise et africaine,8,estier-f; estier-h; hecquet-g; legrand-r; paoli-l; thierry-j; vigne-g; vigne-j
 exploitationsetainswolframpiaouac,minesetainhauttonkin,Société d'exploitations des Étains et wolfram du Pia-Ouac,Société des Mines d'étain du Haut-Tonkin,8,brard-r; heilmann-j; humann-e; monguillot-m; pare-m; petin-h; ramonatxo; vincenti-e
-chauxhydrauliqueslangtho,cimentsportlandartificielsindochine,Chaux hydrauliques du Lang-Tho,Ciments Portland artificiels de l'Indochine,8,candlot-c; candlot-e; ferrant-m; ferrant-r; lebreton-f; marchegay-a; perpignani-n; thion-de-la-chaume-r-rene
 exploitationetainswolframpiaouac,exploitationsetainswolframpiaouac,Société d'exploitation des étains et Wolfram de Pia-Ouac,Société d'exploitations des Étains et wolfram du Pia-Ouac,8,brard-r; humann-e; monguillot-m; pare-m; petin-h; ramonatxo; vicaire-m-maxime; vincenti-e
 banqueiindochine,banqueindochine,Banque de I'Indochine,Banque de l’Indochine,8,bernard-f; brincard-g; celier-a; deschamp-j; leclerc-j-james; michel-cote-c; minost-e; peloni-c
 indochinoiseculturestropicales,indochinoiseplantationsreuniesmimot,Société Indochinoise des Cultures tropicales,Société indochinoise des plantations réunies de Mimot,8,d-ursel-f; de-laboulaye-e; deschars-l; dewez-h; gerard-r; guesde-p; rheims-j; rueff-g
@@ -58,8 +58,10 @@ indochinoiseplantationsreuniesmimot,mimot,Société indochinoise des plantations
 agricolethescafeskontum,agricolethescafeskontumannam,Compagnie agricole des thés et cafés du Kontum,Compagnie agricole des Thés et Cafés du Kontum-Annam,8,biltz-a; caffort-l-leon; duperon-p; ectors-j; fourn-g; legrand-r; maspero-g; petithuguenin-p
 pacouda,plantationscaoutchoucsumatra,Pacouda,Société des Plantations de caoutchouc de Sumatra,8,bernard-j; bernard-j-jacques; engeringh-c; engeringh-h; laloux-h; osterrieth-p; swart-a; vereecken-h
 pacouda,tapanoelie,Pacouda,Tapanoëlie,8,bernard-j; bernard-j-jacques; engeringh-c; engeringh-h; laloux-h; osterrieth-p; swart-a; vereecken-h
+banqueindochine,tabacsindochine,Banque de l’Indochine,Tabacs d’Indochine,7,homberg; homberg-a; homberg-o; simon; simon-s; stern; stern-e
 caoutchoucsindochine,caoutchoucsindochinelocninh,Société des caoutchoucs de l'Indochine,"Société des Caoutchoucs de l'Indochine, Loc-Ninh",7,bernard-f; cibot-p; clerc-l; goutet-g; hallet-a; homberg-o; josse-a-adrien
-internationaleplantationsfinanceactionnairesicaf,sicaf,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",SICAF,7,blaess-w; estates-agency-r; grisar-a; lionel-marie; malim-rubber-c-t; poirson-c; van-regemorter
+internationaleplantationsfinanceactionnairesicaf,sicaf,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",SICAF,7,blaess-w; estates-agency-r; grisar-a; lionel-marie; malim-rubber-c-t; poirson-c; van-regemorter-m
+plantationscaoutchoucsumatra,plantationscaoutchouctapanoelie,Société des Plantations de caoutchouc de Sumatra,Plantations de caoutchouc de Tapanoelie,7,cambefort-c; de-rohan-chabot-p; donnet-l; engeringh-c; osterrieth-p; poirson-c; thys-e
 commercenavigationextremeorient,succursalemarseille,Cie de commerce et de navigation d'Extrême-Orient,Succursale à MARSEILLE,7,bloch-a-achille; de-lachesnais-e-edouard; fernandez-g; gigon-papin-r; hoffet-h; jessula-d; launay-l
 indochinoiseculturestropicales,indochinoiseplantationsheveas,Société Indochinoise des Cultures tropicales,Société indochinoise de plantations d'hévéas,7,arnaud-de-vogue; baudouin-p; de-chambure-h; de-laboulaye-e; dewez-h; furiet-c; hoffet-h
 denisfreresbordeaux,denisfreresindochine,Société anon. Denis frères de Bordeaux,Denis frères d'Indochine,7,benquey-m; de-ferry-f; delalande-l; denis-a-alphonse; denis-e-etienne; denis-m; rousseau-h
@@ -89,6 +91,7 @@ rizicolebattambang,rizicolebattambangourizicolebattambang,Société rizicole de 
 caoutchoucsiboga,plantationscaoutchoucsumatra,Caoutchouc de Siboga,Société des Plantations de caoutchouc de Sumatra,7,bernard-j; bernard-j-jacques; cavadia-j; engeringh-c; engeringh-h; osterrieth-p; swart-a
 caoutchoucsiboga,tapanoelie,Caoutchouc de Siboga,Tapanoëlie,7,bernard-j; bernard-j-jacques; cavadia-j; engeringh-c; engeringh-h; osterrieth-p; swart-a
 pekinsyndicateltd,pekinsyndicateoupekingsyndicate,The Pekin Syndicate Ltd,Pekin Syndicate ou Peking Syndicate,7,armstrong-o; arnavon-j; fitzgerald-b; francqui-e; jadot-c; nathan-w; woodroffe-c
+cochinchineouplantationscaoutchouccochinchine,lexiqueplanteur,Cochinchine ou Plantations de caoutchouc de Cochinchine,LEXIQUE DU PLANTEUR,6,berquet; delost; mayer; mottet; passerat-de; salomon
 chalandage,chalandageremorquageindochine,CHALANDAGE,Chalandage et remorquage de l’Indochine,6,chone; daurelle-r; grammont-m-maxime; guesde-p; homberg-o; simoni-p
 dubreuilh,eauxelectriciteindochine,DUBREUILH,Compagnie des Eaux et d'électricité de l'Indochine,6,allain-a; devaux-p-paul; hebre-e; hermenier-g; homberg-o; plante-a
 indochinoiseculturestropicales,sacric,Société Indochinoise des Cultures tropicales,SACRIC,6,bernard-p; giscard-d-estaing-e; guesde-p; homberg-o; sffc-t; simoni-p
@@ -97,8 +100,8 @@ indochinoiseelectricite,socindochinoiseelectricite,Société Indochinoise d'éle
 indochinoisecommerceagriculturefinance,sicaf,"Société indochinoise de commerce, d'agriculture et de finance",SICAF,6,blaess-w; censeur-bfci; fontaine-l-leonard; grisar-a; lambert-e; poirson-c
 commercialeindochine,soccommercialefseindochine,Société Commerciale française de l'Indochine,Soc. commerciale Fse de l'INDO-CHINE,6,a-marseille-m; ed-worms-rauzy; michel-c; rauzy-p-paul; ville; ville-p
 etainsindochine,fermiereetainsextremeorient,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",Compagnie Fermière des Étains d'Extrême-Orient,6,brard-r; de-fommervault-g; de-lafaulotte-a-alexandre; etains; mallet-a; wolfram-du-tonkin
+plantationsloc,succursalemarseille,Plantations d’An-Loc,Succursale à MARSEILLE,6,bloch-a-achille; de-vogue-r; fernandez-g; hoffet-h; jessula-d; launay-l
 ccneo,gommelaquejb,CCNEO,gomme laque J.-B,6,boyaval-l; de-vogue-r; fernandez-g; girard-e; launay-l; waespe-f
-ccneo,plantationsloc,CCNEO,Plantations d’An-Loc,6,bloch-a; de-vogue-r; fernandez-g; girard-e; hoffet-h; launay-l
 ccneo,succursalemarseille,CCNEO,Succursale à MARSEILLE,6,de-vogue-r; fernandez-g; girot-h; hoffet-h; jessula-d; launay-l
 denisfreresbordeaux,rizindochinedenisfreres,Société anon. Denis frères de Bordeaux,Riz d'Indochine Denis frères,6,de-ferry-f; delalande-l; denis-a-alphonse; denis-e-etienne; denis-m; rousseau-h
 francoindochinoise,rizindochinedenisfreres,Compagnie Franco-indochinoise,Riz d'Indochine Denis frères,6,caron-p; delalande-l; denis-a-alphonse; denis-e; denis-e-etienne; rousseau-h
@@ -109,6 +112,7 @@ omniumelectriqueindustrielcommercial,tramways,Omnium électrique industriel et c
 charbonnages,indochinoisecharbonnagesminesmetalliques,CHARBONNAGES,Société indochinoise de Charbonnages et de mines métalliques,6,a-phan-me-e; chemin-dupontes-g; lancrenon-p; marsot-v; merigeault-e; vaucheret-a
 chauxhydrauliqueslangtho,socchauxhydrauliqueslangtho,Chaux hydrauliques du Lang-Tho,Soc. des CHAUX HYDRAULIQUES DU LANG-THO,6,boyaval-l; candlot-e; ferrant-r; fontaine-a; fontaine-l; perpignani-n
 minesorbaolac,oxygeneacetyleneextremeorient,Mines d'or de Bao-Lac,Société d’Oxygène et d’acétylène d’Extrême-Orient,6,bernard-f; chapuis-c; delorme-j; delorme-p; deschars-e; grand-dufay-c
+banqueindustriellechine,poursuitescontredirigeantsbanqueindustriellechine,La Banque industrielle de Chine,Les poursuites contre les dirigeants de la Banque industrielle de Chine,6,chautard-p; de-cerenville-r; espivent-de-la-villesboisnet-a; frezouls-a; henry-e; perchot-j
 indochinoiseforestiereallumettes,socindochinoiseforestiereallumettes,Société indochinoise forestière et des allumettes,Soc. indo-chinoise forestière et des ALLUMETTES,6,audap-r; carrere-g; mahe-g; mange-f-frederic; maspero-g; welti-e
 administration,indochinoiseplantationsreuniesmimot,Administration,Société indochinoise des plantations réunies de Mimot,6,d-ursel-f; de-laboulaye-e; deschars-l; fourn-g; guesde-p; rueff-g
 administration,plantationskantroioukantroy,Administration,Plantations de Kantroï ou Kantroy,6,d-ursel-a; de-laboulaye-e; deschars-l; guesde-p; rueff-g; vannier-j
@@ -124,7 +128,6 @@ plantationsterresrouges,plantationsterresrougesheveasquanloicafeiersheveasjava,S
 salinessudannam,salinessudannamtubong,Société des salines du Sud-Annam,"Salines du Sud-Annam, Tu-Bong",6,borie; brunet; carre; duchateau; guerin; noel
 caoutchoucsiboga,kalitengah,Caoutchouc de Siboga,Kalitengah,6,bernard-j; bernard-j-jacques; engeringh-c; engeringh-h; osterrieth-p; swart-a
 caoutchoucsiboga,pacouda,Caoutchouc de Siboga,Pacouda,6,bernard-j; bernard-j-jacques; engeringh-c; engeringh-h; osterrieth-p; swart-a
-cochinchineouplantationscaoutchouccochinchine,lexiqueplanteur,Cochinchine ou Plantations de caoutchouc de Cochinchine,LEXIQUE DU PLANTEUR,5,berquet; gallay; mayer; mottet; salomon
 anthracitestonkin,distilleriesindochine,Société des anthracites du Tonkin,Distilleries de l’Indochine,5,fontaine-a; fontaine-a-andre; fontaine-l-leonard; homberg-o; samson-e
 banqueindochine,creditfoncierindochine,Banque de l’Indochine,Crédit foncier de l’Indochine,5,bernard-f; guesde-p; homberg-o; minost-e; roume-e
 caoutchoucsindochine,indochinoiseculturestropicales,Société des caoutchoucs de l'Indochine,Société Indochinoise des Cultures tropicales,5,bergougnan-a; bergougnan-r-raymond; bernard-f; bernard-p; homberg-o
@@ -146,7 +149,7 @@ poinsardveyret,rizeriesindochinoises,POINSARD et VEYRET,Rizeries indochinoises,5
 rizeriesextremeorient,sochonquan,Rizeries d'Extrême-Orient,Soc. d'HONQUAN,5,duclos; rauzy-p-paul; rocca-e; ville-e; ville-p
 rizeriesindochinoises,rizindochinedenisfreres,Rizeries indochinoises,Riz d'Indochine Denis frères,5,eug-ville; michel-c; rauzy-p-paul; ville-p; worms-e
 algemeenebelgischjavaschcultuurmaatschappij,belgischnederlandschecultuurmaatschappij,Algemeene Belgisch Javasch Cultuur Maatschappij,Belgisch-Nederlandsche Cultuur Maatschappij,5,buffet-p; de-decker-r; fuchs-l; lionel-marie-j; veltman-k
-plantationsloc,succursalemarseille,Plantations d’An-Loc,Succursale à MARSEILLE,5,bloch-a-achille; de-vogue-r; fernandez-g; hoffet-h; launay-l
+commercenavigationextremeorient,plantationsloc,Cie de commerce et de navigation d'Extrême-Orient,Plantations d’An-Loc,5,bloch-a-achille; fernandez-g; hoffet-h; jessula-d; launay-l
 agricoleindustrielletourcham,ccneo,Société Agricole et Industrielle de Tourcham,CCNEO,5,boyaval-l; girard-e; jessula-d; launay-l; waespe-f
 agricoleindustrielletourcham,commercenavigationextremeorient,Société Agricole et Industrielle de Tourcham,Cie de commerce et de navigation d'Extrême-Orient,5,boyaval-l; jessula-d; launay-l; lis-a; waespe-f
 agricoleindustrielletourcham,gommelaquejb,Société Agricole et Industrielle de Tourcham,gomme laque J.-B,5,boyaval-l; girard-e; incertains-r; launay-l; waespe-f
@@ -169,7 +172,6 @@ commercialelaos,etudesexploitationsminieresindochine,Société Commerciale du La
 commercialelaos,soccommercialelaos,Société Commerciale du Laos,Soc. Commerciale du LAOS,5,bartholoni-r; brame-p; d-ayen-j; de-vienne-h; dupuy-e-emile
 etudesexploitationsminieresindochine,socetudesexploitationsminieresindochine,Société d'Études et d'exploitations minières de l’Indochine,Soc. d'ÉTUDES et d'EXPLOITATIONS MINIÈRES de l'INDOCHINE,5,bartholoni-r; brame-p; de-courtivron-p; de-vienne-h; dufaure-f
 laquesindochinoises,laquesindochinoisesboulogneseine,Société des laques indochinoises,"Société des Laques indo-chinoises, Boulogne-sur-Seine",5,bedat; chauviere; hermenier; mezieres; simoni-p
-francoannamitetextileexportation,tsanhhaptsaofreres,Société franco-annamite textile et d'exportation,Tsanh Hap Tsao frères,5,cafe-r; co-nghia; cotte-a; cotte-p; tortel-l
 eauxhanoi,etainswolframtonkin,Compagnie des Eaux de Hanoï,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",5,brard-r; de-pourtales-r; de-wendel-f; mallet-a; petin-h
 etainscammon,etainswolframtonkin,Société des Étains du Cammon,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",5,bardoux-j; baudouin-p; brard-r; de-wendel-f; petin-h
 etainswolframtonkin,minesetainhauttonkin,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",Société des Mines d'étain du Haut-Tonkin,5,brard-r; humann-e; petin-h; petin-j; wolfram-du-tonkin
@@ -183,6 +185,7 @@ caoutchoucskompongthom,unionminiereindochinoise,Caoutchoucs de Kompong-Thom,Unio
 iindustrieindochine,indochinoiseeauxielectriciteannam,I'Industrie en Indochine,Société indochinoise pour les eaux et I'électricité en Annam,5,de-laboulaye-e; denis-e-etienne; gerard-m; monges-r; palanque-l
 indochinoiseculturestropicales,unionminiereindochinoise,Société Indochinoise des Cultures tropicales,Union minière indochinoise,5,arnaud-de-vogue; de-chambure-h; de-flers-f; de-laboulaye-e; furiet-c
 indochinoiseplantationsreuniesmimot,plantationsheveaspreckchlongouprekchlong,Société indochinoise des plantations réunies de Mimot,Plantations d'hévéas du Preck-Chlong ou Prek-Chlong,5,d-ursel-f; de-laboulaye-e; guesde-p; laurent-j-jean; rueff-g
+lexiqueplanteur,plantationscourtenay,LEXIQUE DU PLANTEUR,Plantations de Courtenay,5,allard; allard-f; arnodin-g; duchesne-r; goirand-l
 indochinoiseplantationsreuniesmimot,manufacturesindochinoisescigarettes,Société indochinoise des plantations réunies de Mimot,Manufactures indochinoises de cigarettes,5,foy-s; guesde-p; laurent-j-jean; rheims-j; rueff-g
 agricolethescafeskontum,caoutchoucsmekong,Compagnie agricole des thés et cafés du Kontum,Cie des CAOUTCHOUCS du MÉKONG,5,ectors-j; ectors-j-jean; legrand-r; petithuguenin-p; rossignol
 caoutchoucspadang,indochinoiseculturescambodge,Compagnie des Caoutchoucs de Padang,Compagnie indochinoise de cultures Compagnie du Cambodge,5,de-beaumont-j; de-rivaud-o; de-rivaud-r; langlois-berthelot-p; michaux-r
@@ -209,9 +212,10 @@ agricoleannam,plantationscaoutchoucsumatra,Compagnie Agricole d'Annam,Société 
 agricoleannam,tapanoelie,Compagnie Agricole d'Annam,Tapanoëlie,5,bernard-j; bernard-j-jacques; engeringh-c; laloux-h; vereecken-h
 culturefrancojavanaise,culturepanoulisan,Société de Culture franco-javanaise,Société de culture de Panou-Lisan,5,bernard-j; d-ancona-c-charles; de-lyee-de-belleau-a; enthoven-j; zannetto-g
 kalitengah,nieuwtjisalak,Kalitengah,Nieuw Tjisalak,5,engeringh-c; laloux-h; osterrieth-p; swart-a; van-den-bosch-l
+plantationscaoutchouctapanoelie,tapanoelie,Plantations de caoutchouc de Tapanoelie,Tapanoëlie,5,donnet-l; engeringh-c; le-grelle-o; osterrieth-p; thys-e
 tamiangrubber,tamiangrubberestates,Tamiang Rubber,Tamiang Rubber Estates,5,harold-f-copeman-h; skinner-e; swart-g; wright-c; wright-h
 agencecollectiverepresentationsindustriellescommerciales,agencecollectiverepresentationsindustriellesindochine,Agence collective de représentations industrielles et commerciales,Agence collective de représentations industrielles en Indochine,4,cassagnavere-p; henry; mayer; terquem-e-emile
-banqueindochine,soctabacsindochine,Banque de l’Indochine,Soc. des TABACS DE L'INDO-CHINE,4,girod; homberg; simon-s; stern-e
+heveasdongnai,lexiqueplanteur,Société générale des hévéas de Dong-Naï,LEXIQUE DU PLANTEUR,4,d-ainvelle-v; mayer; saliege-h; thil
 industriellechimieextremeorient,industriellechimieextremeorienthaiphong,Société industrielle de chimie d'Extrême-Orient,Société Industrielle de Chimie d'Extrême-Orient à Haïphong,4,delorme; deschars; paitel-g; simon-s
 anthracitestonkin,industriellechimieextremeorient,Société des anthracites du Tonkin,Société industrielle de chimie d'Extrême-Orient,4,de-laboulaye-e; delorme-p; fontaine-a; homberg-o
 banqueindochine,distilleriesindochine,Banque de l’Indochine,Distilleries de l’Indochine,4,baudouin-p; borduge-m; guesde-p; homberg-o
@@ -229,8 +233,10 @@ indochinoiseculturestropicales,soccaoutchoucindochine,Société Indochinoise des
 indochinoiseculturestropicales,verreriesextremeorient,Société Indochinoise des Cultures tropicales,Verreries d’Extrême-Orient,4,bouvier-r; giscard-d-estaing-e; homberg-o; philippe-r-raymond
 sucreriesraffineriesindochine,sucreriesraffineriesindochinehiephoa,Sucreries et raffineries de l'Indochine,"Sucreries et raffineries de l’Indochine, Hiêp-Hoa",4,grammont-m-maxime; homberg-o; philippe-r-raymond; weill-d
 banqueindochine,credithypothecaireindochine,Banque de l’Indochine,Crédit hypothécaire de l’Indochine,4,bernard-f; guesde-p; minost-e; roume-e
+agricolesuzannah,lexiqueplanteur,Société agricole de Suzannah [Agricole de Suzannah],LEXIQUE DU PLANTEUR,4,fontaine-l-leonard; girard-e; thiollier-a-auguste; waespe-f
 asiatiqueboissonsindigenes,distilleriesiindochine,Société asiatique des boissons indigènes,Société française des Distilleries de I'Indochine,4,calmette-a; fontaine-l-leonard; isnard-v; thion-de-la-chaume-r-rene
 asiatiqueboissonsindigenes,socasiatiqueboissonsindigenes,Société asiatique des boissons indigènes,Soc. asiatique des BOISSONS INDIGÈNES,4,fontaine-a; fontaine-l-leonard; husson; isnard-v
+internationaleplantationsfinanceactionnairesicaf,plantationsbunge,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",Plantations Bunge,4,grisar-a; grisar-e-emile; maus-f; van-regemorter-m
 internationaleplantationsfinanceactionnairesicaf,tandjongmalimrubbercoutanjongmalimrubberc,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,4,estates-agency-r; grisar-a; malim-rubber-c-t; skinner-e
 commercialeindochine,poinsardveyret,Société Commerciale française de l'Indochine,POINSARD et VEYRET,4,michel-c; rauzy-p-paul; ville-e; ville-p
 huileriesavonnerieextremeorient,rizeriesextremeorient,Huilerie et savonnerie de l’Extrême-Orient,Rizeries d'Extrême-Orient,4,duclos; rauzy-p-paul; ville-e; ville-p
@@ -242,7 +248,6 @@ etainsindochine,minesortchepone,"Société des Étains de l'Indo-Chine, puis Ét
 fermiereetainsextremeorient,minesbanman,Compagnie Fermière des Étains d'Extrême-Orient,Société des Mines de Ban-Man,4,brard-r; de-lafaulotte-a-alexandre; etains; wolfram-du-tonkin
 minesoroutremer,minesortchepone,Société des Mines d'or d'Outre-Mer,Mines d'or de Tchépone,4,brard-r; de-lafaulotte-a-alexandre; gautheron-c; reveillaud-j
 agricoleindustriellebencui,caoutchoucskompongthom,Société agricole et industrielle de Bên-Cui,Caoutchoucs de Kompong-Thom,4,arnaud-de-vogue; de-flers-f; laurent-j-jean; lionel-marie-j
-commercenavigationextremeorient,plantationsloc,Cie de commerce et de navigation d'Extrême-Orient,Plantations d’An-Loc,4,bloch-a-achille; fernandez-g; hoffet-h; launay-l
 agricolesuzannah,ccneo,Société agricole de Suzannah [Agricole de Suzannah],CCNEO,4,fernandez-g; girard-e; launay-l; waespe-f
 commercenavigationextremeorient,gommelaquejb,Cie de commerce et de navigation d'Extrême-Orient,gomme laque J.-B,4,boyaval-l; fernandez-g; launay-l; waespe-f
 domainekebao,succursalemarseille,Société du domaine de Kébao,Succursale à MARSEILLE,4,de-vogue-r; fernandez-g; gigon-papin-r; launay-l
@@ -274,6 +279,7 @@ delignon,indochinoiseelectricite,DELIGNON,Société Indochinoise d'électricité
 etablissementsdelignon,indochinoiseelectricite,Société anon. des Établissements L. Delignon,Société Indochinoise d'électricité,4,chaumier-a; simoni-p; thion-de-la-chaume-r-rene; toche-c
 francoannamiteindustriesoie,tsanhhaptsaofreres,Société franco-annamite pour l'industrie de la soie,Tsanh Hap Tsao frères,4,cotte-a; cotte-p; kaplan-l-lucien; tortel-l
 francoannamitetextileexportation,manufacturecouverturestonkin,Société franco-annamite textile et d'exportation,Manufacture de couvertures du Tonkin,4,chavent; cotte-a; cotte-p; emery
+francoannamitetextileexportation,tsanhhaptsaofreres,Société franco-annamite textile et d'exportation,Tsanh Hap Tsao frères,4,co-nghia; cotte-a; cotte-p; tortel-l
 manufacturecouverturestonkin,tsanhhaptsaofreres,Manufacture de couvertures du Tonkin,Tsanh Hap Tsao frères,4,basset-chercot-f; cherpin-h; cotte-a; cotte-p
 bienhoaindustrielleforestiere,tramwaysdonai,Biênhoà industrielle et forestière,Compagnie française des Tramways du Donaï,4,blondel; heilmann; heilmann-j; posth
 minesetainhauttonkin,socminesetainhauttonkin,Société des Mines d'étain du Haut-Tonkin,Soc. des MINES D'ÉTAIN DU HAUT-TONKIN,4,chauvet-h; delaine-m; heilmann-j; hellies-a
@@ -294,7 +300,6 @@ caoutchoucsextremeorient,caoutchoucsindochinesiegesocial,Caoutchoucs d'Extrême-
 caoutchoucsextremeorient,indochinoiseculturestropicales,Caoutchoucs d'Extrême-Orient,Société Indochinoise des Cultures tropicales,4,bernard-p; bouvier-r; de-flers-f; giscard-d-estaing-e
 caoutchoucsindochinelocninh,locninh,"Société des Caoutchoucs de l'Indochine, Loc-Ninh",LOC-NINH,4,clerc-l; fauconnier-h; goutet-g; josse-a-adrien
 cotonnieretonkin,scieriesfabriquesallumettesthanhhoa,Cotonnière du Tonkin,Société des Scieries et de fabriques d'allumettes de Thanh-hoa,4,bayle-g; benoist-p-pierre; dupre-a; le-provost-de-launay-g
-banqueindustriellechine,poursuitescontredirigeantsbanqueindustriellechine,La Banque industrielle de Chine,Les poursuites contre les dirigeants de la Banque industrielle de Chine,4,calary-de-lamaziere; chautard-p; espivent-de-la-villesboisnet-a; perchot-j
 caoutchoucsindochine,caoutchoucsindochinesiegesocial,Société des caoutchoucs de l'Indochine,Société des caoutchoucs de l'Indochine Siège social,4,bergougnan-a; bernard-f; bernard-p; goutet-g
 indochinoiseculturestropicales,messageriesfluvialescochinchine,Société Indochinoise des Cultures tropicales,Messageries fluviales de Cochinchine,4,bernard-f; dewez-h; guesde-p; rueff-g
 indochinoiseculturestropicales,saigonnaisenavigationtransport,Société Indochinoise des Cultures tropicales,Compagnie Saïgonnaise de navigation et de transport,4,bernard-f; de-laboulaye-e; guesde-p; rueff-g
@@ -320,6 +325,8 @@ denisfreres,denisfreresindochine,Denis frères,Denis frères d'Indochine,4,de-fe
 denisfreres,rizindochinedenisfreres,Denis frères,Riz d'Indochine Denis frères,4,de-ferry-f; delalande-l; denis-e-etienne; denis-m
 fiduciaireindochine,ufeo,"Société fiduciaire d'Indochine, Anct Société indochinoise de contrôle et",UFEO,4,agabriel-l; boudon-r-robert; denis-e-etienne; hadengue-y
 forgesatelierschantiersindochine,oxygeneacetyleneextremeorient,"Forges, ateliers et chantiers d'Indochine",Société d’Oxygène et d’acétylène d’Extrême-Orient,4,de-la-pommeraye-j; grammont; le-chatelier-a; ziegel-f
+agricoleindustriellecamtiem,lexiqueplanteur,Société agricole et industrielle de Cam-Tiêm,LEXIQUE DU PLANTEUR,4,fernandez; girard; launay; waespe-f
+exploitationphuquoc,ilephuquoc,Société anon. d'exploitation de Phu-Quoc,ILE DE PHU-QUOC,4,bignon-l-louis; feron-a; jourdan-a; lippens-h
 exploitationphuquoc,socexploitationphuquoc,Société anon. d'exploitation de Phu-Quoc,Soc. an. d'EXPLOITATION DE PHU-QUOC,4,bignon-l-louis; feron-a; lebouc-h; lippens-h
 caoutchoucspadang,plantationsterresrouges,Compagnie des Caoutchoucs de Padang,Société des Plantations des Terres-Rouges,4,blanchard-p; de-rivaud; hallet-a; ph-langlois
 sifa,socindochinoiseforestiereallumettes,SIFA,Soc. indo-chinoise forestière et des ALLUMETTES,4,carrere-g; mahe-g; maspero-g; welti-e
@@ -332,6 +339,7 @@ indochinoiseplantationsreuniesmimot,messageriesfluvialescochinchine,Société in
 leonblondeaux,messageriesfluvialescochinchine,Léon Blondeaux,Messageries fluviales de Cochinchine,4,ed-pfeiffer; guesde-p; laurent-j; rueff-g
 leonblondeaux,mimot,Léon Blondeaux,Mimot,4,guesde-p; laurent-j; rheims-j; rueff-g
 manufacturesindochinoisescigarettes,saigonnaisenavigationtransport,Manufactures indochinoises de cigarettes,Compagnie Saïgonnaise de navigation et de transport,4,guesde-p; pfeiffer-e; rueff-g; saint-ange-d
+etablissementsdumarestindochine,roanne,Établissements Dumarest d'Indochine,ROANNE,4,chamrion-m; dumarest-a; dumarest-l; dumarest-p
 colonialeeclairageenergie,indochinoiseelectricite,Société Coloniale d'éclairage et d'énergie,Société Indochinoise d'électricité,4,marcorelle-p; marcorelles-p; maxime-robert-j; toche-c
 caoutchoucsmekong,hydrauliqueasie,Cie des CAOUTCHOUCS du MÉKONG,L'Hydraulique-Asie,4,carrere; carrere-g; legrand-r; mazet-e
 caoutchoucsmekong,hydrauliqueasiesaigoncorr,Cie des CAOUTCHOUCS du MÉKONG,L'HYDRAULIQUE-ASIE Saïgon. Corr,4,carrere; carrere-g; legrand-r; mazet-e
@@ -374,6 +382,7 @@ domainedarnga,sicettemaisonavaitsaraisonsocialevieux,Domaine de la Da'rnga,Si ce
 plantationsheveastanthanhdong,sicettemaisonavaitsaraisonsocialevieux,Société nouvelle des plantations d'hévéas de Tân-thanh-Dông,Si cette maison avait sa raison sociale en vieux français,4,adm-agricole-de-binh-truoc; guery-a; paris-ingenieur-j; paris-p
 banqueindochine,cheminsferindochineyunnan,Banque de l’Indochine,Compagnie française des Chemins de fer de l'Indochine et du Yunnan,3,gouin-e; minost-e; simon-s
 banqueindochine,navigationvapeurfranceindochine,Banque de l’Indochine,Société de Navigation à vapeur France-Indochine,3,celier-a; simon; simon-s
+banqueindochine,soctabacsindochine,Banque de l’Indochine,Soc. des TABACS DE L'INDO-CHINE,3,homberg; simon-s; stern-e
 industriellechimieextremeorient,tabacsindochine,Société industrielle de chimie d'Extrême-Orient,Tabacs d’Indochine,3,fontaine-a; homberg-o; simon-s
 industriellechimieextremeorienthaiphong,tabacsindochine,Société Industrielle de Chimie d'Extrême-Orient à Haïphong,Tabacs d’Indochine,3,hermenier; homberg; simon-s
 anthracitestonkin,distilleriesiindochine,Société des anthracites du Tonkin,Société française des Distilleries de I'Indochine,3,fontaine-l-leonard; homberg-o; samson-e
@@ -425,6 +434,8 @@ delignon,distilleriesindochine,DELIGNON,Distilleries de l’Indochine,3,chapsal-
 distilleriesindochine,etablissementsdelignon,Distilleries de l’Indochine,Société anon. des Établissements L. Delignon,3,chapsal-f; fontaine-l-leonard; thion-de-la-chaume-r-rene
 distilleriesindochine,sicaf,Distilleries de l’Indochine,SICAF,3,fontaine-l; fontaine-l-leonard; guesde-p
 distilleriesindochine,vitalimentscoloniaux,Distilleries de l’Indochine,Les Vitaliments coloniaux,3,boyaval-l; fontaine-a; fontaine-l-leonard
+gommelaquejb,lexiqueplanteur,gomme laque J.-B,LEXIQUE DU PLANTEUR,3,fontaine-l-leonard; girard-e; waespe-f
+lexiqueplanteur,tabacsindochine,LEXIQUE DU PLANTEUR,Tabacs d’Indochine,3,fontaine-a-auguste; fontaine-l-leonard; hermenier-g
 sicaf,tandjongmalimrubbercoutanjongmalimrubberc,SICAF,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,3,estates-agency-r; grisar-a; malim-rubber-c-t
 commercialeindochine,grandstravauxextremeorient,Société Commerciale française de l'Indochine,Grands Travaux d'Extrême-Orient,3,ville-e; ville-p; worms-e
 commercialeindochine,huileriesavonnerieextremeorient,Société Commerciale française de l'Indochine,Huilerie et savonnerie de l’Extrême-Orient,3,rauzy-p-paul; ville-e; ville-p
@@ -441,6 +452,7 @@ rizeriesextremeorient,soccommercialefseindochine,Rizeries d'Extrême-Orient,Soc.
 rizeriesindochinoises,soccommercialefseindochine,Rizeries indochinoises,Soc. commerciale Fse de l'INDO-CHINE,3,michel-c; rauzy-p-paul; ville-p
 rizeriesindochinoises,sochonquan,Rizeries indochinoises,Soc. d'HONQUAN,3,rauzy-p-paul; ville-e; ville-p
 rizindochinedenisfreres,soccommercialefseindochine,Riz d'Indochine Denis frères,Soc. commerciale Fse de l'INDO-CHINE,3,michel-c; rauzy-p-paul; ville-p
+commercialeindustriellefrancoannamite,creditfoncierextremeorient,Société Commerciale et Industrielle Franco-Annamite,Crédit foncier d’Extrême-Orient,3,de-lafaulotte-a-alexandre; gimon-c; lionel-marie
 etainsindochine,minesoroutremer,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",Société des Mines d'or d'Outre-Mer,3,brard-r; de-lafaulotte-a-alexandre; gautheron-c
 etainswolframtonkin,minesbanman,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",Société des Mines de Ban-Man,3,brard-r; de-lafaulotte-a-alexandre; wolfram-du-tonkin
 fermiereetainsextremeorient,minesortchepone,Compagnie Fermière des Étains d'Extrême-Orient,Mines d'or de Tchépone,3,brard-r; de-fommervault-g; de-lafaulotte-a-alexandre
@@ -454,20 +466,24 @@ commercenavigationextremeorient,rizeriemoderne,Cie de commerce et de navigation 
 domainekebao,gommelaquejb,Société du domaine de Kébao,gomme laque J.-B,3,de-vogue-r; fernandez-g; launay-l
 domainekebao,plantationsloc,Société du domaine de Kébao,Plantations d’An-Loc,3,de-vogue-r; fernandez-g; launay-l
 gommelaquejb,succursalemarseille,gomme laque J.-B,Succursale à MARSEILLE,3,de-vogue-r; fernandez-g; launay-l
+plantationsloc,rizeriemoderne,Plantations d’An-Loc,Rizerie moderne,3,fernandez-g; jessula-d; launay-l
 rizeriemoderne,succursalemarseille,Rizerie moderne,Succursale à MARSEILLE,3,fernandez-g; jessula-d; launay-l
 agricoleindustriellecamtiem,agricoleindustrielletourcham,Société agricole et industrielle de Cam-Tiêm,Société Agricole et Industrielle de Tourcham,3,boyaval-l; launay-l; waespe-f
 agricoleindustriellecamtiem,indochinoiseplantationsheveas,Société agricole et industrielle de Cam-Tiêm,Société indochinoise de plantations d'hévéas,3,arnaud-de-vogue; launay-l; laurent-j-jean
 agricoleindustriellecamtiem,unionelectriqueindochine,Société agricole et industrielle de Cam-Tiêm,Union électrique d’Indochine,3,boyaval-l; de-flers-f; launay-l
 agricoleindustrielletourcham,agricolesuzannah,Société Agricole et Industrielle de Tourcham,Société agricole de Suzannah [Agricole de Suzannah],3,girard-e; launay-l; waespe-f
+agricoleindustrielletourcham,plantationsloc,Société Agricole et Industrielle de Tourcham,Plantations d’An-Loc,3,girard-e; jessula-d; launay-l
 agricoleindustrielletourcham,rizeriemoderne,Société Agricole et Industrielle de Tourcham,Rizerie moderne,3,jessula-d; jessula-j; launay-l
 bienhoaindustrielleforestiere,caoutchoucsdonai,Biênhoà industrielle et forestière,Caoutchoucs du Donaï,3,bourcier-saint-chaffray-e; furiet-c; launay-l
 ccneo,forestieremekong,CCNEO,Nouvelle Compagnie forestière du Mékong,3,ascoli-v; hoffet-h; launay-l
 creditfoncierindochine,indochinoiseplantationsheveas,Crédit foncier de l’Indochine,Société indochinoise de plantations d'hévéas,3,launay-l; laurent-j-jean; minost-e
 creditfoncierindochine,unionelectriqueindochine,Crédit foncier de l’Indochine,Union électrique d’Indochine,3,guesde-p; launay-l; maxime-robert-j
+forestieremekong,plantationsloc,Nouvelle Compagnie forestière du Mékong,Plantations d’An-Loc,3,ascoli-v; hoffet-h; launay-l
 hautsplateauxindochinois,indochinoiseplantationsheveas,Compagnie des Hauts-Plateaux indochinois,Société indochinoise de plantations d'hévéas,3,arnaud-de-vogue; launay-l; lis-a
 hautsplateauxindochinois,rizeriemoderne,Compagnie des Hauts-Plateaux indochinois,Rizerie moderne,3,jessula-d; jessula-j; launay-l
 indochinoiseplantationsheveas,unionelectriqueindochine,Société indochinoise de plantations d'hévéas,Union électrique d’Indochine,3,de-chambure-h; furiet-c; launay-l
 commercenavigationextremeorient,indochinoiseculturestropicales,Cie de commerce et de navigation d'Extrême-Orient,Société Indochinoise des Cultures tropicales,3,arnaud-de-vogue; gigon-papin-r; hoffet-h
+commercenavigationextremeorient,siph,Cie de commerce et de navigation d'Extrême-Orient,SIPH,3,gigon-papin-r; lis-a; waespe-f
 compagniepuisnouvellecompagnieforestieredumekongpuisexploitationforestieredumekong,forestieremekong,"Compagnie, puis Nouvelle Compagnie Forestière du Mékong, puis Exploitation forestière du Mékong",Nouvelle Compagnie forestière du Mékong,3,arbel-a; balay-j; hoffet-h
 minestrangda,rizindochinedenisfreres,Société des Mines de Trang-Da,Riz d'Indochine Denis frères,3,denis; denis-a-alphonse; denis-e-etienne
 ghmumm,vinicolechampagneghmumm,G.-H. Mumm,Société vinicole de Champagne G.-H. Mumm,3,destombes-j; lorthiois-j; schwob-j
@@ -576,6 +592,8 @@ cotiereannam,immeublesdenisfreres,Compagnie Côtière de l'Annam,Société anon.
 cotiereannam,rizindochinedenisfreres,Compagnie Côtière de l'Annam,Riz d'Indochine Denis frères,3,de-ferry-f; denis-e-etienne; rousseau-h
 francoindochinoise,indochinoiseeauxelectriciteannam,Compagnie Franco-indochinoise,Société Indochinoise pour les Eaux et l'électricité en Annam,3,denis-e; denis-e-etienne; le-bret-j
 asiatiqueafricaine,estasiatique,Compagnie Asiatique et africaine,Est-Asiatique français,3,carnot-e; delpech-j-jean; guesde-p
+ccneo,lexiqueplanteur,CCNEO,LEXIQUE DU PLANTEUR,3,ascoli-v; girard-e; waespe-f
+ilephuquoc,socexploitationphuquoc,ILE DE PHU-QUOC,Soc. an. d'EXPLOITATION DE PHU-QUOC,3,bignon-l-louis; feron-a; lippens-h
 commercenavigationextremeorient,hautsplateauxindochinoisbanmethuot,Cie de commerce et de navigation d'Extrême-Orient,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",3,de-ligondes-h; jessula-d; lis-a
 commercenavigationextremeorient,hautsplateauxindochinoisbanmethuotsudviet,Cie de commerce et de navigation d'Extrême-Orient,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",3,de-ligondes-h; jessula-d; lis-a
 administration,messageriesfluvialescochinchine,Administration,Messageries fluviales de Cochinchine,3,dewez; guesde-p; rueff-g
@@ -598,7 +616,6 @@ manufacturesindochinoisescigarettes,plantationskantroioukantroy,Manufactures ind
 mimot,plantationsheveaspreckchlongouprekchlong,Mimot,Plantations d'hévéas du Preck-Chlong ou Prek-Chlong,3,d-ursel-f; guesde-p; rueff-g
 plantationsheveaspreckchlongouprekchlong,urbainefonciereindochinoise,Plantations d'hévéas du Preck-Chlong ou Prek-Chlong,Société Urbaine foncière indochinoise,3,fluviales-de-cochinchine-m; guesde-p; rueff-g
 plantationsindochinoises,thesindochine,Plantations Indochinoises de thé,Société des Thés de l’Indochine,3,cahen-fuzier-e; ed-cahen-fuzier; guesde-p
-etablissementsdumarestindochine,roanne,Établissements Dumarest d'Indochine,ROANNE,3,dumarest-a; dumarest-l; dumarest-p
 agricolethescafeskontum,caoutchoucsmekongsaigonsoccap30,Compagnie agricole des thés et cafés du Kontum,"Cie des CAOUTCHOUCS du MÉKONG, Saïgon. Soc. an. au cap. de 30",3,ectors-j-jean; legrand-r; petithuguenin-p
 agricolethescafeskontum,gcolin,Compagnie agricole des thés et cafés du Kontum,G. Colin,3,caffort-l-leon; legrand-r; maspero-g
 agricolethescafeskontumannam,assurancefranceindochine,Compagnie agricole des Thés et Cafés du Kontum-Annam,L'Assurance France-Indochine,3,audren-de-kerdrel-r; duperon-p; legrand-r
@@ -726,7 +743,6 @@ darlac,indochinoiseculturestropicales,Darlac,Société Indochinoise des Cultures
 banqueiindochine,indochinefilmscinemas,Banque de I'Indochine,Indochine films et cinémas,3,bousquet-r; catalogne-e; rolloy-h
 eauxgazeusesindochinesegd,entrepotsfrigorifiquesindochine,Société des eaux gazeuses d'Indochine (SEGD,Société des entrepôts frigorifiques d'Indochine,3,brasseries; challamel-a; plossu-a
 franconeerlandaiseculturecommerce,tapanoelie,Société Franco-néerlandaise de culture et de commerce,Tapanoëlie,3,bernard-j; bernard-j-jacques; saint-girons-j
-heveasdongnai,lexiqueplanteur,Société générale des hévéas de Dong-Naï,LEXIQUE DU PLANTEUR,3,d-ainvelle-v; saliege-h; thil
 domainebaohang,indochinoisegemmage,Domaine de Bao-Hang,Société Indochinoise de Gemmage,3,guery-h; muller-f; peautonnier-m
 agricoleannam,bulohkasaprubber,Compagnie Agricole d'Annam,Buloh Kasap Rubber,3,bernard-j; bernard-j-jacques; engeringh-c
 agricoleannam,caoutchoucsiboga,Compagnie Agricole d'Annam,Caoutchouc de Siboga,3,bernard-j; bernard-j-jacques; engeringh-c
@@ -737,6 +753,7 @@ bulohkasaprubber,pacouda,Buloh Kasap Rubber,Pacouda,3,bernard-j; bernard-j-jacqu
 culturefrancojavanaise,kalitengah,Société de Culture franco-javanaise,Kalitengah,3,bernard-j; cavadia-t; engeringh-c
 culturefrancojavanaise,plantationscaoutchoucsumatra,Société de Culture franco-javanaise,Société des Plantations de caoutchouc de Sumatra,3,bernard-j; cavadia-t; engeringh-c
 caoutchoucsiboga,nieuwtjisalak,Caoutchouc de Siboga,Nieuw Tjisalak,3,engeringh-c; osterrieth-p; swart-a
+kalitengah,plantationscaoutchouctapanoelie,Kalitengah,Plantations de caoutchouc de Tapanoelie,3,donnet-l; engeringh-c; osterrieth-p
 cochinchineouheveascochinchine,colonialeplantationsdistillation,Cochinchine ou Hévéas de Cochinchine,Société coloniale de Plantations et de distillation,3,rappel-l; sasias-p; senet-m
 culturepacouda,pacouda,Société de culture de Pacouda,Pacouda,3,heurtaux-varsavaux-g; swart-a; varsavaux-h
 banqueindochine,industriellechimieextremeorient,Banque de l’Indochine,Société industrielle de chimie d'Extrême-Orient,2,homberg-o; simon-s
@@ -897,6 +914,7 @@ commercialeindustriellefrancoannamite,sicaf,Société Commerciale et Industriell
 delignon,distilleriesiindochine,DELIGNON,Société française des Distilleries de I'Indochine,2,fontaine-l-leonard; thion-de-la-chaume-r-rene
 distilleriesiindochine,etablissementsdelignon,Société française des Distilleries de I'Indochine,Société anon. des Établissements L. Delignon,2,fontaine-l-leonard; thion-de-la-chaume-r-rene
 distilleriesiindochine,gommelaquejb,Société française des Distilleries de I'Indochine,gomme laque J.-B,2,boyaval-l; fontaine-l-leonard
+distilleriesiindochine,lexiqueplanteur,Société française des Distilleries de I'Indochine,LEXIQUE DU PLANTEUR,2,fontaine-a-auguste; fontaine-l-leonard
 distilleriesiindochine,produitsalimentairesazotes,Société française des Distilleries de I'Indochine,Société française des Produits alimentaires azotés,2,boyaval-l; fontaine-l-leonard
 distilleriesiindochine,sicaf,Société française des Distilleries de I'Indochine,SICAF,2,fontaine-l-leonard; guesde-p
 distilleriesiindochine,socasiatiqueboissonsindigenes,Société française des Distilleries de I'Indochine,Soc. asiatique des BOISSONS INDIGÈNES,2,fontaine-l-leonard; isnard-v
@@ -914,6 +932,7 @@ socasiatiqueboissonsindigenes,tabacsindochine,Soc. asiatique des BOISSONS INDIG�
 socasiatiqueboissonsindigenes,vitalimentscoloniaux,Soc. asiatique des BOISSONS INDIGÈNES,Les Vitaliments coloniaux,2,fontaine-a; fontaine-l-leonard
 tabacsindochine,vitalimentscoloniaux,Tabacs d’Indochine,Les Vitaliments coloniaux,2,fontaine-a; fontaine-l-leonard
 verreriesextremeorient,vitalimentscoloniaux,Verreries d’Extrême-Orient,Les Vitaliments coloniaux,2,boyaval-l; fontaine-l-leonard
+plantationsbunge,sicaf,Plantations Bunge,SICAF,2,grisar-a; van-regemorter-m
 creditfoncierindochine,rizindochinedenisfreres,Crédit foncier de l’Indochine,Riz d'Indochine Denis frères,2,vigne-j; ville-p
 grandstravauxextremeorient,huileriesavonnerieextremeorient,Grands Travaux d'Extrême-Orient,Huilerie et savonnerie de l’Extrême-Orient,2,ville-e; ville-p
 grandstravauxextremeorient,poinsardveyret,Grands Travaux d'Extrême-Orient,POINSARD et VEYRET,2,ville-e; ville-p
@@ -923,7 +942,6 @@ huileriesavonnerieextremeorient,rizindochinedenisfreres,Huilerie et savonnerie d
 huileriesavonnerieextremeorient,soccommercialefseindochine,Huilerie et savonnerie de l’Extrême-Orient,Soc. commerciale Fse de l'INDO-CHINE,2,rauzy-p-paul; ville-p
 rizindochinedenisfreres,sochonquan,Riz d'Indochine Denis frères,Soc. d'HONQUAN,2,rauzy-p-paul; ville-p
 soccommercialefseindochine,sochonquan,Soc. commerciale Fse de l'INDO-CHINE,Soc. d'HONQUAN,2,rauzy-p-paul; ville-p
-commercialeindustriellefrancoannamite,creditfoncierextremeorient,Société Commerciale et Industrielle Franco-Annamite,Crédit foncier d’Extrême-Orient,2,de-lafaulotte-a-alexandre; lionel-marie
 etainsindochine,indochinoiseplantations,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",Cie Indo-chinoise de Plantations,2,de-lafaulotte-a-alexandre; mallet-a
 etainswolframtonkin,indochinoiseplantations,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",Cie Indo-chinoise de Plantations,2,de-lafaulotte-a-alexandre; mallet-a
 etainswolframtonkin,minesoroutremer,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",Société des Mines d'or d'Outre-Mer,2,brard-r; de-lafaulotte-a-alexandre
@@ -951,13 +969,11 @@ agricolesuzannah,rizeriemoderne,Société agricole de Suzannah [Agricole de Suza
 agricolesuzannah,succursalemarseille,Société agricole de Suzannah [Agricole de Suzannah],Succursale à MARSEILLE,2,fernandez-g; launay-l
 domainekebao,rizeriemoderne,Société du domaine de Kébao,Rizerie moderne,2,fernandez-g; launay-l
 gommelaquejb,rizeriemoderne,gomme laque J.-B,Rizerie moderne,2,fernandez-g; launay-l
-plantationsloc,rizeriemoderne,Plantations d’An-Loc,Rizerie moderne,2,fernandez-g; launay-l
 agricoleindustriellecamtiem,agricolesuzannah,Société agricole et industrielle de Cam-Tiêm,Société agricole de Suzannah [Agricole de Suzannah],2,launay-l; waespe-f
 agricoleindustriellecamtiem,caoutchoucsdonai,Société agricole et industrielle de Cam-Tiêm,Caoutchoucs du Donaï,2,de-flers-f; launay-l
 agricoleindustriellecamtiem,creditfoncierindochine,Société agricole et industrielle de Cam-Tiêm,Crédit foncier de l’Indochine,2,launay-l; laurent-j-jean
 agricoleindustrielletourcham,bienhoaindustrielleforestiere,Société Agricole et Industrielle de Tourcham,Biênhoà industrielle et forestière,2,girard-e; launay-l
 agricoleindustrielletourcham,indochinoiseplantationsheveas,Société Agricole et Industrielle de Tourcham,Société indochinoise de plantations d'hévéas,2,launay-l; lis-a
-agricoleindustrielletourcham,plantationsloc,Société Agricole et Industrielle de Tourcham,Plantations d’An-Loc,2,girard-e; launay-l
 agricoleindustrielletourcham,succursalemarseille,Société Agricole et Industrielle de Tourcham,Succursale à MARSEILLE,2,jessula-d; launay-l
 agricoleindustrielletourcham,unionelectriqueindochine,Société Agricole et Industrielle de Tourcham,Union électrique d’Indochine,2,boyaval-l; launay-l
 agricolesuzannah,bienhoaindustrielleforestiere,Société agricole de Suzannah [Agricole de Suzannah],Biênhoà industrielle et forestière,2,girard-e; launay-l
@@ -975,9 +991,9 @@ commercenavigationextremeorient,forestieremekong,Cie de commerce et de navigatio
 commercenavigationextremeorient,unionelectriqueindochine,Cie de commerce et de navigation d'Extrême-Orient,Union électrique d’Indochine,2,boyaval-l; launay-l
 creditfoncierindochine,hautsplateauxindochinois,Crédit foncier de l’Indochine,Compagnie des Hauts-Plateaux indochinois,2,launay-l; thion-de-la-chaume-r-rene
 forestieremekong,indochinoiseplantationsheveas,Nouvelle Compagnie forestière du Mékong,Société indochinoise de plantations d'hévéas,2,hoffet-h; launay-l
-forestieremekong,plantationsloc,Nouvelle Compagnie forestière du Mékong,Plantations d’An-Loc,2,hoffet-h; launay-l
 forestieremekong,succursalemarseille,Nouvelle Compagnie forestière du Mékong,Succursale à MARSEILLE,2,hoffet-h; launay-l
 gommelaquejb,unionelectriqueindochine,gomme laque J.-B,Union électrique d’Indochine,2,boyaval-l; launay-l
+hautsplateauxindochinois,plantationsloc,Compagnie des Hauts-Plateaux indochinois,Plantations d’An-Loc,2,jessula-d; launay-l
 hautsplateauxindochinois,succursalemarseille,Compagnie des Hauts-Plateaux indochinois,Succursale à MARSEILLE,2,jessula-d; launay-l
 hautsplateauxindochinois,unionelectriqueindochine,Compagnie des Hauts-Plateaux indochinois,Union électrique d’Indochine,2,de-flers-f; launay-l
 indochinoiseplantationsheveas,plantationsloc,Société indochinoise de plantations d'hévéas,Plantations d’An-Loc,2,hoffet-h; launay-l
@@ -1073,7 +1089,6 @@ fermiereetainsextremeorient,minieremetallurgiqueindochine,Compagnie Fermière de
 hautsplateauxindochinois,minieremetallurgiqueindochine,Compagnie des Hauts-Plateaux indochinois,Cie minière et métallurgique de l'Indochine,2,de-flers-f; thion-de-la-chaume-r-rene
 etainswolframtonkin,minieremetallurgiqueindochinemineschodienfonderiezincquangyen,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto","Cie Minière et métallurgique de l'Indochine, mines à Cho-Diên, fonderie de zinc à Quang-Yên",2,belugou; belugou-l
 indochinoisecharbonnagesminesmetalliques,minieremetallurgiqueindochine,Société indochinoise de Charbonnages et de mines métalliques,Cie minière et métallurgique de l'Indochine,2,merigeault-e; varenne-g
-banqueindustriellechine,navigationfrancochinoise,La Banque industrielle de Chine,Compagnie de navigation franco-chinoise,2,calary-de-lamaziere; gallusser-a
 minieremetallurgiqueindochinemineschodienfonderiezincquangyen,socetainscammon,"Cie Minière et métallurgique de l'Indochine, mines à Cho-Diên, fonderie de zinc à Quang-Yên",Soc. des ÉTAINS du CAMMON,2,belugou; thion-de-la-chaume
 eauxhanoi,etainsindochine,Compagnie des Eaux de Hanoï,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",2,brard-r; mallet-a
 eauxhanoi,exploitationetainswolframpiaouac,Compagnie des Eaux de Hanoï,Société d'exploitation des étains et Wolfram de Pia-Ouac,2,brard-r; petin-h
@@ -1210,11 +1225,13 @@ forgesatelierschantiersindochine,honquan,"Forges, ateliers et chantiers d'Indoch
 aeronautiqueextremeorient,minesthakhek,Compagnie Aéronautique Française d’Extrême-Orient,Compagnie générale des Mines de Thakhek,2,bienaime-m; bourcier-saint-chaffray-e
 asiatiqueafricaine,indochinoisenavigation,Compagnie Asiatique et africaine,Compagnie Indochinoise de Navigation,2,delpech-j-jean; guesde-p
 estasiatique,indochinoisenavigation,Est-Asiatique français,Compagnie Indochinoise de Navigation,2,delpech-j-jean; guesde-p
+agricoleindustrielletourcham,lexiqueplanteur,Société Agricole et Industrielle de Tourcham,LEXIQUE DU PLANTEUR,2,girard-e; waespe-f
+agricoleindustrielletourcham,siph,Société Agricole et Industrielle de Tourcham,SIPH,2,lis-a; waespe-f
+lexiqueplanteur,plantationsloc,LEXIQUE DU PLANTEUR,Plantations d’An-Loc,2,ascoli-v; girard-e
 caoutchoucspadang,foncierecoloniale,Compagnie des Caoutchoucs de Padang,Compagnie Foncière Coloniale,2,de-rivaud-o; hallet-a
 caoutchoucsindochinesiegesocial,locninh,Société des caoutchoucs de l'Indochine Siège social,LOC-NINH,2,fauconnier-h; goutet-g
 honquanxacatouxacat,sochonquan,"Société d'Honquan, Xa-cat ou Xacat",Soc. d'HONQUAN,2,bonnasse-j; charrin-l
-francoannamitetextileexportation,salinessudannam,Société franco-annamite textile et d'exportation,Société des salines du Sud-Annam,2,ben-thuy; cafe-r
-salinessudannam,tsanhhaptsaofreres,Société des salines du Sud-Annam,Tsanh Hap Tsao frères,2,cafe-r; riz
+lexiqueplanteur,plantationsterresrouges,LEXIQUE DU PLANTEUR,Société des Plantations des Terres-Rouges,2,allard-f; berquet-o
 agricoleindustrielletourcham,hautsplateauxindochinoisbanmethuot,Société Agricole et Industrielle de Tourcham,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",2,jessula-d; lis-a
 agricoleindustrielletourcham,hautsplateauxindochinoisbanmethuotsudviet,Société Agricole et Industrielle de Tourcham,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",2,jessula-d; lis-a
 administration,indochinoisecommerce,Administration,Société Indochinoise de Commerce,2,d-ursel-f; guesde-p
@@ -1431,10 +1448,11 @@ agricolesongray,indochinoisecommerce,Société Agricole du Sông-Ray,Société I
 agricolesongray,sicaf,Société Agricole du Sông-Ray,SICAF,2,laroche-c; lenoir-g
 heveastayninh,plantationsagavesannam,Société des hévéas de Tayninh,Société des plantations d'agaves de l'Annam,2,biedermann; caville-a
 plantationsagavesannam,plantationsagavesannamdongme,Société des plantations d'agaves de l'Annam,"Société des Plantations d'agaves de l'Annam, Dong-Mé",2,berquet-o; birnstiel-f
+indochinoisecommerce,lexiqueplanteur,Société Indochinoise de Commerce,LEXIQUE DU PLANTEUR,2,berquet-o; mayer-j-joseph
 plantationsindochinoises,plantationsterresrouges,Plantations Indochinoises de thé,Société des Plantations des Terres-Rouges,2,berquet-o; blanchard-p
-assurancefranceindochine,caoutchoucsmekongindochinoise,L'Assurance France-Indochine,Cie des caoutchoucs du Mékong (Société indochinoise de,2,jullien-a; mazet-e
+assurancefranceindochine,caoutchoucsmekongindochinoise,L'Assurance France-Indochine,Cie des caoutchoucs du Mékong (Société indochinoise de,2,jullien-a-armand; mazet-e
 assurancefranceindochine,eauxhanoi,L'Assurance France-Indochine,Compagnie des Eaux de Hanoï,2,audren-de-kerdrel; mazet-e
-assurancefranceindochine,indochinoiseculturecaoutchoucsmekong,L'Assurance France-Indochine,Société indochinoise de culture Cie des caoutchoucs du Mékong,2,jullien-a; mazet-e
+assurancefranceindochine,indochinoiseculturecaoutchoucsmekong,L'Assurance France-Indochine,Société indochinoise de culture Cie des caoutchoucs du Mékong,2,jullien-a-armand; mazet-e
 banqueindustriellechine,fonciererizicolesoctrang,La Banque industrielle de Chine,Société foncière et rizicole de Soctrang,2,lambert-l; mazet-e
 banqueindustriellechine,transportsautomobilescentreannam,La Banque industrielle de Chine,Société des Transports automobiles du Centre-Annam,2,lambert-l; mazet-e
 banqueindustriellechine,urbainefonciereindochinoise,La Banque industrielle de Chine,Société Urbaine foncière indochinoise,2,lambert-l; mazet-e
@@ -1635,6 +1653,7 @@ garagescharner,hautsplateauxindochinoisbanmethuotsudviet,Garages Charner,"Cie de
 garagescharner,indochinoiseplantationsheveas,Garages Charner,Société indochinoise de plantations d'hévéas,2,arnaud-de-vogue; lis-a
 hautsplateauxindochinoisbanmethuot,indochinoiseplantationsheveas,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",Société indochinoise de plantations d'hévéas,2,lis-a; thion-de-la-chaume-r-robert
 hautsplateauxindochinoisbanmethuotsudviet,indochinoiseplantationsheveas,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",Société indochinoise de plantations d'hévéas,2,lis-a; thion-de-la-chaume-r-robert
+indochinoiseplantationsheveas,siph,Société indochinoise de plantations d'hévéas,SIPH,2,laurentie-p; lis-a
 agricoleindustriellebencui,foretsscieriesbienhoa,Société agricole et industrielle de Bên-Cui,Forêts et scieries de Bienhoa,2,arnaud-de-vogue; furiet-c
 agricoleindustriellebencui,hautsplateauxindochinois,Société agricole et industrielle de Bên-Cui,Compagnie des Hauts-Plateaux indochinois,2,arnaud-de-vogue; de-flers-f
 agricoleindustriellecamtiem,unionminiereindochinoise,Société agricole et industrielle de Cam-Tiêm,Union minière indochinoise,2,arnaud-de-vogue; de-flers-f
@@ -1714,6 +1733,7 @@ indochinoiseculturecaoutchoucsmekong,indochinoiseculturescambodge,Société indo
 indochinoiseculturecaoutchoucsmekong,indochinoiseculturesplantationsterresrouges,Société indochinoise de culture Cie des caoutchoucs du Mékong,Société Indochinoise de cultures Plantations des Terres-Rouges,2,de-beaumont-j; langlois-berthelot-p
 frigorifiquesindochine,indochinoiseetudesconstructions,Société des Frigorifiques d'Indochine,Société Indochinoise d'études et de constructions,2,houlon-j; maurel-j
 boisindochine,boisindochinescieriesongphan,Cie des bois d'Indochine,"Cie des Bois d'Indochine, scierie, Song-Phan",2,connes-a; massabot-j
+caoutchoutieregianhanoucaoutchoutieregianhan,lexiqueplanteur,Cie caoutchoutière de Gia-nhan ou Caoutchoutière de Gia-Nhan,LEXIQUE DU PLANTEUR,2,berquet; tilmont
 charbonnagesvinhphuoc,messageriesautomobilesnordannamlaos,Société des charbonnages de Vinh-Phuoc,Société des Messageries automobiles Nord Annam-Laos,2,coudoux-p; monier-g
 alcanindochine,alcansaigon,Alcan-Indochine,"Alcan-Saïgon, S. A",2,hagen-a; truong-van-cam
 hautsplateauxindochinois,mimot,Compagnie des Hauts-Plateaux indochinois,Mimot,2,foy-s; walter
@@ -1750,9 +1770,13 @@ franconeerlandaiseculturecommerce,kalitengah,Société Franco-néerlandaise de 
 franconeerlandaiseculturecommerce,pacouda,Société Franco-néerlandaise de culture et de commerce,Pacouda,2,bernard-j; bernard-j-jacques
 franconeerlandaiseculturecommerce,plantationscaoutchoucsumatra,Société Franco-néerlandaise de culture et de commerce,Société des Plantations de caoutchouc de Sumatra,2,bernard-j; bernard-j-jacques
 agricoleannam,nieuwtjisalak,Compagnie Agricole d'Annam,Nieuw Tjisalak,2,engeringh-c; laloux-h
+caoutchoucsiboga,plantationscaoutchouctapanoelie,Caoutchouc de Siboga,Plantations de caoutchouc de Tapanoelie,2,engeringh-c; osterrieth-p
 cochinchineouheveascochinchine,culturefrancojavanaise,Cochinchine ou Hévéas de Cochinchine,Société de Culture franco-javanaise,2,engeringh-c; rappel-l
 kalitengah,tamiangrubber,Kalitengah,Tamiang Rubber,2,donnet-l; engeringh-c
+nieuwtjisalak,plantationscaoutchouctapanoelie,Nieuw Tjisalak,Plantations de caoutchouc de Tapanoelie,2,engeringh-c; osterrieth-p
+pacouda,plantationscaoutchouctapanoelie,Pacouda,Plantations de caoutchouc de Tapanoelie,2,engeringh-c; osterrieth-p
 plantationscaoutchoucsumatra,tamiangrubber,Société des Plantations de caoutchouc de Sumatra,Tamiang Rubber,2,donnet-l; engeringh-c
+plantationscaoutchouctapanoelie,tamiangrubber,Plantations de caoutchouc de Tapanoelie,Tamiang Rubber,2,donnet-l; engeringh-c
 tamiangrubber,tapanoelie,Tamiang Rubber,Tapanoëlie,2,donnet-l; engeringh-c
 domainedarnga,plantationsheveastanthanhdong,Domaine de la Da'rnga,Société nouvelle des plantations d'hévéas de Tân-thanh-Dông,2,adm-agricole-de-binh-truoc; paris-ingenieur-j
 easterninternationalrubberproducetrustltd,tamiangrubber,The Eastern International Rubber and Produce Trust Ltd,Tamiang Rubber,2,copeman-f; wright-h
@@ -1769,16 +1793,21 @@ agencecollectiverepresentationsindustriellescommerciales,grandstravauxpekin,Agen
 agencecollectiverepresentationsindustriellesindochine,grandstravauxpekin,Agence collective de représentations industrielles en Indochine,Grands Travaux de Pékin,1,henry
 agencecollectiverepresentationsindustriellescommerciales,cochinchineouplantationscaoutchouccochinchine,Agence collective de représentations industrielles et commerciales,Cochinchine ou Plantations de caoutchouc de Cochinchine,1,mayer
 agencecollectiverepresentationsindustriellescommerciales,commercialesaigonnaise,Agence collective de représentations industrielles et commerciales,Compagnie commerciale saïgonnaise,1,mayer
+agencecollectiverepresentationsindustriellescommerciales,heveasdongnai,Agence collective de représentations industrielles et commerciales,Société générale des hévéas de Dong-Naï,1,mayer
 agencecollectiverepresentationsindustriellescommerciales,industrielleboisfibres,Agence collective de représentations industrielles et commerciales,Société industrielle de bois et de fibres,1,mayer
 agencecollectiverepresentationsindustriellescommerciales,lexiqueplanteur,Agence collective de représentations industrielles et commerciales,LEXIQUE DU PLANTEUR,1,mayer
 agencecollectiverepresentationsindustriellesindochine,cochinchineouplantationscaoutchouccochinchine,Agence collective de représentations industrielles en Indochine,Cochinchine ou Plantations de caoutchouc de Cochinchine,1,mayer
 agencecollectiverepresentationsindustriellesindochine,commercialesaigonnaise,Agence collective de représentations industrielles en Indochine,Compagnie commerciale saïgonnaise,1,mayer
+agencecollectiverepresentationsindustriellesindochine,heveasdongnai,Agence collective de représentations industrielles en Indochine,Société générale des hévéas de Dong-Naï,1,mayer
 agencecollectiverepresentationsindustriellesindochine,industrielleboisfibres,Agence collective de représentations industrielles en Indochine,Société industrielle de bois et de fibres,1,mayer
 agencecollectiverepresentationsindustriellesindochine,lexiqueplanteur,Agence collective de représentations industrielles en Indochine,LEXIQUE DU PLANTEUR,1,mayer
 cochinchineouplantationscaoutchouccochinchine,commercialesaigonnaise,Cochinchine ou Plantations de caoutchouc de Cochinchine,Compagnie commerciale saïgonnaise,1,mayer
+cochinchineouplantationscaoutchouccochinchine,heveasdongnai,Cochinchine ou Plantations de caoutchouc de Cochinchine,Société générale des hévéas de Dong-Naï,1,mayer
 cochinchineouplantationscaoutchouccochinchine,industrielleboisfibres,Cochinchine ou Plantations de caoutchouc de Cochinchine,Société industrielle de bois et de fibres,1,mayer
+commercialesaigonnaise,heveasdongnai,Compagnie commerciale saïgonnaise,Société générale des hévéas de Dong-Naï,1,mayer
 commercialesaigonnaise,industrielleboisfibres,Compagnie commerciale saïgonnaise,Société industrielle de bois et de fibres,1,mayer
 commercialesaigonnaise,lexiqueplanteur,Compagnie commerciale saïgonnaise,LEXIQUE DU PLANTEUR,1,mayer
+heveasdongnai,industrielleboisfibres,Société générale des hévéas de Dong-Naï,Société industrielle de bois et de fibres,1,mayer
 industrielleboisfibres,lexiqueplanteur,Société industrielle de bois et de fibres,LEXIQUE DU PLANTEUR,1,mayer
 charbonnagestonkin,industriellechimieextremeorient,Charbonnages du Tonkin,Société industrielle de chimie d'Extrême-Orient,1,simon-s
 charbonnagestonkin,industriellechimieextremeorienthaiphong,Charbonnages du Tonkin,Société Industrielle de Chimie d'Extrême-Orient à Haïphong,1,simon-s
@@ -2257,10 +2286,15 @@ camausportingclub,credithypothecaireindochine,Camau sporting club,Crédit hypoth
 caoutchoucspadang,easterninternationalrubberproducetrustltd,Compagnie des Caoutchoucs de Padang,The Eastern International Rubber and Produce Trust Ltd,1,poirson-c
 caoutchoucspadang,indochinoisecommerceagriculturefinance,Compagnie des Caoutchoucs de Padang,"Société indochinoise de commerce, d'agriculture et de finance",1,poirson-c
 caoutchoucspadang,plantationscaoutchoucsumatra,Compagnie des Caoutchoucs de Padang,Société des Plantations de caoutchouc de Sumatra,1,poirson-c
+caoutchoucspadang,plantationscaoutchouctapanoelie,Compagnie des Caoutchoucs de Padang,Plantations de caoutchouc de Tapanoelie,1,poirson-c
 caoutchoucspadang,sicaf,Compagnie des Caoutchoucs de Padang,SICAF,1,poirson-c
 easterninternationalrubberproducetrustltd,plantationscaoutchoucsumatra,The Eastern International Rubber and Produce Trust Ltd,Société des Plantations de caoutchouc de Sumatra,1,poirson-c
+easterninternationalrubberproducetrustltd,plantationscaoutchouctapanoelie,The Eastern International Rubber and Produce Trust Ltd,Plantations de caoutchouc de Tapanoelie,1,poirson-c
 indochinoisecommerceagriculturefinance,plantationscaoutchoucsumatra,"Société indochinoise de commerce, d'agriculture et de finance",Société des Plantations de caoutchouc de Sumatra,1,poirson-c
+indochinoisecommerceagriculturefinance,plantationscaoutchouctapanoelie,"Société indochinoise de commerce, d'agriculture et de finance",Plantations de caoutchouc de Tapanoelie,1,poirson-c
+internationaleplantationsfinanceactionnairesicaf,plantationscaoutchouctapanoelie,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",Plantations de caoutchouc de Tapanoelie,1,poirson-c
 plantationscaoutchoucsumatra,sicaf,Société des Plantations de caoutchouc de Sumatra,SICAF,1,poirson-c
+plantationscaoutchouctapanoelie,sicaf,Plantations de caoutchouc de Tapanoelie,SICAF,1,poirson-c
 agricolesuzannah,asiatiqueboissonsindigenes,Société agricole de Suzannah [Agricole de Suzannah],Société asiatique des boissons indigènes,1,fontaine-l-leonard
 agricolesuzannah,commercialeindustriellefrancoannamite,Société agricole de Suzannah [Agricole de Suzannah],Société Commerciale et Industrielle Franco-Annamite,1,fontaine-l-leonard
 agricolesuzannah,delignon,Société agricole de Suzannah [Agricole de Suzannah],DELIGNON,1,fontaine-l-leonard
@@ -2276,22 +2310,26 @@ anthracitestonkin,delignon,Société des anthracites du Tonkin,DELIGNON,1,fontai
 anthracitestonkin,etablissementsdelignon,Société des anthracites du Tonkin,Société anon. des Établissements L. Delignon,1,fontaine-l-leonard
 anthracitestonkin,gommelaquejb,Société des anthracites du Tonkin,gomme laque J.-B,1,fontaine-l-leonard
 anthracitestonkin,indochinoisecommerceagriculturefinance,Société des anthracites du Tonkin,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
+anthracitestonkin,lexiqueplanteur,Société des anthracites du Tonkin,LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 anthracitestonkin,produitsalimentairesazotes,Société des anthracites du Tonkin,Société française des Produits alimentaires azotés,1,fontaine-l-leonard
 anthracitestonkin,sicaf,Société des anthracites du Tonkin,SICAF,1,fontaine-l-leonard
 asiatiqueboissonsindigenes,commercialeindustriellefrancoannamite,Société asiatique des boissons indigènes,Société Commerciale et Industrielle Franco-Annamite,1,fontaine-l-leonard
 asiatiqueboissonsindigenes,gommelaquejb,Société asiatique des boissons indigènes,gomme laque J.-B,1,fontaine-l-leonard
 asiatiqueboissonsindigenes,indochinoisecommerceagriculturefinance,Société asiatique des boissons indigènes,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
+asiatiqueboissonsindigenes,lexiqueplanteur,Société asiatique des boissons indigènes,LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 asiatiqueboissonsindigenes,produitsalimentairesazotes,Société asiatique des boissons indigènes,Société française des Produits alimentaires azotés,1,fontaine-l-leonard
 asiatiqueboissonsindigenes,sicaf,Société asiatique des boissons indigènes,SICAF,1,fontaine-l-leonard
 asiatiqueboissonsindigenes,verreriesextremeorient,Société asiatique des boissons indigènes,Verreries d’Extrême-Orient,1,fontaine-l-leonard
 chauxhydrauliqueslangtho,commercialeindustriellefrancoannamite,Chaux hydrauliques du Lang-Tho,Société Commerciale et Industrielle Franco-Annamite,1,fontaine-l-leonard
 chauxhydrauliqueslangtho,indochinoisecommerceagriculturefinance,Chaux hydrauliques du Lang-Tho,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
+chauxhydrauliqueslangtho,lexiqueplanteur,Chaux hydrauliques du Lang-Tho,LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,delignon,Société Commerciale et Industrielle Franco-Annamite,DELIGNON,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,distilleriesiindochine,Société Commerciale et Industrielle Franco-Annamite,Société française des Distilleries de I'Indochine,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,distilleriesindochine,Société Commerciale et Industrielle Franco-Annamite,Distilleries de l’Indochine,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,etablissementsdelignon,Société Commerciale et Industrielle Franco-Annamite,Société anon. des Établissements L. Delignon,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,gommelaquejb,Société Commerciale et Industrielle Franco-Annamite,gomme laque J.-B,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,indochinoisecommerceagriculturefinance,Société Commerciale et Industrielle Franco-Annamite,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
+commercialeindustriellefrancoannamite,lexiqueplanteur,Société Commerciale et Industrielle Franco-Annamite,LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,produitsalimentairesazotes,Société Commerciale et Industrielle Franco-Annamite,Société française des Produits alimentaires azotés,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,socasiatiqueboissonsindigenes,Société Commerciale et Industrielle Franco-Annamite,Soc. asiatique des BOISSONS INDIGÈNES,1,fontaine-l-leonard
 commercialeindustriellefrancoannamite,tabacsindochine,Société Commerciale et Industrielle Franco-Annamite,Tabacs d’Indochine,1,fontaine-l-leonard
@@ -2299,6 +2337,7 @@ commercialeindustriellefrancoannamite,verreriesextremeorient,Société Commercia
 commercialeindustriellefrancoannamite,vitalimentscoloniaux,Société Commerciale et Industrielle Franco-Annamite,Les Vitaliments coloniaux,1,fontaine-l-leonard
 delignon,gommelaquejb,DELIGNON,gomme laque J.-B,1,fontaine-l-leonard
 delignon,indochinoisecommerceagriculturefinance,DELIGNON,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
+delignon,lexiqueplanteur,DELIGNON,LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 delignon,produitsalimentairesazotes,DELIGNON,Société française des Produits alimentaires azotés,1,fontaine-l-leonard
 delignon,sicaf,DELIGNON,SICAF,1,fontaine-l-leonard
 delignon,socasiatiqueboissonsindigenes,DELIGNON,Soc. asiatique des BOISSONS INDIGÈNES,1,fontaine-l-leonard
@@ -2307,8 +2346,10 @@ delignon,verreriesextremeorient,DELIGNON,Verreries d’Extrême-Orient,1,fontain
 delignon,vitalimentscoloniaux,DELIGNON,Les Vitaliments coloniaux,1,fontaine-l-leonard
 distilleriesiindochine,indochinoisecommerceagriculturefinance,Société française des Distilleries de I'Indochine,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
 distilleriesindochine,indochinoisecommerceagriculturefinance,Distilleries de l’Indochine,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
+distilleriesindochine,lexiqueplanteur,Distilleries de l’Indochine,LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 etablissementsdelignon,gommelaquejb,Société anon. des Établissements L. Delignon,gomme laque J.-B,1,fontaine-l-leonard
 etablissementsdelignon,indochinoisecommerceagriculturefinance,Société anon. des Établissements L. Delignon,"Société indochinoise de commerce, d'agriculture et de finance",1,fontaine-l-leonard
+etablissementsdelignon,lexiqueplanteur,Société anon. des Établissements L. Delignon,LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 etablissementsdelignon,produitsalimentairesazotes,Société anon. des Établissements L. Delignon,Société française des Produits alimentaires azotés,1,fontaine-l-leonard
 etablissementsdelignon,sicaf,Société anon. des Établissements L. Delignon,SICAF,1,fontaine-l-leonard
 etablissementsdelignon,socasiatiqueboissonsindigenes,Société anon. des Établissements L. Delignon,Soc. asiatique des BOISSONS INDIGÈNES,1,fontaine-l-leonard
@@ -2319,11 +2360,17 @@ gommelaquejb,indochinoisecommerceagriculturefinance,gomme laque J.-B,"Société 
 gommelaquejb,sicaf,gomme laque J.-B,SICAF,1,fontaine-l-leonard
 gommelaquejb,socasiatiqueboissonsindigenes,gomme laque J.-B,Soc. asiatique des BOISSONS INDIGÈNES,1,fontaine-l-leonard
 gommelaquejb,tabacsindochine,gomme laque J.-B,Tabacs d’Indochine,1,fontaine-l-leonard
+indochinoisecommerceagriculturefinance,lexiqueplanteur,"Société indochinoise de commerce, d'agriculture et de finance",LEXIQUE DU PLANTEUR,1,fontaine-l-leonard
 indochinoisecommerceagriculturefinance,produitsalimentairesazotes,"Société indochinoise de commerce, d'agriculture et de finance",Société française des Produits alimentaires azotés,1,fontaine-l-leonard
 indochinoisecommerceagriculturefinance,socasiatiqueboissonsindigenes,"Société indochinoise de commerce, d'agriculture et de finance",Soc. asiatique des BOISSONS INDIGÈNES,1,fontaine-l-leonard
 indochinoisecommerceagriculturefinance,tabacsindochine,"Société indochinoise de commerce, d'agriculture et de finance",Tabacs d’Indochine,1,fontaine-l-leonard
 indochinoisecommerceagriculturefinance,verreriesextremeorient,"Société indochinoise de commerce, d'agriculture et de finance",Verreries d’Extrême-Orient,1,fontaine-l-leonard
 indochinoisecommerceagriculturefinance,vitalimentscoloniaux,"Société indochinoise de commerce, d'agriculture et de finance",Les Vitaliments coloniaux,1,fontaine-l-leonard
+lexiqueplanteur,produitsalimentairesazotes,LEXIQUE DU PLANTEUR,Société française des Produits alimentaires azotés,1,fontaine-l-leonard
+lexiqueplanteur,sicaf,LEXIQUE DU PLANTEUR,SICAF,1,fontaine-l-leonard
+lexiqueplanteur,socasiatiqueboissonsindigenes,LEXIQUE DU PLANTEUR,Soc. asiatique des BOISSONS INDIGÈNES,1,fontaine-l-leonard
+lexiqueplanteur,verreriesextremeorient,LEXIQUE DU PLANTEUR,Verreries d’Extrême-Orient,1,fontaine-l-leonard
+lexiqueplanteur,vitalimentscoloniaux,LEXIQUE DU PLANTEUR,Les Vitaliments coloniaux,1,fontaine-l-leonard
 produitsalimentairesazotes,sicaf,Société française des Produits alimentaires azotés,SICAF,1,fontaine-l-leonard
 produitsalimentairesazotes,socasiatiqueboissonsindigenes,Société française des Produits alimentaires azotés,Soc. asiatique des BOISSONS INDIGÈNES,1,fontaine-l-leonard
 produitsalimentairesazotes,tabacsindochine,Société française des Produits alimentaires azotés,Tabacs d’Indochine,1,fontaine-l-leonard
@@ -2335,15 +2382,20 @@ chargeursextremeorient,easterninternationalrubberproducetrustltd,Chargeurs d'Ext
 chargeursextremeorient,indochinoisecommerceagriculturefinance,Chargeurs d'Extrême-Orient,"Société indochinoise de commerce, d'agriculture et de finance",1,grisar-a
 chargeursextremeorient,internationaleplantationsfinanceactionnairesicaf,Chargeurs d'Extrême-Orient,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",1,grisar-a
 chargeursextremeorient,kualalumpurrubbercompanyltd,Chargeurs d'Extrême-Orient,The Kuala Lumpur Rubber Company Ltd,1,grisar-a
+chargeursextremeorient,plantationsbunge,Chargeurs d'Extrême-Orient,Plantations Bunge,1,grisar-a
 chargeursextremeorient,sicaf,Chargeurs d'Extrême-Orient,SICAF,1,grisar-a
 chargeursextremeorient,tandjongmalimrubbercoutanjongmalimrubberc,Chargeurs d'Extrême-Orient,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,grisar-a
 easterninternationalrubberproducetrustltd,kualalumpurrubbercompanyltd,The Eastern International Rubber and Produce Trust Ltd,The Kuala Lumpur Rubber Company Ltd,1,grisar-a
+easterninternationalrubberproducetrustltd,plantationsbunge,The Eastern International Rubber and Produce Trust Ltd,Plantations Bunge,1,grisar-a
 easterninternationalrubberproducetrustltd,tandjongmalimrubbercoutanjongmalimrubberc,The Eastern International Rubber and Produce Trust Ltd,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,grisar-a
 indochinoisecommerceagriculturefinance,kualalumpurrubbercompanyltd,"Société indochinoise de commerce, d'agriculture et de finance",The Kuala Lumpur Rubber Company Ltd,1,grisar-a
+indochinoisecommerceagriculturefinance,plantationsbunge,"Société indochinoise de commerce, d'agriculture et de finance",Plantations Bunge,1,grisar-a
 indochinoisecommerceagriculturefinance,tandjongmalimrubbercoutanjongmalimrubberc,"Société indochinoise de commerce, d'agriculture et de finance",Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,grisar-a
 internationaleplantationsfinanceactionnairesicaf,kualalumpurrubbercompanyltd,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",The Kuala Lumpur Rubber Company Ltd,1,grisar-a
+kualalumpurrubbercompanyltd,plantationsbunge,The Kuala Lumpur Rubber Company Ltd,Plantations Bunge,1,grisar-a
 kualalumpurrubbercompanyltd,sicaf,The Kuala Lumpur Rubber Company Ltd,SICAF,1,grisar-a
 kualalumpurrubbercompanyltd,tandjongmalimrubbercoutanjongmalimrubberc,The Kuala Lumpur Rubber Company Ltd,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,grisar-a
+plantationsbunge,tandjongmalimrubbercoutanjongmalimrubberc,Plantations Bunge,Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°,1,grisar-a
 financierecommercialeindustrielleindochine,rizeriesparisiennesparishaiphong,"Société financière, commerciale et industrielle de l'Indochine","Rizeries parisiennes, Paris-Haïphong",1,nicolas-a
 aeronautiqueextremeorient,havraiseindochinoise,Compagnie Aéronautique Française d’Extrême-Orient,Havraise indochinoise,1,raoul-duval-j
 commercialeindochine,creditfoncierindochine,Société Commerciale française de l'Indochine,Crédit foncier de l’Indochine,1,ville-p
@@ -2361,6 +2413,8 @@ grandstravauxextremeorient,plantationsterresnoiresheveascochinchine,Grands Trava
 commercialeindustriellefrancoannamite,foncieretonkinannam,Société Commerciale et Industrielle Franco-Annamite,Société Foncière du Tonkin et de l'Annam,1,perroud-g
 commercialeindustriellefrancoannamite,creditfoncierindochine,Société Commerciale et Industrielle Franco-Annamite,Crédit foncier de l’Indochine,1,gimon-c
 commercialeindustriellefrancoannamite,credithypothecaireindochine,Société Commerciale et Industrielle Franco-Annamite,Crédit hypothécaire de l’Indochine,1,gimon-c
+creditfoncierextremeorient,creditfoncierindochine,Crédit foncier d’Extrême-Orient,Crédit foncier de l’Indochine,1,gimon-c
+creditfoncierextremeorient,credithypothecaireindochine,Crédit foncier d’Extrême-Orient,Crédit hypothécaire de l’Indochine,1,gimon-c
 commercialeindustriellefrancoannamite,etainsindochine,Société Commerciale et Industrielle Franco-Annamite,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",1,de-lafaulotte-a-alexandre
 commercialeindustriellefrancoannamite,etainswolframtonkin,Société Commerciale et Industrielle Franco-Annamite,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",1,de-lafaulotte-a-alexandre
 commercialeindustriellefrancoannamite,fermiereetainsextremeorient,Société Commerciale et Industrielle Franco-Annamite,Compagnie Fermière des Étains d'Extrême-Orient,1,de-lafaulotte-a-alexandre
@@ -2467,12 +2521,14 @@ forestieremekong,rizeriemoderne,Nouvelle Compagnie forestière du Mékong,Rizeri
 forestieremekong,unionelectriqueindochine,Nouvelle Compagnie forestière du Mékong,Union électrique d’Indochine,1,launay-l
 gommelaquejb,hautsplateauxindochinois,gomme laque J.-B,Compagnie des Hauts-Plateaux indochinois,1,launay-l
 gommelaquejb,indochinoiseplantationsheveas,gomme laque J.-B,Société indochinoise de plantations d'hévéas,1,launay-l
-hautsplateauxindochinois,plantationsloc,Compagnie des Hauts-Plateaux indochinois,Plantations d’An-Loc,1,launay-l
 indochinoiseplantationsheveas,rizeriemoderne,Société indochinoise de plantations d'hévéas,Rizerie moderne,1,launay-l
 plantationsloc,unionelectriqueindochine,Plantations d’An-Loc,Union électrique d’Indochine,1,launay-l
 rizeriemoderne,unionelectriqueindochine,Rizerie moderne,Union électrique d’Indochine,1,launay-l
 succursalemarseille,unionelectriqueindochine,Succursale à MARSEILLE,Union électrique d’Indochine,1,launay-l
 domainekebao,indochinoiseculturestropicales,Société du domaine de Kébao,Société Indochinoise des Cultures tropicales,1,gigon-papin-r
+domainekebao,siph,Société du domaine de Kébao,SIPH,1,gigon-papin-r
+indochinoiseculturestropicales,siph,Société Indochinoise des Cultures tropicales,SIPH,1,gigon-papin-r
+siph,succursalemarseille,SIPH,Succursale à MARSEILLE,1,gigon-papin-r
 commercenavigationextremeorient,compagniepuisnouvellecompagnieforestieredumekongpuisexploitationforestieredumekong,Cie de commerce et de navigation d'Extrême-Orient,"Compagnie, puis Nouvelle Compagnie Forestière du Mékong, puis Exploitation forestière du Mékong",1,hoffet-h
 compagniepuisnouvellecompagnieforestieredumekongpuisexploitationforestieredumekong,indochinoiseculturestropicales,"Compagnie, puis Nouvelle Compagnie Forestière du Mékong, puis Exploitation forestière du Mékong",Société Indochinoise des Cultures tropicales,1,hoffet-h
 compagniepuisnouvellecompagnieforestieredumekongpuisexploitationforestieredumekong,indochinoiseplantationsheveas,"Compagnie, puis Nouvelle Compagnie Forestière du Mékong, puis Exploitation forestière du Mékong",Société indochinoise de plantations d'hévéas,1,hoffet-h
@@ -2682,7 +2738,6 @@ indochinoiseculturestropicales,unioncommercialeindochinoiseafricaine,Société I
 extremeorient,unioncommercialeindochinoiseafricaine,Compagnie générale d’Extrême-Orient,L'Union commerciale indochinoise et africaine,1,industrielles-e
 chargeursextremeorient,soiesfranceindochine,Chargeurs d'Extrême-Orient,"Compagnie générale des Soies de France et d'Indochine, puis Soies Cambodge et Cochinchine",1,audinet-j
 caoutchoucspadang,extremeorient,Compagnie des Caoutchoucs de Padang,Compagnie générale d’Extrême-Orient,1,charbonnel-h
-banqueindochine,chargeursextremeorient,Banque de l’Indochine,Chargeurs d'Extrême-Orient,1,girod
 chargeursextremeorient,soctabacsindochine,Chargeurs d'Extrême-Orient,Soc. des TABACS DE L'INDO-CHINE,1,girod
 chargeursextremeorient,tabacsindochine,Chargeurs d'Extrême-Orient,Tabacs d’Indochine,1,girod
 chargeursextremeorient,minieremetallurgiqueindochine,Chargeurs d'Extrême-Orient,Cie minière et métallurgique de l'Indochine,1,jeancard-p
@@ -2703,18 +2758,32 @@ delignon,socindochinoiseelectricite,DELIGNON,Soc. Indo-Chinoise d'ÉLECTRICITÉ,
 delignon,tramways,DELIGNON,Compagnie Générale Française de Tramways,1,chaumier-a
 etablissementsdelignon,socindochinoiseelectricite,Société anon. des Établissements L. Delignon,Soc. Indo-Chinoise d'ÉLECTRICITÉ,1,chaumier-a
 etablissementsdelignon,tramways,Société anon. des Établissements L. Delignon,Compagnie Générale Française de Tramways,1,chaumier-a
+dubreuilh,tonkinnordannam,DUBREUILH,Compagnie Générale du Tonkin et du Nord-Annam,1,devaux-p-paul
+eauxelectriciteindochine,tonkinnordannam,Compagnie des Eaux et d'électricité de l'Indochine,Compagnie Générale du Tonkin et du Nord-Annam,1,devaux-p-paul
+energieelectriqueindochinoise,tonkinnordannam,Énergie électrique indochinoise,Compagnie Générale du Tonkin et du Nord-Annam,1,devaux-p-paul
+indochinoiseelectricite,tonkinnordannam,Société Indochinoise d'électricité,Compagnie Générale du Tonkin et du Nord-Annam,1,devaux-p-paul
+socindochinoiseelectricite,tonkinnordannam,Soc. Indo-Chinoise d'ÉLECTRICITÉ,Compagnie Générale du Tonkin et du Nord-Annam,1,devaux-p-paul
 creditfoncierindochine,laquesindochinoises,Crédit foncier de l’Indochine,Société des laques indochinoises,1,hermenier-g
+creditfoncierindochine,lexiqueplanteur,Crédit foncier de l’Indochine,LEXIQUE DU PLANTEUR,1,hermenier-g
 creditfoncierindochine,tramways,Crédit foncier de l’Indochine,Compagnie Générale Française de Tramways,1,hermenier-g
 dubreuilh,laquesindochinoises,DUBREUILH,Société des laques indochinoises,1,hermenier-g
+dubreuilh,lexiqueplanteur,DUBREUILH,LEXIQUE DU PLANTEUR,1,hermenier-g
 dubreuilh,soctabacsindochine,DUBREUILH,Soc. des TABACS DE L'INDO-CHINE,1,hermenier-g
 dubreuilh,tramwayseclairageelectriquesshanghai,DUBREUILH,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,hermenier-g
 eauxelectriciteindochine,laquesindochinoises,Compagnie des Eaux et d'électricité de l'Indochine,Société des laques indochinoises,1,hermenier-g
+eauxelectriciteindochine,lexiqueplanteur,Compagnie des Eaux et d'électricité de l'Indochine,LEXIQUE DU PLANTEUR,1,hermenier-g
 eauxelectriciteindochine,soctabacsindochine,Compagnie des Eaux et d'électricité de l'Indochine,Soc. des TABACS DE L'INDO-CHINE,1,hermenier-g
+energieelectriqueindochinoise,lexiqueplanteur,Énergie électrique indochinoise,LEXIQUE DU PLANTEUR,1,hermenier-g
 energieelectriqueindochinoise,soctabacsindochine,Énergie électrique indochinoise,Soc. des TABACS DE L'INDO-CHINE,1,hermenier-g
 energieelectriqueindochinoise,tramwayseclairageelectriquesshanghai,Énergie électrique indochinoise,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,hermenier-g
+indochinoiseelectricite,lexiqueplanteur,Société Indochinoise d'électricité,LEXIQUE DU PLANTEUR,1,hermenier-g
 indochinoiseelectricite,soctabacsindochine,Société Indochinoise d'électricité,Soc. des TABACS DE L'INDO-CHINE,1,hermenier-g
+laquesindochinoises,lexiqueplanteur,Société des laques indochinoises,LEXIQUE DU PLANTEUR,1,hermenier-g
 laquesindochinoises,soctabacsindochine,Société des laques indochinoises,Soc. des TABACS DE L'INDO-CHINE,1,hermenier-g
 laquesindochinoises,tramwayseclairageelectriquesshanghai,Société des laques indochinoises,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,hermenier-g
+lexiqueplanteur,soctabacsindochine,LEXIQUE DU PLANTEUR,Soc. des TABACS DE L'INDO-CHINE,1,hermenier-g
+lexiqueplanteur,tramways,LEXIQUE DU PLANTEUR,Compagnie Générale Française de Tramways,1,hermenier-g
+lexiqueplanteur,tramwayseclairageelectriquesshanghai,LEXIQUE DU PLANTEUR,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,hermenier-g
 soctabacsindochine,tramways,Soc. des TABACS DE L'INDO-CHINE,Compagnie Générale Française de Tramways,1,hermenier-g
 soctabacsindochine,tramwayseclairageelectriquesshanghai,Soc. des TABACS DE L'INDO-CHINE,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,hermenier-g
 tabacsindochine,tramwayseclairageelectriquesshanghai,Tabacs d’Indochine,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,hermenier-g
@@ -2862,6 +2931,7 @@ hautmekong,indochinoisecharbonnagesminesmetalliques,Compagnie du Haut-Mékong,So
 indochinoisecharbonnagesminesmetalliques,minieremetallurgiqueindochinemineschodienfonderiezincquangyen,Société indochinoise de Charbonnages et de mines métalliques,"Cie Minière et métallurgique de l'Indochine, mines à Cho-Diên, fonderie de zinc à Quang-Yên",1,merigeault-e
 indochinoisecharbonnagesminesmetalliques,soccharbonnagesdongtrieu,Société indochinoise de Charbonnages et de mines métalliques,Soc. des CHARBONNAGES du DONG TRIEU,1,merigeault-e
 indochinoisecharbonnagesminesmetalliques,socminesetainhauttonkin,Société indochinoise de Charbonnages et de mines métalliques,Soc. des MINES D'ÉTAIN DU HAUT-TONKIN,1,merigeault-e
+banqueindustriellechine,navigationfrancochinoise,La Banque industrielle de Chine,Compagnie de navigation franco-chinoise,1,gallusser-a
 eauxhanoi,indochinoisemetallurgie,Compagnie des Eaux de Hanoï,Cie indochinoise de métallurgie,1,brard-r
 eauxhanoi,minesbanman,Compagnie des Eaux de Hanoï,Société des Mines de Ban-Man,1,brard-r
 eauxhanoi,minesorbaolac,Compagnie des Eaux de Hanoï,Mines d'or de Bao-Lac,1,brard-r
@@ -3174,7 +3244,12 @@ saigonnaisenavigationtransport,soccaoutchoucindochine,Compagnie Saïgonnaise de 
 explorationindochine,unionelectriqueindochine,Société d'Exploration en Indo-Chine,Union électrique d’Indochine,1,faure-j-joseph
 explorationindochine,unionminiereindochinoise,Société d'Exploration en Indo-Chine,Union minière indochinoise,1,faure-j-joseph
 chalandageremorquageindochine,charbonnagestonkin,Chalandage et remorquage de l’Indochine,Charbonnages du Tonkin,1,de-monplanet-c
+distilleriesiindochine,etudescheminferdansbassinmekong,Société française des Distilleries de I'Indochine,Société d'Études de chemin de fer dans le bassin du Mékong,1,fontaine-a-auguste
 distilleriesiindochine,financiereindochine,Société française des Distilleries de I'Indochine,Société Financière d'Indochine,1,fontaine-a-auguste
+etudescheminferdansbassinmekong,financiereindochine,Société d'Études de chemin de fer dans le bassin du Mékong,Société Financière d'Indochine,1,fontaine-a-auguste
+etudescheminferdansbassinmekong,lexiqueplanteur,Société d'Études de chemin de fer dans le bassin du Mékong,LEXIQUE DU PLANTEUR,1,fontaine-a-auguste
+etudescheminferdansbassinmekong,tabacsindochine,Société d'Études de chemin de fer dans le bassin du Mékong,Tabacs d’Indochine,1,fontaine-a-auguste
+financiereindochine,lexiqueplanteur,Société Financière d'Indochine,LEXIQUE DU PLANTEUR,1,fontaine-a-auguste
 financiereindochine,tabacsindochine,Société Financière d'Indochine,Tabacs d’Indochine,1,fontaine-a-auguste
 agricoleindustriellecamtiem,chauxhydrauliqueslangtho,Société agricole et industrielle de Cam-Tiêm,Chaux hydrauliques du Lang-Tho,1,boyaval-l
 agricoleindustriellecamtiem,marchandisescoursroute,Société agricole et industrielle de Cam-Tiêm,Marchandises en cours de route,1,boyaval-l
@@ -3562,6 +3637,13 @@ indochinoisenavigation,unioncommercialeindochinoiseafricaine,Compagnie Indochino
 compagniepuisnouvellecompagnieforestieredumekongpuisexploitationforestieredumekong,lyonnaisecolonisationindochinerepriseconcessionparcyrillecottin,"Compagnie, puis Nouvelle Compagnie Forestière du Mékong, puis Exploitation forestière du Mékong",Société Lyonnaise de Colonisation en Indo-Chine . Reprise de la concession par Cyrille Cottin,1,balay-j
 forestieremekong,lyonnaisecolonisationindochinerepriseconcessionparcyrillecottin,Nouvelle Compagnie forestière du Mékong,Société Lyonnaise de Colonisation en Indo-Chine . Reprise de la concession par Cyrille Cottin,1,balay-j
 agricolesuzannah,sucreriesraffineriesindochine,Société agricole de Suzannah [Agricole de Suzannah],Sucreries et raffineries de l'Indochine,1,fontaine-a-andre
+agricoleindustriellecamtiem,siph,Société agricole et industrielle de Cam-Tiêm,SIPH,1,waespe-f
+agricolesuzannah,siph,Société agricole de Suzannah [Agricole de Suzannah],SIPH,1,waespe-f
+ccneo,siph,CCNEO,SIPH,1,waespe-f
+commercenavigationextremeorient,lexiqueplanteur,Cie de commerce et de navigation d'Extrême-Orient,LEXIQUE DU PLANTEUR,1,waespe-f
+gommelaquejb,siph,gomme laque J.-B,SIPH,1,waespe-f
+lexiqueplanteur,siph,LEXIQUE DU PLANTEUR,SIPH,1,waespe-f
+bienhoaindustrielleforestiere,lexiqueplanteur,Biênhoà industrielle et forestière,LEXIQUE DU PLANTEUR,1,girard-e
 caoutchoucsindochine,caoutchoucspadang,Société des caoutchoucs de l'Indochine,Compagnie des Caoutchoucs de Padang,1,hallet-a
 caoutchoucsindochine,foncierecoloniale,Société des caoutchoucs de l'Indochine,Compagnie Foncière Coloniale,1,hallet-a
 caoutchoucsindochine,plantationsterresrouges,Société des caoutchoucs de l'Indochine,Société des Plantations des Terres-Rouges,1,hallet-a
@@ -3584,6 +3666,7 @@ forgesatelierschantiersindochine,indochinoiseculturestropicales,"Forges, atelier
 forgesatelierschantiersindochine,sochonquan,"Forges, ateliers et chantiers d'Indochine",Soc. d'HONQUAN,1,mitaranga
 immobilieresaigon,plantationsloc,"Compagnie Générale immobilière de Saïgon, puis du Sud-Asie",Plantations d’An-Loc,1,emile
 plantationscourtenay,plantationsterresrouges,Plantations de Courtenay,Société des Plantations des Terres-Rouges,1,allard-f
+francoannamitetextileexportation,salinessudannam,Société franco-annamite textile et d'exportation,Société des salines du Sud-Annam,1,ben-thuy
 ccneo,charbonnagestonkin,CCNEO,Charbonnages du Tonkin,1,girot-h
 ccneo,mineschodon,CCNEO,Société des mines de Cho-Don,1,girot-h
 ccneo,mineszincchodon,CCNEO,Mines de zinc de Cho-Don,1,girot-h
@@ -3592,8 +3675,10 @@ mineschodon,succursalemarseille,Société des mines de Cho-Don,Succursale à MAR
 mineszincchodon,succursalemarseille,Mines de zinc de Cho-Don,Succursale à MARSEILLE,1,girot-h
 ccneo,hautsplateauxindochinoisbanmethuot,CCNEO,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",1,jessula-d
 ccneo,hautsplateauxindochinoisbanmethuotsudviet,CCNEO,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",1,jessula-d
+hautsplateauxindochinoisbanmethuot,plantationsloc,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",Plantations d’An-Loc,1,jessula-d
 hautsplateauxindochinoisbanmethuot,rizeriemoderne,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",Rizerie moderne,1,jessula-d
 hautsplateauxindochinoisbanmethuot,succursalemarseille,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",Succursale à MARSEILLE,1,jessula-d
+hautsplateauxindochinoisbanmethuotsudviet,plantationsloc,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",Plantations d’An-Loc,1,jessula-d
 hautsplateauxindochinoisbanmethuotsudviet,rizeriemoderne,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",Rizerie moderne,1,jessula-d
 hautsplateauxindochinoisbanmethuotsudviet,succursalemarseille,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",Succursale à MARSEILLE,1,jessula-d
 administration,asiatiqueafricaine,Administration,Compagnie Asiatique et africaine,1,guesde-p
@@ -4180,10 +4265,6 @@ etablissementsdelignon,tramwaystonkin,Société anon. des Établissements L. Del
 indochinoiseculturestropicales,tramwaystonkin,Société Indochinoise des Cultures tropicales,"Société des Tramways du Tonkin, puis Société des transports en commun de la région de Hanoï",1,toche-c
 indochinoiseelectricite,tramwaystonkin,Société Indochinoise d'électricité,"Société des Tramways du Tonkin, puis Société des transports en commun de la région de Hanoï",1,toche-c
 papeteriesindochine,tramwaystonkin,Papeteries de l’Indochine,"Société des Tramways du Tonkin, puis Société des transports en commun de la région de Hanoï",1,toche-c
-indochinoiseculturestropicales,indochinoisemines,Société Indochinoise des Cultures tropicales,Compagnie Indochinoise des Mines,1,angoulvant-g
-indochinoisemines,rizindochinedenisfreres,Compagnie Indochinoise des Mines,Riz d'Indochine Denis frères,1,angoulvant-g
-indochinoisemines,socindochinoiseculturestropicales,Compagnie Indochinoise des Mines,Soc. Indochinoise des CULTURES TROPICALES,1,angoulvant-g
-rizindochinedenisfreres,socindochinoiseculturestropicales,Riz d'Indochine Denis frères,Soc. Indochinoise des CULTURES TROPICALES,1,angoulvant-g
 indochinoiseculturescambodge,rizindochinedenisfreres,Compagnie indochinoise de cultures Compagnie du Cambodge,Riz d'Indochine Denis frères,1,barthou-l-leon
 agricolethescafeskontum,cheminfersudindochine,Compagnie agricole des thés et cafés du Kontum,Chemin de fer du Sud de l'Indochine,1,legrand-r
 agricolethescafeskontum,hydrauliqueasie,Compagnie agricole des thés et cafés du Kontum,L'Hydraulique-Asie,1,legrand-r
@@ -4644,6 +4725,7 @@ plantationsheveasxuanloc,unionelectriqueindochine,Société des plantations d'h�
 caoutchoucspadang,etudesculturecotonindochine,Compagnie des Caoutchoucs de Padang,Société d'études pour la Culture du coton en Indochine .,1,siegfried-e
 colonialeeclairageenergie,etudesculturecotonindochine,Société Coloniale d'éclairage et d'énergie,Société d'études pour la Culture du coton en Indochine .,1,cottin-j-jean
 agricoleindustriellecamtiem,etudesculturecotonindochine,Société agricole et industrielle de Cam-Tiêm,Société d'études pour la Culture du coton en Indochine .,1,fernandez
+etudesculturecotonindochine,lexiqueplanteur,Société d'études pour la Culture du coton en Indochine .,LEXIQUE DU PLANTEUR,1,fernandez
 aeronautiqueextremeorient,etudesculturecotonindochine,Compagnie Aéronautique Française d’Extrême-Orient,Société d'études pour la Culture du coton en Indochine .,1,lederlin-p-paul
 aeronautiqueextremeorient,ghmumm,Compagnie Aéronautique Française d’Extrême-Orient,G.-H. Mumm,1,lederlin-p-paul
 etudesculturecotonindochine,ghmumm,Société d'études pour la Culture du coton en Indochine .,G.-H. Mumm,1,lederlin-p-paul
@@ -4684,12 +4766,14 @@ grandshotelsindochinois,heveastayninh,Société des Grands Hôtels indochinois,S
 grandshotelsindochinois,voiesferreeslocninhcentreindochinois,Société des Grands Hôtels indochinois,Cie des Voies ferrées de Loc-Ninh et du Centre-Indochinois,1,darles-l
 editionsasie,etablissementsbainierindochineautohall,Éditions d'Asie,Établissements Bainier d'Indochine « Auto-Hall »,1,berquet-o
 editionsasie,indochinoisecommerce,Éditions d'Asie,Société Indochinoise de Commerce,1,berquet-o
+editionsasie,lexiqueplanteur,Éditions d'Asie,LEXIQUE DU PLANTEUR,1,berquet-o
 editionsasie,plantationsagavesannam,Éditions d'Asie,Société des plantations d'agaves de l'Annam,1,berquet-o
 editionsasie,plantationsagavesannamdongme,Éditions d'Asie,"Société des Plantations d'agaves de l'Annam, Dong-Mé",1,berquet-o
 editionsasie,plantationsheveasxuanloc,Éditions d'Asie,Société des plantations d'hévéas de Xuan-Loc,1,berquet-o
 editionsasie,plantationsindochinoises,Éditions d'Asie,Plantations Indochinoises de thé,1,berquet-o
 editionsasie,plantationsterresrouges,Éditions d'Asie,Société des Plantations des Terres-Rouges,1,berquet-o
 etablissementsbainierindochineautohall,indochinoisecommerce,Établissements Bainier d'Indochine « Auto-Hall »,Société Indochinoise de Commerce,1,berquet-o
+etablissementsbainierindochineautohall,lexiqueplanteur,Établissements Bainier d'Indochine « Auto-Hall »,LEXIQUE DU PLANTEUR,1,berquet-o
 etablissementsbainierindochineautohall,plantationsagavesannam,Établissements Bainier d'Indochine « Auto-Hall »,Société des plantations d'agaves de l'Annam,1,berquet-o
 etablissementsbainierindochineautohall,plantationsagavesannamdongme,Établissements Bainier d'Indochine « Auto-Hall »,"Société des Plantations d'agaves de l'Annam, Dong-Mé",1,berquet-o
 etablissementsbainierindochineautohall,plantationsheveasxuanloc,Établissements Bainier d'Indochine « Auto-Hall »,Société des plantations d'hévéas de Xuan-Loc,1,berquet-o
@@ -4699,6 +4783,10 @@ indochinoisecommerce,plantationsagavesannam,Société Indochinoise de Commerce,S
 indochinoisecommerce,plantationsagavesannamdongme,Société Indochinoise de Commerce,"Société des Plantations d'agaves de l'Annam, Dong-Mé",1,berquet-o
 indochinoisecommerce,plantationsheveasxuanloc,Société Indochinoise de Commerce,Société des plantations d'hévéas de Xuan-Loc,1,berquet-o
 indochinoisecommerce,plantationsterresrouges,Société Indochinoise de Commerce,Société des Plantations des Terres-Rouges,1,berquet-o
+lexiqueplanteur,plantationsagavesannam,LEXIQUE DU PLANTEUR,Société des plantations d'agaves de l'Annam,1,berquet-o
+lexiqueplanteur,plantationsagavesannamdongme,LEXIQUE DU PLANTEUR,"Société des Plantations d'agaves de l'Annam, Dong-Mé",1,berquet-o
+lexiqueplanteur,plantationsheveasxuanloc,LEXIQUE DU PLANTEUR,Société des plantations d'hévéas de Xuan-Loc,1,berquet-o
+lexiqueplanteur,plantationsindochinoises,LEXIQUE DU PLANTEUR,Plantations Indochinoises de thé,1,berquet-o
 plantationsagavesannam,plantationsheveasxuanloc,Société des plantations d'agaves de l'Annam,Société des plantations d'hévéas de Xuan-Loc,1,berquet-o
 plantationsagavesannam,plantationsindochinoises,Société des plantations d'agaves de l'Annam,Plantations Indochinoises de thé,1,berquet-o
 plantationsagavesannam,plantationsterresrouges,Société des plantations d'agaves de l'Annam,Société des Plantations des Terres-Rouges,1,berquet-o
@@ -4823,6 +4911,7 @@ salinessudannam,transportsautomobilesreunisindochine,Société des salines du Su
 duval,terresrougesthanhhoa,Duval,Société des Terres Rouges du Thanh-Hoa,1,riz
 duval,tsanhhaptsaofreres,Duval,Tsanh Hap Tsao frères,1,riz
 salinessudannam,terresrougesthanhhoa,Société des salines du Sud-Annam,Société des Terres Rouges du Thanh-Hoa,1,riz
+salinessudannam,tsanhhaptsaofreres,Société des salines du Sud-Annam,Tsanh Hap Tsao frères,1,riz
 terresrougesthanhhoa,tsanhhaptsaofreres,Société des Terres Rouges du Thanh-Hoa,Tsanh Hap Tsao frères,1,riz
 distilleriesiindochine,tramwayseclairageelectriquesshanghai,Société française des Distilleries de I'Indochine,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,borduge-m
 banqueindochine,etainscammon,Banque de l’Indochine,Société des Étains du Cammon,1,baudouin-p
@@ -5290,10 +5379,17 @@ plantationskratie,saigonnaisenavigationtransport,Société des plantations de Kr
 plantationskratie,transportsautomobilescentreannam,Société des plantations de Kratié,Société des Transports automobiles du Centre-Annam,1,rueff-g
 plantationskratie,urbainefonciereindochinoise,Société des plantations de Kratié,Société Urbaine foncière indochinoise,1,rueff-g
 agricoleindustriellethapmuoi,agricoleindustrielletourcham,Société agricole et industrielle du Thap-Muoi,Société Agricole et Industrielle de Tourcham,1,lis-a
+agricoleindustriellethapmuoi,siph,Société agricole et industrielle du Thap-Muoi,SIPH,1,lis-a
 agricoleindustrielletourcham,comptoirsgenerauxindochine,Société Agricole et Industrielle de Tourcham,Comptoirs généraux de l’Indochine,1,lis-a
 agricoleindustrielletourcham,garagescharner,Société Agricole et Industrielle de Tourcham,Garages Charner,1,lis-a
+commerceexportationindochine,siph,Compagnie de commerce et d'exportation d'Indochine,SIPH,1,lis-a
 comptoirsgenerauxindochine,hautsplateauxindochinois,Comptoirs généraux de l’Indochine,Compagnie des Hauts-Plateaux indochinois,1,lis-a
 comptoirsgenerauxindochine,indochinoiseplantationsheveas,Comptoirs généraux de l’Indochine,Société indochinoise de plantations d'hévéas,1,lis-a
+comptoirsgenerauxindochine,siph,Comptoirs généraux de l’Indochine,SIPH,1,lis-a
+garagescharner,siph,Garages Charner,SIPH,1,lis-a
+hautsplateauxindochinois,siph,Compagnie des Hauts-Plateaux indochinois,SIPH,1,lis-a
+hautsplateauxindochinoisbanmethuot,siph,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT",SIPH,1,lis-a
+hautsplateauxindochinoisbanmethuotsudviet,siph,"Cie des Hauts-Plateaux Indochinois, BANMETHUOT (Sud Viet",SIPH,1,lis-a
 agricoleindustriellethapmuoi,granindo,Société agricole et industrielle du Thap-Muoi,Granindo,1,de-ligondes-h
 commerceexportationindochine,granindo,Compagnie de commerce et d'exportation d'Indochine,Granindo,1,de-ligondes-h
 commercenavigationextremeorient,granindo,Cie de commerce et de navigation d'Extrême-Orient,Granindo,1,de-ligondes-h
@@ -5784,9 +5880,9 @@ francoannamitetabacs,immobilierenhabe,Compagnie Franco-annamite des tabacs,Soci�
 francoannamitetabacs,minieresudannam,Compagnie Franco-annamite des tabacs,Société minière du Sud-Annam,1,gantier-c
 immobilierenhabe,minieresudannam,Société immobilière du Nha-Bé,Société minière du Sud-Annam,1,gantier-c
 immobilierenhabenhabeounhabe,minieresudannam,"Société Immobilière du Nhabé, Nha-bé ou Nhà-bè",Société minière du Sud-Annam,1,gantier-c
-creditfoncieragricoleindochine,immobilierenhabe,Crédit foncier agricole de l’Indochine,Société immobilière du Nha-Bé,1,coloniale-f
-creditfoncieragricoleindochine,verreriesextremeorient,Crédit foncier agricole de l’Indochine,Verreries d’Extrême-Orient,1,coloniale-f
-immobilierenhabe,verreriesextremeorient,Société immobilière du Nha-Bé,Verreries d’Extrême-Orient,1,coloniale-f
+creditfoncieragricoleindochine,immobilierenhabe,Crédit foncier agricole de l’Indochine,Société immobilière du Nha-Bé,1,coloniale
+creditfoncieragricoleindochine,verreriesextremeorient,Crédit foncier agricole de l’Indochine,Verreries d’Extrême-Orient,1,coloniale
+immobilierenhabe,verreriesextremeorient,Société immobilière du Nha-Bé,Verreries d’Extrême-Orient,1,coloniale
 immobilierenhabe,minesorbaolac,Société immobilière du Nha-Bé,Mines d'or de Bao-Lac,1,bursaux-p
 charbonnages,immobilierenhabe,CHARBONNAGES,Société immobilière du Nha-Bé,1,marsot-v
 immobilierenhabe,indochinoisecharbonnagesminesmetalliques,Société immobilière du Nha-Bé,Société indochinoise de Charbonnages et de mines métalliques,1,marsot-v
@@ -5974,7 +6070,6 @@ camausportingclub,indochinoiseplantationsreuniesmimot,Camau sporting club,Socié
 camausportingclub,messageriesfluvialescochinchine,Camau sporting club,Messageries fluviales de Cochinchine,1,dewez-h
 camausportingclub,mimot,Camau sporting club,Mimot,1,dewez-h
 conducteurelectriqueblindeincombustible,indochinoiseplantationsheveas,Le Conducteur électrique blindé incombustible,Société indochinoise de plantations d'hévéas,1,dewez-h
-minieresudannam,plantationsheveasxuanloc,Société minière du Sud-Annam,Société des plantations d'hévéas de Xuan-Loc,1,lefebvre-l
 heveastayninh,sucrierecambodge,Société des hévéas de Tayninh,Société sucrière du Cambodge,1,caffort-a
 specialefinanciere,sucreriesraffineriesindochine,La Société spéciale financière,Sucreries et raffineries de l'Indochine,1,louppe-a
 frexorsaigonsuccursales,frigorifiquesindochine,"Frexor, Saïgon et succursales",Société des Frigorifiques d'Indochine,1,richaud-a
@@ -5989,9 +6084,12 @@ plantationsagavesannamdongme,plantationskyodron,"Société des Plantations d'aga
 minierebarytine,plantationskyodron,Société Minière La Barytine,Société des plantations du Ky-Odron,1,jacquemart-a
 foncieregiadinh,plantationheveasindochinebola,Société Foncière de Giadinh,Société de plantation d'hévéas en Indochine BOLA,1,heurtaux-g
 foncieregiadinh,thidoirizieresindochine,Société Foncière de Giadinh,Thi-Doi — Société des rizières d'Indochine,1,heurtaux-g
+caoutchoutieregianhan,caoutchoutieregianhanoucaoutchoutieregianhan,Cie caoutchoutière de Gia-nhan,Cie caoutchoutière de Gia-nhan ou Caoutchoutière de Gia-Nhan,1,berquet
 caoutchoutieregianhan,cochinchineouplantationscaoutchouccochinchine,Cie caoutchoutière de Gia-nhan,Cochinchine ou Plantations de caoutchouc de Cochinchine,1,berquet
 caoutchoutieregianhan,domainetabelyul,Cie caoutchoutière de Gia-nhan,Société du Domaine de Tabelyul,1,berquet
 caoutchoutieregianhan,lexiqueplanteur,Cie caoutchoutière de Gia-nhan,LEXIQUE DU PLANTEUR,1,berquet
+caoutchoutieregianhanoucaoutchoutieregianhan,cochinchineouplantationscaoutchouccochinchine,Cie caoutchoutière de Gia-nhan ou Caoutchoutière de Gia-Nhan,Cochinchine ou Plantations de caoutchouc de Cochinchine,1,berquet
+caoutchoutieregianhanoucaoutchoutieregianhan,domainetabelyul,Cie caoutchoutière de Gia-nhan ou Caoutchoutière de Gia-Nhan,Société du Domaine de Tabelyul,1,berquet
 cochinchineouplantationscaoutchouccochinchine,domainetabelyul,Cochinchine ou Plantations de caoutchouc de Cochinchine,Société du Domaine de Tabelyul,1,berquet
 domainetabelyul,lexiqueplanteur,Société du Domaine de Tabelyul,LEXIQUE DU PLANTEUR,1,berquet
 heveastayninh,plantationsagavesannamdongme,Société des hévéas de Tayninh,"Société des Plantations d'agaves de l'Annam, Dong-Mé",1,biedermann-m
@@ -6008,6 +6106,7 @@ grandslacsindochine,indochinoisepecheriescambodge,Compagnie des Grands Lacs de l
 assurancefranceindochine,etablissementsboylandry,L'Assurance France-Indochine,Établissements Boy-Landry,1,duperon
 asiatiquenavigation,lainieretonkin,Compagnie Asiatique de navigation,Société Lainière du Tonkin,1,delsol-p
 agricoleindustriellecamtiem,cotiereannam,Société agricole et industrielle de Cam-Tiêm,Compagnie Côtière de l'Annam,1,girard
+cotiereannam,lexiqueplanteur,Compagnie Côtière de l'Annam,LEXIQUE DU PLANTEUR,1,girard
 cotiereannam,kratie,Compagnie Côtière de l'Annam,Kratié,1,hellies-j
 affreteursmaritimesindochinois,immobilierecochinchine,Société « Les Affréteurs maritimes indochinois »,L'Immobilière de Cochinchine,1,orsini-c
 hautsplateauxindochinois,indochinoiseplantationsreuniesmimot,Compagnie des Hauts-Plateaux indochinois,Société indochinoise des plantations réunies de Mimot,1,foy-s
@@ -6106,7 +6205,6 @@ indochinoisecharbonnagesminesmetalliques,sacric,Société indochinoise de Charbo
 agricoleannam,etablissementsdelignon,Compagnie Agricole d'Annam,Société anon. des Établissements L. Delignon,1,daloz-j
 agricoleannam,exploitationforestiereouest,Compagnie Agricole d'Annam,Exploitation forestière de l'Ouest,1,daloz-j
 etablissementsdelignon,exploitationforestiereouest,Société anon. des Établissements L. Delignon,Exploitation forestière de l'Ouest,1,daloz-j
-bienhoaindustrielleforestiere,charbonnagesdongtrieu,Biênhoà industrielle et forestière,Charbonnages du Dông-Triêu,1,etienne-p
 agricolesudindochinoise,charbonnagestuyenquang,Cie Agricole Sud-Indochinoise,Charbonnages de Tuyên-Quang,1,nenard-r
 asiatiqueafricaine,cimentsportlandartificielsindochine,Compagnie Asiatique et africaine,Ciments Portland artificiels de l'Indochine,1,pila-f
 bienhoaindustrielleforestiere,etudesminieresextremeorient,Biênhoà industrielle et forestière,Société d'études minières en Extrême-Orient,1,ansault-j
@@ -6133,6 +6231,7 @@ algerienneindochinoisetabacs,francoannamitetabacs,Société Algérienne et Indoc
 algerienneindochinoisetabacs,immobilierenhabenhabeounhabe,Société Algérienne et Indochinoise des Tabacs,"Société Immobilière du Nhabé, Nha-bé ou Nhà-bè",1,boy-landry-e
 algerienneindochinoisetabacs,plantationsboyganbar,Société Algérienne et Indochinoise des Tabacs,Plantations Boyganbar,1,boy-landry-e
 immobilierenhabenhabeounhabe,plantationsboyganbar,"Société Immobilière du Nhabé, Nha-bé ou Nhà-bè",Plantations Boyganbar,1,boy-landry-e
+forestieremekong,lexiqueplanteur,Nouvelle Compagnie forestière du Mékong,LEXIQUE DU PLANTEUR,1,ascoli-v
 caoutchoucspadang,charbonnagesdongdang,Compagnie des Caoutchoucs de Padang,CHARBONNAGES DE DONG-DANG,1,jean
 caoutchoucspadang,manufacturecouverturestonkin,Compagnie des Caoutchoucs de Padang,Manufacture de couvertures du Tonkin,1,jean
 charbonnagesdongdang,manufacturecouverturestonkin,CHARBONNAGES DE DONG-DANG,Manufacture de couvertures du Tonkin,1,jean
@@ -6155,14 +6254,16 @@ immobilierecochinchine,sicettemaisonavaitsaraisonsocialevieux,L'Immobilière de 
 plantationsterresrouges,socgenconstructionsmecaniques,Société des Plantations des Terres-Rouges,Soc. gén. de CONSTRUCTIONS MÉCANIQUES,1,garnier-a
 plantationsterresrouges,tramways,Société des Plantations des Terres-Rouges,Compagnie Générale Française de Tramways,1,garnier-a
 socgenconstructionsmecaniques,tramways,Soc. gén. de CONSTRUCTIONS MÉCANIQUES,Compagnie Générale Française de Tramways,1,garnier-a
+indochinoiseculturestropicales,indochinoisemines,Société Indochinoise des Cultures tropicales,Compagnie Indochinoise des Mines,1,angoulvant-g-gabriel
+indochinoisemines,socindochinoiseculturestropicales,Compagnie Indochinoise des Mines,Soc. Indochinoise des CULTURES TROPICALES,1,angoulvant-g-gabriel
 etainsindochine,etainsmalaisie,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",Étains de Malaisie,1,salathe-a
 etainsindochine,etainssilleda,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",Étains de Silleda,1,salathe-a
 etainskinta,etainssilleda,Société des Étains de Kinta,Étains de Silleda,1,salathe-a
 etainsmalaisie,etainssilleda,Étains de Malaisie,Étains de Silleda,1,salathe-a
 etainscammon,recouvrementredevanceduemdubostparetainsindochine,Société des Étains du Cammon,Société pour le recouvrement de la redevance due à M. Dubost par la Société des Étains de l'Indo-Chine,1,dubost
 recouvrementredevanceduemdubostparetainsindochine,socetainscammon,Société pour le recouvrement de la redevance due à M. Dubost par la Société des Étains de l'Indo-Chine,Soc. des ÉTAINS du CAMMON,1,dubost
-domaineagricoleouest,socetudesexploitationsminieresindochine,Domaine agricole de l'Ouest,Soc. d'ÉTUDES et d'EXPLOITATIONS MINIÈRES de l'INDOCHINE,1,grenoble
-indochinoisecommerce,internationaleplantationsfinanceactionnairesicaf,Société Indochinoise de Commerce,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",1,van-regemorter
+indochinoisecommerce,internationaleplantationsfinanceactionnairesicaf,Société Indochinoise de Commerce,"La Société internationale de plantations et de finance, actionnaire de la SICAF.",1,van-regemorter-m
+indochinoisecommerce,plantationsbunge,Société Indochinoise de Commerce,Plantations Bunge,1,van-regemorter-m
 chambresyndicaleentrepreneurstravauxpublicsprives,marcillac,CHAMBRE SYNDICALE DES ENTREPRENEURS DE TRAVAUX PUBLICS ET PRIVÉS DE,MARCILLAC,1,ing-ecp
 annamiteassurancesautomobiles,annamitecredit,Compagnie Annamite d'assurances automobiles,Société Annamite de crédit,1,nguyen-tan-van
 domainebaohang,exploitationforestiereouest,Domaine de Bao-Hang,Exploitation forestière de l'Ouest,1,peautonnier-m
@@ -6205,18 +6306,21 @@ grandstravauxpekin,pekinsyndicateltd,Grands Travaux de Pékin,The Pekin Syndicat
 grandstravauxpekin,sennahrubber,Grands Travaux de Pékin,Sennah Rubber,1,berthelot-a
 pekinsyndicateltd,sennahrubber,The Pekin Syndicate Ltd,Sennah Rubber,1,berthelot-a
 banqueindustriellechine,extremeorient,La Banque industrielle de Chine,Compagnie générale d’Extrême-Orient,1,ne-serait-il-pas-c
-navigationfrancochinoise,poursuitescontredirigeantsbanqueindustriellechine,Compagnie de navigation franco-chinoise,Les poursuites contre les dirigeants de la Banque industrielle de Chine,1,calary-de-lamaziere
-banqueindustriellechine,rizeriesmeridionales,La Banque industrielle de Chine,Rizeries méridionales,1,estrine-l
-grandstravauxpekin,poursuitescontredirigeantsbanqueindustriellechine,Grands Travaux de Pékin,Les poursuites contre les dirigeants de la Banque industrielle de Chine,1,meilhan-a
+banqueindustriellechine,indochinoisebouchage,La Banque industrielle de Chine,Société Indochinoise de Bouchage,1,henry-e
 indochinoisebouchage,poursuitescontredirigeantsbanqueindustriellechine,Société Indochinoise de Bouchage,Les poursuites contre les dirigeants de la Banque industrielle de Chine,1,henry-e
+banqueindustriellechine,rizeriesmeridionales,La Banque industrielle de Chine,Rizeries méridionales,1,estrine-l
+navigationfrancochinoise,poursuitescontredirigeantsbanqueindustriellechine,Compagnie de navigation franco-chinoise,Les poursuites contre les dirigeants de la Banque industrielle de Chine,1,calary-de-lamaziere
+grandstravauxpekin,poursuitescontredirigeantsbanqueindustriellechine,Grands Travaux de Pékin,Les poursuites contre les dirigeants de la Banque industrielle de Chine,1,meilhan-a
 caoutchoucsiboga,culturepanoulisan,Caoutchouc de Siboga,Société de culture de Panou-Lisan,1,bernard-j
 culturepanoulisan,kalitengah,Société de culture de Panou-Lisan,Kalitengah,1,bernard-j
 culturepanoulisan,plantationscaoutchoucsumatra,Société de culture de Panou-Lisan,Société des Plantations de caoutchouc de Sumatra,1,bernard-j
 culturepanoulisan,tapanoelie,Société de culture de Panou-Lisan,Tapanoëlie,1,bernard-j
 agricoleannam,cochinchineouheveascochinchine,Compagnie Agricole d'Annam,Cochinchine ou Hévéas de Cochinchine,1,engeringh-c
+agricoleannam,plantationscaoutchouctapanoelie,Compagnie Agricole d'Annam,Plantations de caoutchouc de Tapanoelie,1,engeringh-c
 agricoleannam,tamiangrubber,Compagnie Agricole d'Annam,Tamiang Rubber,1,engeringh-c
 bulohkasaprubber,cochinchineouheveascochinchine,Buloh Kasap Rubber,Cochinchine ou Hévéas de Cochinchine,1,engeringh-c
 bulohkasaprubber,nieuwtjisalak,Buloh Kasap Rubber,Nieuw Tjisalak,1,engeringh-c
+bulohkasaprubber,plantationscaoutchouctapanoelie,Buloh Kasap Rubber,Plantations de caoutchouc de Tapanoelie,1,engeringh-c
 bulohkasaprubber,tamiangrubber,Buloh Kasap Rubber,Tamiang Rubber,1,engeringh-c
 caoutchoucsiboga,cochinchineouheveascochinchine,Caoutchouc de Siboga,Cochinchine ou Hévéas de Cochinchine,1,engeringh-c
 caoutchoucsiboga,tamiangrubber,Caoutchouc de Siboga,Tamiang Rubber,1,engeringh-c
@@ -6224,9 +6328,11 @@ cochinchineouheveascochinchine,kalitengah,Cochinchine ou Hévéas de Cochinchine
 cochinchineouheveascochinchine,nieuwtjisalak,Cochinchine ou Hévéas de Cochinchine,Nieuw Tjisalak,1,engeringh-c
 cochinchineouheveascochinchine,pacouda,Cochinchine ou Hévéas de Cochinchine,Pacouda,1,engeringh-c
 cochinchineouheveascochinchine,plantationscaoutchoucsumatra,Cochinchine ou Hévéas de Cochinchine,Société des Plantations de caoutchouc de Sumatra,1,engeringh-c
+cochinchineouheveascochinchine,plantationscaoutchouctapanoelie,Cochinchine ou Hévéas de Cochinchine,Plantations de caoutchouc de Tapanoelie,1,engeringh-c
 cochinchineouheveascochinchine,tamiangrubber,Cochinchine ou Hévéas de Cochinchine,Tamiang Rubber,1,engeringh-c
 cochinchineouheveascochinchine,tapanoelie,Cochinchine ou Hévéas de Cochinchine,Tapanoëlie,1,engeringh-c
 culturefrancojavanaise,nieuwtjisalak,Société de Culture franco-javanaise,Nieuw Tjisalak,1,engeringh-c
+culturefrancojavanaise,plantationscaoutchouctapanoelie,Société de Culture franco-javanaise,Plantations de caoutchouc de Tapanoelie,1,engeringh-c
 culturefrancojavanaise,tamiangrubber,Société de Culture franco-javanaise,Tamiang Rubber,1,engeringh-c
 nieuwtjisalak,tamiangrubber,Nieuw Tjisalak,Tamiang Rubber,1,engeringh-c
 pacouda,tamiangrubber,Pacouda,Tamiang Rubber,1,engeringh-c
@@ -6247,6 +6353,7 @@ caoutchoucsmekongprekkak,plantationsterresrougesheveasquanloicafeiersheveasjava,
 caoutchoucsmekongprekkak,sennahrubber,"Compagnie des Caoutchoucs du Mékong, Prekkak",Sennah Rubber,1,ph-langlois
 plantationsterresrouges,sennahrubber,Société des Plantations des Terres-Rouges,Sennah Rubber,1,ph-langlois
 caoutchoucsdonai,manufacturesindochinoisescigarettes,Caoutchoucs du Donaï,Manufactures indochinoises de cigarettes,1,walter-l
+bienhoaindustrielleforestiere,caoutchoutieregianhanoucaoutchoutieregianhan,Biênhoà industrielle et forestière,Cie caoutchoutière de Gia-nhan ou Caoutchoutière de Gia-Nhan,1,etienne
 cheminfersudindochine,ufeo,Chemin de fer du Sud de l'Indochine,UFEO,1,loisy-x
 cheminfersudindochine,unionfinanciereextremeorient,Chemin de fer du Sud de l'Indochine,Union financière d'Extrême-Orient,1,loisy-x
 indochinoisecharbonnagesminesmetalliques,minesorbaolac,Société indochinoise de Charbonnages et de mines métalliques,Mines d'or de Bao-Lac,1,lancrenon
@@ -6260,16 +6367,19 @@ agricoleindustriellethapmuoi,chromenickelindochinecodinh,Société agricole et i
 agricoleannam,cambodge,Compagnie Agricole d'Annam,Compagnie du Cambodge,1,orio-e
 agricoleannam,caoutchoucspadang,Compagnie Agricole d'Annam,Compagnie des Caoutchoucs de Padang,1,orio-e
 cambodge,unioncommercialeindochinoiseafricaine,Compagnie du Cambodge,L'Union commerciale indochinoise et africaine,1,barthou-l
+cimentsportlandartificielsindochine,cotonniereindochine,Ciments Portland artificiels de l'Indochine,Cotonnière de l'Indo-Chine,1,engel-e
 entreprisesindochine,fonciereindochine,Société nouvelle d'Entreprises en Indochine,Compagnie Foncière d'Indochine,1,vieillemard-p
 entreprisesindochine,immobilieresaigon,Société nouvelle d'Entreprises en Indochine,"Compagnie Générale immobilière de Saïgon, puis du Sud-Asie",1,vieillemard-p
 fonciereindochine,immobiliereindochine,Compagnie Foncière d'Indochine,Société Immobilière de l'Indochine,1,vieillemard-p
 immobiliereindochine,immobilieresaigon,Société Immobilière de l'Indochine,"Compagnie Générale immobilière de Saïgon, puis du Sud-Asie",1,vieillemard-p
 colonialeeclairageenergie,pecheriesindustriellesindochinesaigon,Société Coloniale d'éclairage et d'énergie,"Pêcheries industrielles de l'Indochine, Saïgon. Puis Compagnie de chalutage de l'Indochine",1,cluzeau-b
 colonialeeclairageenergie,unionindochinoiseouunionindochinoise,Société Coloniale d'éclairage et d'énergie,L'Union indo-chinoise ou Union indochinoise,1,cluzeau-b
+cotonniereindochine,olivier,Cotonnière de l'Indo-Chine,Olivier & Cie,1,engel-a
 comptoirtonkin,oxygeneacetyleneextremeorient,Comptoir français du Tonkin,Société d’Oxygène et d’acétylène d’Extrême-Orient,1,fontaine-e
 oxygeneacetyleneextremeorient,unioncommercialeindochinoiseafricaine,Société d’Oxygène et d’acétylène d’Extrême-Orient,L'Union commerciale indochinoise et africaine,1,fontaine-e
 cotonnieresaigon,thesindochine,Société Cotonnière de Saïgon,Société des Thés de l’Indochine,1,touron-r
 dockshouillerestourane,plantationscaoutchoucsumatra,Société des Docks et houillères de Tourane,Société des Plantations de caoutchouc de Sumatra,1,cambefort-c
+dockshouillerestourane,plantationscaoutchouctapanoelie,Société des Docks et houillères de Tourane,Plantations de caoutchouc de Tapanoelie,1,cambefort-c
 culturecaoutchouccafedolokbaros,kalitengah,Société de culture de caoutchouc et café Dolok Baros,Kalitengah,1,dyckhoff-g
 domainecentral,plantationsannamitesxacamloc,Domaine Central,"Plantations annamites, Xa-cam, An-loc",1,peten-c
 domainetabelyul,rizeriesmekong,Société du Domaine de Tabelyul,Rizeries du Mékong,1,denisse-p
@@ -6337,6 +6447,7 @@ financiereindochine,mineszincchodon,Société Financière d'Indochine,Mines de z
 caoutchoucsphuochoa,manufactureindochinoisetabacscoloniaux,Les Caoutchoucs de Phuôc-Hoà,Manufacture indochinoise de tabacs coloniaux,1,rondon-l
 omniumminierindochine,omniumminiertonkinois,Omnium minier d'Indochine,Omnium minier tonkinois,1,bru-m
 culturepacouda,culturepanoulisan,Société de culture de Pacouda,Société de culture de Panou-Lisan,1,heurtaux-varsavaux-g
+caoutchoucspadang,plantationsbunge,Compagnie des Caoutchoucs de Padang,Plantations Bunge,1,maus-f
 pekinsyndicateltd,tramwayseclairageelectriquesshanghai,The Pekin Syndicate Ltd,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,francqui-e
 pekinsyndicateoupekingsyndicate,tramwayseclairageelectriquesshanghai,Pekin Syndicate ou Peking Syndicate,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,1,francqui-e
 phosphatestonkin,plantationskratiecambodge,"Société des Phosphates du Tonkin, puis Société nouvelle des)",Société des plantations de Kratié au Cambodge,1,imprimerie-chaix-s

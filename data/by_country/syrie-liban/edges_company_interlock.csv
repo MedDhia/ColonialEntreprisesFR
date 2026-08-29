@@ -1,7 +1,8 @@
 company_id_1,company_id_2,company_name_1,company_name_2,weight,shared_directors
 banquesyriegrandliban,banquesyrieliban,Banque de Syrie et du Grand-Liban,Banque de Syrie et du Liban,10,berard; bey-beyhum-o; bey-daouk-o; bey-el-mouayad-b; boissonnas-j; chabrieres; chiha; ed-vernes; h-hottinguer; homsy-a
-exploitaitoncheminfercilicie,socexploitationcheminsfercilicienordsyrie,Société d'exploitaiton Chemin de fer de Cilicie,Soc. d'exploitation des CHEMINS de FER de CILICIE-NORD SYRIE,8,boissiere-g; cerjat-c; guibert-l; lion-l; rebuffel-c; roudy-a; sallandrouze-de-lamornaix-c; vitali-g
+exploitaitoncheminfercilicie,socexploitationcheminsfercilicienordsyrie,Société d'exploitaiton Chemin de fer de Cilicie,Soc. d'exploitation des CHEMINS de FER de CILICIE-NORD SYRIE,8,boissiere-g; cerjat-c; guibert-l-leonce; lion-l; rebuffel-c; roudy-a; sallandrouze-de-lamornaix-c; vitali-g
 louisemmanueladoplphegoranflauxbaronandree,ports,"Louis Emmanuel Adoplphe GORANFLAUX, baron D'ANDRÉE DE LA",Ports,6,berard; blanche-p; garreta-h; henry-a; michon-coster-j; saint-rene-taillandier-g
+asphaltespetroleslattaquie,industrielleasphaltespetroleslattaquie,Asphaltes et pétroles de Lattaquié,Société industrielle des Asphaltes et pétroles de Lattaquié,5,chautard-j; donati-a; meguerditchian-l; schneider-g; shakour-pacha-m
 georgemallet,port,George Mallet,Port,4,bey-p; henry-a; michon-coster-j; wiener-h
 port,ports,Port,Ports,4,bey-p; blanche-p; henry-a; michon-coster-j
 banquesyriegrandliban,tramwayseclairagebeyrouth,Banque de Syrie et du Grand-Liban,Tramways et éclairage de Beyrouth,4,amidieu-du-clos-a; berard; chiha; pirard-a
@@ -14,7 +15,6 @@ cheminferdamashamahprolongements,ports,Chemin de fer Damas-Hamah et prolongement
 cheminferdamashamahprolongements,exploitaitoncheminfercilicie,Chemin de fer Damas-Hamah et prolongements,Société d'exploitaiton Chemin de fer de Cilicie,2,boissiere-g; roudy-a
 cheminferdamashamahprolongements,socexploitationcheminsfercilicienordsyrie,Chemin de fer Damas-Hamah et prolongements,Soc. d'exploitation des CHEMINS de FER de CILICIE-NORD SYRIE,2,boissiere-g; roudy-a
 banquesyrieliban,cheminferdamashamahprolongements,Banque de Syrie et du Liban,Chemin de fer Damas-Hamah et prolongements,2,berard; roudy-a
-etablissementsluchaire,radioorient,Établissements LUCHAIRE,Radio-Orient,2,athenes; barcelone
 banquesyrie,cheminferdamashamahprolongements,Banque française de Syrie,Chemin de fer Damas-Hamah et prolongements,2,briere-p; salem
 banquesyriegrandliban,louisemmanueladoplphegoranflauxbaronandree,Banque de Syrie et du Grand-Liban,"Louis Emmanuel Adoplphe GORANFLAUX, baron D'ANDRÉE DE LA",2,berard; henry-a
 georgemallet,louisemmanueladoplphegoranflauxbaronandree,George Mallet,"Louis Emmanuel Adoplphe GORANFLAUX, baron D'ANDRÉE DE LA",2,henry-a; michon-coster-j
@@ -31,7 +31,7 @@ airunion,banquesyriegrandliban,Air Union,Banque de Syrie et du Grand-Liban,1,gir
 banquesyrieliban,exploitaitoncheminfercilicie,Banque de Syrie et du Liban,Société d'exploitaiton Chemin de fer de Cilicie,1,roudy-a
 banquesyrieliban,socexploitationcheminsfercilicienordsyrie,Banque de Syrie et du Liban,Soc. d'exploitation des CHEMINS de FER de CILICIE-NORD SYRIE,1,roudy-a
 banquesyriegrandliban,portquaisentrepotsbeyrouth,Banque de Syrie et du Grand-Liban,"Port, quais et entrepôts de Beyrouth",1,de-cerjat-c
-banquesyriegrandliban,francemediterranee1920,Banque de Syrie et du Grand-Liban,"Société France-Méditerranée, S.A., 1920",1,chabrieres-m
+banquesyriegrandliban,francemediterranee1920,Banque de Syrie et du Grand-Liban,"Société France-Méditerranée, S.A., 1920",1,chabrieres-m-maurice
 banquesyriegrandliban,georgemallet,Banque de Syrie et du Grand-Liban,George Mallet,1,henry-a
 banquesyriegrandliban,port,Banque de Syrie et du Grand-Liban,Port,1,henry-a
 banquesyriegrandliban,tramwayselectricite,Banque de Syrie et du Grand-Liban,"Tramways et électricite, puis Tramways et éclairage de Beyrouth",1,pirard-a

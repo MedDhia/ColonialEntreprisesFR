@@ -1,7 +1,7 @@
 company_id_1,company_id_2,period,weight,shared_directors
 approvisionnementsgenerauxdjibouti,maritimeafriqueorientale,1914_1929,6,gimon-c; gorchs-chacou-f; michel-cote-c; philippar-g; pilliard-m; roussel-f
-afriqueorientale,afriqueorientalemaritimecommerciale,1914_1929,5,gimon-c; gorchs-chacou-f; hachette-r; moulin-p; senn-o
-afriqueorientale,approvisionnementsgenerauxdjibouti,1914_1929,4,gimon-c; gorchs-chacou-f; hachette-r; michel-cote-c
+afriqueorientale,afriqueorientalemaritimecommerciale,1914_1929,5,gimon-c; gorchs-chacou-f; hachette-r-rene; moulin-p; senn-o
+afriqueorientale,approvisionnementsgenerauxdjibouti,1914_1929,4,gimon-c; gorchs-chacou-f; hachette-r-rene; michel-cote-c
 afriqueorientale,navigationmerrouge,1914_1929,4,bouffe-g; gorchs-chacou-f; lamotte-m; michel-cote-c
 industrielledjibouti,salinesdjibouti,1914_1929,4,homberg-o; jambon-c; mingois-g; provot-g
 afriqueorientale,cotesomalis,1914_1929,3,gimon-c; gorchs-chacou-f; michel-cote-c
@@ -9,15 +9,15 @@ afriqueorientale,maritimeafriqueorientale,1914_1929,3,gimon-c; gorchs-chacou-f; 
 approvisionnementsgenerauxdjibouti,cotesomalis,1914_1929,3,gimon-c; gorchs-chacou-f; michel-cote-c
 cotesomalis,maritimeafriqueorientale,1914_1929,3,gimon-c; gorchs-chacou-f; michel-cote-c
 cotesomalis,navigationmerrouge,1914_1929,3,et-rene-hachette; gorchs-chacou-f; michel-cote-c
-afriqueorientalemaritimecommerciale,approvisionnementsgenerauxdjibouti,1914_1929,3,gimon-c; gorchs-chacou-f; hachette-r
-afriqueorientale,industrielledjibouti,1914_1929,3,gimon-c; hachette-r; moulin-p
-afriqueorientalemaritimecommerciale,industrielledjibouti,1914_1929,3,gimon-c; hachette-r; moulin-p
+afriqueorientalemaritimecommerciale,approvisionnementsgenerauxdjibouti,1914_1929,3,gimon-c; gorchs-chacou-f; hachette-r-rene
+afriqueorientale,industrielledjibouti,1914_1929,3,gimon-c; hachette-r-rene; moulin-p
+afriqueorientalemaritimecommerciale,industrielledjibouti,1914_1929,3,gimon-c; hachette-r-rene; moulin-p
 approvisionnementsgenerauxdjibouti,navigationmerrouge,1914_1929,2,gorchs-chacou-f; michel-cote-c
 cheminferfrancoethiopiendjiboutiaddisabeba,commercialeabyssinie,1914_1929,2,famin; michel-cote-c
 maritimeafriqueorientale,navigationmerrouge,1914_1929,2,gorchs-chacou-f; michel-cote-c
 afriqueorientalemaritimecommerciale,cotesomalis,1914_1929,2,gimon-c; gorchs-chacou-f
 afriqueorientalemaritimecommerciale,maritimeafriqueorientale,1914_1929,2,gimon-c; gorchs-chacou-f
-approvisionnementsgenerauxdjibouti,industrielledjibouti,1914_1929,2,gimon-c; hachette-r
+approvisionnementsgenerauxdjibouti,industrielledjibouti,1914_1929,2,gimon-c; hachette-r-rene
 afriqueorientale,cheminferfrancoethiopiendjiboutiaddisabeba,1914_1929,1,michel-cote-c
 afriqueorientale,commercialeabyssinie,1914_1929,1,michel-cote-c
 approvisionnementsgenerauxdjibouti,cheminferfrancoethiopiendjiboutiaddisabeba,1914_1929,1,michel-cote-c
@@ -34,7 +34,7 @@ industrielledjibouti,maritimeafriqueorientale,1914_1929,1,gimon-c
 cheminferfrancoethiopiendjiboutiaddisabeba,industrielledjibouti,1914_1929,1,homberg-o
 cheminferfrancoethiopiendjiboutiaddisabeba,salinesdjibouti,1914_1929,1,homberg-o
 afriqueorientale,maritimeafriqueorientale,1930_1944,3,bouffe-g; gimon-c; michel-cote-c
-afriqueorientale,industrielledjibouti,1930_1944,2,gimon-c; hachette-r
+afriqueorientale,industrielledjibouti,1930_1944,2,gimon-c; hachette-r-rene
 afriqueorientale,cheminferfrancoethiopiendjiboutiaddisabeba,1930_1944,1,michel-cote-c
 cheminferfrancoethiopiendjiboutiaddisabeba,maritimeafriqueorientale,1930_1944,1,michel-cote-c
 industrielledjibouti,maritimeafriqueorientale,1930_1944,1,gimon-c

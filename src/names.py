@@ -36,7 +36,11 @@ HONORIFICS = (
     r"amiral|abb[eé]|p[eè]re|mah|si|sidi|hadj|cheikh|ca[iï]d|bachagha|agha"
 )
 HONORIFIC_TOKEN_RE = re.compile(rf"^(?:{HONORIFICS})\.?$", re.I)
-LEADING_MM_RE = re.compile(r"^\s*(?:MM\.|M\.|Messieurs|Mmes|Mme|Mlle)\s*", re.I)
+# The courtesy title, stripped from the front of a name. `M.` is *not* stripped
+# when a hyphen follows it, because there it is a forename initial and not a
+# title: "M.-N. Halfon" is Marc-Noël Halfon, and taking the "M." left the
+# dataset a person called "-N. Halfon".
+LEADING_MM_RE = re.compile(r"^\s*(?:MM\.|M\.(?!-)|Messieurs|Mmes|Mme|Mlle)\s*", re.I)
 
 # Nobiliary and foreign particles that belong to the surname.
 PARTICLES = {

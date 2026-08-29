@@ -46,7 +46,6 @@ agricolesucrierenossibe,nosybeenneindustriesagricoles,1914_1929,2,chapuis-h; hat
 grandeile,nosybeenneindustriesagricoles,1914_1929,2,chapuis-h; guy-de-la-motte-saint-pierre
 grandeile,sambiranaise,1914_1929,2,chapuis-h; guy-de-la-motte-saint-pierre
 francomalgacheentreprises,occidentalemadagascar,1914_1929,2,delcher-j; javet-a
-cotieremadagascar,francomalgacheentreprises,1914_1929,2,angoulvant-g; morillon-a
 agricolesambirano,sambiranaise,1914_1929,2,tardieu-l; thibaud-p
 colonialemadagascar,comptoirnationalescompteparis,1914_1929,1,boyer-p
 comptoirnationalescompteparis,magasinsgenerauxentrepotsmadagascar,1914_1929,1,boyer-p
@@ -102,6 +101,7 @@ grandsdomainesmadagascar,tanninscoloniauxsahambavy,1914_1929,1,schwob-d-hericour
 emileranarivelo,rossignol,1914_1929,1,fraise
 graphitessahanavo,rossignol,1914_1929,1,ottino-s
 banquespecialemadagascaroceanindien,messageriesfrancaisesmadagascar,1914_1929,1,gueugnier
+cotieremadagascar,francomalgacheentreprises,1914_1929,1,morillon-a
 betsibokaambatoboeni,creditfonciermadagascar,1914_1929,1,oudot-l
 betsibokaambatoboeni,mahajamba,1914_1929,1,oudot-l
 creditfonciermadagascar,mahajamba,1914_1929,1,oudot-l
@@ -109,15 +109,13 @@ betsibokaambatoboeni,grandeile,1914_1929,1,pierre
 graphitessahanavo,socgraphitessahanavo,1930_1944,12,a-ambalarondra-e; anivorano; darrieux; de-breteuil-g; de-chazal-c; deschars-l; faure-le-pere-j; fondateur-de-la-miniere-du-kanguet; joseph; ottino-s; parmentier-j-jean; soc-ulysse-gros
 creditfonciermadagascar,creditfonciermadagascarcreditfonciermadagascarreunion,1930_1944,11,allain-e; bontoux-h; bourdariat-a; gimon-c; lebon-a; lescot-m; loisy-x; michel-cote-c; michel-h; perben-l; philippar-g
 agricolesucrierenossibe,gmodrin,1930_1944,10,besson-l-leon; chapuis-h; exbrayat-j; gueugnier-l; legrand-r; more-m; schwob-d-hericourt-g; springer-c; vaucheret-a; zafiropulo-g
-malgachecultures,tulear,1930_1944,8,bouruet-aubertot-j; bouvier-r; dequivre-c; giscard-d-estaing-e; krafft-l; piquet-v; saurin-h; tanti-a
 plantesparfumsmadagascar,socplantesparfumsmadagascar,1930_1944,7,bouvier; dufay; homberg-o; raimbault; rocca; tanti; thierry-j
 tanninscoloniaux,tanninscoloniauxsahambavy,1930_1944,7,duvallet-l; froissart-l; gueugnier-j; gueugnier-l; legrand-j; schwob-d-hericourt-g; vincent-p
 agricultureindustriecoloniales,lyonnaisemadagascar,1930_1944,6,cottet-c; de-boissieu-j; de-la-morandiere-l; perben-l; prenat-h; ravier-c
 malgachecultures,plantesparfumsmadagascar,1930_1944,5,bouruet-aubertot-j; bouvier-r; giscard-d-estaing-e; saurin-h; tanti-a
-plantesparfumsmadagascar,tulear,1930_1944,5,bouruet-aubertot-j; bouvier-r; giscard-d-estaing-e; saurin-h; tanti-a
+minesambatobe,syndicatlyonnaismadagascar,1930_1944,5,bauer-l; boussand-h; costes-f; jaureguiberry-j; vogt-p
 agricoleindustriellemadagascar,commissionconsignationcoloniales,1930_1944,4,arnoux-e; besson-l; neton-a; roubaud-p
 textilestabacsmadagascar,textilestabacsmadagascarparismajungatananarivesuitecivileetudestextilesmadagascarindustrielleagricoletextilesmadagascar,1930_1944,4,delavault-h; jacotin-a; michel-p; velard-e
-minesambatobe,syndicatlyonnaismadagascar,1930_1944,4,bauer-l; boussand-h; costes-f; vogt-p
 cefrancomalgacheentreprises,francomalgacheentreprises,1930_1944,4,anduze-faris-g; de-bressieux-r; morillon-a; plasse-g
 agricultureindustriecoloniales,entreprisesmaritimesmadagascar,1930_1944,3,michel-cote-c; perben-l; ravier-c
 agricoleindustriellemadagascar,madagascarautomobile,1930_1944,3,benazeth-l; roubaud-p; zafiropulo-g
@@ -148,7 +146,6 @@ graphites,mineraisgrandeile,1930_1944,2,bevillard-p; rigal-j
 gemmesmadagascar,socgemmesmadagascar,1930_1944,2,grandin-l; l-krafft
 malgachecultures,mineraisgrandeile,1930_1944,2,bouvier-r; piquet-v
 mineraisgrandeile,plantesparfumsmadagascar,1930_1944,2,bouvier-r; homberg-o
-mineraisgrandeile,tulear,1930_1944,2,bouvier-r; piquet-v
 gmodrin,tanninscoloniaux,1930_1944,2,gueugnier-l; schwob-d-hericourt-g
 gmodrin,tanninscoloniauxsahambavy,1930_1944,2,gueugnier-l; schwob-d-hericourt-g
 culturescoloniales,sambiranaise,1930_1944,2,carl-du-manoir; chapuis-h
@@ -161,6 +158,7 @@ foncieresudmadagascar,tanninscoloniaux,1930_1944,2,gueugnier-j; gueugnier-l
 foncieresudmadagascar,tanninscoloniauxsahambavy,1930_1944,2,gueugnier-j; gueugnier-l
 nantaiseculturecoloniale,nantaisemadagascar,1930_1944,2,kerr-h; roy-a
 batelagechargeurstamatave,porttamatave,1930_1944,2,hoareau-e; nativel-e
+commercialebetsileo,travauxpublicsmadagascar,1930_1944,1,gilquin-f
 creditfonciermadagascar,lyonnaisemadagascar,1930_1944,1,perben-l
 creditfonciermadagascarcreditfonciermadagascarreunion,lyonnaisemadagascar,1930_1944,1,perben-l
 entreprisesmaritimesmadagascar,mahajamba,1930_1944,1,ravier-c
@@ -199,14 +197,11 @@ electriciteeauxmadagascar,fonciereminieremadagascar,1930_1944,1,belieres-j
 entreprisesmaritimesmadagascar,textilestabacsmadagascar,1930_1944,1,velard-e
 entreprisesmaritimesmadagascar,textilestabacsmadagascarparismajungatananarivesuitecivileetudestextilesmadagascarindustrielleagricoletextilesmadagascar,1930_1944,1,velard-e
 gemmesmadagascar,malgachecultures,1930_1944,1,krafft-l
-gemmesmadagascar,tulear,1930_1944,1,krafft-l
 gemmesmadagascar,unioncommercialemadagascar,1930_1944,1,krafft-l
 malgachecultures,unioncommercialemadagascar,1930_1944,1,krafft-l
-tulear,unioncommercialemadagascar,1930_1944,1,krafft-l
 mineraisgrandeile,socplantesparfumsmadagascar,1930_1944,1,homberg-o
 malgachecultures,socglegraphites,1930_1944,1,piquet-v
 mineraisgrandeile,socglegraphites,1930_1944,1,piquet-v
-socglegraphites,tulear,1930_1944,1,piquet-v
 agricoleindustriellemadagascar,wharftamatave,1930_1944,1,boussenot-g
 syndicatlyonnaismadagascar,wharftamatave,1930_1944,1,cauce-c
 agricolesucrierenossibe,culturescoloniales,1930_1944,1,chapuis-h
@@ -226,7 +221,6 @@ florensorville,socgraphitessahanavo,1930_1944,1,ottino-s
 florensorville,socindustrielleconstructions,1930_1944,1,ottino-s
 graphitessahanavo,socindustrielleconstructions,1930_1944,1,ottino-s
 socgraphitessahanavo,socindustrielleconstructions,1930_1944,1,ottino-s
-andrelefebvre,florensorville,1930_1944,1,mananjary
 leonkrafit,minierefoncieremalgache,1930_1944,1,beurrier-j-jean
 andrelefebvre,plantationsanjouan,1930_1944,1,vanille
 fonciereminieremadagascar,francomalgacheentreprises,1930_1944,1,durand-e
@@ -307,7 +301,6 @@ electriciteeauxmadagascar,fonciereindustriellecommercialemadagascar,1945_1962,1,
 produitsalimentaires,tananariviennerefrigerationboissonsgazeusesantsirabediegosuareztulear,1945_1962,1,lelievre-h
 agricultureindustriecoloniales,maritimemajunga,1945_1962,1,michel-cote-c
 filaturetissagemadagascar,maritimemajunga,1945_1962,1,michel-cote-c
-agricolesucrierenossibe,charbonnagessakoa,1945_1962,1,jullien-a
 filaturetissagemadagascar,industriellefortdauphin,1945_1962,1,vandesmet-h
 domaineankaratrasucrieremahavavy,gemmesmadagascar,1945_1962,1,rigal-j
 domaineankaratrasucrieremahavavy,graphites,1945_1962,1,rigal-j
@@ -318,7 +311,7 @@ minesambatobe,syndicatlyonnaismadagascar,1945_1962,1,cochet-c
 agricolesucrierenossibe,sucreriesmarseillaisesmadagascarnamakia,1945_1962,1,guerin-j-joseph
 madagascarautomobiletananariverenault,minierefinancieremadagascar,1945_1962,1,piallat-g
 domaineankaratrasucrieremahavavy,sucreriesmarseillaisesmadagascarnamakia,1945_1962,1,de-revel-b
-plantesparfumsmadagascar,tulear,post_1962,4,bouruet-aubertot-j; bouvier-r; giscard-d-estaing-e; saurin-h
+malgachecultures,plantesparfumsmadagascar,post_1962,4,bouruet-aubertot-j; bouvier-r; giscard-d-estaing-e; saurin-h
 nantaiseculturecoloniale,nantaisemadagascar,post_1962,4,bureau-h; jamin-l-leon; kerr-h; roy-a
 agricoleindustriellemadagascar,sucreriesmarseillaisesmadagascar,post_1962,3,pagnon-r; roubaud-p; zafiropulo-g
 nosybeenneindustriesagricoles,sambiranaiseambohimenaparambanja,post_1962,2,charbonnel-a; gougaud-j
@@ -330,12 +323,15 @@ domaineankaratrasucrieremahavavy,sucreriesmarseillaisesmadagascar,post_1962,1,de
 gisementsauriferesanasaha,syndicatlyonnaisexplorationmadagascar,pre_1914,4,boussand-l-leon; bouvier; canavy-l; duclaux-monteil-h
 agricolemadagascar,exploitationgraphitesmadagascar,pre_1914,2,boulloche-l; cabrol-c
 ankaratra,minesitasy,pre_1914,2,cosson-e; mercier-h
+charbonnagebatelagemadagascar,colonialeminesorsuberbievillecoteouestmadagascar,pre_1914,2,debrun-j; verspieren-a
 faraonyexploitatonplacersauriferesmadagascar,minesorandavakoera,pre_1914,1,paris
 francoantankare,minesorandavakoera,pre_1914,1,grignon
 ankaratra,exploitationgraphitesmadagascar,pre_1914,1,mercier-h
 exploitationgraphitesmadagascar,minesitasy,pre_1914,1,mercier-h
 charbonnagebatelagemadagascar,messageriesfrancaisesmadagascar,pre_1914,1,gueugnier
+commercialetransvaalmadagascar,lyonnaisemadagascar,pre_1914,1,prenat-e
 colonialemadagascar,minesorsoavinarivo,pre_1914,1,thiebaut-v
 colonialemadagascar,forestiereminieremadagascar,pre_1914,1,delhorbe-l
 francomalgache,madagaskara,pre_1914,1,cousin-a
 salinesdiegosuarez,salinesmadagascar,pre_1914,1,noel-o
+colonialeminesorsuberbievillecoteouestmadagascar,occidentalemadagascar,pre_1914,1,de-choisy-c

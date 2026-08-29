@@ -42,6 +42,12 @@
       <data key="n_n_directors">9</data>
       <data key="n_territory">La Réunion</data>
     </node>
+    <node id="immobilierereunion">
+      <data key="n_label">Société immobilière de la Réunion</data>
+      <data key="n_sectors">Documents généraux</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">La Réunion</data>
+    </node>
     <node id="parisbourbondeveloppementrelationsentre">
       <data key="n_label">Paris-Bourbon (Société anon. pour le développement des relations entre la</data>
       <data key="n_sectors">Documents généraux</data>
@@ -66,16 +72,10 @@
       <data key="n_n_directors">20</data>
       <data key="n_territory">La Réunion</data>
     </node>
-    <node id="saintdenis">
-      <data key="n_label">SAINT-DENIS</data>
-      <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">9</data>
-      <data key="n_territory">La Réunion</data>
-    </node>
     <node id="sucreriescoloniales">
       <data key="n_label">Sucreries coloniales</data>
       <data key="n_sectors">Sociétés diverses</data>
-      <data key="n_n_directors">48</data>
+      <data key="n_n_directors">49</data>
       <data key="n_territory">La Réunion</data>
     </node>
     <node id="sucreriescolonialescolonialeagricolecommerciale">
@@ -117,7 +117,7 @@
     <edge id="e10" source="parisbourbondeveloppementrelationsentre" target="parisbourbondeveloppementrelationsentrefrance">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e11" source="agencecentraleparis" target="saintdenis">
+    <edge id="e11" source="agencecentraleparis" target="immobilierereunion">
       <data key="e_weight">2</data>
     </edge>
     <edge id="e12" source="parisbourbondeveloppementrelationsentre" target="raphaeldouyere">
@@ -144,7 +144,7 @@
     <edge id="e19" source="raphaeldouyere" target="sucreriescoloniales">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e20" source="banquereunion" target="saintdenis">
+    <edge id="e20" source="banquereunion" target="immobilierereunion">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e21" source="grandsbois" target="hydroelectriquereunionhe">

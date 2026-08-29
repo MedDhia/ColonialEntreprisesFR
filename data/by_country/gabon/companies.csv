@@ -1,14 +1,14 @@
 company_id,name,sectors,n_ties,n_directors,first_year,last_year
 plantationspalmeraiesogooue,Cie générale des Plantations et palmeraies de l'Ogooué,Agro-alimentaire,78,41,1928,1959
-industriellebasogooue,Société Industrielle du Bas-Ogooué,Industrie,52,36,1920,1925
-exploitationsforestieresafricaines,Compagnie Exploitations forestières africaines,Industrie,52,32,1920,1959
-commercialeindustrielleagricolehautogooue,"Société commerciale, industrielle et agricole du Haut-Ogooué",Industrie,58,26,1912,1948
+industriellebasogooue,Société Industrielle du Bas-Ogooué,Industrie,51,35,1920,1925
+exploitationsforestieresafricaines,Compagnie Exploitations forestières africaines,Industrie,52,30,1920,1959
+commercialeindustrielleagricolehautogooue,"Société commerciale, industrielle et agricole du Haut-Ogooué",Industrie,62,27,1912,1952
 hautengounie,Compagnie de la Haute-N'Gounié,Sociétés commerciales,28,23,1899,1938
 agricoleindustrielleogooue,Société Agricole et Industrielle de l’Ogooué,Agro-alimentaire,29,20,1910,1936
 hautogooue,HAUT-OGOOUÉ,Industrie,20,17,1925,1938
-commercialeafriqueequatoriale,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",Industrie,21,15,1921,1951
+commercialeafriqueequatoriale,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",Industrie,25,16,1921,1952
 unionforestiereafricaine,Union forestière africaine,Industrie,20,15,1921,1951
-agricoleforestiereindustrielleafrique,"Société Agricole, Forestière et Industrielle pour l'Afrique",Agro-alimentaire,13,13,1912,1926
+agricoleforestiereindustrielleafrique,"Société Agricole, Forestière et Industrielle pour l'Afrique",Agro-alimentaire,14,12,1912,1926
 plantationswoleuntem,Société des Plantations du Woleu N'Tem,Agro-alimentaire,12,12,1931,1931
 colonialecommerceindustrie,Société Coloniale pour le Commerce et l'Industrie,Industrie,13,11,1918,1918
 multiplex,Multiplex,Industrie,12,11,1936,1953
@@ -21,7 +21,7 @@ forestierelittoralgabonnais,"Société Forestière du littoral gabonnais, puis F
 plantationsogooue,Société des Plantations de l'Ogooué,Agro-alimentaire,8,8,1916,1919
 agricolecommercialebasogoue,Société Agricole et Commerciale du Bas-Ogoué,Agro-alimentaire,8,8,1900,1900
 industriellecongolyonportgentilexploitationforestiere,"Société Industrielle du Congo, Lyon, Port-Gentil. Exploitation forestière.",Industrie,8,8,,
-1929,"S.A., 1929 Anciens Établissements A. Defaye",Agro-alimentaire,10,7,1936,1947
+1929,"S.A., 1929 Anciens Établissements A. Defaye",Agro-alimentaire,15,7,1929,1947
 caoutchoucsgabon,Société des Caoutchoucs du Gabon,Agro-alimentaire,10,7,1926,1926
 colonialeogoouengounie,Compagnie Coloniale de l'Ogooué-N'Gounié,Sociétés commerciales,10,7,1899,1903
 factoreriesndjole,Société des Factoreries de N'Djolé,Sociétés commerciales,8,7,1923,1923
@@ -42,3 +42,4 @@ forestierelittoralgabonaisekuata,"Société forestière du Littoral Gabonais, EK
 recherchesexploitationsdiamantiferes,Société de Recherches et d'exploitations diamantifères,Mines,3,1,,
 produitscoloniauxboutica,"Compagnie Générale de Produits coloniaux, Boutica",Sociétés commerciales,1,1,1928,1928
 jeanbouruetaubertotpresid,"Jean Bouruet-Aubertot, présid",Industrie,2,0,1954,1954
+congolaiseentreprisesmaritimes,Société Congolaise d’Entreprises maritimes,Transports,2,0,1947,1947
