@@ -148,7 +148,9 @@ def core_subgraph(G, top_n: int):
 
     if G.number_of_nodes() == 0:
         return G
-    largest = max(nx.connected_components(G), key=len)
+    # Break size ties by the component's own smallest member, so the choice
+    # among equal-sized components does not depend on hash order either.
+    largest = max(nx.connected_components(G), key=lambda c: (len(c), min(c)))
     # Sorted, because `connected_components` yields sets: without this the
     # giant component's own node order is hash-dependent too.
     H = ordered_subgraph(G, sorted(largest))

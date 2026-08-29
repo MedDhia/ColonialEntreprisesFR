@@ -299,13 +299,25 @@ spelling) or *Démétrius*/*Dimitri* Zafiropulo (one man, two transliterations).
 **This file is the audit trail.** Reject the folding and splitting and rebuild
 from `person_key` if your question needs a different rule.
 
-### `company_duplicate_candidates.csv` — unmerged company variants
+### `company_duplicate_candidates.csv` — unmerged company variants (3,560)
 
 `company_id_1`, `company_id_2`, `name_1`, `name_2`, `reason`
 (`key_prefix` | `token_subset`). Pairs that plausibly denote the same firm but
 were **not** merged, because merging on name similarity would be
 unrecoverable. Review before computing centrality: an unmerged duplicate
 splits one firm's degree in two.
+
+Most pairs are *not* duplicates — the blocking is deliberately generous, so
+"Société des aciéries" is offered against "Aciéries du Nord" and both are real
+and distinct. Read it as a worklist, not a merge list.
+
+Until recently this file was also **not reproducible**: firms were blocked on
+their longest name token, and ties on token length were broken by a
+`frozenset`'s iteration order, which Python randomises per process. A firm was
+therefore compared against a different candidate block on different runs, and
+the file's contents changed — 3,570 pairs on one run against 3,485 on the
+next, with the committed copy holding 3,322. The tie now breaks by token, and
+the pair list is stable.
 
 ### `persons.csv`, `companies_observed.csv`
 
