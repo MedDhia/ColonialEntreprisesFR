@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import csv
 import os
+import random
 import re
 import sys
 from collections import Counter
@@ -1154,6 +1155,89 @@ def check_geocoding() -> None:
               f"{len(self_loops)} self-loops - within-city ties belong in the table")
 
 
+def check_structure_figures() -> None:
+    """The structural figures state facts about the graph. Assert the facts.
+
+    These are the numbers a reader is most likely to quote back — "the network
+    is one component", "half of it survives a weight filter", "the deepest core
+    is a clique" — and each of them is a sentence in a caption. A caption that
+    drifts from the data is worse than no caption, so every claim that a figure
+    makes in words is pinned here against the graph it was computed from.
+    """
+    import make_network_figures as N
+
+    print("structural figures", file=sys.stderr)
+    d = N.gather("fr")
+    G = d["G"]
+
+    # fig21's whole point: one shared director holds the graph together, two
+    # do not. If that gap ever closed the caption would be saying the opposite
+    # of the data.
+    one, two = d["thresholds"][0]["share"], d["thresholds"][1]["share"]
+    check("  fig21: the graph is one component at weight >= 1", one > 0.9,
+          f"{one:.1%}")
+    check("  fig21: less than two thirds of it survives weight >= 2", two < 0.66,
+          f"{two:.1%}")
+
+    # fig19 and fig26 both call the deepest core a complete graph. That is a
+    # measurable claim, not a turn of phrase.
+    kmax = max(d["core"].values())
+    inner = [n for n, k in d["core"].items() if k == kmax]
+    eq("  fig19: the deepest shell has k+1 members", len(inner), kmax + 1)
+    check("  fig19/26: the deepest shell is a complete graph",
+          d["shell_density"][kmax] > 0.999, f"{d['shell_density'][kmax]:.4f}")
+    # ... and that it is one person's doing, which is what fig26 draws.
+    S = set(inner)
+    holds = sum(1 for u, v, a in G.edges(data=True)
+                if u in S and v in S and N.HOLDER in a["directors"])
+    eq(f"  fig26: {N.HOLDER} sits on every firm in it",
+       holds, len(inner) * (len(inner) - 1) // 2)
+
+    # fig22 samples; a sample that moved with the process would move the
+    # figure. The seeded RNG draws from a sorted list precisely so it cannot.
+    rng_a = random.Random(N.PATH_SEED).sample(d["giant"], 8)
+    rng_b = random.Random(N.PATH_SEED).sample(sorted(d["giant"]), 8)
+    check("  fig22: the path sample is drawn from a sorted list",
+          rng_a == rng_b, "the giant component is not in sorted order")
+
+    # fig23's finding is that no community is territorially pure. State it as
+    # a bound rather than as an adjective.
+    worst = 0.0
+    for counts in d["comm_terr"][:12]:
+        total = sum(counts.values()) or 1
+        worst = max(worst, max(counts.values()) / total)
+    check("  fig23: no large community is territorially pure", worst < 0.9,
+          f"most homogeneous is {worst:.0%}")
+
+    # fig24 quotes a share over the whole graph; the per-period rows have to
+    # add up to the same population.
+    w, a, _u = d["cross_all"]
+    eq("  fig24: every interlock edge is classified",
+       w + a + _u, G.number_of_edges())
+
+    # Every structural figure ships its table, for the same reason the
+    # descriptive ones do.
+    for lang in ("fr", "en"):
+        dl = d if lang == "fr" else N.gather(lang)
+        for name, fn, _ in N.FIGURES:
+            *_, table = fn(dl, "light", lang)
+            check(f"  {name} ({lang}) ships a table view",
+                  bool(table and table[0] and table[1]))
+
+    # The measures file is what makes the captions quotable. It must exist and
+    # agree with the graph it claims to describe.
+    rows = {r["measure"]: r["value"] for r in load("network_measures.csv")}
+    if rows:
+        eq("  network_measures.csv agrees on the firm count",
+           rows.get("n_firms"), str(G.number_of_nodes()))
+        eq("  network_measures.csv agrees on the edge count",
+           rows.get("n_interlocks"), str(G.number_of_edges()))
+        eq("  network_measures.csv agrees on the deepest core",
+           rows.get("max_core_number"), str(kmax))
+    else:
+        check("  network_measures.csv exists", False)
+
+
 def check_figures() -> None:
     """The rendered figures must be well-formed, on-canvas and comparable."""
     import xml.etree.ElementTree as ET
@@ -1393,12 +1477,27 @@ def check_figures() -> None:
         "G = M.build_interlock_graph(2);"
         "print(' '.join(list(M.core_subgraph(G, 40))))" % os.path.join(ROOT, "src")
     )
+    # Stage 12 adds three more set-shaped sources of the same bug:
+    # `connected_components`, `core_number` and `louvain_communities` all hand
+    # back sets or dicts keyed by node name. The partition in particular is a
+    # figure's entire content, so it gets the same two-seed probe.
+    comm_probe = (
+        "import sys; sys.path.insert(0, %r);"
+        "import make_network_figures as N;"
+        "G = N.load_graph();"
+        "print(len(N.sorted_components(G)),"
+        " '|'.join(c[0] for c in N.louvain(G)[:12]))" % os.path.join(ROOT, "src")
+    )
     orders = []
+    communities = []
     for hashseed in ("0", "12345"):
         env = dict(os.environ, PYTHONHASHSEED=hashseed)
         out = subprocess.run([sys.executable, "-c", probe], capture_output=True,
                              text=True, env=env, cwd=ROOT)
         orders.append(out.stdout.strip())
+        out = subprocess.run([sys.executable, "-c", comm_probe],
+                             capture_output=True, text=True, env=env, cwd=ROOT)
+        communities.append(out.stdout.strip())
     # Every written table must carry a *total* sort order. A sort whose key
     # leaves ties is resolved by whatever order the rows arrived in, and that
     # order comes from dicts and sets keyed by name — so the row order churned
@@ -1448,9 +1547,14 @@ def check_figures() -> None:
             check(f"  {name} ({lang}) ships a table view",
                   bool(table and table[0] and table[1]))
 
+    check_structure_figures()
+
     check("  core graph node order is independent of PYTHONHASHSEED",
           orders[0] and orders[0] == orders[1],
           f"{orders[0][:60]!r} vs {orders[1][:60]!r}")
+    check("  components and communities are independent of PYTHONHASHSEED",
+          communities[0] and communities[0] == communities[1],
+          f"{communities[0][:60]!r} vs {communities[1][:60]!r}")
     check("  no PNG is suspiciously small", not tiny, str(tiny[:4]))
 
 

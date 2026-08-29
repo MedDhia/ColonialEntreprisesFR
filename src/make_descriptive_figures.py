@@ -164,18 +164,33 @@ def hbars(rows, width, mode, label_w=210.0, row_h=25.0, value_fmt=_fmt,
 
 
 def columns(rows, width, height, mode, log=False, label_every=1, colour=None,
-            x_title="", y_title=""):
+            x_title="", y_title="", hi=None, max_bar=None, value_fmt=None,
+            tick_fmt=None):
     """Vertical columns: the form for a distribution over an ordered axis.
 
     `log` switches the value axis to log10 for the counts that span four orders
     of magnitude; the axis is labelled as such, because an unlabelled log scale
     reads as a linear one and understates the tail by a factor of thousands.
+
+    `hi` pins the top of the value axis. A share chart has to be scaled to 100%,
+    not to its own maximum: scaled to the data, a series running 46-74% fills
+    the canvas top to bottom and reads as "from nothing to everything".
+
+    `max_bar` caps the bar width. With five categories the default step leaves
+    a 190px bar, which is a block of colour rather than a mark.
+
+    `value_fmt` direct-labels each bar. Three of the light-mode slots sit below
+    3:1 on the surface, so where there is room for direct labels the palette's
+    relief rule wants them.
     """
     p = PALETTE[mode]
     fill = colour or p["series"][0]
-    left, bottom, top = 58.0, 34.0, 16.0
+    # Direct labels sit above their bar, so the tallest one needs a row of its
+    # own; at the default headroom it landed on top of the axis title.
+    left, bottom, top = 58.0, 34.0, (30.0 if value_fmt else 16.0)
     plot_w, plot_h = width - left - 12.0, height - bottom - top
-    hi = max((v for _, v, _ in rows), default=1) or 1
+    hi = hi or max((r[1] for r in rows), default=1) or 1
+    fmt_tick = tick_fmt or _fmt
 
     def ypos(v):
         if not log:
@@ -190,18 +205,33 @@ def columns(rows, width, height, mode, log=False, label_every=1, colour=None,
     for t in ticks:
         yt = ypos(t)
         parts.append(_grid_line(mode, left, yt, left + plot_w, yt))
-        parts.append(_axis_text(mode, left - 8, yt + 3.6, _fmt(t), "end", muted=True))
+        parts.append(_axis_text(mode, left - 8, yt + 3.6, fmt_tick(t), "end", muted=True))
     step = plot_w / max(len(rows), 1)
     bw = max(step - BAR_GAP, 1.2)
-    for i, (label, value, tip) in enumerate(rows):
-        x = left + i * step
+    if max_bar:
+        bw = min(bw, max_bar)
+    inset = (step - bw) / 2 if max_bar else 0.0
+    for i, row in enumerate(rows):
+        # A row may carry its own fill as a fourth field. That is not a rank
+        # colour: it is used where the bars split into two *named* categories
+        # (a shell that is a clique and one that is not), which ships a legend.
+        label, value, tip = row[:3]
+        bar_fill = row[3] if len(row) > 3 else fill
+        x = left + i * step + inset
         yv = ypos(value)
-        parts.append(
-            f'<g class="mk"><title>{esc(tip)}</title>'
-            f'<rect x="{x:.1f}" y="{yv:.1f}" width="{bw:.1f}" '
-            f'height="{max(top + plot_h - yv, 1.0):.1f}" rx="{min(4.0, bw / 2):.1f}" fill="{fill}"/>'
-            f'</g>'
-        )
+        # On a log axis a count of zero is not a short bar, it is no bar. The
+        # 1px stub the height floor produced read as "one", which turned the
+        # empty k-shells between 46 and 71 into a solid run of occupied ones.
+        if not (log and value <= 0):
+            parts.append(
+                f'<g class="mk"><title>{esc(tip)}</title>'
+                f'<rect x="{x:.1f}" y="{yv:.1f}" width="{bw:.1f}" '
+                f'height="{max(top + plot_h - yv, 1.0):.1f}" rx="{min(4.0, bw / 2):.1f}" fill="{bar_fill}"/>'
+                f'</g>'
+            )
+            if value_fmt:
+                parts.append(_axis_text(mode, x + bw / 2, yv - 5, value_fmt(value),
+                                        "middle", VALUE_FONT))
         if label and i % label_every == 0:
             parts.append(_axis_text(mode, x + bw / 2, top + plot_h + 15, label,
                                     "middle", muted=True))
@@ -209,7 +239,11 @@ def columns(rows, width, height, mode, log=False, label_every=1, colour=None,
     if y_title:
         # Left-aligned at the canvas edge: right-anchoring it to the axis pushed
         # any title wider than the 58px gutter off the left of the viewBox.
-        parts.append(_axis_text(mode, 0, top - 5, y_title, "start", muted=True))
+        # Pinned to the top of the canvas rather than to the plot: with direct
+        # labels the plot starts 30px down and the title landed on the topmost
+        # tick, which is wider than the gutter and so sits under the title.
+        parts.append(_axis_text(mode, 0, min(top - 5, 11.0), y_title, "start",
+                                muted=True))
     if x_title:
         parts.append(_axis_text(mode, left + plot_w, top + plot_h + 30, x_title,
                                 "end", muted=True))
@@ -223,7 +257,6 @@ def stacked(groups, width, height, mode, keys, key_label, share=False,
     Colour follows the key, never its rank within a stack: a genre keeps its
     hue whether it is the largest segment or absent.
     """
-    p = PALETTE[mode]
     cols = series(mode, len(keys))
     left, bottom, top = 58.0, 34.0, 16.0
     plot_w, plot_h = width - left - 12.0, height - bottom - top

@@ -173,7 +173,7 @@ Caledonia**. All 304 non-European codings are listed in
 
 ### Figures
 
-Two self-contained pages — open either in a browser, no server and no build
+Self-contained pages — open any of them in a browser, no server and no build
 step — with hover tooltips, table views and a dark mode. Every figure is also
 versioned as a standalone SVG for papers.
 
@@ -194,6 +194,26 @@ numbers in a table view beneath it.
 | `fig15_positionality.svg` | Indigenous share by territory, for those with 60+ recorded members. 21 sit at 0.0%. |
 | `fig16_brokers_vs_hubs.svg` | The firms whose betweenness rank most exceeds their degree rank. A broker is not a hub. |
 | `fig17_interlock_weight.svg` | Shared directors per interlock edge. **84% rest on a single person**, so one entity-resolution error removes the edge. |
+
+**`figures/structure.html`** — ten figures on the *shape* of the graph, for a
+reader about to compute something on it. Eight are measurements and two are
+drawings, which is the split the questions ask for: "is this one lump or
+several" is a number, and a hairball is not an answer to it. Every scalar these
+quote is also in [`data/processed/network_measures.csv`](data/processed/network_measures.csv),
+so none of them has to be read off an SVG.
+
+| | |
+|---|---|
+| `fig18_degree_distribution.svg` | Degree CCDF on log–log axes, full graph against weight ≥ 2. Maximum degree falls from **499 to 157** once two shared directors are required. Both curves bend downward: the tail is shorter than a power law's, so **this network is not "scale-free"** and a fitted exponent would describe the source. |
+| `fig19_kcore_profile.svg` | Firms per k-core shell. The profile should decay smoothly and does not: the shells at **k = 46 and k = 71 are complete graphs**, which no real board produces. The 24 empty levels below k = 71 are real — the deep core stands off from the rest. |
+| `fig20_community_backbone.svg` | The 14 largest Louvain communities as nodes, sized by firm count, linked by shared directors. Modularity **0.48** — a real partition in which no block stands apart. |
+| `fig21_giant_vs_threshold.svg` | Giant component against the weight threshold. **98.5% at one shared director, 47.4% at two.** The "connected" network is held together by single-name edges; any component or distance result has to state its threshold. |
+| `fig22_path_lengths.svg` | Shortest-path distribution in the giant component, from 200 seeded sources. Mean **3.23**, longest observed 9 — but read it against fig21: this smallness is the one-shared-director graph's. |
+| `fig23_community_territory.svg` | Territorial composition of the twelve largest communities. **None is territorially pure**; the most homogeneous tops out at 70%. Interlock clusters follow financial groups, not colonial borders. |
+| `fig24_cross_territory.svg` | Interlocks joining two different territories: **67.5% of all edges**, falling from 73.8% pre-1914 to 46.4% post-1962. The source mix changes over the same span, so the trend is real in the data without being established as historical. |
+| `fig25_person_reach.svg` | Seats held by the 30 people present in eight territories or more. Three of the identifiers shown are extraction residue rather than people, and are named as such rather than filtered out. |
+| `fig26_innermost_core.svg` | The 72-firm deepest core, as observed and with one director's edges removed. **`homberg-o` sits on all 72 boards and generates all 2,556 of its edges by himself**; 532 survive without him and the core falls from k = 71 to k = 13. |
+| `fig27_period_structure.svg` | Firms, edges, mean degree and giant-component share per period — four panels, four scales, because the units differ and a shared axis would make the comparison false. |
 
 **`figures/interlock_network.html`** — the core of the network.
 
@@ -297,8 +317,12 @@ src/
   centrality.py        stage 6b betweenness -> company_centrality.csv
   geocode.py           stage 6c addresses   -> company_places.csv (city level)
   make_geo_figure.py   stage 10 places      -> the map figure
+  make_descriptive_figures.py
+                       stage 11 dataset     -> the ten descriptive figures
+  make_network_figures.py
+                       stage 12 graph       -> the ten structural figures
   labels.py            English labels for the French category vocabulary
-  checks.py            1,007 assertions on the parsers and the built dataset
+  checks.py            1,139 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -312,6 +336,9 @@ docs/
 figures/
   interlock_network.html  figures 1-3, interactive, self-contained
   territory_networks.html figures 4-5 and all 42 territories
+  city_network.html       figure 7, the empire on the map
+  descriptive.html        figures 8-17, what the data is
+  structure.html          figures 18-27, what shape the graph has
   fig*.svg, fig*.png      the same figures standalone, for papers
   by_country/             one SVG and one PNG per territory
   en/                     the same figures with English category labels
