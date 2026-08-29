@@ -61,6 +61,8 @@ Ten stages, each resumable, each writing its own outputs:
 9. **`render_png.py`** — every figure → PNG, one network per file.
 10. **`make_geo_figure.py`** — places → the interlock network on the map (§5f).
 11. **`make_descriptive_figures.py`** — the ten non-network figures (§5g).
+12. **`make_network_figures.py`** — the ten structural figures, plus
+    `network_measures.csv` (§5h).
 
 Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
@@ -70,7 +72,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (1,007 assertions).
+`checks.py` validates the parsers and the built dataset (1,139 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -868,52 +870,6 @@ duplicate splits a firm's brokerage across two nodes, and a wrongly merged
 surname invents brokerage that no one exercised. Read the ranking as a
 description of this network, not of the colonial economy.
 
-## 5g. The descriptive figures
-
-Every figure this collection had was a network — node-link diagrams, a
-territory matrix, a map. Topology is what the dataset is *for*, and it is not
-what a reader needs first. Four of the caveats in this document are load-bearing
-and lived only in prose:
-
-- one year holds a fifth of all dated observations;
-- the person index is confined to a single period;
-- most interlock edges rest on one shared director;
-- four territories hold most of the ties.
-
-A caveat in prose is a caveat readers skip. `make_descriptive_figures.py` draws
-ten figures whose whole job is to make those four visible, plus six more on
-composition and concentration. `figures/descriptive.html` carries all ten with
-a table of numbers under each.
-
-**Where the form came from.** Each figure's job picks its form: a distribution
-gets columns, a ranked magnitude gets horizontal bars, a composition within
-ordered groups gets a 100% stack. One figure changed form during construction
-and the reason is worth recording. "Which firms are brokers rather than hubs"
-started as a degree-rank against betweenness-rank scatter. Plotted honestly —
-both axes on one shared scale, since distance from the agreement line is the
-entire claim and only means something if a unit on one axis is a unit on the
-other — the top 400 firms by betweenness occupy a thin band across the top and
-nine tenths of the canvas is empty. The question is a ranked comparison of one
-derived quantity, so it became a ranked bar of `broker_gap`.
-
-**Colour.** The palette is `make_figures.py`'s, extended from three categorical
-slots to five for the genre figures, taking slots 4 and 5 from the reference
-palette in its documented order rather than inventing hexes. Five slots pass
-every hard gate on the *adjacent* pairlist — which is what a stacked bar uses —
-at worst CVD ΔE 9.1 light and 8.4 dark against a floor of 8. The three-slot cap
-still binds on the all-pairs forms, the node-link diagrams and the map, and
-`checks.py` enforces that split: the two extra hues may appear on a rect and on
-no circle. Three light-mode slots sit below 3:1 on the light surface, so the
-relief rule applies and is not optional: every figure carries direct value
-labels, and every figure ships a table view, which `checks.py` also asserts.
-
-**One figure reports a defect rather than hiding it.** Among the top brokers is
-"Agence centrale à PARIS", which is not a firm but a mis-cut field label. It is
-left in place and named in the caption: a junk node holding a real structural
-position is exactly the company-name hygiene debt the codebook flags, and
-silently filtering it would hide the evidence for a limitation this dataset
-states elsewhere in prose.
-
 ## 5f. Placing firms below the level of the colony
 
 The source files a firm under a territory. That unit hides two things worth
@@ -963,6 +919,123 @@ The headline result survives all three: 37% of placed firms in the interlock
 graph were run from Paris, more than the next eleven cities combined (Alger
 147, Saïgon 135, Casablanca 127, Hanoï 56, Tunis 52 against Paris's 732), and
 the heaviest lines radiate from Paris rather than running between colonies.
+
+## 5g. The descriptive figures
+
+Every figure this collection had was a network — node-link diagrams, a
+territory matrix, a map. Topology is what the dataset is *for*, and it is not
+what a reader needs first. Four of the caveats in this document are load-bearing
+and lived only in prose:
+
+- one year holds a fifth of all dated observations;
+- the person index is confined to a single period;
+- most interlock edges rest on one shared director;
+- four territories hold most of the ties.
+
+A caveat in prose is a caveat readers skip. `make_descriptive_figures.py` draws
+ten figures whose whole job is to make those four visible, plus six more on
+composition and concentration. `figures/descriptive.html` carries all ten with
+a table of numbers under each.
+
+**Where the form came from.** Each figure's job picks its form: a distribution
+gets columns, a ranked magnitude gets horizontal bars, a composition within
+ordered groups gets a 100% stack. One figure changed form during construction
+and the reason is worth recording. "Which firms are brokers rather than hubs"
+started as a degree-rank against betweenness-rank scatter. Plotted honestly —
+both axes on one shared scale, since distance from the agreement line is the
+entire claim and only means something if a unit on one axis is a unit on the
+other — the top 400 firms by betweenness occupy a thin band across the top and
+nine tenths of the canvas is empty. The question is a ranked comparison of one
+derived quantity, so it became a ranked bar of `broker_gap`.
+
+**Colour.** The palette is `make_figures.py`'s, extended from three categorical
+slots to five for the genre figures, taking slots 4 and 5 from the reference
+palette in its documented order rather than inventing hexes. Five slots pass
+every hard gate on the *adjacent* pairlist — which is what a stacked bar uses —
+at worst CVD ΔE 9.1 light and 8.4 dark against a floor of 8. The three-slot cap
+still binds on the all-pairs forms, the node-link diagrams and the map, and
+`checks.py` enforces that split: the two extra hues may appear on a rect and on
+no circle. Three light-mode slots sit below 3:1 on the light surface, so the
+relief rule applies and is not optional: every figure carries direct value
+labels, and every figure ships a table view, which `checks.py` also asserts.
+
+**One figure reports a defect rather than hiding it.** Among the top brokers is
+"Agence centrale à PARIS", which is not a firm but a mis-cut field label. It is
+left in place and named in the caption: a junk node holding a real structural
+position is exactly the company-name hygiene debt the codebook flags, and
+silently filtering it would hide the evidence for a limitation this dataset
+states elsewhere in prose.
+
+## 5h. The structural figures
+
+§5g describes the observations; this describes the graph they build. Both come
+before any substantive result, and for the same reason: a reader about to
+compute a centrality, a community or a distance needs four facts first, and
+none of them was anywhere in the repository.
+
+**One component, held by single ties.** 98.5% of the 5,862 firms sit in one
+component — and 47.4% do once an edge needs two shared directors rather than
+one (`fig21`). The connectedness the network figures show is therefore
+substantially the connectedness of the weakest possible evidence. Every
+component, distance or centrality result computed here has to name its
+threshold, and `fig22`'s mean path length of 3.23 is the one-shared-director
+graph's number, not a property that survives filtering.
+
+**A core that is one man.** The k-core decomposition (`fig19`) does not decay
+smoothly. Two shells — k = 46 with 35 firms and k = 71 with 72 — have induced
+density **1.000**: they are complete graphs, and no board structure produces
+one. `fig26` takes the deeper one apart. All 2,556 of its edges carry
+`homberg-o`, who is recorded on all 72 boards; without him 532 remain and the
+core falls to k = 13. Octave Homberg did chair a financial group of roughly
+that size, so this is not established as a parsing error. It is established as
+a robustness fact: the network's deepest structure rests on one identifier, and
+one entity-resolution failure on that name would erase it. `checks.py` asserts
+both the density and the sole-holder claim, so neither caption can drift from
+the data.
+
+**Clusters that are not colonies.** Louvain at seed 7 finds 65 communities at
+modularity 0.48 — a real partition — but no large community is territorially
+pure (`fig23`, most homogeneous 70%), and no block stands apart from the others
+(`fig20`). Consistently with that, **67.5% of interlock edges join two firms
+filed under different territories** (`fig24`). The cross-border share falls
+monotonically from 73.8% before 1914 to 46.4% after 1962; the source mix
+changes over the same span (§5g, `fig9`), so that decline is real in the data
+without being established as a historical trend.
+
+**Not a scale-free network.** The degree CCDF (`fig18`) bends downward on
+log–log axes rather than running straight, in both the full and the weight ≥ 2
+graph. There is a characteristic scale, so a fitted power-law exponent would be
+describing the annuaire as much as the empire.
+
+**Form and colour.** Eight of the ten are charts and two are drawings. That
+split is the point rather than an accident: "is this graph one lump or several"
+is a number, and a node-link diagram is not an answer to a number. The two that
+are drawn are drawn because their claim is about adjacency — which clusters
+touch, and what is left of a clique when one vertex is removed. `fig26` uses a
+circular layout precisely because a complete graph has no layout worth
+computing, and a circle keeps every node at a fixed point across both panels so
+the edge set is the only thing that differs. `fig20` sizes its nodes as
+`r ∝ √firms` rather than through the shared `radius()` helper, whose square
+root is taken after rescaling to the drawn set — over a 191–611 range that
+turns a 3.2× difference into a 20× difference in area, and the caption says
+"area is the firm count". Colour stays inside the same cap as everywhere else:
+three slots plus grey on the node-link forms, five on the stack, two on the
+CCDF — that pair passing every gate including contrast, at CVD ΔE 24.7.
+
+**One primitive fix, with a visible consequence.** The shared `columns()` helper
+floored every bar at one pixel. On a log axis that is wrong: a count of zero is
+not a short bar, it is no bar, and the stub read as "one". Fixing it removed 38
+phantom bars from `fig11`, which had been drawing a continuous run of board
+sizes up to 82 where most of the tail is empty, and it is what makes the empty
+levels between k = 46 and k = 71 visible in `fig19` at all.
+
+**Reproducibility.** Stage 12 adds three more set-shaped hazards of the kind
+§5d describes: `connected_components` yields sets, `core_number` returns a dict
+keyed by node, and `louvain_communities` returns a list of sets. Each is sorted
+into a total order before anything downstream reads it, and the path-length
+sample draws from a sorted list with an explicit seeded RNG rather than from
+the component's set. `checks.py` runs the partition under two values of
+`PYTHONHASHSEED` and requires the same answer.
 
 ## 6. Validity — read this before using the data
 
@@ -1034,9 +1107,15 @@ python3 src/centrality.py                       # ~1 min, exact betweenness
 python3 src/geocode.py                          # place firms at city level
 python3 src/make_figures.py                     # ~1 min, core figures
 python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
+python3 src/make_geo_figure.py                  # the empire on the map
+python3 src/make_descriptive_figures.py         # figures 8-17, what the data is
+python3 src/make_network_figures.py             # ~30 s, figures 18-27 + measures
 python3 src/make_figures.py --lang en            # English label set
 python3 src/make_territory_figures.py --lang en
-python3 src/render_png.py                       # ~90 s, PNG of every figure
+python3 src/make_geo_figure.py --lang en
+python3 src/make_descriptive_figures.py --lang en
+python3 src/make_network_figures.py --lang en
+python3 src/render_png.py                       # ~2 min, PNG of every figure
 python3 src/checks.py                           # must pass
 ```
 
