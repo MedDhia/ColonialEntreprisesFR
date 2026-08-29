@@ -353,7 +353,8 @@ def annotation_candidate_ties(
                 "n_observations": 1,
             }
     rows = sorted(out.values(), key=lambda r: (r["match_method"] == "unmatched",
-                                               -r["n_observations"]))
+                                               -r["n_observations"],
+                                               r["person_id"], r["annotation_raw"]))
     return rows
 
 
@@ -376,7 +377,12 @@ def company_duplicate_candidates(companies: dict[str, dict]) -> list[dict]:
     for k, name, toks in items:
         if toks:
             # Block on the longest token to keep the comparison tractable.
-            by_first[max(toks, key=len)].append((k, name, toks))
+            # Ties on token length must break by name, not by the frozenset's
+            # iteration order: under hash randomisation a firm was blocked
+            # under a different token on different runs, compared against a
+            # different candidate set, and the file's *contents* changed —
+            # 3,570 pairs on one run against 3,485 on the next.
+            by_first[max(toks, key=lambda x: (len(x), x))].append((k, name, toks))
 
     seen: set[tuple[str, str]] = set()
     out: list[dict] = []
@@ -409,7 +415,7 @@ def company_duplicate_candidates(companies: dict[str, dict]) -> list[dict]:
                         "reason": reason,
                     }
                 )
-    out.sort(key=lambda r: (r["reason"], r["company_id_1"]))
+    out.sort(key=lambda r: (r["reason"], r["company_id_1"], r["company_id_2"]))
     return out
 
 
@@ -719,7 +725,7 @@ def main() -> None:
                 "last_year_observed": max(ys) if ys else "",
             }
         )
-    company_rows.sort(key=lambda r: (-r["n_board_ties"], r["name"]))
+    company_rows.sort(key=lambda r: (-r["n_board_ties"], r["name"], r["company_id"]))
     write_csv("companies.csv", company_rows,
               ["company_id", "name", "acronym", "in_catalogue", "n_documents", "regions",
                "countries", "sectors", "corporate_group", "place_listed",
@@ -819,7 +825,8 @@ def main() -> None:
                 "affiliation_notes": "; ".join(sorted(p["annotations"]))[:500],
             }
         )
-    person_rows.sort(key=lambda r: (-r["n_board_companies"], -r["n_observations"]))
+    person_rows.sort(key=lambda r: (-r["n_board_companies"], -r["n_observations"],
+                                    r["person_id"]))
     write_csv("persons_resolved.csv", person_rows,
               ["person_id", "surname", "given_variants", "n_companies",
                "n_board_companies", "n_observations", "top_role", "roles",
@@ -954,7 +961,7 @@ def main() -> None:
                 "shared_directors": "; ".join(sorted(persons))[:400],
             }
         )
-    il_rows.sort(key=lambda r: -r["weight"])
+    il_rows.sort(key=lambda r: (-r["weight"], r["company_id_1"], r["company_id_2"]))
     write_csv("edges_company_interlock.csv", il_rows,
               ["company_id_1", "company_id_2", "company_name_1", "company_name_2",
                "weight", "shared_directors"])
@@ -970,7 +977,8 @@ def main() -> None:
         for (a, b, per), persons in period_interlock.items()
         if len(persons) >= args.min_interlock_weight
     ]
-    pil_rows.sort(key=lambda r: (r["period"], -r["weight"]))
+    pil_rows.sort(key=lambda r: (r["period"], -r["weight"],
+                                 r["company_id_1"], r["company_id_2"]))
     write_csv("edges_company_interlock_by_period.csv", pil_rows,
               ["company_id_1", "company_id_2", "period", "weight", "shared_directors"])
 
@@ -989,7 +997,7 @@ def main() -> None:
         }
         for (a, b), cs in comem.items()
     ]
-    cm_rows.sort(key=lambda r: -r["weight"])
+    cm_rows.sort(key=lambda r: (-r["weight"], r["person_id_1"], r["person_id_2"]))
     write_csv("edges_person_comembership.csv", cm_rows,
               ["person_id_1", "person_id_2", "weight", "shared_companies"])
 
@@ -1028,7 +1036,8 @@ def main() -> None:
         }
         for e in corp.values()
     ]
-    corp_rows.sort(key=lambda r: -r["n_observations"])
+    corp_rows.sort(key=lambda r: (-r["n_observations"], r["from_company_id"],
+                                  r["to_company_id"]))
     write_csv("edges_company_corporate.csv", corp_rows,
               ["from_company_id", "to_company_id", "from_name", "to_name",
                "n_observations", "first_year", "last_year", "roles"])
@@ -1059,7 +1068,9 @@ def main() -> None:
             }
         else:
             e["n_references"] += 1
-    rr = sorted(ref_rows.values(), key=lambda r: -r["n_references"])
+    rr = sorted(ref_rows.values(), key=lambda r: (-r["n_references"],
+                                                  r["from_company_id"],
+                                                  r["to_company_id"]))
     write_csv("edges_company_reference.csv", rr,
               ["from_company_id", "to_company_id", "from_name", "to_name", "n_references"])
 

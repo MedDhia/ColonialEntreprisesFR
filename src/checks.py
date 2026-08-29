@@ -1380,6 +1380,29 @@ def check_figures() -> None:
         out = subprocess.run([sys.executable, "-c", probe], capture_output=True,
                              text=True, env=env, cwd=ROOT)
         orders.append(out.stdout.strip())
+    # Every written table must carry a *total* sort order. A sort whose key
+    # leaves ties is resolved by whatever order the rows arrived in, and that
+    # order comes from dicts and sets keyed by name — so the row order churned
+    # between runs on unchanged data. Re-sorting a committed file by its own
+    # documented key has to reproduce the file.
+    totally_sorted = [
+        ("edges_company_interlock.csv",
+         lambda r: (-int(r["weight"]), r["company_id_1"], r["company_id_2"])),
+        ("edges_company_interlock_by_period.csv",
+         lambda r: (r["period"], -int(r["weight"]),
+                    r["company_id_1"], r["company_id_2"])),
+        ("company_duplicate_candidates.csv",
+         lambda r: (r["reason"], r["company_id_1"], r["company_id_2"])),
+        ("edges_person_comembership.csv",
+         lambda r: (-int(r["weight"]), r["person_id_1"], r["person_id_2"])),
+    ]
+    for name, key in totally_sorted:
+        rows = load(name)
+        if not rows:
+            continue
+        check(f"  {name} is in a total sort order", rows == sorted(rows, key=key),
+              "row order is not reproducible from its own key")
+
     check("  core graph node order is independent of PYTHONHASHSEED",
           orders[0] and orders[0] == orders[1],
           f"{orders[0][:60]!r} vs {orders[1][:60]!r}")
