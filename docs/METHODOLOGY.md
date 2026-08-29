@@ -743,7 +743,7 @@ rather than cosmetic, and each of them can distort a reading of the data.
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
-170 firms of highest weighted degree — 1,403 interlocks. Reading a *global*
+170 firms of highest weighted degree — 1,401 interlocks. Reading a *global*
 property such as density or centralisation off that picture is a mistake; the
 figure is a map of the core, and the numbers for the whole graph are in
 `network_stats.csv`.

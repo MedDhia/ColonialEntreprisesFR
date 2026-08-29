@@ -181,7 +181,7 @@ versioned as a standalone SVG for papers.
 
 | | |
 |---|---|
-| `fig1_core_interlocks.svg` | The core interlock network: 170 firms, 1,403 interlocks at two or more shared directors — the core of a graph of 3,550 firms. Coloured by territory, sized by weighted degree. |
+| `fig1_core_interlocks.svg` | The core interlock network: 170 firms, 1,401 interlocks at two or more shared directors — the core of a graph of 3,550 firms. Coloured by territory, sized by weighted degree. |
 | `fig2_by_period.svg` | The same network by period, five panels on one shared layout — 479 ties before 1914, 2,943 in 1914–1929, 152 after 1962. |
 | `fig3_ego_indochine.svg` | The interlock neighbourhood of a single firm, the Banque de l'Indochine by default. |
 | `fig6_core_betweenness.svg` | The same 170 firms and the same layout as figure 1, sized by **betweenness centrality** instead of shared directorships — so the difference between the two figures is the finding. |

@@ -21,7 +21,15 @@ Design decisions that follow from the data's job, not from taste:
   applies: direct labels on the largest nodes and a full table view ship with
   the figure rather than being optional.
 
-Layouts are computed with a fixed seed so the figures are reproducible.
+Layouts are computed with a fixed seed, and every graph is built with an
+explicit node order, so the figures are byte-for-byte reproducible.
+
+Both halves are needed. The seed alone was not enough: `spring_layout` assigns
+its seeded starting coordinates to nodes in iteration order, and NetworkX's
+`subgraph` view iterates a `set` of node names, whose order Python randomises
+per process. Re-running the pipeline on unchanged data therefore rewrote 18 of
+the 98 figures — the seeds looked fixed and the output moved anyway. See
+`ordered_subgraph`.
 """
 
 from __future__ import annotations
@@ -104,6 +112,36 @@ def build_interlock_graph(min_weight: int):
     return G
 
 
+def ordered_subgraph(G, nodes):
+    """`G.subgraph(nodes).copy()`, but with a node order that is reproducible.
+
+    NetworkX's subgraph *view* iterates its filter when the filter is smaller
+    than the parent, and that filter is a `set`. A set of strings iterates in
+    hash order, and Python randomises string hashing per process, so the copy's
+    node order changed from run to run.
+
+    That order is not cosmetic: `spring_layout` draws its initial coordinates
+    from the seeded RNG and assigns them to nodes in iteration order, so a
+    permuted order means a different layout. The seeds throughout this module
+    were fixed precisely to make the figures reproducible, and this quietly
+    defeated them — re-running the pipeline on unchanged data rewrote 18 of the
+    98 figures, which makes a diff useless for telling "the data moved" from "I
+    re-ran it".
+
+    Inserting the nodes explicitly, in the caller's order, fixes the iteration
+    order to something the caller controls.
+    """
+    import networkx as nx
+
+    keep = list(nodes)
+    wanted = set(keep)
+    K = nx.Graph()
+    K.add_nodes_from((n, G.nodes[n]) for n in keep)
+    K.add_edges_from((u, v, d) for u, v, d in G.edges(data=True)
+                     if u in wanted and v in wanted)
+    return K
+
+
 def core_subgraph(G, top_n: int):
     """Largest component, then the top_n nodes by weighted degree."""
     import networkx as nx
@@ -111,10 +149,13 @@ def core_subgraph(G, top_n: int):
     if G.number_of_nodes() == 0:
         return G
     largest = max(nx.connected_components(G), key=len)
-    H = G.subgraph(largest).copy()
+    # Sorted, because `connected_components` yields sets: without this the
+    # giant component's own node order is hash-dependent too.
+    H = ordered_subgraph(G, sorted(largest))
     wdeg = dict(H.degree(weight="weight"))
-    keep = sorted(wdeg, key=lambda n: -wdeg[n])[:top_n]
-    K = H.subgraph(keep).copy()
+    # Ties on weighted degree are broken by name, so the cut is stable.
+    keep = sorted(wdeg, key=lambda n: (-wdeg[n], n))[:top_n]
+    K = ordered_subgraph(H, keep)
     # Drop nodes that lost all their neighbours in the cut.
     K.remove_nodes_from([n for n, d in K.degree() if d == 0])
     return K
@@ -506,7 +547,7 @@ def build_period_panels(companies, min_weight, top_n, w, h):
             "x": pos[n][0], "y": pos[n][1],
             "r": max(2.0, radius(wdeg_all[n], lo, hi) * 0.5),
             "slot": -1,
-        } for n in present]
+        } for n in sorted(present)]
         edges = [(pos[e["company_id_1"]], pos[e["company_id_2"]], int(e["weight"]))
                  for e in es]
         panels.append({
@@ -537,13 +578,15 @@ def build_ego(companies, focus_name, min_weight, w, h):
                 target = cid
     if target is None:
         return None
-    ego = nx.ego_graph(G, target, radius=1)
+    # `ego_graph` builds its node set with a set, so its order is hash-dependent
+    # for the same reason `subgraph` is; rebuild it in sorted order.
+    ego = ordered_subgraph(G, sorted(nx.ego_graph(G, target, radius=1)))
     if ego.number_of_nodes() > 46:
         wdeg = dict(ego.degree(weight="weight"))
-        keep = sorted(wdeg, key=lambda n: -wdeg[n])[:46]
+        keep = sorted(wdeg, key=lambda n: (-wdeg[n], n))[:46]
         if target not in keep:
             keep[-1] = target
-        ego = ego.subgraph(keep).copy()
+        ego = ordered_subgraph(ego, keep)
     pos = normalise(layout(ego, seed=3, iterations=240), w, h, pad=48, pad_x=LABEL_MARGIN)
     wdeg = dict(ego.degree(weight="weight"))
     lo, hi = min(wdeg.values()), max(wdeg.values())

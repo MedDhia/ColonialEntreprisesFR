@@ -1358,6 +1358,31 @@ def check_figures() -> None:
     check(f"  every figure has a PNG ({len(svgs)} figures)", not missing,
           str(missing[:4]))
     check("  no PNG is older than its SVG", not stale, str(stale[:4]))
+
+    # The figures must not depend on Python's per-process string hashing.
+    # `spring_layout` assigns seeded coordinates in node-iteration order, and a
+    # NetworkX subgraph view iterates a set of node names, so for a long time
+    # re-running the pipeline on unchanged data rewrote 18 of the 98 figures
+    # while every seed in the module was fixed. Building the same core graph
+    # under two hash seeds is the cheap end of that test: the node order it
+    # hands to the layout must match.
+    import subprocess
+
+    probe = (
+        "import sys; sys.path.insert(0, %r);"
+        "import make_figures as M;"
+        "G = M.build_interlock_graph(2);"
+        "print(' '.join(list(M.core_subgraph(G, 40))))" % os.path.join(ROOT, "src")
+    )
+    orders = []
+    for hashseed in ("0", "12345"):
+        env = dict(os.environ, PYTHONHASHSEED=hashseed)
+        out = subprocess.run([sys.executable, "-c", probe], capture_output=True,
+                             text=True, env=env, cwd=ROOT)
+        orders.append(out.stdout.strip())
+    check("  core graph node order is independent of PYTHONHASHSEED",
+          orders[0] and orders[0] == orders[1],
+          f"{orders[0][:60]!r} vs {orders[1][:60]!r}")
     check("  no PNG is suspiciously small", not tiny, str(tiny[:4]))
 
 
