@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import math
 import os
 import random
 import re
@@ -1155,6 +1156,15 @@ def check_geocoding() -> None:
               f"{len(self_loops)} self-loops - within-city ties belong in the table")
 
 
+_ROTATE_RE = re.compile(r"rotate\(\s*(-?[\d.]+)")
+_TRANSLATE_RE = re.compile(r"translate\(\s*(-?[\d.]+)[ ,]+(-?[\d.]+)")
+
+
+def _translate_of(transform: str) -> tuple[float, float]:
+    m = _TRANSLATE_RE.search(transform or "")
+    return (float(m.group(1)), float(m.group(2))) if m else (0.0, 0.0)
+
+
 def check_structure_figures() -> None:
     """The structural figures state facts about the graph. Assert the facts.
 
@@ -1282,12 +1292,29 @@ def check_figures() -> None:
         clipped = []
         for t, size in _texts_with_size(root, ns):
             tw = _text_width("".join(t.itertext()), size)
-            if t.get("transform"):
-                # Rotated -90 about its anchor: it grows upward, so the bound
-                # that matters is the top of the canvas, not the right edge.
-                y = float(t.get("y", 0))
-                if y - tw < -0.5:
-                    clipped.append(("".join(t.itertext())[:24], "rotated", round(y - tw)))
+            transform = t.get("transform") or (t.getparent().get("transform")
+                                               if hasattr(t, "getparent") else None)
+            if transform:
+                # A rotated label runs along its own axis, so its footprint on
+                # each canvas axis is the projection of its width. Handling only
+                # the -90 case treated the arc diagram's 60-degree firm names as
+                # vertical and measured them against the wrong edge entirely.
+                m = _ROTATE_RE.search(transform)
+                deg = float(m.group(1)) if m else -90.0
+                rad = math.radians(deg)
+                ox, oy = _translate_of(transform)
+                x = float(t.get("x", 0)) + ox
+                y = float(t.get("y", 0)) + oy
+                # text-anchor start: the run goes forward along the rotated axis.
+                sign = -1.0 if t.get("text-anchor") == "end" else 1.0
+                x1 = x + sign * tw * math.cos(rad)
+                y1 = y + sign * tw * math.sin(rad)
+                lo_x, hi_x = min(x, x1), max(x, x1)
+                lo_y, hi_y = min(y, y1), max(y, y1)
+                if lo_x < -0.5 or hi_x > w + 0.5 or lo_y < -0.5 or hi_y > h + 0.5:
+                    clipped.append(("".join(t.itertext())[:24], f"rot{deg:g}",
+                                    (round(lo_x), round(hi_x),
+                                     round(lo_y), round(hi_y))))
                 continue
             x = float(t.get("x", 0))
             # SVG places the anchor point, not the left edge. Handling only
@@ -1327,6 +1354,23 @@ def check_figures() -> None:
         extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - stack_allowed
         check(f"  {name}: no colour outside the validated palette", not extra,
               str(sorted(extra)[:3]))
+        # Strokes are an encoding too. `draw.curved_edges` gives an edge a
+        # colour when it carries a category, and nothing was checking that the
+        # colour came from the palette — the arc diagram's two edge hues and the
+        # backbone's grey step are as much a categorical encoding as any node
+        # fill, and the first version of the backbone painted its cross-territory
+        # edges in the same orange as its Algeria nodes.
+        stroke_allowed = stack_allowed | {
+            PALETTE["light"]["hairline"], PALETTE["light"]["text_muted"],
+            PALETTE["light"]["text_primary"], PALETTE["light"]["text_secondary"],
+        }
+        extra_s = set()
+        for tag in ("path", "line", "circle", "rect", "text"):
+            extra_s |= {e.get("stroke") for e in root.iter(f"{ns}{tag}")}
+        extra_s = {c for c in extra_s if c} - stroke_allowed
+        check(f"  {name}: no stroke colour outside the palette", not extra_s,
+              str(sorted(extra_s)[:3]))
+
         extra_r = ({r.get("fill") for r in root.iter(f"{ns}rect")}
                    - stack_allowed - set(SEQ["light"]))
         check(f"  {name}: no rect colour outside the palette", not extra_r,
@@ -1488,16 +1532,28 @@ def check_figures() -> None:
         "print(len(N.sorted_components(G)),"
         " '|'.join(c[0] for c in N.louvain(G)[:12]))" % os.path.join(ROOT, "src")
     )
+    # Stage 13's arc diagram takes a subgraph of the interlock graph, and a
+    # NetworkX subgraph *view* iterates a set: the arcs landed in the same
+    # places under two hash seeds and the path segments came out in a different
+    # order, so the committed SVG changed on a re-run of unchanged data.
+    arc_probe = (
+        "import sys; sys.path.insert(0, %r);"
+        "import make_node_figures as N;"
+        "G = N.gather()['G'];"
+        "K = N.ordered_subgraph(G, sorted(list(G)[:400]));"
+        "print(' '.join(f'{u}~{v}' for u, v in list(K.edges())[:40]))"
+        % os.path.join(ROOT, "src")
+    )
     orders = []
     communities = []
+    arc_edges = []
     for hashseed in ("0", "12345"):
         env = dict(os.environ, PYTHONHASHSEED=hashseed)
-        out = subprocess.run([sys.executable, "-c", probe], capture_output=True,
-                             text=True, env=env, cwd=ROOT)
-        orders.append(out.stdout.strip())
-        out = subprocess.run([sys.executable, "-c", comm_probe],
-                             capture_output=True, text=True, env=env, cwd=ROOT)
-        communities.append(out.stdout.strip())
+        for cmd, sink in ((probe, orders), (comm_probe, communities),
+                          (arc_probe, arc_edges)):
+            out = subprocess.run([sys.executable, "-c", cmd], capture_output=True,
+                                 text=True, env=env, cwd=ROOT)
+            sink.append(out.stdout.strip())
     # Every written table must carry a *total* sort order. A sort whose key
     # leaves ties is resolved by whatever order the rows arrived in, and that
     # order comes from dicts and sets keyed by name — so the row order churned
@@ -1555,6 +1611,9 @@ def check_figures() -> None:
     check("  components and communities are independent of PYTHONHASHSEED",
           communities[0] and communities[0] == communities[1],
           f"{communities[0][:60]!r} vs {communities[1][:60]!r}")
+    check("  node-level subgraph edge order is independent of PYTHONHASHSEED",
+          arc_edges[0] and arc_edges[0] == arc_edges[1],
+          f"{arc_edges[0][:60]!r} vs {arc_edges[1][:60]!r}")
     check("  no PNG is suspiciously small", not tiny, str(tiny[:4]))
 
 

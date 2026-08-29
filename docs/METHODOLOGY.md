@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Ten stages, each resumable, each writing its own outputs:
+Thirteen stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -63,6 +63,8 @@ Ten stages, each resumable, each writing its own outputs:
 11. **`make_descriptive_figures.py`** — the ten non-network figures (§5g).
 12. **`make_network_figures.py`** — the ten structural figures, plus
     `network_measures.csv` (§5h).
+13. **`make_node_figures.py`** — the six node-level figures, on the drawing
+    primitives in `draw.py` (§5i).
 
 Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
@@ -72,7 +74,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (1,139 assertions).
+`checks.py` validates the parsers and the built dataset (1,350 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -1037,6 +1039,64 @@ sample draws from a sorted list with an explicit seeded RNG rather than from
 the component's set. `checks.py` runs the partition under two values of
 `PYTHONHASHSEED` and requires the same answer.
 
+## 5i. Drawing at the level of the node
+
+§5d draws the network at the scale of the whole and says why: at 3,000 nodes
+and 39,000 edges the unit of reading is the shape, labels go in the margin on
+leader lines, and an edge is one of thirty-nine thousand. That is the right
+treatment for the question those figures answer. It answers no question of the
+form *which firms, exactly*.
+
+Stage 13 draws six graphs small enough that the unit of reading is the
+individual node. The primitives are in `draw.py` and differ from
+`make_figures.draw_network` in four ways, each following from that change of
+scale.
+
+**Curved edges.** Straight segments between scattered nodes make a moiré of
+near-parallel lines in which every crossing looks like a node. A quadratic
+bezier with a consistent bow separates edges that share an endpoint. The bow is
+computed after sorting the two endpoints, so it does not depend on which way
+round the pair happened to be stored.
+
+**Labels on the node, with a halo.** `paint-order="stroke"` paints a
+surface-coloured stroke first and the fill on top, which gives each glyph a 3px
+moat and makes a label legible over the edges it covers. Without it, in-place
+labelling is not available at all and the labels have to go in the margin with
+leaders. Placement is a greedy pass over the nodes in importance order, trying
+eight offsets around each; a node whose label fits nowhere is **skipped rather
+than drawn overlapping**, and the table view carries every name regardless.
+
+**Layouts that put a variable on the canvas.** A spring layout means
+"connected things are near each other" and nothing else. `fig29` places a firm
+on the ring for its core number, so radius is a measured quantity; `fig30`
+orders firms along an axis by territory, which is the variable the figure is
+about and the one a force layout would destroy; `fig31` uses two columns
+because a bipartite graph laid out by force hides the thing that makes it
+bipartite. `fig31`'s two columns are then ordered by the barycentre heuristic
+to cut crossings — that the Indochina firms end up together and the Moroccan
+ones together is an *output* of that ordering, not a grouping imposed on it.
+
+**Edges that can carry a category, under the same cap as everything else.**
+The first version of `fig28` painted its cross-territory edges in categorical
+slot 2 — the same orange as the Algeria nodes beside them, so one colour meant
+two different things in one figure. The hues are spent on territory there, so
+the cross/within distinction became a step along the *mark* grey ramp plus a
+width increase, and the hue treatment moved to `fig30`, where nothing else
+competes for it. `checks.py` now polices strokes as well as fills, which is what
+caught the second half of that mistake: the darker grey was taken from the
+*text* ramp, and text tokens are for ink a reader reads, not ink a reader
+measures.
+
+**Two checks were wrong before they were right.** The clipping check handled a
+`transform` only for the -90° case, so it measured `fig30`'s 60° firm names
+against the wrong canvas edge entirely; it now projects a rotated label's width
+onto both axes. And the arc diagram was not reproducible: `G.subgraph` returns
+a *view* that iterates a set, so under a different `PYTHONHASHSEED` the arcs
+landed in the same places but their path segments were emitted in a different
+order and the committed SVG changed on a re-run of unchanged data. This is the
+same hazard §5d describes, in a place the existing guard did not reach;
+`ordered_subgraph` fixes it and `checks.py` now probes for it.
+
 ## 6. Validity — read this before using the data
 
 **It is a sample of statements, not a census of boards.** A firm's absence
@@ -1110,11 +1170,13 @@ python3 src/make_territory_figures.py           # ~1 min, empire + per-territory
 python3 src/make_geo_figure.py                  # the empire on the map
 python3 src/make_descriptive_figures.py         # figures 8-17, what the data is
 python3 src/make_network_figures.py             # ~30 s, figures 18-27 + measures
+python3 src/make_node_figures.py                # figures 28-33, node level
 python3 src/make_figures.py --lang en            # English label set
 python3 src/make_territory_figures.py --lang en
 python3 src/make_geo_figure.py --lang en
 python3 src/make_descriptive_figures.py --lang en
 python3 src/make_network_figures.py --lang en
+python3 src/make_node_figures.py --lang en
 python3 src/render_png.py                       # ~2 min, PNG of every figure
 python3 src/checks.py                           # must pass
 ```

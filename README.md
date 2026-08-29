@@ -215,6 +215,20 @@ so none of them has to be read off an SVG.
 | `fig26_innermost_core.svg` | The 72-firm deepest core, as observed and with one director's edges removed. **`homberg-o` sits on all 72 boards and generates all 2,556 of its edges by himself**; 532 survive without him and the core falls from k = 71 to k = 13. |
 | `fig27_period_structure.svg` | Firms, edges, mean degree and giant-component share per period — four panels, four scales, because the units differ and a shared axis would make the comparison false. |
 
+**`figures/nodes.html`** — the network at the scale of the individual firm.
+Every other network figure here is drawn at the scale of the whole, where a
+node is a dot and the fourteen labels that fit live in the margin. These six
+are small enough to name every firm and follow every edge.
+
+| | |
+|---|---|
+| `fig28_backbone.svg` | The 54 busiest firms of the graph at three or more shared directors, every one labelled. Cross-territory ties drawn darker and heavier — **129 of the 178**. |
+| `fig29_core_rings.svg` | Every firm at k-core ≥ 25 on a ring for its core number, angle by community. Radius is a measured quantity, not a force-layout impression. |
+| `fig30_arc_territory.svg` | The 56 busiest firms ranged by territory along an axis, ties as arcs. **231 of 314 arcs (74%) cross a border** — figure 24 seen firm by firm. |
+| `fig31_shared_boards.svg` | The two-mode graph everything else is projected *from*: 14 directors, the 32 firms at least three of them sit on. Both columns ordered to minimise crossings. |
+| `fig32_neighbourhoods.svg` | Six firms' neighbourhoods as small multiples, each cut to 15 ties so every node stays nameable. |
+| `fig33_backbone_by_place.svg` | Figure 28's firms at figure 28's coordinates, recoloured by head office. **53% of the backbone firms with a recoverable address were run from metropolitan France.** |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -321,8 +335,10 @@ src/
                        stage 11 dataset     -> the ten descriptive figures
   make_network_figures.py
                        stage 12 graph       -> the ten structural figures
+  draw.py              node-level drawing primitives (curved edges, halo labels)
+  make_node_figures.py stage 13 graph       -> the six node-level figures
   labels.py            English labels for the French category vocabulary
-  checks.py            1,139 assertions on the parsers and the built dataset
+  checks.py            1,350 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -339,6 +355,7 @@ figures/
   city_network.html       figure 7, the empire on the map
   descriptive.html        figures 8-17, what the data is
   structure.html          figures 18-27, what shape the graph has
+  nodes.html              figures 28-33, the network firm by firm
   fig*.svg, fig*.png      the same figures standalone, for papers
   by_country/             one SVG and one PNG per territory
   en/                     the same figures with English category labels
