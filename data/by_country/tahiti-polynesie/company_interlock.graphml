@@ -39,7 +39,7 @@
     <node id="frsephosphatesoceanie">
       <data key="n_label">Cie frse des PHOSPHATES de l'OCÉANIE</data>
       <data key="n_sectors">Sociétés</data>
-      <data key="n_n_directors">22</data>
+      <data key="n_n_directors">21</data>
       <data key="n_territory">Tahiti (Polynésie)</data>
     </node>
     <node id="ilesmarquises">
@@ -58,12 +58,6 @@
       <data key="n_label">Compagnie Navale de l'Océanie</data>
       <data key="n_sectors">Documents généraux</data>
       <data key="n_n_directors">7</data>
-      <data key="n_territory">Tahiti (Polynésie)</data>
-    </node>
-    <node id="petrolesshellilesfrancaisespacifique">
-      <data key="n_label">Société des pétroles Shell des îles françaises du Pacifique</data>
-      <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">20</data>
       <data key="n_territory">Tahiti (Polynésie)</data>
     </node>
     <node id="phosphatesoceanie">
@@ -184,9 +178,6 @@
       <data key="e_weight">1</data>
     </edge>
     <edge id="e33" source="immobiliereagricoleoceanie" target="phosphatesoceanie">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e34" source="petrolesshellilesfrancaisespacifique" target="tahiti">
       <data key="e_weight">1</data>
     </edge>
   </graph>

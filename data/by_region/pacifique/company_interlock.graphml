@@ -171,7 +171,7 @@
     <node id="frsephosphatesoceanie">
       <data key="n_label">Cie frse des PHOSPHATES de l'OCÉANIE</data>
       <data key="n_sectors">Sociétés</data>
-      <data key="n_n_directors">22</data>
+      <data key="n_n_directors">21</data>
       <data key="n_territory">Pacifique</data>
     </node>
     <node id="gueraultlemarinier">
@@ -298,12 +298,6 @@
       <data key="n_label">Sté de Ouaco</data>
       <data key="n_sectors">Autres sociétés; Documentation générale (par ordre chronologique)</data>
       <data key="n_n_directors">17</data>
-      <data key="n_territory">Pacifique</data>
-    </node>
-    <node id="petrolesshellilesfrancaisespacifique">
-      <data key="n_label">Société des pétroles Shell des îles françaises du Pacifique</data>
-      <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">20</data>
       <data key="n_territory">Pacifique</data>
     </node>
     <node id="phosphatesoceanie">
@@ -864,28 +858,25 @@
     <edge id="e171" source="chrome" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e172" source="petrolesshellilesfrancaisespacifique" target="tahiti">
+    <edge id="e172" source="agricolemopelia" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e173" source="agricolemopelia" target="nickel">
+    <edge id="e173" source="colonialeilesbanks" target="francohebridaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e174" source="colonialeilesbanks" target="francohebridaise">
+    <edge id="e174" source="consolidatednickelcyltd" target="etsgomenouaco">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e175" source="consolidatednickelcyltd" target="etsgomenouaco">
+    <edge id="e175" source="nouvelleshebridesgeneralitesnouvelleshebrides" target="soufrieresvanualavailesbanks">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e176" source="nouvelleshebridesgeneralitesnouvelleshebrides" target="soufrieresvanualavailesbanks">
+    <edge id="e176" source="nickel" target="nouvelleshebridesgeneralitesnouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e177" source="nickel" target="nouvelleshebridesgeneralitesnouvelleshebrides">
+    <edge id="e177" source="exploitationminieremetallurgiquecaledonie" target="minesmontdo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e178" source="exploitationminieremetallurgiquecaledonie" target="minesmontdo">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e179" source="etsgomenouaco" target="oceanie">
+    <edge id="e178" source="etsgomenouaco" target="oceanie">
       <data key="e_weight">1</data>
     </edge>
   </graph>

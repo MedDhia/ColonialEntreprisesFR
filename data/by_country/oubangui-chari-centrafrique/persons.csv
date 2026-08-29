@@ -1,7 +1,7 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 mandel-a,Mandel,A. Mandel; Auguste Mandel,3,3,6,administrateur,1926,1936,mines et industries
 weber-j,Weber,J. Weber; J. Wéber; Jean Weber,2,2,7,administrateur,1926,1936,mines et industries
-superville-m,Superville,Maurice Superville; Superville,2,2,4,administrateur,1903,1927,mines et industries
+superville-m,Superville,Maurice Superville; Superville,2,2,5,administrateur,1903,1927,mines et industries
 joubert-a,Joubert,Andre Joubert; André Joubert,2,2,3,administrateur,1926,1951,mines et industries
 josse-a-adrien,Josse,Adrien Josse,2,2,3,president,1906,1925,mines et industries
 asscher-l,Asscher,L. Asscher; Louis Asscher,2,2,3,administrateur,1950,1953,mines et industries
@@ -41,6 +41,11 @@ delattre-a,Delattre,Achille Delattre,1,1,2,administrateur,1899,1902,mines et ind
 nogues-r,Noguès,Roger Noguès,1,1,2,administrateur,1899,1902,mines et industries
 henry-r,Henry,René Henry; René-Achille Henry,1,1,2,administrateur,1899,1902,mines et industries
 kenster-j,Kenster,J. Kenster,1,1,2,administrateur,1931,1933,mines et industries
+remy-martin,Rémy-Martin,Rémy-Martin,1,1,2,president,1903,1913,mines et industries
+mellier,Mellier,Mellier,1,1,2,administrateur,1903,1913,mines et industries
+genestal-h,Genestal,H. Genestal,1,1,2,administrateur,1906,1913,mines et industries
+siegfried-e,Siegfried,Ernest Siegfried,1,1,2,president,1913,1922,mines et industries
+senn-o,Senn,Olivier Senn,1,1,2,administrateur,1913,1922,mines et industries
 vendeenne-de-bonneterie-f,vendéenne de bonneterie,Fabrique vendéenne de bonneterie,1,1,1,administrateur,1936,1936,mines et industries
 industrielle-de-l-afrique-equatoriale,industrielle de l'Afrique équatoriale,industrielle de l'Afrique équatoriale,1,1,1,administrateur,1936,1936,mines et industries
 tremois-r,Trémois,Robert Trémois,1,1,1,president,1936,1936,mines et industries
@@ -95,22 +100,17 @@ kouango,Kouango,Kouango,1,1,1,administrateur,1925,1925,mines et industries
 keusters-j,Keusters,J.-M. Keusters,1,1,1,administrateur,1936,1936,mines et industries
 pierre-o,Pierre,Octave Pierre,1,1,1,president,1951,1951,mines et industries
 pelissard,Pélissard,Pélissard,1,1,1,administrateur,1951,1951,mines et industries
-remy-martin,Rémy-Martin,Rémy-Martin,1,1,1,president,1903,1903,mines et industries
 genestal,Genestal,Genestal,1,1,1,vice_president,1903,1903,mines et industries
 badin,Badin,Badin,1,1,1,administrateur,1903,1903,mines et industries
 gratry,Gratry,Gratry,1,1,1,administrateur,1903,1903,mines et industries
 josse,Josse,Josse,1,1,1,administrateur,1903,1903,mines et industries
-mellier,Mellier,Mellier,1,1,1,administrateur,1903,1903,mines et industries
 raverat,Raverat,Raverat,1,1,1,administrateur,1903,1903,mines et industries
 siegfried,Siegfried,Siegfried,1,1,1,administrateur,1903,1903,mines et industries
-genestal-h,Genestal,H. Genestal,1,1,1,administrateur,1906,1906,mines et industries
 gratry-j,Gratry,J. Gratry,1,1,1,administrateur,1906,1906,mines et industries
 mellier-l,Mellier,Lucien Mellier,1,1,1,administrateur,1906,1906,mines et industries
 louis,Louis,Louis,1,1,1,administrateur,1913,1913,mines et industries
 dewulf-v,Dewulf,Victor Dewulf,1,1,1,administrateur,1913,1913,mines et industries
-siegfried-e,Siegfried,Ernest Siegfried,1,1,1,president,1922,1922,mines et industries
 mathias,Mathias,Mathias,1,1,1,administrateur,1922,1922,mines et industries
-senn-o,Senn,Olivier Senn,1,1,1,administrateur,1922,1922,mines et industries
 berger-j,Berger,Jacques Berger,1,1,1,administrateur,1950,1950,mines et industries
 catalogne-e,Catalogne,Édouard Catalogne,1,1,1,president,1951,1951,mines et industries
 bastid-c,Bastid,Charles Bastid,1,1,1,administrateur,1951,1951,mines et industries
@@ -138,3 +138,7 @@ mm-h-berger,… MM. H. Berger,… MM. H. Berger,1,1,1,president_directeur_genera
 asscher-junior-l,Asscher Junior,L. Asscher Junior,1,1,1,administrateur,1953,1953,mines et industries
 duret,Duret,Duret,1,1,1,administrateur,1953,1953,mines et industries
 leconte-de-l-isle,Leconte de l'Isle,Leconte de l'Isle,1,0,1,commissaire_aux_comptes,1900,1900,Commerce
+pradel-j,Pradel,Jean-Baptiste Pradel,1,0,1,commissaire_aux_comptes,1913,1913,Commerce
+expert-comptable-a-lyon,expert comptable à Lyon,expert comptable à Lyon,1,0,1,commissaire_aux_comptes,1913,1913,Commerce
+cornu-z,Cornu,Zéphirin Cornu,1,0,1,commissaire_aux_comptes,1913,1913,Commerce
+comptable-a-lyon,comptable à Lyon,comptable à Lyon,1,0,1,commissaire_aux_comptes,1913,1913,Commerce

@@ -1,13 +1,13 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
-engeringh-c,Engeringh,C. Engeringh; Ch. Engeringh; Charles Engeringh,8,8,33,administrateur,1912,1933,Plantations à participation française
+engeringh-c,Engeringh,C. Engeringh; Ch. Engeringh; Charles Engeringh,9,9,35,administrateur,1909,1933,Plantations à participation française
 bernard-j,Bernard,J. Bernard,8,8,32,administrateur,1912,1937,Plantations à participation française
 swart-a,Swart,A. G. N. Swart; A. Swart; A.-G.-N. Swart; A.G.N. Swart,7,7,24,administrateur,1911,1940,Plantations à participation française
+osterrieth-p,Osterrieth,P. Osterrieth; Paul Osterrieth,7,7,22,administrateur,1909,1937,Plantations à participation française
 bernard-j-jacques,Bernard,Jacques Bernard,7,7,15,administrateur,1910,1935,Plantations à participation française
-osterrieth-p,Osterrieth,P. Osterrieth; Paul Osterrieth,6,6,21,administrateur,1916,1937,Plantations à participation française
 laloux-h,Laloux,H. Laloux; Henri Laloux; Henry Laloux,5,5,21,administrateur,1916,1953,Plantations à participation française
+donnet-l,Donnet,L. D. J. Donnet; L. Donnet; Léon Donnet,5,5,12,administrateur,1909,1932,Plantations à participation française
 engeringh-h,Engeringh,H. Engeringh; Henri Engeringh; Henri Engeringh. 8,5,5,10,administrateur,1933,1953,Plantations à participation française
 vereecken-h,Vereecken,H. Vereecken; Henri Vereecken; Henri Vereecken. 6,4,4,23,administrateur,1925,1953,Plantations à participation française
-donnet-l,Donnet,L. D. J. Donnet; L. Donnet; Léon Donnet,4,4,10,administrateur,1912,1932,Plantations à participation française
 cavadia-t,Cavadia,T. Cavadia; T.-G. Cavadia; Télémaque Cavadia,4,4,5,administrateur,1914,1917,Plantations à participation française
 cavadia-j,Cavadia,J. Cavadia; Jean Cavadia,3,3,16,administrateur,1916,1948,Plantations à participation française
 saint-girons-j,Saint-Girons,J. Saint-Girons; Jean Saint- Girons; Jean Saint-Girons,3,3,14,administrateur,1910,1935,Plantations à participation française
@@ -16,7 +16,9 @@ heurtaux-varsavaux-g,Heurtaux-Varsavaux,G. Heurtaux- Varsavaux; G. Heurtaux-Vars
 varsavaux-h,Varsavaux. 8,Heurtaux Varsavaux; Heurtaux- Varsavaux; Heurtaux- Varsavaux. 8,3,3,6,administrateur,1911,1934,Plantations à participation française
 lionel-marie-j,Lionel-Marie,J. Lionel-Marie; Jules Lionel-Marie,3,3,5,administrateur,1920,1953,Plantations à participation française
 wright-h,Wright,H. H. Wright; H. Wright; Herbert Wright,3,3,5,administrateur,1917,1937,Plantations à participation française
-van-romburgh-p,Van Romburgh,P. Van Romburgh; van Romburgh,2,2,18,administrateur,1912,1940,Plantations à participation française
+poirson-c,Poirson,C. Poirson; Ch. Poirson; Charles Poirson,3,3,5,administrateur,1909,1935,Plantations à participation française
+thys-e,Thys,E. Thys,3,3,5,administrateur,1909,1914,Plantations à participation française
+van-romburgh-p,Van Romburgh,P. Van Romburgh; van Romburgh,2,2,19,administrateur,1910,1940,Plantations à participation française
 tilloy-m,Tilloy,Maurice Tilloy,2,2,11,administrateur,1917,1948,Plantations à participation française
 zannetto-g,Zannetto. 4,G. Zannetto; G. Zannetto. 1; G. Zannetto. 4; Georges Zannetto,2,2,8,administrateur,1920,1933,Plantations à participation française
 ligtenberg-h,Ligtenberg,H. Ligtenberg,4,2,8,administrateur,1937,1953,Plantations à participation française
@@ -25,11 +27,10 @@ boyer-j,Boyer,J. Boyer,4,2,7,commissaire_aux_comptes,1948,1953,Plantations à pa
 tilloy,Tilloy,Tilloy,2,2,6,administrateur,1917,1940,Plantations à participation française
 dyckhoff-g,Dyckhoff,Dyckhoff; G. Dyckhoff,2,2,3,administrateur,1920,1931,Plantations à participation française
 copeman-f,Copeman,Frank Copeman,2,2,3,administrateur,1910,1923,Plantations à participation française
-poirson-c,Poirson,C. Poirson; Ch. Poirson,2,2,3,administrateur,1912,1935,Plantations à participation française
 dumoulin-j,Dumoulin,J. Dumoulin; J. Dumoulin. 7; Joseph Dumoulin,2,2,3,administrateur,1921,1933,Plantations à participation française
 de-lyee-de-belleau-a,de Lyée de Belleau,André de Lyée de Belleau; André de Lyée-de-Belleau,2,2,3,administrateur,1933,1934,Plantations à participation française
 van-den-bosch-l,Van den Bosch,L. Van den Bosch; Léon van den Bosch,2,2,3,administrateur,1917,1925,Plantations à participation française
-thys-e,Thys,E. Thys,2,2,3,administrateur,1912,1914,Plantations à participation française
+cambefort-c,Cambefort,Charles Cambefort,2,2,3,administrateur,1909,1932,Plantations à participation française
 swart-g,Swart,G. Swart,2,2,3,administrateur,1917,1929,Plantations à participation française
 wright-c,Wright,C.H. Wright,2,2,3,administrateur,1929,1948,Plantations à participation française
 buffet-p,Buffet,Paul Buffet,2,2,2,president,1920,1920,Plantations à participation française
@@ -37,9 +38,11 @@ de-decker-r,de Decker,Robert de Decker,2,2,2,vice_president,1920,1920,Plantation
 fuchs-l,Fuchs,Léon Fuchs,2,2,2,administrateur,1920,1920,Plantations à participation française
 veltman-k,Veltman,K.-E. Veltman,2,2,2,administrateur,1920,1920,Plantations à participation française
 d-ancona-c-charles,d'Ancona,Charles d'Ancona,2,2,2,administrateur,1933,1934,Plantations à participation française
+de-rohan-chabot-p,de Rohan-Chabot,Philippe de Rohan-Chabot,2,2,2,administrateur,1909,1910,Plantations à participation française
 laloux-ancion-h,Laloux-Ancion,H. Laloux-Ancion,2,2,2,administrateur,1933,1933,Plantations à participation française
 skinner-e,Skinner,E.-B. Skinner,2,2,2,administrateur,1937,1948,Plantations à participation française
 harold-f-copeman-h,Harold F. Copeman,H. Harold F. Copeman,2,2,2,administrateur,1937,1948,Plantations à participation française
+le-grelle-o,Le Grelle,O. Le Grelle,2,2,2,administrateur,1909,1914,Plantations à participation française
 du-boullay-r,du Boullay,Raymond du Boullay,1,1,8,president,1917,1937,Plantations à participation française
 sainte-marie-g,Sainte-Marie,G. Sainte-Marie; Grégoire Sainte- Marie; Grégoire Sainte-Marie,1,1,8,administrateur,1927,1948,Plantations à participation française
 clerc-l,Clerc,L. Clerc; Léon Clerc,1,1,7,administrateur,1917,1934,Plantations à participation française
@@ -153,7 +156,6 @@ de-rivaud-o,de Rivaud,Olivier de Rivaud,1,1,1,administrateur,1937,1937,Plantatio
 ruelle-j,Ruelle,J. Ruelle,1,1,1,administrateur,1948,1948,Plantations à participation française
 verley-bollaert-c,Verley-Bollaert,Ch. Verley-Bollaert,1,1,1,administrateur,1937,1937,Plantations à participation française
 engeringh-e,Engeringh,E. Engeringh,1,1,1,administrateur,1932,1932,Plantations à participation française
-cambefort-c,Cambefort,Charles Cambefort,1,1,1,administrateur,1932,1932,Plantations à participation française
 professeur-de-botanique-a-l-universite-d-utrecht,professeur de botanique à l'Université d'Utrecht,professeur de botanique à l'Université d'Utrecht,1,1,1,administrateur,1932,1932,Plantations à participation française
 ed-thys,Ed. Thys,Ed. Thys,1,1,1,administrateur,1932,1932,Plantations à participation française
 moins-h-laloux,moins H. Laloux,moins H. Laloux,1,1,1,administrateur,1927,1927,Plantations à participation française
@@ -162,7 +164,7 @@ bride-c,Bride,C. Bride,1,1,1,administrateur,1912,1912,Plantations à participati
 g-swart-a,G. Swart,Allart G. Swart,1,1,1,administrateur,1912,1912,Plantations à participation française
 frank-copeman-h,Frank Copeman,H. Frank Copeman,1,1,1,administrateur,1929,1929,Plantations à participation française
 calver-j,Calver,J.W.A. Calver,1,1,1,administrateur,1948,1948,Plantations à participation française
-le-grelle-o,Le Grelle,O. Le Grelle,1,1,1,administrateur,1914,1914,Plantations à participation française
+van-romburg,Van Romburg,Van Romburg,1,1,1,administrateur,1909,1909,Plantations à participation française
 laboul-h,Laboul. 7,H. Laboul. 7,1,1,1,administrateur,1914,1914,Plantations à participation française
 bonnet-l-leon,Bonnet,Léon Bonnet,1,1,1,administrateur,1916,1916,Plantations à participation française
 van-bomburgh-p,Van Bomburgh. 8,P. Van Bomburgh. 8,1,1,1,administrateur,1916,1916,Plantations à participation française

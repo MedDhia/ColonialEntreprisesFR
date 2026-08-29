@@ -81,7 +81,7 @@
     <node id="afriquecongo">
       <data key="n_label">Afrique et Congo</data>
       <data key="n_sectors">Banques et groupes financiers; Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">35</data>
+      <data key="n_n_directors">32</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="afriqueminiereequatoriale">
@@ -201,7 +201,7 @@
     <node id="boiscoloniaux">
       <data key="n_label">Compagnie générale des Bois coloniaux</data>
       <data key="n_sectors">Banques et groupes financiers; Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">30</data>
+      <data key="n_n_directors">31</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="boisgabon">
@@ -231,7 +231,7 @@
     <node id="bordelaiseafricaine">
       <data key="n_label">Société bordelaise africaine</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="bordelaisecomptoirsafricains">
@@ -328,12 +328,6 @@
       <data key="n_label">Cie commerciale du Gabon, LIBREVILLE A.-E. F</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
       <data key="n_n_directors">6</data>
-      <data key="n_territory">Afrique équatoriale française</data>
-    </node>
-    <node id="commercialehollandoafricainesingel">
-      <data key="n_label">Cie commerciale Hollando-Africaine, Singel</data>
-      <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">2</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="commercialeindustrielleagricolehautogooue">
@@ -471,13 +465,13 @@
     <node id="depotspetrolierscamerounbp">
       <data key="n_label">Cie française de dépôts pétroliers au Cameroun, B. P</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="depotspetroliersefbrazzavillebp">
       <data key="n_label">Cie française de dépôts pétroliers en A.E.F., BRAZZAVILLE, B. P</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="diamantifereauriferehautesangha">
@@ -645,7 +639,7 @@
     <node id="francbascongo">
       <data key="n_label">Cie Franç. du BAS-CONGO</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="francecongobp">
@@ -711,7 +705,7 @@
     <node id="hautbascongo">
       <data key="n_label">Compagnie française du Haut et Bas-Congo</data>
       <data key="n_sectors">Banques et groupes financiers; Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">19</data>
+      <data key="n_n_directors">24</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="hautcongo">
@@ -1131,7 +1125,7 @@
     <node id="socindustrielleconstructions">
       <data key="n_label">Soc. industrielle de CONSTRUCTIONS</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">11</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="socnationalecameroun">
@@ -1143,7 +1137,7 @@
     <node id="socoma">
       <data key="n_label">SOCOMA</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">21</data>
+      <data key="n_n_directors">20</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
     <node id="socongomo">
@@ -1224,8 +1218,8 @@
       <data key="n_n_directors">6</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
-    <node id="unionfluvialeafriquecentralefortlamy">
-      <data key="n_label">Union fluviale de l'Afrique centrale, FORT-LAMY</data>
+    <node id="unionfluvialeafriquecentrale">
+      <data key="n_label">Union fluviale de l'Afrique centrale</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
       <data key="n_n_directors">4</data>
       <data key="n_territory">Afrique équatoriale française</data>
@@ -1263,16 +1257,16 @@
     <node id="waagfrereslacanenghe">
       <data key="n_label">Waag frères, lac Anenghé</data>
       <data key="n_sectors">Documents généraux (par ordre chronologique)</data>
-      <data key="n_n_directors">32</data>
+      <data key="n_n_directors">31</data>
       <data key="n_territory">Afrique équatoriale française</data>
     </node>
-    <edge id="e0" source="commercialeindustrielleagricolehautogooue" target="hautogooue">
+    <edge id="e0" source="financierecongo" target="hautbascongo">
       <data key="e_weight">9</data>
     </edge>
-    <edge id="e1" source="creditfonciercongo" target="financierecongo">
-      <data key="e_weight">8</data>
+    <edge id="e1" source="commercialeindustrielleagricolehautogooue" target="hautogooue">
+      <data key="e_weight">9</data>
     </edge>
-    <edge id="e2" source="financierecongo" target="hautbascongo">
+    <edge id="e2" source="creditfonciercongo" target="financierecongo">
       <data key="e_weight">8</data>
     </edge>
     <edge id="e3" source="equateur" target="plantationssanaga">
@@ -1311,52 +1305,52 @@
     <edge id="e14" source="francbascongo" target="hautcongo">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e15" source="afriquecongo" target="transportafrique">
-      <data key="e_weight">6</data>
-    </edge>
-    <edge id="e16" source="depotspetrolierscamerounbp" target="depotspetroliersefbrazzavillebp">
-      <data key="e_weight">6</data>
-    </edge>
-    <edge id="e17" source="banqueafriqueequatoriale" target="kouango">
+    <edge id="e15" source="banqueafriqueequatoriale" target="kouango">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e18" source="boiscoloniaux" target="exploitationsforestieresafricaines">
+    <edge id="e16" source="boiscoloniaux" target="exploitationsforestieresafricaines">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e19" source="alimaienne" target="hautcongo">
+    <edge id="e17" source="alimaienne" target="hautcongo">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e20" source="bascongo" target="fsehautcongo">
+    <edge id="e18" source="bascongo" target="fsehautcongo">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e21" source="bascongo" target="hautbascongo">
+    <edge id="e19" source="bascongo" target="hautbascongo">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e22" source="francbascongo" target="fsehautcongo">
+    <edge id="e20" source="francbascongo" target="fsehautcongo">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e23" source="fsehautcongo" target="hautcongo">
+    <edge id="e21" source="fsehautcongo" target="hautcongo">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e24" source="hautbascongo" target="hautcongo">
+    <edge id="e22" source="hautbascongo" target="hautcongo">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e25" source="leverbrothersltd" target="leverbrothersltdportsunlightcheshire">
+    <edge id="e23" source="leverbrothersltd" target="leverbrothersltdportsunlightcheshire">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e26" source="pastoraleafricaine" target="pastoralecommercialeafricaine">
+    <edge id="e24" source="pastoraleafricaine" target="pastoralecommercialeafricaine">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e27" source="miniereoubanghioriental" target="recherchesauriferesgabon">
+    <edge id="e25" source="miniereoubanghioriental" target="recherchesauriferesgabon">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e28" source="agricolegabon" target="unionforestiereogooue">
+    <edge id="e26" source="agricolegabon" target="unionforestiereogooue">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e29" source="transportafrique" target="transportsafrique">
+    <edge id="e27" source="afriquecongo" target="transportafrique">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e30" source="miniereoubanghioriental" target="recherchesexploitationsdiamantiferes">
+    <edge id="e28" source="transportafrique" target="transportsafrique">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e29" source="miniereoubanghioriental" target="recherchesexploitationsdiamantiferes">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e30" source="depotspetrolierscamerounbp" target="depotspetroliersefbrazzavillebp">
       <data key="e_weight">5</data>
     </edge>
     <edge id="e31" source="cameroun" target="gabon">
@@ -1512,49 +1506,49 @@
     <edge id="e81" source="agricolecommercialealima" target="socagricolecommercialealima">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e82" source="cotonniereequatoriale" target="financierecongo">
+    <edge id="e82" source="creditfonciercongo" target="hautbascongo">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e83" source="commercialecotonniereouhamenanacomouna" target="transportsouhamenana">
+    <edge id="e83" source="cotonniereequatoriale" target="financierecongo">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e84" source="groupementgabonais" target="miniereoubanghioriental">
+    <edge id="e84" source="commercialecotonniereouhamenanacomouna" target="transportsouhamenana">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e85" source="groupementgabonais" target="recherchesauriferesgabon">
+    <edge id="e85" source="groupementgabonais" target="miniereoubanghioriental">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e86" source="recherchesauriferescamerouno" target="recherchesauriferesgabon">
+    <edge id="e86" source="groupementgabonais" target="recherchesauriferesgabon">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e87" source="exploitationsforestieresafricaines" target="unioncolonialeagricoleforestiere">
+    <edge id="e87" source="recherchesauriferescamerouno" target="recherchesauriferesgabon">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e88" source="forestierenombo" target="hautemondah">
+    <edge id="e88" source="exploitationsforestieresafricaines" target="unioncolonialeagricoleforestiere">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e89" source="forestierenombo" target="unioncolonialeagricoleforestiere">
+    <edge id="e89" source="forestierenombo" target="hautemondah">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e90" source="transportafrique" target="transporteafriqueparis">
+    <edge id="e90" source="forestierenombo" target="unioncolonialeagricoleforestiere">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e91" source="agricolegabon" target="unionforestiereafricaine">
+    <edge id="e91" source="transportafrique" target="transporteafriqueparis">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e92" source="hautebokoue" target="unionforestiereafricaine">
+    <edge id="e92" source="agricolegabon" target="unionforestiereafricaine">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e93" source="africaineforestiere" target="agricoleforestiereafricaine">
+    <edge id="e93" source="hautebokoue" target="unionforestiereafricaine">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e94" source="afriquecongo" target="transporteafriqueparis">
+    <edge id="e94" source="africaineforestiere" target="agricoleforestiereafricaine">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e95" source="forestierenombo" target="miniereequatoriale">
+    <edge id="e95" source="afriquecongo" target="transporteafriqueparis">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e96" source="hautemondah" target="miniereequatoriale">
+    <edge id="e96" source="forestierenombo" target="miniereequatoriale">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e97" source="diamantifereauriferehautesangha" target="diamantiferedarchalla">
@@ -1767,79 +1761,79 @@
     <edge id="e166" source="alima" target="socagricolecommercialealima">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e167" source="creditfonciercongo" target="hautbascongo">
+    <edge id="e167" source="financierecongo" target="transporteafriqueparis">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e168" source="financierecongo" target="transporteafriqueparis">
+    <edge id="e168" source="hautbascongo" target="transporteafriqueparis">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e169" source="hautbascongo" target="transporteafriqueparis">
+    <edge id="e169" source="cotonniereequatoriale" target="creditfonciercongo">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e170" source="cotonniereequatoriale" target="creditfonciercongo">
+    <edge id="e170" source="miniereoubanghioriental" target="transportafrique">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e171" source="miniereoubanghioriental" target="transportafrique">
+    <edge id="e171" source="miniereoubanghioriental" target="transportsoubanguicameroun">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e172" source="miniereoubanghioriental" target="transportsoubanguicameroun">
+    <edge id="e172" source="commercialegabonlibrevilleef" target="commercialesanghaoubangui">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e173" source="commercialegabonlibrevilleef" target="commercialesanghaoubangui">
+    <edge id="e173" source="forestierefernanvaz" target="plantationspalmeraiesogooue">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e174" source="forestierefernanvaz" target="plantationspalmeraiesogooue">
+    <edge id="e174" source="cotonnierecongolaise" target="cotonniereequatoriale">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e175" source="cotonnierecongolaise" target="cotonniereequatoriale">
+    <edge id="e175" source="cotonnierecongolaise" target="cotonnierehautoubangui">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e176" source="cotonnierecongolaise" target="cotonnierehautoubangui">
+    <edge id="e176" source="cotonnierecongolaise" target="cotonsafricains">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e177" source="cotonnierecongolaise" target="cotonsafricains">
+    <edge id="e177" source="comptoirsplantationscameroun" target="exploitationscommercialesafricaines">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e178" source="comptoirsplantationscameroun" target="exploitationscommercialesafricaines">
+    <edge id="e178" source="groupementgabonais" target="recherchesauriferescamerouno">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e179" source="groupementgabonais" target="recherchesauriferescamerouno">
+    <edge id="e179" source="exploitationsforestieresafricaines" target="pastoraleafricaine">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e180" source="exploitationsforestieresafricaines" target="pastoraleafricaine">
+    <edge id="e180" source="forestiereniari" target="proprietairekouilouniari">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e181" source="forestiereniari" target="proprietairekouilouniari">
+    <edge id="e181" source="boismondah" target="comptoirboiscoloniaux">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e182" source="boismondah" target="comptoirboiscoloniaux">
+    <edge id="e182" source="boismondah" target="consortiumventeacajou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e183" source="boismondah" target="consortiumventeacajou">
+    <edge id="e183" source="boismondah" target="consortiumventeokoume">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e184" source="boismondah" target="consortiumventeokoume">
+    <edge id="e184" source="comptoirboiscoloniaux" target="consortiumboisafricains">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e185" source="comptoirboiscoloniaux" target="consortiumboisafricains">
+    <edge id="e185" source="comptoirboiscoloniaux" target="consortiumventeacajou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e186" source="comptoirboiscoloniaux" target="consortiumventeacajou">
+    <edge id="e186" source="comptoirboiscoloniaux" target="consortiumventeokoume">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e187" source="comptoirboiscoloniaux" target="consortiumventeokoume">
+    <edge id="e187" source="consortiumboisafricains" target="consortiumventeacajou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e188" source="consortiumboisafricains" target="consortiumventeacajou">
+    <edge id="e188" source="consortiumboisafricains" target="consortiumventeokoume">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e189" source="consortiumboisafricains" target="consortiumventeokoume">
+    <edge id="e189" source="consortiumventeacajou" target="consortiumventeokoume">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e190" source="consortiumventeacajou" target="consortiumventeokoume">
+    <edge id="e190" source="forestierelittoralgabonais" target="forestierelittoralgabonaisekuata">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e191" source="forestierelittoralgabonais" target="forestierelittoralgabonaisekuata">
+    <edge id="e191" source="hautemondah" target="miniereequatoriale">
       <data key="e_weight">2</data>
     </edge>
     <edge id="e192" source="miniereequatoriale" target="unioncolonialeagricoleforestiere">
@@ -2769,463 +2763,457 @@
     <edge id="e500" source="congolaise" target="gentil">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e501" source="commercialeindustrielleagricolehautogooue" target="forestiereazingo">
+    <edge id="e501" source="boisgabon" target="hautbascongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e502" source="commercialeindustrielleagricolehautogooue" target="forestieresanghaoubangui">
+    <edge id="e502" source="commercialeindustrielleagricolehautogooue" target="forestiereazingo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e503" source="forestiereazingo" target="forestieresanghaoubangui">
+    <edge id="e503" source="commercialeindustrielleagricolehautogooue" target="forestieresanghaoubangui">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e504" source="forestierelittoralgabonais" target="minieredimonika">
+    <edge id="e504" source="forestiereazingo" target="forestieresanghaoubangui">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e505" source="forestierelittoralgabonaisekuata" target="minieredimonika">
+    <edge id="e505" source="forestierelittoralgabonais" target="minieredimonika">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e506" source="forestiereniari" target="waagfrereslacanenghe">
+    <edge id="e506" source="forestierelittoralgabonaisekuata" target="minieredimonika">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e507" source="cotonsafricains" target="entreprisestravauxfrancecolonies">
+    <edge id="e507" source="forestiereniari" target="waagfrereslacanenghe">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e508" source="sultanatshautoubangui" target="transportsoubanguicameroun">
+    <edge id="e508" source="cotonsafricains" target="entreprisestravauxfrancecolonies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e509" source="minierecongo" target="transportafrique">
+    <edge id="e509" source="sultanatshautoubangui" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e510" source="minierecongo" target="transporteafriqueparis">
+    <edge id="e510" source="minierecongo" target="transportafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e511" source="sultanatshautoubangui" target="transportafrique">
+    <edge id="e511" source="minierecongo" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e512" source="sultanatshautoubangui" target="transporteafriqueparis">
+    <edge id="e512" source="sultanatshautoubangui" target="transportafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e513" source="sultanatshautoubangui" target="transportsafrique">
+    <edge id="e513" source="sultanatshautoubangui" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e514" source="consortiumboisafricains" target="unionforestiereafricaine">
+    <edge id="e514" source="sultanatshautoubangui" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e515" source="consortiumboisafricains" target="unionforestiereogooue">
+    <edge id="e515" source="consortiumboisafricains" target="unionforestiereafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e516" source="exploitationsforestieresafricaines" target="unionforestiereogooue">
+    <edge id="e516" source="consortiumboisafricains" target="unionforestiereogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e517" source="equatorialemines" target="minierebetare">
+    <edge id="e517" source="exploitationsforestieresafricaines" target="unionforestiereogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e518" source="afriquecongo" target="commercialediamant">
+    <edge id="e518" source="equatorialemines" target="minierebetare">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e519" source="afriquecongo" target="diamantifereauriferehautesangha">
+    <edge id="e519" source="afriquecongo" target="commercialediamant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e520" source="afriquecongo" target="diamantiferedarchalla">
+    <edge id="e520" source="afriquecongo" target="diamantifereauriferehautesangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e521" source="afriquecongo" target="minierekoulamoutou">
+    <edge id="e521" source="afriquecongo" target="diamantiferedarchalla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e522" source="afriquecongo" target="recherchesauriferescamerouno">
+    <edge id="e522" source="afriquecongo" target="minierekoulamoutou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e523" source="afriquecongo" target="recherchesexploitationsdiamantiferes">
+    <edge id="e523" source="afriquecongo" target="recherchesauriferescamerouno">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e524" source="afriquecongo" target="transportsoubanguicameroun">
+    <edge id="e524" source="afriquecongo" target="recherchesexploitationsdiamantiferes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e525" source="commercialediamant" target="diamantifereauriferehautesangha">
+    <edge id="e525" source="afriquecongo" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e526" source="commercialediamant" target="diamantiferedarchalla">
+    <edge id="e526" source="commercialediamant" target="diamantifereauriferehautesangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e527" source="commercialediamant" target="minierekoulamoutou">
+    <edge id="e527" source="commercialediamant" target="diamantiferedarchalla">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e528" source="commercialediamant" target="recherchesauriferescamerouno">
+    <edge id="e528" source="commercialediamant" target="minierekoulamoutou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e529" source="commercialediamant" target="recherchesexploitationsdiamantiferes">
+    <edge id="e529" source="commercialediamant" target="recherchesauriferescamerouno">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e530" source="commercialediamant" target="transporteafriqueparis">
+    <edge id="e530" source="commercialediamant" target="recherchesexploitationsdiamantiferes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e531" source="commercialediamant" target="transportsafrique">
+    <edge id="e531" source="commercialediamant" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e532" source="commercialediamant" target="transportsoubanguicameroun">
+    <edge id="e532" source="commercialediamant" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e533" source="diamantifereauriferehautesangha" target="transporteafriqueparis">
+    <edge id="e533" source="commercialediamant" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e534" source="diamantifereauriferehautesangha" target="transportsafrique">
+    <edge id="e534" source="diamantifereauriferehautesangha" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e535" source="diamantifereauriferehautesangha" target="transportsoubanguicameroun">
+    <edge id="e535" source="diamantifereauriferehautesangha" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e536" source="diamantiferedarchalla" target="transporteafriqueparis">
+    <edge id="e536" source="diamantifereauriferehautesangha" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e537" source="diamantiferedarchalla" target="transportsafrique">
+    <edge id="e537" source="diamantiferedarchalla" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e538" source="diamantiferedarchalla" target="transportsoubanguicameroun">
+    <edge id="e538" source="diamantiferedarchalla" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e539" source="minierekoulamoutou" target="transporteafriqueparis">
+    <edge id="e539" source="diamantiferedarchalla" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e540" source="minierekoulamoutou" target="transportsoubanguicameroun">
+    <edge id="e540" source="minierekoulamoutou" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e541" source="miniereoubanghioriental" target="transporteafriqueparis">
+    <edge id="e541" source="minierekoulamoutou" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e542" source="miniereoubanghioriental" target="transportsafrique">
+    <edge id="e542" source="miniereoubanghioriental" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e543" source="recherchesauriferescamerouno" target="transporteafriqueparis">
+    <edge id="e543" source="miniereoubanghioriental" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e544" source="recherchesauriferescamerouno" target="transportsafrique">
+    <edge id="e544" source="recherchesauriferescamerouno" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e545" source="recherchesauriferescamerouno" target="transportsoubanguicameroun">
+    <edge id="e545" source="recherchesauriferescamerouno" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e546" source="recherchesexploitationsdiamantiferes" target="transporteafriqueparis">
+    <edge id="e546" source="recherchesauriferescamerouno" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e547" source="recherchesexploitationsdiamantiferes" target="transportsafrique">
+    <edge id="e547" source="recherchesexploitationsdiamantiferes" target="transporteafriqueparis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e548" source="recherchesexploitationsdiamantiferes" target="transportsoubanguicameroun">
+    <edge id="e548" source="recherchesexploitationsdiamantiferes" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e549" source="transporteafriqueparis" target="transportsoubanguicameroun">
+    <edge id="e549" source="recherchesexploitationsdiamantiferes" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e550" source="transportsafrique" target="transportsoubanguicameroun">
+    <edge id="e550" source="transporteafriqueparis" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e551" source="commercialediamant" target="recherchesauriferesgabon">
+    <edge id="e551" source="transportsafrique" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e552" source="fibrescoloniales" target="transportsoubanguicameroun">
+    <edge id="e552" source="commercialediamant" target="recherchesauriferesgabon">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e553" source="cotonnierehautoubangui" target="waagfrereslacanenghe">
+    <edge id="e553" source="fibrescoloniales" target="transportsoubanguicameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e554" source="kouango" target="waagfrereslacanenghe">
+    <edge id="e554" source="cotonnierehautoubangui" target="waagfrereslacanenghe">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e555" source="agricoleforestierecameroun" target="caoutchoucscacaoscameroun">
+    <edge id="e555" source="kouango" target="waagfrereslacanenghe">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e556" source="bordelaiseafricaine" target="entreprisesagricolesplantations">
+    <edge id="e556" source="agricoleforestierecameroun" target="caoutchoucscacaoscameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e557" source="bordelaiseafricaine" target="commercialehollandoafricainesingel">
+    <edge id="e557" source="bordelaiseafricaine" target="entreprisesagricolesplantations">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e558" source="bordelaiseafricaine" target="socoma">
+    <edge id="e558" source="plantationsnyombepenjanyombe" target="unionbananierecameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e559" source="commercialehollandoafricainesingel" target="socoma">
+    <edge id="e559" source="unionfluvialeafriquecentrale" target="unionroutierecentreafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e560" source="plantationsnyombepenjanyombe" target="unionbananierecameroun">
+    <edge id="e560" source="creditcameroun" target="energieelectriquecamerounbp">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e561" source="unionfluvialeafriquecentralefortlamy" target="unionroutierecentreafricaine">
+    <edge id="e561" source="africaineplacages" target="plantationspalmeraiesogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e562" source="creditcameroun" target="energieelectriquecamerounbp">
+    <edge id="e562" source="afriquecommerce" target="cotonniereequatoriale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e563" source="africaineplacages" target="plantationspalmeraiesogooue">
+    <edge id="e563" source="bahrsarafortarchambault" target="exploitationsforestieresafricaines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e564" source="afriquecommerce" target="cotonniereequatoriale">
+    <edge id="e564" source="bahrsarafortarchambault" target="materielcolonial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e565" source="bahrsarafortarchambault" target="exploitationsforestieresafricaines">
+    <edge id="e565" source="bahrsarafortarchambault" target="plantationsfoumban">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e566" source="bahrsarafortarchambault" target="materielcolonial">
+    <edge id="e566" source="commercialegabonlibrevilleef" target="entreprisesafricainesforestieres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e567" source="bahrsarafortarchambault" target="plantationsfoumban">
+    <edge id="e567" source="entreprisesafricaines" target="entreprisesafricainesforestieres">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e568" source="commercialegabonlibrevilleef" target="entreprisesafricainesforestieres">
+    <edge id="e568" source="commercialegabonlibrevilleef" target="materielcolonial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e569" source="entreprisesafricaines" target="entreprisesafricainesforestieres">
+    <edge id="e569" source="entreprisesafricaines" target="materielcolonial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e570" source="commercialegabonlibrevilleef" target="materielcolonial">
+    <edge id="e570" source="depotspetrolierscamerounbp" target="fibrescoloniales">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e571" source="entreprisesafricaines" target="materielcolonial">
+    <edge id="e571" source="depotspetroliersefbrazzavillebp" target="fibrescoloniales">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e572" source="depotspetrolierscamerounbp" target="fibrescoloniales">
+    <edge id="e572" source="cameroun" target="constructionbatignolles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e573" source="depotspetroliersefbrazzavillebp" target="fibrescoloniales">
+    <edge id="e573" source="constructionbatignolles" target="gabon">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e574" source="cameroun" target="constructionbatignolles">
+    <edge id="e574" source="energieelectriqueafriqueequatoriale" target="gabon">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e575" source="constructionbatignolles" target="gabon">
+    <edge id="e575" source="energieelectriqueafriqueequatoriale" target="petrolesafriqueequatoriale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e576" source="energieelectriqueafriqueequatoriale" target="gabon">
+    <edge id="e576" source="gabon" target="petrolesafriqueequatoriale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e577" source="energieelectriqueafriqueequatoriale" target="petrolesafriqueequatoriale">
+    <edge id="e577" source="hautbascongo" target="socoma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e578" source="gabon" target="petrolesafriqueequatoriale">
+    <edge id="e578" source="africaineentreprises" target="sanghalikouala">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e579" source="hautbascongo" target="socoma">
+    <edge id="e579" source="boismondah" target="scieriesfrancogabonaises">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e580" source="africaineentreprises" target="sanghalikouala">
+    <edge id="e580" source="consortiumboisafricains" target="scieriesfrancogabonaises">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e581" source="boismondah" target="scieriesfrancogabonaises">
+    <edge id="e581" source="forestierelambarene" target="scieriesfrancogabonaises">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e582" source="consortiumboisafricains" target="scieriesfrancogabonaises">
+    <edge id="e582" source="forestieregabonaise" target="minieredimonika">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e583" source="forestierelambarene" target="scieriesfrancogabonaises">
+    <edge id="e583" source="minieredimonika" target="societeanondesancetablamouroux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e584" source="forestieregabonaise" target="minieredimonika">
+    <edge id="e584" source="commercialebp" target="socoma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e585" source="minieredimonika" target="societeanondesancetablamouroux">
+    <edge id="e585" source="commercialeindustrielleagricolehautogooue" target="equatorialemines">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e586" source="commercialebp" target="socoma">
+    <edge id="e586" source="commercialeindustrielleagricolehautogooue" target="minierekoulamoutou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e587" source="commercialeindustrielleagricolehautogooue" target="equatorialemines">
+    <edge id="e587" source="commercialeindustrielleagricolehautogooue" target="transportafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e588" source="commercialeindustrielleagricolehautogooue" target="minierekoulamoutou">
+    <edge id="e588" source="commercialeindustrielleagricolehautogooue" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e589" source="commercialeindustrielleagricolehautogooue" target="transportafrique">
+    <edge id="e589" source="equatorialemines" target="minierekoulamoutou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e590" source="commercialeindustrielleagricolehautogooue" target="transportsafrique">
+    <edge id="e590" source="equatorialemines" target="transportafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e591" source="equatorialemines" target="minierekoulamoutou">
+    <edge id="e591" source="minierekoulamoutou" target="transportafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e592" source="equatorialemines" target="transportafrique">
+    <edge id="e592" source="altex" target="congolaiseexploitationsforestieresindustriellesagricoles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e593" source="minierekoulamoutou" target="transportafrique">
+    <edge id="e593" source="congolaiseindustrie" target="hautemondah">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e594" source="altex" target="congolaiseexploitationsforestieresindustriellesagricoles">
+    <edge id="e594" source="congolaiseindustrie" target="industrielleagricoletabaccolonial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e595" source="congolaiseindustrie" target="hautemondah">
+    <edge id="e595" source="congolaiseindustrie" target="minierebetare">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e596" source="congolaiseindustrie" target="industrielleagricoletabaccolonial">
+    <edge id="e596" source="congolaiseindustrie" target="minierekouilou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e597" source="congolaiseindustrie" target="minierebetare">
+    <edge id="e597" source="congolaiseindustrie" target="minieremoboma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e598" source="congolaiseindustrie" target="minierekouilou">
+    <edge id="e598" source="congolaiseindustrie" target="miniereouarrapointenoiremoyencongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e599" source="congolaiseindustrie" target="minieremoboma">
+    <edge id="e599" source="hautemondah" target="industrielleagricoletabaccolonial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e600" source="congolaiseindustrie" target="miniereouarrapointenoiremoyencongo">
+    <edge id="e600" source="hautemondah" target="minierebetare">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e601" source="hautemondah" target="industrielleagricoletabaccolonial">
+    <edge id="e601" source="hautemondah" target="minierekouilou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e602" source="hautemondah" target="minierebetare">
+    <edge id="e602" source="hautemondah" target="minieremoboma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e603" source="hautemondah" target="minierekouilou">
+    <edge id="e603" source="hautemondah" target="miniereouarrapointenoiremoyencongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e604" source="hautemondah" target="minieremoboma">
+    <edge id="e604" source="industrielleagricoletabaccolonial" target="minierebetare">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e605" source="hautemondah" target="miniereouarrapointenoiremoyencongo">
+    <edge id="e605" source="industrielleagricoletabaccolonial" target="minierekouilou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e606" source="industrielleagricoletabaccolonial" target="minierebetare">
+    <edge id="e606" source="industrielleagricoletabaccolonial" target="minieremoboma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e607" source="industrielleagricoletabaccolonial" target="minierekouilou">
+    <edge id="e607" source="industrielleagricoletabaccolonial" target="miniereouarrapointenoiremoyencongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e608" source="industrielleagricoletabaccolonial" target="minieremoboma">
+    <edge id="e608" source="minierebetare" target="minierekouilou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e609" source="industrielleagricoletabaccolonial" target="miniereouarrapointenoiremoyencongo">
+    <edge id="e609" source="minierebetare" target="minieremoboma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e610" source="minierebetare" target="minierekouilou">
+    <edge id="e610" source="minierebetare" target="miniereouarrapointenoiremoyencongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e611" source="minierebetare" target="minieremoboma">
+    <edge id="e611" source="industrielleagricoleniari" target="metallurgiqueindustrielleafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e612" source="minierebetare" target="miniereouarrapointenoiremoyencongo">
+    <edge id="e612" source="banqueafriqueequatoriale" target="cimentsmateriauxconstructionafriqueequatoriale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e613" source="industrielleagricoleniari" target="metallurgiqueindustrielleafricaine">
+    <edge id="e613" source="diamantifereauriferehautesangha" target="groupementgabonais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e614" source="banqueafriqueequatoriale" target="cimentsmateriauxconstructionafriqueequatoriale">
+    <edge id="e614" source="diamantiferedarchalla" target="groupementgabonais">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e615" source="diamantifereauriferehautesangha" target="groupementgabonais">
+    <edge id="e615" source="groupementgabonais" target="minierekoulamoutou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e616" source="diamantiferedarchalla" target="groupementgabonais">
+    <edge id="e616" source="groupementgabonais" target="recherchesexploitationsdiamantiferes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e617" source="groupementgabonais" target="minierekoulamoutou">
+    <edge id="e617" source="equatorialemines" target="participationsminieresafriquecentrale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e618" source="groupementgabonais" target="recherchesexploitationsdiamantiferes">
+    <edge id="e618" source="equatorialemines" target="gabonniari">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e619" source="equatorialemines" target="participationsminieresafriquecentrale">
+    <edge id="e619" source="equatorialemines" target="miniereintercoloniale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e620" source="equatorialemines" target="gabonniari">
+    <edge id="e620" source="equatorialemines" target="miniereogoouelobaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e621" source="equatorialemines" target="miniereintercoloniale">
+    <edge id="e621" source="equatorialemines" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e622" source="equatorialemines" target="miniereogoouelobaye">
+    <edge id="e622" source="equatorialemines" target="unionminiereafricaineberberati">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e623" source="equatorialemines" target="socindustrielleconstructions">
+    <edge id="e623" source="gabonniari" target="miniereintercoloniale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e624" source="equatorialemines" target="unionminiereafricaineberberati">
+    <edge id="e624" source="gabonniari" target="miniereogoouelobaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e625" source="gabonniari" target="miniereintercoloniale">
+    <edge id="e625" source="gabonniari" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e626" source="gabonniari" target="miniereogoouelobaye">
+    <edge id="e626" source="gabonniari" target="unionminiereafricaineberberati">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e627" source="gabonniari" target="socindustrielleconstructions">
+    <edge id="e627" source="miniereintercoloniale" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e628" source="gabonniari" target="unionminiereafricaineberberati">
+    <edge id="e628" source="miniereintercoloniale" target="unionminiereafricaineberberati">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e629" source="miniereintercoloniale" target="socindustrielleconstructions">
+    <edge id="e629" source="miniereogoouelobaye" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e630" source="miniereintercoloniale" target="unionminiereafricaineberberati">
+    <edge id="e630" source="miniereogoouelobaye" target="unionminiereafricaineberberati">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e631" source="miniereogoouelobaye" target="socindustrielleconstructions">
+    <edge id="e631" source="socindustrielleconstructions" target="unionminiereafricaineberberati">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e632" source="miniereogoouelobaye" target="unionminiereafricaineberberati">
+    <edge id="e632" source="africaineentreprises" target="gabonniari">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e633" source="socindustrielleconstructions" target="unionminiereafricaineberberati">
+    <edge id="e633" source="africainechaussuresbp" target="etudesgestionafriquenoire">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e634" source="africaineentreprises" target="gabonniari">
+    <edge id="e634" source="africaineentreprisesindustriellesimmobilieresbp" target="entrepriseschimiquesroutierescameroun">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e635" source="africainechaussuresbp" target="etudesgestionafriquenoire">
+    <edge id="e635" source="africaineentreprisesindustriellesimmobilieresbp" target="minierekouilou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e636" source="africaineentreprisesindustriellesimmobilieresbp" target="entrepriseschimiquesroutierescameroun">
+    <edge id="e636" source="entrepriseschimiquesroutierescameroun" target="minierekouilou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e637" source="africaineentreprisesindustriellesimmobilieresbp" target="minierekouilou">
+    <edge id="e637" source="imprimeriecommercialecameroun" target="industrielleagricoletabaccolonial">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e638" source="entrepriseschimiquesroutierescameroun" target="minierekouilou">
+    <edge id="e638" source="miniereintercoloniale" target="miniereoubanghioriental">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e639" source="imprimeriecommercialecameroun" target="industrielleagricoletabaccolonial">
+    <edge id="e639" source="miniereintercoloniale" target="participationsminieresafriquecentrale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e640" source="miniereintercoloniale" target="miniereoubanghioriental">
+    <edge id="e640" source="miniereoubanghioriental" target="participationsminieresafriquecentrale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e641" source="miniereintercoloniale" target="participationsminieresafriquecentrale">
+    <edge id="e641" source="brasseriescameroun" target="unionminierebascongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e642" source="miniereoubanghioriental" target="participationsminieresafriquecentrale">
+    <edge id="e642" source="socoma" target="unionroutierecentreafricaine">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e643" source="brasseriescameroun" target="unionminierebascongo">
+    <edge id="e643" source="altex" target="socoma">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e644" source="socoma" target="unionroutierecentreafricaine">
+    <edge id="e644" source="agricoleforestierecameroun" target="socindustrielleconstructions">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e645" source="altex" target="socoma">
+    <edge id="e645" source="entreprisesafricaines" target="soudanaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e646" source="agricoleforestierecameroun" target="socindustrielleconstructions">
+    <edge id="e646" source="forestieresanghaoubangui" target="tropicaledroguerie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e647" source="entreprisesafricaines" target="soudanaise">
+    <edge id="e647" source="boiscoloniaux" target="socindbasogooue">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e648" source="forestieresanghaoubangui" target="tropicaledroguerie">
+    <edge id="e648" source="financierecongo" target="transportsafrique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e649" source="boiscoloniaux" target="socindbasogooue">
+    <edge id="e649" source="commercialekouilouniari" target="pariscongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e650" source="financierecongo" target="transportsafrique">
+    <edge id="e650" source="cotonniereequatoriale" target="hautbascongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e651" source="commercialekouilouniari" target="pariscongo">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e652" source="cotonniereequatoriale" target="hautbascongo">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e653" source="entreprisesafricaines" target="messageriesfluvialescongo">
+    <edge id="e651" source="entreprisesafricaines" target="messageriesfluvialescongo">
       <data key="e_weight">1</data>
     </edge>
   </graph>

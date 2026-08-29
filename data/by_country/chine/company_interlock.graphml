@@ -15,7 +15,7 @@
     <node id="banqueindustriellechine">
       <data key="n_label">La Banque industrielle de Chine</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
-      <data key="n_n_directors">41</data>
+      <data key="n_n_directors">44</data>
       <data key="n_territory">Chine</data>
     </node>
     <node id="extremeorient">
@@ -70,18 +70,18 @@
       <data key="e_weight">7</data>
     </edge>
     <edge id="e1" source="banqueindustriellechine" target="poursuitescontredirigeantsbanqueindustriellechine">
-      <data key="e_weight">4</data>
+      <data key="e_weight">6</data>
     </edge>
     <edge id="e2" source="banqueindustriellechine" target="grandstravauxpekin">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e3" source="banqueindustriellechine" target="navigationfrancochinoise">
+    <edge id="e3" source="banqueindustriellechine" target="pekinsyndicateltd">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e4" source="banqueindustriellechine" target="pekinsyndicateltd">
-      <data key="e_weight">2</data>
+    <edge id="e4" source="banquefrancochinoisecommerceindustrie" target="banqueindustriellechine">
+      <data key="e_weight">1</data>
     </edge>
-    <edge id="e5" source="banquefrancochinoisecommerceindustrie" target="banqueindustriellechine">
+    <edge id="e5" source="banqueindustriellechine" target="navigationfrancochinoise">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e6" source="grandstravauxpekin" target="pekinsyndicateltd">

@@ -12,6 +12,12 @@
       <data key="n_n_directors">13</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
+    <node id="asphaltespetroleslattaquie">
+      <data key="n_label">Asphaltes et pétroles de Lattaquié</data>
+      <data key="n_sectors">Sociétés diverses</data>
+      <data key="n_n_directors">16</data>
+      <data key="n_territory">Syrie-Liban</data>
+    </node>
     <node id="banquepretsnantissementsmontspieteegyptiens">
       <data key="n_label">banque de prêts sur nantissements Société des monts-de-piété égyptiens</data>
       <data key="n_sectors">Banques et sociétés financières</data>
@@ -39,13 +45,13 @@
     <node id="cheminferdamashamahprolongements">
       <data key="n_label">Chemin de fer Damas-Hamah et prolongements</data>
       <data key="n_sectors">Transports terrestres</data>
-      <data key="n_n_directors">36</data>
+      <data key="n_n_directors">39</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="cheminferottomanjaffajerusalemprolongements">
       <data key="n_label">Société du Chemin de fer ottoman de Jaffa à Jérusalem et prolongements</data>
       <data key="n_sectors">Transports terrestres</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="creditfonciersyrie">
@@ -70,12 +76,6 @@
       <data key="n_label">Etablissements KERN</data>
       <data key="n_sectors">Documents généraux</data>
       <data key="n_n_directors">12</data>
-      <data key="n_territory">Syrie-Liban</data>
-    </node>
-    <node id="etablissementsluchaire">
-      <data key="n_label">Établissements LUCHAIRE</data>
-      <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">19</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="exploitaitoncheminfercilicie">
@@ -112,6 +112,12 @@
       <data key="n_label">Compagnie impériale ottomane de la Route de Beyrouth à Damas</data>
       <data key="n_sectors">Transports terrestres</data>
       <data key="n_n_directors">6</data>
+      <data key="n_territory">Syrie-Liban</data>
+    </node>
+    <node id="industrielleasphaltespetroleslattaquie">
+      <data key="n_label">Société industrielle des Asphaltes et pétroles de Lattaquié</data>
+      <data key="n_sectors">Sociétés diverses</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="industrielleetatslevant">
@@ -177,7 +183,7 @@
     <node id="radioorient">
       <data key="n_label">Radio-Orient</data>
       <data key="n_sectors">Documents généraux; Sociétés diverses</data>
-      <data key="n_n_directors">37</data>
+      <data key="n_n_directors">35</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="socexploitationcheminsfercilicienordsyrie">
@@ -213,43 +219,43 @@
     <edge id="e2" source="louisemmanueladoplphegoranflauxbaronandree" target="ports">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e3" source="georgemallet" target="port">
+    <edge id="e3" source="asphaltespetroleslattaquie" target="industrielleasphaltespetroleslattaquie">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e4" source="georgemallet" target="port">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e4" source="port" target="ports">
+    <edge id="e5" source="port" target="ports">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e5" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
+    <edge id="e6" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e6" source="eauxbeyrouth" target="ottomanegazbeyrouth">
+    <edge id="e7" source="eauxbeyrouth" target="ottomanegazbeyrouth">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e7" source="banquesyriegrandliban" target="ports">
+    <edge id="e8" source="banquesyriegrandliban" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e8" source="georgemallet" target="ports">
+    <edge id="e9" source="georgemallet" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e9" source="louisemmanueladoplphegoranflauxbaronandree" target="port">
+    <edge id="e10" source="louisemmanueladoplphegoranflauxbaronandree" target="port">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e10" source="cheminferdamashamahprolongements" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e11" source="cheminferdamashamahprolongements" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e11" source="cheminferdamashamahprolongements" target="ports">
+    <edge id="e12" source="cheminferdamashamahprolongements" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e12" source="cheminferdamashamahprolongements" target="exploitaitoncheminfercilicie">
+    <edge id="e13" source="cheminferdamashamahprolongements" target="exploitaitoncheminfercilicie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e13" source="cheminferdamashamahprolongements" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e14" source="cheminferdamashamahprolongements" target="socexploitationcheminsfercilicienordsyrie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e14" source="banquesyrieliban" target="cheminferdamashamahprolongements">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e15" source="etablissementsluchaire" target="radioorient">
+    <edge id="e15" source="banquesyrieliban" target="cheminferdamashamahprolongements">
       <data key="e_weight">2</data>
     </edge>
     <edge id="e16" source="banquesyrie" target="cheminferdamashamahprolongements">

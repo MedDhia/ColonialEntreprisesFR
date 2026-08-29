@@ -6,6 +6,12 @@
   <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
   <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
   <graph id="G" edgedefault="undirected">
+    <node id="baliakaraidin">
+      <data key="n_label">Balia-Karaïdin</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Empire ottoman/Turquie</data>
+    </node>
     <node id="banquepaysorient">
       <data key="n_label">Banque française des pays d’Orient</data>
       <data key="n_sectors"></data>
@@ -51,13 +57,13 @@
     <node id="orientalcarpetmanufacturersltd">
       <data key="n_label">Oriental Carpet Manufacturers, Ltd</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">25</data>
       <data key="n_territory">Empire ottoman/Turquie</data>
     </node>
     <node id="ottomanecheminfersmyrnecassabaprolongement">
       <data key="n_label">Société ottomane du Chemin de fer Smyrne-Cassaba et prolongement</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">16</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Empire ottoman/Turquie</data>
     </node>
     <node id="ottomaneeauxconstantinople">
@@ -96,73 +102,85 @@
     <edge id="e1" source="financiereorient" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e2" source="ottomanecheminfersmyrnecassabaprolongement" target="tombac">
+    <edge id="e2" source="baliakaraidin" target="minesbaliakaraidin">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e3" source="ottomanecheminfersmyrnecassabaprolongement" target="ottomaneheraclee">
+    <edge id="e3" source="ottomanecheminfersmyrnecassabaprolongement" target="tombac">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e4" source="financiereorient" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e4" source="ottomanecheminfersmyrnecassabaprolongement" target="ottomaneheraclee">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e5" source="minesbaliakaraidin" target="ottomanemineskarassou">
+    <edge id="e5" source="financiereorient" target="nationalecommerceindustrieagriculturedansempireottoman">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e6" source="minesbaliakaraidin" target="ottomanemineskarassou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e6" source="minesbaliakaraidin" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e7" source="minesbaliakaraidin" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e7" source="financiereorient" target="tombac">
+    <edge id="e8" source="minesbaliakaraidin" target="orientalcarpetmanufacturersltd">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e8" source="ottomaneheraclee" target="tombac">
+    <edge id="e9" source="financiereorient" target="tombac">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e9" source="heraclee" target="ottomanecheminfersmyrnecassabaprolongement">
+    <edge id="e10" source="ottomaneheraclee" target="tombac">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e10" source="ottomaneheraclee" target="quaisdocksentrepotsconstantinople">
+    <edge id="e11" source="heraclee" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e11" source="minesbaliakaraidin" target="orientalcarpetmanufacturersltd">
+    <edge id="e12" source="ottomaneheraclee" target="quaisdocksentrepotsconstantinople">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e13" source="baliakaraidin" target="ottomanemineskarassou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e12" source="minesbaliakaraidin" target="quaisdocksentrepotsconstantinople">
+    <edge id="e14" source="baliakaraidin" target="ottomaneeauxconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e13" source="banquepaysorient" target="exploitationcheminsferorientaux">
+    <edge id="e15" source="minesbaliakaraidin" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e14" source="banquepaysorient" target="industriellecommercialeagricoleturquie">
+    <edge id="e16" source="banquepaysorient" target="exploitationcheminsferorientaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e15" source="banquepaysorient" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e17" source="banquepaysorient" target="industriellecommercialeagricoleturquie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e16" source="exploitationcheminsferorientaux" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e18" source="banquepaysorient" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e17" source="financiereorient" target="ottomaneheraclee">
+    <edge id="e19" source="exploitationcheminsferorientaux" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e18" source="heraclee" target="quaisdocksentrepotsconstantinople">
+    <edge id="e20" source="financiereorient" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e19" source="ottomanecheminfersmyrnecassabaprolongement" target="quaisdocksentrepotsconstantinople">
+    <edge id="e21" source="heraclee" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e20" source="heraclee" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e22" source="ottomanecheminfersmyrnecassabaprolongement" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e21" source="nationalecommerceindustrieagriculturedansempireottoman" target="ottomaneheraclee">
+    <edge id="e23" source="heraclee" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e22" source="ottomaneeauxconstantinople" target="ottomaneheraclee">
+    <edge id="e24" source="nationalecommerceindustrieagriculturedansempireottoman" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e23" source="ottomaneeauxconstantinople" target="quaisdocksentrepotsconstantinople">
+    <edge id="e25" source="ottomaneeauxconstantinople" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e24" source="financiereorient" target="heraclee">
+    <edge id="e26" source="ottomaneeauxconstantinople" target="quaisdocksentrepotsconstantinople">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e27" source="financiereorient" target="heraclee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e28" source="orientalcarpetmanufacturersltd" target="tombac">
       <data key="e_weight">1</data>
     </edge>
   </graph>

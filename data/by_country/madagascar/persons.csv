@@ -1,15 +1,15 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 michel-cote-c,Michel-Côte,C. Michel- Cote; C. Michel-Cote; C. Michel-Côte; Ch Michel-Côte; Ch. Michel-Côte; Charles Michel-Cote; Charles Michel-Côte,9,9,27,administrateur,1922,1973,"Banques et groupes financiers; Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports fluviaux, maritimes et aériens"
 perben-l,Perben,L. Perben; Louis Perben,9,9,23,administrateur,1920,1973,Banques et groupes financiers; Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires
-roubaud-p,Roubaud,P. Roubaud; Paul Roubaud,9,8,21,administrateur,1922,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
+roubaud-p,Roubaud,P. Roubaud; Paul Roubaud,9,8,22,administrateur,1922,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
 zafiropulo-g,Zafiropulo,G. Zafiropulo; George Zafiropulo; Georges Zafiropulo,8,8,18,administrateur,1922,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
-saurin-h,Saurin,H. Saurin; Henri Saurin,8,8,15,president,1936,1973,Banques et groupes financiers; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 chapuis-h,Chapuis,H. Chapuis; Henri Chapuis,7,7,21,administrateur,1909,1958,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+saurin-h,Saurin,H. Saurin; Henri Saurin,7,7,15,president,1936,1973,Banques et groupes financiers; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 benazeth-l,Benazeth,Benazeth; L. Benazeth; Louis Benazeth; Louis Bénazeth,8,7,13,administrateur,1926,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
-piquet-v,Piquet,V. Piquet; Victor Piquet,7,7,12,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 chiris-g,Chiris,G. Chiris; Georges Chiris,7,7,9,president,1926,1958,Commerce; Documents généraux (par ordre chronologique)
 arnoux-e,Arnoux,E. Arnoux; Émile Arnoux,6,6,13,administrateur,1937,1973,Banques et groupes financiers; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
 gueugnier-l,Gueugnier,L. Gueugnier; Léon Gueugnier; Léon-Pierre-Désiré Gueugnier,6,6,12,administrateur,1919,1938,Banques et groupes financiers; Documents généraux (par ordre chronologique); Industries agro-alimentaires
+piquet-v,Piquet,V. Piquet; Victor Piquet,6,6,12,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 ravier-c,Ravier,Charles Ravier,6,6,11,administrateur_delegue,1934,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 allain-e,Allain,E. Allain; É. Allain; Émile Allain,5,5,18,administrateur,1920,1958,Banques et groupes financiers; Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 rigal-j,Rigal,Jean Rigal,5,5,12,administrateur,1936,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
@@ -20,7 +20,6 @@ ottino-s,Ottino,S. Ottino; Salvador Ottino; Salvator Ottino,5,5,7,administrateur
 besson-maufrangeas-l,Besson-Maufrangeas,L. Besson-Maufrangeas; Lucienne Besson-Maufrangeas,5,5,7,administrateur,1948,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
 legrand-r,Legrand,René Legrand,5,5,6,administrateur,1926,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 besson-l-leon,Besson,Léon Besson,5,5,5,administrateur,1922,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
-beurrier-j-jean,Beurrier,Jean Beurrier,5,5,5,administrateur,1927,1973,Banques et groupes financiers; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 bourdariat-a,Bourdariat,A. Bourdariat; A.-J. Bourdariat; Alexandre Bourdariat; Bourdariat,4,4,16,administrateur,1920,1938,Banques et groupes financiers; Documents généraux (par ordre chronologique); Mines
 thibaud-p,Thibaud,P. Thibaud; Pierre Thibaud,4,4,14,administrateur,1909,1958,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 boyer-p,Boyer,P.-A. Boyer; Paul Boyer; Paul-Albert Boyer,4,4,13,president,1918,1956,"Banques et groupes financiers; Commerce; Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
@@ -33,10 +32,8 @@ velard-e,Velard,Émile Velard,4,4,11,president,1924,1973,"Documents généraux (
 amundsen-s,Amundsen,AMUNDSEN; S. Amundsen; Sturla Amundsen,4,4,10,administrateur,1922,1958,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 guy-de-la-motte-saint-pierre,Guy de la Motte Saint-Pierre,Guy de la Motte Saint-Pierre; Guy de la Motte-Saint- Pierre,4,4,10,administrateur,1921,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 bevillard-p,Bevillard,Pierre Bevillard; Pierre Bévillard,4,4,10,administrateur_delegue,1936,1956,Documents généraux (par ordre chronologique); Mines
-krafft-l,Krafft,L. Krafft; Léon Krafft,4,4,10,administrateur,1930,1973,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 vouland-l,Vouland,L. Vouland; Louis Vouland,4,4,9,administrateur,1921,1956,Commerce; Documents généraux (par ordre chronologique)
 boissier-h,Boissier,Horace Boissier,4,4,9,administrateur,1920,1938,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
-bouvier-r,Bouvier,René Bouvier,4,4,9,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 bonifay-l,Bonifay,L. Bonifay; Louis Bonifay,4,4,8,administrateur,1931,1973,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
 lecomte-p,Lecomte,Paul Lecomte,4,4,8,administrateur,1936,1956,Documents généraux (par ordre chronologique); Mines
 gueugnier-j,Gueugnier,J. Gueugnier; Jean Gueugnier,4,4,8,administrateur,1931,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -52,6 +49,7 @@ harrison-smith-j,Harrison Smith,J. Harrison Smith; Joseph Harrison Smith,4,4,5,p
 tholozan-c,Tholozan,Ch. Tholozan; Charles Tholozan,4,4,5,administrateur,1925,1937,Commerce; Documents généraux (par ordre chronologique)
 besson-l,Besson,L. Besson,4,4,5,administrateur,1926,1938,Documents généraux (par ordre chronologique)
 de-la-morandiere-l,de la Morandière,Louis de la Morandière,4,4,5,administrateur,1934,1956,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+beurrier-j-jean,Beurrier,Jean Beurrier,4,4,5,administrateur,1927,1973,Banques et groupes financiers; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 semana-besson-r,Semana-Besson,Renée Semana-Besson; Semana-Besson,4,4,5,administrateur,1950,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports terrestres et garages
 carl-du-manoir,Carl du Manoir,Carl du Manoir,4,4,4,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 de-la-motte-saint-pierre-f,de la Motte Saint-Pierre,François de la Motte Saint-Pierre; François de la Motte-Saint-Pierre,4,4,4,administrateur,1937,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -61,9 +59,11 @@ gimon-c,Gimon,C. Gimon; Ch Gimon; Ch. Gimon; Charles Gimon,3,3,14,administrateur
 thiebaut-v,Thiébaut,V. Thiébaut; Victor Thiébaut,3,3,14,administrateur,1900,1956,"Commerce; Documents généraux (par ordre chronologique); Mines; Transports fluviaux, maritimes et aériens"
 bauer-l,Bauer,L. Bauer; Louis Bauer,3,3,11,administrateur_delegue,1921,1940,Documents généraux (par ordre chronologique); Mines
 tardieu-l,Tardieu,L. Tardieu; Léon Tardieu,3,3,10,administrateur,1909,1958,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+krafft-l,Krafft,L. Krafft; Léon Krafft,3,3,10,administrateur,1930,1973,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 bontoux-h,Bontoux,H. Bontoux; Henri Bontoux; Henry Bontoux,3,3,9,administrateur,1920,1938,"Banques et groupes financiers; Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 boussand-l-leon,Boussand,Léon Boussand,3,3,9,president,1901,1938,Documents généraux (par ordre chronologique); Mines
 neton-a,Néton,A. Neton; A. Néton; Albéric Neton; Albéric Néton; Albérie Néton,3,3,9,administrateur,1937,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+bouvier-r,Bouvier,René Bouvier,3,3,9,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 metras-r,Métras,Romain Métras,3,3,8,administrateur,1913,1958,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires
 hattu-a,Hattu,A. Hattu; Albert Hattu; Hattu,3,3,8,administrateur,1920,1968,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 charbonnel-r,Charbonnel,Raoul Charbonnel,3,3,8,administrateur,1921,1958,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -72,8 +72,6 @@ legrand-j,Legrand,Jean LEGRAND; Jean Legrand,3,3,8,administrateur,1928,1973,Docu
 boussenot-g,Boussenot,G. Boussenot; Georges Boussenot,3,3,7,administrateur,1922,1956,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 thierry-j,Thierry,Jean Thierry,3,3,7,administrateur,1925,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 vanille,Vanille,Vanille,4,3,7,administrateur,1926,1963,Documents généraux (par ordre chronologique)
-bouruet-aubertot-j,Bouruet-Aubertot,J. Bouruet-Aubertot; Jean Bouruet- Aubertot; Jean Bouruet-Aubertot,3,3,7,administrateur,1936,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
-giscard-d-estaing-e,Giscard-d'Estaing,E. Giscard-d'Estaing; Edmond Giscard d'Estaing; Edmond Giscard-d'Estaing,3,3,7,administrateur,1936,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 de-boissieu-j,de Boissieu,Jacques de Boissieu,3,3,6,administrateur,1922,1937,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires
 durand-e,Durand,E. Durand,3,3,6,administrateur,1922,1938,Documents généraux (par ordre chronologique); Industries
 j-dubos-p,J. Dubos,Pierre J. Dubos,3,3,6,administrateur,1920,1973,Documents généraux (par ordre chronologique); Industries
@@ -86,6 +84,7 @@ guerin-j-joseph,Guérin,Joseph Guérin,3,3,6,administrateur,1929,1973,Documents 
 guinaudeau-h,Guinaudeau,Henri Guinaudeau,3,3,6,administrateur,1929,1956,"Banques et groupes financiers; Documents généraux (par ordre chronologique); Eau et assainissement, électricité (Utilities)"
 charbonnel-a,Charbonnel,A. Charbonnel; André Charbonnel,3,3,6,administrateur,1945,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 gueugnier,Gueugnier,Gueugnier,3,3,6,president,1901,1925,"Banques et groupes financiers; Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
+prenat-e,Prénat,Édouard PRÉNAT; Édouard Prénat,3,3,5,president,1893,1926,Commerce; Documents généraux (par ordre chronologique)
 poucel-f,Poucel,F. Poucel; Fernand Poucel,3,3,5,president,1921,1926,Commerce; Documents généraux (par ordre chronologique)
 vouland-f,Vouland,F. Vouland,3,3,5,vice_president,1921,1926,Commerce; Documents généraux (par ordre chronologique)
 th-toy-riont,Th. Toy- Riont,Th. Toy- Riont; Th. Toy-Riont,3,3,5,administrateur_delegue,1921,1926,Commerce; Documents généraux (par ordre chronologique)
@@ -98,7 +97,6 @@ lelievre-g,Lelièvre,G. Lelièvre; Georges Lelièvre,3,3,5,administrateur,1937,1
 de-revel-b,de Revel,Bernard de Revel,3,3,5,president_directeur_general,1937,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 aillaud-a,Aillaud,Albert Aillaud,3,3,5,administrateur,1950,1956,Documents généraux (par ordre chronologique); Industries; Industries agro-alimentaires
 oudot-l,Oudot,L. Oudot; Louis OUDOT,3,3,5,administrateur,1928,1933,Banques et groupes financiers; Industries agro-alimentaires
-prenat-e,Prénat,Édouard Prénat,3,3,4,president,1893,1926,Commerce; Documents généraux (par ordre chronologique)
 boulloche-l,Boulloche,L. Boulloche; Léon Boulloche,3,3,4,president,1912,1922,Documents généraux (par ordre chronologique); Industries agro-alimentaires; Mines
 lefebvre-g,Lefebvre,G. Lefebvre; Georges Lefebvre,3,3,4,administrateur,1920,1937,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 bigeard,Bigeard,Bigeard,3,3,4,president,1938,1958,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -106,7 +104,6 @@ fraise,Fraise,Fraise,3,3,4,administrateur,1926,1958,Documents généraux (par or
 gruet-g,Gruet,G. Gruet; Georges Gruet,3,3,4,administrateur,1926,1938,Commerce; Documents généraux (par ordre chronologique)
 cosson-e,Cosson,E. Cosson; Édouard Cosson,3,3,4,administrateur,1910,1937,Documents généraux (par ordre chronologique); Mines
 belieres-j,Belières,Belières; J. Belières; Jean Bélières,3,3,4,administrateur,1937,1956,Documents généraux (par ordre chronologique); Industries
-tanti-a,Tanti,Antoine Tanti,3,3,4,administrateur,1936,1937,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 cerutti-g,Cérutti,G. Cérutti; Gilbert Cérutti,3,3,4,administrateur,1950,1956,"Documents généraux (par ordre chronologique); Eau et assainissement, électricité (Utilities); Industries"
 pagnon-r,Pagnon,Roger Pagnon,3,3,4,president,1950,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 gougaud-j,Gougaud,J.-A. Gougaud,3,3,4,administrateur,1949,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -118,24 +115,25 @@ homberg-o,Homberg,O. Homberg; Octave Homberg,3,3,3,president,1937,1938,Documents
 audren-de-kerdrel-r,Audren de Kerdrel,Raoul Audren de Kerdrel,3,3,3,administrateur,1951,1973,Documents généraux (par ordre chronologique)
 aymar-de-guitaut,Aymar de Guitaut,Aymar de Guitaut,3,3,3,administrateur,1939,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 pierre,Pierre,Pierre,3,3,3,administrateur,1920,1973,Documents généraux (par ordre chronologique); Industries; Industries agro-alimentaires
-mananjary,Mananjary,Mananjary,4,2,18,administrateur,1937,1963,Documents généraux (par ordre chronologique)
 more-m,More,Marcel More; Marcel Moré; More; Moré,2,2,15,administrateur,1920,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+boussand-l-lucien,Boussand,Lucien Boussand,2,2,11,administrateur,1901,1973,Documents généraux (par ordre chronologique); Mines
+vogt-p,Vogt,P. Vogt; Pierre Vogt,2,2,11,administrateur,1925,1973,Documents généraux (par ordre chronologique); Mines
 nouvion-h,Nouvion,H. Nouvion; Henri Nouvion,2,2,10,administrateur_delegue,1918,1937,"Commerce; Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
-boussand-l-lucien,Boussand,Lucien Boussand,2,2,10,administrateur,1901,1973,Documents généraux (par ordre chronologique); Mines
-vogt-p,Vogt,P. Vogt; Pierre Vogt,2,2,10,administrateur,1925,1973,Documents généraux (par ordre chronologique); Mines
 michel-h,Michel,H. Michel; Hubert Michel,2,2,10,administrateur,1920,1938,Banques et groupes financiers; Documents généraux (par ordre chronologique)
 sescau-j,Sescau,J.-B. Sescau; Sescau,2,2,9,administrateur,1921,1938,Documents généraux (par ordre chronologique); Mines
 bergey-j,Bergey,Jean Bergey,2,2,8,administrateur,1924,1956,Commerce; Documents généraux (par ordre chronologique); Mines
 javet-a,Javet,Alexandre Javet; Javet,2,2,8,administrateur,1923,1933,Documents généraux (par ordre chronologique); Mines
 deschars-l,Deschars,Léon Deschars,2,2,8,administrateur,1927,1956,Documents généraux (par ordre chronologique); Mines
+cochet-c,Cochet,Ch. Cochet; Charles Cochet,2,2,8,president_directeur_general,1939,1973,Documents généraux (par ordre chronologique); Mines
 lescot-m,Lescot,Lescot; Marcel Lescot,2,2,8,administrateur,1925,1938,Banques et groupes financiers; Documents généraux (par ordre chronologique)
 vouland-c,Vouland,Ch. Vouland; Charles Vouland,3,2,7,administrateur,1921,1937,Commerce; Documents généraux (par ordre chronologique)
 costes-f,Costes,Costes; F. Costes; François Costes,2,2,7,directeur,1921,1945,Documents généraux (par ordre chronologique); Mines
 exbrayat-j,Exbrayat,J. Exbrayat; Jules Exbrayat,2,2,7,administrateur,1922,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 delcher-j,Delcher,Delcher; Justin Delcher,2,2,7,administrateur,1925,1933,Documents généraux (par ordre chronologique); Industries; Mines
 chenereau-p,Chénereau,Chénereau; P. Chénereau; Paul Chénereau,2,2,7,administrateur,1926,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+bouruet-aubertot-j,Bouruet-Aubertot,J. Bouruet-Aubertot; Jean Bouruet- Aubertot; Jean Bouruet-Aubertot,2,2,7,administrateur,1936,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+giscard-d-estaing-e,Giscard-d'Estaing,E. Giscard-d'Estaing; Edmond Giscard d'Estaing; Edmond Giscard-d'Estaing,2,2,7,administrateur,1936,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 semana-j,Semana,J. Semana; Joseph Semana,2,2,7,gerant,1927,1956,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires
-cochet-c,Cochet,Ch. Cochet; Charles Cochet,2,2,7,president_directeur_general,1945,1973,Documents généraux (par ordre chronologique); Mines
 cauce-c,Caucé,Ch. Caucé,2,2,6,president,1925,1938,Documents généraux (par ordre chronologique); Mines
 fisch-j,Fisch,Jules Fisch,2,2,6,president,1901,1938,Documents généraux (par ordre chronologique); Mines
 bollee-a,Bollée,André Bollée,2,2,6,administrateur,1926,1956,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -150,11 +148,12 @@ bergey-n,Bergey,Nestor Bergey,2,2,5,president,1925,1938,Commerce; Documents gén
 springer-c,Springer,C. Springer,2,2,5,administrateur,1926,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 vaucheret-a,Vaucheret,A. Vaucheret; André Vaucheret,2,2,5,administrateur,1926,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 kerr-h,Kerr,Herbert Kerr,2,2,5,president_directeur_general,1926,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+gautier-m,Gautier,Melchior GAUTIER; Melchior Gautier,2,2,5,administrateur,1902,1937,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires
 toy-riont-t,Toy-Riont,Théodore Toy- Riont; Théodore Toy-Riont,2,2,5,administrateur,1936,1956,Commerce; Documents généraux (par ordre chronologique)
 darrieux-m,Darrieux,Maxime Darrieux,2,2,5,president,1936,1956,Documents généraux (par ordre chronologique); Mines
 de-breteuil-g,de Breteuil,Gaston de Breteuil,2,2,5,administrateur,1927,1938,Documents généraux (par ordre chronologique); Mines
+jaureguiberry-j,Jauréguiberry,J. Jauréguiberry; Jean Jauréguiberry,2,2,5,administrateur,1937,1945,Documents généraux (par ordre chronologique); Mines
 gibus-p,Gibus,Pierre Gibus,2,2,5,administrateur_delegue,1906,1937,"Documents généraux (par ordre chronologique); Industries agro-alimentaires; Transports fluviaux, maritimes et aériens"
-dequivre-c,Dequivre,C. Dequivre,2,2,5,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 froissart-l,Froissart,Louis Froissart,2,2,5,administrateur,1925,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 coche-e,Coché,Edmond Coche; Edmond Coché,2,2,4,administrateur,1900,1926,Commerce; Documents généraux (par ordre chronologique)
 plassard-r,Plassard,René Plassard,2,2,4,administrateur,1900,1926,Commerce; Documents généraux (par ordre chronologique)
@@ -165,12 +164,12 @@ buhan-e,Buhan,Eugène Buhan,2,2,4,president,1920,1926,Documents généraux (par 
 schmitt-g,Schmitt,G. Schmitt,2,2,4,administrateur,1921,1958,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 lanot-f,Lanot,F. Lanot,2,2,4,administrateur,1921,1958,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 fromentault,Fromentault,Fromentault,2,2,4,administrateur,1926,1958,Documents généraux (par ordre chronologique)
-gautier-m,Gautier,Melchior Gautier,2,2,4,administrateur,1902,1937,Commerce; Documents généraux (par ordre chronologique); Industries agro-alimentaires
 brochard-j,Brochard,Jean-Paul Brochard,2,2,4,administrateur,1936,1956,Commerce; Documents généraux (par ordre chronologique)
 arnoux-a,Arnoux,Albert Arnoux,2,2,4,administrateur,1936,1956,Commerce; Documents généraux (par ordre chronologique)
 binaud-h,Binaud,Henri Binaud,2,2,4,administrateur,1920,1973,Documents généraux (par ordre chronologique); Industries
 buhan-a,Buhan,Albert Buhan,2,2,4,administrateur,1920,1973,Documents généraux (par ordre chronologique); Industries
 lemoine-r,Lemoine. 1,René Lemoine; René Lemoine. 1; René Lemoine. 4,2,2,4,administrateur,1920,1973,Documents généraux (par ordre chronologique); Industries
+tanti-a,Tanti,Antoine Tanti,2,2,4,administrateur,1936,1937,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 roy-a,Roy,Alain Roy,2,2,4,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 michel-p,Michel,Pierre Michel,2,2,4,administrateur,1934,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 jacotin-a,Jacotin,André Jacotin,2,2,4,administrateur,1934,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -193,8 +192,8 @@ blot-a,Blot,André Blot; André Blot1,2,2,3,administrateur,1926,1937,Commerce; D
 ed-cazalet,Ed. Cazalet,Ed. Cazalet,2,2,3,administrateur,1923,1926,Commerce; Documents généraux (par ordre chronologique)
 ed-llewellyn,Ed. Llewellyn,Ed. Llewellyn,2,2,3,administrateur,1923,1926,Commerce; Documents généraux (par ordre chronologique)
 eug-j-buhan,Eug. J. Buhan,Eug. J. Buhan; Eug.-J. Buhan,2,2,3,administrateur,1920,1937,Documents généraux (par ordre chronologique); Industries
+favaron-l,Favaron,Favaron; Louis Favaron,2,2,3,administrateur,1908,1926,Documents généraux (par ordre chronologique); Mines
 lantz-l,Lantz,Lantz; Louis Lantz,2,2,3,administrateur,1925,1926,Documents généraux (par ordre chronologique); Mines
-angoulvant-g,Angoulvant,G. Angoulvant; G. Angoulvant 2; Gabriel Angoulvant,2,2,3,administrateur,1926,1926,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 bigeard-m,Bigeard,Marc Bigeard,2,2,3,administrateur,1922,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 vare-g,Varé,Gaétan Varé; Gaëtan Varé,2,2,3,administrateur,1924,1926,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 couvreux-e,Couvreux,E. Couvreux; Emmanuel Couvreux,2,2,3,administrateur,1926,1973,Documents généraux (par ordre chronologique)
@@ -216,7 +215,6 @@ rastoin-e-edouard,Rastoin,Édouard Rastoin,2,2,3,administrateur,1951,1956,Docume
 verrier-p,Verrier,Pierre VERRIER; Pierre Verrier,2,2,3,president_directeur_general,1950,1956,Documents généraux (par ordre chronologique); Industries
 louis-durand-p,Louis Durand,Pierre- Louis Durand,2,2,3,administrateur,1927,1956,"Banques et groupes financiers; Documents généraux (par ordre chronologique); Eau et assainissement, électricité (Utilities)"
 ottino-f,Ottino,François Ottino,3,2,3,administrateur,1920,1973,Documents généraux (par ordre chronologique); Industries
-le-boulanger-j,Le Boulanger,Jean Le Boulanger,3,2,3,administrateur_delegue,1951,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 bureau-h,Bureau,Hippolyte Bureau,2,2,3,vice_president,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 jamin-l-leon,Jamin,Léon Jamin,2,2,3,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 ed-philippar,Ed. Philippar,Ed. Philippar,2,2,3,administrateur,1920,1925,Banques et groupes financiers; Documents généraux (par ordre chronologique)
@@ -238,8 +236,9 @@ thery,Théry,Théry,2,2,2,administrateur,1926,1958,Documents généraux (par ord
 thomas-f,Thomas,F. Thomas,2,2,2,administrateur,1926,1958,Documents généraux (par ordre chronologique)
 martin-a,Martin,A. Martin,2,2,2,administrateur,1926,1958,Documents généraux (par ordre chronologique)
 barriquand,Barriquand,Barriquand,2,2,2,president,1926,1958,Documents généraux (par ordre chronologique)
+hallot-c,Hallot,Charles HALLOT; Charles Hallot,2,2,2,administrateur,1910,1926,Commerce; Documents généraux (par ordre chronologique)
 palliez-a,Palliez,A. Palliez; Alexandre Palliez,2,2,2,administrateur,1926,1929,"Documents généraux (par ordre chronologique); Eau et assainissement, électricité (Utilities)"
-favaron-l,Favaron,Favaron; Louis Favaron,2,2,2,president,1923,1926,Documents généraux (par ordre chronologique); Mines
+suberbie-l,Suberbie,Léon Suberbie; Suberbie,2,2,2,administrateur,1900,1926,Documents généraux (par ordre chronologique); Mines
 portier-h,Portier,Henri Portier,2,2,2,administrateur,1919,1926,Banques et groupes financiers; Documents généraux (par ordre chronologique)
 rey,Rey,REY; Rey,2,2,2,administrateur,1890,1926,Documents généraux (par ordre chronologique); Mines
 martin-m-marius,Martin,Marius Martin,2,2,2,administrateur,1899,1926,Documents généraux (par ordre chronologique); Mines
@@ -262,6 +261,7 @@ tomei-j,Tomeï,Jean Tomei; Jean Tomeï,2,2,2,administrateur,1926,1937,Documents 
 payan-l,Payan,Louis Payan,2,2,2,administrateur,1926,1937,Documents généraux (par ordre chronologique)
 rasongles-j,Rasongles,J. Rasongles; J. Rasonglès,2,2,2,administrateur,1926,1937,Documents généraux (par ordre chronologique)
 vidal-e,Vidal,E. Vidal,2,2,2,administrateur,1926,1937,Documents généraux (par ordre chronologique)
+gilquin-f,Gilquin,F. Gilquin; Fernand Gilquin,2,2,2,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 geraud-l,Géraud,Léon Géraud,2,2,2,administrateur,1937,1956,Documents généraux (par ordre chronologique)
 semama-j,Semama,Joseph Semama,2,2,2,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 queroy-e,Quéroy,E. Quéroy; Ernest Quéroy,2,2,2,administrateur,1937,1951,Documents généraux (par ordre chronologique)
@@ -282,12 +282,9 @@ de-meneval-l,de Méneval,Louis de Méneval,2,2,2,administrateur,1950,1956,Docume
 chavanne-a,Chavanne,Albert Chavanne,2,2,2,administrateur,1950,1956,Documents généraux (par ordre chronologique); Industries
 gessain-r,Gessain,Robert Gessain,2,2,2,administrateur,1950,1956,Documents généraux (par ordre chronologique); Industries
 firminy,Firminy,Firminy,2,2,2,administrateur,1925,1956,Documents généraux (par ordre chronologique)
-jullien-a,Jullien,A. Jullien; Armand Jullien,2,2,2,administrateur,1953,1956,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 vandesmet-h,Vandesmet,Henry Vandesmet,2,2,2,administrateur,1956,1956,Documents généraux (par ordre chronologique)
 bouvier-a-albert,Bouvier,Albert Bouvier,2,2,2,administrateur,1951,1956,Documents généraux (par ordre chronologique); Mines
 laurens-p,Laurens,Pierre Laurens,2,2,2,administrateur,1951,1956,Documents généraux (par ordre chronologique); Mines
-mouscadet-g,Mouscadet,Georges Mouscadet; Georges Mouscadet3,2,2,2,administrateur,1940,1973,Documents généraux (par ordre chronologique); Mines
-mouscadet-a,Mouscadet,André Mouscadet; André Mouscadet4,2,2,2,administrateur,1940,1973,Documents généraux (par ordre chronologique); Mines
 sicard-f,Sicard,Fernand SICARD; Fernand Sicard,2,2,2,administrateur,1953,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 p-buhan-p,P. Buhan,Paul P. Buhan,2,2,2,president,1920,1973,Documents généraux (par ordre chronologique); Industries
 lafont,Lafont,Lafont,2,2,2,vice_president,1920,1973,Documents généraux (par ordre chronologique); Industries
@@ -312,7 +309,6 @@ chapuis,Chapuis,Chapuis,2,2,2,administrateur,1922,1968,Industries agro-alimentai
 grignon,Grignon,Grignon,2,2,2,administrateur,1902,1911,Banques et groupes financiers; Mines
 g-philippar,G Philippar,G Philippar,2,2,2,administrateur_delegue,1920,1925,Banques et groupes financiers; Documents généraux (par ordre chronologique)
 mougeot,Mougeot,Mougeot,2,2,2,president,1925,1925,Documents généraux (par ordre chronologique); Mines
-neuilly,Neuilly,Neuilly,2,2,2,administrateur,1938,1946,Documents généraux (par ordre chronologique); Mines
 l-krafft,L Krafft,L Krafft,2,2,2,administrateur,1938,1938,Documents généraux (par ordre chronologique); Mines
 lancrenon-p,Lancrenon,Paul Lancrenon,2,2,2,administrateur,1938,1938,Documents généraux (par ordre chronologique); Mines
 joseph,Joseph,Joseph,2,2,2,president,1938,1938,Documents généraux (par ordre chronologique); Mines
@@ -326,14 +322,17 @@ dufay,Dufay,Dufay,2,2,2,president,1938,1938,Documents généraux (par ordre chro
 raimbault,Raimbault,Raimbault,2,2,2,president,1938,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 rocca,Rocca3,Rocca; Rocca3,2,2,2,president,1938,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 tanti,Tanti4,Tanti; Tanti4,2,2,2,president,1938,1938,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+imbert-p,Imbert,Paul Imbert,2,2,2,president,1929,1934,"Banques et groupes financiers; Transports fluviaux, maritimes et aériens"
+debrun-j,Debrun,Debrun; Jean-Marie Debrun,2,2,2,administrateur,1900,1901,"Mines; Transports fluviaux, maritimes et aériens"
+verspieren-a,Verspieren,Alfred Verspieren; Verspieren,2,2,2,administrateur,1900,1901,"Mines; Transports fluviaux, maritimes et aériens"
 julien-bertrand-beurrier,Julien-Bertrand Beurrier,Julien-Bertrand Beurrier,2,2,2,administrateur,1927,1927,Banques et groupes financiers; Industries agro-alimentaires
 pres-nevers,près Nevers,près Nevers,2,2,2,administrateur,1927,1927,Banques et groupes financiers; Industries agro-alimentaires
 cousin-a,Cousin,Albert Cousin,2,2,2,president,1900,1903,Industries agro-alimentaires; Mines
 duclaux-monteil-h,Duclaux-Monteil,Henri Duclaux-Monteil,2,2,2,administrateur,1901,1913,Mines
 canavy-l,Canavy,Canavy,2,2,2,administrateur,1901,1913,Mines
 noel-o,NOËL,Octave NOËL; Octave Noël,2,2,2,administrateur,1890,1899,Mines
+de-choisy-c,de Choisy,Camille de Choisy; de Choisy,2,2,2,administrateur,1900,1908,Mines
 lafon-e,Lafon,E. Lafon; Eugène Lafon,1,1,9,administrateur,1922,1945,Documents généraux (par ordre chronologique); Mines
-cafe-r,Café,Café; Robert Café.,2,1,9,administrateur,1937,1963,Documents généraux (par ordre chronologique)
 francou-j,Francou,J.-J. Francou; Jean Francou; Jean-Jacques Francou,1,1,8,administrateur,1922,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 chalas-e,Chalas,E. Chalas; Émile Chalas,1,1,6,administrateur,1922,1948,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 strap-g,Strap,G. Strap,1,1,6,administrateur,1925,1931,Documents généraux (par ordre chronologique); Mines
@@ -342,6 +341,7 @@ jourdan-e,Jourdan,E. Jourdan; E. Jourdan. 7,1,1,6,administrateur,1925,1931,Docum
 bouchy-p,Bouchy,P. Bouchy; Pierre BOUCHY; Pierre Bouchy,1,1,6,administrateur,1945,1973,Documents généraux (par ordre chronologique); Mines
 schwob-g,Schwob,G. Schwob; Georges Schwob,1,1,5,administrateur,1922,1933,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 treboul-g,Tréboul,G. Treboul; Gaston Tréboul,1,1,5,administrateur,1925,1931,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+dequivre-c,Dequivre,C. Dequivre,1,1,5,administrateur,1930,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 peube-locou-h,Peube-Locou,H. Peube-Locou; Henri PEUBE-LOCOU; Henri Peube-Locou,5,1,5,gerant,1950,1973,Documents généraux (par ordre chronologique); Mines
 nicolas-c,Nicolas,Ch. Nicolas,1,1,5,administrateur,1945,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 jaujon-p,Jaujon,P. Jaujon; Paul Jaujon,2,1,5,gerant,1927,1933,Commerce; Industries agro-alimentaires
@@ -360,7 +360,6 @@ bizot-h,Bizot,Henri Bizot; Henry Bizot,1,1,4,administrateur,1936,1956,Commerce; 
 despres-r,Desprès,Robert Desprès; Robert Després,1,1,4,administrateur,1929,1956,"Documents généraux (par ordre chronologique); Eau et assainissement, électricité (Utilities)"
 gallois-a-augustin,Gallois,Augustin Gallois,2,1,4,gerant,1936,1956,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 curmer-j,Curmer,Jean Curmer,1,1,4,administrateur,1930,1956,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
-jaureguiberry-j,Jauréguiberry,J. Jauréguiberry,1,1,4,administrateur,1937,1945,Documents généraux (par ordre chronologique); Mines
 piaton-r,Piaton,René Piaton,1,1,4,administrateur,1934,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 joffreville,Joffreville,Joffreville,1,1,4,administrateur,1937,1963,Documents généraux (par ordre chronologique)
 beauge-e,Beaugé,E. Beaugé; Ernest Beaugé,1,1,4,administrateur,1945,1973,Documents généraux (par ordre chronologique); Mines
@@ -395,14 +394,15 @@ faye-j,Faye,Jean Faye,1,1,3,administrateur,1937,1956,Documents généraux (par o
 bonnasse-h,Bonnasse,Henri Bonnasse,1,1,3,administrateur,1937,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 rocca-j,Rocca,Jean-Baptiste Rocca,1,1,3,administrateur,1937,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 rostand-a-auguste,Rostand,Auguste Rostand,1,1,3,administrateur,1937,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
-nossi-be,Nossi-Bé,Nossi-Bé,3,1,3,gerant,1937,1963,Documents généraux (par ordre chronologique)
 tabacs-de-madagascar,tabacs de Madagascar,tabacs de Madagascar,1,1,3,administrateur,1930,1956,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 truffaut-p,Truffaut,P. Truffaut; Pierre Truffaut,1,1,3,president_directeur_general,1951,1973,Documents généraux (par ordre chronologique); Mines
 privez-j,Privez,J. Privez; Jean Privez,1,1,3,administrateur,1951,1973,Documents généraux (par ordre chronologique); Mines
 pelicier-m,Pélicier,Marc-Georges Pélicier,1,1,3,president,1951,1973,Documents généraux (par ordre chronologique); Mines
 guibon-a,Guibon,André Guibon,1,1,3,directeur_general,1951,1973,Documents généraux (par ordre chronologique); Mines
 kohly-r,Kohly,Robert Kohly,1,1,3,administrateur,1951,1973,Documents généraux (par ordre chronologique); Mines
+joubert-e,Joubert,Edmond Joubert,1,1,3,administrateur,1939,1973,Documents généraux (par ordre chronologique); Mines
 leroux-a,Leroux,Alain Leroux; Alphonse LEROUX,1,1,3,administrateur,1928,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
+le-boulanger-j,Le Boulanger,Jean Le Boulanger,2,1,3,administrateur_delegue,1951,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 grignon-p,Grignon,P. Grignon,1,1,3,administrateur,1911,1931,Mines
 senechal,Sénéchal,Sénéchal,1,1,3,administrateur,1933,1940,Mines
 pfrimmer,Pfrimmer,Pfrimmer,1,1,3,administrateur,1940,1948,Industries agro-alimentaires
@@ -476,7 +476,6 @@ bigeard-p,Bigeard,P. Bigeard,1,1,2,president,1922,1926,Documents généraux (par
 roy-m,Roy,Marcel Roy,1,1,2,president,1926,1937,Documents généraux (par ordre chronologique)
 tissus,Tissus,Tissus,1,1,2,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 capet-g,Capet,Georges Capet,1,1,2,president,1936,1937,Commerce; Documents généraux (par ordre chronologique)
-gilquin-f,Gilquin,F. Gilquin; Fernand Gilquin,1,1,2,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 van-den-perre-h,Van den Perre,H. Van den Perre,1,1,2,administrateur_delegue,1937,1956,Documents généraux (par ordre chronologique)
 garnier-e,Garnier,Émile Garnier,1,1,2,administrateur,1937,1956,Documents généraux (par ordre chronologique)
 putois-r,Putois,René Putois,1,1,2,administrateur,1937,1956,Documents généraux (par ordre chronologique)
@@ -505,6 +504,7 @@ rheims-j,Rheims,Jean Rheims,1,1,2,president,1934,1937,Documents généraux (par 
 de-naurois-p,de Naurois,Pierre de Naurois,1,1,2,administrateur,1934,1937,Documents généraux (par ordre chronologique); Mines
 de-demandolx,de Demandolx,de Demandolx,1,1,2,administrateur,1934,1937,Documents généraux (par ordre chronologique); Mines
 fol-g,Fol,Gabriel Fol,1,1,2,administrateur,1934,1937,Documents généraux (par ordre chronologique); Mines
+fisch-a,Fisch,André Fisch,1,1,2,administrateur,1937,1939,Documents généraux (par ordre chronologique); Mines
 franquin-j,Franquin,J. Franquin; Jean Franquin,1,1,2,administrateur,1937,1940,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 produits-agricoles-tropicaux-s-a,« Produits agricoles tropicaux » S. A,« Produits agricoles tropicaux » S. A,1,1,2,administrateur,1937,1937,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 schwob-d-hericourt-j,Schwob-d'Héricourt,J. Schwob-d'Héricourt,1,1,2,administrateur,1937,1937,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -554,13 +554,14 @@ porte-l,Porte,Laurent Porte,1,1,2,administrateur,1951,1956,Documents généraux 
 valois-p,Valois,Paul Valois,1,1,2,administrateur,1951,1973,Documents généraux (par ordre chronologique); Mines
 nuger-a-andre,Nuger,André Nuger,1,1,2,administrateur,1951,1973,Documents généraux (par ordre chronologique); Mines
 gauthier-g,Gauthier,Gaston Gauthier,1,1,2,administrateur,1951,1973,Documents généraux (par ordre chronologique); Mines
+mouscadet-g,Mouscadet,Georges Mouscadet; Georges Mouscadet3,1,1,2,administrateur,1940,1973,Documents généraux (par ordre chronologique); Mines
+mouscadet-a,Mouscadet,André Mouscadet; André Mouscadet4,1,1,2,administrateur,1940,1973,Documents généraux (par ordre chronologique); Mines
 bucquet-a,Bucquet,Anatole Bucquet,1,1,2,president_directeur_general,1951,1973,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 d-auvigny-r,d'Auvigny,Robert d'Auvigny,1,1,2,administrateur,1951,1973,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 dumard-h,Dumard,Henri Dumard,1,1,2,administrateur,1951,1973,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 pignet,Pignet,Pignet,1,1,2,administrateur,1951,1973,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 ph-simoni,Ph. Simoni,Ph. Simoni,1,1,2,administrateur,1951,1973,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
 zwingelstein,Zwingelstein,Zwingelstein,1,1,2,administrateur,1951,1973,"Documents généraux (par ordre chronologique); Transports fluviaux, maritimes et aériens"
-joubert-e,Joubert,Edmond Joubert,1,1,2,administrateur,1951,1973,Documents généraux (par ordre chronologique); Mines
 gourbault-g,Gourbault,Georges Gourbault,1,1,2,administrateur_delegue,1950,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 champion-g,Champion,G. Champion,1,1,2,administrateur,1950,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
 schwob-d-hericourt-j-jean,Schwob d'Héricourt,Jean Schwob d'Héricourt,1,1,2,administrateur,1950,1973,Documents généraux (par ordre chronologique); Industries agro-alimentaires
@@ -602,9 +603,13 @@ burgeat-f,Burgeat,F. Burgeat,2,1,2,directeur,1925,1938,Commerce; Documents gén�
 pages-f,Pagès,Fernand Pagès,1,1,2,administrateur,1898,1898,Banques et groupes financiers
 tananarive-m,? Tananarive,? Tananarive; Marot ? Tananarive,1,1,2,administrateur,1951,1951,"Transports fluviaux, maritimes et aériens"
 boell,Boell,Boell,1,1,2,administrateur,1945,1948,Industries agro-alimentaires
+souchon-l,SOUCHON,Lucien SOUCHON; Lucien Souchon,1,1,2,administrateur_delegue,1902,1910,Commerce
+wolff-l,WOLFF,Lazare WOLFF; Lazare Wolff,1,1,2,administrateur_delegue,1902,1910,Commerce
+pagnoud-c,PAGNOUD,Ch. Pagnoud; Charles PAGNOUD,1,1,2,administrateur_delegue,1902,1910,Commerce
 a-t,A,Touton A; Touzin A,1,1,2,administrateur,1901,1901,Commerce
 dubief-h,Dubief,Henri Dubief,1,1,2,administrateur,1893,1900,Commerce
 tourreil-g,Tourreil,Georges Tourreil; Georges Tourreil. 4,1,1,2,administrateur,1893,1900,Commerce
+angoulvant-g,Angoulvant 2,G. Angoulvant; G. Angoulvant 2,1,1,2,administrateur,1926,1926,"Transports fluviaux, maritimes et aériens"
 demaison-a,Demaison,André Demaison,1,1,2,administrateur,1926,1926,"Transports fluviaux, maritimes et aériens"
 michel-a-andre,Michel,André Michel,1,1,2,administrateur,1926,1926,"Transports fluviaux, maritimes et aériens"
 foucque,Foucque,Foucque,1,1,2,administrateur,1926,1926,"Transports fluviaux, maritimes et aériens"
@@ -625,6 +630,9 @@ boussand,Boussand,Boussand,1,1,2,administrateur,1948,1953,Mines
 gougaud-a,Gougaud,A. Gougaud,1,1,2,administrateur,1945,1948,Industries agro-alimentaires
 p-forveille,? P. Forveille,? P. Forveille,1,1,2,administrateur,,,Mines
 paris-rodez,Paris-Rodez,Paris-Rodez,1,1,2,administrateur,,,Mines
+binger-g,Binger,Binger; Gustave Binger,1,1,2,administrateur,1910,1912,Mines
+morel-l,Morel,L. Morel; Léopold Morel,1,1,2,administrateur,1910,1912,Mines
+ardillier-g,Ardillier,G. Ardillier; Georges Ardillier,1,1,2,administrateur,1910,1912,Mines
 roure-a,Roure,A. Roure,1,1,2,administrateur,1917,1920,Mines
 capdeville,Capdeville,Capdeville,1,1,2,administrateur,1925,1927,Mines
 meurs-l,Meurs,Louis Meurs,1,1,2,administrateur,1913,1913,Mines
@@ -706,7 +714,6 @@ morel-p,Morel,Pierre Morel,1,1,1,administrateur,1926,1926,Documents généraux (
 vallentin-j,Vallentin,Jules Vallentin,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 grenier-j,Grenier,J. Grenier,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 cottet-b,Cottet,Benoît Cottet,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
-hallot-c,Hallot,Charles Hallot,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 haugou-r,Haugou,René Haugou,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 feuillatte-m,Feuillatte,Maurice Feuillatte,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 boutard-m,Boutard,Marcel Boutard,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
@@ -740,7 +747,7 @@ sully-h,Sully,Henri Sully,1,1,1,administrateur,1926,1926,Documents généraux (p
 froget-l,Froget,Louis Froget,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 saupiquet-a,Saupiquet,Arsène Saupiquet,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 baverey-p,Baverey,Paul Baverey,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
-hachette-r,Hachette,René Hachette,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
+hachette-r-rene,Hachette,René Hachette,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 bordeaux-j,Bordeaux,Jules Bordeaux,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 dugueyt-m,Dugueyt,Maurice Dugueyt,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 gilardoni-h,Gilardoni,Henri Gilardoni,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
@@ -749,7 +756,6 @@ capdeville-j,Capdeville,J. Édouard Capdeville,1,1,1,administrateur,1926,1926,Do
 guyot,Guyot,Guyot,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 brichet-c,Brichet,Brichet,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 philippe,Philippe,Philippe,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
-suberbie,Suberbie,Suberbie,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 dessoudeix,Dessoudeix,Dessoudeix,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 ratinaud-g,Ratinaud,Gaston Ratinaud,1,1,1,vice_president,1926,1926,Documents généraux (par ordre chronologique)
 bourhis-g-gaston,Bourhis,Gaston Bourhis,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
@@ -763,6 +769,7 @@ maurice,Maurice,Maurice,1,1,1,administrateur,1926,1926,Documents généraux (par
 lobstein-e,Lobstein,Émile Lobstein,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 fauchere-j,Fauchère,Jules Fauchère,1,1,1,president,1926,1926,Documents généraux (par ordre chronologique)
 de-rivaud-r,de Rivaud,René de Rivaud,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
+angoulvant-g-gabriel,Angoulvant,Gabriel Angoulvant,1,1,1,president,1926,1926,Documents généraux (par ordre chronologique)
 moline-m,Moline,Maurice Moline,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 d-etigny-l,d'Étigny,Louis d'Étigny,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
 dybowsky-j,Dybowsky,Jean Dybowsky,1,1,1,administrateur,1926,1926,Documents généraux (par ordre chronologique)
@@ -835,7 +842,7 @@ cahen-fuzier-e,Cahen-Fuzier,Edouard Cahen-Fuzier,1,1,1,administrateur,1937,1937,
 tenthorey-v,Tenthorey,Victor Tenthorey,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 besson-l-lucien,Besson,Lucien Besson,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 representee-par-m-guibourt,représentée par M. Guibourt,représentée par M. Guibourt,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
-dumont-a,Dumont,Augustin Dumont,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
+dumont-a-augustin,Dumont,Augustin Dumont,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 wandewalle-j,Wandewalle,J. Wandewalle,1,1,1,president,1937,1937,Documents généraux (par ordre chronologique)
 borie-a,Borie,André Borie,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 gianotti-a,Gianotti,A. Gianotti,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
@@ -858,7 +865,6 @@ clerc-a-andre,Clerc,André Clerc,1,1,1,administrateur,1937,1937,Documents géné
 tassart-l,Tassart,Louis Tassart,1,1,1,president,1937,1937,Documents généraux (par ordre chronologique)
 gardanez-a,Gardanez,A. Gardanez,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 tremeau-m,Trémeau,Maurice Trémeau,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
-fisch-a,Fisch,André Fisch,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 rambaud-s,Rambaud,Sociétéphane Rambaud,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 chardin-j,Chardin,Jules Chardin,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 de-la-motte-saint-pierre-r,de la Motte Saint-Pierre,Robert de la Motte Saint-Pierre,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
@@ -905,6 +911,7 @@ rauch-g,Rauch,Georges Rauch,1,1,1,administrateur,1937,1937,Documents généraux 
 marovoay,Marovoay,Marovoay,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 rawleigh,Rawleigh,Rawleigh,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 tsivangiana,Tsivangiana,Tsivangiana,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
+cafe-r,Café.,Robert Café.,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 ivondro,Ivondro,Ivondro,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 district-sakalava,district Sakalava,district Sakalava,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
 nossi-be-rolland,Nossi-Bé. Rolland,Nossi-Bé. Rolland,1,1,1,administrateur,1937,1937,Documents généraux (par ordre chronologique)
@@ -1007,6 +1014,7 @@ depoux-r,Depoux,Raymond Depoux,1,1,1,administrateur,1956,1956,Documents généra
 jacques-desportes-j,Jacques Desportes,Jean- Jacques Desportes,1,1,1,administrateur,1956,1956,Documents généraux (par ordre chronologique)
 duchemin-g,Duchemin,Georges Duchemin,1,1,1,administrateur,1956,1956,Documents généraux (par ordre chronologique)
 hermil-a,Hermil,André Hermil,1,1,1,administrateur,1956,1956,Documents généraux (par ordre chronologique)
+jullien-a-armand,Jullien,Armand Jullien,1,1,1,administrateur,1956,1956,Documents généraux (par ordre chronologique)
 minerais,« Minerais,« Minerais,1,1,1,administrateur,1956,1956,Documents généraux (par ordre chronologique)
 parls,PARlS,PARlS,1,1,1,administrateur,1956,1956,Documents généraux (par ordre chronologique)
 g-h-smadja,G.- H. Smadja,G.- H. Smadja,1,1,1,administrateur,1973,1973,Documents généraux (par ordre chronologique)
@@ -1025,7 +1033,7 @@ frere-aine-de-jean-bauer-ep-rageot,frère aîné de Jean Bauer ép. Rageot],frè
 darrieux-s,Darrieux,S. A. Maxime Darrieux,1,1,1,administrateur,1973,1973,Documents généraux (par ordre chronologique)
 fils,Fils,Fils,1,1,1,administrateur,1973,1973,Documents généraux (par ordre chronologique)
 barroussel-p,Barroussel,Pierre Barroussel,1,1,1,administrateur,1973,1973,Documents généraux (par ordre chronologique)
-brun-g,Brun,Gustave Brun,1,1,1,administrateur,1973,1973,Documents généraux (par ordre chronologique)
+brun-g-gustave,Brun,Gustave Brun,1,1,1,administrateur,1973,1973,Documents généraux (par ordre chronologique)
 guillard-r,Guillard,Roger Guillard,1,1,1,administrateur,1973,1973,Documents généraux (par ordre chronologique)
 fille-de-louis-de-vogue,fille de Louis de Vogüé,fille de Louis de Vogüé,1,1,1,president,1973,1973,Documents généraux (par ordre chronologique)
 de-la-motte-st-pierre-f,de la Motte St-Pierre,François de la Motte St-Pierre,1,1,1,president,1973,1973,Documents généraux (par ordre chronologique)
@@ -1051,6 +1059,7 @@ fille-de-louis,fille de Louis,fille de Louis,1,1,1,president,1950,1950,Industrie
 niece-de-robert-ep-lucie-sommier,nièce de Robert ép. Lucie Sommier,nièce de Robert ép. Lucie Sommier,1,1,1,president,1950,1950,Industries agro-alimentaires
 potier-de-la-morandiere-l,Potier de la Morandière,L. Potier de la Morandière,1,1,1,president,1953,1953,Industries agro-alimentaires
 schwob-j,Schwob,J. Schwob,1,1,1,administrateur,1953,1953,Industries agro-alimentaires
+jullien-a,Jullien,A. Jullien,1,1,1,administrateur,1953,1953,Industries agro-alimentaires
 duvaux,Duvaux,Duvaux,1,1,1,vice_president,1913,1913,Industries agro-alimentaires
 merciers,Merciers,Merciers,1,1,1,vice_president,1913,1913,Industries agro-alimentaires
 colson,Colson,Colson,1,1,1,administrateur,1913,1913,Industries agro-alimentaires
@@ -1082,8 +1091,6 @@ romazzotti,Romazzotti,Romazzotti,1,1,1,administrateur,1925,1925,Documents géné
 klingenthal,Klingenthal,Klingenthal,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 gresswiller,Gresswiller,Gresswiller,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 buenos-aires,Buenos-Aires,Buenos-Aires,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-santiago,Santiago,Santiago,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
-madrid,Madrid,Madrid,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 etc-aciers-lamines-en-bandes,etc. Aciers laminés en bandes,etc. Aciers laminés en bandes,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 etc-scies-montees-de-jardiniers,etc. Scies montées de jardiniers,etc. Scies montées de jardiniers,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
 limes,Limes,Limes,1,1,1,administrateur,1925,1925,Documents généraux (par ordre chronologique)
@@ -1135,24 +1142,20 @@ chantiers-dubigeon-a,Chantiers Dubigeon,Anciens Chantiers Dubigeon,1,1,1,adminis
 regionale-de-l-ouest-a,régionale de l'Ouest,Alliance régionale de l'Ouest,1,1,1,administrateur,1930,1930,Banques et groupes financiers
 electrique-de-la-basse-loire-e,électrique de la Basse-Loire,Énergie électrique de la Basse-Loire,1,1,1,administrateur,1930,1930,Banques et groupes financiers
 fill-c,Fill,Carburateur Fill,1,1,1,administrateur,1930,1930,Banques et groupes financiers
-tulear,Tuléar,Tuléar,1,1,1,administrateur,1953,1953,Industries agro-alimentaires
 francou-p,Francou,Paul Jean-Jacques Francou,1,1,1,administrateur,1922,1922,Industries agro-alimentaires
+superieur-a,supérieur,Anfa supérieur,1,1,1,administrateur,1946,1946,Industries agro-alimentaires
+boissiere,Boissière,Boissière,1,1,1,administrateur,1946,1946,Industries agro-alimentaires
 jacques-francou-j,Jacques Francou,Jean- Jacques Francou,1,1,1,administrateur,1950,1950,Industries agro-alimentaires
 bourhis-g-gustave,Bourhis,Gustave Bourhis,1,1,1,administrateur,1925,1925,Industries
 de-fontbrune-h,de Fontbrune,Henri de Fontbrune,1,1,1,administrateur,1925,1925,Industries
 et-gaston-ratinaud,et Gaston Ratinaud,et Gaston Ratinaud,1,1,1,administrateur,1925,1925,Industries
-debrun,Debrun,Debrun,1,1,1,administrateur,1901,1901,"Transports fluviaux, maritimes et aériens"
 lavigne,Lavigne,Lavigne,1,1,1,administrateur,1901,1901,"Transports fluviaux, maritimes et aériens"
 cordonnier,Cordonnier,Cordonnier,1,1,1,administrateur,1901,1901,"Transports fluviaux, maritimes et aériens"
 morineau-c,Morineau,Morineau,1,1,1,administrateur,1901,1901,"Transports fluviaux, maritimes et aériens"
-verspieren,Verspieren,Verspieren,1,1,1,administrateur,1901,1901,"Transports fluviaux, maritimes et aériens"
 bertin-p,Bertin,P. Bertin,1,1,1,administrateur,1912,1912,Mines
 thiriaux-a,Thiriaux,A. Thiriaux,1,1,1,administrateur,1912,1912,Mines
 ed-prenat,Ed. Prénat,Ed. Prénat,1,1,1,administrateur,1902,1902,Commerce
-wolff-l,Wolff,Lazare Wolff,1,1,1,administrateur,1902,1902,Commerce
-souchon-l,Souchon,Lucien Souchon,1,1,1,administrateur,1902,1902,Commerce
 delegues-a,délégués,Administrateurs délégués,1,1,1,administrateur,1902,1902,Commerce
-pagnoud-c,Pagnoud,Ch. Pagnoud,1,1,1,administrateur,1902,1902,Commerce
 montee-des-carmelites,montée des Carmélites,montée des Carmélites,1,1,1,administrateur,1902,1902,Commerce
 et-ch-hallot,et Ch. Hallot,et Ch. Hallot,1,1,1,administrateur,1902,1902,Commerce
 imbert-l,Imbert,L. Imbert,1,1,1,administrateur,1902,1902,Commerce
@@ -1229,7 +1232,7 @@ christol-l,Christol,L. Christol,1,1,1,administrateur,1945,1945,Industries
 anduze-faris-p,Anduze-Faris,P. Anduze-Faris,1,1,1,administrateur,1945,1945,Industries
 lepage-p,Lepage,P. Lepage,1,1,1,administrateur,1945,1945,Industries
 verberckmoes-s,Verberckmoës,S.-J. Verberckmoës,1,1,1,administrateur,1899,1899,Mines
-a-courmes,-A. Courmes,-A. Courmes,1,1,1,administrateur,1899,1899,Mines
+courmes-m,Courmes,M.-A. Courmes,1,1,1,administrateur,1899,1899,Mines
 boissier,Boissier,Boissier,1,1,1,administrateur,1924,1924,Commerce
 nestor,Nestor,Nestor,1,1,1,administrateur,1924,1924,Commerce
 masolambo,Masolambo,Masolambo,1,1,1,administrateur,1938,1938,Commerce
@@ -1310,7 +1313,6 @@ thibaud,Thibaud,Thibaud,1,1,1,administrateur,1968,1968,Industries agro-alimentai
 tardieu,Tardieu,Tardieu,1,1,1,administrateur,1968,1968,Industries agro-alimentaires
 industrielle-de-madagascar,industrielle de Madagascar,industrielle de Madagascar,1,1,1,administrateur,1968,1968,Industries agro-alimentaires
 droit-de-timbre-acquitte-par-abonnement-p,? Droit de timbre acquitté par abonnement,? Droit de timbre acquitté par abonnement,1,1,1,administrateur,,,Industries agro-alimentaires
-imbert-p,Imbert,Paul Imbert,1,1,1,administrateur,1934,1934,"Transports fluviaux, maritimes et aériens"
 batellet,Batellet,Batellet,1,1,1,vice_president,1934,1934,"Transports fluviaux, maritimes et aériens"
 entrepots-de-tamatave,Entrepôts de Tamatave,Entrepôts de Tamatave,1,1,1,vice_president,1934,1934,"Transports fluviaux, maritimes et aériens"
 liotard,Liotard,Liotard,1,1,1,vice_president,1934,1934,"Transports fluviaux, maritimes et aériens"
@@ -1352,10 +1354,22 @@ clere-a,Clere,André Clere,1,1,1,administrateur,1934,1934,Mines
 fabre-luce-p,Fabre-Luce,Pierre Fabre-Luce,1,1,1,administrateur,1934,1934,Mines
 bourcy-l,Bourcy,Louis Bourcy,1,1,1,administrateur,1951,1951,Mines
 smadja-g,Smadja,G.-H. Smadja,1,1,1,administrateur,1940,1940,Mines
+cordonnier-l,Cordonnier,Louis Cordonnier,1,1,1,president,1900,1900,Mines
+belmann-a,Belmann,Albert Belmann,1,1,1,administrateur,1900,1900,Mines
+bourdon-c,Bourdon,Charles Bourdon,1,1,1,administrateur,1900,1900,Mines
+de-l-enferna,de l'Enferna,de l'Enferna,1,1,1,administrateur,1900,1900,Mines
+grandgeorge-g,Grandgeorge,Gaston Grandgeorge,1,1,1,administrateur,1900,1900,Mines
+rogez-h,Rogez,Henri Rogez,1,1,1,administrateur,1900,1900,Mines
+suais-a,Suais,Suais,1,1,1,administrateur,1900,1900,Mines
+ayme-de-la-chevreliere-j,Aymé de la Chevrelière,Aymé de la Chevrelière,1,1,1,administrateur,1908,1908,Mines
+d-orgeval-r,d'Orgeval,Robert d'Orgeval,1,1,1,administrateur,1908,1908,Mines
+duros-h,Duros,Henri Duros,1,1,1,administrateur,1908,1908,Mines
+de-cocquiel-g,de Cocquiel,Georges de Cocquiel,1,1,1,administrateur,1908,1908,Mines
+thibault,Thibault,Thibault,1,1,1,administrateur,1908,1908,Mines
+foyot-l,Foyot,Louis Foyot,1,1,1,administrateur,1908,1908,Mines
+acat-g,Acat,G. L. Acat,1,1,1,administrateur,1908,1908,Mines
+g-famin,G Famin,G Famin,1,1,1,administrateur,1910,1910,Mines
 famin-g,Famin,G. Famin,1,1,1,administrateur,1912,1912,Mines
-binger-g,Binger,Binger,1,1,1,administrateur,1912,1912,Mines
-morel-l,Morel,L. Morel,1,1,1,administrateur,1912,1912,Mines
-ardillier-g,Ardillier,G. Ardillier,1,1,1,administrateur,1912,1912,Mines
 henry-e,Henry,E. Henry,1,1,1,administrateur,1917,1917,Mines
 lavigne-g,Lavigne,G. Lavigne,1,1,1,administrateur,1917,1917,Mines
 bouliol,Bouliol. 32,Bouliol. 32,1,1,1,administrateur,1920,1920,Mines
@@ -1368,10 +1382,6 @@ bourgougnon-j,Bourgougnon,Jules Bourgougnon,1,1,1,administrateur,1929,1929,Indus
 grawitz-a,Grawitz,Auguste Grawitz,1,1,1,administrateur,1929,1929,Industries agro-alimentaires
 et-georges-zafiropulo,et Georges Zafiropulo,et Georges Zafiropulo,1,1,1,administrateur,1929,1929,Industries agro-alimentaires
 publicite-noirclerc,publicité Noirclerc,publicité Noirclerc,1,1,1,president,1938,1938,Mines
-rue-de-monplaisir-g,rue de Monplaisir,Grande rue de Monplaisir,1,1,1,administrateur,1939,1939,Mines
-travaux,TRAVAUX,TRAVAUX,1,1,1,administrateur,1939,1939,Mines
-traitement,TRAITEMENT,TRAITEMENT,1,1,1,administrateur,1939,1939,Mines
-a-ciel-ouvert-de-graphite-e,à ciel ouvert de graphite,Exploitations à ciel ouvert de graphite,1,1,1,administrateur,1939,1939,Mines
 bauer-g,Bauer,Georges Bauer,1,1,1,president_directeur_general,1951,1951,Mines
 devaux-l,Devaux,Lucien Devaux,1,1,1,administrateur,1925,1925,Industries agro-alimentaires
 dubosc-g,Dubosc,Georges Dubosc,1,1,1,administrateur,1925,1925,Industries agro-alimentaires
@@ -1380,7 +1390,6 @@ a-j,A,J. S. S. F. P. A,1,1,1,administrateur,1925,1925,Industries agro-alimentair
 et-raoul-fournes,et Raoul Fournès,et Raoul Fournès,1,1,1,administrateur,1924,1924,Industries agro-alimentaires
 acieries-du-chili,aciéries du Chili,aciéries du Chili,1,1,1,administrateur,1922,1922,Mines
 lazard,Lazard,Lazard,1,1,1,administrateur,1923,1923,Mines
-forges,Forges,Forges,1,1,1,administrateur,1923,1923,Mines
 delattre-g-georges,Delattre,Georges Delattre,1,1,1,administrateur,1922,1922,Commerce
 edan-a,Edan,Albert Edan,1,1,1,administrateur,1922,1922,Commerce
 levi-h,Lévi,Henri Lévi,1,1,1,administrateur,1922,1922,Commerce
@@ -1495,8 +1504,6 @@ regina,Régina,Régina,1,0,1,directeur,1925,1925,Documents généraux (par ordre
 of-spain-p,of Spain,Port of Spain,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
 georgetown,Georgetown,Georgetown,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
 demerara,Demerara,Demerara,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
-paramaribo,Paramaribo,Paramaribo,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
-caracas,Caracas,Caracas,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
 baranquilla,Baranquilla,Baranquilla,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
 bogota,Bogota,Bogota,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
 amboditavolo,Amboditavolo,Amboditavolo,1,0,1,directeur,1925,1925,Documents généraux (par ordre chronologique)
@@ -1532,5 +1539,5 @@ jehan-j,Jehan,Jehan,1,0,1,commissaire_aux_comptes,1909,1909,Industries agro-alim
 p-e,P,E. C. P,1,0,1,commissaire_aux_comptes,1909,1909,Industries agro-alimentaires
 eugene,Eugène,Eugène,1,0,1,commissaire_aux_comptes,1909,1909,Industries agro-alimentaires
 f-a-andoy,F.- A. Andoy,F.- A. Andoy,1,0,1,directeur,1902,1902,Banques et groupes financiers
-watteville,Watteville,Watteville,1,0,1,commissaire_aux_comptes,1899,1899,Mines
+watteville-a,Watteville,Watteville,1,0,1,commissaire_aux_comptes,1899,1899,Mines
 guffroy-m,Guffroy,Maurice Guffroy,1,0,1,commissaire_aux_comptes,1899,1899,Mines

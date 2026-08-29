@@ -24,6 +24,12 @@
       <data key="n_n_directors">16</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
+    <node id="baliakaraidin">
+      <data key="n_label">Balia-Karaïdin</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Proche-Orient</data>
+    </node>
     <node id="banquefonciereegyptelandbankegyptalexandrie">
       <data key="n_label">Banque foncière d'Égypte Land Bank of Egypt, Alexandrie</data>
       <data key="n_sectors"></data>
@@ -54,6 +60,12 @@
       <data key="n_n_directors">22</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
+    <node id="banquesalonique">
+      <data key="n_label">Banque de Salonique</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">15</data>
+      <data key="n_territory">Proche-Orient</data>
+    </node>
     <node id="banquesyrie">
       <data key="n_label">Banque française de Syrie</data>
       <data key="n_sectors">Banques et sociétés financières; Documents généraux</data>
@@ -75,7 +87,7 @@
     <node id="caissehypothecaireegypte">
       <data key="n_label">Caisse hypothécaire d'Égypte</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">30</data>
+      <data key="n_n_directors">32</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="canalcorinthe">
@@ -87,19 +99,19 @@
     <node id="cheminferdamashamahprolongements">
       <data key="n_label">Chemin de fer Damas-Hamah et prolongements</data>
       <data key="n_sectors">Transports terrestres</data>
-      <data key="n_n_directors">36</data>
+      <data key="n_n_directors">39</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="cheminferottomanjaffajerusalemprolongements">
       <data key="n_label">Société du Chemin de fer ottoman de Jaffa à Jérusalem et prolongements</data>
       <data key="n_sectors">Transports terrestres</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="cheminferottomansaloniquemonastir">
       <data key="n_label">Société du Chemin de fer ottoman Salonique-Monastir</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">12</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="creditfoncieregyptien">
@@ -136,12 +148,6 @@
       <data key="n_label">Etablissements KERN</data>
       <data key="n_sectors">Documents généraux</data>
       <data key="n_n_directors">12</data>
-      <data key="n_territory">Proche-Orient</data>
-    </node>
-    <node id="etablissementsluchaire">
-      <data key="n_label">Établissements LUCHAIRE</data>
-      <data key="n_sectors">Documents généraux</data>
-      <data key="n_n_directors">19</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="exploitaitoncheminfercilicie">
@@ -222,6 +228,12 @@
       <data key="n_n_directors">6</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
+    <node id="industrielleasphaltespetroleslattaquie">
+      <data key="n_label">Société industrielle des Asphaltes et pétroles de Lattaquié</data>
+      <data key="n_sectors">Sociétés diverses</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Proche-Orient</data>
+    </node>
     <node id="industriellecommercialeagricoleturquie">
       <data key="n_label">Société Industrielle, Commerciale et Agricole de Turquie</data>
       <data key="n_sectors"></data>
@@ -270,6 +282,12 @@
       <data key="n_n_directors">27</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
+    <node id="mineskassandra">
+      <data key="n_label">Société des mines de Kassandra</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Proche-Orient</data>
+    </node>
     <node id="minesselenitza">
       <data key="n_label">Société des Mines de Sélénitza</data>
       <data key="n_sectors"></data>
@@ -291,13 +309,13 @@
     <node id="orientalcarpetmanufacturersltd">
       <data key="n_label">Oriental Carpet Manufacturers, Ltd</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">25</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="ottomanecheminfersmyrnecassabaprolongement">
       <data key="n_label">Société ottomane du Chemin de fer Smyrne-Cassaba et prolongement</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">16</data>
+      <data key="n_n_directors">15</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="ottomaneeauxbeyrouth">
@@ -375,7 +393,7 @@
     <node id="radioorient">
       <data key="n_label">Radio-Orient</data>
       <data key="n_sectors">Documents généraux; Sociétés diverses</data>
-      <data key="n_n_directors">37</data>
+      <data key="n_n_directors">35</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="socexploitationcheminsfercilicienordsyrie">
@@ -393,7 +411,7 @@
     <node id="tramwaysconstantinople">
       <data key="n_label">Tramways de Constantinople, puis Tramways et électricité de Constantinople, puis Transports, électricité et gaz</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <node id="tramwayseclairagebeyrouth">
@@ -429,7 +447,7 @@
     <node id="usineslaurium">
       <data key="n_label">Usines du Laurium</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">11</data>
       <data key="n_territory">Proche-Orient</data>
     </node>
     <edge id="e0" source="banquesyriegrandliban" target="banquesyrieliban">
@@ -450,643 +468,706 @@
     <edge id="e5" source="banquefonciereegyptelandbankegyptalexandrie" target="unionfonciereegypte">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e6" source="caissehypothecaireegypte" target="creditfoncierorient">
+    <edge id="e6" source="asphaltespetroleslattaquie" target="industrielleasphaltespetroleslattaquie">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e7" source="immobiliereindustriellebatiment" target="immobiliereregieterrainssalonique">
+    <edge id="e7" source="caissehypothecaireegypte" target="creditfoncierorient">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e8" source="banquefonciereegyptelandbankegyptalexandrie" target="landbankegypt">
+    <edge id="e8" source="immobiliereindustriellebatiment" target="immobiliereregieterrainssalonique">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e9" source="cheminferdamashamahprolongements" target="heraclee">
+    <edge id="e9" source="banquefonciereegyptelandbankegyptalexandrie" target="landbankegypt">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e10" source="cheminferdamashamahprolongements" target="heraclee">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e10" source="georgemallet" target="port">
+    <edge id="e11" source="georgemallet" target="port">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e11" source="port" target="ports">
+    <edge id="e12" source="port" target="ports">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e12" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
+    <edge id="e13" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e13" source="financiereorient" target="ottomanecheminfersmyrnecassabaprolongement">
+    <edge id="e14" source="financiereorient" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e14" source="eauxbeyrouth" target="ottomanegazbeyrouth">
+    <edge id="e15" source="eauxbeyrouth" target="ottomanegazbeyrouth">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e15" source="immobiliereregieterrainssalonique" target="portsaloniqueottomaneconstruction">
+    <edge id="e16" source="immobiliereregieterrainssalonique" target="portsaloniqueottomaneconstruction">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e16" source="banquesyriegrandliban" target="ports">
+    <edge id="e17" source="banquesyriegrandliban" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e17" source="georgemallet" target="ports">
+    <edge id="e18" source="georgemallet" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e18" source="louisemmanueladoplphegoranflauxbaronandree" target="port">
+    <edge id="e19" source="louisemmanueladoplphegoranflauxbaronandree" target="port">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e19" source="cheminferdamashamahprolongements" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e20" source="cheminferdamashamahprolongements" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e20" source="cheminferdamashamahprolongements" target="ports">
+    <edge id="e21" source="cheminferdamashamahprolongements" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e21" source="minesbaliakaraidin" target="miniereindustrielleplakalnitza">
+    <edge id="e22" source="baliakaraidin" target="minesbaliakaraidin">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e22" source="minesbaliakaraidin" target="plakalnitza">
+    <edge id="e23" source="baliakaraidin" target="mineskassandra">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e23" source="banquehypothecairefrancoegyptienne" target="foncieresyrie">
+    <edge id="e24" source="minesbaliakaraidin" target="miniereindustrielleplakalnitza">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e24" source="creditfoncierorient" target="creditfonciersyrie">
+    <edge id="e25" source="minesbaliakaraidin" target="plakalnitza">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e25" source="ottomanecheminfersmyrnecassabaprolongement" target="tombac">
+    <edge id="e26" source="financiereorient" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e26" source="ottomanecheminfersmyrnecassabaprolongement" target="ottomaneheraclee">
+    <edge id="e27" source="banquehypothecairefrancoegyptienne" target="foncieresyrie">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e27" source="financiereorient" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e28" source="creditfoncierorient" target="creditfonciersyrie">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e28" source="cheminferdamashamahprolongements" target="exploitaitoncheminfercilicie">
+    <edge id="e29" source="ottomanecheminfersmyrnecassabaprolongement" target="tombac">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e30" source="ottomanecheminfersmyrnecassabaprolongement" target="ottomaneheraclee">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e31" source="cheminferdamashamahprolongements" target="exploitaitoncheminfercilicie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e29" source="cheminferdamashamahprolongements" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e32" source="cheminferdamashamahprolongements" target="socexploitationcheminsfercilicienordsyrie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e30" source="banquesyrieliban" target="cheminferdamashamahprolongements">
+    <edge id="e33" source="banquesyrieliban" target="cheminferdamashamahprolongements">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e31" source="cheminferdamashamahprolongements" target="minesbaliakaraidin">
+    <edge id="e34" source="cheminferdamashamahprolongements" target="minesbaliakaraidin">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e32" source="etablissementsluchaire" target="radioorient">
+    <edge id="e35" source="banquesyrie" target="cheminferdamashamahprolongements">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e33" source="banquesyrie" target="cheminferdamashamahprolongements">
+    <edge id="e36" source="banquesalonique" target="banquesyrie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e34" source="heraclee" target="portquaisentrepotsbeyrouth">
+    <edge id="e37" source="banquesalonique" target="mineskassandra">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e35" source="banquesyriegrandliban" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e38" source="banquesalonique" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e36" source="georgemallet" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e39" source="heraclee" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e37" source="banquesyriegrandliban" target="radioorient">
+    <edge id="e40" source="banquesyriegrandliban" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e38" source="tramwayseclairagebeyrouth" target="tramwayselectricite">
+    <edge id="e41" source="georgemallet" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e39" source="banquesyrieliban" target="tramwayseclairagebeyrouth">
+    <edge id="e42" source="banquesyriegrandliban" target="radioorient">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e40" source="cheminferdamashamahprolongements" target="tramwayseclairagebeyrouth">
+    <edge id="e43" source="tramwayseclairagebeyrouth" target="tramwayselectricite">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e41" source="minesbaliakaraidin" target="ottomanemineskarassou">
+    <edge id="e44" source="banquesyrieliban" target="tramwayseclairagebeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e42" source="minesbaliakaraidin" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e45" source="cheminferdamashamahprolongements" target="tramwayseclairagebeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e43" source="internationale" target="ottomaneheraclee">
+    <edge id="e46" source="minesbaliakaraidin" target="mineskassandra">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e44" source="financiereorient" target="tombac">
+    <edge id="e47" source="minesbaliakaraidin" target="ottomanemineskarassou">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e45" source="minesselenitza" target="ottomanecheminfersmyrnecassabaprolongement">
+    <edge id="e48" source="minesbaliakaraidin" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e46" source="minesselenitza" target="ottomaneheraclee">
+    <edge id="e49" source="minesbaliakaraidin" target="orientalcarpetmanufacturersltd">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e47" source="ottomaneheraclee" target="tombac">
+    <edge id="e50" source="internationale" target="ottomaneheraclee">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e48" source="heraclee" target="ottomanecheminfersmyrnecassabaprolongement">
+    <edge id="e51" source="financiereorient" target="tombac">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e49" source="ottomaneheraclee" target="quaisdocksentrepotsconstantinople">
+    <edge id="e52" source="minesselenitza" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e50" source="ottomaneheraclee" target="portquaisentrepotsbeyrouth">
+    <edge id="e53" source="minesselenitza" target="ottomaneheraclee">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e51" source="imperialeottomaneroutebeyrouthdamas" target="ottomaneheraclee">
+    <edge id="e54" source="ottomaneheraclee" target="tombac">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e52" source="imperialeottomaneroutebeyrouthdamas" target="portquaisentrepotsbeyrouth">
+    <edge id="e55" source="heraclee" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e53" source="georgemallet" target="ottomaneheraclee">
+    <edge id="e56" source="ottomaneheraclee" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e54" source="ottomaneheraclee" target="port">
+    <edge id="e57" source="ottomaneheraclee" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e55" source="cheminferdamashamahprolongements" target="ottomaneheraclee">
+    <edge id="e58" source="imperialeottomaneroutebeyrouthdamas" target="ottomaneheraclee">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e56" source="exploitationsminieresserbie" target="heraclee">
+    <edge id="e59" source="imperialeottomaneroutebeyrouthdamas" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e57" source="georgemallet" target="heraclee">
+    <edge id="e60" source="georgemallet" target="ottomaneheraclee">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e58" source="cheminferdamashamahprolongements" target="georgemallet">
+    <edge id="e61" source="ottomaneheraclee" target="port">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e59" source="cheminferdamashamahprolongements" target="port">
+    <edge id="e62" source="cheminferdamashamahprolongements" target="ottomaneheraclee">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e60" source="eauxbeyrouth" target="ottomaneeauxbeyrouth">
+    <edge id="e63" source="exploitationsminieresserbie" target="heraclee">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e61" source="ottomaneeauxbeyrouth" target="ottomanegazbeyrouth">
+    <edge id="e64" source="georgemallet" target="heraclee">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e62" source="grandsmoulinsbulgariebourgas" target="meunierelevantdamasjaffa">
+    <edge id="e65" source="cheminferdamashamahprolongements" target="georgemallet">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e63" source="landbankegypt" target="unionfonciereegypte">
+    <edge id="e66" source="cheminferdamashamahprolongements" target="port">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e64" source="landbankegypt" target="unionovinecoloniale">
+    <edge id="e67" source="eauxbeyrouth" target="ottomaneeauxbeyrouth">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e68" source="ottomaneeauxbeyrouth" target="ottomanegazbeyrouth">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e69" source="grandsmoulinsbulgariebourgas" target="meunierelevantdamasjaffa">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e70" source="landbankegypt" target="unionfonciereegypte">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e71" source="landbankegypt" target="unionovinecoloniale">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e72" source="airunion" target="banquepaysorient">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e73" source="airunion" target="banquesyriegrandliban">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e74" source="exploitaitoncheminfercilicie" target="heraclee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e75" source="heraclee" target="socexploitationcheminsfercilicienordsyrie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e76" source="banquesyrieliban" target="exploitaitoncheminfercilicie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e77" source="banquesyrieliban" target="minesbaliakaraidin">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e78" source="banquesyrieliban" target="socexploitationcheminsfercilicienordsyrie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e79" source="exploitaitoncheminfercilicie" target="minesbaliakaraidin">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e80" source="minesbaliakaraidin" target="socexploitationcheminsfercilicienordsyrie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e81" source="exploitaitoncheminfercilicie" target="exploitationcheminsferorientaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e82" source="exploitationcheminsferorientaux" target="socexploitationcheminsfercilicienordsyrie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e83" source="banquesyrie" target="exploitationcheminsferorientaux">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e84" source="banquesyrie" target="mineskassandra">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e85" source="banquesyrie" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e65" source="airunion" target="banquepaysorient">
+    <edge id="e86" source="mineskassandra" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e66" source="airunion" target="banquesyriegrandliban">
+    <edge id="e87" source="banquesyrie" target="creditfoncieregyptien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e67" source="exploitaitoncheminfercilicie" target="heraclee">
+    <edge id="e88" source="banquesyriegrandliban" target="heraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e68" source="heraclee" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e89" source="banquesyriegrandliban" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e69" source="banquesyrieliban" target="exploitaitoncheminfercilicie">
+    <edge id="e90" source="banquesyriegrandliban" target="francemediterranee1920">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e70" source="banquesyrieliban" target="minesbaliakaraidin">
+    <edge id="e91" source="banquefrancoserbe" target="banquesyriegrandliban">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e71" source="banquesyrieliban" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e92" source="banquefrancoserbe" target="georgemallet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e72" source="exploitaitoncheminfercilicie" target="minesbaliakaraidin">
+    <edge id="e93" source="banquefrancoserbe" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e73" source="minesbaliakaraidin" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e94" source="banquefrancoserbe" target="minesbaliakaraidin">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e74" source="exploitaitoncheminfercilicie" target="exploitationcheminsferorientaux">
+    <edge id="e95" source="banquefrancoserbe" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e75" source="exploitationcheminsferorientaux" target="socexploitationcheminsfercilicienordsyrie">
+    <edge id="e96" source="banquefrancoserbe" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e76" source="cheminferottomansaloniquemonastir" target="etablissementsluchaire">
+    <edge id="e97" source="banquefrancoserbe" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e77" source="cheminferottomansaloniquemonastir" target="tramwaysconstantinople">
+    <edge id="e98" source="banquesyriegrandliban" target="georgemallet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e78" source="etablissementsluchaire" target="tramwaysconstantinople">
+    <edge id="e99" source="banquesyriegrandliban" target="minesbaliakaraidin">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e79" source="banquesyrie" target="exploitationcheminsferorientaux">
+    <edge id="e100" source="banquesyriegrandliban" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e80" source="banquesyrie" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e101" source="banquesyriegrandliban" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e81" source="banquesyrie" target="creditfoncieregyptien">
+    <edge id="e102" source="georgemallet" target="minesbaliakaraidin">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e82" source="banquesyriegrandliban" target="heraclee">
+    <edge id="e103" source="georgemallet" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e83" source="banquesyriegrandliban" target="portquaisentrepotsbeyrouth">
+    <edge id="e104" source="louisemmanueladoplphegoranflauxbaronandree" target="minesbaliakaraidin">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e84" source="banquesyriegrandliban" target="francemediterranee1920">
+    <edge id="e105" source="louisemmanueladoplphegoranflauxbaronandree" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e85" source="banquefrancoserbe" target="banquesyriegrandliban">
+    <edge id="e106" source="minesbaliakaraidin" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e86" source="banquefrancoserbe" target="georgemallet">
+    <edge id="e107" source="minesbaliakaraidin" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e87" source="banquefrancoserbe" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e108" source="minesbaliakaraidin" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e88" source="banquefrancoserbe" target="minesbaliakaraidin">
+    <edge id="e109" source="port" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e89" source="banquefrancoserbe" target="port">
+    <edge id="e110" source="ports" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e90" source="banquefrancoserbe" target="ports">
+    <edge id="e111" source="banquesyriegrandliban" target="exploitationcheminsferorientaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e91" source="banquefrancoserbe" target="quaisdocksentrepotsconstantinople">
+    <edge id="e112" source="exploitationcheminsferorientaux" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e92" source="banquesyriegrandliban" target="georgemallet">
+    <edge id="e113" source="banquesyriegrandliban" target="tramwayselectricite">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e93" source="banquesyriegrandliban" target="minesbaliakaraidin">
+    <edge id="e114" source="creditfonciersyrie" target="etablissementskern">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e94" source="banquesyriegrandliban" target="port">
+    <edge id="e115" source="creditfonciersyrie" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e95" source="banquesyriegrandliban" target="quaisdocksentrepotsconstantinople">
+    <edge id="e116" source="etablissementskern" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e96" source="georgemallet" target="minesbaliakaraidin">
+    <edge id="e117" source="banquesyriegrandliban" target="cheminferdamashamahprolongements">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e97" source="georgemallet" target="quaisdocksentrepotsconstantinople">
+    <edge id="e118" source="banquesyrieliban" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e98" source="louisemmanueladoplphegoranflauxbaronandree" target="minesbaliakaraidin">
+    <edge id="e119" source="banquesyrieliban" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e99" source="louisemmanueladoplphegoranflauxbaronandree" target="quaisdocksentrepotsconstantinople">
+    <edge id="e120" source="banquesyrieliban" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e100" source="minesbaliakaraidin" target="port">
+    <edge id="e121" source="cheminferdamashamahprolongements" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e101" source="minesbaliakaraidin" target="ports">
+    <edge id="e122" source="louisemmanueladoplphegoranflauxbaronandree" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e102" source="minesbaliakaraidin" target="quaisdocksentrepotsconstantinople">
+    <edge id="e123" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayseclairagebeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e103" source="port" target="quaisdocksentrepotsconstantinople">
+    <edge id="e124" source="ports" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e104" source="ports" target="quaisdocksentrepotsconstantinople">
+    <edge id="e125" source="ports" target="tramwayseclairagebeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e105" source="banquesyriegrandliban" target="exploitationcheminsferorientaux">
+    <edge id="e126" source="radioorient" target="tramwayseclairagebeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e106" source="exploitationcheminsferorientaux" target="radioorient">
+    <edge id="e127" source="asphaltespetroleslattaquie" target="heraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e107" source="banquesyriegrandliban" target="tramwayselectricite">
+    <edge id="e128" source="baliakaraidin" target="ottomanemineskarassou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e108" source="creditfonciersyrie" target="etablissementskern">
+    <edge id="e129" source="mineskassandra" target="ottomanemineskarassou">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e109" source="creditfonciersyrie" target="industrielleetatslevant">
+    <edge id="e130" source="baliakaraidin" target="banquesalonique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e110" source="etablissementskern" target="industrielleetatslevant">
+    <edge id="e131" source="baliakaraidin" target="eauxbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e111" source="banquesyriegrandliban" target="cheminferdamashamahprolongements">
+    <edge id="e132" source="baliakaraidin" target="ottomaneeauxconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e112" source="banquesyrieliban" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e133" source="banquesalonique" target="eauxbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e113" source="banquesyrieliban" target="ports">
+    <edge id="e134" source="banquesalonique" target="ottomaneeauxconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e114" source="banquesyrieliban" target="radioorient">
+    <edge id="e135" source="eauxbeyrouth" target="mineskassandra">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e115" source="cheminferdamashamahprolongements" target="radioorient">
+    <edge id="e136" source="eauxbeyrouth" target="ottomaneeauxconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e116" source="louisemmanueladoplphegoranflauxbaronandree" target="radioorient">
+    <edge id="e137" source="mineskassandra" target="ottomaneeauxconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e117" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayseclairagebeyrouth">
+    <edge id="e138" source="creditfoncieregyptien" target="minesbaliakaraidin">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e118" source="ports" target="radioorient">
+    <edge id="e139" source="creditfoncieregyptien" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e119" source="ports" target="tramwayseclairagebeyrouth">
+    <edge id="e140" source="miniereindustrielleplakalnitza" target="orientalcarpetmanufacturersltd">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e120" source="radioorient" target="tramwayseclairagebeyrouth">
+    <edge id="e141" source="orientalcarpetmanufacturersltd" target="plakalnitza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e121" source="asphaltespetroleslattaquie" target="heraclee">
+    <edge id="e142" source="miniereindustrielleplakalnitza" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e122" source="creditfoncieregyptien" target="minesbaliakaraidin">
+    <edge id="e143" source="nationalecommerceindustrieagriculturedansempireottoman" target="plakalnitza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e123" source="creditfoncieregyptien" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e144" source="banquesalonique" target="financiereorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e124" source="minesbaliakaraidin" target="orientalcarpetmanufacturersltd">
+    <edge id="e145" source="banquesalonique" target="creditfoncieregyptien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e125" source="miniereindustrielleplakalnitza" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e146" source="banquefrancoserbe" target="financiereorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e126" source="nationalecommerceindustrieagriculturedansempireottoman" target="plakalnitza">
+    <edge id="e147" source="banquefrancoserbe" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e127" source="banquefrancoserbe" target="financiereorient">
+    <edge id="e148" source="banquefrancoserbe" target="exploitationsminieresserbie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e128" source="banquefrancoserbe" target="ottomanecheminfersmyrnecassabaprolongement">
+    <edge id="e149" source="banquepaysorient" target="caissehypothecaireegypte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e129" source="banquefrancoserbe" target="exploitationsminieresserbie">
+    <edge id="e150" source="banquepaysorient" target="creditfoncierorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e130" source="banquepaysorient" target="caissehypothecaireegypte">
+    <edge id="e151" source="banquepaysorient" target="exploitationcheminsferorientaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e131" source="banquepaysorient" target="creditfoncierorient">
+    <edge id="e152" source="banquepaysorient" target="creditfonciersyrie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e132" source="banquepaysorient" target="exploitationcheminsferorientaux">
+    <edge id="e153" source="banquepaysorient" target="industriellecommercialeagricoleturquie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e133" source="banquepaysorient" target="creditfonciersyrie">
+    <edge id="e154" source="creditfonciersyrie" target="industriellecommercialeagricoleturquie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e134" source="banquepaysorient" target="industriellecommercialeagricoleturquie">
+    <edge id="e155" source="banquepaysorient" target="eauxbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e135" source="creditfonciersyrie" target="industriellecommercialeagricoleturquie">
+    <edge id="e156" source="banquepaysorient" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e136" source="banquepaysorient" target="eauxbeyrouth">
+    <edge id="e157" source="banquepaysorient" target="ottomanegazbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e137" source="banquepaysorient" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e158" source="eauxbeyrouth" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e138" source="banquepaysorient" target="ottomanegazbeyrouth">
+    <edge id="e159" source="nationalecommerceindustrieagriculturedansempireottoman" target="ottomanegazbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e139" source="eauxbeyrouth" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e160" source="caissehypothecaireegypte" target="creditfoncieregyptien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e140" source="nationalecommerceindustrieagriculturedansempireottoman" target="ottomanegazbeyrouth">
+    <edge id="e161" source="caissehypothecaireegypte" target="creditfonciersyrie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e141" source="caissehypothecaireegypte" target="creditfonciersyrie">
+    <edge id="e162" source="banquepretsnantissementsmontspieteegyptiens" target="caissehypothecaireegypte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e142" source="banquepretsnantissementsmontspieteegyptiens" target="caissehypothecaireegypte">
+    <edge id="e163" source="banquepretsnantissementsmontspieteegyptiens" target="creditfoncierorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e143" source="banquepretsnantissementsmontspieteegyptiens" target="creditfoncierorient">
+    <edge id="e164" source="internationale" target="tombac">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e144" source="internationale" target="tombac">
+    <edge id="e165" source="canalcorinthe" target="internationale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e145" source="canalcorinthe" target="internationale">
+    <edge id="e166" source="canalcorinthe" target="usineslaurium">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e146" source="canalcorinthe" target="usineslaurium">
+    <edge id="e167" source="canalcorinthe" target="mineskassandra">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e147" source="exploitaitoncheminfercilicie" target="foncieresyrie">
+    <edge id="e168" source="exploitaitoncheminfercilicie" target="foncieresyrie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e148" source="cheminferottomansaloniquemonastir" target="exploitationcheminsferorientaux">
+    <edge id="e169" source="cheminferottomansaloniquemonastir" target="exploitationcheminsferorientaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e149" source="exploitationcheminsferorientaux" target="tramwayselectricite">
+    <edge id="e170" source="exploitationcheminsferorientaux" target="tramwayselectricite">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e150" source="exploitationcheminsferorientaux" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e171" source="exploitationcheminsferorientaux" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e151" source="creditfoncieregyptien" target="exploitationcheminsferorientaux">
+    <edge id="e172" source="creditfoncieregyptien" target="exploitationcheminsferorientaux">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e152" source="cheminferottomanjaffajerusalemprolongements" target="imperialeottomaneroutebeyrouthdamas">
+    <edge id="e173" source="cheminferottomanjaffajerusalemprolongements" target="imperialeottomaneroutebeyrouthdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e153" source="exploitationsminieresserbie" target="financiereorient">
+    <edge id="e174" source="exploitationsminieresserbie" target="financiereorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e154" source="exploitationsminieresserbie" target="ottomanecheminfersmyrnecassabaprolongement">
+    <edge id="e175" source="exploitationsminieresserbie" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e155" source="exploitationsminieresserbie" target="tombac">
+    <edge id="e176" source="exploitationsminieresserbie" target="tombac">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e156" source="financiereorient" target="minesselenitza">
+    <edge id="e177" source="financiereorient" target="minesselenitza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e157" source="financiereorient" target="ottomaneheraclee">
+    <edge id="e178" source="financiereorient" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e158" source="minesselenitza" target="tombac">
+    <edge id="e179" source="minesselenitza" target="tombac">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e159" source="cheminferdamashamahprolongements" target="ottomanecheminfersmyrnecassabaprolongement">
+    <edge id="e180" source="cheminferdamashamahprolongements" target="ottomanecheminfersmyrnecassabaprolongement">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e160" source="heraclee" target="quaisdocksentrepotsconstantinople">
+    <edge id="e181" source="heraclee" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e161" source="ottomanecheminfersmyrnecassabaprolongement" target="quaisdocksentrepotsconstantinople">
+    <edge id="e182" source="ottomanecheminfersmyrnecassabaprolongement" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e162" source="ottomanecheminfersmyrnecassabaprolongement" target="portquaisentrepotsbeyrouth">
+    <edge id="e183" source="ottomanecheminfersmyrnecassabaprolongement" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e163" source="portquaisentrepotsbeyrouth" target="tombac">
+    <edge id="e184" source="portquaisentrepotsbeyrouth" target="tombac">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e164" source="anciensetablissementsbairdusinesfrancorussespetrograd" target="heraclee">
+    <edge id="e185" source="anciensetablissementsbairdusinesfrancorussespetrograd" target="heraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e165" source="anciensetablissementsbairdusinesfrancorussespetrograd" target="ottomaneheraclee">
+    <edge id="e186" source="anciensetablissementsbairdusinesfrancorussespetrograd" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e166" source="heraclee" target="imperialeottomaneroutebeyrouthdamas">
+    <edge id="e187" source="heraclee" target="imperialeottomaneroutebeyrouthdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e167" source="banquefonciereegyptelandbankegyptalexandrie" target="heraclee">
+    <edge id="e188" source="banquefonciereegyptelandbankegyptalexandrie" target="heraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e168" source="banquefonciereegyptelandbankegyptalexandrie" target="ottomaneheraclee">
+    <edge id="e189" source="banquefonciereegyptelandbankegyptalexandrie" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e169" source="heraclee" target="unionfonciereegypte">
+    <edge id="e190" source="heraclee" target="unionfonciereegypte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e170" source="ottomaneheraclee" target="unionfonciereegypte">
+    <edge id="e191" source="ottomaneheraclee" target="unionfonciereegypte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e171" source="georgemallet" target="minesselenitza">
+    <edge id="e192" source="georgemallet" target="minesselenitza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e172" source="minesselenitza" target="port">
+    <edge id="e193" source="minesselenitza" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e173" source="minesselenitza" target="ports">
+    <edge id="e194" source="minesselenitza" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e174" source="ottomaneheraclee" target="ports">
+    <edge id="e195" source="ottomaneheraclee" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e175" source="exploitationsminieresserbie" target="georgemallet">
+    <edge id="e196" source="exploitationsminieresserbie" target="georgemallet">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e176" source="exploitationsminieresserbie" target="ottomaneheraclee">
+    <edge id="e197" source="exploitationsminieresserbie" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e177" source="exploitationsminieresserbie" target="port">
+    <edge id="e198" source="exploitationsminieresserbie" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e178" source="heraclee" target="port">
+    <edge id="e199" source="heraclee" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e179" source="cheminferdamashamahprolongements" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e200" source="cheminferdamashamahprolongements" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e180" source="heraclee" target="nationalecommerceindustrieagriculturedansempireottoman">
+    <edge id="e201" source="heraclee" target="nationalecommerceindustrieagriculturedansempireottoman">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e181" source="nationalecommerceindustrieagriculturedansempireottoman" target="ottomaneheraclee">
+    <edge id="e202" source="nationalecommerceindustrieagriculturedansempireottoman" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e182" source="ottomaneeauxconstantinople" target="ottomaneheraclee">
+    <edge id="e203" source="ottomaneeauxconstantinople" target="ottomaneheraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e183" source="ottomaneeauxconstantinople" target="quaisdocksentrepotsconstantinople">
+    <edge id="e204" source="ottomaneeauxconstantinople" target="quaisdocksentrepotsconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e184" source="financiereorient" target="heraclee">
+    <edge id="e205" source="financiereorient" target="heraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e185" source="electricitealep" target="heraclee">
+    <edge id="e206" source="electricitealep" target="heraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e186" source="creditfoncieregyptien" target="heraclee">
+    <edge id="e207" source="creditfoncieregyptien" target="heraclee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e187" source="creditfoncieregyptien" target="tramwayselectricite">
+    <edge id="e208" source="creditfoncieregyptien" target="tramwayselectricite">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e188" source="heraclee" target="tramwayselectricite">
+    <edge id="e209" source="heraclee" target="tramwayselectricite">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e189" source="creditfoncieregyptien" target="ottomaneeauxconstantinople">
+    <edge id="e210" source="creditfoncieregyptien" target="ottomaneeauxconstantinople">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e190" source="creditfoncieregyptien" target="unionfonciereegypte">
+    <edge id="e211" source="creditfoncieregyptien" target="unionfonciereegypte">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e191" source="creditfonciersyrie" target="louisemmanueladoplphegoranflauxbaronandree">
+    <edge id="e212" source="creditfonciersyrie" target="louisemmanueladoplphegoranflauxbaronandree">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e192" source="creditfonciersyrie" target="ports">
+    <edge id="e213" source="creditfonciersyrie" target="ports">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e193" source="creditfonciersyrie" target="libanosyriennetabacs">
+    <edge id="e214" source="creditfonciersyrie" target="libanosyriennetabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e194" source="creditfonciersyrie" target="ottomanetramwayseclairageelectriquesdamas">
+    <edge id="e215" source="creditfonciersyrie" target="ottomanetramwayseclairageelectriquesdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e195" source="libanosyriennetabacs" target="ottomanetramwayseclairageelectriquesdamas">
+    <edge id="e216" source="libanosyriennetabacs" target="ottomanetramwayseclairageelectriquesdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e196" source="cheminferdamashamahprolongements" target="minesselenitza">
+    <edge id="e217" source="cheminferdamashamahprolongements" target="minesselenitza">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e197" source="cheminferdamashamahprolongements" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e218" source="cheminferdamashamahprolongements" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e198" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e219" source="louisemmanueladoplphegoranflauxbaronandree" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e199" source="port" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e220" source="port" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e200" source="ports" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e221" source="ports" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e201" source="cheminferdamashamahprolongements" target="portsaloniqueottomaneconstruction">
+    <edge id="e222" source="cheminferdamashamahprolongements" target="portsaloniqueottomaneconstruction">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e202" source="banquepretsnantissementsmontspieteegyptiens" target="cheminferdamashamahprolongements">
+    <edge id="e223" source="banquepretsnantissementsmontspieteegyptiens" target="cheminferdamashamahprolongements">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e203" source="eauxbeyrouth" target="ottomaneeauxconstantinople">
+    <edge id="e224" source="electricitealep" target="ottomanetramwayseclairageelectriquesdamas">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e204" source="electricitealep" target="ottomanetramwayseclairageelectriquesdamas">
+    <edge id="e225" source="electricitealep" target="grandshotelslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e205" source="electricitealep" target="grandshotelslevant">
+    <edge id="e226" source="electricitealep" target="meunierelevantdamasjaffa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e206" source="electricitealep" target="meunierelevantdamasjaffa">
+    <edge id="e227" source="francemediterranee1920" target="grandshotelslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e207" source="francemediterranee1920" target="grandshotelslevant">
+    <edge id="e228" source="francemediterranee1920" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e208" source="francemediterranee1920" target="industrielleetatslevant">
+    <edge id="e229" source="francemediterranee1920" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e209" source="francemediterranee1920" target="radioorient">
+    <edge id="e230" source="grandshotelslevant" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e210" source="grandshotelslevant" target="industrielleetatslevant">
+    <edge id="e231" source="grandshotelslevant" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e211" source="grandshotelslevant" target="radioorient">
+    <edge id="e232" source="industrielleetatslevant" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e212" source="industrielleetatslevant" target="radioorient">
+    <edge id="e233" source="immobiliereindustriellebatiment" target="portsaloniqueottomaneconstruction">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e213" source="immobiliereindustriellebatiment" target="portsaloniqueottomaneconstruction">
+    <edge id="e234" source="industrielleetatslevant" target="tramwayselectricite">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e214" source="industrielleetatslevant" target="tramwayselectricite">
+    <edge id="e235" source="minesselenitza" target="tramwayslibanaisnordsudbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e215" source="minesselenitza" target="tramwayslibanaisnordsudbeyrouth">
+    <edge id="e236" source="orientalcarpetmanufacturersltd" target="tombac">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e216" source="imperialeottomaneroutebeyrouthdamas" target="port">
+    <edge id="e237" source="imperialeottomaneroutebeyrouthdamas" target="port">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e217" source="port" target="portquaisentrepotsbeyrouth">
+    <edge id="e238" source="port" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e218" source="tramwaysconstantinople" target="tramwayselectricite">
+    <edge id="e239" source="tramwaysconstantinople" target="tramwayselectricite">
       <data key="e_weight">1</data>
     </edge>
   </graph>

@@ -40,7 +40,6 @@ graeve-e,banqueauxiliairecoloniale,1,1922,1922,administrateur,1
 hebd,banqueauxiliairecoloniale,1,1922,1922,administrateur,1
 papin-beaufond-t,banqueauxiliairecoloniale,1,1922,1922,president,1
 picard-j,banqueauxiliairecoloniale,1,1922,1922,administrateur,1
-pointe-a-pitre,banqueauxiliairecoloniale,1,1922,1922,administrateur,1
 ruillier-j,banqueauxiliairecoloniale,1,1922,1922,administrateur,1
 st-aude-stil,banqueauxiliairecoloniale,1,1922,1922,administrateur,1
 dain-c,banqueguadeloupe,1,1922,1922,administrateur,1
@@ -73,7 +72,6 @@ parent-e,caoutchoucscaroni,1,1901,1901,administrateur,1
 amboditavolo,chouanard,1,,,directeur,0
 baranquilla,chouanard,1,,,directeur,0
 bogota,chouanard,1,,,directeur,0
-caracas,chouanard,1,,,directeur,0
 clappier,chouanard,1,,,administrateur,1
 cunisset,chouanard,1,,,administrateur,1
 demerara,chouanard,1,,,directeur,0
@@ -82,7 +80,6 @@ hankow,chouanard,1,,,directeur,0
 mana,chouanard,1,,,directeur,0
 maraanisetra,chouanard,1,,,directeur,0
 of-spain-p,chouanard,1,,,directeur,0
-paramaribo,chouanard,1,,,directeur,0
 pignons-d-inde,chouanard,1,,,directeur,0
 poids-du-cap,chouanard,1,,,directeur,0
 regina,chouanard,1,,,directeur,0
@@ -95,12 +92,16 @@ comet-p,colonialeagricoleminiere,2,1951,1951,administrateur,1
 de-silans-m,colonialeagricoleminiere,2,1951,1951,president_directeur_general,1
 lamer-l,colonialeagricoleminiere,2,1951,1951,administrateur,1
 nouvelle-de-saint-elie-s,colonialeagricoleminiere,2,1951,1951,administrateur,1
+delgrange-c,colonialeproduitstannants,1,1929,1929,commissaire_aux_comptes,0
 hamon-j,colonialeproduitstannants,1,1933,1933,administrateur,1
 jarry-p,colonialeproduitstannants,1,1933,1933,administrateur,1
 jarry-r-robert,colonialeproduitstannants,1,1933,1933,administrateur,1
+mayoux-r,colonialeproduitstannants,1,1929,1929,commissaire_aux_comptes,0
+delgrange-c,colonialetonnellerie,1,1928,1928,commissaire_aux_comptes,0
 hamon-j,colonialetonnellerie,1,1931,1931,administrateur,1
 jarry-p,colonialetonnellerie,1,1931,1931,administrateur,1
 jarry-r-robert,colonialetonnellerie,1,1931,1931,administrateur,1
+mayoux-demeurant-a-paris-r,colonialetonnellerie,1,1928,1928,commissaire_aux_comptes,0
 benard-g,commercialeantillesfrancaisesfredtanon,1,1930,1930,president,1
 clanis-g,commercialeantillesfrancaisesfredtanon,1,1930,1930,vice_president,1
 fribourg-p,commercialeantillesfrancaisesfredtanon,1,1930,1930,administrateur,1
@@ -235,7 +236,6 @@ herve-j,felixhubert,1,1937,1937,administrateur,1
 huyghues-despointes-a,felixhubert,1,1937,1937,administrateur,1
 larrouy-h,felixhubert,1,1937,1937,administrateur,1
 yang-ting-l,felixhubert,1,1937,1937,administrateur,1
-basse-terre,felixiphigenie,1,1937,1937,gerant,0
 basseterre,felixiphigenie,1,1937,1937,gerant,0
 petit-bourg,felixiphigenie,1,1937,1937,gerant,0
 saint-claude,felixiphigenie,1,1937,1937,gerant,0
@@ -289,8 +289,10 @@ preissig-h,forestiereguyane,2,1921,1922,administrateur,1
 raoust,forestiereguyane,2,1951,1951,administrateur,1
 scieries-de-bien-hoa,forestiereguyane,1,1951,1951,president_directeur_general,1
 wackenheim,forestiereguyane,1,1937,1937,administrateur,1
+contesse-a,franceguyane,1,,,commissaire_aux_comptes,0
 incertains-r,franceguyane,2,1931,1937,administrateur,1
 jameau-j,franceguyane,2,1931,1937,president,1
+m-max-auger-e,franceguyane,1,,,commissaire_aux_comptes,0
 poulalion-p,franceguyane,2,1931,1937,administrateur_delegue,1
 anderson,francocanadiennepechesfrigorifiques,1,1926,1926,president,1
 belloir,francocanadiennepechesfrigorifiques,1,1926,1926,administrateur_delegue,1
@@ -316,6 +318,7 @@ legasse-l-leon,grandepeche,1,1937,1937,administrateur,1
 legasse-l-louis,grandepeche,2,1937,1937,president,1
 urtasum,grandepeche,1,1937,1937,administrateur,1
 fantou-j,groupebouillouxlafontcreditfoncierbresil,1,1911,1911,administrateur,1
+industrielle-de-paris,groupebouillouxlafontcreditfoncierbresil,1,1913,1913,administrateur,1
 marie,groupebouillouxlafontcreditfoncierbresil,1,1911,1911,administrateur,1
 pierre,groupebouillouxlafontcreditfoncierbresil,1,1911,1911,administrateur,1
 de-bondeli-e,guadeloupeennedistributionenergieelectrique,2,,,administrateur,1
@@ -326,6 +329,11 @@ representee-par-m-jacques-fay,guadeloupeennedistributionenergieelectrique,2,,,ad
 representee-par-m-jean-munich,guadeloupeennedistributionenergieelectrique,1,,,administrateur,1
 weiss-p-paul,guadeloupeennedistributionenergieelectrique,1,,,president,1
 witzig-a,guadeloupeennedistributionenergieelectrique,1,,,administrateur,1
+marijon-h,huanchaca,1,1910,1910,administrateur,1
+nava-s,huanchaca,1,1910,1910,administrateur,1
+puelma-l,huanchaca,1,1910,1910,administrateur,1
+senechal-de-la-grange-e,huanchaca,1,1910,1910,administrateur,1
+sola-l,huanchaca,1,1910,1910,administrateur,1
 arie-a,huanchacabolivie,1,1901,1901,administrateur,1
 herrera-f,huanchacabolivie,1,1901,1901,administrateur,1
 l-f-puelma,huanchacabolivie,1,1901,1901,administrateur,1
@@ -348,7 +356,7 @@ chapuy-g,industrielleagricolepointepitre,1,1933,1933,president,1
 chapuy-p,industrielleagricolepointepitre,3,1920,1931,administrateur,1
 doucet-e,industrielleagricolepointepitre,1,1950,1950,administrateur,1
 durand-smet-j,industrielleagricolepointepitre,7,1931,1950,administrateur,1
-gras-a-achille,industrielleagricolepointepitre,1,1913,1913,administrateur,1
+gras-a,industrielleagricolepointepitre,1,1913,1913,administrateur,1
 humbert-lavaiiey-e,industrielleagricolepointepitre,5,1917,1933,administrateur,1
 humbert-lavalley-e,industrielleagricolepointepitre,1,1913,1913,administrateur,1
 kapferer-c,industrielleagricolepointepitre,4,1913,1927,administrateur,1
@@ -514,6 +522,10 @@ noel-salines-de-o,minesorguyanehollandaise,1,1901,1901,president,1
 peixotto-p,minesorguyanehollandaise,1,1938,1938,administrateur,1
 petiton,minesorguyanehollandaise,1,1895,1895,vice_president,1
 stala-j,minesorguyanehollandaise,2,1925,1925,administrateur,1
+dubard-m,minieredragagesguyane,1,1909,1909,administrateur,1
+muller-e-edouard,minieredragagesguyane,1,1909,1909,administrateur,1
+muller-l,minieredragagesguyane,1,1909,1909,administrateur,1
+pennel-p,minieredragagesguyane,1,1909,1909,administrateur,1
 chambaud-g,miniereorapu,1,1951,1951,administrateur,1
 marcel-p,miniereorapu,1,1951,1951,administrateur,1
 thuillier,miniereorapu,1,1951,1951,president,1
@@ -557,7 +569,6 @@ mesuard,navigationguadeloupe,1,1928,1928,administrateur,1
 robiche,navigationguadeloupe,1,1928,1928,administrateur,1
 navigation,navigationtransportsguyaneclanistanon,1,1930,1930,administrateur,1
 transports-de-la-guyane,navigationtransportsguyaneclanistanon,1,1930,1930,administrateur,1
-forge,placerbief,1,1937,1937,gerant,0
 jacquemin,placerbief,1,1937,1937,gerant,0
 p-saint-laurent,placerbief,1,1937,1937,gerant,0
 portal-i,placerbief,1,1937,1937,gerant,0
@@ -618,6 +629,12 @@ wallut-c,saintelie,2,1893,1895,administrateur,1
 warnier,saintelie,1,1906,1906,administrateur,1
 boutrouille-a,saintelieadieuvat,1,1937,1937,administrateur,1
 comet-p,saintelieadieuvat,1,1937,1937,president,1
+delvaux-l,southamericangoldfieldslimitedsalisbury,1,1908,1908,administrateur,1
+drosso-c,southamericangoldfieldslimitedsalisbury,1,1908,1908,administrateur,1
+dufour-g,southamericangoldfieldslimitedsalisbury,1,1908,1908,administrateur,1
+jessel-e,southamericangoldfieldslimitedsalisbury,1,1908,1908,administrateur,1
+muller-e-edouard,southamericangoldfieldslimitedsalisbury,1,1908,1908,administrateur,1
+pennel-p,southamericangoldfieldslimitedsalisbury,1,1908,1908,administrateur,1
 boutrouille-a,stelieadieuvat,2,1951,1951,president,1
 comet-p,stelieadieuvat,2,1951,1951,administrateur,1
 foissy-g,stelieadieuvat,2,1951,1951,administrateur,1
@@ -666,10 +683,10 @@ de-magnitot-g,syndicatmana,1,1911,1911,administrateur,1
 delvaux-l,syndicatmana,1,1911,1911,administrateur_delegue,1
 dufour-g,syndicatmana,1,1911,1911,administrateur,1
 lacroix-l,syndicatmana,1,1911,1911,administrateur,1
-manufactures,syndicatmana,4,1911,1911,administrateur,1
 mercier-j-jules,syndicatmana,1,1911,1911,administrateur,1
 motte-e-edouard,syndicatmana,1,1911,1911,administrateur,1
 motte-p-pierre,syndicatmana,1,1911,1911,administrateur,1
+sur-depenses-de-mise-en-exploitation-a,syndicatmana,1,1911,1911,administrateur,1
 suzanne-m,syndicatmana,1,1911,1911,administrateur,1
 de-bondeli-e,terre,1,1937,1937,administrateur,1
 derouet-m,terre,1,1937,1937,administrateur,1
@@ -682,7 +699,6 @@ witzig-a,terre,1,1937,1937,administrateur,1
 briqueterie,theresia,1,1937,1937,administrateur,1
 canal-laussat,theresia,1,1937,1937,administrateur,1
 et-iles-du-salut,theresia,1,1937,1937,administrateur,1
-forge,theresia,1,1937,1937,administrateur,1
 garage,theresia,1,1937,1937,administrateur,1
 hamon-j,theresia,1,1937,1937,administrateur,1
 jarry-p,theresia,2,1937,1937,administrateur,1

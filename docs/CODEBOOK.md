@@ -83,7 +83,7 @@ appear several times if several sources state it.
 | Variable | Description |
 |---|---|
 | `doc_id` | Document the observation came from. |
-| `company_key` | Company identifier (see `companies.csv`). **Empty for 12.5% of rows** (9,136 of 73,137), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
+| `company_key` | Company identifier (see `companies.csv`). **Empty for 13.2% of rows** (9,942 of 75,335), where the parser could not determine which firm the board belonged to. Those rows are excluded from every edge file — see METHODOLOGY §5. |
 | `company_name` | Company name as it appeared at this point in the text. |
 | `person_key` | Pre-resolution person key: normalised surname + first given initial. Use `person_resolution.csv` to map to `person_id`. |
 | `name_clean` | Normalised `Given Surname`. |
@@ -141,7 +141,7 @@ prose construction matched: `prose_role_after` (11,185),
 `prose_appointed_after` (2,571), `prose_nomination`, `prose_appointed_before`,
 `prose_outgoing`, `prose_presidency`.
 
-**In the default network** (11,690 rows survive de-duplication against the
+**In the default network** (11,641 rows survive de-duplication against the
 other genres); `--no-prose` drops it. Hand-audited precision is near 90%,
 below the structured parser's, which is why `source_genre` is on every edge.
 8,421 of its person-firm pairs appear nowhere else, and 23% of its rows
@@ -159,7 +159,7 @@ Written by `src/resolve_annotations.py` (stage 3d) from
 `match_method` records how the note resolved: `name` and `acronym` come from
 stage 4; `prefix`, `prefix_exact_length` and `exact_single_token` from the
 abbreviation matcher. Hand-audited at roughly 94%. In the default network
-(1,559 rows survive de-duplication); `--no-annotations` drops it. See
+(1,642 rows survive de-duplication); `--no-annotations` drops it. See
 METHODOLOGY §4e.
 
 ### `affiliations_biographical.csv` — from biographical dictionaries (3,167)
@@ -170,7 +170,7 @@ Written by `src/parse_biographies.py` (stage 3e) from *Qui êtes-vous ? 1924*,
 
 **`year` is always empty.** The entry gives a career, not a board as it stood
 in a particular year, so these ties fall in the `undated` slice and cannot be
-placed in a period. In the default network (1,548 rows survive
+placed in a period. In the default network (1,563 rows survive
 de-duplication); `--no-biographical` drops it, and any analysis that turns on
 timing should. Hand-audited at roughly 93%; see METHODOLOGY §4f.
 
@@ -397,7 +397,7 @@ asserts the file agrees with the graph it describes.
 
 | `measure` | Value | What it is |
 |---|---|---|
-| `n_firms`, `n_interlocks` | 5,862 / 76,893 | Size of the interlock graph. |
+| `n_firms`, `n_interlocks` | 5,900 / 76,875 | Size of the interlock graph. |
 | `n_components`, `giant_share` | 42 / 0.9853 | One giant component, 37 dyads and 4 triads. |
 | `giant_share_w2` | 0.4742 | The same at weight ≥ 2. **Half the connectedness is single-name edges** — see fig21. |
 | `max_degree`, `max_degree_w2` | 499 / 157 | Highest degree at each threshold. |
@@ -497,7 +497,7 @@ the same columns as the corresponding top-level files, restricted to that
 territory and with nodes and edges recomputed from its ties alone.
 
 **Ties partition; nodes do not.** Every tie carries exactly one territory, so
-bundle tie counts sum to the dataset total (98,798) with none duplicated or
+bundle tie counts sum to the dataset total (100,763) with none duplicated or
 dropped. Firms and people appear in every bundle where they are observed —
 21% of people and 9% of firms are in more than one country bundle — so
 **node counts must not be added across bundles**.
@@ -589,7 +589,7 @@ graph (3,550).
 | Variable | Description |
 |---|---|
 | `company_id`, `name` | Firm, matching `companies.csv`. |
-| `in_giant` | 1 if in the giant component (5,776 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
+| `in_giant` | 1 if in the giant component (5,808 firms); 0 for the 46 outside it, whose betweenness is 0 by construction rather than by measurement. |
 | `degree` | Firms it shares at least one director with. |
 | `weighted_degree` | Sum of shared-director counts over those ties. |
 | `betweenness` | Normalised betweenness centrality, **exact and unweighted**, computed on the giant component. |
@@ -616,7 +616,7 @@ variable.
 
 ### `company_places.csv` — a city for each firm
 
-Written by `src/geocode.py` (stage 6c). One row per firm (10,537); 3,170 carry
+Written by `src/geocode.py` (stage 6c). One row per firm (10,406); 3,170 carry
 a city.
 
 | Variable | Description |
@@ -648,7 +648,7 @@ for `Saïgon`. It is an **input**: edit it and rerun stage 6c.
 `city_network.html`. Cities in true position (plate carrée, no coastline —
 none ships with this repo, so a graticule carries the geography), node area
 by firms based there, edge weight by interlocks between the pair, colour by
-sovereignty group. 111 cities, 1,943 firms, 1,100 drawn ties. See METHODOLOGY
+sovereignty group. 111 cities, 1,974 firms, 1,100 drawn ties. See METHODOLOGY
 §5f for the coverage limits and for why a head office is not an operation.
 
 ### The whole empire, and every territory
@@ -668,9 +668,9 @@ by `betweenness` instead of weighted degree. Holding the node set and layout
 fixed is the whole design: the difference between figures 1 and 6 is the
 finding, and a fresh layout would let neither be read against the other.
 
-**Figure 4 — every firm, every interlock.** All 5,862 firms in
-`edges_company_interlock.csv` at `weight >= 1` and all 76,893 interlocks
-between them — no threshold, no top-N. The giant component (5,776 firms,
+**Figure 4 — every firm, every interlock.** All 5,900 firms in
+`edges_company_interlock.csv` at `weight >= 1` and all 76,875 interlocks
+between them — no threshold, no top-N. The giant component (5,808 firms,
 98.5%) fills the canvas; the 46 firms in 22 unconnected components sit in a
 labelled strip below a rule. Colour is the firm's first territory folded to
 the three largest, node area is weighted degree, and the sixteen largest are

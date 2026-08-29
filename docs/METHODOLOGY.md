@@ -74,7 +74,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (1,350 assertions).
+`checks.py` validates the parsers and the built dataset (1,362 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -85,13 +85,13 @@ Four denominators are easy to confuse, so they are stated once here and used
 consistently: **5,920** documents are catalogued, **5,874** have a text file,
 **5,867** extract cleanly, and **5,863** carry usable text — the four that fall
 out hold under 200 characters, a header and nothing else. Tie coverage is
-measured against that last figure. **3,592 of the 5,863 (61%) yield at least
-one tie**; the other 2,271 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
+measured against that last figure. **3,642 of the 5,863 (62%) yield at least
+one tie**; the other 2,221 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
 (42%) and 47% — stages 3b–3e, below, are what closed the gap. This section
 says what is still in the residue, because a reader is otherwise entitled to
 assume the pipeline saw everything.
 
-Sorting the 2,271 zero-tie documents by how much board vocabulary they
+Sorting the 2,221 zero-tie documents by how much board vocabulary they
 contain (the same counting rule as before, so the rows are comparable):
 
 | Role words in the text | Documents | Was | Reading |
@@ -115,7 +115,7 @@ The last row is the real gap, and it is not one thing:
   et colon", "vétérinaire à Oran". Correctly excluded; counting them would
   inflate the network with ties that do not exist.
 
-One further gap is quantified elsewhere: **9,136 parsed ties (12.5%)** are
+One further gap is quantified elsewhere: **9,942 parsed ties (13.2%)** are
 dropped for want of an identifiable firm (§5). The compiler's annotation leads
 are now resolved as far as they go (§4e).
 
@@ -521,6 +521,78 @@ to protect the period slices would cost more than it saves — but any analysis
 that turns on timing should filter them out with `--no-biographical` or on
 `source_genre == "biographical"`.
 
+## 4g. Board lists the punctuation did not reveal
+
+Every trigger in §4 ends with a colon or a dash — `Conseil d'administration :`,
+`Administrateurs. —`, `Cons. d'adm. :` — and the list it introduces is taken as
+a window after that punctuation. A large family of directories does not
+punctuate at all. It prints the heading bare on its own line and the board
+one member per line, surname first, forename parenthesised, address after the
+comma:
+
+```
+Conseil d'administration
+composé de 3 à 6 membres, nommés pour 3 ans, propriétaires de 50 actions.
+ASSIS (Henri), à Oran ;
+GERMAIN (Pierre), 1, r. Élisée-Reclus, Alger ; pdt, adm. délégué ;
+COMMISSAIRES AUX COMPTES
+DEBULLOIS (Pierre), à Oran.
+```
+
+Two separate rules discarded this. No trigger matched a heading with nothing
+after it. And `looks_like_name_list` — which splits a candidate body on `;` and
+`,` and asks what share of the parts are name-shaped — reads the comma between
+a name and its *address* as a name separator, so a six-member board splits into
+twenty-odd parts of which five are names, the ratio fails, and the whole list
+is thrown away.
+
+**This was the largest remaining extraction gap in the corpus.** 14,314 lines
+of this shape across 901 documents; 128 of the 283 Tunisian documents with text
+yielded no ties at all, including *Salines de Tunisie* (88k characters),
+*Frigorifique de Tunis* (62k) and *Union ovine de l'Afrique du Nord* (240k).
+The single biggest instance is the Crédit foncier d'Algérie et de Tunisie's
+*Annuaire des valeurs de l'Afrique du Nord*, which is why Algeria, Tunisia and
+Morocco were the worst-covered territories in the network.
+
+**What was added.** Eight bare headings as triggers (`Conseil
+d'administration`, `ADMINISTRATEURS`, `Commissaires aux comptes`, `Conseil de
+surveillance`, `Censeurs`, `Direction`, `Gérants` and their capitalised forms),
+and a line register — `LINE_MEMBER_RE`, `parse_line_list` — that reads one
+member per line and reorders `ASSIS (Henri)` into the `Henri Assis` the name
+parser expects. The reordering is done explicitly rather than left to
+`_make_member`'s surname-first fallback, which only folds the parenthetical
+back when it recognises a forename: `LEDOUX (F.)` came out under the key
+`ledouxf`, and `de SINCAY (F.)` was dropped entirely because a lowercase
+particle broke its all-caps test.
+
+**Bounding a list that has no punctuation.** A first pass gave the bare
+headings the same fixed 1,600-character window the punctuated triggers use, and
+hand-checking put precision at **11 of 15** — the window ran past the board into
+a staff roster (`D. CAPELLE, chef-comptable`), a footnote biography, and in one
+case a marriage announcement. The run is now walked line by line and stops at
+the first line carrying neither a comma nor a semicolon. Every genuine member
+line in this corpus has one or the other; the headings that end a list
+(`Comité de direction`, `DONNÉES FINANCIÈRES`) have neither. Blank lines and
+the stray footnote digits the PDFs drop between members sit *inside* the run
+rather than ending it.
+
+**Precision after that change: 13 of 14** on a fresh random sample checked
+against source context, which is the band the other genres occupy (§4c–4f). The
+one failure is the residual defect below.
+
+**One defect this did not fix.** A member's town, printed between his name and
+his role — `Charles Gimon, Levallois-Perret ; v.-pdt` — is split off by the
+comma register and recorded as a separate director. The parser has always
+rejected fragments that name a place, but its list and the geocoder's
+gazetteer were maintained separately and the gazetteer knew 81 cities the
+parser did not; they are now one authority (`common._gazetteer_cities`), which
+narrows the class without closing it. A single-token member with no forename is
+the shape to distrust.
+
+**What it recovered.** Affiliations 73,137 → 75,335. Tunisian documents
+yielding at least one tie: 155 → 172, taking the territory from 55% to the
+corpus average of 61%.
+
 ## 5. Dating and attributing ties
 
 A document is split at **anchors** — points that fix a date, a source, or a
@@ -617,7 +689,7 @@ entry to several firms at once, joined with a plus sign —
 `Houillères du bassin de la Loire + Houillères des Cévennes… du Dauphiné`.
 Those 82 people are the boards of three nationalised coal undertakings pooled
 into one pseudo-firm. **22 companies have such a combined name, carrying 185
-of 90,861 two-mode edges (0.20%).** They are left as the source wrote them:
+of 92,762 two-mode edges (0.20%).** They are left as the source wrote them:
 splitting a name on a plus sign would also cut the ones where it separates a
 firm from its depot rather than from another firm, and the affected share is
 too small to justify guessing. Filter on a `+` in `name` to drop them.
@@ -697,7 +769,7 @@ boards were staffed by men also sitting elsewhere.
 cannot hold. The evidence is the name as printed plus the territory the
 person's ties were observed in — onomastic inference and nothing else.
 
-**Every obvious rule is wrong.** Each was measured against all 33,580 names
+**Every obvious rule is wrong.** Each was measured against all 34,104 names
 and rejected:
 
 | Rule | Hits | Why it fails |
@@ -744,7 +816,7 @@ appears as six nodes, some of which may be one person.
 rather than cosmetic, and each of them can distort a reading of the data.
 
 **The whole graph is never drawn.** At `weight >= 1` the interlock network is
-5,862 firms and 76,893 edges: rendered as a node-link diagram it is a solid
+5,900 firms and 76,875 edges: rendered as a node-link diagram it is a solid
 disc that shows only that the ink is dense. Every figure is an explicit
 subset, and the subset rule is printed with the figure. Figure 1 raises the
 threshold to two shared directors, takes the largest component, and keeps the
@@ -791,7 +863,7 @@ information.
 firm), figure 5 (the territory matrix) and one figure per territory. Where
 stage 7 subsets deliberately, these do not — which raises different problems.
 
-**Figure 4 draws all 5,862 firms and 76,893 interlocks.** At that density a
+**Figure 4 draws all 5,900 firms and 76,875 interlocks.** At that density a
 node-link diagram cannot be read firm by firm, and it is not offered for that.
 The question it answers is compositional: are the empire's boards one
 integrated elite or separate territorial ones? Colour is the firm's first
@@ -845,7 +917,7 @@ Three decisions determine the numbers.
 **Computed on the whole graph, displayed on a slice.** Betweenness is a global
 property: the shortest paths that matter run through firms outside any core
 one might draw. It is computed on the giant component of the interlock graph
-at `weight >= 1` (5,776 firms, 76,893 ties) and then displayed on whatever
+at `weight >= 1` (5,808 firms, 76,875 ties) and then displayed on whatever
 subset a figure shows. Recomputing it on the 170 drawn firms would yield a
 different quantity wearing the same name, and would systematically flatter
 firms that happen to sit in the middle of that particular selection.
@@ -902,7 +974,7 @@ hand-built because the names are historical — Bône not Annaba, Tourane not Da
 Nang, Fedhala not Mohammedia — and no modern geocoding service returns them
 reliably. It is an input: editing it changes the output.
 
-**Coverage: 3,170 of 10,537 firms (30%), and 1,943 of the 5,862 in the
+**Coverage: 3,170 of 10,406 firms (30%), and 1,974 of the 5,900 in the
 interlock graph (33%).** The map draws those. It is not a map of the empire's
 firms but of the ones whose address survived, and the unplaced 67% are absent
 rather than assumed.
@@ -975,7 +1047,7 @@ before any substantive result, and for the same reason: a reader about to
 compute a centrality, a community or a distance needs four facts first, and
 none of them was anywhere in the repository.
 
-**One component, held by single ties.** 98.5% of the 5,862 firms sit in one
+**One component, held by single ties.** 98.5% of the 5,900 firms sit in one
 component — and 47.4% do once an edge needs two shared directors rather than
 one (`fig21`). The connectedness the network figures show is therefore
 substantially the connectedness of the weakest possible evidence. Every

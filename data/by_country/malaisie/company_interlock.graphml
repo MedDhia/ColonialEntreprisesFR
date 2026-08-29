@@ -30,6 +30,12 @@
       <data key="n_n_directors">6</data>
       <data key="n_territory">Malaisie</data>
     </node>
+    <node id="plantationsbunge">
+      <data key="n_label">Plantations Bunge</data>
+      <data key="n_sectors">Sociétés françaises ou à participation française</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Malaisie</data>
+    </node>
     <node id="tandjongmalimrubbercoutanjongmalimrubberc">
       <data key="n_label">Tandjong Malim Rubber C° ou Tanjong Malim Rubber C°</data>
       <data key="n_sectors">Sociétés françaises ou à participation française</data>
@@ -42,7 +48,13 @@
     <edge id="e1" source="etainskinta" target="minesetainperak">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e2" source="kualalumpurrubbercompanyltd" target="tandjongmalimrubbercoutanjongmalimrubberc">
+    <edge id="e2" source="kualalumpurrubbercompanyltd" target="plantationsbunge">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e3" source="kualalumpurrubbercompanyltd" target="tandjongmalimrubbercoutanjongmalimrubberc">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e4" source="plantationsbunge" target="tandjongmalimrubbercoutanjongmalimrubberc">
       <data key="e_weight">1</data>
     </edge>
   </graph>

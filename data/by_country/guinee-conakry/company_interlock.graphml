@@ -21,7 +21,7 @@
     <node id="exploitationsminieresafriqueoccidentale">
       <data key="n_label">Exploitations minières en Afrique Occidentale</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Guinée Conakry</data>
     </node>
     <node id="guineennerecherchesexploitationsminieres">
@@ -45,7 +45,7 @@
     <node id="minessiguiri">
       <data key="n_label">Compagnie des Mines de Siguiri</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Guinée Conakry</data>
     </node>
     <node id="miniereguinee">
@@ -76,6 +76,12 @@
       <data key="e_weight">2</data>
     </edge>
     <edge id="e5" source="lyonnaisegisementsauriferesguinee" target="mineshauteguinee">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e6" source="mineshauteguinee" target="minessiguiri">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e7" source="minessiguiri" target="minierekobabalato">
       <data key="e_weight">1</data>
     </edge>
   </graph>

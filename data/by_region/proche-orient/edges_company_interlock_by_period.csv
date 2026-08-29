@@ -1,10 +1,12 @@
 company_id_1,company_id_2,period,weight,shared_directors
 louisemmanueladoplphegoranflauxbaronandree,ports,1914_1929,6,berard; blanche-p; garreta-h; henry-a; michon-coster-j; saint-rene-taillandier-g
+asphaltespetroleslattaquie,industrielleasphaltespetroleslattaquie,1914_1929,5,chautard-j; donati-a; meguerditchian-l; schneider-g; shakour-pacha-m
 miniereindustrielleplakalnitza,plakalnitza,1914_1929,3,gravier-p; mavrogordato-n; pissard-l
 georgemallet,ports,1914_1929,3,bey-p; henry-a; michon-coster-j
 banquehypothecairefrancoegyptienne,foncieresyrie,1914_1929,3,d-hugonneau-m; de-cressac-h; ficatier-m
 banquefonciereegyptelandbankegyptalexandrie,unionfonciereegypte,1914_1929,3,charles-roux-j; salvago; zarifi
 minesbaliakaraidin,miniereindustrielleplakalnitza,1914_1929,2,mavrogordato-a; pissard-l
+minesbaliakaraidin,orientalcarpetmanufacturersltd,1914_1929,2,arachtingi-j; tanqueray-g
 minesbaliakaraidin,plakalnitza,1914_1929,2,pissard-l; tanqueray-g
 georgemallet,louisemmanueladoplphegoranflauxbaronandree,1914_1929,2,henry-a; michon-coster-j
 cheminferdamashamahprolongements,heraclee,1914_1929,2,revoil-p; rey-a
@@ -13,7 +15,7 @@ creditfoncierorient,creditfonciersyrie,1914_1929,2,de-jardin-f; philippar-p
 grandsmoulinsbulgariebourgas,meunierelevantdamasjaffa,1914_1929,2,baumann; baumann-l
 airunion,banquepaysorient,1914_1929,1,devies-m
 creditfoncieregyptien,minesbaliakaraidin,1914_1929,1,thors-j
-minesbaliakaraidin,orientalcarpetmanufacturersltd,1914_1929,1,arachtingi-j
+orientalcarpetmanufacturersltd,plakalnitza,1914_1929,1,tanqueray-g
 georgemallet,minesbaliakaraidin,1914_1929,1,henry-a
 louisemmanueladoplphegoranflauxbaronandree,minesbaliakaraidin,1914_1929,1,henry-a
 minesbaliakaraidin,ports,1914_1929,1,henry-a
@@ -97,9 +99,13 @@ financiereorient,ottomanecheminfersmyrnecassabaprolongement,pre_1914,4,auboyneau
 banquefonciereegyptelandbankegyptalexandrie,unionfonciereegypte,pre_1914,4,charles-roux-j; salvago; zarifi; zervudachi-g
 eauxbeyrouth,ottomanegazbeyrouth,pre_1914,4,menasche-j; misk-n; peter-m; sabbag-e
 immobiliereregieterrainssalonique,portsaloniqueottomaneconstruction,pre_1914,4,effendi-h; modiano-l; nabona-j; robert-j-jules
+baliakaraidin,minesbaliakaraidin,pre_1914,3,ed-mille; eugenidi-e; rouzaud-t
+baliakaraidin,mineskassandra,pre_1914,3,fernandez-i; rouzaud-t; testa-c
 ottomanecheminfersmyrnecassabaprolongement,tombac,pre_1914,3,auboyneau-g; naville-p; pangiris-bey-s
 ottomanecheminfersmyrnecassabaprolongement,ottomaneheraclee,pre_1914,3,auboyneau-g; deffes-j; pangiris-bey-s
+minesbaliakaraidin,mineskassandra,pre_1914,2,rouzaud-t; th-mavrogordato
 minesbaliakaraidin,ottomanemineskarassou,pre_1914,2,is-fernandez; rouzaud-t
+banquesalonique,mineskassandra,pre_1914,2,fernandez-i; salem-e
 caissehypothecaireegypte,creditfoncierorient,pre_1914,2,jacobs-f; van-eetvelde
 internationale,ottomaneheraclee,pre_1914,2,bernard; vlasto-a
 financiereorient,tombac,pre_1914,2,auboyneau-g; naville-p
@@ -111,6 +117,17 @@ ottomaneheraclee,portquaisentrepotsbeyrouth,pre_1914,2,emond-r; pangiris-bey-s
 imperialeottomaneroutebeyrouthdamas,ottomaneheraclee,pre_1914,2,de-nervo; emond-r
 imperialeottomaneroutebeyrouthdamas,portquaisentrepotsbeyrouth,pre_1914,2,emond-r; habert-g
 ottomaneheraclee,port,pre_1914,2,bey-p; wiener-h
+baliakaraidin,ottomanemineskarassou,pre_1914,1,rouzaud-t
+mineskassandra,ottomanemineskarassou,pre_1914,1,rouzaud-t
+baliakaraidin,banquesalonique,pre_1914,1,fernandez-i
+baliakaraidin,eauxbeyrouth,pre_1914,1,fernandez-i
+baliakaraidin,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
+banquesalonique,eauxbeyrouth,pre_1914,1,fernandez-i
+banquesalonique,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
+eauxbeyrouth,mineskassandra,pre_1914,1,fernandez-i
+eauxbeyrouth,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
+mineskassandra,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
+banquesalonique,financiereorient,pre_1914,1,benac-a
 banquefrancoserbe,financiereorient,pre_1914,1,henrotte
 banquefrancoserbe,ottomanecheminfersmyrnecassabaprolongement,pre_1914,1,henrotte
 banquefrancoserbe,port,pre_1914,1,henry-a
@@ -151,8 +168,6 @@ ottomaneeauxconstantinople,ottomaneheraclee,pre_1914,1,zarifi-l
 ottomaneeauxconstantinople,quaisdocksentrepotsconstantinople,pre_1914,1,zarifi-l
 financiereorient,heraclee,pre_1914,1,laurans-a
 creditfoncieregyptien,ottomaneeauxconstantinople,pre_1914,1,pestel-a
-eauxbeyrouth,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
 minesselenitza,tramwayslibanaisnordsudbeyrouth,pre_1914,1,berger-t
 imperialeottomaneroutebeyrouthdamas,port,pre_1914,1,habert-g
 port,portquaisentrepotsbeyrouth,pre_1914,1,habert-g
-cheminferottomansaloniquemonastir,tramwaysconstantinople,pre_1914,1,constantinople

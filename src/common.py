@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import csv
 import hashlib
 import os
 import random
@@ -162,7 +163,32 @@ def _load_reference(name: str) -> list[str]:
     return out
 
 
-PLACES = {strip_accents(p).lower() for p in _load_reference("places.txt")}
+def _gazetteer_cities() -> list[str]:
+    """City names (and their aliases) from the geocoder's own gazetteer.
+
+    The parser keeps a hand-written list of places that must never be read as
+    a person, and `geocode.py` keeps a gazetteer of cities with coordinates.
+    They were maintained separately, and the gazetteer knew 81 cities the
+    parser's list did not — so "Louis Hohl, Montmorency, administrateur" and
+    "professeur à l'École des Mines de Liège, à Liège" each produced a board
+    member named after a town. One list is the authority for both questions.
+    """
+    path = os.path.join(REF_DIR, "places_geo.csv")
+    out: list[str] = []
+    if not os.path.exists(path):
+        return out
+    with open(path, encoding="utf-8", newline="") as fh:
+        for row in csv.DictReader(fh):
+            if row.get("city"):
+                out.append(row["city"])
+            for alias in (row.get("aliases") or "").split(";"):
+                if alias.strip():
+                    out.append(alias.strip())
+    return out
+
+
+PLACES = {strip_accents(p).lower()
+          for p in _load_reference("places.txt") + _gazetteer_cities()}
 FORENAMES = {strip_accents(p).lower() for p in _load_reference("forenames.txt")}
 
 # The site inverts names so that lists sort on the distinctive word, pushing the
