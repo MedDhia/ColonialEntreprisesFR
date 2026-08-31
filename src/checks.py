@@ -1546,6 +1546,93 @@ def check_sectors() -> None:
           abs(curve[0] - p_seat) < 1e-12, f"{curve[0]} vs {p_seat}")
 
 
+def check_sector_centrality() -> None:
+    """Stage 18: sector centrality, and the size control that carries it."""
+    import code_sector_centrality as C
+
+    print("sector centrality", file=sys.stderr)
+    import networkx as nx
+
+    # `mean_path` on a known graph: a path of 4 nodes has mean distance 5/3.
+    P = nx.path_graph(4)
+    eq("  mean path on a 4-path", round(C.mean_path(P, k=4), 4),
+       round((1 + 2 + 3 + 1 + 2 + 1) * 2 / 12, 4))
+    eq("  giant share of a connected graph", C.giant_share(P), 1.0)
+    D = nx.Graph([(0, 1), (2, 3), (3, 4)])
+    eq("  giant share of a split graph", round(C.giant_share(D), 4),
+       round(3 / 5, 4))
+    eq("  an empty graph has no giant", C.giant_share(nx.Graph()), 0.0)
+
+    path = os.path.join(PROC_DIR, "sector_centrality.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("sector_centrality.csv")
+    base = load("sector_centrality_baseline.csv")[0]
+    check("  coded the sectors", len(rows) >= 10, str(len(rows)))
+    eq("  the filing residue is excluded",
+       [r for r in rows if r["sector_group"] == "not_a_sector"], [])
+    bad = [r for r in rows if int(r["n_firms"]) < C.MIN_FIRMS]
+    check("  no sector below the floor", not bad, str(len(bad)))
+
+    # A share is a share.
+    bad = [r for r in rows if not 0.0 <= float(r["edge_share"]) <= 1.0]
+    check("  edge_share is a share", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if not 0.0 <= float(r["cross_territory_share"]) <= 1.0]
+    check("  cross_territory_share is a share", not bad, str(len(bad)))
+    # Incident edges cannot exceed the graph, and within cannot exceed incident.
+    n_edges = int(base["n_edges"])
+    bad = [r for r in rows if int(r["n_edges_incident"]) > n_edges]
+    check("  incident edges fit in the graph", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if int(r["n_edges_within"]) > int(r["n_edges_incident"])]
+    check("  within-sector edges are a subset of incident", not bad,
+          str(len(bad)))
+    # z must agree with the drop, the null mean and the null sd it is built from.
+    bad = []
+    for r in rows:
+        if not r["giant_drop_z"] or not float(r["giant_drop_null_sd"]):
+            continue
+        want = ((float(r["giant_drop"]) - float(r["giant_drop_null_mean"]))
+                / float(r["giant_drop_null_sd"]))
+        if abs(want - float(r["giant_drop_z"])) > 0.02:
+            bad.append(r["sector_group"])
+    check("  z is reproducible from drop, null mean and null sd", not bad,
+          str(bad[:3]))
+    bad = [r for r in rows if not 0.0 <= float(r["giant_drop_p"]) <= 1.0]
+    check("  p is a proportion", not bad, str(len(bad)))
+    # Removing nodes cannot lengthen nothing and cannot shorten the graph's
+    # own giant share beyond 1.
+    bad = [r for r in rows if float(r["giant_drop"]) > float(base["giant_share"])]
+    check("  a drop cannot exceed the baseline", not bad, str(len(bad)))
+
+    # The headline claim: finance separates from the null, mining does not.
+    fin = next((r for r in rows if r["sector_group"] == "finance"), None)
+    mine = next((r for r in rows if r["sector_group"] == "mining"), None)
+    if fin and mine:
+        check("  finance and mining are size-matched",
+              abs(int(fin["n_firms"]) - int(mine["n_firms"])) < 30,
+              f"{fin['n_firms']} vs {mine['n_firms']}")
+        check("  finance beats its size-matched null",
+              float(fin["giant_drop_z"]) > 2.0, fin["giant_drop_z"])
+        check("  mining does not", abs(float(mine["giant_drop_z"])) < 2.0,
+              mine["giant_drop_z"])
+        check("  finance leads on edge share",
+              float(fin["edge_share"]) == max(float(r["edge_share"])
+                                              for r in rows),
+              fin["edge_share"])
+
+    pairs = load("edges_sector_interlock.csv")
+    check("  produced sector pairs", len(pairs) > 50, str(len(pairs)))
+    bad = [r for r in pairs if r["sector_a"] == r["sector_b"]]
+    check("  a pair joins two different sectors", not bad, str(len(bad)))
+    bad = [r for r in pairs if r["sector_a"] > r["sector_b"]]
+    check("  every pair is stored in one direction", not bad, str(len(bad)))
+    eq("  the pair total matches the baseline",
+       sum(int(r["n_interlocks"]) for r in pairs),
+       int(base["n_cross_sector_edges"]))
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -2093,6 +2180,7 @@ def main() -> None:
         check_legislative_layer()
         check_sectors()
         check_political_coding()
+        check_sector_centrality()
         check_geocoding()
         check_figures()
 

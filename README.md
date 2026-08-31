@@ -286,6 +286,23 @@ the offices rejected and the four things the coding cannot do are in
 | `fig45_sector_tiers.svg` | **The cross-tabulation**: sector × tier as a heatmap, rows summing to 100%, ramp applied within each row. Computed on the 3,505 firms carrying an economic sector — the other 2,949 have only a document-filing category. |
 | `fig46_sector_excess.svg` | Observed against expected share by sector, under a board-size null. **The adjustment reorders the table**: finance (+4.2) and mining (+1.6) are near their benchmark, while press and printing (+21.7) and hotels (+20.8) — median boards of 1 and 2 — are the genuinely connected sectors. |
 
+**`figures/sector_network.html`** — which sector is central, and where you
+can see it. Six operationalisations of "central" disagree, and the one that
+survives a **size-matched** null is the removal test: finance and mining are
+533 and 530 firms, so no count can separate them, but deleting finance costs
+the giant component **z = +4.08 (p = 0.000)** against mining's **−0.35
+(p = 0.65)**. No sector's removal fragments the graph; the cost shows up as
+distance instead. See [METHODOLOGY §5m](docs/METHODOLOGY.md).
+
+| | |
+|---|---|
+| `fig51_steps_from_finance.svg` | The network as **shells outward from finance**, and from mining beside it, each shell an annulus whose area is proportional to the firms in it. **One step from finance reaches 70.4% of the graph; one step from mining, 57.5%.** |
+| `fig52_core_by_centrality.svg` | The 170 core firms placed with **radius = betweenness rank**, so the centre of the picture is the centre of the network and position is measured rather than force-directed. **23 of the core's 40 most-between firms are finance firms**; finance's mean rank is 54.4 against mining's 90.8. |
+| `fig47_sector_graph.svg` | The sector graph itself — 16 groups, edge weight = interlocks between them. Finance–mining alone carries 2,866. |
+| `fig48_core_spotlight.svg` | The interlock core by sector, on the core's own layout. |
+| `fig49_removal_cost.svg` | The removal test drawn. Note the inversion it exposes: inside the core, removing finance takes 632 edges against 682 for 47 randomly drawn *core* firms — because the core is the top 170 by weighted degree, so a random draw inside it is a draw of hubs. The z-score in the CSV draws its null from the whole graph. |
+| `fig50_hub_or_broker.svg` | Hub against broker, firm by firm. The highest-betweenness finance firms have gaps near zero: they are not brokers *instead* of hubs. |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -413,6 +430,7 @@ figures/
   descriptive.html        figures 8-17, what the data is
   structure.html          figures 18-27, what shape the graph has
   nodes.html              figures 28-33, the network firm by firm
+  sector_network.html     figures 47-52, which sector is central
   fig*.svg, fig*.png      the same figures standalone, for papers
   by_country/             one SVG and one PNG per territory
   en/                     the same figures with English category labels
@@ -452,6 +470,9 @@ python3 src/make_political_figures.py         # figs 40-44
 python3 src/make_political_figures.py --lang en
 python3 src/make_legislative_figures.py       # figs 34-39
 python3 src/make_legislative_figures.py --lang en
+python3 src/code_sector_centrality.py         # sector centrality + the removal null
+python3 src/make_sector_network_figures.py    # figs 47-52
+python3 src/make_sector_network_figures.py --lang en
 python3 src/render_png.py                     # ~90 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```

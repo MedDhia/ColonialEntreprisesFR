@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Eighteen stages, each resumable, each writing its own outputs:
+Twenty stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -81,8 +81,12 @@ Eighteen stages, each resumable, each writing its own outputs:
     `data/reference/political_connection_rules.md`, and the sector
     cross-tab (§5l).
 17. **`make_political_figures.py`** — figures 40–46 (§5k, §5l).
+18. **`code_sector_centrality.py`** — the interlock graph × the sector
+    grouping → `sector_centrality.csv`, `edges_sector_interlock.csv`,
+    `sector_centrality_baseline.csv` (§5m).
+19. **`make_sector_network_figures.py`** — figures 47–52 (§5m).
 
-Figure stages 7, 8, 11–13, 15 and 17 take `--lang en`, which writes a parallel `figures/en/`
+Figure stages 7, 8, 11–13, 15, 17 and 19 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
 names are left in French throughout: a company's name is a legal name rather
 than a description, and an English rendering of it would be a string that
@@ -1755,6 +1759,99 @@ clipping offers less text in which an office could be observed.
 summing to 100%, with the sequential ramp applied **within each row** because
 one ramp across the table would be dominated by the `none` tier. `fig46` is the
 board-size adjustment, observed against expected, ordered by excess.
+
+## 5m. Which sector is central, and six answers that disagree
+
+`src/code_sector_centrality.py` (stage 18) exists because the question "which
+sector is most central to the empire network?" has at least six defensible
+operationalisations and they do not rank the sectors the same way. The file
+carries all six as columns so that a claim can name the one it rests on, and
+the figures cite the file rather than recomputing.
+
+The graph is the firm-level interlock projection: 5,989 firms, 79,072 edges,
+a giant component holding **98.6%** of the nodes and a mean shortest path of
+**3.25** between them. Sectors come from the 19-group mapping of §5l, and a
+group is measured only at 25 firms or more — below that the measures are noise.
+
+### The size confound is the whole problem
+
+A sector with more firms and larger boards has more edges for reasons that
+have nothing to do with position. Finance holds **15,399 board seats** against
+mining's **9,646**, so any raw count — degree, edge share, summed betweenness —
+puts finance first before position is considered at all. Three families of
+column exist only to strip that out:
+
+- **Per-seat normalisation.** `deg_per_seat` and `btw_per_seat` divide by board
+  seats rather than by firm count. On `deg_per_seat` finance (1.73) falls
+  *below* plantations (2.24), textiles (2.54) and press and printing (3.00) —
+  the last of which is an artefact of the opposite kind, since 41 firms with a
+  mean of 5.7 seats each will show a high ratio on very little evidence.
+- **A size-matched removal null.** Delete the sector's firms, then delete the
+  same *number* of firms drawn at random, 60 times (`--sims` raises it), and
+  report the loss as a z-score. This is the column that separates finance from
+  mining, which at 533 and 530 firms are the same size and so cannot be
+  separated by any count: **finance z = +4.08 (p = 0.000), mining z = −0.35
+  (p = 0.65)**. Removing finance costs the giant component more than removing
+  an equally large random slice; removing mining costs exactly what its size
+  predicts.
+- **Path length after removal.** Fragmentation measures nothing here — no
+  sector's removal breaks the giant component, which is the substantive
+  finding and not a null result. The cost of removal appears as **distance**
+  instead: mean path rises from 3.25 to **3.51** without finance (+0.26),
+  against +0.14 for mining and +0.13 for food processing.
+
+### What the removal test does not license
+
+Deleting a sector from an observed graph is a descriptive operation on this
+dataset, not a counterfactual about the empire. It says the network *as
+recorded* routes more of its connectivity through finance than through an
+equally large random slice of firms. It does not say the colonial economy
+would have been less connected without banks: those firms would not have
+existed, their directors would have sat elsewhere, and the compiler's coverage
+is itself uneven by sector. The same caution applies to `path_change`.
+
+### Hub and broker are different things
+
+`mean_broker_gap` is the mean of `degree_rank − betweenness_rank` across a
+sector's firms. Negative means the sector's firms rank better on betweenness
+than on degree — they broker more than their connection count would suggest;
+positive means the reverse. Utilities (−289.5) and plantations (−279.0) are
+the strongest brokers relative to their degree, textiles (+287.7) and health
+and education (+247.6) the strongest hubs. Finance is at −121.5: it is both,
+which is why it leads on the raw counts *and* survives the null.
+
+### The figures
+
+`src/make_sector_network_figures.py` (stage 19) draws six, and the first two
+answer a different question from the last four. Figures 51 and 52 are asked to
+*show* the position — to make finance's centrality visible as geometry rather
+than stated as a coefficient — and both place nodes by a measured quantity so
+that position is never the output of a force algorithm:
+
+- **fig51** — multi-source BFS shells outward from all finance firms in one
+  panel and all mining firms in the other, with each shell drawn as an annulus
+  whose **area is proportional to the number of firms in it**. One step from
+  finance reaches **70.4%** of the graph; one step from mining reaches
+  **57.5%**. An earlier draft placed each shell on a ring *line*, which packed
+  3,684 nodes onto one pixel of radius and made the two panels look identical:
+  the finding was real and the encoding hid it.
+- **fig52** — the 170 core firms with **radius = betweenness rank**, so the
+  centre of the picture is the centre of the network. **23 of the core's 40
+  most-between firms are finance firms**, and finance's mean rank is 54.4
+  against mining's 90.8. The angle is a golden spiral and means nothing; it
+  only spreads the nodes apart.
+- **fig47** — the sector graph itself: 16 groups, edge weight = interlocks
+  between them. Finance–mining alone carries 2,866.
+- **fig48** — the interlock core by sector, on the core's own layout.
+- **fig49** — the removal test drawn: observed loss against the size-matched
+  null. Note the inversion it makes visible — removing finance takes 632 core
+  edges against 682 for 47 randomly drawn *core* firms, because the core is by
+  construction the top 170 by weighted degree, so a random draw inside it is a
+  draw of hubs. The null in the CSV is drawn from the whole graph, which is
+  the comparison the z-score reports.
+- **fig50** — hub against broker, per firm, by sector. The finance firms with
+  the highest betweenness have gaps near zero: they are not brokers *instead*
+  of hubs.
 
 ## 6. Validity — read this before using the data
 

@@ -1001,6 +1001,60 @@ rows are the Banque de l'Indochine, the Banque de l'Afrique occidentale, the
 Messageries maritimes and the Crédit foncier colonial, which is the face-validity
 check this file exists for.
 
+## Sector centrality
+
+Stage 18, `src/code_sector_centrality.py`. Six competing answers to "which
+sector is most central", carried side by side because they disagree. See
+METHODOLOGY §5m — and in particular read `giant_drop_z` before reading any of
+the raw counts.
+
+### `sector_centrality.csv` (16 rows)
+
+One row per sector group with **25 firms or more** in the interlock graph;
+smaller groups are dropped because their measures are noise. The residual
+group `unclassified` is kept and appears as a row; `not_a_sector` never does.
+
+| Variable | Description |
+|---|---|
+| `sector_group`, `sector_group_en` | The grouped sector, from `data/reference/sector_groups.csv`. |
+| `n_firms`, `n_seats` | Firms of this sector in the interlock graph, and the board seats they hold. `n_seats` is the size confound in one number: finance 15,399, mining 9,646. |
+| `mean_degree`, `median_degree` | Interlock partners per firm. A raw count — reflects sector size and board size as much as position. |
+| `deg_per_seat` | `mean_degree` ÷ mean board size. Board-size-neutral, but noisy for small sectors with large boards. |
+| `sum_betweenness`, `mean_betweenness`, `btw_per_seat` | Betweenness from `centrality.py`, summed, averaged, and per seat. |
+| `mean_broker_gap` | Mean of `degree_rank − betweenness_rank`. **Negative = brokers more than its degree predicts; positive = a hub.** Utilities −289.5, textiles +287.7. |
+| `n_edges_incident`, `edge_share` | Edges with at least one endpoint in the sector, and that as a share of all edges. Endpoints in two sectors are counted for both, so `edge_share` sums above 1. |
+| `n_edges_within` | Edges with *both* endpoints in the sector. |
+| `cross_territory_share` | Share of the sector's incident edges joining firms filed under different territories. |
+| `n_deep_core` | Firms of this sector in the graph's maximum k-core (k = 71, 72 firms). |
+| `giant_drop` | Fall in the giant-component share when the sector's firms are deleted. |
+| `giant_drop_null_mean`, `giant_drop_null_sd` | The same statistic over `null_sims` deletions of the same *number* of firms drawn at random. |
+| `giant_drop_z`, `giant_drop_p` | The size-matched removal test. **This is the column that answers the question**, because it is the only one a sector cannot lead by being large: finance +4.08 (p = 0.000), mining −0.35 (p = 0.65). `giant_drop_p` is the one-sided share of null draws at or above the observed drop, so it is granular to 1/`null_sims` and reads 0.000 or 1.000 at the extremes. |
+| `path_after`, `path_change` | Mean shortest-path length after deleting the sector, and the change from the baseline 3.25, on the same fixed 120-source sample. Where the cost of removal actually shows: finance +0.26. |
+
+Removal is a descriptive operation on the observed graph, **not a
+counterfactual about the empire**. The firms would not have existed, their
+directors would have sat elsewhere, and coverage is uneven by sector.
+
+### `edges_sector_interlock.csv` (164 rows)
+
+The sector graph, one row per unordered pair of *different* sector groups
+that share at least one interlock: `sector_a`, `sector_b`, `sector_a_en`,
+`sector_b_en`, `n_interlocks` — the number of firm-level interlock edges
+joining the two. Within-sector edges are in `n_edges_within` above, not here.
+This file is **not** restricted to the 16 groups of `sector_centrality.csv`:
+all 19 groups that appear on an interlocked firm are here, because an edge to
+a small sector is still an edge. Finance–mining is the heaviest pair at 2,866.
+
+### `sector_centrality_baseline.csv` (1 row)
+
+The graph the sector rows are measured against, so a claim can state its
+denominator: `n_firms` (5,989), `n_edges` (79,072), `giant_share` (0.9858),
+`mean_path_length` (3.2528), `path_sources` (120), `path_seed` (11),
+`null_sims` (60), `null_seed` (17), `max_core_number` (71), `max_core_size`
+(72), `cross_territory_share` (0.4501), `n_cross_sector_edges` (33,852),
+`n_within_sector_edges` (19,514). The two seeds are fixed, so every number in
+`sector_centrality.csv` is reproducible exactly.
+
 ### `data/reference/`
 
 `places.txt` (174 place names) and `forenames.txt` (~330 forenames) are
