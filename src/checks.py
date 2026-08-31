@@ -1097,6 +1097,205 @@ def check_biographies() -> None:
     eq("  biographical ties carry no year", {r["year"] for r in rows}, {""})
 
 
+def check_mandates() -> None:
+    """Stage 3g: deputies and senators named anywhere in the corpus."""
+    import parse_mandates as M
+
+    print("mandate parser", file=sys.stderr)
+
+    def one(text):
+        return list(M.mentions(text))
+
+    got = one("M. Ernest Outrey, député de la Cochinchine, a fait")
+    eq("  apposition yields the subject and the seat",
+       [(g[1], g[2], g[3]) for g in got],
+       [("Ernest Outrey", "Chamber of Deputies", "Cochinchine")])
+
+    # The kinship trap, which is the whole precision problem for this stage.
+    check("  a relative's mandate is not the subject's",
+          not one("Maurice Piot [fils de Léon Piot (1845-1922), "
+                  "député de l'Aude 1876-1877]"),
+          str(one("Maurice Piot [fils de Léon Piot, député de l'Aude]")))
+    # ... but clause scoping must not reject a man who married *and* sat.
+    check("  a kinship clause ended by a full stop does not reject",
+          any(g[2] == "Chamber of Deputies" for g in
+              one("Ch. Heuzey [ép. Potin. Anc. député de la Nièvre]")),
+          str(one("Ch. Heuzey [ép. Potin. Anc. député de la Nièvre]")))
+    check("  the compiler's own disclaimer is honoured",
+          not one("R. Carcassonne : probablement à distinguer de l'avocat "
+                  "Roger Carcassonne, sénateur socialiste (1946-1971)"))
+    check("  a lodge delegate is not a member of the Chamber",
+          not one("G. L. (député), député au convent 1930-1931 de la Loge"))
+    check("  a foreign upper house is not the Senate",
+          not one("le commandeur docteur Enrico Scalini, sénateur du Royaume"))
+
+    # A year beside a title usually dates something other than the mandate.
+    eq("  a term in brackets is read",
+       M.read_tail(" [1914-1932] et CG Aisne")[2], [(1914, 1932)])
+    eq("  a budget year is not a term",
+       M.read_tail(", sur le budget du ministère de la marine pour 1889")[2],
+       [])
+    eq("  a clipping's date is not a term",
+       M.read_tail(" de l'Indre (Les Annales coloniales, 2 janvier 1913)")[2],
+       [])
+    eq("  the seat slot is anchored, not searched",
+       M.read_tail(", vice-président de la Commission des Colonies")[0], "")
+    eq("  a department abbreviation is expanded",
+       M.normalise_seat("Hte- Saône"), "Haute-Saône")
+
+    path = os.path.join(PROC_DIR, "person_mandates.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("person_mandates.csv")
+    check("  produced mentions", len(rows) > 1500, str(len(rows)))
+    eq("  every row names a chamber",
+       {r["chamber"] for r in rows},
+       {"Chamber of Deputies", "Senate"})
+    bad = [r for r in rows if not r["person_key"] or not r["evidence"]]
+    check("  every row is auditable", not bad, str(len(bad)))
+    # A span is only ever a span.
+    bad = [r for r in rows if r["year_start"] and r["year_end"]
+           and int(r["year_end"]) < int(r["year_start"])]
+    check("  no term ends before it starts", not bad, str(len(bad)))
+
+
+def check_rosters() -> None:
+    """Stage 3h: the parliamentary directories."""
+    import parse_rosters as R
+
+    print("roster parser", file=sys.stderr)
+
+    doc = ("D'ANDIGNÉ, Geoffroy (Comte)[1858-1932]\n"
+           "Député de Maine-et-Loire [1924-1932]\n"
+           "Adresse : Hôtel d'Orsay, 9, quai d'Orsay, à Paris (VIIe).\n"
+           "Administrateur : Compagnie parisienne de garages automobiles.\n"
+           "De WENDEL, François\n"
+           "Sénateur de Meurthe-et-Moselle\n"
+           "Administrateur : Société métallurgique de Knutange.\n")
+    got = list(R.entries(doc))
+    eq("  reads the comma-separated header form",
+       [n for n, _ in got], ["Geoffroy d’Andigné", "François de Wendel"])
+    # The bug that gave de Wendel's whole board to the entry above his.
+    check("  a capitalised particle does not hide a header",
+          "Société métallurgique de Knutange" in got[1][1]
+          and "Knutange" not in got[0][1])
+    eq("  the chamber line yields the mandate",
+       R.mandate_of(got[0][1]),
+       ("Chamber of Deputies", "Maine-et-Loire", "1924-1932"))
+
+    # A non-person header with the roster's shape.
+    for line in ("Paris, le 11 juillet 1924.",
+                 "Caoutchoucs de Phuoc-Hoa (1927), administrateur des",
+                 "Nos Députés, en 1893",
+                 "Succursale : 27 bis, rue du Vieux-Faubourg, Lille (Nord)."):
+        text = line + "\nDéputé de la Seine\nAdministrateur : Banque X.\n"
+        check(f"  not a header: {line[:28]}", not list(R.entries(text)),
+              str(list(R.entries(text))))
+
+    # A comma inside a company name is not a list separator.
+    eq("  a lower-case fragment continues the previous name",
+       R._rejoin(["Association industrielle", "commerciale et financière",
+                  "Association nationale"]),
+       ["Association industrielle, commerciale et financière",
+        "Association nationale"])
+    eq("  an article opens a new name",
+       R._rejoin(["de la Société X", "de l’Avenir-Publicité"]),
+       ["de la Société X", "de l’Avenir-Publicité"])
+
+    # The block ends at the next label, whatever the label is.
+    body = ("PATENÔTRE, Raymond\nDéputé de Seine-et-Oise\n"
+            "Administrateur\xa0 : Société française des métaux.\n"
+            "Propriétaire des journaux\xa0 : Le Petit Niçois, La Sarthe.\n")
+    firms = [c for _, c, _, _ in R.affiliations_in(body)]
+    check("  a role block stops at the next fielded label",
+          not any("Sarthe" in f or "Niçois" in f for f in firms), str(firms))
+
+    # The relative is the last name in the clause, not the first.
+    kin, who = R._kinship_at(
+        "Sa fille Lina a épousé en 1930 le banquier Jean Rheims, "
+        "administrateur des Manufactures indochinoises", 68)
+    eq("  the proxy holder is the apposed name", who, "Jean Rheims")
+
+    # Territory is never a droppable word in this catalogue.
+    check("  a territory mismatch rejects the match",
+          not R.firm_plausible("Crédit mobilier indochinois",
+                               "Crédit mobilier français"))
+    check("  a catalogue section heading is not a firm",
+          not R.firm_plausible("Société générale d'armement", "ARMEMENT"))
+    check("  a good match survives both guards",
+          R.firm_plausible("Société minière des Terres-Rouges",
+                           "Minière des Terres rouges"))
+
+    path = os.path.join(PROC_DIR, "affiliations_roster.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_roster.csv")
+    check("  produced ties", len(rows) > 400, str(len(rows)))
+    eq("  every row is tagged", {r["source_genre"] for r in rows}, {"roster"})
+    eq("  held_by is one of two values",
+       {r["held_by"] for r in rows}, {"self", "relative"})
+    # A proxy row must name both ends of the proxy, or it asserts nothing.
+    bad = [r for r in rows if r["held_by"] == "relative"
+           and not (r["kinship"] and r["related_to"])]
+    check("  every proxy row names the kinship and the principal", not bad,
+          str(len(bad)))
+    bad = [r for r in rows if r["held_by"] == "self" and r["related_to"]]
+    check("  a direct row names no principal", not bad, str(len(bad)))
+    # These ties are dated by the volume they came from.
+    eq("  every tie carries its volume's year",
+       {r["year"] for r in rows if not r["year"]}, set())
+    check("  the Belgian volume is excluded",
+          not any("belge" in r["doc_id"] for r in rows))
+
+
+def check_legislative_layer() -> None:
+    """Stage 14: the join, and the three continuities it keeps apart."""
+    print("legislative layer", file=sys.stderr)
+
+    from make_legislative_layer import overlap
+    eq("  two known spans that meet overlap", overlap((1920, 1930), (1928, 1936)), "1")
+    eq("  two known spans that miss do not", overlap((1900, 1910), (1920, 1930)), "0")
+    eq("  an unknown span is unknown, not false",
+       overlap((1920, 1930), (None, None)), "")
+
+    path = os.path.join(PROC_DIR, "legislators.csv")
+    if not os.path.exists(path):
+        return
+    legs = load("legislators.csv")
+    check("  produced legislators", len(legs) > 800, str(len(legs)))
+    eq("  key_ambiguous is exactly the forenameless keys",
+       {r["key_ambiguous"] for r in legs}, {"0", "1"})
+    bad = [r for r in legs if (len(r["name_clean"].split()) < 2)
+           != (r["key_ambiguous"] == "1")]
+    check("  key_ambiguous agrees with the name", not bad, str(len(bad)))
+    bad = [r for r in legs if r["in_network"] == "1" and r["n_companies"] == "0"]
+    check("  in_network implies a company", not bad, str(len(bad)))
+    bad = [r for r in legs if r["first_year"] and r["last_year"]
+           and int(r["last_year"]) < int(r["first_year"])]
+    check("  no tenure ends before it starts", not bad, str(len(bad)))
+
+    edges = load("edges_legislator_interlock.csv")
+    ambiguous = {r["person_id"] for r in legs if r["key_ambiguous"] == "1"}
+    bad = [e for e in edges
+           if e["source"] in ambiguous or e["target"] in ambiguous]
+    check("  no interlock edge rests on a surname bucket", not bad,
+          str(len(bad)))
+    bad = [e for e in edges if e["source"] >= e["target"]]
+    check("  every edge is stored in one direction only", not bad,
+          str(len(bad)))
+    eq("  mandates_overlap keeps unknown as unknown",
+       {e["mandates_overlap"] for e in edges}, {"", "0", "1"})
+
+    cont = load("legislative_continuity.csv")
+    eq("  one row per snapshot", len(cont), 5)
+    for row in cont:
+        n = int(row["n_present"])
+        parts = int(row["n_entered"]) + int(row["n_stayed"]) \
+            + int(row["n_returned"])
+        eq(f"  {row['snapshot_year']}: entered + stayed + returned = present",
+           parts, n)
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -1638,6 +1837,9 @@ def main() -> None:
         check_prose_parser()
         check_annotation_resolver()
         check_biographies()
+        check_mandates()
+        check_rosters()
+        check_legislative_layer()
         check_geocoding()
         check_figures()
 

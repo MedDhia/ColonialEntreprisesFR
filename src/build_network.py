@@ -507,6 +507,8 @@ def main() -> None:
     ap.add_argument("--no-biographical", action="store_true",
                     help="exclude stage 3e (biographical dictionaries, ~93%%; "
                          "these ties carry no year)")
+    ap.add_argument("--no-roster", action="store_true",
+                    help="exclude stage 3h (the parliamentary rosters, ~94%%)")
     args = ap.parse_args()
 
     documents = read_csv("documents.csv")
@@ -573,6 +575,24 @@ def main() -> None:
             r.setdefault("source_genre", "biographical")
         affiliations += [r for r in bio if r["company_key"] and r.get("person_key")]
         print(f"biographical rows merged: {len(bio):,}", file=sys.stderr)
+
+    # Stage 3h: the parliamentary rosters. These are dated - the volume's own
+    # year is the snapshot - and they are the only genre that carries the
+    # holder's parliamentary seat alongside the directorship. Ties the roster
+    # attributes to a *relative* of the parliamentarian are keyed to that
+    # relative, not to him, and are excluded here: the board is real but the
+    # `held_by = relative` rows belong to the legislative layer, where the
+    # proxy structure is the object of study, and folding them into the main
+    # network would assert a directorship the source is careful to place one
+    # step away. See METHODOLOGY §4i.
+    if not args.no_roster and os.path.exists(
+            os.path.join(PROC_DIR, "affiliations_roster.csv")):
+        ros = [r for r in read_csv("affiliations_roster.csv")
+               if r.get("held_by") != "relative"]
+        for r in ros:
+            r.setdefault("source_genre", "roster")
+        affiliations += [r for r in ros if r["company_key"] and r.get("person_key")]
+        print(f"roster rows merged: {len(ros):,}", file=sys.stderr)
 
     for r in affiliations + org_aff:
         r.setdefault("source_genre", "dossier")

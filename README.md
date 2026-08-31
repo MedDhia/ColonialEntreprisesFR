@@ -18,34 +18,37 @@ network can be sliced by period rather than collapsed into one static graph.
 >
 > **Extraction coverage.** Of 5,863 documents carrying usable text — the
 > 5,867 that extract cleanly, less four holding under 200 characters —
-> **3,679 (62%) yield at least one tie** — up from 42% before the prose, annotation and
-> biographical parsers were added. The remaining 2,184 hold 26% of the
+> **3,686 (63%) yield at least one tie** — up from 42% before the prose, annotation and
+> biographical and roster parsers were added. The remaining 2,177 hold 26% of the
 > extracted characters and contribute nothing: mostly genres no parser reads
 > (honours lists, tariff schedules, balance-sheet-only extracts) plus real
 > misses. §2b of the methodology quantifies what is left on the table. Absence
 > of a firm from the network is not evidence that it had no board.
 >
-> **Five extraction genres, all merged, all separable.** Every genre is in the
+> **Six extraction genres, all merged, all separable.** Every genre is in the
 > default network and every observation and two-mode edge carries
 > `source_genre`, so filtering to the structured evidence never needs a
 > rebuild (`--no-prose`, `--no-annotations`, `--no-biographical`,
-> `--no-person-index` also exist).
+> `--no-roster`, `--no-person-index` also exist).
 >
 > | Genre | Ties | Precision | What it reads |
 > |---|---|---|---|
-> | `dossier` | 63,765 | highest | board lists under a firm heading |
-> | `person_index` | 15,621 | ~97% agreement with the source's own gloss | numbered annuaire indexes |
-> | `prose` | 11,625 | ~90% | board changes reported in sentences |
+> | `dossier` | 63,820 | highest | board lists under a firm heading |
+> | `person_index` | 15,632 | ~97% agreement with the source's own gloss | numbered annuaire indexes |
+> | `prose` | 12,535 | ~90% | board changes reported in sentences |
 > | `annotation` | 1,621 | ~94% | the compiler's inline notes |
-> | `biographical` | 1,557 | ~93% | biographical dictionaries (**undated**) |
+> | `biographical` | 1,558 | ~93% | biographical dictionaries (**undated**) |
+> | `roster` | 536 | 30/30 attribution, 23/25 resolution | the parliamentary directories (**dated by volume**) |
 >
 > Precision figures come from hand-checking random samples against source
 > context. They locate an order of magnitude, not a second decimal.
-> METHODOLOGY §4c–4g gives each audit and the failures it fixed.
+> METHODOLOGY §4c–4j gives each audit and the failures it fixed. One further
+> genre was built, measured at 8–9 of 15, and **deliberately not merged** — see
+> METHODOLOGY §2b.
 >
 > **The network includes the Paris Bourse.** A large share of colonial firms
 > were publicly quoted, so `Annuaire Desfossés 1956` is a colonial source; it
-> contributes 15,621 ties and 1,889 firms, of which 11% also have dossier
+> contributes 15,632 ties and 1,889 firms, of which 11% also have dossier
 > evidence. The rest are metropolitan and foreign companies that colonial
 > directors also sat on — which is the point, but it means **this is no longer
 > a purely colonial universe**. Every edge carries `source_genre`, so
@@ -59,12 +62,12 @@ network can be sliced by period rather than collapsed into one static graph.
 | Documents with text extracted | **5,874 (99.2%)** — 46 are dead links on the site |
 | Territories | **62** countries / 13 index-page regions (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
 | Economic sectors | 108, as classified by the source |
-| Person → company ties | **102,315** — 63,765 from firm dossiers, 15,621 from the annuaire indexes, 11,625 from prose, 1,621 from annotations, 1,557 from biographies |
-| Two-mode edge rows | **94,189**, 97.4% carrying a year |
-| Distinct people | **34,447** |
+| Person → company ties | **102,871** — 63,820 from firm dossiers, 15,632 from the annuaire indexes, 12,535 from prose, 1,621 from annotations, 1,558 from biographies, 536 from the parliamentary rosters |
+| Two-mode edge rows | **94,728**, 97.4% carrying a year |
+| Distinct people | **34,518** |
 | Companies | **10,373** (including firms known only from a directory or annuaire entry) |
-| Company interlock edges | **78,530** pooled, 51,174 within period |
-| Extraction genres | 5, all merged; `source_genre` on every observation and edge |
+| Company interlock edges | **79,072** pooled, 51,658 within period |
+| Extraction genres | 6, all merged; `source_genre` on every observation and edge |
 | Attribution | 86.9% of parsed ties resolve to a firm; `attribution` records how |
 | Corporate directorships | 3,138 directed company → company edges |
 | Period covered | 1830s–1970s, densest 1914–1944 |
@@ -246,6 +249,22 @@ are small enough to name every firm and follow every edge.
 | `fig32_neighbourhoods.svg` | Six firms' neighbourhoods as small multiples, each cut to 15 ties so every node stays nameable. |
 | `fig33_backbone_by_place.svg` | Figure 28's firms at figure 28's coordinates, recoloured by head office. **53% of the backbone firms with a recoverable address were run from metropolitan France.** |
 
+**`figures/legislature.html`** — the parliamentary elite and the colonial
+boards. The compiler assembled five directories to establish that
+parliamentarians sat on these boards; these six figures ask which *continuity*
+the record actually attests — a career's, a presence's, or a firm's access.
+**1,448 deputies and senators are named in the corpus; 574 sat on a colonial
+board; 111 sat in both chambers.**
+
+| | |
+|---|---|
+| `fig34_mandate_terms.svg` | Terms of office as spans, one row per parliamentarian-director whose term is dated, ordered by first year. Surname-only keys and spans over 55 years are dropped: those are namesakes merged into one man. |
+| `fig35_roster_presence.svg` | The five directories as a presence grid. **Carryover runs 0.471 → 0.794 → 0.568 across 1930–1936 and then 0.009 into 1954** — two of 232 men cross that gap. |
+| `fig36_legislator_interlock.svg` | The 42 most connected parliamentarians by boards shared, ring ordered by chamber so a cross-chamber tie crosses the middle. Paul Doumer, Albert Lebrun, François de Wendel, Edmond Giscard d'Estaing. |
+| `fig37_parliamentary_boards.svg` | The boards that carried the most parliamentarians. Continuous access and rapid succession are not separated here — fig 35 shows why that matters. |
+| `fig38_seat_territory.svg` | Constituency against company territory. The Seine dominates because that is where boards met; Alger, Oran and Cochinchina read differently. |
+| `fig39_direct_or_proxy.svg` | Held personally against held through a relative — the compiler's own distinction, kept out of the main network. **31 of 587 roster ties are proxy holdings.** |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -391,6 +410,7 @@ python3 src/parse_person_index.py             # ~1 min, person-indexed annuaires
 python3 src/parse_prose.py                    # ~4 min, prose-reported boards
 python3 src/resolve_annotations.py            # after stage 4; inline notes
 python3 src/parse_biographies.py              # after stage 4; Qui êtes-vous ?, etc.
+python3 src/parse_rosters.py                  # after stage 4; the parliamentary directories
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding
@@ -402,6 +422,10 @@ python3 src/make_figures.py --lang en          # English label set
 python3 src/make_territory_figures.py --lang en
 python3 src/make_geo_figure.py                # the map
 python3 src/make_geo_figure.py --lang en
+python3 src/parse_mandates.py                 # ~4 min, deputies and senators
+python3 src/make_legislative_layer.py         # the legislative join
+python3 src/make_legislative_figures.py       # figs 34-39
+python3 src/make_legislative_figures.py --lang en
 python3 src/render_png.py                     # ~90 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```

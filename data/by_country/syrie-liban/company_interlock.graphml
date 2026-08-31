@@ -228,19 +228,19 @@
     <edge id="e5" source="port" target="ports">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e6" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
+    <edge id="e6" source="eauxbeyrouth" target="ottomanegazbeyrouth">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e7" source="eauxbeyrouth" target="ottomanegazbeyrouth">
-      <data key="e_weight">4</data>
-    </edge>
-    <edge id="e8" source="banquesyriegrandliban" target="ports">
+    <edge id="e7" source="banquesyriegrandliban" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e9" source="georgemallet" target="ports">
+    <edge id="e8" source="georgemallet" target="ports">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e10" source="louisemmanueladoplphegoranflauxbaronandree" target="port">
+    <edge id="e9" source="louisemmanueladoplphegoranflauxbaronandree" target="port">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e10" source="banquesyriegrandliban" target="tramwayseclairagebeyrouth">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e11" source="cheminferdamashamahprolongements" target="louisemmanueladoplphegoranflauxbaronandree">

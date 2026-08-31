@@ -85,13 +85,13 @@ Four denominators are easy to confuse, so they are stated once here and used
 consistently: **5,920** documents are catalogued, **5,874** have a text file,
 **5,867** extract cleanly, and **5,863** carry usable text — the four that fall
 out hold under 200 characters, a header and nothing else. Tie coverage is
-measured against that last figure. **3,679 of the 5,863 (62%) yield at least
-one tie**; the other 2,184 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
+measured against that last figure. **3,686 of the 5,863 (63%) yield at least
+one tie**; the other 2,177 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
 (42%) and 47% — stages 3b–3e, below, are what closed the gap. This section
 says what is still in the residue, because a reader is otherwise entitled to
 assume the pipeline saw everything.
 
-Sorting the 2,184 zero-tie documents by how much board vocabulary they
+Sorting the 2,177 zero-tie documents by how much board vocabulary they
 contain (the same counting rule as before, so the rows are comparable):
 
 | Role words in the text | Documents | Was | Reading |
@@ -118,6 +118,46 @@ The last row is the real gap, and it is not one thing:
 One further gap is quantified elsewhere: **9,942 parsed ties (13.1%)** are
 dropped for want of an identifiable firm (§5). The compiler's annotation leads
 are now resolved as far as they go (§4e).
+
+### A genre measured and left out: the compiler's footnotes
+
+One further register was built, measured, and **deliberately not merged**. The
+compiler footnotes the men he knows about, in a fixed shape — the name, life
+dates in parentheses, a colon, then the career in prose:
+
+    Paul Bayard (1852-1931) : polytechnicien, ingénieur aux forges de Pompey,
+    directeur des Forges et clouteries réunies à Charleville …
+
+There are 8,872 such headers across the corpus and none of the six shipped
+parsers can read them: the heading is a person and the text is prose, so the
+dossier parser has no firm to hang a list on; the prose parser needs an inline
+`M.` marker the footnote never repeats; the biographical parser wants the
+dictionary header form (capitalised surname, parenthesised forename) and three
+bracketed role blocks before it will look at a document. `src/parse_footnotes.py`
+supplies the header pattern and borrows stage 3e's machinery for everything
+else. It yields **5,172 ties, 1,690 people, 1,511 firms**.
+
+It is in the repository, it is not in the network, and it is not switched on by
+any flag. A 15-row hand audit against source text put precision at **8–9 of 15
+(≈55–60%)**, against the 90–97% the shipped genres measure. Two failure classes
+account for it:
+
+- **Non-person headers with the footnote's shape.** `À l'origine du Comptoir
+  technique algérien (1917) :` is a narrative sentence; `Conseiller du commerce
+  extérieur (1932) :` is an office. Both parse as a surname. The module's
+  `NOT_A_PERSON_RE` rejects decorations ("Chevalier de la Légion d'honneur
+  (1911) :") and misses these.
+- **Role words and institutions resolved as firms.** The company resolver
+  matches on content words, so the bare role `président` found a firm literally
+  named *Président*, and `l'observatoire de Phu-Liên` resolved to the
+  *Observatoire central magnétique*. A `PUBLIC_OFFICE_RE` already drops 175
+  phrases of this kind per run; it is not enough.
+
+Both are fixable and neither is fixed here. The rule this project holds itself
+to is that a genre ships when its measured precision sits in the band the
+others occupy, and this one does not, so the honest record is the module, the
+number, and the two named defects — not 5,172 ties of unknown quality folded
+into a dataset whose error rate is published.
 
 ### The extraction trap
 
@@ -651,6 +691,164 @@ which is better evidence than any name match in this pipeline. The *person*
 does not: recovering them needs footnote-scoped segmentation, and attributing
 a directorship to the wrong man is a worse outcome than not extracting it.
 Left unbuilt deliberately.
+
+## 4i. The parliamentary rosters
+
+`src/parse_rosters.py` reads eight documents, and they are the only eight in
+the corpus that are *about* the overlap between the legislature and the company
+boards. The compiler filed them himself, under a group heading of his own
+making: *Parlementaires intéressés directement ou par des proches à des
+entreprises privées*. Five are Roger Mennevée's directory *Parlementaires et
+financiers*, for 1924, 1930, 1932, 1936 and 1954; the others are a press survey
+of the 1893 intake, *Les squales coloniaux* (1922), and one on the Belgian
+parliament.
+
+**They were almost unread.** The 1924 volume is 89,259 characters and yielded
+**4 ties**; the 1954 volume is 46,229 characters and yielded **1**. The cause
+is a comma. Stage 3e segments entries on `SURNAME (Forename)` and Mennevée
+writes `SURNAME, Forename`:
+
+    D'ANDIGNÉ, Geoffroy (Comte)[1858-1932]
+    Député de Maine-et-Loire [1924-1932]
+    Adresse : Hôtel d'Orsay, 9, quai d'Orsay, à Paris (VIIe).
+    Administrateur :
+    Compagnie parisienne de garages automobiles (nommé à l'assemblée du 7
+    juillet 1922).
+
+So every entry in three of the five directories fell through, and the
+`Administrateur :` block under it with them. This stage adds a header rule that
+covers both that fielded form and the running-prose form the 1924 and 1954
+volumes use, and the discriminator in both cases is the same: a chamber word
+within 200 characters of the name. That word is what makes a capitalised line a
+roster entry rather than a headline, and it is *also the mandate*, which makes
+this the only genre that yields a seat and a directorship together.
+
+Result: **1,096 entries, 995 with a constituency, 541 with a term**, and **587
+ties** to firms the catalogue holds. The 2,393 company phrases that do not
+resolve are mostly real firms that are simply not colonial — *Sucreries et
+raffineries d'Erstein*, *Chaux et Ciments de Chanaz* — and are correctly
+absent.
+
+**"ou par des proches" is in the group's title, and it is the precision
+problem.** Mennevée tracks the proxy holding as carefully as the direct one, so
+an entry is part career and part genealogy, and the companies in the genealogy
+are not the parliamentarian's:
+
+    Frère cadet de Paul-Jonas et Gaston Hesse, gérants des Comptoirs Hesse
+    belle-mère de Lucien Bach, administrateur de la Société générale foncière
+    Père de François André-Hesse, administrateur de la Société générale foncière
+
+Reading those as the deputy's own directorships would manufacture exactly the
+interlocks the source is careful to distinguish. Every role phrase is therefore
+tested against the *clause* it sits in — back to the nearest `.`, `;` or
+bracket edge, not the whole note — and a kinship word there redirects the tie:
+`held_by` becomes `relative`, the person becomes the relative, and `related_to`
+records the parliamentarian it was reached through. Clause scoping is what lets
+`[ép. Potin. Anc. député de la Nièvre]` through, because Heuzey married a Potin
+*and* sat for the Nièvre and the full stop says so. **31 of the 587 ties are
+proxy holdings**, and `build_network.py` excludes them: they are counted in the
+legislative layer, where the prête-nom structure is the object of study, and
+kept out of the main network, where they would assert a seat the source places
+one step away.
+
+**Precision.** Two audits, because two things can go wrong independently.
+Attribution — is the company phrase inside the entry of the man it was credited
+to — measured **30 of 30** on a random sample checked against each holder's own
+entry body. Resolution — is the resolved firm the firm the phrase named —
+measured **23 of 25**, both failures being catalogue *section headings* matched
+as if they were companies (`Société générale d'armement` → `ARMEMENT`,
+`charbonnages` → `CHARBONNAGES`), which a rule now rejects. Getting there took
+five iterations, and the defects are worth naming because each was a whole
+class rather than a one-off:
+
+- **Missed headers donate their boards upward.** `De WENDEL, François` went
+  undetected because the particle is capitalised and the pattern was
+  lower-case-only, so de Wendel's entire board was credited to Georges Weill,
+  the entry above his. Albert Lebrun's 1936 entry names no chamber at all — by
+  then he was President of the Republic — so it now ends the entry above it
+  without opening one of its own.
+- **Non-person headers.** `Paris, le 11 juillet 1924.` is where a letter was
+  written; `Caoutchoucs de Phuoc-Hoa (1927)` is a firm; `Nos Députés` is a
+  section heading whose own word is the chamber word that confirmed it;
+  `Succursale : … Lille (Nord).` parsed as a man called Nord Lille.
+- **A comma inside a company name.** `Association industrielle, commerciale et
+  financière` became a firm called *commerciale et financière*, which resolved
+  to a bank. A new board never starts with a lower-case word, so a fragment
+  that does is glued back on.
+- **The block that would not end.** Bounding an `Administrateur :` list only at
+  the role labels this stage keeps let Raymond Patenôtre's run on through
+  `Propriétaire des journaux : Le Petit Niçois, Le Petit Var, La Sarthe` and
+  make him a director of three newspapers and of a company called Sarthe. Any
+  `Label :` now ends the block — and the label's own spacing is the compiler's
+  typesetting, non-breaking spaces included, which is why that rule took two
+  attempts.
+- **The relative is the last name in the clause, not the first.** "Sa fille
+  Lina a épousé en 1930 le banquier Jean Rheims, administrateur des
+  Manufactures indochinoises de cigarettes" is Rheims's directorship, and the
+  first pass gave it to Lina.
+
+The Belgian volume is excluded. The men are real and the boards are real, but a
+seat in the Chambre des représentants is not a seat in the body that legislated
+for the French empire, and the column would silently mean two things.
+
+## 4j. Mandates, everywhere else in the corpus
+
+The rosters are eight documents. Deputies and senators are named **9,692 times
+across 1,415 of the other 5,855**, and not one of those mentions is a tie, so
+no affiliation parser records any of them. `src/parse_mandates.py` reads them
+into `person_mandates.csv` — **2,444 mentions, 1,117 people** — and changes the
+affiliation network not at all. A directorship held by a sitting
+parliamentarian is a different object from one held by an engineer, and the
+mandate is what tells them apart.
+
+Four registers carry a mandate, and they differ in where the subject sits
+relative to the title: apposition (`M. Ernest Outrey, député de la
+Cochinchine`), the compiler's bracket (`Camille Krantz* [député d'Épinal
+1891-1910, CNEP]`), title-first (`le sénateur Ernest Feray`), and the career
+clause of a footnote whose header is the person (`Jules Bozérian (1825-1893) :
+avocat, député (1871-1876), puis sénateur (1876-1893) du Loir-et-Cher`).
+
+**The kinship trap is the whole precision problem, again.** The compiler is a
+genealogist as much as a company historian, and the mandate beside a name is
+very often not that man's:
+
+    Maurice Piot [fils de Léon Piot (1845-1922), député de l'Aude 1876-1877]
+    Ch. Riotteau [fils du sénateur-maire de Granville Émile Riotteau]
+    Marié à Geneviève Mérillon, fille d'un député de la Gironde
+
+Reading these would seat three men in a chamber none of them entered. The same
+clause-scoped kinship test as §4i handles them, and one more rule joins it: the
+compiler's own disclaimers. `R. Carcassonne : probablement à distinguer de
+l'avocat Roger Carcassonne, sénateur socialiste (1946-1971)` asserts precisely
+what a naive read would deny.
+
+Four further rejections earn their place:
+
+- **`député` also means "delegate".** `G. L. (député), député au convent
+  1930-1931 de la Loge L'Étoile flamboyante` is a masonic lodge.
+- **Foreign chambers.** `le commandeur docteur Enrico Scalini, sénateur du
+  Royaume` sat in the Italian Senate.
+- **A year near a title usually dates something else** — the clipping it
+  appears in, the budget under debate, the election the man lost: `député, sur
+  le budget du ministère de la marine pour 1889`; `CHAGNAUD Léon, sénateur de
+  la Creuse, non réélu en 1929`. A term of office is written as a term of
+  office: bracketed after the title, or as a span. A bare single year is not
+  read, which loses `Élu député de la Corrèze en 1893` and is the right trade.
+- **The constituency slot is anchored, not searched.** `député, vice-président
+  de la Commission des Colonies` is not a deputy for the Commission des
+  Colonies, and `sénateur du Nord` followed by the article title *L'Afrique
+  Équatoriale Française* is not a seat called Nord L'Afrique.
+
+**Precision: 18 of 18 correct on person and chamber** in the final audit round,
+with every constituency also correct; an earlier round measured 19 of 20 on the
+same criterion, the exception being a name that had absorbed the end of the
+preceding sentence (`26, rue d'Athènes. Ferdinand Buisson, ancien député`).
+
+Two things this file is not. It is not a parliamentary roster: a man who sat for
+twenty years may appear once or forty times, so every consumer aggregates it.
+And it is not checked against the Assemblée nationale's own biographical
+dictionary — the constituency and the years are the compiler's, with his errors
+intact.
 
 ## 5. Dating and attributing ties
 
@@ -1227,6 +1425,67 @@ landed in the same places but their path segments were emitted in a different
 order and the committed SVG changed on a re-run of unchanged data. This is the
 same hazard §5d describes, in a place the existing guard did not reach;
 `ordered_subgraph` fixes it and `checks.py` now probes for it.
+
+## 5j. The legislative layer, and three kinds of continuity
+
+`src/make_legislative_layer.py` joins the two mandate readings (§4i, §4j) to
+each other and to the company network, and writes three files: `legislators.csv`
+(one row per parliamentarian), `edges_legislator_interlock.csv` (two
+parliamentarians, one board), and `legislative_continuity.csv` (the roster
+snapshots as transitions). `src/make_legislative_figures.py` draws figs 34–39.
+
+**1,448 parliamentarians are named in the corpus; 574 of them sat on a colonial
+company board; 111 sat in both chambers.** Those are the headline numbers, and
+the second is the one to be careful with — see below.
+
+The word "continuity" hides three different measurements, and conflating them
+is the easy mistake here:
+
+1. **Continuity of tenure** — one man's own run, `first_year` to `last_year`.
+   fig34 draws it.
+2. **Continuity of presence** — whether the *same* man is in the compiler's next
+   directory. This is what `legislative_continuity.csv` measures, as
+   entered/stayed/left between consecutive snapshots, because a roster is a
+   census and the interesting number is the turnover between two of them. fig35
+   draws it, and the result is stark: carryover runs **0.471 → 0.794 → 0.568**
+   across 1930, 1932 and 1936, and then **0.009** into 1954. Two of 232 men
+   cross that gap. A war and a republic fall inside it.
+3. **Continuity of position** — whether a *board* keeps a parliamentarian across
+   snapshots, which is the firm's access rather than any career. fig37 ranks the
+   boards but deliberately does not separate continuous access from rapid
+   succession, and says so.
+
+A firm can hold parliamentary access continuously for thirty years while never
+keeping the same parliamentarian for two consecutive volumes. The reverse also
+happens. Neither is visible in a single number.
+
+**Two men on one board may never have met.** An interlock edge here carries
+`mandates_overlap`: `1` where the two known terms intersect, `0` where they do
+not, and *empty* where at least one term is unknown — which is **277 of 404
+pairs**. That column is stated rather than filled: an analysis that reads every
+shared board as a live connection overstates the network, and one that demands
+a proven overlap understates it by the size of the unknown column. The figure
+caption carries both numbers for the same reason.
+
+**`key_ambiguous`, and why a headline number needs it.** A person key with no
+forename attested is a surname bucket rather than a man. Joining `paris` to a
+34,500-person network returned 34 companies belonging to several different
+people, and the node was the largest in the first draft of fig36. The mandate is
+still real — the corpus does name a senator by surname alone — so the row stays
+and is flagged, and every company-side figure and the interlock graph drop it.
+That is why the interlock count is 404 rather than the 831 an unfiltered join
+gives, and the 574 "on a colonial board" should be read as an upper bound whose
+ambiguous share is in the column.
+
+**Two figure decisions worth stating.** No sankey, no bump chart, no chord
+diagram: all three encode flow between ordered categories, and what the
+snapshots record is presence in a census whose gaps are as often the compiler's
+silence as a man's departure. A ribbon between 1936 and 1954 would assert a
+continuous quantity across an eighteen-year hole. The presence grid states what
+is known — present, absent — and lets the reader see the break. And fig34 drops
+any span longer than 55 years along with every surname-only key, because the
+first draft gave René Hachette a 78-year term: no one sat that long, so a bar
+saying so is two men.
 
 ## 6. Validity — read this before using the data
 
