@@ -1633,6 +1633,225 @@ def check_sector_centrality() -> None:
        int(base["n_cross_sector_edges"]))
 
 
+def check_map_placement() -> None:
+    """Stage 20: the placement ladder, and the arithmetic that must close."""
+    import collections
+
+    import place_on_map as M
+    from build_network import read_csv
+
+    print("map placement", file=sys.stderr)
+
+    # Haversine against two known distances.
+    eq("  haversine of a point to itself", round(M.haversine(48.9, 2.4, 48.9, 2.4), 3),
+       0.0)
+    d = M.haversine(48.857, 2.352, 10.776, 106.701)   # Paris - Saigon
+    check("  Paris to Saigon is about 10,200 km", 9900 < d < 10500, f"{d:.0f}")
+    d = M.haversine(0.0, 0.0, 0.0, 90.0)
+    # A quarter of a great circle on the sphere the module uses: pi*R/2.
+    check("  a quarter of the equator",
+          abs(d - math.pi * M.EARTH_KM / 2) < 0.5, f"{d:.1f}")
+
+    # Every fold target and every federation member must exist in the gazetteer,
+    # or a firm silently fails to place.
+    anchors = M.territory_anchors()
+    bad = [v for v in M.TERRITORY_FOLD.values() if v not in anchors]
+    check("  every fold target is a gazetteer territory", not bad, str(bad))
+    gaz = {r["territory"] for r in read_csv(
+        os.path.join(ROOT, "data", "reference", "places_geo.csv"))}
+    bad = [m for ms in M.FEDERATIONS.values() for m in ms if m not in gaz]
+    check("  every federation member is a gazetteer territory", not bad, str(bad))
+    for fed in M.FEDERATIONS:
+        a = anchors.get(fed)
+        check(f"  {fed} has an anchor", bool(a), "missing")
+        if a:
+            eq(f"  {fed}'s anchor is a federation mean", a["source"],
+               "federation mean")
+    bad = [t for t, a in anchors.items()
+           if not (-90 <= a["lat"] <= 90 and -180 <= a["lon"] <= 180)]
+    check("  every anchor is on the globe", not bad, str(bad[:3]))
+
+    # `tie_class` is a total function of the two groups, and symmetric.
+    groups = ["metropole", "empire", "foreign"]
+    for ga in groups:
+        for gb in groups:
+            a, b = {"group": ga}, {"group": gb}
+            eq(f"  tie_class is symmetric for {ga}/{gb}",
+               M.tie_class(a, b), M.tie_class(b, a))
+            check(f"  tie_class is known for {ga}/{gb}",
+                  M.tie_class(a, b) in M.TIE_CLASSES, M.tie_class(a, b))
+    eq("  metropole and metropole", M.tie_class({"group": "metropole"},
+                                                {"group": "metropole"}),
+       "metropole only")
+    eq("  metropole and colony", M.tie_class({"group": "metropole"},
+                                             {"group": "empire"}),
+       "metropole-colony")
+    eq("  a foreign end wins", M.tie_class({"group": "foreign"},
+                                           {"group": "metropole"}),
+       "with foreign")
+
+    path = os.path.join(PROC_DIR, "company_map_positions.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("company_map_positions.csv")
+    base = load("map_geography_baseline.csv")[0]
+    ties = load("map_tie_geography.csv")
+
+    eq("  one row per firm in the graph", len(rows), int(base["n_graph_firms"]))
+    ids = [r["company_id"] for r in rows]
+    eq("  no firm is placed twice", len(set(ids)), len(ids))
+    lvl = collections.Counter(r["placement_level"] for r in rows)
+    bad = set(lvl) - {"city", "territory", "unplaced"}
+    check("  placement_level is one of three rungs", not bad, str(bad))
+    eq("  the city count matches the baseline", lvl["city"],
+       int(base["n_placed_city"]))
+    eq("  the territory count matches the baseline", lvl["territory"],
+       int(base["n_placed_territory"]))
+    eq("  the unplaced count matches the baseline", lvl["unplaced"],
+       int(base["n_unplaced"]))
+    eq("  the three rungs sum to the graph", sum(lvl.values()),
+       int(base["n_graph_firms"]))
+
+    # A placed row has coordinates; an unplaced one has none and says why.
+    bad = [r for r in rows if (r["placement_level"] == "unplaced") != (not r["lat"])]
+    check("  coordinates iff placed", not bad, str(len(bad)))
+    bad = [r for r in rows if r["placement_level"] == "unplaced" and not r["reason"]]
+    check("  every unplaced firm gives a reason", not bad, str(len(bad)))
+    bad = [r for r in rows if r["lat"]
+           and not (-90 <= float(r["lat"]) <= 90 and -180 <= float(r["lon"]) <= 180)]
+    check("  every placed firm is on the globe", not bad, str(len(bad)))
+    bad = [r for r in rows if r["lat"] and r["group"] not in
+           ("metropole", "empire", "foreign")]
+    check("  every placed firm has a known group", not bad, str(len(bad)))
+
+    # The rule that makes the territory rung defensible: one filing country.
+    bad = [r for r in rows if r["placement_level"] == "territory"
+           and int(r["n_countries_listed"]) != 1]
+    check("  a territory placement rests on exactly one filing country",
+          not bad, str(len(bad)))
+    multi = [r for r in rows if int(r["n_countries_listed"]) > 1
+             and r["placement_level"] == "territory"]
+    check("  no multi-country firm is placed by filing", not multi, str(len(multi)))
+
+    # Firms at one anchor share one coordinate, because the spread is drawn and
+    # not stored.
+    by_anchor = collections.defaultdict(set)
+    for r in rows:
+        if r["lat"]:
+            by_anchor[r["anchor"]].add((r["lat"], r["lon"]))
+    bad = [a for a, xs in by_anchor.items() if len(xs) != 1]
+    check("  one anchor, one coordinate", not bad, str(bad[:3]))
+    eq("  the anchor count matches the baseline", len(by_anchor),
+       int(base["n_anchors"]))
+
+    # The tie table has to close against the graph.
+    eq("  the tie classes are the declared ones",
+       [r["tie_class"] for r in ties], M.TIE_CLASSES)
+    drawable = sum(int(r["n_edges"]) for r in ties if r["tie_class"] != "unplaced")
+    eq("  drawable ties match the baseline", drawable,
+       int(base["n_drawable_edges"]))
+    unplaced = next(r for r in ties if r["tie_class"] == "unplaced")
+    eq("  drawable plus unplaced is the whole graph",
+       drawable + int(unplaced["n_edges"]), int(base["n_edges"]))
+    bad = [r for r in ties if int(r["n_interlocks"]) < int(r["n_edges"])]
+    check("  an edge carries at least one interlock", not bad, str(len(bad)))
+    bad = [r for r in ties if int(r["n_same_anchor"]) > int(r["n_same_territory"])]
+    check("  same place implies same territory", not bad, str(len(bad)))
+    bad = [r for r in ties if int(r["n_same_territory"]) > int(r["n_edges"])]
+    check("  same-territory ties are a subset of the class", not bad, str(len(bad)))
+    # A metropole-colony tie cannot sit inside one place, by construction.
+    mc = next(r for r in ties if r["tie_class"] == "metropole-colony")
+    eq("  a metropole-colony tie spans two places", int(mc["n_same_anchor"]), 0)
+    shares = [float(r["share_of_drawable"]) for r in ties
+              if r["share_of_drawable"]]
+    check("  the drawable shares sum to 1", abs(sum(shares) - 1.0) < 0.002,
+          f"{sum(shares):.4f}")
+    eq("  same-anchor ties match the baseline",
+       sum(int(r["n_same_anchor"]) for r in ties),
+       int(base["n_same_anchor_edges"]))
+
+    # Paris: the three buckets must not be mixed, which is what the first
+    # version of the baseline did — it divided ties to unplaced firms by the
+    # drawable total and overstated Paris's reach by twenty points.
+    paris = {r["company_id"] for r in rows if r["anchor"] == "Paris"}
+    eq("  the Paris firm count matches the baseline", len(paris),
+       int(base["paris_firms"]))
+    touch = int(base["paris_cross_edges"]) + int(base["paris_within_edges"])
+    check("  Paris's drawable ties fit inside the drawable total",
+          touch <= int(base["n_drawable_edges"]),
+          f"{touch} vs {base['n_drawable_edges']}")
+    check("  Paris touches most of the drawable network",
+          0.4 <= touch / int(base["n_drawable_edges"]) <= 0.55,
+          f"{touch / int(base['n_drawable_edges']):.3f}")
+    check("  the median tie is a plausible distance",
+          1000 < float(base["median_tie_km"]) < 8000, base["median_tie_km"])
+
+
+def check_world_map_figures() -> None:
+    """Stage 21: one set of coordinates, and the discs hung off the anchors."""
+    import make_world_map_figures as M
+
+    print("world map figures", file=sys.stderr)
+
+    # `_disc` is uniform by area and deterministic.
+    pts = M._disc(400, 0.0, 0.0, 10.0)
+    eq("  a disc places every point", len(pts), 400)
+    bad = [xy for xy in pts if math.hypot(*xy) > 10.001]
+    check("  no point escapes the disc", not bad, str(len(bad)))
+    inner = sum(1 for x, y in pts if math.hypot(x, y) <= 10.0 / math.sqrt(2))
+    check("  half the points fall in half the area",
+          abs(inner - 200) <= 3, str(inner))
+    eq("  a disc of one is its centre", M._disc(1, 3.0, 4.0, 9.0), [(3.0, 4.0)])
+    eq("  the same disc twice", M._disc(50, 1.0, 2.0, 5.0),
+       M._disc(50, 1.0, 2.0, 5.0))
+
+    if not os.path.exists(os.path.join(PROC_DIR, "company_map_positions.csv")):
+        return
+    d = M.gather()
+    placed = [r for r in d["rows"] if r["lat"]]
+    eq("  every placed firm gets a pixel", len(d["pos"]), len(placed))
+    # Disc area proportional to firm count is the figure's whole claim about
+    # blob size, so it has to hold between any two anchors.
+    big = sorted(d["anchors"].values(), key=lambda a: -len(a["firms"]))[:8]
+    bad = []
+    for a in big:
+        for b in big:
+            if len(a["firms"]) < 2 or len(b["firms"]) < 2:
+                continue
+            want = math.sqrt(len(a["firms"]) / len(b["firms"]))
+            if abs(a["r"] / b["r"] - want) > 0.01:
+                bad.append((a["anchor"], b["anchor"]))
+    check("  disc radius goes as the square root of the count", not bad,
+          str(bad[:3]))
+    # Every firm sits inside its own anchor's disc.
+    bad = []
+    for cid, (x, y) in d["pos"].items():
+        a = d["anchors"][d["by_id"][cid]["anchor"]]
+        if math.hypot(x - a["x"], y - a["y"]) > a["r"] + 0.01:
+            bad.append(cid)
+    check("  no firm escapes its anchor's disc", not bad, str(bad[:3]))
+    # The drawn edges are exactly the drawable ones.
+    base = load("map_geography_baseline.csv")[0]
+    eq("  the figures draw every drawable tie", len(d["edges"]),
+       int(base["n_drawable_edges"]))
+    # One layout for every panel: gather() hands out a single pos dict, so a
+    # second call must reproduce it exactly.
+    again = M.gather()
+    eq("  the layout is deterministic", d["pos"], again["pos"])
+    # The Paris ranking the fig56 caption asserts.
+    rank = M._paris_ranking(d)
+    check("  the Paris ranking is ordered", rank == sorted(rank, reverse=True),
+          str(rank[:2]))
+    fin = next((r for r in rank if r[2] == "finance"), None)
+    check("  finance is in the Paris ranking", fin is not None, "missing")
+    if fin:
+        check("  finance leads the sectors above a hundred firms",
+              [r for r in rank if r[3] >= 100][0][2] == "finance",
+              [r for r in rank if r[3] >= 100][0][2])
+        check("  but it does not lead outright", rank[0][2] != "finance",
+              rank[0][2])
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -1887,7 +2106,20 @@ def check_figures() -> None:
             PALETTE["light"]["edge"], "none",
         }
         stack_allowed = allowed | set(EXTRA_SERIES["light"])
-        extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - stack_allowed
+        # Fill is inherited, and the map figures set it once on a <g> holding
+        # thousands of circles rather than on each circle — writing it 3,910
+        # times cost a megabyte. So resolve the fill the way a renderer does,
+        # up the tree, instead of reading the attribute off the circle.
+        parent = {ch: pa for pa in root.iter() for ch in pa}
+
+        def fill_of(el):
+            while el is not None:
+                if el.get("fill"):
+                    return el.get("fill")
+                el = parent.get(el)
+            return None
+
+        extra = {fill_of(c) for c in root.iter(f"{ns}circle")} - stack_allowed
         check(f"  {name}: no colour outside the validated palette", not extra,
               str(sorted(extra)[:3]))
         # Strokes are an encoding too. `draw.curved_edges` gives an edge a
@@ -2181,6 +2413,8 @@ def main() -> None:
         check_sectors()
         check_political_coding()
         check_sector_centrality()
+        check_map_placement()
+        check_world_map_figures()
         check_geocoding()
         check_figures()
 

@@ -303,6 +303,20 @@ distance instead. See [METHODOLOGY §5m](docs/METHODOLOGY.md).
 | `fig49_removal_cost.svg` | The removal test drawn. Note the inversion it exposes: inside the core, removing finance takes 632 edges against 682 for 47 randomly drawn *core* firms — because the core is the top 170 by weighted degree, so a random draw inside it is a draw of hubs. The z-score in the CSV draws its null from the whole graph. |
 | `fig50_hub_or_broker.svg` | Hub against broker, firm by firm. The highest-betweenness finance firms have gaps near zero: they are not brokers *instead* of hubs. |
 
+**`figures/world_map.html`** — the whole network on the world map. Figure 7
+maps *cities*, one dot each; these map **firms**. The placement ladder of stage
+20 gives an address to 2,014 firms, a filing-country anchor to 1,896 more, and
+nothing to 2,079 — so **3,910 of 5,989 firms (65%)** and **43,164 of 79,072
+ties (55%)** are on the map, and every node records which rung it stands on.
+See [METHODOLOGY §5n](docs/METHODOLOGY.md).
+
+| | |
+|---|---|
+| `fig53_full_network_map.svg` | **The full network, geographically.** Every placed firm at its own point, spread through a disc whose area is proportional to the firms in it, and all 43,164 drawable ties — including the **9,025 that never leave a single place**, which a map of cities cannot draw at all. Colour is placement precision, not geography: position already carries geography. |
+| `fig54_paris_or_not.svg` | The same coordinates twice: the ties that touch Paris, then the ties that do not. **Paris holds 19.5% of the placed firms and touches 45.2% of the drawable ties.** The first panel is a fan; the second is a lattice between colonies. |
+| `fig55_tie_geography.svg` | The drawable ties by their two endpoints, with the share that never leaves one place drawn inside the bar. Colony–colony leads at 47.1% — but 10,222 of those 20,341 ties stay inside one territory, so read it as a ceiling. The median tie that does travel spans **3,083 km**. |
+| `fig56_finance_on_the_map.svg` | Finance on the map: 9.5% of the placed firms, **27.3% of the drawable ties**, 41% of them in Paris. Second on Paris share behind the transcolonial-groups residual, and first among sectors above a hundred firms — what is distinctive about finance is its position in the graph, not its geography. |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -431,6 +445,7 @@ figures/
   structure.html          figures 18-27, what shape the graph has
   nodes.html              figures 28-33, the network firm by firm
   sector_network.html     figures 47-52, which sector is central
+  world_map.html          figures 53-56, the whole network on the map
   fig*.svg, fig*.png      the same figures standalone, for papers
   by_country/             one SVG and one PNG per territory
   en/                     the same figures with English category labels
@@ -473,6 +488,9 @@ python3 src/make_legislative_figures.py --lang en
 python3 src/code_sector_centrality.py         # sector centrality + the removal null
 python3 src/make_sector_network_figures.py    # figs 47-52
 python3 src/make_sector_network_figures.py --lang en
+python3 src/place_on_map.py                   # the firm-level placement ladder
+python3 src/make_world_map_figures.py         # figs 53-56
+python3 src/make_world_map_figures.py --lang en
 python3 src/render_png.py                     # ~90 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```

@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Twenty stages, each resumable, each writing its own outputs:
+Twenty-two stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -85,8 +85,12 @@ Twenty stages, each resumable, each writing its own outputs:
     grouping → `sector_centrality.csv`, `edges_sector_interlock.csv`,
     `sector_centrality_baseline.csv` (§5m).
 19. **`make_sector_network_figures.py`** — figures 47–52 (§5m).
+20. **`place_on_map.py`** — the placement ladder →
+    `company_map_positions.csv`, `territory_anchors.csv`,
+    `map_tie_geography.csv`, `map_geography_baseline.csv` (§5n).
+21. **`make_world_map_figures.py`** — figures 53–56 (§5n).
 
-Figure stages 7, 8, 11–13, 15, 17 and 19 take `--lang en`, which writes a parallel `figures/en/`
+Figure stages 7, 8, 11–13, 15, 17, 19 and 21 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
 names are left in French throughout: a company's name is a legal name rather
 than a description, and an English rendering of it would be a string that
@@ -1852,6 +1856,94 @@ that position is never the output of a force algorithm:
 - **fig50** — hub against broker, per firm, by sector. The finance firms with
   the highest betweenness have gaps near zero: they are not brokers *instead*
   of hubs.
+
+## 5n. The whole network on the world map
+
+Figure 7 (§5f) already puts the network on the map, but it maps **cities**: it
+collapses each city to one node, so 762 Paris firms are a single dot and the
+ties *inside* a city are a number in a table rather than lines on the map.
+`src/place_on_map.py` (stage 20) and `src/make_world_map_figures.py` (stage 21)
+map the **firm**. Doing that means answering, for each of the 5,989 firms in the
+interlock graph, "where was it?" — and for a third of them the honest answer is
+that the source does not say.
+
+### The placement ladder
+
+Three rungs, and every row of `company_map_positions.csv` records which one it
+landed on, because the rungs do not mean the same thing:
+
+| Rung | Firms | What position means |
+|---|---|---|
+| `city` | 2,014 | An address. `geocode.py` recovered a city from the listed place or the observed head office. A fact about the firm. |
+| `territory` | 1,896 | A filing category. No address, but the catalogue files the firm under exactly **one** country, so it sits at that territory's anchor point. A fact about the *catalogue*. |
+| `unplaced` | 2,079 | No address and no single country: 1,650 firms with no country at all (most filed only under the transversal *Empire* rubric), 420 filed under several at once, and 9 whose single country — Macedonia, Russia, the Antarctic territories — has no city in the gazetteer. |
+
+That places **3,910 firms (65.3%)** and makes **43,164 of the 79,072 ties
+(54.6%)** drawable, against figure 7's 2,014 firms and its between-city ties
+only.
+
+**Multi-country firms are deliberately not placed.** `companies.csv` stores
+`countries` as a sorted list, so taking the first element — which is what
+`territory_of` does for the colour of every other figure — would place a firm
+filed under nine territories at whichever sorts first alphabetically. That is a
+coin flip dressed as a coordinate, and the firms it would misplace are the
+largest and most interlocked in the corpus. They stay off the map with a
+`reason` recorded.
+
+Territory anchors are the unweighted mean of that territory's cities in
+`data/reference/places_geo.csv`. It is a label anchor, not a centroid of
+anything real. The two federations (AOF, AEF) have no city of their own in the
+gazetteer and take the mean over their member territories, which are listed in
+`FEDERATIONS` in the module.
+
+### What a firm-level map can draw that a city-level one cannot
+
+Firms at one anchor are spread through a disc by a deterministic golden-angle
+rule, with the disc's **radius as the square root of the firm count** so its
+area is proportional to how many firms are there. Two consequences: the
+**9,025 ties that never leave a single place** become short lines inside a disc
+instead of a footnote, and blob size is a quantity. Where two places are close
+and one is large its disc swallows the other — Brussels, Lyon and Marseille all
+fall inside Paris's — so a hairline ring marks each disc's edge and the small
+anchors are painted last.
+
+### Paris
+
+**Paris holds 762 of the 3,910 placed firms (19.5%) and touches 19,507 of the
+43,164 drawable ties (45.2%).** Figure 54 draws that as two panels on one set
+of coordinates: the ties that touch Paris, which are a fan, and the ties that
+do not, which are a lattice between colonies.
+
+The three Paris counts are kept apart in `map_geography_baseline.csv`
+(`paris_cross_edges`, `paris_within_edges`, `paris_edges_to_unplaced`) because
+the first version of that row mixed them. It counted Paris's ties to *unplaced*
+firms in the numerator and divided by the drawable total, which put Paris's
+reach at 63.7% instead of 45.2%. A ratio whose numerator and denominator come
+from different populations is the easiest error to make here and the hardest to
+see.
+
+### The geography of a tie, and why colony–colony is a ceiling
+
+Classified by the two endpoints, the drawable ties are 47.1% colony–colony,
+36.3% metropole–colony, 11.5% metropole–metropole and 5.0% involving a foreign
+country; the median tie that leaves its place spans **3,083 km**. Colony–colony
+leading is not a licence to call the network a lattice rather than a hub:
+**10,222 of those 20,341 ties stay inside a single territory**, and the firms
+involved are disproportionately the ones placed by filing country for want of
+an address — exactly the firms that may in truth have been run from Paris. Read
+that rank as a ceiling.
+
+### Finance on the map
+
+Figure 56 is where §5m and this section meet. The 372 placeable finance firms
+are 9.5% of the placed firms and touch **27.3% of the drawable ties**, and
+**41% of them are in Paris**. But finance is *second* on Paris share, behind
+the 57-firm transcolonial-groups residual at 53%, and first only among the
+sectors with more than a hundred placed firms. The caption computes that
+ranking rather than asserting it, because an earlier draft called finance the
+most geographically concentrated sector and mining is three points behind it.
+What is distinctive about finance is its position in the graph, not its
+geography.
 
 ## 6. Validity — read this before using the data
 

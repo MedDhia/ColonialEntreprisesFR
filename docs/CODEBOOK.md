@@ -1055,6 +1055,73 @@ denominator: `n_firms` (5,989), `n_edges` (79,072), `giant_share` (0.9858),
 `n_within_sector_edges` (19,514). The two seeds are fixed, so every number in
 `sector_centrality.csv` is reproducible exactly.
 
+## The network on the world map
+
+Stages 20 and 21, `src/place_on_map.py` and `src/make_world_map_figures.py`.
+Figure 7 maps cities; these map firms. See METHODOLOGY §5n, and read
+`placement_level` before reading any position.
+
+### `company_map_positions.csv` (5,989 rows)
+
+**One row per firm in the interlock graph, placed or not** — the file is a
+census, not a subset, so it documents exactly which firms are missing from the
+map and why.
+
+| Variable | Description |
+|---|---|
+| `company_id`, `name` | The firm. |
+| `placement_level` | `city` (2,014 — an address, from `geocode.py`), `territory` (1,896 — no address, but exactly one filing country, so the position is a fact about the catalogue) or `unplaced` (2,079). **This column governs how much weight a position can carry.** |
+| `anchor` | The place the firm is pinned to: a city name, or a territory name at the `territory` rung. 154 distinct anchors. |
+| `anchor_territory` | The territory the anchor is in. Equal to `anchor` at the `territory` rung. |
+| `group` | `metropole`, `empire` or `foreign`, from the gazetteer. Empty when unplaced. |
+| `lat`, `lon` | Decimal degrees. **Every firm at one anchor carries that anchor's coordinate**; the spread that keeps them from overprinting is drawn by the figure, not stored here. Empty iff unplaced. |
+| `filed_territory` | What `territory_of` returns for this firm — the alphabetically first of its `countries`. Carried for comparison with `anchor`, and **not** used to place anything: it is what a naive placement would have used. |
+| `n_countries_listed` | How many countries the catalogue files the firm under. `1` at the `territory` rung, by rule. |
+| `sector_group` | The grouped sector (§5l), for figure 56. |
+| `degree`, `weighted_degree` | Interlock partners and interlocks, from the graph. |
+| `reason` | Why this firm is where it is: the geocoder's source field, `single filing country`, `no country listed`, `filed under N countries`, or `country not in gazetteer: X`. |
+
+### `territory_anchors.csv` (61 rows)
+
+The anchor point of each territory: `territory`, `lat`, `lon`, `group`,
+`n_cities`, `source`, `members`. `source` is `gazetteer mean` (the unweighted
+mean of that territory's cities in `data/reference/places_geo.csv`) or
+`federation mean` for the two federations, whose members are listed in
+`members`. **An anchor is a label position, not a centroid of population,
+capital or economic activity.**
+
+### `map_tie_geography.csv` (5 rows)
+
+The drawable ties classified by their two endpoints, plus one row for what is
+not drawable.
+
+| Variable | Description |
+|---|---|
+| `tie_class` | `colony only`, `metropole-colony`, `metropole only`, `with foreign`, `unplaced`. |
+| `n_edges`, `n_interlocks` | Firm pairs, and the shared directorships behind them. |
+| `share_of_drawable` | Share of the 43,164 drawable ties. Empty on the `unplaced` row, which is outside that denominator. |
+| `n_same_anchor` | Ties whose two firms sit in the same place. Zero on `metropole-colony` by construction. |
+| `n_same_territory` | Ties within one territory. Always at least `n_same_anchor`. |
+
+Colony–colony leads at 47.1%, but **10,222 of its 20,341 ties stay inside a
+single territory** and the firms involved are disproportionately those placed
+by filing country: read that rank as a ceiling, not as evidence of a lattice.
+
+### `map_geography_baseline.csv` (1 row)
+
+The denominators, so a claim can state its population: `n_graph_firms` (5,989),
+`n_edges` (79,072), `n_placed_city` (2,014), `n_placed_territory` (1,896),
+`n_unplaced` (2,079), `n_anchors` (154), `n_drawable_edges` (43,164),
+`n_same_anchor_edges` (9,025), `median_tie_km` (3,082.6), `mean_tie_km`,
+`paris_firms` (762), `paris_cross_edges` (15,430), `paris_within_edges`
+(4,077), `paris_edges_to_unplaced` (8,005).
+
+**The three Paris columns are deliberately separate.** Paris touches
+15,430 + 4,077 = 19,507 drawable ties, 45.2% of the drawable total. Adding
+`paris_edges_to_unplaced` to that numerator and keeping the drawable
+denominator gives 63.7% — a ratio across two different populations, and the
+first version of this row made exactly that mistake.
+
 ### `data/reference/`
 
 `places.txt` (174 place names) and `forenames.txt` (~330 forenames) are
