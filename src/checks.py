@@ -1977,6 +1977,109 @@ def check_world_map_figures() -> None:
               rank[0][2])
 
 
+def check_period_maps() -> None:
+    """Stage 22: the map split by period, and the coverage that qualifies it."""
+    import make_period_map_figures as P
+
+    print("period maps", file=sys.stderr)
+
+    eq("  every period has a label",
+       [p for p in P.ORDER if p not in P.PERIOD_LABEL or p not in P.PERIOD_FR],
+       [])
+    eq("  the periods are build_network's",
+       P.ORDER, [n for n, _lo, _hi in __import__("build_network").PERIODS])
+    eq("  wrapping keeps every word",
+       " ".join(P._wrap("one two three four five six", 9)).split(),
+       "one two three four five six".split())
+    bad = [ln for ln in P._wrap("aa bb cc dd ee ff gg hh", 8) if len(ln) > 8]
+    check("  no wrapped line exceeds the width", not bad, str(bad))
+
+    if not os.path.exists(os.path.join(PROC_DIR, "company_map_positions.csv")):
+        return
+    d = P.gather()
+    pos = d["pos"]
+
+    eq("  one bucket per period", sorted(d["by_period"]), sorted(P.ORDER))
+    bad = [p for p, es in d["by_period"].items()
+           for a, b, _w in es if a not in pos or b not in pos]
+    check("  every drawn edge has two placed ends", not bad, str(bad[:3]))
+    # Each period's drawable edges must be a subset of the whole map's.
+    whole = {frozenset((a, b)) for a, b, _w in d["edges"]}
+    bad = [p for p, es in d["by_period"].items()
+           for a, b, _w in es if frozenset((a, b)) not in whole]
+    check("  a period edge is one of figure 53's edges", not bad, str(bad[:3]))
+
+    stats = {s["period"]: s for s in d["stats"]}
+    eq("  one row per period", sorted(stats), sorted(P.ORDER))
+    for p, st in stats.items():
+        n_dr = int(st["n_drawable_edges"])
+        check(f"  {p}: drawable fits inside dated",
+              n_dr <= int(st["n_dated_edges"]),
+              f"{n_dr} vs {st['n_dated_edges']}")
+        check(f"  {p}: Paris ties fit inside drawable",
+              int(st["n_paris_edges"]) <= n_dr, st["n_paris_edges"])
+        check(f"  {p}: address ties fit inside drawable",
+              int(st["n_address_edges"]) <= n_dr, st["n_address_edges"])
+        check(f"  {p}: Paris address ties fit inside address ties",
+              int(st["n_address_paris_edges"]) <= int(st["n_address_edges"]),
+              st["n_address_paris_edges"])
+        check(f"  {p}: placed firms fit inside active firms",
+              int(st["n_placed_firms"]) <= int(st["n_active_firms"]),
+              f"{st['n_placed_firms']} vs {st['n_active_firms']}")
+        check(f"  {p}: interlocks are at least edges",
+              int(st["n_interlocks"]) >= n_dr, st["n_interlocks"])
+        for key in ("paris_share", "paris_share_address_only",
+                    "share_firms_placed"):
+            v = float(st[key])
+            check(f"  {p}: {key} is a share", 0.0 <= v <= 1.0, str(v))
+        want = int(st["n_paris_edges"]) / max(n_dr, 1)
+        check(f"  {p}: paris_share is reproducible",
+              abs(want - float(st["paris_share"])) < 0.001,
+              f"{want:.4f} vs {st['paris_share']}")
+
+    # The headline both figures rest on, and the caveat that qualifies it.
+    shares = [float(stats[p]["paris_share"]) for p in P.ORDER]
+    check("  Paris's share falls in every period",
+          all(a > b for a, b in zip(shares, shares[1:])),
+          str([round(x, 3) for x in shares]))
+    addr = [float(stats[p]["paris_share_address_only"]) for p in P.ORDER]
+    check("  and falls on address-only firms too",
+          all(a > b for a, b in zip(addr, addr[1:])),
+          str([round(x, 3) for x in addr]))
+    check("  the address-only share is the higher of the two",
+          all(a >= b for a, b in zip(addr, shares)), "not above")
+    cover = {p: float(stats[p]["share_firms_placed"]) for p in P.ORDER}
+    low = [p for p, v in cover.items() if v < 0.5]
+    eq("  exactly one period has coverage below half", low, ["1945_1962"])
+    check("  and the rest are above 80%",
+          all(v > 0.8 for p, v in cover.items() if p != "1945_1962"),
+          str({p: round(v, 3) for p, v in cover.items()}))
+    check("  the thin period is thin because of transversal filing",
+          int(stats["1945_1962"]["n_no_country_firms"]) > 1000,
+          stats["1945_1962"]["n_no_country_firms"])
+
+    # The small multiples must stay inside their own cell — the first version
+    # read the coordinates from the shared layout and stacked all five panels
+    # on top of each other in the middle of the canvas.
+    panel_w = (P.W - P.SMALL_GAP * (P.SMALL_COLS - 1)) / P.SMALL_COLS
+    scale = panel_w / P.W
+    for i, period in enumerate(P.ORDER):
+        ox = (i % P.SMALL_COLS) * (panel_w + P.SMALL_GAP)
+        xs = [ox + x * scale for x, _y in pos.values()]
+        check(f"  {period}: the panel stays in its column",
+              min(xs) >= ox - 1 and max(xs) <= ox + panel_w + 1,
+              f"{min(xs):.0f}..{max(xs):.0f} vs {ox:.0f}..{ox + panel_w:.0f}")
+
+    if os.path.exists(P.SUMMARY):
+        rows = load("map_period_summary.csv")
+        eq("  the summary file has one row per period",
+           [r["period"] for r in rows], P.ORDER)
+        bad = [r["period"] for r in rows
+               if r["paris_share"] != stats[r["period"]]["paris_share"]]
+        check("  the summary matches what the figures compute", not bad,
+              str(bad))
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -2557,6 +2660,7 @@ def main() -> None:
         check_basemap()
         check_map_placement()
         check_world_map_figures()
+        check_period_maps()
         check_geocoding()
         check_figures()
 

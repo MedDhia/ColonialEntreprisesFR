@@ -172,14 +172,22 @@ def _edge_paths(edges, pos, mode, dy=0.0, base_op=0.055, bow=BOW):
     return "".join(out)
 
 
-def _nodes(ids, d, mode, colour_of, dy=0.0, r=NODE_R, radius_of=None):
+def _nodes(ids, d, mode, colour_of, dy=0.0, r=NODE_R, radius_of=None,
+           pos=None):
+    """`pos` overrides the shared layout, for a panel drawn at another scale.
+
+    Stage 22 draws the same firms into a small-multiple grid, and reading the
+    coordinates from `d` regardless would put every panel's nodes on top of
+    each other in the middle of the canvas.
+    """
+    pos = pos if pos is not None else d["pos"]
     by_colour: dict[str, list[str]] = defaultdict(list)
     # Largest anchor first, so the dots of a small place that a big neighbour's
     # disc engulfs — Brussels inside Paris — are painted on top of it.
     order = sorted(ids, key=lambda cid: -len(
         d["anchors"][d["by_id"][cid]["anchor"]]["firms"]))
     for cid in order:
-        x, y = d["pos"][cid]
+        x, y = pos[cid]
         rr = radius_of(cid) if radius_of else r
         by_colour[colour_of(cid)].append(f'<circle cx="{x:.1f}" cy="{y + dy:.1f}" '
                                          f'r="{rr:.2f}"/>')

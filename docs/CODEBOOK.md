@@ -1122,6 +1122,28 @@ The denominators, so a claim can state its population: `n_graph_firms` (5,989),
 denominator gives 63.7% — a ratio across two different populations, and the
 first version of this row made exactly that mistake.
 
+### `map_period_summary.csv` (5 rows)
+
+Stage 22. One row per period of `build_network.PERIODS`, carrying every number
+the period maps put in a caption so that none of them is written by hand. See
+METHODOLOGY §5p.
+
+| Variable | Description |
+|---|---|
+| `period` | `pre_1914`, `1914_1929`, `1930_1944`, `1945_1962`, `post_1962`. |
+| `n_dated_edges` | Interlocks dated to this period, before the placement filter. |
+| `n_drawable_edges`, `n_interlocks` | Of those, the ones with both firms placed, and the shared directorships behind them. |
+| `n_firms_drawn`, `n_anchors` | Firms with at least one drawable tie here, and the places they sit in. |
+| `n_active_firms`, `n_placed_firms`, `share_firms_placed` | **The coverage columns.** Firms with a dated tie in the period, how many of them can be placed at all, and the ratio. 84–87% everywhere except 1945–1962, at 36.1%. |
+| `n_no_country_firms` | Active firms with no country listed at all — the transversal *Empire* filing. 1,486 in 1945–1962, which is that period's whole coverage problem. |
+| `n_paris_firms`, `n_paris_edges`, `paris_share` | Paris firms drawn, drawable ties touching one, and the share. |
+| `n_address_edges`, `n_address_paris_edges`, `paris_share_address_only` | The same share on ties whose **both** firms have a street address. **This is the column that shows the Paris trend is not an artefact of the territory rung** — a territory-placed firm is by construction not in Paris. |
+| `top_anchors` | The five largest places in the period, with counts. |
+
+`checks.py` asserts both Paris series fall monotonically, that the address-only
+series is the higher of the two, and that exactly one period has coverage below
+half.
+
 ### `data/reference/world_land.geojson`
 
 The basemap: Natural Earth `ne_50m_land`, simplified and checked in by

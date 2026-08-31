@@ -318,6 +318,19 @@ See [METHODOLOGY §5n](docs/METHODOLOGY.md).
 | `fig55_tie_geography.svg` | The drawable ties by their two endpoints, with the share that never leaves one place drawn inside the bar. Colony–colony leads at 47.1% — but 10,222 of those 20,341 ties stay inside one territory, so read it as a ceiling. The median tie that does travel spans **3,083 km**. |
 | `fig56_finance_on_the_map.svg` | Finance on the map: 9.5% of the placed firms, **27.3% of the drawable ties**, 41% of them in Paris. Second on Paris share behind the transcolonial-groups residual, and first among sectors above a hundred firms — what is distinctive about finance is its position in the graph, not its geography. |
 
+**`figures/period_maps.html`** — the same map, split on the five periods of
+figure 2, on one shared layout. **Paris's share of the drawable ties falls in
+every period: 63.4% → 51.5% → 40.8% → 36.9% → 26.1%** — and it survives being
+recomputed on firms with a street address alone (82.7% → 42.1%), so it is not
+an artefact of placing firms at their filing country. See
+[METHODOLOGY §5p](docs/METHODOLOGY.md).
+
+| | |
+|---|---|
+| `fig57_map_by_period.svg` | The five as small multiples. A firm holds the same pixel in all five, so a difference between panels is a difference in the data; firms with no dated tie in a period stay in grey. |
+| `fig58_paris_by_period.svg` | The trend, and the caveat beside it rather than under it: **coverage collapses to 36.1% in 1945–1962**, because 1,486 of that period's firms are filed under the transversal *Empire* rubric with no country. That panel is a thinner sample, not a thinner network. |
+| `by_period/map_<period>.svg` | Five full-width maps, one per period, each with its own counts. |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -447,6 +460,8 @@ figures/
   nodes.html              figures 28-33, the network firm by firm
   sector_network.html     figures 47-52, which sector is central
   world_map.html          figures 53-56, the whole network on the map
+  period_maps.html        figures 57-58, the map period by period
+  by_period/              one SVG and one PNG per period
   fig*.svg, fig*.png      the same figures standalone, for papers
   by_country/             one SVG and one PNG per territory
   en/                     the same figures with English category labels
@@ -493,6 +508,8 @@ python3 src/make_sector_network_figures.py --lang en
 python3 src/place_on_map.py                   # the firm-level placement ladder
 python3 src/make_world_map_figures.py         # figs 53-56
 python3 src/make_world_map_figures.py --lang en
+python3 src/make_period_map_figures.py        # figs 57-58 + by_period/
+python3 src/make_period_map_figures.py --lang en
 python3 src/render_png.py                     # ~90 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```

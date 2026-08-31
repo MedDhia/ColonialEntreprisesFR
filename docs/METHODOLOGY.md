@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Twenty-three stages, each resumable, each writing its own outputs:
+Twenty-four stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -92,8 +92,11 @@ Twenty-three stages, each resumable, each writing its own outputs:
     `company_map_positions.csv`, `territory_anchors.csv`,
     `map_tie_geography.csv`, `map_geography_baseline.csv` (§5n).
 21. **`make_world_map_figures.py`** — figures 53–56 (§5n).
+22. **`make_period_map_figures.py`** — the map split on the five periods:
+    figures 57–58, five full-width maps in `figures/by_period/`, and
+    `map_period_summary.csv` (§5p).
 
-Figure stages 7, 8, 11–13, 15, 17, 19 and 21 take `--lang en`, which writes a parallel `figures/en/`
+Figure stages 7, 8, 11–13, 15, 17, 19, 21 and 22 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
 names are left in French throughout: a company's name is a legal name rather
 than a description, and an English rendering of it would be a string that
@@ -2019,6 +2022,66 @@ at 9% of the chord. Straight lines that share a corridor — and on this map
 almost every corridor starts in Paris — collapse into one grey smear; bowed,
 the bundles separate and the map reads as routes. The bow carries no
 information and is stated in the docstring so that nobody reads it as one.
+
+## 5p. The map, split by period
+
+Figure 53 draws every drawable tie at once, which flattens forty years into one
+picture. `src/make_period_map_figures.py` (stage 22) splits it on
+`build_network.PERIODS` — the same five periods figure 2 uses, so the two are
+comparable — into five full-width maps in `figures/by_period/`, a
+small-multiple overview (fig57) and the trend that reads them (fig58).
+
+**Every panel is drawn on one set of coordinates.** `gather()` imports stage
+21's layout rather than recomputing it, so a firm holds the same pixel in all
+five panels and a difference between panels is a difference in the data. In the
+small multiples the coordinates are *rescaled*, not relaid out: a Robinson
+fitted to the panel width is the full-width one scaled linearly, so the
+basemap and the rescaled firm positions agree by construction.
+
+A firm enters a period when it has an interlock **dated** to it.
+`edges_company_interlock_by_period.csv` carries 51,658 of the graph's 79,072
+edges; the rest are undated and appear in no panel. Firms with no dated tie in
+a period stay on the map in grey at a smaller radius — a firm the record has
+paused on is not the same as a place with no firms in it, and a blank would
+conflate them.
+
+### Paris recedes, and the trend is not an artefact of the placement ladder
+
+Paris's share of the drawable ties falls in every period:
+
+| Period | Drawable ties | Paris share | Paris share, address-only firms | Coverage |
+|---|---|---|---|---|
+| pre-1914 | 3,297 | 63.4% | **82.7%** | 86.1% |
+| 1914–1929 | 11,411 | 51.5% | **66.0%** | 86.5% |
+| 1930–1944 | 8,183 | 40.8% | **62.4%** | 84.3% |
+| 1945–1962 | 3,957 | 36.9% | **60.2%** | **36.1%** |
+| post-1962 | 571 | 26.1% | **42.1%** | 81.6% |
+
+The obvious objection is that the fall is an artefact of the territory rung of
+§5n: a firm placed at its filing country is by construction *not* in Paris, so
+if later periods carry more territory-placed firms the Paris share must fall
+whatever happened. The third column answers it. Recomputed on the firms with a
+**street address alone** — where position is a fact about the firm rather than
+about the catalogue — the trend survives, from 82.7% to 42.1%. Both series are
+monotone and `checks.py` asserts it.
+
+### The 1945–1962 panel is a thinner sample, not a thinner network
+
+Coverage sits at 84–87% in every period but one. In 1945–1962 only **36.1%** of
+the active firms can be placed at all, because **1,485 of its 1,486
+unplaceable firms are filed under the transversal *Empire* rubric with no
+country**. That is a change in how Mennevée catalogued after the war, not a
+change in the empire, and it is why fig58 draws coverage beside the trend
+rather than mentioning it in a footnote: a reader comparing panel four with
+panel two is comparing two different sampling regimes.
+
+### What these maps are of
+
+They are maps of a **record**. A firm leaves a panel when the compiler stopped
+writing about it, which is not the same event as the firm closing, and the
+volume of coverage is itself uneven across the five periods — 11,411 drawable
+ties in 1914–1929 against 571 after 1962. Read the shares, which have a
+denominator inside each period, rather than the densities, which do not.
 
 ## 6. Validity — read this before using the data
 
