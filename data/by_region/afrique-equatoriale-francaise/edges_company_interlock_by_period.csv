@@ -15,7 +15,9 @@ bascongo,fsehautcongo,1914_1929,5,brack-g; ponche-e; remond-j; trechot-f; trecho
 francbascongo,fsehautcongo,1914_1929,5,brack-g; ponche-e; remond-j; trechot-f; trechot-h
 fsehautcongo,hautcongo,1914_1929,5,brack-g; ponche-e; remond-j; trechot-f; trechot-h
 nationaletonneliere,socnationalecameroun,1914_1929,5,babin-chevaye-j; barthelemy-l; belot-g; conchon-h; marion-de-proce-p
-africaine,equatoriale,1914_1929,5,et-alfred-de-lenfernat-de-la-mothe; gillet-a; lefevre-c; pecqueur-w; videau-j
+africaine,equatoriale,1914_1929,5,de-lenfernat-de-la-mothe-a; gillet-a; lefevre-c; pecqueur-w; videau-j
+boiscoloniaux,plantationspalmeraiesogooue,1914_1929,4,levy-g; michenot-e; weber-j; zafiropulo-d
+exploitationsforestieresafricaines,plantationspalmeraiesogooue,1914_1929,4,meyer-a-alfred; michenot-e; weber-j; zafiropulo-d
 congomines,minierecongo,1914_1929,4,achalme-p; enders-a; fondere-a-alphonse; fribourg-j
 entreprisesafricaines,sultanatshautoubangui,1914_1929,4,duchanoy-m; mascart-c; superville-m; troutet-f
 alimaienne,bascongo,1914_1929,4,brack-g; remond-j-jean; trechot-f; trechot-l
@@ -23,11 +25,10 @@ frseouhame,ouhamenana,1914_1929,4,cabaret-p; guegan-p; guinard-a; van-voorst
 alima,socagricolecommercialealima,1914_1929,4,david; decourcelle-e; etc-exportation-de-tous-articles; jacta-g
 afriquecongo,exploitationsforestieresafricaines,1914_1929,3,fondere-a-alphonse; guynet-w; weber-j
 banqueafriqueequatoriale,exploitationsforestieresafricaines,1914_1929,3,fondere-a; fondere-a-alphonse; weber-j
-boiscoloniaux,plantationspalmeraiesogooue,1914_1929,3,levy-g; michenot-e; weber-j
 colonialecommerceindustrie,exploitationsforestieresafricaines,1914_1929,3,fondere; fondere-a-alphonse; weber-j
 colonialecommerceindustrie,forestieresanghaoubangui,1914_1929,3,gaboriaud-l; henriquez-m; weber-j
 commercialesanghaoubangui,forestieresanghaoubangui,1914_1929,3,henriquez-m; vandenperre-h; weber-j
-exploitationsforestieresafricaines,plantationspalmeraiesogooue,1914_1929,3,meyer-a-alfred; michenot-e; weber-j
+congolaisecaoutchouc,kouango,1914_1929,3,mandel-a; superville-m; weber-j
 exploitationsforestieresafricaines,minierecongo,1914_1929,3,fondere-a; fondere-a-alphonse; guynet-w
 banqueafriqueequatoriale,sultanatshautoubangui,1914_1929,3,fondere-a; josse-a; superville-m
 kouango,sultanatshautoubangui,1914_1929,3,josse-a; pierre-c; superville-m
@@ -37,18 +38,22 @@ frsecongocameroun,ngokosangha,1914_1929,3,cruchet-l; de-jessaint; henrotte
 fsecongocameroun,ngokosangha,1914_1929,3,cruchet-l; de-jessaint; henrotte
 inkemeinkeni,lefiniagricolecommercialeindustrielle,1914_1929,3,arnold-p; debayser-a; richmond-j
 fsehautcongo,hautengounle,1914_1929,3,debionne-e; etc-commerce-d-importation; vergnes-a
+agricoleindustrielleogooue,okoume,1914_1929,3,de-galembert-e; gay-g; stoll-h
 cavescongolaises,nouvellesgaleriescongolaises,1914_1929,3,christophoridi-j; meunier-g; rebstock-l
 agricolecommercialealima,alima,1914_1929,3,david; decourcelle-e; jacta-g
 agricolecommercialealima,socagricolecommercialealima,1914_1929,3,david; decourcelle-e; jacta-g
 congooccidental,pariscongo,1914_1929,3,costa-s; d-almeida-pinto-a; d-almeida-pinto-v
+forestiereabanga,unionforestiereafricaine,1914_1929,3,mizraki-m; schmidt-m; vigneras-j
 afriquecongo,banqueafriqueequatoriale,1914_1929,2,fondere-a-alphonse; weber-j
 afriquecongo,colonialecommerceindustrie,1914_1929,2,fondere-a-alphonse; weber-j
 afriquecongo,forestieresanghaoubangui,1914_1929,2,guynet-w; weber-j
 afriquecongo,kouango,1914_1929,2,pierre-c; weber-j
 agricoleforestiereindustrielleafrique,banqueafriqueequatoriale,1914_1929,2,superville-m; weber-j
+agricoleforestiereindustrielleafrique,congolaisecaoutchouc,1914_1929,2,superville-m; weber-j
 agricoleforestiereindustrielleafrique,forestieresanghaoubangui,1914_1929,2,superville-m; weber-j
 agricoleforestiereindustrielleafrique,kouango,1914_1929,2,superville-m; weber-j
 banqueafriqueequatoriale,colonialecommerceindustrie,1914_1929,2,fondere-a-alphonse; weber-j
+banqueafriqueequatoriale,congolaisecaoutchouc,1914_1929,2,superville-m; weber-j
 banqueafriqueequatoriale,forestieresanghaoubangui,1914_1929,2,superville-m; weber-j
 banqueafriqueequatoriale,plantationspalmeraiesogooue,1914_1929,2,josse-a-adrien; weber-j
 boiscoloniaux,colonialecommerceindustrie,1914_1929,2,weber; weber-j
@@ -56,12 +61,13 @@ boiscoloniaux,forestieresanghaoubangui,1914_1929,2,vincent-l-louis; weber-j
 colonialecommerceindustrie,commercialesanghaoubangui,1914_1929,2,henriquez-m; weber-j
 colonialecommerceindustrie,ngokosangha,1914_1929,2,gaboriaud-l; weber-j
 commercialesanghaoubangui,congolaisecaoutchouc,1914_1929,2,nenard-r; weber-j
-congolaisecaoutchouc,kouango,1914_1929,2,mandel-a; weber-j
+congolaisecaoutchouc,forestieresanghaoubangui,1914_1929,2,superville-m; weber-j
 exploitationsforestieresafricaines,forestieresanghaoubangui,1914_1929,2,guynet-w; weber-j
 forestieresanghaoubangui,kouango,1914_1929,2,superville-m; weber-j
 forestieresanghaoubangui,ngokosangha,1914_1929,2,gaboriaud-l; weber-j
 kouango,plantationspalmeraiesogooue,1914_1929,2,josse-a-adrien; weber-j
 afriquecongo,minierecongo,1914_1929,2,fondere-a-alphonse; guynet-w
+banqueafriqueequatoriale,congomines,1914_1929,2,fondere-a-alphonse; superville-m
 banqueafriqueequatoriale,minierecongo,1914_1929,2,fondere-a; fondere-a-alphonse
 exploitationsforestieresafricaines,messageriesfluvialescongo,1914_1929,2,fondere-a-alphonse; guynet-w
 messageriesfluvialescongo,minierecongo,1914_1929,2,fondere-a-alphonse; guynet-w
@@ -86,12 +92,10 @@ entreprisescommercialescongobelge,proprietairekouilouniari,1914_1929,2,irvine-j;
 leverbrothersltdportsunlightcheshire,proprietairekouilouniari,1914_1929,2,greenhalgh-h; moseley-l
 aktieselskapetcongosandefjord,sandefjord,1914_1929,2,wegger-o; wildhagen-c
 aktieselshapetgabonsandefjord,sandefjord,1914_1929,2,hytten-e; wegger-o
-agricoleindustrielleogooue,okoume,1914_1929,2,gay-g; stoll-h
 forestiereabanga,plantationspalmeraiesogooue,1914_1929,2,levy-g; mizraki-m
 cotonniereequatoriale,equatorialemines,1914_1929,2,benard; propper-e
 cotonniereequatoriale,financierecongo,1914_1929,2,allard-j; propper-e
 equatorialemines,financierecongo,1914_1929,2,dreyfus-p; propper-e
-forestiereabanga,unionforestiereafricaine,1914_1929,2,mizraki-m; schmidt-m
 afriquecongo,agricoleforestiereindustrielleafrique,1914_1929,1,weber-j
 afriquecongo,boiscoloniaux,1914_1929,1,weber-j
 afriquecongo,centreafrique,1914_1929,1,weber-j
@@ -103,14 +107,12 @@ agricoleforestiereindustrielleafrique,boiscoloniaux,1914_1929,1,weber-j
 agricoleforestiereindustrielleafrique,centreafrique,1914_1929,1,weber-j
 agricoleforestiereindustrielleafrique,colonialecommerceindustrie,1914_1929,1,weber-j
 agricoleforestiereindustrielleafrique,commercialesanghaoubangui,1914_1929,1,weber-j
-agricoleforestiereindustrielleafrique,congolaisecaoutchouc,1914_1929,1,weber-j
 agricoleforestiereindustrielleafrique,exploitationsforestieresafricaines,1914_1929,1,weber-j
 agricoleforestiereindustrielleafrique,ngokosangha,1914_1929,1,weber-j
 agricoleforestiereindustrielleafrique,plantationspalmeraiesogooue,1914_1929,1,weber-j
 banqueafriqueequatoriale,boiscoloniaux,1914_1929,1,weber-j
 banqueafriqueequatoriale,centreafrique,1914_1929,1,weber-j
 banqueafriqueequatoriale,commercialesanghaoubangui,1914_1929,1,weber-j
-banqueafriqueequatoriale,congolaisecaoutchouc,1914_1929,1,weber-j
 banqueafriqueequatoriale,ngokosangha,1914_1929,1,weber-j
 boiscoloniaux,centreafrique,1914_1929,1,weber-j
 boiscoloniaux,commercialesanghaoubangui,1914_1929,1,weber-j
@@ -133,7 +135,6 @@ commercialesanghaoubangui,kouango,1914_1929,1,weber-j
 commercialesanghaoubangui,ngokosangha,1914_1929,1,weber-j
 commercialesanghaoubangui,plantationspalmeraiesogooue,1914_1929,1,weber-j
 congolaisecaoutchouc,exploitationsforestieresafricaines,1914_1929,1,weber-j
-congolaisecaoutchouc,forestieresanghaoubangui,1914_1929,1,weber-j
 congolaisecaoutchouc,ngokosangha,1914_1929,1,weber-j
 congolaisecaoutchouc,plantationspalmeraiesogooue,1914_1929,1,weber-j
 exploitationsforestieresafricaines,kouango,1914_1929,1,weber-j
@@ -143,7 +144,6 @@ kouango,ngokosangha,1914_1929,1,weber-j
 ngokosangha,plantationspalmeraiesogooue,1914_1929,1,weber-j
 afriquecongo,congomines,1914_1929,1,fondere-a-alphonse
 afriquecongo,transportsafrique,1914_1929,1,fondere-a-alphonse
-banqueafriqueequatoriale,congomines,1914_1929,1,fondere-a-alphonse
 banqueafriqueequatoriale,messageriesfluvialescongo,1914_1929,1,fondere-a-alphonse
 banqueafriqueequatoriale,transportsafrique,1914_1929,1,fondere-a-alphonse
 colonialecommerceindustrie,congomines,1914_1929,1,fondere-a-alphonse
@@ -160,6 +160,7 @@ intertropicalcomfina,kouango,1914_1929,1,josse-a-adrien
 intertropicalcomfina,plantationspalmeraiesogooue,1914_1929,1,josse-a-adrien
 agricoleforestiereindustrielleafrique,bordelaisecomptoirsafricains,1914_1929,1,superville-m
 agricoleforestiereindustrielleafrique,commercialeafriqueequatoriale,1914_1929,1,superville-m
+agricoleforestiereindustrielleafrique,congomines,1914_1929,1,superville-m
 agricoleforestiereindustrielleafrique,creditfonciercongo,1914_1929,1,superville-m
 agricoleforestiereindustrielleafrique,entreprisesafricaines,1914_1929,1,superville-m
 agricoleforestiereindustrielleafrique,kotto,1914_1929,1,superville-m
@@ -171,6 +172,8 @@ banqueafriqueequatoriale,entreprisesafricaines,1914_1929,1,superville-m
 banqueafriqueequatoriale,kotto,1914_1929,1,superville-m
 banqueafriqueequatoriale,plantationsogooue,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,commercialeafriqueequatoriale,1914_1929,1,superville-m
+bordelaisecomptoirsafricains,congolaisecaoutchouc,1914_1929,1,superville-m
+bordelaisecomptoirsafricains,congomines,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,creditfonciercongo,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,entreprisesafricaines,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,forestieresanghaoubangui,1914_1929,1,superville-m
@@ -178,11 +181,26 @@ bordelaisecomptoirsafricains,kotto,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,kouango,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,plantationsogooue,1914_1929,1,superville-m
 bordelaisecomptoirsafricains,sultanatshautoubangui,1914_1929,1,superville-m
+commercialeafriqueequatoriale,congolaisecaoutchouc,1914_1929,1,superville-m
+commercialeafriqueequatoriale,congomines,1914_1929,1,superville-m
 commercialeafriqueequatoriale,creditfonciercongo,1914_1929,1,superville-m
 commercialeafriqueequatoriale,forestieresanghaoubangui,1914_1929,1,superville-m
 commercialeafriqueequatoriale,kotto,1914_1929,1,superville-m
 commercialeafriqueequatoriale,kouango,1914_1929,1,superville-m
 commercialeafriqueequatoriale,plantationsogooue,1914_1929,1,superville-m
+congolaisecaoutchouc,congomines,1914_1929,1,superville-m
+congolaisecaoutchouc,creditfonciercongo,1914_1929,1,superville-m
+congolaisecaoutchouc,entreprisesafricaines,1914_1929,1,superville-m
+congolaisecaoutchouc,kotto,1914_1929,1,superville-m
+congolaisecaoutchouc,plantationsogooue,1914_1929,1,superville-m
+congolaisecaoutchouc,sultanatshautoubangui,1914_1929,1,superville-m
+congomines,creditfonciercongo,1914_1929,1,superville-m
+congomines,entreprisesafricaines,1914_1929,1,superville-m
+congomines,forestieresanghaoubangui,1914_1929,1,superville-m
+congomines,kotto,1914_1929,1,superville-m
+congomines,kouango,1914_1929,1,superville-m
+congomines,plantationsogooue,1914_1929,1,superville-m
+congomines,sultanatshautoubangui,1914_1929,1,superville-m
 creditfonciercongo,entreprisesafricaines,1914_1929,1,superville-m
 creditfonciercongo,kotto,1914_1929,1,superville-m
 creditfonciercongo,kouango,1914_1929,1,superville-m
@@ -243,9 +261,9 @@ boiscoloniaux,socindbasogooue,1914_1929,1,tassy
 colonialecommerceindustrie,entreprisesafricaines,1914_1929,1,fondere
 entreprisesafricaines,exploitationsforestieresafricaines,1914_1929,1,fondere
 centreafrique,unionindustrielleafricaine,1914_1929,1,delingette-a
+financierecongo,sericicolecongo,1914_1929,1,benard-m
 financierecongo,transportsafrique,1914_1929,1,benard-m
-industriellebasogooue,miniereoubanghioriental,1914_1929,1,loi
-congolaisecaoutchouc,congomines,1914_1929,1,et-maurice-superville
+sericicolecongo,transportsafrique,1914_1929,1,benard-m
 congomines,explorationminiereequatoriale,1914_1929,1,bonnet-brodart-p
 cotonniereequatoriale,creditfonciercongo,1914_1929,1,benard
 creditfonciercongo,equatorialemines,1914_1929,1,benard
@@ -304,7 +322,9 @@ commercialesanghaoubangui,plantationspalmeraiesogooue,1930_1944,2,doumic-j; webe
 exploitationscommercialesafricaines,exploitationsforestieresafricaines,1930_1944,2,doumic-j; michenot-e
 exploitationscommercialesafricaines,plantationspalmeraiesogooue,1930_1944,2,doumic-j; michenot-e
 forestierefernanvaz,plantationspalmeraiesogooue,1930_1944,2,doumic-j; mizraki-m
+cotonnierecongolaise,cotonniereequatoriale,1930_1944,2,de-bauw-a; landeghem-a
 cotonnierecongolaise,cotonnierehautoubangui,1930_1944,2,de-bauw-a; landeghem-a
+cotonniereequatoriale,cotonnierehautoubangui,1930_1944,2,de-bauw-a; landeghem-a
 cotonnierecongolaise,cotonsafricains,1930_1944,2,rhodius-j; vigneron-f
 equatorialemines,financierecongo,1930_1944,2,de-breteuil-g; dreyfus-p
 forestiereniari,proprietairekouilouniari,1930_1944,2,deveaud-p; thube-a
@@ -374,8 +394,6 @@ congolaisecaoutchouc,forestierelittoralgabonais,1930_1944,1,joubert-a
 congolaisecaoutchouc,forestierelittoralgabonnais,1930_1944,1,joubert-a
 forestierelittoralgabonais,kouango,1930_1944,1,joubert-a
 forestierelittoralgabonnais,kouango,1930_1944,1,joubert-a
-cotonnierecongolaise,cotonniereequatoriale,1930_1944,1,landeghem-a
-cotonniereequatoriale,cotonnierehautoubangui,1930_1944,1,landeghem-a
 comptoirsplantationscameroun,exploitationscommercialesafricaines,1930_1944,1,raimond-j
 exploitationscommercialesafricaines,miniereoubanghioriental,1930_1944,1,perrin-l
 exploitationscommercialesafricaines,socindustrielleconstructions,1930_1944,1,fouque-e
@@ -434,7 +452,6 @@ banqueafriqueequatoriale,minierecongo,1930_1944,1,fondere-a-alphonse
 gabonniari,socindustrielleconstructions,1930_1944,1,berger-h
 minierecongo,plantationspalmeraiesogooue,1930_1944,1,josse-a-adrien
 minierecongo,oubangui,1930_1944,1,julhiet-e
-commercialekouilouniari,pariscongo,1930_1944,1,laffitte-j
 companhiamossamedes,companhiamossamedesoumossamedes,1930_1944,1,felix-d-almeida-costa-j
 cotonniereequatoriale,hautbascongo,1930_1944,1,benard-g
 cotonniereequatoriale,equatorialemines,1930_1944,1,propper-e
@@ -507,7 +524,7 @@ boisgabon,nantaiseboisderoulescontreplaquesocean,1945_1962,2,de-muizon-j; meunie
 boismondah,comptoirboiscoloniaux,1945_1962,2,clement-g; clement-m
 comptoirboiscoloniaux,consortiumboisafricains,1945_1962,2,clement-g; clement-m
 unionforestiereafricaine,unionforestiereogooue,1945_1962,2,hue-g; vacheret-c
-francecongobp,transportscongooubanguitchad,1945_1962,2,fillieux-j; olivier-a
+francecongobp,transportscongooubanguitchad,1945_1962,2,fillieux-j; olivier-a-andre
 africaineforestiere,agricoleforestiereafricaine,1945_1962,2,chevrier; martin
 forestieregabonaise,societeanondesancetablamouroux,1945_1962,2,vigoureux-a; wickers-l
 minierekouilou,minieremoboma,1945_1962,2,d-hombres-h; menneret-p
@@ -522,6 +539,7 @@ recherchesauriferesgabon,recherchesexploitationsdiamantiferes,1945_1962,2,claude
 equatorialemines,miniereogouelobayeberberati,1945_1962,2,bastid-c; berger-h
 commercialediamant,groupementgabonais,1945_1962,2,a-f-j-c; monteil-j
 comptoirdiamant,miniereoubanghioriental,1945_1962,2,metallurgique-de-l-indochine; wolfram-du-tonkin
+forestieregabonaise,minierekouilou,1945_1962,2,levy-j-jacques; menneret-p
 miniereoubanghioriental,transportafrique,1945_1962,2,benedic-e; congo
 africaineforestiereagricole,bordelaiseafricaine,1945_1962,2,de-rivaud-r; roullet-g
 financierecongo,groupebungeplantationskomono,1945_1962,2,dawart; er-p
@@ -672,6 +690,8 @@ miniereintercoloniale,miniereoubanghioriental,1945_1962,1,de-flers-f
 miniereintercoloniale,participationsminieresafriquecentrale,1945_1962,1,de-flers-f
 miniereogouelobayeberberati,miniereoubanghioriental,1945_1962,1,de-flers-f
 miniereoubanghioriental,participationsminieresafriquecentrale,1945_1962,1,de-flers-f
+forestieregabonaise,minieremoboma,1945_1962,1,menneret-p
+forestieregabonaise,miniereouarrapointenoiremoyencongo,1945_1962,1,menneret-p
 transportafrique,transportsoubanguicameroun,1945_1962,1,congo
 brasseriescameroun,unionminierebascongo,1945_1962,1,mialaret-f
 entreprisesafricaines,soudanaise,1945_1962,1,loste-h
@@ -680,73 +700,132 @@ caoutchoucscacaoscameroun,entrepriseschimiquesroutierescameroun,1945_1962,1,peti
 forestieresanghaoubangui,tropicaledroguerie,1945_1962,1,joubert-j
 commercialesanghaoubangui,plantationspalmeraiesogooue,1945_1962,1,doumic-j
 cotonsafricains,miniereoubanghioriental,post_1962,1,boussenot-g
+messageriesfluvialescongo,proprietairekouilouniari,pre_1914,4,beulque-g; grard-h; motte-a; ritaine-descamps
 ekelakadeisangha,forestieresanghaoubangui,pre_1914,4,despret-g; guynet-w; josse-a-adrien; motte-a
-messageriesfluvialescongo,proprietairekouilouniari,pre_1914,4,beulque-g; grard-h; motte-a; ritaine-descamps-g
+agricolecommercialealima,colonialebaniembe,pre_1914,4,david; decourcelle-e; gillain-p; jacta-g
+agricolecommercialeindustriellelefini,nkemenkeni,pre_1914,4,desbriere; desbriere-r; scellier; scellier-g
 bascongo,hautcongo,pre_1914,4,brack-g; ponche-e; trechot-f; trechot-h
-banqueafriqueequatoriale,forestieresanghaoubangui,pre_1914,3,bolle-a; de-hemptinne-j; despret-g
+afriquecongo,messageriesfluvialescongo,pre_1914,3,beulque-g; grard-h; guynet-w
 forestieresanghaoubangui,hautesangha,pre_1914,3,delattre-a; henry-r; nogues-r
-agricolecommercialeindustriellelefini,messageriesfluvialescongo,pre_1914,3,bourcier-m; desbriere-r; nicol
-agricolecommercialeindustriellelefini,nkemenkeni,pre_1914,3,desbriere; desbriere-r; scellier-g
 afriqueequatoriale,messageriesfluvialescongo,pre_1914,3,david; nicol; trarieux
+banqueafriqueequatoriale,forestieresanghaoubangui,pre_1914,3,bolle-a; de-hemptinne-j; despret-g
+nkemenkeni,oubanguiombella,pre_1914,3,desbriere; desbriere-r; nicol-f
+agricolecommercialeindustriellelefini,messageriesfluvialescongo,pre_1914,3,bourcier-m; desbriere-r; nicol
+agricolecommercialeindustriellelefini,oubanguiombella,pre_1914,3,desbriere; desbriere-r; nicol
+messageriesfluvialescongo,oubanguiombella,pre_1914,3,desbriere-r; nicol; trarieux
+hautengounie,kouango,pre_1914,3,de-mont-serrat-f; leplus-f; oudin-a
+hautengounie,kouangooubangui,pre_1914,3,leplus-f; oudin-a; reveliere-de-la-reveliere-e
 companhiamossamedes,companhiamossamedesoumossamedes,pre_1914,3,hendricks-j; hygino-de-mendonca; montfort-g
+ibenga,kotto,pre_1914,3,mellier-l; senn-o; siegfried-e
 afriqueequatoriale,oubanguiombella,pre_1914,3,desbriere; nicol; trarieux
-agricolecommercialealima,colonialebaniembe,pre_1914,2,gillain-p; jacta-g
-banqueafriqueequatoriale,ekelakadeisangha,pre_1914,2,despret-g; fondere-a
-ekelakadeisangha,messageriesfluvialescongo,pre_1914,2,guynet-w; motte-a
-forestieresanghaoubangui,messageriesfluvialescongo,pre_1914,2,guynet-w; motte-a
+afriquecongo,proprietairekouilouniari,pre_1914,2,beulque-g; grard-h
+afriquecongo,ekelakadeisangha,pre_1914,2,guynet-w; schulz-j
+afriquecongo,forestieresanghaoubangui,pre_1914,2,guynet-w; nogues-r
 alimaienne,messageriesfluvialescongo,pre_1914,2,cousin-a; guynet-w
-ekelasangha,messageriesfluvialescongo,pre_1914,2,guynet-w; ritaine-descamps-g
+ekelakadeisangha,messageriesfluvialescongo,pre_1914,2,guynet-w; motte-a
+ekelasangha,messageriesfluvialescongo,pre_1914,2,guynet-w; ritaine-descamps
+forestieresanghaoubangui,messageriesfluvialescongo,pre_1914,2,guynet-w; motte-a
+agricolebatah,agricolenkogo,pre_1914,2,beraud-m; muller-e-edouard
+banqueafriqueequatoriale,ekelakadeisangha,pre_1914,2,despret-g; fondere-a
+commercialecolonisationcongo,ouhamenana,pre_1914,2,flachon-v; mainard-l
 agricolecommercialeindustriellelefini,mpokoetablissementscongolaisgratry,pre_1914,2,arnold-p; richmond-j
+explorationscoloniales,proprietairekouilouniari,pre_1914,2,glorieux-h; mols-a
 congo,messageriesfluvialescongo,pre_1914,2,desbriere-r; filleul-brohy-g
 agricolecommercialesettecama,congo,pre_1914,2,nicol-f; pelletier-g
 agricolecommercialesettecama,nkemenkeni,pre_1914,2,nicol-f; scellier-g
+agricolecommercialesettecama,oubanguiombella,pre_1914,2,nicol; nicol-f
 congo,nkemenkeni,pre_1914,2,desbriere-r; nicol-f
-agricolecommercialebasogoue,colonialegabon,pre_1914,2,carimantrand; mallet
+congo,oubanguiombella,pre_1914,2,desbriere-r; nicol-f
+gabon,ibenga,pre_1914,2,du-vivier-de-streel-e; lindeboom-a
+gabon,littoralbavili,pre_1914,2,du-vivier-de-streel-e; duvignau-de-lanneau-l
+kouango,kouangooubangui,pre_1914,2,leplus-f; oudin-a
+agricolecommercialebasogoue,colonialegabon,pre_1914,2,carimantrand-j; mallet
+alimaienne,etudesminieresboumba,pre_1914,2,cousin-a; trannoy-m
 agricolecommercialesettecama,alimaienne,pre_1914,2,bousquet; bousquet-h
 agricolecommercialeindustriellelefini,agricolecommercialesettecama,pre_1914,2,nicol; scellier-g
 afriqueequatoriale,agricolecommercialeindustriellelefini,pre_1914,2,desbriere; nicol
-agricolecommercialeindustriellelefini,oubanguiombella,pre_1914,2,desbriere; nicol
-messageriesfluvialescongo,oubanguiombella,pre_1914,2,nicol; trarieux
-agricoleindustrielleogooue,proprietairekouilouniari,pre_1914,1,bernard-m-maurice
-afriquecentrale,commercialecolonialekadeisangha,pre_1914,1,detre
-ekelakadeisangha,proprietairekouilouniari,pre_1914,1,motte-a
-forestieresanghaoubangui,proprietairekouilouniari,pre_1914,1,motte-a
+afriquecongo,minesdjouecuivre,pre_1914,1,beulque-g
+messageriesfluvialescongo,minesdjouecuivre,pre_1914,1,beulque-g
+minesdjouecuivre,proprietairekouilouniari,pre_1914,1,beulque-g
+afriquecongo,alimaienne,pre_1914,1,guynet-w
+afriquecongo,ekelasangha,pre_1914,1,guynet-w
+afriquecongo,kadeisangha,pre_1914,1,guynet-w
 alimaienne,ekelakadeisangha,pre_1914,1,guynet-w
 alimaienne,ekelasangha,pre_1914,1,guynet-w
 alimaienne,forestieresanghaoubangui,pre_1914,1,guynet-w
+alimaienne,kadeisangha,pre_1914,1,guynet-w
 ekelakadeisangha,ekelasangha,pre_1914,1,guynet-w
+ekelakadeisangha,kadeisangha,pre_1914,1,guynet-w
 ekelasangha,forestieresanghaoubangui,pre_1914,1,guynet-w
+ekelasangha,kadeisangha,pre_1914,1,guynet-w
+forestieresanghaoubangui,kadeisangha,pre_1914,1,guynet-w
+kadeisangha,messageriesfluvialescongo,pre_1914,1,guynet-w
+afriquecongo,hautesangha,pre_1914,1,nogues-r
+afriquecongo,colonialeogoouengounie,pre_1914,1,schulz-j
+colonialeogoouengounie,ekelakadeisangha,pre_1914,1,schulz-j
+agricolebatah,iafriquecentrale,pre_1914,1,beraud-m
+agricolenkogo,iafriquecentrale,pre_1914,1,beraud-m
+agricoleindustrielleogooue,ongomo,pre_1914,1,bernard-m-maurice
+agricoleindustrielleogooue,proprietairekouilouniari,pre_1914,1,bernard-m-maurice
+ongomo,proprietairekouilouniari,pre_1914,1,bernard-m-maurice
+agricolecommercialealima,forestieresanghaoubangui,pre_1914,1,decourcelle-e
 colonialebaniembe,forestieresanghaoubangui,pre_1914,1,decourcelle-e
-ekelakadeisangha,kotto,pre_1914,1,josse-a-adrien
-forestieresanghaoubangui,kotto,pre_1914,1,josse-a-adrien
+afriqueequatoriale,agricolecommercialealima,pre_1914,1,david
+afriqueequatoriale,colonialebaniembe,pre_1914,1,david
+agricolecommercialealima,messageriesfluvialescongo,pre_1914,1,david
+colonialebaniembe,messageriesfluvialescongo,pre_1914,1,david
+caoutchoucsproduitslobay,ekelakadeisangha,pre_1914,1,motte-a
+caoutchoucsproduitslobay,forestieresanghaoubangui,pre_1914,1,motte-a
+caoutchoucsproduitslobay,messageriesfluvialescongo,pre_1914,1,motte-a
+caoutchoucsproduitslobay,proprietairekouilouniari,pre_1914,1,motte-a
+ekelakadeisangha,proprietairekouilouniari,pre_1914,1,motte-a
+forestieresanghaoubangui,proprietairekouilouniari,pre_1914,1,motte-a
+iafriquecentrale,ngokoouesso,pre_1914,1,de-sincay-e
+iafriquecentrale,produitssanghalipaouesso,pre_1914,1,de-sincay-e
+ngokoouesso,produitssanghalipaouesso,pre_1914,1,de-sincay-e
+afriquecentrale,commercialecolonialekadeisangha,pre_1914,1,detre
 agricolecommercialeindustriellelefini,forestieresanghaoubangui,pre_1914,1,richmond-j
 forestieresanghaoubangui,mpokoetablissementscongolaisgratry,pre_1914,1,richmond-j
+ekelakadeisangha,kotto,pre_1914,1,josse-a-adrien
+forestieresanghaoubangui,kotto,pre_1914,1,josse-a-adrien
+agricolekouilou,ekelasangha,pre_1914,1,groetaers-l
+agricolekouilou,colonialeogoouengounie,pre_1914,1,mols-a
+agricolekouilou,explorationscoloniales,pre_1914,1,mols-a
+agricolekouilou,proprietairekouilouniari,pre_1914,1,mols-a
+colonialeogoouengounie,explorationscoloniales,pre_1914,1,mols-a
+colonialeogoouengounie,proprietairekouilouniari,pre_1914,1,mols-a
+agricolekouilou,kadeisangha,pre_1914,1,ritaine-descamps-j
+agricolekouilou,ngokoouesso,pre_1914,1,ritaine-descamps-j
+kadeisangha,ngokoouesso,pre_1914,1,ritaine-descamps-j
+agricolekouilou,commerceafricain,pre_1914,1,van-de-velde-l
+agricolekouilou,messageriesfluvialescongo,pre_1914,1,poirier-h
 colonialegabon,fermiereogoue,pre_1914,1,braillard-e
 commerceafricain,sangha,pre_1914,1,de-lange-m
 agricolecommercialeindustriellelefini,congo,pre_1914,1,desbriere-r
 messageriesfluvialescongo,nkemenkeni,pre_1914,1,desbriere-r
 afriqueequatoriale,congo,pre_1914,1,van-den-nest
-gabon,ibenga,pre_1914,1,lindeboom-a
+ibenga,littoralbavili,pre_1914,1,du-vivier-de-streel-e
 agricoleforestiereindustrielleafrique,gabon,pre_1914,1,fondere
 agricoleforestiereindustrielleafrique,messageriesfluvialescongo,pre_1914,1,fondere
 gabon,messageriesfluvialescongo,pre_1914,1,fondere
 agricolecommercialesettecama,hautengounie,pre_1914,1,deves
-afriqueequatoriale,colonialebaniembe,pre_1914,1,david
-colonialebaniembe,messageriesfluvialescongo,pre_1914,1,david
-colonialeogoouengounie,proprietairekouilouniari,pre_1914,1,mols-a
-colonialeogoouengounie,ekelakadeisangha,pre_1914,1,schulz-j
+colonialeogoouengounie,kadeisangha,pre_1914,1,gazengel-l
 colonialeogoouengounie,messageriesfluvialescongo,pre_1914,1,de-saint-didier-a
+commercialecolonialekadeisangha,commercialecolonialemamberesangha,pre_1914,1,nouzaret-j
+commercialecolonialekadeisangha,hautesangha,pre_1914,1,nouzaret-j
+commercialecolonialemamberesangha,hautesangha,pre_1914,1,nouzaret-j
 alimaienne,commercialecolonialekadeisangha,pre_1914,1,cousin-a
+commercialecolonialekadeisangha,etudesminieresboumba,pre_1914,1,cousin-a
 commercialecolonialekadeisangha,messageriesfluvialescongo,pre_1914,1,cousin-a
+etudesminieresboumba,messageriesfluvialescongo,pre_1914,1,cousin-a
 commercialecolonialekadeisangha,mobaye,pre_1914,1,martin-e-emile
-ekelasangha,proprietairekouilouniari,pre_1914,1,ritaine-descamps-g
+ekelakadeisangha,oubanguiombella,pre_1914,1,trarieux-g
+ekelasangha,proprietairekouilouniari,pre_1914,1,ritaine-descamps
+etudesminieresboumba,kotto,pre_1914,1,superville-m
 kotto,mpokoetablissementscongolaisgratry,pre_1914,1,gratry-j
+commercialecolonialemamberesangha,mobaye,pre_1914,1,roose-a-arthur
 afriqueequatoriale,nkemenkeni,pre_1914,1,desbriere
-nkemenkeni,oubanguiombella,pre_1914,1,desbriere
 afriqueequatoriale,agricolecommercialesettecama,pre_1914,1,nicol
 agricolecommercialesettecama,messageriesfluvialescongo,pre_1914,1,nicol
-agricolecommercialesettecama,oubanguiombella,pre_1914,1,nicol
-messageriesfluvialescongo,minesdjouecuivre,pre_1914,1,beulque-g
-minesdjouecuivre,proprietairekouilouniari,pre_1914,1,beulque-g
 mpokoetablissementscongolaisgratry,proprietairekouilouniari,pre_1914,1,hallet-a
 nkemenkeni,proprietairekouilouniari,pre_1914,1,van-minden-a

@@ -140,9 +140,30 @@ TRIGGERS: list[tuple[re.Pattern, str, str]] = [
         "conseil_nomme",
     ),
     (
-        re.compile(r"\bLes\s+premiers\s+administrateurs\s+(?:sont|seront)\s*:?", re.I),
+        # "Les premiers administrateurs *de cette société* sont MM. ...". The
+        # qualifier between the noun and the verb is routine and the strict
+        # form missed 21 lists over it.
+        re.compile(r"\b(?:les\s+)?premiers?\s+administrateurs"
+                   r"(?:[^:.\n]{0,50}?)\s+(?:sont|seront)\s*:?", re.I),
         "administrateur",
         "premiers_admin",
+    ),
+    (
+        # The constitution notice's own register: the appointment is stated as
+        # a completed act and the names follow it, with anything from nothing
+        # to a whole clause in between —
+        #
+        #   Ont été nommés administrateurs : MM. Maurice Tricon, Maurice Petit
+        #   Ont été nommés administrateurs statutaires pour trois ans : M. le …
+        #   Ont été nommés administrateurs de cette société MM. Camille Barrère
+        #
+        # `conseil_nomme` above wants the words "conseil d'administration",
+        # which these never use. 590 occurrences in the corpus, 46 of them in
+        # documents that yielded no ties at all.
+        re.compile(r"\b(?:ont\s+[eé]t[eé]|furent|sont)\s+nomm[eé]?e?s\s+administrateurs"
+                   r"[^:\n]{0,70}?(?::|(?=\s*MM?\.))", re.I),
+        "administrateur",
+        "nommes_admin",
     ),
     (re.compile(r"\bAdministrateurs?\s*\.?\s*[:—–]"), "administrateur", "admin_label"),
     (
@@ -349,6 +370,25 @@ FIELD_LABEL_RE = re.compile(
     re.I,
 )
 SEPARATOR_RE = re.compile(r"[—–\-_=]{4,}|\n\s*\n")
+
+# The compiler closes a constitution notice with the source it came from,
+# written as a dash and a citation rather than a parenthesis:
+#
+#     ... Arsène Chaumier, rue de Saint-Pétersbourg, 24. — Loi, 7 mai 1900.
+#     ... Meliodon, Plassard, Gastu. — Petites Affiches, 20/2/1900.
+#
+# Nothing terminated a list on it, so the publication's own name was read as
+# the next board member: the dataset gained a director called "Loi".
+DASH_CITATION_RE = re.compile(
+    r"[—–]\s*[A-ZÉÈÀÂÎÔÛÇ][\w’'.\- ]{2,44},\s*\d{1,2}[/\s]")
+
+# A compiler footnote about one of the members, which in these documents
+# follows the list directly and is separated from it by nothing but a stray
+# marker digit: "Paul Bayard (1852-1931) : polytechnicien, ingénieur aux
+# forges de Pompey, directeur des Forges et clouteries réunies à Charleville".
+# Read as list text it yields members named after the firms in the biography.
+FOOTNOTE_BODY_RE = re.compile(
+    r"(?m)^[ \t]*[A-ZÉÈÀÂÎÔÛÇ][^\n:]{2,60}\(\s*\d{4}[^)\n]{0,24}\)\s*:")
 
 
 # --- anchors -------------------------------------------------------------
@@ -968,7 +1008,8 @@ def find_board_lists(segment_text: str) -> list[tuple[str, str, str]]:
             # A bare role heading below this one ends the list: without it the
             # auditors under "Commissaires aux comptes" join the run of
             # directors above them.
-            for term in (FIELD_LABEL_RE, SEPARATOR_RE, BARE_HEADING_ANY_RE):
+            for term in (FIELD_LABEL_RE, SEPARATOR_RE, BARE_HEADING_ANY_RE,
+                         DASH_CITATION_RE, FOOTNOTE_BODY_RE):
                 t = term.search(tail)
                 if t and t.start() < cut:
                     cut = t.start()
@@ -1128,6 +1169,26 @@ def _split_names(raw: str) -> list[str]:
 def _make_member(frag: str, role: str) -> dict | None:
     # Strip any residual placeholder left by the annotation-protection pass.
     frag = re.sub(r"\x00\d*\x00?", "", frag).strip(" .,;:*·•")
+    # A footnote marker the PDF put on its own line, glued to the last member
+    # when the newlines were collapsed: "Fernand Raty. 1". Only a digit run
+    # *after* a sentence period is taken, so a name that genuinely ends in a
+    # numeral is untouched.
+    frag = re.sub(r"\.\s*\d{1,3}\s*$", ".", frag)
+    # The same marker set directly against the last letter, with no period to
+    # separate it: "Émile Alcan2, négociant". This one corrupts the *key* as
+    # well as the label — `alcan2` is a different person from `alcan-e` — and
+    # it did so for 82 rows. The lookbehind requires a letter, so a numeral
+    # that is genuinely part of a name keeps its space and survives.
+    frag = re.sub(r"(?<=[a-zà-ÿ])\d{1,2}\s*$", "", frag)
+    # The compiler's elision marker, which he uses inside a quoted list to
+    # show he has cut material: "MM. … Eugène Guët…". Left in place it became
+    # part of the name for another 177 rows.
+    frag = re.sub(r"(?:…|\.{3,})+", " ", frag).strip()
+    frag = re.sub(r"\s{2,}", " ", frag)
+    # The conjunction before the final name of a list. `_split_names` splits on
+    # " et " with whitespace on both sides, which cannot match at position 0,
+    # so the last member of "A, B, et C" came through as "et C".
+    frag = re.sub(r"^\s*et\s+", "", frag, flags=re.I).strip(" .,;:*·•")
     if not frag or len(frag) < 3:
         return None
     if STOP_FRAGMENT_RE.match(frag) or ADDRESS_RE.match(frag):

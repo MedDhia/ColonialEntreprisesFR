@@ -1,36 +1,38 @@
 company_id_1,company_id_2,period,weight,shared_directors
-occidentaleafricaine,scieriesafricaines,1914_1929,12,bernheim-l-leon; cassagnac-j; chevallier-du-buisson-r; et-paul-paillet; experton-p-pierre; fouque-j-jean; gast-a; haas-a; klotz-e; vizioz-d; vizioz-g; vizioz-j
+occidentaleafricaine,scieriesafricaines,1914_1929,12,bernheim-l-leon; cassagnac-j; chevallier-du-buisson-r; experton-p-pierre; fouque-j-jean; gast-a; haas-a; klotz-e; paillet-p; vizioz-d; vizioz-g; vizioz-j
+colonialebandama,plantationssorotona,1914_1929,5,baye-l; cayron-g; eliautou-e; mandel-a; mornard-p
+boiscoteivoire,forestiereindenie,1914_1929,4,levy-g; martin-e-edouard; mizraki-m; plagelat-l
+forestiereindenie,kong,1914_1929,4,calcat-f-fernand; callot-t; levy-g; mizraki-m
 kong,plantationselimacafeiersaboisso,1914_1929,4,bretigniere-m; calcat-f-fernand; levy-g; mizraki-m
-colonialebandama,plantationssorotona,1914_1929,4,baye-l; cayron-g; eliautou-e; mandel-a
+kong,plantationsreuniesouestafricain,1914_1929,4,calcat-f-fernand; levy-g; merle-m; mizraki-m
 kokumbocoltd,minierefoncierebandama,1914_1929,4,frot-h; halphen-j-julien; oppenheim-s; simonnet-g
-jeanweber,plantationstanoe,1914_1929,4,allibaud-j; crivelli-a; legourd-a; weber
+jeanweber,plantationstanoe,1914_1929,4,allibaud-j; crivelli; legourd-a; weber
 boiscoteivoire,kong,1914_1929,3,levy-g; mizraki-m; picanon-e
 actionjouissance,kong,1914_1929,3,levy-g; mizraki-m; vivier-e
 actionjouissance,plantationselimacafeiersaboisso,1914_1929,3,levy-g; merle; mizraki-m
-boiscoteivoire,forestiereindenie,1914_1929,3,levy-g; martin-e-edouard; plagelat-l
 boiscoteivoire,transitgrandlahou,1914_1929,3,levy-g; mizraki-m; plagelat-l
-forestiereindenie,kong,1914_1929,3,calcat-f-fernand; callot-t; levy-g
-forestiereindenie,plantationsreuniesouestafricain,1914_1929,3,calcat-f-fernand; et-maurice-mizraki; levy-g
-kong,plantationsreuniesouestafricain,1914_1929,3,calcat-f-fernand; levy-g; merle-m
+forestiereindenie,plantationselimacafeiersaboisso,1914_1929,3,calcat-f-fernand; levy-g; mizraki-m
+forestiereindenie,plantationsreuniesouestafricain,1914_1929,3,calcat-f-fernand; levy-g; mizraki-m
+forestiereindenie,transitgrandlahou,1914_1929,3,levy-g; mizraki-m; plagelat-l
+plantationselimacafeiersaboisso,plantationsreuniesouestafricain,1914_1929,3,calcat-f-fernand; levy-g; mizraki-m
 forestiereafrique,occidentaleafricaine,1914_1929,3,cassagnac-j; vizioz-g; vizioz-j
 forestiereafrique,scieriesafricaines,1914_1929,3,cassagnac-j; vizioz-g; vizioz-j
 actionjouissance,boiscoteivoire,1914_1929,2,levy-g; mizraki-m
+actionjouissance,forestiereindenie,1914_1929,2,levy-g; mizraki-m
+actionjouissance,plantationsreuniesouestafricain,1914_1929,2,levy-g; mizraki-m
 actionjouissance,transitgrandlahou,1914_1929,2,levy-g; mizraki-m
 boiscoteivoire,plantationselimacafeiersaboisso,1914_1929,2,levy-g; mizraki-m
-forestiereindenie,plantationselimacafeiersaboisso,1914_1929,2,calcat-f-fernand; levy-g
-forestiereindenie,transitgrandlahou,1914_1929,2,levy-g; plagelat-l
+boiscoteivoire,plantationsreuniesouestafricain,1914_1929,2,levy-g; mizraki-m
 kong,transitgrandlahou,1914_1929,2,levy-g; mizraki-m
-plantationselimacafeiersaboisso,plantationsreuniesouestafricain,1914_1929,2,calcat-f-fernand; levy-g
 plantationselimacafeiersaboisso,transitgrandlahou,1914_1929,2,levy-g; mizraki-m
+plantationsreuniesouestafricain,transitgrandlahou,1914_1929,2,levy-g; mizraki-m
 alsaciennecoteivoire,occidentaleafricaine,1914_1929,2,bonfils-e; vizioz-g
-actionjouissance,forestiereindenie,1914_1929,1,levy-g
-actionjouissance,plantationsreuniesouestafricain,1914_1929,1,levy-g
-boiscoteivoire,plantationsreuniesouestafricain,1914_1929,1,levy-g
-plantationsreuniesouestafricain,transitgrandlahou,1914_1929,1,levy-g
 actionjouissance,minierefoncierebandama,1914_1929,1,mizraki-m
 boiscoteivoire,minierefoncierebandama,1914_1929,1,mizraki-m
+forestiereindenie,minierefoncierebandama,1914_1929,1,mizraki-m
 kong,minierefoncierebandama,1914_1929,1,mizraki-m
 minierefoncierebandama,plantationselimacafeiersaboisso,1914_1929,1,mizraki-m
+minierefoncierebandama,plantationsreuniesouestafricain,1914_1929,1,mizraki-m
 minierefoncierebandama,transitgrandlahou,1914_1929,1,mizraki-m
 forestiereafrique,unioncolonialeelectricite,1914_1929,1,cassagnac-j
 occidentaleafricaine,unioncolonialeelectricite,1914_1929,1,cassagnac-j
@@ -91,26 +93,29 @@ plantationselimacafeiersaboisso,plantationsreuniesouestafricainp,1945_1962,1,gui
 plantationselimacafeiersaboisso,transitgrandlahou,1945_1962,1,guibert-g-georges
 plantationsreuniesouestafricainp,transitgrandlahou,1945_1962,1,guibert-g-georges
 cafesproduitscoloniauxcapro,plantationselima,1945_1962,1,deloffre-g
+minierebassanwicoteivoire,miniereindeniecoteivoire,pre_1914,3,boucher-e; richard-j; richard-j-jean
+consolidatedgoldfieldsivorycoast,minierebassanwicoteivoire,pre_1914,2,boucher-e; richard-j
 consolidatedgoldfieldsivorycoast,minierebondoukoucoteivoire,pre_1914,2,boucher-e; richard-j
 consolidatedgoldfieldsivorycoast,miniereindeniecoteivoire,pre_1914,2,boucher-e; richard-j
+minierebassanwicoteivoire,minierebondoukoucoteivoire,pre_1914,2,boucher-e; richard-j
 minierebondoukoucoteivoire,miniereindeniecoteivoire,pre_1914,2,boucher-e; richard-j
+minierealangouacoteivoire,minieresanwicoteivoire,pre_1914,2,lippens-h; roulina-c
 ivorycoastgoldfields,minierecoteivoire,pre_1914,2,lyon-m; ward-r
 consolidatedgoldfieldsivorycoast,explorationexploitationminieresafrique,pre_1914,1,richard-j
-consolidatedgoldfieldsivorycoast,minierebassanwicoteivoire,pre_1914,1,richard-j
 consolidatedgoldfieldsivorycoast,ouestafricain,pre_1914,1,richard-j
 explorationexploitationminieresafrique,minierebassanwicoteivoire,pre_1914,1,richard-j
 explorationexploitationminieresafrique,minierebondoukoucoteivoire,pre_1914,1,richard-j
 explorationexploitationminieresafrique,miniereindeniecoteivoire,pre_1914,1,richard-j
 explorationexploitationminieresafrique,ouestafricain,pre_1914,1,richard-j
-minierebassanwicoteivoire,minierebondoukoucoteivoire,pre_1914,1,richard-j
-minierebassanwicoteivoire,miniereindeniecoteivoire,pre_1914,1,richard-j
 minierebassanwicoteivoire,ouestafricain,pre_1914,1,richard-j
 minierebondoukoucoteivoire,ouestafricain,pre_1914,1,richard-j
 miniereindeniecoteivoire,ouestafricain,pre_1914,1,richard-j
 consolidatedgoldfieldsivorycoast,prospectioncoteivoire,pre_1914,1,boucher-e
+minierebassanwicoteivoire,prospectioncoteivoire,pre_1914,1,boucher-e
 minierebondoukoucoteivoire,prospectioncoteivoire,pre_1914,1,boucher-e
 miniereindeniecoteivoire,prospectioncoteivoire,pre_1914,1,boucher-e
 consolidatedgoldfieldsivorycoast,minierealangouacoteivoire,pre_1914,1,lippens-h
+consolidatedgoldfieldsivorycoast,minieresanwicoteivoire,pre_1914,1,lippens-h
 ivorycoastgoldfields,minesorindenie,pre_1914,1,goldschmidt-a
 ivorycoastgoldfields,minesorplacersbiano,pre_1914,1,goldschmidt-a
 minesorindenie,minesorplacersbiano,pre_1914,1,goldschmidt-a

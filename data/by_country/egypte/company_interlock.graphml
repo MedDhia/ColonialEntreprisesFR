@@ -30,6 +30,18 @@
       <data key="n_n_directors">30</data>
       <data key="n_territory">Égypte</data>
     </node>
+    <node id="domaineghesireh">
+      <data key="n_label">Domaine de Ghesireh</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Égypte</data>
+    </node>
+    <node id="entreprisesegypte">
+      <data key="n_label">Société Française d'Entreprises en Égypte</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Égypte</data>
+    </node>
     <node id="landbankegypt">
       <data key="n_label">LAND BANK OF EGYPT</data>
       <data key="n_sectors"></data>
@@ -39,7 +51,7 @@
     <node id="unionfonciereegypte">
       <data key="n_label">Union foncière d'Égypte</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">51</data>
+      <data key="n_n_directors">50</data>
       <data key="n_territory">Égypte</data>
     </node>
     <edge id="e0" source="banquefonciereegyptelandbankegyptalexandrie" target="unionfonciereegypte">
@@ -51,13 +63,19 @@
     <edge id="e2" source="banquefonciereegyptelandbankegyptalexandrie" target="landbankegypt">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e3" source="landbankegypt" target="unionfonciereegypte">
+    <edge id="e3" source="creditfoncieregyptien" target="entreprisesegypte">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e4" source="caissehypothecaireegypte" target="creditfoncieregyptien">
+    <edge id="e4" source="landbankegypt" target="unionfonciereegypte">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e5" source="caissehypothecaireegypte" target="creditfoncieregyptien">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e5" source="creditfoncieregyptien" target="unionfonciereegypte">
+    <edge id="e6" source="creditfoncieregyptien" target="domaineghesireh">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e7" source="creditfoncieregyptien" target="unionfonciereegypte">
       <data key="e_weight">1</data>
     </edge>
   </graph>

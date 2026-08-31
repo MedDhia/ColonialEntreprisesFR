@@ -6,6 +6,12 @@
   <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
   <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
   <graph id="G" edgedefault="undirected">
+    <node id="agricoleindustriellecommercialecaledoniecaledonie">
+      <data key="n_label">Société agricole, industrielle et commerciale de la Nouvelle-Calédonie La Calédonie</data>
+      <data key="n_sectors">Autres sociétés</data>
+      <data key="n_n_directors">3</data>
+      <data key="n_territory">Pacifique</data>
+    </node>
     <node id="agricoleminierenouvelleshebrides">
       <data key="n_label">Compagnie Agricole et minière des Nouvelles-Hébrides</data>
       <data key="n_sectors">Entreprises diverses</data>
@@ -42,6 +48,12 @@
       <data key="n_n_directors">6</data>
       <data key="n_territory">Pacifique</data>
     </node>
+    <node id="cafeiereselevagescanalathio">
+      <data key="n_label">Compagnie française des Caféières et élevages de Canala et Thio, puis Compagnie agricole et commerciale de la Nouvelle-Calédonie</data>
+      <data key="n_sectors">Autres sociétés</data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Pacifique</data>
+    </node>
     <node id="caledonia">
       <data key="n_label">Calédonia</data>
       <data key="n_sectors">Mines et métallurgie</data>
@@ -63,7 +75,13 @@
     <node id="chrome">
       <data key="n_label">Société Le Chrome</data>
       <data key="n_sectors">Documentation générale (par ordre chronologique); Mines et métallurgie</data>
-      <data key="n_n_directors">12</data>
+      <data key="n_n_directors">17</data>
+      <data key="n_territory">Pacifique</data>
+    </node>
+    <node id="cobalt">
+      <data key="n_label">Le Cobalt</data>
+      <data key="n_sectors">Mines et métallurgie</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Pacifique</data>
     </node>
     <node id="colonialeetablissementsnhagen">
@@ -150,6 +168,12 @@
       <data key="n_n_directors">6</data>
       <data key="n_territory">Pacifique</data>
     </node>
+    <node id="exploitationscoloniales">
+      <data key="n_label">Société Générale d’Exploitations coloniales, puis Générale d’Exploitations coloniales, industrielles et minières</data>
+      <data key="n_sectors">Mines et métallurgie</data>
+      <data key="n_n_directors">6</data>
+      <data key="n_territory">Pacifique</data>
+    </node>
     <node id="francohebridaise">
       <data key="n_label">Compagnie Générale Franco-hébridaise</data>
       <data key="n_sectors">Entreprises diverses</data>
@@ -177,7 +201,7 @@
     <node id="gueraultlemarinier">
       <data key="n_label">Guérault et Lemarinier</data>
       <data key="n_sectors">Autres sociétés</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">6</data>
       <data key="n_territory">Pacifique</data>
     </node>
     <node id="hautsfourneauxnoumea">
@@ -200,8 +224,8 @@
     </node>
     <node id="ilespacifique">
       <data key="n_label">Société Française des îles du Pacifique</data>
-      <data key="n_sectors">Documentation générale (par ordre chronologique); Entreprises diverses</data>
-      <data key="n_n_directors">11</data>
+      <data key="n_sectors">Documentation générale (par ordre chronologique); Entreprises diverses; Sociétés</data>
+      <data key="n_n_directors">24</data>
       <data key="n_territory">Pacifique</data>
     </node>
     <node id="immobiliereagricoleoceanie">
@@ -603,280 +627,310 @@
     <edge id="e86" source="concessionnaireportpapeete" target="ilesmarquises">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e87" source="agricolemopelia" target="tahiti">
+    <edge id="e87" source="ilespacifique" target="phosphatesoceanie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e88" source="agricoleminierenouvelleshebrides" target="immobilierenouvelleshebrides">
+    <edge id="e88" source="agricolemopelia" target="tahiti">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e89" source="caledonia" target="ilespacifique">
+    <edge id="e89" source="agricoleminierenouvelleshebrides" target="immobilierenouvelleshebrides">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e90" source="colonialeilesbanks" target="colonialevate">
+    <edge id="e90" source="caledonia" target="ilespacifique">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e91" source="caledonickel" target="comitedirection">
+    <edge id="e91" source="colonialeilesbanks" target="colonialevate">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e92" source="havraisecaledonienne" target="immobilierenouvelleshebrides">
+    <edge id="e92" source="caledonickel" target="comitedirection">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e93" source="cafeiereselevagescanalathio" target="oceanie">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e94" source="agricoleindustriellecommercialecaledoniecaledonie" target="cafeiereselevagescanalathio">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e95" source="havraisecaledonienne" target="immobilierenouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e96" source="immobilierenouvelleshebrides" target="nouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e97" source="havraisecaledonienne" target="nouvelleshebridesgeneralitesnouvelleshebrides">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e98" source="havraisecaledonienne" target="oregon">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e99" source="havraisecaledonienne" target="ilespacifique">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e100" source="ballandefils" target="concessionnaireportpapeete">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e101" source="caledonia" target="concessionnaireportpapeete">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e102" source="chalandage" target="concessionnaireportpapeete">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e93" source="immobilierenouvelleshebrides" target="nouvelleshebrides">
+    <edge id="e103" source="chalandage" target="minesnickelreunies">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e94" source="havraisecaledonienne" target="nouvelleshebridesgeneralitesnouvelleshebrides">
+    <edge id="e104" source="chalandage" target="navalecommercialeoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e95" source="havraisecaledonienne" target="oregon">
+    <edge id="e105" source="chalandage" target="navaleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e96" source="havraisecaledonienne" target="ilespacifique">
+    <edge id="e106" source="concessionnaireportpapeete" target="etablissementsballande">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e97" source="ballandefils" target="concessionnaireportpapeete">
+    <edge id="e107" source="concessionnaireportpapeete" target="hautsfourneauxnoumea">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e98" source="caledonia" target="concessionnaireportpapeete">
+    <edge id="e108" source="concessionnaireportpapeete" target="navalecommercialeoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e99" source="chalandage" target="concessionnaireportpapeete">
+    <edge id="e109" source="concessionnaireportpapeete" target="navaleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e100" source="chalandage" target="minesnickelreunies">
+    <edge id="e110" source="caledonickel" target="hautsfourneauxnoumea">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e101" source="chalandage" target="navalecommercialeoceanie">
+    <edge id="e111" source="caledonickel" target="navaleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e102" source="chalandage" target="navaleoceanie">
+    <edge id="e112" source="hautsfourneauxnoumea" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e103" source="concessionnaireportpapeete" target="etablissementsballande">
+    <edge id="e113" source="navaleoceanie" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e104" source="concessionnaireportpapeete" target="hautsfourneauxnoumea">
+    <edge id="e114" source="ballandefils" target="comitedirection">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e105" source="concessionnaireportpapeete" target="navalecommercialeoceanie">
+    <edge id="e115" source="chalandage" target="comitedirection">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e106" source="concessionnaireportpapeete" target="navaleoceanie">
+    <edge id="e116" source="comitedirection" target="etablissementsballande">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e107" source="caledonickel" target="hautsfourneauxnoumea">
+    <edge id="e117" source="caledonickel" target="concessionnaireportpapeete">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e108" source="caledonickel" target="navaleoceanie">
+    <edge id="e118" source="caledonickel" target="portpapeeteetudes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e109" source="hautsfourneauxnoumea" target="nickel">
+    <edge id="e119" source="nickel" target="portpapeeteetudes">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e110" source="navaleoceanie" target="nickel">
+    <edge id="e120" source="chrome" target="metallurgiquetao">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e111" source="ballandefils" target="comitedirection">
+    <edge id="e121" source="chrome" target="usinestaohydroelectriquetaometallurgiquetao">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e112" source="chalandage" target="comitedirection">
+    <edge id="e122" source="etsgomenouaco" target="tiebaghi">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e113" source="comitedirection" target="etablissementsballande">
+    <edge id="e123" source="comptoirsoceanie" target="frsephosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e114" source="caledonickel" target="concessionnaireportpapeete">
+    <edge id="e124" source="comptoirsoceanie" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e115" source="caledonickel" target="portpapeeteetudes">
+    <edge id="e125" source="cotonniereetablissementsoceanie" target="frsephosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e116" source="nickel" target="portpapeeteetudes">
+    <edge id="e126" source="cotonniereetablissementsoceanie" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e117" source="chrome" target="metallurgiquetao">
+    <edge id="e127" source="francotahitienne" target="frsephosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e118" source="chrome" target="usinestaohydroelectriquetaometallurgiquetao">
+    <edge id="e128" source="francotahitienne" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e119" source="etsgomenouaco" target="tiebaghi">
+    <edge id="e129" source="frsephosphatesoceanie" target="ilesmarquises">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e120" source="comptoirsoceanie" target="frsephosphatesoceanie">
+    <edge id="e130" source="ilesmarquises" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e121" source="comptoirsoceanie" target="phosphatesoceanie">
+    <edge id="e131" source="concessionnaireportpapeete" target="immobiliereagricoleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e122" source="cotonniereetablissementsoceanie" target="frsephosphatesoceanie">
+    <edge id="e132" source="concessionnaireportpapeete" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e123" source="cotonniereetablissementsoceanie" target="phosphatesoceanie">
+    <edge id="e133" source="agricolemopelia" target="ilesmarquises">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e124" source="francotahitienne" target="frsephosphatesoceanie">
+    <edge id="e134" source="agricoleminierenouvelleshebrides" target="cotonnierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e125" source="francotahitienne" target="phosphatesoceanie">
+    <edge id="e135" source="colonialevate" target="cotonnierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e126" source="frsephosphatesoceanie" target="ilesmarquises">
+    <edge id="e136" source="colonialevate" target="immobilierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e127" source="ilesmarquises" target="phosphatesoceanie">
+    <edge id="e137" source="cotonnierenouvelleshebrides" target="francohebridaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e128" source="concessionnaireportpapeete" target="immobiliereagricoleoceanie">
+    <edge id="e138" source="cotonnierenouvelleshebrides" target="immobilierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e129" source="agricolemopelia" target="ilesmarquises">
+    <edge id="e139" source="francohebridaise" target="immobilierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e130" source="agricoleminierenouvelleshebrides" target="cotonnierenouvelleshebrides">
+    <edge id="e140" source="immobilierenouvelleshebrides" target="navalecommercialeoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e131" source="colonialevate" target="cotonnierenouvelleshebrides">
+    <edge id="e141" source="colonialeetablissementsnhagen" target="immobilierenouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e132" source="colonialevate" target="immobilierenouvelleshebrides">
+    <edge id="e142" source="ballandefils" target="caledonickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e133" source="cotonnierenouvelleshebrides" target="francohebridaise">
+    <edge id="e143" source="caledonickel" target="chalandage">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e134" source="cotonnierenouvelleshebrides" target="immobilierenouvelleshebrides">
+    <edge id="e144" source="caledonickel" target="comptoirsnouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e135" source="francohebridaise" target="immobilierenouvelleshebrides">
+    <edge id="e145" source="caledonickel" target="etablissementsballande">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e136" source="immobilierenouvelleshebrides" target="navalecommercialeoceanie">
+    <edge id="e146" source="caledonickel" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e137" source="colonialeetablissementsnhagen" target="immobilierenouvelleshebrides">
+    <edge id="e147" source="caledonickel" target="kaori">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e138" source="ballandefils" target="caledonickel">
+    <edge id="e148" source="ballandefils" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e139" source="caledonickel" target="chalandage">
+    <edge id="e149" source="chalandage" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e140" source="caledonickel" target="comptoirsnouvelleshebrides">
+    <edge id="e150" source="comptoirsnouvelleshebrides" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e141" source="caledonickel" target="etablissementsballande">
+    <edge id="e151" source="etablissementsballande" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e142" source="caledonickel" target="ilespacifique">
+    <edge id="e152" source="ilespacifique" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e143" source="caledonickel" target="kaori">
+    <edge id="e153" source="cotonnierenouvelleshebrides" target="unionelectriquecoloniale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e144" source="ballandefils" target="nickel">
+    <edge id="e154" source="cotonnierenouvelleshebrides" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e145" source="chalandage" target="nickel">
+    <edge id="e155" source="cotonnierenouvelleshebrides" target="nouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e146" source="comptoirsnouvelleshebrides" target="nickel">
+    <edge id="e156" source="ilespacifique" target="nouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e147" source="etablissementsballande" target="nickel">
+    <edge id="e157" source="agricoleminierenouvelleshebrides" target="colonialeetablissementsnhagen">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e148" source="ilespacifique" target="nickel">
+    <edge id="e158" source="agricoleminierenouvelleshebrides" target="nouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e149" source="cotonnierenouvelleshebrides" target="unionelectriquecoloniale">
+    <edge id="e159" source="colonialeetablissementsnhagen" target="nouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e150" source="cotonnierenouvelleshebrides" target="ilespacifique">
+    <edge id="e160" source="colonialeilesbanks" target="nouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e151" source="cotonnierenouvelleshebrides" target="nouvelleshebrides">
+    <edge id="e161" source="colonialevate" target="nouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e152" source="ilespacifique" target="nouvelleshebrides">
+    <edge id="e162" source="comitedirection" target="kaori">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e153" source="agricoleminierenouvelleshebrides" target="colonialeetablissementsnhagen">
+    <edge id="e163" source="colonialeetablissementsnhagen" target="frigorifiquecaledonienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e154" source="agricoleminierenouvelleshebrides" target="nouvelleshebrides">
+    <edge id="e164" source="colonialeetablissementsnhagen" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e155" source="colonialeetablissementsnhagen" target="nouvelleshebrides">
+    <edge id="e165" source="colonialeilesbanks" target="frigorifiquecaledonienne">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e156" source="colonialeilesbanks" target="nouvelleshebrides">
+    <edge id="e166" source="colonialeilesbanks" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e157" source="colonialevate" target="nouvelleshebrides">
+    <edge id="e167" source="frigorifiquecaledonienne" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e158" source="comitedirection" target="kaori">
+    <edge id="e168" source="frsephosphatesoceanie" target="immobiliereagricoleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e159" source="colonialeetablissementsnhagen" target="frigorifiquecaledonienne">
+    <edge id="e169" source="immobiliereagricoleoceanie" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e160" source="colonialeetablissementsnhagen" target="ilespacifique">
+    <edge id="e170" source="comitedirection" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e161" source="colonialeilesbanks" target="frigorifiquecaledonienne">
+    <edge id="e171" source="caledonia" target="kerrmy">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e162" source="colonialeilesbanks" target="ilespacifique">
+    <edge id="e172" source="caledonickel" target="kerrmy">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e163" source="frigorifiquecaledonienne" target="ilespacifique">
+    <edge id="e173" source="comitedirection" target="kerrmy">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e164" source="frsephosphatesoceanie" target="immobiliereagricoleoceanie">
+    <edge id="e174" source="agricoleminierenouvelleshebrides" target="comitedirection">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e165" source="immobiliereagricoleoceanie" target="phosphatesoceanie">
+    <edge id="e175" source="chrome" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e166" source="comitedirection" target="nickel">
+    <edge id="e176" source="cobalt" target="kerrmy">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e167" source="caledonia" target="kerrmy">
+    <edge id="e177" source="agricolemopelia" target="nickel">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e168" source="caledonickel" target="kerrmy">
+    <edge id="e178" source="chrome" target="cobalt">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e169" source="comitedirection" target="kerrmy">
+    <edge id="e179" source="chrome" target="exploitationscoloniales">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e170" source="agricoleminierenouvelleshebrides" target="comitedirection">
+    <edge id="e180" source="cobalt" target="exploitationscoloniales">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e171" source="chrome" target="nickel">
+    <edge id="e181" source="colonialeilesbanks" target="francohebridaise">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e172" source="agricolemopelia" target="nickel">
+    <edge id="e182" source="consolidatednickelcyltd" target="etsgomenouaco">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e173" source="colonialeilesbanks" target="francohebridaise">
+    <edge id="e183" source="frsephosphatesoceanie" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e174" source="consolidatednickelcyltd" target="etsgomenouaco">
+    <edge id="e184" source="nouvelleshebridesgeneralitesnouvelleshebrides" target="soufrieresvanualavailesbanks">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e175" source="nouvelleshebridesgeneralitesnouvelleshebrides" target="soufrieresvanualavailesbanks">
+    <edge id="e185" source="nickel" target="nouvelleshebridesgeneralitesnouvelleshebrides">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e176" source="nickel" target="nouvelleshebridesgeneralitesnouvelleshebrides">
+    <edge id="e186" source="chrome" target="minesmontdo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e177" source="exploitationminieremetallurgiquecaledonie" target="minesmontdo">
+    <edge id="e187" source="exploitationminieremetallurgiquecaledonie" target="minesmontdo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e178" source="etsgomenouaco" target="oceanie">
+    <edge id="e188" source="etsgomenouaco" target="oceanie">
       <data key="e_weight">1</data>
     </edge>
   </graph>

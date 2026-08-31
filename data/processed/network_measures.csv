@@ -1,19 +1,19 @@
 measure,value,note
-n_firms,5900,firms in the interlock graph
-n_interlocks,76875,"interlock edges, weight >= 1"
-n_components,45,connected components
-giant_share,0.9844,share of firms in the largest component
-giant_share_w2,0.4795,the same at weight >= 2
-max_degree,495,"highest degree, weight >= 1"
-max_degree_w2,158,"highest degree, weight >= 2"
+n_firms,5959,firms in the interlock graph
+n_interlocks,78530,"interlock edges, weight >= 1"
+n_components,43,connected components
+giant_share,0.9852,share of firms in the largest component
+giant_share_w2,0.4858,the same at weight >= 2
+max_degree,497,"highest degree, weight >= 1"
+max_degree_w2,162,"highest degree, weight >= 2"
 max_core_number,71,deepest k-core
 max_core_size,72,firms in it
 max_core_density,1.0000,1.0 means a complete graph
-mean_path_length,3.3055,"sampled from 200 sources, seed 11"
-longest_path_observed,9,in the same sample
-degree_assortativity,0.1567,positive: hubs attach to hubs
-average_clustering,0.4501,mean local clustering
-transitivity,0.2405,global clustering
-n_communities,68,"Louvain, seed 7"
-modularity,0.4894,of that partition
-cross_territory_share,0.6729,interlocks joining two territories
+mean_path_length,3.2489,"sampled from 200 sources, seed 11"
+longest_path_observed,10,in the same sample
+degree_assortativity,0.1559,positive: hubs attach to hubs
+average_clustering,0.4457,mean local clustering
+transitivity,0.2393,global clustering
+n_communities,66,"Louvain, seed 7"
+modularity,0.4847,of that partition
+cross_territory_share,0.6744,interlocks joining two territories

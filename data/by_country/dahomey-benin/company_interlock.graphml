@@ -6,10 +6,22 @@
   <key id="n_territory" for="node" attr.name="territory" attr.type="string"/>
   <key id="e_weight" for="edge" attr.name="weight" attr.type="long"/>
   <graph id="G" edgedefault="undirected">
+    <node id="cheminsferdahomeyoucentraldahomeen">
+      <data key="n_label">Compagnie française de Chemins de fer au Dahomey ou Central-Dahoméen</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">29</data>
+      <data key="n_territory">Dahomey (Bénin)</data>
+    </node>
+    <node id="colonialedahomey">
+      <data key="n_label">Compagnie Coloniale du Dahomey</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Dahomey (Bénin)</data>
+    </node>
     <node id="comptoirsreunisouestafricain">
       <data key="n_label">Comptoirs réunis de l'Ouest-Africain</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">17</data>
+      <data key="n_n_directors">16</data>
       <data key="n_territory">Dahomey (Bénin)</data>
     </node>
     <node id="raymondbuurmans">
@@ -20,6 +32,9 @@
     </node>
     <edge id="e0" source="comptoirsreunisouestafricain" target="raymondbuurmans">
       <data key="e_weight">8</data>
+    </edge>
+    <edge id="e1" source="cheminsferdahomeyoucentraldahomeen" target="colonialedahomey">
+      <data key="e_weight">4</data>
     </edge>
   </graph>
 </graphml>

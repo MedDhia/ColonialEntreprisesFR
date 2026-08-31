@@ -1,9 +1,9 @@
 company_id_1,company_id_2,period,weight,shared_directors
 louisemmanueladoplphegoranflauxbaronandree,ports,1914_1929,6,berard; blanche-p; garreta-h; henry-a; michon-coster-j; saint-rene-taillandier-g
 asphaltespetroleslattaquie,industrielleasphaltespetroleslattaquie,1914_1929,5,chautard-j; donati-a; meguerditchian-l; schneider-g; shakour-pacha-m
+banquehypothecairefrancoegyptienne,foncieresyrie,1914_1929,4,d-hugonneau-m; de-cressac-h; de-suyrot-c; ficatier-m
 miniereindustrielleplakalnitza,plakalnitza,1914_1929,3,gravier-p; mavrogordato-n; pissard-l
 georgemallet,ports,1914_1929,3,bey-p; henry-a; michon-coster-j
-banquehypothecairefrancoegyptienne,foncieresyrie,1914_1929,3,d-hugonneau-m; de-cressac-h; ficatier-m
 banquefonciereegyptelandbankegyptalexandrie,unionfonciereegypte,1914_1929,3,charles-roux-j; salvago; zarifi
 minesbaliakaraidin,miniereindustrielleplakalnitza,1914_1929,2,mavrogordato-a; pissard-l
 minesbaliakaraidin,orientalcarpetmanufacturersltd,1914_1929,2,arachtingi-j; tanqueray-g
@@ -95,10 +95,10 @@ banquepretsnantissementsmontspieteegyptiens,caissehypothecaireegypte,1945_1962,1
 cheminferdamashamahprolongements,port,1945_1962,1,blanche-p
 banquepretsnantissementsmontspieteegyptiens,cheminferdamashamahprolongements,1945_1962,1,marbeau
 heraclee,ottomaneheraclee,pre_1914,9,boutan; deffes-j; emond-r; fournier; genebrias-de-fredaigue-g; haladjian-p; rey-a; wiener-h; zarifi
+immobiliereregieterrainssalonique,portsaloniqueottomaneconstruction,pre_1914,5,bartissol-e; effendi-h; modiano-l; nabona-j; robert-j-jules
 financiereorient,ottomanecheminfersmyrnecassabaprolongement,pre_1914,4,auboyneau-g; henrotte; nagelmackers; naville-p
 banquefonciereegyptelandbankegyptalexandrie,unionfonciereegypte,pre_1914,4,charles-roux-j; salvago; zarifi; zervudachi-g
 eauxbeyrouth,ottomanegazbeyrouth,pre_1914,4,menasche-j; misk-n; peter-m; sabbag-e
-immobiliereregieterrainssalonique,portsaloniqueottomaneconstruction,pre_1914,4,effendi-h; modiano-l; nabona-j; robert-j-jules
 baliakaraidin,minesbaliakaraidin,pre_1914,3,ed-mille; eugenidi-e; rouzaud-t
 baliakaraidin,mineskassandra,pre_1914,3,fernandez-i; rouzaud-t; testa-c
 ottomanecheminfersmyrnecassabaprolongement,tombac,pre_1914,3,auboyneau-g; naville-p; pangiris-bey-s
@@ -127,6 +127,7 @@ banquesalonique,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
 eauxbeyrouth,mineskassandra,pre_1914,1,fernandez-i
 eauxbeyrouth,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
 mineskassandra,ottomaneeauxconstantinople,pre_1914,1,fernandez-i
+entreprisesegypte,minesbaliakaraidin,pre_1914,1,thors-j
 banquesalonique,financiereorient,pre_1914,1,benac-a
 banquefrancoserbe,financiereorient,pre_1914,1,henrotte
 banquefrancoserbe,ottomanecheminfersmyrnecassabaprolongement,pre_1914,1,henrotte
@@ -144,6 +145,8 @@ exploitationsminieresserbie,tombac,pre_1914,1,naville-p
 financiereorient,minesselenitza,pre_1914,1,auboyneau-g
 financiereorient,ottomaneheraclee,pre_1914,1,auboyneau-g
 minesselenitza,tombac,pre_1914,1,auboyneau-g
+cheminferdamashamahprolongements,minesselenitza,pre_1914,1,bourlon-de-sarty-p
+cheminferdamashamahprolongements,ottomanecheminfersmyrnecassabaprolongement,pre_1914,1,bourlon-de-sarty-p
 heraclee,ottomanecheminfersmyrnecassabaprolongement,pre_1914,1,deffes-j
 heraclee,quaisdocksentrepotsconstantinople,pre_1914,1,deffes-j
 ottomanecheminfersmyrnecassabaprolongement,quaisdocksentrepotsconstantinople,pre_1914,1,deffes-j
@@ -167,7 +170,11 @@ cheminferdamashamahprolongements,ottomaneheraclee,pre_1914,1,genebrias-de-fredai
 ottomaneeauxconstantinople,ottomaneheraclee,pre_1914,1,zarifi-l
 ottomaneeauxconstantinople,quaisdocksentrepotsconstantinople,pre_1914,1,zarifi-l
 financiereorient,heraclee,pre_1914,1,laurans-a
+heraclee,minesselenitza,pre_1914,1,naville-e
+creditfoncieregyptien,domaineghesireh,pre_1914,1,oppenheim-j
 creditfoncieregyptien,ottomaneeauxconstantinople,pre_1914,1,pestel-a
+minesselenitza,remorquagepilotagesauvetage,pre_1914,1,berger-t
 minesselenitza,tramwayslibanaisnordsudbeyrouth,pre_1914,1,berger-t
+remorquagepilotagesauvetage,tramwayslibanaisnordsudbeyrouth,pre_1914,1,berger-t
 imperialeottomaneroutebeyrouthdamas,port,pre_1914,1,habert-g
 port,portquaisentrepotsbeyrouth,pre_1914,1,habert-g

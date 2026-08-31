@@ -87,7 +87,7 @@
     <node id="industrielleagricolepointepitre">
       <data key="n_label">Société Industrielle et Agricole de La Pointe-à-Pitre</data>
       <data key="n_sectors">Divers</data>
-      <data key="n_n_directors">28</data>
+      <data key="n_n_directors">31</data>
       <data key="n_territory">Guadeloupe et Martinique</data>
     </node>
     <node id="industrielleagricolepointepitreetablissements">
@@ -106,6 +106,12 @@
       <data key="n_label">Cie martiniquaise de distribution d'énergie électrique, Jardin</data>
       <data key="n_sectors">Documentation générale</data>
       <data key="n_n_directors">7</data>
+      <data key="n_territory">Guadeloupe et Martinique</data>
+    </node>
+    <node id="sucriereantilles">
+      <data key="n_label">Compagnie Sucrière des Antilles</data>
+      <data key="n_sectors">Divers</data>
+      <data key="n_n_directors">5</data>
       <data key="n_territory">Guadeloupe et Martinique</data>
     </node>
     <node id="terre">
@@ -168,13 +174,19 @@
     <edge id="e15" source="commercialeantillesfrancaisesftanon" target="entreprisemaritimecommerciale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e16" source="etablissementsdarboussierindustrielleagricolepointepitre" target="industrielleagricolepointepitreetablissements">
+    <edge id="e16" source="etablissementsdarboussierindustrielleagricolepointepitre" target="sucriereantilles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e17" source="banquemartinique" target="francocolonialeantillaise">
+    <edge id="e17" source="industrielleagricolepointepitre" target="sucriereantilles">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e18" source="felixhubert" target="unionbananieremartiniquaise">
+    <edge id="e18" source="etablissementsdarboussierindustrielleagricolepointepitre" target="industrielleagricolepointepitreetablissements">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e19" source="banquemartinique" target="francocolonialeantillaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e20" source="felixhubert" target="unionbananieremartiniquaise">
       <data key="e_weight">1</data>
     </edge>
   </graph>

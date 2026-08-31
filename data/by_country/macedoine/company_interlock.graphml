@@ -9,7 +9,7 @@
     <node id="banquesalonique">
       <data key="n_label">Banque de Salonique</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">15</data>
+      <data key="n_n_directors">14</data>
       <data key="n_territory">Macédoine</data>
     </node>
     <node id="immobiliereindustriellebatiment">
@@ -21,7 +21,7 @@
     <node id="immobiliereregieterrainssalonique">
       <data key="n_label">Compagnie Immobilière et de Régie de terrains à Salonique</data>
       <data key="n_sectors"></data>
-      <data key="n_n_directors">14</data>
+      <data key="n_n_directors">17</data>
       <data key="n_territory">Macédoine</data>
     </node>
     <node id="mineskassandra">
@@ -36,11 +36,11 @@
       <data key="n_n_directors">8</data>
       <data key="n_territory">Macédoine</data>
     </node>
-    <edge id="e0" source="immobiliereindustriellebatiment" target="immobiliereregieterrainssalonique">
+    <edge id="e0" source="immobiliereregieterrainssalonique" target="portsaloniqueottomaneconstruction">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e1" source="immobiliereregieterrainssalonique" target="portsaloniqueottomaneconstruction">
-      <data key="e_weight">4</data>
+    <edge id="e1" source="immobiliereindustriellebatiment" target="immobiliereregieterrainssalonique">
+      <data key="e_weight">5</data>
     </edge>
     <edge id="e2" source="banquesalonique" target="mineskassandra">
       <data key="e_weight">2</data>

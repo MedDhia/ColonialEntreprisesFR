@@ -1,19 +1,23 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
-lethel-t,Léthel,Léthel; Th Lethel; Théophile Léthel,3,3,3,administrateur,1907,1908,Mines
-perquel-j,Perquel,J. Perquel; Jules Perquel,3,3,3,administrateur,1907,1910,Mines
+mollet-h,Mollet,H. Mollet; Henry Mollet,3,3,4,administrateur,1904,1908,Mines
+lethel-t,Léthel,Léthel; Th Lethel; Théophile Lethel; Théophile Léthel,3,3,4,administrateur,1907,1908,Mines
+perquel-j,Perquel,J. Perquel; Jules Perquel,3,3,4,administrateur,1907,1910,Mines
 baer-e,Baer,Edgar Baer,2,2,4,administrateur,1935,1950,Mines
+drosso-c,Drosso,C. Drosso; Constantin Drosso,2,2,4,administrateur,1907,1924,Mines
 de-breteuil-c,de Breteuil,Charles de Breteuil,2,2,3,administrateur_delegue,1935,1939,Mines
 bryce-doyle-d,Bryce Doyle,Donald Bryce Doyle,2,2,3,administrateur,1935,1939,Mines
+buffet-p,Buffet,P. Buffet; Paul Buffet,2,2,3,administrateur,1907,1910,Mines
 villiaume-m,Villiaume,Maxime Villiaume,2,2,3,administrateur,1910,1922,Mines
-drosso-c,Drosso,C. Drosso; Constantin Drosso,2,2,3,administrateur,1922,1924,Mines
 delmas-p-pierre,Delmas,Pierre Delmas,2,2,2,administrateur,1938,1951,Agro-alimentaire
-auxiliaire-africaine-s,auxiliaire africaine. 4,Sté auxiliaire africaine; Sté auxiliaire africaine. 4,2,2,2,administrateur,1938,1951,Agro-alimentaire
+auxiliaire-africaine-s,auxiliaire africaine,Sté auxiliaire africaine,2,2,2,administrateur,1938,1951,Agro-alimentaire
+rodolphe-le-prevost,Rodolphe Le Prévost,Rodolphe Le Prévost,2,2,2,administrateur,1904,1908,Mines
+d-iray,d'Iray,d'Iray,2,2,2,administrateur,1904,1908,Mines
 lamaiziere,Lamaizière,Lamaizière,2,2,2,president,1908,1908,Mines
+collignon-a,Collignon,A. Collignon; Auguste Collignon,2,2,2,administrateur,1908,1910,Mines
 collignon,Collignon,Collignon,2,2,2,administrateur,1907,1908,Mines
-mollet-h,Mollet,H. Mollet; Henry Mollet,2,2,2,administrateur,1907,1908,Mines
 burrage-r,Burrage,Russel Burrage; Russell Burrage,1,1,5,administrateur,1920,1947,Mines
+de-la-bouglise-r,de la Bouglise,Robert de La Bouglise; Robert de la Bouglise,1,1,5,administrateur,1920,1947,Mines
 garnier-g,Garnier,Gérard Garnier,1,1,4,administrateur,1920,1933,Mines
-de-la-bouglise-r,de la Bouglise,Robert de La Bouglise; Robert de la Bouglise,1,1,4,administrateur,1921,1947,Mines
 robert-g-georges,Robert,Georges Robert,1,1,3,administrateur,1923,1938,Agro-alimentaire
 accambray-l,Accambray,Accambray; Léon Accambray,1,1,3,administrateur,1922,1922,Agro-alimentaire
 cosnier-h,Cosnier,Cosnier; Henri Cosnier,1,1,3,administrateur,1922,1922,Agro-alimentaire
@@ -37,11 +41,13 @@ bernard-l-louis,Bernard,Louis Bernard,1,1,2,administrateur,1923,1925,Commerce
 chaveton-h,Chaveton,Henri Chaveton,1,1,2,administrateur,1923,1925,Commerce
 dausset-l,Dausset,Louis Dausset,1,1,2,administrateur,1923,1925,Commerce
 delarbre-a,Delarbre,Alfred Delarbre,1,1,2,administrateur,1923,1925,Commerce
+delarbre-m,Delarbre,Maurice Delarbre,1,1,2,administrateur,1923,1925,Commerce
 boutal-f,Boutal,Fernand Boutal,1,1,2,administrateur,1922,1922,Agro-alimentaire
 fourneau-l,Fourneau,Lucien Fourneau,1,1,2,administrateur,1922,1922,Agro-alimentaire
 legrand-j,Legrand,Jean Legrand,1,1,2,administrateur,1922,1922,Agro-alimentaire
 legrand-r,Legrand,René Legrand,1,1,2,administrateur,1922,1922,Agro-alimentaire
 loisy-x,Loisy,Xavier Loisy,1,1,2,administrateur,1922,1922,Agro-alimentaire
+oudot-l,Oudot,Louis Oudot,1,1,2,administrateur,1922,1922,Agro-alimentaire
 guiraud-e,Guiraud,E. Guiraud; Ernest Guiraud,1,1,2,administrateur,1909,1909,Agro-alimentaire
 serre-e,Serre,E. Serre; Édouard Serre,1,1,2,administrateur,1909,1909,Agro-alimentaire
 chevrillon-l,Chevrillon,Louis Chevrillon,1,1,2,president,1935,1935,Mines
@@ -49,12 +55,14 @@ de-breteuil-j,de Breteuil,Jean de Breteuil,1,1,2,administrateur,1935,1935,Mines
 cawston-g,Cawston,G. Cawston,1,1,2,administrateur,1910,1922,Mines
 hunebelle-j,Hunebelle,Jules Hunebelle,1,1,2,administrateur,1910,1922,Mines
 chopy,Chopy,Chopy,1,1,2,administrateur,1922,1924,Mines
-hieulle-e,Hieulle. 1,E. Hieulle. 1; Edmond Hieulle,1,1,2,administrateur,1909,1909,Mines
+le-play-p,Le Play,Pierre Le Play,1,1,2,administrateur,1908,1908,Mines
+abel-b,Abel,Bernard Abel,1,1,2,administrateur,1908,1908,Mines
+hieulle-e,Hieulle,E. Hieulle; Edmond Hieulle,1,1,2,administrateur,1909,1909,Mines
 carnot-l,Carnot,Lazare Carnot,1,1,2,administrateur,1936,1950,Agro-alimentaire
 froissart-l,Froissart,Louis Froissart,1,1,2,administrateur,1936,1950,Agro-alimentaire
 le-bret-r-rene,Le Bret,René Le Bret,1,1,2,administrateur,1936,1950,Agro-alimentaire
 ullens-de-schooten-m,Ullens de Schooten,Marcel Ullens de Schooten,1,1,1,administrateur,1923,1923,Agro-alimentaire
-et-raoul-woycikowsky,et Raoul Woycikowsky,et Raoul Woycikowsky,1,1,1,administrateur,1923,1923,Agro-alimentaire
+woycikowsky-r,Woycikowsky,Raoul Woycikowsky,1,1,1,administrateur,1923,1923,Agro-alimentaire
 de-schooten-m,de Schooten,Marcel de Schooten,1,1,1,administrateur,1938,1938,Agro-alimentaire
 woycitowsky-r,Woycitowsky,Raoul Woycitowsky,1,1,1,administrateur,1938,1938,Agro-alimentaire
 d-alauzier-m,d'Alauzier,Maurice d'Alauzier,1,1,1,president,1937,1937,Agro-alimentaire
@@ -74,6 +82,13 @@ lefevre,Lefèvre,Lefèvre,1,1,1,administrateur,1951,1951,Agro-alimentaire
 tournadour-p,Tournadour,Pierre Tournadour,1,1,1,administrateur,1951,1951,Agro-alimentaire
 p-forveille-imprimeur-de-titres-paris-rodez,? P. Forveille imprimeur de titres Paris-Rodez,? P. Forveille imprimeur de titres Paris-Rodez,1,1,1,administrateur,1929,1929,Agro-alimentaire
 fouque-r,Fouque,Robert Fouque,1,1,1,administrateur,1933,1933,Agro-alimentaire
+achalme-p,Achalme 1,Pierre Achalme 1,1,1,1,administrateur,1901,1901,Commerce
+bergougnan-c,Bergougnan,Célestin-Raymond Bergougnan,1,1,1,administrateur,1901,1901,Commerce
+bergougnan-m,Bergougnan,Mathieu Bergougnan,1,1,1,administrateur,1901,1901,Commerce
+chalus-j,Chalus,Joseph Chalus,1,1,1,administrateur,1901,1901,Commerce
+dumoulin-f,Dumoulin 2,Félix Dumoulin 2,1,1,1,administrateur,1901,1901,Commerce
+pinet-l,Pinet,Léon Pinet,1,1,1,administrateur,1901,1901,Commerce
+pingusson-e,Pingusson,Eugène Pingusson,1,1,1,administrateur,1901,1901,Commerce
 gheerbant,Gheerbant,Gheerbant,1,1,1,administrateur,1922,1922,Agro-alimentaire
 beynis,Beynis,Beynis,1,1,1,administrateur,1922,1922,Agro-alimentaire
 dreyfuss,Dreyfuss,Dreyfuss,1,1,1,administrateur,1922,1922,Agro-alimentaire
@@ -98,13 +113,18 @@ legoux-p,Legoux,Pierre Legoux,1,1,1,administrateur,,,Agro-alimentaire
 reynaud-a,Reynaud,André Reynaud,1,1,1,administrateur,,,Agro-alimentaire
 r-wheeler-c,R. Wheeler,Charles R. Wheeler,1,1,1,administrateur,,,Agro-alimentaire
 massachusetts,Massachusetts,Massachusetts,1,1,1,administrateur,1920,1920,Mines
-et-robert-de-la-bouglise,et Robert de la Bouglise,et Robert de la Bouglise,1,1,1,administrateur,1920,1920,Mines
 bohe-p,Bohé,Pierre Bohé,1,1,1,administrateur,1947,1947,Mines
 weber,Weber,Weber,1,1,1,administrateur,1919,1919,Commerce
 cerf,Cerf,Cerf,1,1,1,administrateur,1919,1919,Commerce
 michez-a,Michez,Alexandre Michez,1,1,1,president,1951,1951,Agro-alimentaire
 join-lambert-f,Join-Lambert1,Francis Join-Lambert1,1,1,1,administrateur,1951,1951,Agro-alimentaire
 gilly-l,Gilly,Lucien Gilly,1,1,1,administrateur,1951,1951,Agro-alimentaire
+commune-d-iray,commune d'Iray,commune d'Iray,1,1,1,administrateur,1904,1904,Mines
+de-bonand-r,de Bonand,René de Bonand,1,1,1,administrateur,1904,1904,Mines
+buhot-h,Buhot,Henry Buhot,1,1,1,administrateur,1904,1904,Mines
+commune-de-l-home-chamoudot,commune de l'Home-Chamoudot,commune de l'Home-Chamoudot,1,1,1,administrateur,1904,1904,Mines
+beaudouin-de-joigny-m,Beaudouin de Joigny,Max Beaudouin de Joigny,1,1,1,administrateur,1904,1904,Mines
+commune-de-saint-faer,commune de Saint-Faer,commune de Saint-Faer,1,1,1,administrateur,1904,1904,Mines
 carlier-m-maurice,Carlier,Maurice Carlier,1,1,1,administrateur,1926,1926,Industrie
 buffet-r,Buffet,René Buffet,1,1,1,administrateur,1926,1926,Industrie
 aubert-j,Aubert,Jean Aubert,1,1,1,administrateur,1926,1926,Industrie
@@ -117,8 +137,8 @@ chevalier-g,Chevalier,Gaston Chevalier,1,1,1,administrateur,1926,1926,Industrie
 brosse-m,Brossé,Marius Brossé,1,1,1,president,1936,1936,Industrie
 deschamps-p-pierre,Deschamps,Pierre Deschamps,1,1,1,administrateur,1936,1936,Industrie
 ducos-j,Ducos,Jean Ducos,1,1,1,administrateur,1936,1936,Industrie
-et-maurice-delarbre,et Maurice Delarbre,et Maurice Delarbre,1,1,1,administrateur,1923,1923,Commerce
-delarbre-m,Delarbre,Maurice Delarbre,1,1,1,administrateur,1925,1925,Commerce
+guilmin-susnomme-h,Guilmin susnommé,Henri Guilmin susnommé,1,1,1,administrateur,1908,1908,Mines
+dislere-g,Dislère,Georges Dislère,1,1,1,administrateur,1908,1908,Mines
 caplain-st-andre-a,Caplain-St-André,André Caplain-St-André,1,1,1,administrateur,1925,1925,Commerce
 herrnberger-h,Herrnberger,Henri Herrnberger,1,1,1,administrateur,1925,1925,Commerce
 mutignon-e,Mutignon,Eugène Mutignon,1,1,1,president,1930,1930,Agro-alimentaire
@@ -128,8 +148,6 @@ mascart-c,Mascart,Charles Mascart,1,1,1,administrateur,1930,1930,Agro-alimentair
 francois-e,François,Edgar François,1,1,1,administrateur,1930,1930,Agro-alimentaire
 veuf,Veuf,Veuf,1,1,1,administrateur,1930,1930,Agro-alimentaire
 remarie-a-paris-viiie,remarié à Paris VIIIe,remarié à Paris VIIIe,1,1,1,administrateur,1930,1930,Agro-alimentaire
-et-louis-oudot,et Louis Oudot,et Louis Oudot,1,1,1,administrateur,1922,1922,Agro-alimentaire
-oudot-l,Oudot,Louis Oudot,1,1,1,administrateur,1922,1922,Agro-alimentaire
 guiraud-j-joseph,Guiraud,Joseph Guiraud,1,1,1,administrateur,1909,1909,Agro-alimentaire
 pres-brive,près Brive,près Brive,1,1,1,administrateur,1909,1909,Agro-alimentaire
 paul-raineau-a,Paul Raineau,Agnan Paul Raineau,1,1,1,administrateur,1909,1909,Agro-alimentaire
@@ -141,9 +159,8 @@ jarre-c,Jarre,Camille Jarre,1,1,1,administrateur,1908,1908,Mines
 parisis,Parisis,Parisis,1,1,1,administrateur,1908,1908,Mines
 de-vaux,de Vaux,de Vaux,1,1,1,administrateur,1908,1908,Mines
 th-bruneau,Th. Bruneau,Th. Bruneau,1,1,1,administrateur,1908,1908,Mines
-buffet-p,Buffet,P. Buffet,1,1,1,administrateur,1910,1910,Mines
+famin-p,Famin,Pierre Famin,1,1,1,administrateur,1907,1907,Mines
 clarke-e,Clarke,E. Clarke,1,1,1,administrateur,1910,1910,Mines
-collignon-a,Collignon,A. Collignon,1,1,1,administrateur,1910,1910,Mines
 badin-a,Badin,Auguste Badin,1,1,1,administrateur,1922,1922,Mines
 michel-cote-c,Michel-Côte,Charles Michel-Côte,1,1,1,administrateur,1922,1922,Mines
 eaton-p,Eaton,P. Eaton,1,1,1,administrateur,1922,1922,Mines
@@ -155,9 +172,15 @@ gaillochet-h,Gaillochet,H. Gaillochet,1,1,1,administrateur,1922,1922,Mines
 morel-l,Morel,Léopold Morel,1,1,1,administrateur,1922,1922,Mines
 vincent-a,Vincent,André Vincent,1,1,1,administrateur,1922,1922,Mines
 famin,Famin,Famin,1,1,1,administrateur,1908,1908,Mines
-le-play-p,Le Play,Pierre Le Play,1,1,1,administrateur,1908,1908,Mines
 morin,Morin,Morin,1,1,1,administrateur,1908,1908,Mines
-abel-b,Abel,Bernard Abel,1,1,1,administrateur,1908,1908,Mines
+lamaiziere-j,Lamaizière,Joseph Lamaizière,1,1,1,administrateur,1908,1908,Mines
+morin-j,Morin,Jules-François Morin,1,1,1,administrateur,1908,1908,Mines
+sabatier,Sabatier,Sabatier,1,1,1,administrateur,1907,1907,Mines
+metman-c,Metman,Metman,1,1,1,administrateur,1907,1907,Mines
+legrand,Legrand,Legrand,1,1,1,administrateur,1907,1907,Mines
+blanchot,Blanchot,Blanchot,1,1,1,administrateur,1907,1907,Mines
+blondeau,Blondeau,Blondeau,1,1,1,administrateur,1907,1907,Mines
+hamard,Hamard,Hamard,1,1,1,administrateur,1907,1907,Mines
 bedouet-j,Bédouet,Julien Bédouet,1,1,1,president,1939,1939,Agro-alimentaire
 gamichon-p,Gamichon,Paul Gamichon,1,1,1,administrateur,1939,1939,Agro-alimentaire
 villars-r,Villars,René Villars,1,1,1,administrateur,1939,1939,Agro-alimentaire
@@ -175,7 +198,7 @@ cugnet-r,Cugnet,Roger Cugnet,1,1,1,administrateur,1922,1922,Commerce
 montocchio-l,Montocchio,Lucien Montocchio,1,1,1,administrateur,1922,1922,Commerce
 meyran-h,Meyran,Hôtel Meyran,1,1,1,administrateur,1922,1922,Commerce
 jean-renaud-suzor,Jean-Renaud Suzor,Jean-Renaud Suzor,1,1,1,administrateur,1922,1922,Commerce
-et-alfred-tyack,et Alfred Tyack,et Alfred Tyack,1,1,1,administrateur,1922,1922,Commerce
+tyack-a,Tyack,Alfred Tyack,1,1,1,administrateur,1922,1922,Commerce
 motchane-l,Motchane,Léon Motchane,1,1,1,president,1948,1948,Agro-alimentaire
 ligonnet-e,Ligonnet,Eugène Ligonnet,1,1,1,administrateur,1948,1948,Agro-alimentaire
 seghers-r,Seghers,Raoul Seghers,1,1,1,administrateur,1948,1948,Agro-alimentaire
@@ -197,7 +220,7 @@ forestier-g,Forestier,Georges Forestier,1,1,1,president,,,Commerce
 herve-de-pommereau,Hervé de Pommereau,Hervé de Pommereau,1,1,1,administrateur,1936,1936,Agro-alimentaire
 guy-de-la-touanne,Guy de la Touanne,Guy de la Touanne,1,1,1,administrateur,1936,1936,Agro-alimentaire
 de-bressieux-r,de Bressieux,Robert de Bressieux,1,1,1,president_directeur_general,1950,1950,Agro-alimentaire
-chanove-j-jean,Chanove. 8,Jean Chanove. 8,1,1,1,administrateur,1950,1950,Agro-alimentaire
+chanove-j-jean,Chanove,Jean Chanove,1,1,1,administrateur,1950,1950,Agro-alimentaire
 caigne-cendrier,Caigné-Cendrier,Caigné-Cendrier,1,1,1,president,1922,1922,Commerce
 planchon-c,Planchon,Camille Planchon,1,1,1,vice_president,1922,1922,Commerce
 lemaistre-e,Lemaistre,Edmond Lemaistre,1,1,1,administrateur_delegue,1922,1922,Commerce

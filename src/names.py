@@ -74,7 +74,11 @@ DESCRIPTOR_RE = re.compile(
     r"d[eé]put[eé]|s[eé]nateur|conseiller|juge|pr[eé]sident|vice-pr[eé]sident|tr[eé]sorier|"
     r"doyen|membre|directeur|g[eé]rant|chevalier|officier|commandeur|ancien|"
     r"pharmacien|notaire|courtier|armateur|imprimeur|libraire|fabricant|"
-    r"capitaine|lieutenant|colonel|g[eé]n[eé]ral|inspecteur|receveur|percepteur)\b",
+    r"capitaine|lieutenant|colonel|g[eé]n[eé]ral|inspecteur|receveur|percepteur|"
+    # Residence clauses that trail a member's address and were split off as
+    # their own fragment: "…, demeurant en ladite ville, résident actuellement
+    # à Paris, rue Marbeuf, 24".
+    r"r[eé]sidant|r[eé]sident|domicili[eé])\b",
     re.I,
 )
 
