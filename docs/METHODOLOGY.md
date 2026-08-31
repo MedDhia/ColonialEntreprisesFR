@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Thirteen stages, each resumable, each writing its own outputs:
+Seventeen stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -48,9 +48,15 @@ Thirteen stages, each resumable, each writing its own outputs:
    after a first pass of stage 4.
 3e. **`parse_biographies.py`** — biographical dictionaries (§4f). Also runs
    after a first pass of stage 4.
+3g. **`parse_mandates.py`** — deputies and senators named anywhere in the
+   corpus (§4j). Adds no ties; writes `person_mandates.csv`.
+3h. **`parse_rosters.py`** — the compiler's five parliamentary directories
+   (§4i). Also runs after a first pass of stage 4.
+3i. **`parse_offices.py`** — offices of state and the colonial administration
+   (§4k). Adds no ties; writes `person_offices.csv`.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
-   All five genres are merged by default; `--no-person-index`, `--no-prose`,
-   `--no-annotations` and `--no-biographical` drop one each.
+   All six genres are merged by default; `--no-person-index`, `--no-prose`,
+   `--no-annotations`, `--no-biographical` and `--no-roster` drop one each.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
 6b. **`centrality.py`** — interlock graph → exact betweenness per firm (§5e).
@@ -65,8 +71,15 @@ Thirteen stages, each resumable, each writing its own outputs:
     `network_measures.csv` (§5h).
 13. **`make_node_figures.py`** — the six node-level figures, on the drawing
     primitives in `draw.py` (§5i).
+14. **`make_legislative_layer.py`** — mandates × the company network →
+    `legislators.csv`, the legislator interlocks, the roster continuity (§5j).
+15. **`make_legislative_figures.py`** — figures 34–39 (§5j).
+16. **`code_political_connections.py`** — offices × boards →
+    `company_political.csv` and its two summaries (§5k). The rules are in
+    `data/reference/political_connection_rules.md`.
+17. **`make_political_figures.py`** — figures 40–44 (§5k).
 
-Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
+Figure stages 7, 8, 11–13, 15 and 17 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
 names are left in French throughout: a company's name is a legal name rather
 than a description, and an English rendering of it would be a string that
@@ -850,6 +863,85 @@ And it is not checked against the Assemblée nationale's own biographical
 dictionary — the constituency and the years are the compiler's, with his errors
 intact.
 
+## 4k. Offices of state, and the colonial administration
+
+Stage 3g reads the legislature. `src/parse_offices.py` (stage 3i) reads the
+executive, which in a colonial dataset is the larger half. The corpus names a
+*gouverneur général* 15,595 times across 1,653 documents, a *résident
+supérieur* 5,770 times, a *ministre des Colonies* 3,088 times. A board holding
+a retired governor-general of French West Africa is connected to the colonial
+state in a way no parliamentary mandate captures: in the territory the company
+operated in, the governor-general **was** the state — he signed its
+concessions, set the labour regime it recruited under, and allocated the land
+it planted.
+
+The subject-resolution machinery is stage 3g's, imported rather than copied.
+"Whose title is this" has the same four registers — apposition, the compiler's
+bracket, title-first, the footnote career line — whether the title is `député`
+or `gouverneur général`, so `parse_mandates.subject_of` now serves both and the
+kinship and disclaimer discipline of §4j applies unchanged.
+
+**The reference trap is the new problem, and it is far worse than for a
+mandate.** A chamber is almost only ever named as an attribute of a man. An
+office is named overwhelmingly as an *institution*:
+
+    autorisée par arrêté du gouverneur général du 14 mars 1923
+    concession accordée par le ministre des Colonies
+    Le Gouverneur général de l'Algérie à monsieur Treille, député, Paris
+
+None of those attributes the office to anybody, and all three are the ordinary
+way the corpus mentions it. The defence is that a row is emitted only when
+`subject_of` finds a named subject, which requires a name-and-comma immediately
+before the title, a bracket, or a recognised forename immediately after it. A
+bare `par le gouverneur général` has none.
+
+That is measurable, and it is the honest headline for this stage: `OFFICE_RE`
+matches **46,344** times across the corpus and the stage emits **5,642 rows**
+— **12.2%**. The other seven-eighths name an office without naming its holder.
+Result: **2,415 people, 844 of them in the affiliation network**, across eight
+office classes.
+
+Four collisions needed rules of their own, because one word is two offices:
+
+- **`administrateur`** alone is a company director, which is the rest of this
+  dataset. Only `administrateur des colonies` and `administrateur des services
+  civils` are the civil-service rank, so the qualifier is required and
+  `administrateur délégué` never matches.
+- **`gouverneur`** governs the Banque de France as well as Madagascar. A bank
+  governorship is a state appointment but not a colonial one, so it is coded
+  `state_bank`.
+- **`ministre de France à Tanger`** and `ministre plénipotentiaire` are
+  diplomatic posts, not cabinet seats, and are routed to `senior_state` by a
+  negative lookahead on the minister pattern.
+- **`préfet apostolique`** is a bishop. **Military rank** — `général`,
+  `colonel`, `capitaine` — is not read at all: in this corpus those words are
+  honorifics attached to hundreds of directors and would swamp every class.
+
+Two defects worth recording because both were silent:
+
+- **`(?i)` on a pattern containing `[A-Z]`.** The flag applies to the whole
+  pattern, so the jurisdiction's capital-letter class matched lower case too,
+  and `haut-commissaire de la République française par intérim` yielded the
+  jurisdiction *République française par*. The flag is gone and the lower-case
+  prefix words are spelled out.
+- **A ministerial portfolio read as one letter.** `ministre des T` matched, and
+  *ravaux publics et des* went into the jurisdiction column. The portfolio is
+  now consumed whole, and its continuation is restricted to a capitalised word
+  or one of the handful of lower-case portfolio adjectives — otherwise
+  `ministre des Colonies a déclaré que` swallows the sentence.
+
+**Precision: 20 of 20** on person and office class in the final audit round,
+against source context. The one row a stricter reading would reject was a real
+office correctly attributed to the right man — `sir Joseph Maclay, ministre du
+Shipping` — but a *British* cabinet seat, which is a scope error rather than an
+extraction error. A foreign-honorific guard now drops it.
+
+`former` is read from the source's own wording, before the office (`ancien`,
+`ex-`, `ci-devant`) and after it (`honoraire`, `en retraite`,
+`démissionnaire`). **764 of 5,642 mentions** are former office-holders. Since
+the compiler omits `ancien` far more often than he omits an office, that is a
+floor.
+
 ## 5. Dating and attributing ties
 
 A document is split at **anchors** — points that fix a date, a source, or a
@@ -1486,6 +1578,90 @@ is known — present, absent — and lets the reader see the break. And fig34 dr
 any span longer than 55 years along with every surname-only key, because the
 first draft gave René Hachette a 78-year term: no one sat that long, so a bar
 saying so is two men.
+
+## 5k. Coding companies by political connection
+
+`src/code_political_connections.py` (stage 16) turns the person-level office
+evidence into a company-level variable, and
+`data/reference/political_connection_rules.md` is the argument for it — the
+definition, the tier ordering, the offices considered and rejected, and the
+four things the coding cannot do. **Read that file before using the variable.**
+This section records what came out and the three design decisions a reviewer
+would challenge first.
+
+A firm is coded connected when someone holding a board seat in it is attested
+holding an office of state. That is the standard definition in the
+political-economy literature — Faccio's is a member of parliament, a minister
+or a head of state, or a close relation of one — with the extension the setting
+requires: the colonial executive counts, for the reason given in §4k.
+
+Of **6,454 firms with at least one observed board seat, 2,243 (34.8%) are
+connected**:
+
+| Tier | | Firms | Share |
+|---|---|---|---|
+| 4 | `executive` — minister, head of state, colonial governor | 884 | 13.7% |
+| 3 | `legislature` — deputy, senator | 713 | 11.0% |
+| 2 | `administration` — colonial administrator, conseiller d'État, prefect, consul | 501 | 7.8% |
+| 1 | `local_or_proxy` — municipal office only, or through a relative | 145 | 2.2% |
+| 0 | `none` | 4,211 | 65.2% |
+
+**The tier ordering is an assumption, not a finding.** Ranking a minister above
+a deputy follows Faccio. Ranking a governor-general *with* a minister rather
+than below him is a judgement specific to the colonial setting. Both are argued
+in the rules file, and the six `has_*` flags and six `n_*` counts are all in
+the output, so the tier is reproducible from them in one line and replaceable
+in one more.
+
+**Sitting against former is the finding.** The two are never summed, and the
+split runs opposite ways in the two top tiers:
+
+| Tier | firms with a *sitting* holder | with a *former* one |
+|---|---|---|
+| `executive` | 859 | **473** |
+| `legislature` | 713 | **35** |
+| `administration` | 452 | 115 |
+
+Ministers and governors join boards *after* leaving office; deputies sit on
+boards *while* serving. That is two different mechanisms — a revolving door and
+a live conflict of interest — and a single "politically connected" dummy would
+average them into one meaningless number. Because `former` is read from the
+compiler's own `ancien` / `honoraire`, which he omits far more often than he
+omits an office, `n_former` is a floor and `n_sitting` a ceiling.
+
+**Concurrency is reported with its denominator, or not at all.** A tie observed
+in 1950 and a mandate held 1919–1932 are both attached to the firm, and the
+base coding does not require them to overlap. Where both the tie year and the
+office span are known, `n_concurrent` counts the director–firm pairs that
+actually overlap: **326 of 688 testable pairs, out of 4,212 connected pairs
+in total**. Fewer than one pair in five can be tested at all. `n_concurrent`
+is therefore not a corrected `n_connected` but a much smaller, much
+better-evidenced subset, and `n_testable` sits beside it in the file and in
+fig 44 so it cannot be quoted without its denominator.
+
+**Indirect connection is kept out of the tier.** `n_connected_neighbours`
+counts the firms sharing a director with this one that are themselves
+connected, and `indirect_only` marks the 3,254 firms — most of tier 0 — with a
+connected neighbour and no connected director of their own. Folding that into
+the tier would let the variable inflate without limit as the network grows, and
+one interlock from a minister's board is a different construct from having the
+minister on yours.
+
+**Confidence, and why `low` is not droppable.** `high` where the connection
+rests on a roster entry or two independent mentions, `medium` on one apposition
+or bracket, `low` where the connecting person's key has no forename attested or
+the only evidence is a footnote career line. Of the 2,243 connected firms:
+**1,052 high, 349 medium, 842 low**. `low` is 38% of the connected set, not a
+residue. Report what happens to your result when you exclude it.
+
+Two limits carried over from elsewhere in this document and worth repeating
+here, because this variable invites both mistakes. It **cannot be read as a
+rate** across territories: coverage is uneven (§6), and a territory the
+compiler read closely looks more connected for reasons that have nothing to do
+with its firms. And it **cannot be compared across `source_genre` without
+holding it constant**: the roster genre (§4i) exists precisely to record
+political connection, so firms with roster evidence are connected at a far
+higher rate by construction.
 
 ## 6. Validity — read this before using the data
 

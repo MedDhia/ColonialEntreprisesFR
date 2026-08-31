@@ -42,7 +42,7 @@ network can be sliced by period rather than collapsed into one static graph.
 >
 > Precision figures come from hand-checking random samples against source
 > context. They locate an order of magnitude, not a second decimal.
-> METHODOLOGY §4c–4j gives each audit and the failures it fixed. One further
+> METHODOLOGY §4c–4k gives each audit and the failures it fixed. One further
 > genre was built, measured at 8–9 of 15, and **deliberately not merged** — see
 > METHODOLOGY §2b.
 >
@@ -70,6 +70,7 @@ network can be sliced by period rather than collapsed into one static graph.
 | Extraction genres | 6, all merged; `source_genre` on every observation and edge |
 | Attribution | 86.9% of parsed ties resolve to a firm; `attribution` records how |
 | Corporate directorships | 3,138 directed company → company edges |
+| Politically connected firms | **2,243 of 6,454 with an observed board (34.8%)** — coded in `company_political.csv`, argued in `data/reference/political_connection_rules.md` |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
 `data/processed/network_stats.csv` holds these figures per period. The
@@ -265,6 +266,23 @@ board; 111 sat in both chambers.**
 | `fig38_seat_territory.svg` | Constituency against company territory. The Seine dominates because that is where boards met; Alger, Oran and Cochinchina read differently. |
 | `fig39_direct_or_proxy.svg` | Held personally against held through a relative — the compiler's own distinction, kept out of the main network. **31 of 587 roster ties are proxy holdings.** |
 
+**`figures/political.html`** — companies coded by political connection. A firm
+is connected when one of its directors is attested holding an office of state:
+deputy, senator, minister, governor-general, résident, colonial administrator,
+prefect, or a named relative of a parliamentarian. **2,243 of 6,454 firms with
+an observed board (34.8%) are connected.** The definition, the tier ordering,
+the offices rejected and the four things the coding cannot do are in
+[`data/reference/political_connection_rules.md`](data/reference/political_connection_rules.md)
+— read it before citing the number.
+
+| | |
+|---|---|
+| `fig40_connection_tiers.svg` | The five tiers. Tier 0 (4,211 firms) is not plotted — it flattened the four bars that carry the finding — and its size is in the note and the table. |
+| `fig41_sitting_or_former.svg` | Sitting against former, by tier, never summed. **In the executive tier 473 of 884 firms carry a *former* office-holder; in the legislature tier only 35 of 713.** Ministers and governors join boards after leaving office; deputies sit while serving. |
+| `fig42_connection_by_territory.svg` | Share connected by territory, with the denominator printed beside every bar. Tracks documentary coverage first — not a rate. |
+| `fig43_connected_boards.svg` | The most connected boards: connected directors against total board membership observed. Banque de l'Indochine, Banque industrielle de Chine, Messageries maritimes. |
+| `fig44_concurrency.svg` | The honest denominator. Of 4,212 connected director–firm pairs, **688 can be tested for simultaneity and 326 overlap** — fewer than one in five is testable at all. |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -423,7 +441,11 @@ python3 src/make_territory_figures.py --lang en
 python3 src/make_geo_figure.py                # the map
 python3 src/make_geo_figure.py --lang en
 python3 src/parse_mandates.py                 # ~4 min, deputies and senators
+python3 src/parse_offices.py                  # ~4 min, offices of state
 python3 src/make_legislative_layer.py         # the legislative join
+python3 src/code_political_connections.py     # company-level connection coding
+python3 src/make_political_figures.py         # figs 40-44
+python3 src/make_political_figures.py --lang en
 python3 src/make_legislative_figures.py       # figs 34-39
 python3 src/make_legislative_figures.py --lang en
 python3 src/render_png.py                     # ~90 s, PNG of every figure

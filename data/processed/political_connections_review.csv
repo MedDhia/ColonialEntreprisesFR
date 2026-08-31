@@ -1,0 +1,401 @@
+company_id,name,territory,connection_tier_name,n_directors,n_connected,share_connected,has_sitting,has_former,n_testable,n_concurrent,confidence,connected_directors
+banqueindochine,Banque de l’Indochine,Afrique équatoriale française,executive,177,27,0.1525,1,1,2,1,high,Alexandre Celier; Alexandre Gérard; Alfred-Léon Bouchet; André Labussière; Boyer; Brincard; Charles Chanel; Charles Michel-Côte
+banqueindustriellechine,La Banque industrielle de Chine,Afrique occidentale française,executive,74,23,0.3108,1,1,2,0,high,Albert Ernest Duval; André Berthelot; Antonin Frézouls; Aristide Briand; Arthur Espivent de la Villesboisnet; Calary de Lamazière; François; Gaston Camille Kahn
+messageriesmaritimes,Société des Messageries maritimes,Algérie,executive,131,23,0.1756,1,1,2,0,high,Amédée Lefèvre-Pontalis; BLANCHY; Berland; Besson; Bosc; Charles Géry; Charles Lallemand; Charles Régismanset
+banqueafriqueoccidentale,Banque de l'Afrique occidentale,Afrique occidentale française,executive,57,17,0.2982,1,1,0,0,high,Albert Duchêne; André Rinkenbach; Bohn; Boyer; Devès; F. Reste; G. Repiquet; Gaston Fourn
+creditfonciercolonial,Crédit foncier colonial,Algérie,executive,143,15,0.1049,1,1,1,1,high,Bischoffsheim; Delanney; Grandjean; Imhaus; Lefèvre-Pontalis; Louis Passy; Léon Boulloche; Léonus Bénard
+distilleriesindochine,Distilleries de l’Indochine,Indochine,executive,65,15,0.2308,1,1,2,1,high,Baudouin; Chapsal; Charles Dumont; Charles-Émile Halais; Fernand Chapsal; François Guis; Guesde; Marcel Borduge
+banquealgerie,BANQUE DE L'ALGERIE,Afrique occidentale française,executive,86,13,0.1512,1,1,1,0,medium,Alexandre Celier; Alphandéry; Boyer; Brincard; Charles Farnier; Giraud; Honnoré; Lallemand
+cheminferfrancoethiopiendjiboutiaddisabeba,Compagnie du Chemin de fer franco-éthiopien de Djibouti à Addis-Abeba,Algérie,executive,68,13,0.1912,1,1,2,1,high,Aristide Briand; Barthélémy Robaglia; Boyer; Camille Krantz; Charles Lallemand; Charles Michel-Côte; Ernest Roume; Giraud
+navigationsudatlantique,Compagnie de Navigation Sud-Atlantique,Afrique occidentale française,executive,78,13,0.1667,1,1,2,1,high,Achille Fould; Alexis Baptifaut; André Berthelot; Breton; Charles Furiet; Denis; Denis Pérouse; Fould
+creditcolonial,Crédit colonial,,executive,38,12,0.3158,1,1,0,0,high,Alexandre Celier; Charles Laurent; Georges Keller; Georges PETER; Henri Saurin; Jacques Tupinier; Jean Boissonnas; Louis Mérat
+indochinoiseculturestropicales,Société Indochinoise des Cultures tropicales,Indochine,executive,65,12,0.1846,1,1,2,1,high,Bouvier; Camille Lejeune; Charles Furiet; Edmond Giscard d'Estaing; Jean Rheims; Joseph Thierry; Paul Baudouin; Paul Chassaing
+tabacs,Compagnie Générale des Tabacs,Algérie,executive,63,12,0.1905,1,1,3,2,high,Amédée Reille; Barthélémy Robaglia; Bouilloux-Lafont; Charles Dumont; Charles Wurtz; Dumont; Guérin; Julien Rouland
+cheminferboneguelmaprolongements,Compagnie du Chemin de fer de Bône à Guelma et prolongements,Algérie,executive,86,11,0.1279,1,1,1,1,high,Amédée Vernhette; Charles Géry; Gouin; Léonce Mahoû; Paul Devès; Richard; Salles; [Armand] Vernhette
+credit,Crédit français,,executive,110,11,0.1000,1,1,3,2,high,Amédée Reille; Bouilloux-Lafont; Doumer; Gauthier; Georges Privat-Deschanel; Maurice Bouilloux-Lafont; Maurice Superville; Paul Doumer
+creditfoncieralgerietunisie,Crédit foncier d'Algérie-Tunisie,Afrique occidentale française,executive,115,11,0.0957,1,1,1,0,high,Achille Villey; Emmanuel Tessandier; Eugène Regnault; Frédéric Barbedette; Georges SAINT-RENÉ TAILLANDIER; Maurice Paléologue; Philibert; Ribot
+algerienne,Compagnie algérienne,Algérie,executive,68,10,0.1471,1,1,1,0,high,Alexandre Conty; Denion du Pin; Frémy; Jean Boissonnas; Jean Fabry; Jules Tarbé des Sablons; Klein; Marcel Saint- Germain
+banquetransatlantique,Banque transatlantique,Afrique occidentale française,executive,121,10,0.0826,1,1,0,0,high,Charles Géry; Eugène Regnault; Faure; Henri Durangel; Jean Astruc; Jean-François-Eugène CHARLES; Maurice Rouvier; Piétri
+chargeursreunis,Chargeurs réunis,Afrique occidentale française,executive,98,10,0.1020,1,1,1,1,high,Alexandre Celier; Alexis Baptifaut; Charles Chaumet; Denis Pérouse; Giraud; Henri Tasso; Henry Bérenger; Jean Boissonnas
+airfrance,Air France,Afrique occidentale française,executive,50,9,0.1800,1,1,0,0,high,Ernest Roume; Henry Borromée; Léon Renault; Paul Baudoin; Paul Baudouin; Paul Blanchard de la Brosse; Paul Tirard; René Mayer
+banquemadagascarcomores,Banque de Madagascar et des Comores,Afrique occidentale française,executive,46,9,0.1957,1,1,1,1,high,Blaise Diagne; Charles Michel-Côte; Gaston Raynal; Henri Saurin; Hoarau; Marcel Delanney; Philibert; Pierre Chaudun
+etudesentreprisescoloniales,Compagnie française d'Études et entreprises coloniales,Algérie,executive,86,9,0.1047,1,0,0,0,high,Boyer; Charles Michel-Côte; Denis; Gallieni; Girod; Henri Mège; Henry Roulleaux-Dugage; Keller
+forestieresanghaoubangui,Compagnie Forestière Sangha-Oubangui,Afrique équatoriale française,executive,64,9,0.1406,1,1,1,0,high,Eugène Lautier; Jean Weber; Luc Durand-Reville; Léon Mougeot; Maurice Superville; Noguès; Pagès; Pierre Pagès
+francoespagnolecheminfertangerfez,Compagnie franco-espagnole du Chemin de fer de Tanger à Fez,Maroc,executive,55,9,0.1636,1,1,2,0,high,Alexandre Celier; Arsène Henry; Camille Krantz; Denis Pérouse; Georges SAINT-RENÉ TAILLANDIER; Gustave Mercier; Jules Charles-Roux; Philippe Crozier
+industriellefonciere,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",,executive,82,9,0.1098,1,1,2,2,high,André Thiers; Edmond Grody; Hesse; Laurent; Lebon; Lucien Dior; Paul Doumer; Simon
+tramways,Compagnie Générale Française de Tramways,Indochine,executive,119,9,0.0756,1,1,1,1,low,Dugué de la Fauconnerie; Hesse; Janssen; Monnier; Pavie; Pierre Caillaux; Reynaud; Roger
+asiatiqueafricaine,Compagnie Asiatique et africaine,Indochine,executive,40,8,0.2000,1,1,1,0,high,Delpech; Ernest Carnot; Fernand Pila; Guesde; Jacques DUBOIN; Paul Valayer; Pierre Guesde; René Robin
+banquecommercialeindustrielle,Banque commerciale et industrielle,Algérie,executive,35,8,0.2286,1,1,3,0,high,Bourgeois; Chapsal; Edmond Develle; Eugène Sarlin; Fernand Chapsal; Léon Mougeot; Meunier; Émile Mauger
+banqueeuropeennebruxellesparistentativereprisedomainesagricolesconcessionramassagealfafrancoalgerienne,"Banque européenne, Bruxelles, Paris. Tentative de reprise des domaines agricoles et de la concession de ramassage d'alfa de la Compagnie franco-algérienne",,executive,19,8,0.4211,1,1,0,0,high,Alfred Blanche; E. Fourcand; Hubert; J. PALOTTE; Jean-Paul David; Philippart; Romero Robledo; Émile Brelay
+bienhoaindustrielleforestiere,Biênhoà industrielle et forestière,Indochine,executive,44,8,0.1818,1,1,1,1,high,Charles Furiet; Fernand Louis Posth; François Pietri; Guy; Patry; Édouard BOURCIER SAINT-CHAFFRAY; Émile Girard; Étienne
+cheminferdakarsaintlouis,Compagnie du Chemin de fer de Dakar à Saint-Louis,Afrique occidentale française,executive,52,8,0.1538,1,1,1,0,high,Alexandre Conty; Devès; Klein; Maxime-Alexandre Ficatier; Paul Devès; René Bouvier; Robert Vasselle; Étienne Ganderax
+creditfoncierouestafricain,Crédit foncier de l'Ouest-Africain,Afrique occidentale française,executive,37,8,0.2162,1,1,2,1,high,Barthélémy Robaglia; Edmond Giscard d'Estaing; Emmanuel Rousseau; Ernest Roume; Guillaume de Tarde; Merlin; Paul Baudouin; René Bouvier
+foncierecambodge,Société Foncière du Cambodge,Indochine,executive,20,8,0.4000,1,1,3,2,high,Charles Lambert; Crémazy; Ernest Outrey; Georges Maspero; Maurice Le Gallen; Maxime Outrey; [Charles] Lambert; [Georges] Maspero
+francoalgerienne,Compagnie Franco-algérienne,Algérie,executive,32,8,0.2500,1,1,1,0,high,Bourgeois; Dufour; Edmond Develle; Fournier; Garnier; Laisant; Sazerac de Forge; [Albert] Garnier
+maroc,Compagnie du Maroc,Indochine,executive,72,8,0.1111,1,1,2,1,high,Adolphe Vincent; Alexandre Celier; Arsène Henry; Camille Krantz; Jacques-Achille Bardoux; Jean Boissonnas; Philippe Crozier; San Simon
+messageriesfluvialescochinchine,Messageries fluviales de Cochinchine,Indochine,executive,57,8,0.1404,1,1,1,1,high,Camille Lejeune; François Pietri; Guesde; Jean-Paul David; Léon de Tinseau; Pierre Guesde; Sébastien Foy; Émile Brelay
+afriquecongo,Afrique et Congo,Afrique occidentale française,executive,52,7,0.1346,1,0,0,0,high,Alphonse Fondère; Antoine BLANC; Jacques-Marie-Joseph Delorme; Jean Weber; Josse; Prosper Josse; [Prosper] Josse
+agricoleminoterie,Compagnie Agricole de minoterie,,executive,36,7,0.1944,1,1,2,2,high,Brière; Donon; Gervais; Guy de Wendel; Laroche-Joubert; Marcel Donon; Raynaud
+agricolesudindochinoise,Cie Agricole Sud-Indochinoise,Afrique occidentale française,executive,20,7,0.3500,1,1,2,0,high,Aubry; Barthélémy Robaglia; Georges Mahé; Mahé; Paul Simoni; Pierre Valude; Valude
+airunion,Air Union,Syrie-Liban,executive,22,7,0.3182,1,1,0,0,high,Allègre; Beneyton; Ernest Roume; Georges Bonnet; Louis Arène; Léon Renault; Roume
+assurancefinanciere,L'Assurance financière,,executive,33,7,0.2121,1,1,2,2,high,Charles Savary; G. Blanchet; Lucien Arbel; PAUL CÈRE; Paul Morin; Travot; [Lucien] Arbel
+banquecommercialeafricaine,Banque commerciale africaine,Afrique occidentale française,executive,54,7,0.1296,1,1,1,0,high,Angoulvant; Charles Furiet; Frédéric FRANÇOIS-MARSAL; Frédéric-Victor-Adolphe MANAUT; Jean Weber; Méray; René Bouvier
+cheminsfermaroc,Compagnie des Chemins de fer du Maroc,Afrique occidentale française,executive,80,7,0.0875,1,1,0,0,high,Denis Pérouse; Ernest Roume; Georges SAINT-RENÉ TAILLANDIER; Gustave Mercier; Lebon; Roume; Étienne Ganderax
+cheminsferouestalgerien,Compagnie des Chemins de fer de l'Ouest-Algérien,Algérie,executive,72,7,0.0972,1,1,1,1,high,François Gérard; Gustave Schelle; Henri Villain; Isidore Salles; Olivier Bascou; Salles; Tirman
+commercialeindustrielleagricolehautogooue,"Société commerciale, industrielle et agricole du Haut-Ogooué",Afrique équatoriale française,executive,42,7,0.1667,1,1,1,1,high,Félix Coquelle; Jean Boissonnas; Joseph Vadier; Luc Durand-Reville; Médard Béraud; [Médard] Béraud; Édouard Jules Charles Roulet
+creditfoncierindochine,Crédit foncier de l’Indochine,Indochine,executive,45,7,0.1556,1,1,1,1,high,Edmond Giscard d'Estaing; Emmanuel Rousseau; Ernest Roume; Guillaume de Tarde; Joël Daroussin; P. Legentilhomme; Pierre Guesde
+creditmarocain,Crédit marocain,Afrique équatoriale française,executive,71,7,0.0986,1,0,1,0,high,Edmond Giscard d'Estaing; Gaston Gradis; Guillaume de Tarde; Lasserre; Marcel Bernard; Maurice Lasserre; René Bouvier
+culturecotonniereniger,"Compagnie de Culture cotonnière du Niger, puis Compagnie générale du Niger",Afrique occidentale française,executive,35,7,0.2000,1,1,0,0,high,Henri Hirsch; Jules Carde; Lebrun; Marcel Hirsch; Patey; Xavier Loisy; Émile Level
+decauvilleaineetablissements,"Decauville aîné, Société, Société nouvelle des Établissements)",,executive,63,7,0.1111,1,1,1,1,high,Boyer; Charles; Denis; Guy; Marcel Saint- Germain; Paul Decauville; SAINT-GERMAIN
+houilleresbassinloirehouillerescevennesdauphine,Houillères du bassin de la Loire + Houillères des Cévennes… du Dauphiné,,executive,82,7,0.0854,1,1,0,0,low,Aube; Barthélémy; Boniface; Bosc; Chauvet; Keller; Étienne
+indochinefilmscinemas,Indochine films et cinémas,Indochine,executive,26,7,0.2692,1,1,1,0,high,Charles Furiet; Jacques Cazaux; Luciani; Maurice LANGLOIS; Nesty; Pierre Guesde; René Bousquet
+indochinoiseelectricite,Société Indochinoise d'électricité,Indochine,executive,52,7,0.1346,1,1,0,0,high,Dupuy; Frédéric Mettetal; Isidore Paquin; Klein; Paul Baudouin; Paul Simoni; Servoise
+industriellebasogooue,Société Industrielle du Bas-Ogooué,Afrique équatoriale française,executive,46,7,0.1522,1,1,1,0,high,Emmanuel Rousseau; Georges Chiris; Lallemand; Lévy; René Bouvier; Rocca; Émile Lambert
+industrielleplatine,Cie industrielle du platine,Afrique occidentale française,executive,81,7,0.0864,1,1,1,0,high,Charles Michel; Jacques-Achille Bardoux; Luquet; Lévy; Morel; Patey; Wladimir Rokassowsky
+messageriesafricaines,Messageries africaines,Afrique occidentale française,executive,38,7,0.1842,1,1,1,0,high,Chaumet; Devès; Fernand Philippart; Henri Hirsch; Jules Carde; Luc Durand-Reville; Paul Devès
+mimot,Mimot,Indochine,executive,20,7,0.3500,1,1,2,1,high,Ernest Outrey; François Pietri; Gaston Fourn; Jean Rheims; Pierre Guesde; Saint-Ange; Sébastien Foy
+navigationvapeurfranceindochine,Société de Navigation à vapeur France-Indochine,Indochine,executive,25,7,0.2800,1,1,0,0,high,Alexandre Celier; Breton; Denis Pérouse; Raymond Rouelle; Rouelle; San Simon; Simon
+phosphatestunisiens,"Société des Phosphates tunisiens, puis Pierrefitte–Kalaa-Djerba, puis Pierrefitte .",Tunisie,executive,39,7,0.1795,1,1,1,1,high,Charles Michel; François Urruty; Gustave Mercier; Jean Maroger; Léon Mougeot; Mougeot; Yves le Trocquer
+plantesparfumsmadagascar,Plantes à parfums de Madagascar,Madagascar,executive,23,7,0.3043,1,1,2,1,high,Bouvier; Edmond Giscard d'Estaing; Henri Saurin; Joseph Thierry; René Bouvier; Rocca; Saurin
+servicescontractuelsmessageriesmaritimes,Société des Services contractuels des messageries maritimes,,executive,24,7,0.2917,1,1,1,0,high,Ernest Carnot; François Manceron; Gaston Doumergue; J. Noulens; Lucien Lacaze; Maurice Le Gallen; Milliès-Lacroix
+unioncommercialeindochinoiseafricaine,L'Union commerciale indochinoise et africaine,Afrique occidentale française,executive,75,7,0.0933,1,1,1,1,high,Barthou; Joseph Thierry; Jules Borel; Lacaze; Léonard Fontaine; Pierre Legrand; Émile Level
+charbonnagestonkin,Charbonnages du Tonkin,Algérie,executive,65,6,0.0923,1,1,2,2,high,Henri de Monplanet; Kling; Louis Passy; Paul Baudouin; Robert Thoumyre; San Simon
+colonies,Compagnie Générale des colonies,Afrique occidentale française,executive,106,6,0.0566,1,1,1,1,high,Adolphe-Marie Messimy; Gabriel ANGOULVANT; Georges Schwob; Grandjean; Xavier Loisy; Émile Level
+creditfonciersyrie,Crédit foncier de Syrie,Syrie-Liban,executive,21,6,0.2857,1,1,0,0,high,Eugène Regnault; Georges SAINT-RENÉ TAILLANDIER; Lebon; Léon Orosdi; Maurice Le Gallen; Olivier Sainsère
+credithypothecaireindochine,Crédit hypothécaire de l’Indochine,Chine,executive,25,6,0.2400,1,1,1,1,high,Edmond Giscard d'Estaing; Emmanuel Rousseau; Ernest Roume; Guillaume de Tarde; Joël Daroussin; Pierre Guesde
+ergho,Ergho,Maroc,executive,35,6,0.1714,1,1,0,0,low,Baudouin; Charles; Guernier; Henry; Michel; Paul
+estasiatique,Est-Asiatique français,Afrique occidentale française,executive,17,6,0.3529,1,1,1,0,high,Ernest Carnot; Félix Joseph Martin-Feuillée; H. N. Andersen; Joseph Thierry; Pierre Guesde; Émile Ogier
+maisonetudiantsindochineciteuniversitaireparissuccesetudiantsindochinoisfrance,Maison des étudiants de l'Indochine à la Cité universitaire de Paris . Succès des étudiants indochinois en France,Indochine,executive,10,6,0.6000,1,1,1,1,high,Albert Sarraut; Fontaine; Gaston Doumergue; Paul Blanchard de la Brosse; Paul Doumer; Paul Simoni
+metallurgiqueminierefrancomarocaine,Compagnie Métallurgique et minière franco-marocaine,Algérie,executive,46,6,0.1304,1,1,3,1,high,Amédée Damour; Charles Michel; Guy Wendel; Guy de Wendel; Pierre Desforges; Xavier Reille
+mineraisfermagnetiquesmoktaelhadid,Cie des minerais de fer magnétiques de Mokta-el-Hadid,Algérie,executive,77,6,0.0779,1,1,1,0,high,Denis Pérouse; Jules Tarbé des Sablons; Louis Frémy; Paulin Talabot; Rodier; TEISSERENC DE BORT
+nouvelleshebrides,Société française des Nouvelles-Hébrides,Nouvelle-Calédonie (Mélanésie),executive,31,6,0.1935,1,0,2,2,high,Descemet; Gabriel Thaly; Jean Molinié; Loisy; Marchessou; Émile-André Faure
+occidentalemadagascar,Compagnie Occidentale de Madagascar,Algérie,executive,56,6,0.1071,1,1,0,0,medium,Damour; Georges Bonnet; Gustave Binger; Léon Mougeot; Mougeot; Émile Henry
+officeniger,L'Office du Niger,Afrique occidentale française,executive,16,6,0.3750,1,1,2,2,high,Blaise Diagne; Louis Marin; Paul Jourdain; Roume; Susset; Waddington
+ouestafricain,Compagnie de l'Ouest-Africain français [Compagnie de l'Ouest-Africain français],Afrique occidentale française,executive,50,6,0.1200,1,1,0,0,medium,Angoulvant; Gustave Binger; Henry; Léonard Fontaine; Richard; Émile Henry
+scieriesafricaines,Compagnie des Scieries africaines,Afrique occidentale française,executive,44,6,0.1364,1,1,1,1,high,Adolphe-Marie Messimy; Edmond Bertrand; Gaston Fourn; Georges Schwob; Louis PASQUET; Xavier Loisy
+sicaf,SICAF,Indochine,executive,29,6,0.2069,1,1,1,0,high,Charles Poirson; Jules Lionel-Marie; Laroche; Lionel-Marie; Pierre Guesde; Émile Lambert
+sucreriescoloniales,Sucreries coloniales,La Réunion,executive,63,6,0.0952,1,1,0,0,high,Antony Ratier; Briand; Grandjean; Léon Boulloche; Léonus Bénard; Émile Level
+tramwayseclairageelectriquesshanghai,Compagnie française de Tramways et d’éclairage électriques de Shanghaï,Chine,executive,35,6,0.1714,1,1,1,0,medium,Jules Aubrun; Lucien Michelot; Marcel Borduge; Paul Baudouin; Paul Tirard; Émile Francqui
+transatlantique,Cie Générale Transatlantique,Afrique occidentale française,executive,38,6,0.1579,1,1,1,0,high,Joseph-Honoré Ricard; Max Hymans; Olivier; Pierre Marraud; Raoul Marie Louis Calary de Lamazière; Wilfrid Baumgartner
+transportsmaritimesvapeur,Société générale de transports maritimes à vapeur,Maroc,executive,91,6,0.0659,1,1,0,0,medium,Armand; Giraud; Gouin; Maurel; Paulin Talabot; Peyrouton
+afrique,L'Afrique française,Afrique occidentale française,executive,52,5,0.0962,1,1,0,0,high,Charles-Émile Halais; Eugène LECOCQ; Gaston Raynal; Georges Boussenot; Louis Dubois
+bamako,Société de Bamako,Afrique occidentale française,executive,17,5,0.2941,1,0,1,1,high,Achille Fould; Charles Poirson; Henri Hirsch; Marcel Hirsch; Émile Level
+banquecommercialemaroc,Banque commerciale du Maroc,Afrique occidentale française,executive,51,5,0.0980,1,1,0,0,low,Boniface; Faure; Paul Dutasta; Piot; Piétri
+banqueetatmaroc,Banque d'État du Maroc,Afrique occidentale française,executive,102,5,0.0490,1,1,0,0,high,Gaston Guiot; Gouin; Jules Cambon; Laurent; Renouard
+banquefrancochinoisecommerceindustrie,Banque franco-chinoise pour le commerce et l'industrie,Chine,executive,56,5,0.0893,1,1,0,0,high,André Lorgère; Eugène Regnault; François; Maurice Le Gallen; [Maurice] Le Gallen
+banqueimperialeottomane,"Banque impériale ottomane, puis Banque ottomane ou Osmanli Bankasi, 289 p.",Empire ottoman/Turquie,executive,35,5,0.1429,1,1,0,0,high,André Berthelot; Arsène Henry; Laurent; Pyrame Naville; Rouvier
+banqueprivee,Banque privée,Afrique occidentale française,executive,22,5,0.2273,1,0,1,1,high,Achille Fould; Gaston Guiot; Stern; Van Eetvelde; Xavier Reille
+caoutchoucskompongthom,Caoutchoucs de Kompong-Thom,Afrique occidentale française,executive,26,5,0.1923,1,1,2,1,high,Camille Lejeune; Ernest Outrey; Jules Lionel-Marie; Lionel-Marie; René Thion de la Chaume
+centraleeclairagepargaz,"Compagnie Centrale d'Éclairage par le gaz, puis Compagnie Lebon",,executive,42,5,0.1190,1,1,2,1,high,André Lebon; Billiet; Jules Bozérian; Jules Herbette; Pierre Lebon
+chargeursextremeorient,Chargeurs d'Extrême-Orient,Indochine,executive,43,5,0.1163,1,0,0,0,low,Gallieni; Girod; Guernier; Laurent; Émile Level
+cheminfertangerfez,Chemin de fer Tanger-Fez,Madagascar,executive,18,5,0.2778,1,0,1,0,high,Camille Krantz; Denis Pérouse; Georges SAINT-RENÉ TAILLANDIER; Philippe Crozier; Étienne Ganderax
+cheminfertranssaharien,Le Chemin de fer transsaharien,Algérie,executive,15,5,0.3333,1,1,0,0,high,Beau; Edmond du Vivier de Streel; Pierre Laval; Surleau; Édouard de Warren
+comptoirnationalescompteparis,Comptoir national d'Escompte de Paris,Afrique occidentale française,executive,26,5,0.1923,1,1,1,0,high,Alexandre Celier; Camille Krantz; Charles Farnier; Charles Laurent; San Simon
+comptoirsgenerauxindochine,Comptoirs généraux de l’Indochine,Indochine,executive,31,5,0.1613,1,1,0,0,high,AUGUSTE THOLANCE; Edmond Bertrand; Paul Simoni; Pierre Guesde; Touzet
+concessionnaireportpapeete,Cie concessionnaire du port de Papeete,Tahiti (Polynésie),executive,19,5,0.2632,1,1,1,0,high,André Ballande; Ballande; Ernest Roume; Paul Ristelhueber; Roume
+cotonsafricains,Societe francaise des Cotons africains,Afrique équatoriale française,executive,35,5,0.1429,1,1,1,0,high,Barthélémy Georges; Boussenot; Gaston Fourn; Georges Boussenot; Maurice VIOLLETTE
+creditfoncieragricolealgerie,Crédit foncier et agricole d'Algérie,Afrique occidentale française,executive,60,5,0.0833,1,1,1,1,high,Alphandéry; Gastu; Maillard; Olivier; René Brice
+creditfonciermadagascar,Crédit foncier de Madagascar,Indochine,executive,39,5,0.1282,1,1,0,0,high,Charles Michel-Côte; Henri Michel; Lucien Lacaze; Maurice Le Gallen; Xavier Loisy
+creditmobilierindochinois,Crédit mobilier indochinois,Indochine,executive,16,5,0.3125,1,1,0,0,high,Guillaume de Tarde; Lotzer; Nouailhetas; Pierre Guesde; Rivoal
+domainechapeaugendarme,Domaine du Chapeau de Gendarme,Algérie,executive,23,5,0.2174,1,1,1,1,high,Froger; Henri Borgeaud; Jack Chevallier; Lucien Borgeaud; Léon Deyron
+energieindustrielle,L'Énergie industrielle,Indochine,executive,57,5,0.0877,1,0,2,2,high,Adhémar Péchadre; Durand; Fernand Brun; Laurent; Louis Durand
+equatorialemines,Compagnie Équatoriale de mines,Afrique occidentale française,executive,60,5,0.0833,1,1,1,0,low,Brunel; George Moulaert; Joseph Vadier; Marcel Bénard; Émile Lambert
+extremeorient,Compagnie générale d’Extrême-Orient,Chine,executive,22,5,0.2273,1,1,1,0,high,Arnaud; Laurent; Ludovic-Oscar Frossard; Olivier; Roy
+financierecaoutchoucs,Financière des Caoutchoucs,Algérie,executive,69,5,0.0725,1,0,0,0,high,André Berthelot; Charles Poirson; Henri GOURDON; N. Arnold; de Beaumont
+fonciereimmobilierevillealger,Compagnie Foncière et Immobilière de la Ville d'Alger,Algérie,executive,42,5,0.1190,1,0,0,0,medium,Dislère; Gastu; Pélegri; Rougier; [François] Gastu
+gabon,Compagnie Française du Gabon,Afrique équatoriale française,executive,28,5,0.1786,1,0,1,0,high,Autran; Durand; Edmond du Vivier de Streel; Fontaine; Louis Marin
+indochinoiseculturescambodge,Compagnie indochinoise de cultures Compagnie du Cambodge,Indochine,executive,19,5,0.2632,1,1,1,0,high,Ernest Outrey; Jean de Beaumont; Joseph Faisant; Paul Vidal; de Beaumont
+indochinoiseplantationsreuniesmimot,Société indochinoise des plantations réunies de Mimot,Indochine,executive,19,5,0.2632,1,1,1,0,high,Gaston Fourn; Jean Rheims; Pierre Guesde; René Thion de la Chaume; Sébastien Foy
+lyonmaroc,Lyon-Maroc,Maroc,executive,20,5,0.2500,1,0,1,0,low,CLÉMENT; François; Henry; Joannès Déchelette; Paul
+minesbouarfa,Société des Mines de Bou-Arfa,Afrique occidentale française,executive,41,5,0.1220,1,1,1,1,high,Léon Mougeot; Michaux; Mougeot; Paul Bénazet; Yves le Trocquer
+mineslaurium,Compagnie française des Mines du Laurium,Indochine,executive,90,5,0.0556,1,1,0,0,high,Chabert; Ernest Outrey; François Urruty; Henry; Huet
+minierekanguet,"Société minière du Kanguet, puis Société nouvelle du Kanguet",Tunisie,executive,43,5,0.1163,1,1,0,0,low,Aubaret; Faure; Guérin; Maugras; Édouard Hunebelle
+nickel,Société Le Nickel,Algérie,executive,84,5,0.0595,1,1,1,0,high,Ernest Roume; Henry Loste; Marcel Borduge; Paul Baudouin; Roume
+optorg,Optorg,Indochine,executive,35,5,0.1429,1,1,0,0,high,André Thiers; Eugène CHARLES; Jean Raymond Schwob; Luc Durand-Reville; Raymond Poincaré
+paysmoi,Pays moï,Indochine,executive,6,5,0.8333,1,1,0,0,high,Lalaurette; Monlaü; Pierre Marty; Renault; Rivoal
+pekinsyndicateltd,The Pekin Syndicate Ltd,Chine,executive,32,5,0.1562,1,1,0,0,high,André Berthelot; Charles Victor; Gaston Camille Kahn; Jacques Arnavon; Émile Francqui
+plantationsindochinoises,Plantations Indochinoises de thé,Indochine,executive,30,5,0.1667,1,1,0,0,high,Charles Michel-Côte; Jean de Beaumont; Pierre Guesde; Pierre Pagès; René Bouvier
+sffc,SFFC,,executive,22,5,0.2273,1,1,1,1,high,Bouvier; Camille Barrère; Charles Aubert; Edmond Giscard d'Estaing; René Bouvier
+sifa,SIFA,Indochine,executive,19,5,0.2632,1,1,0,0,high,Georges Mahé; Georges Maspero; Laurent; Mahé; [Georges] Mahé
+socgenetsbergougnan,Soc. gén. Éts Bergougnan,,executive,19,5,0.2632,1,1,1,1,high,Dietin; Jacques-Achille Bardoux; Josse; ROBIN; René Bouvier
+tabacsindochine,Tabacs d’Indochine,Empire ottoman/Turquie,executive,29,5,0.1724,1,0,0,0,medium,Girod; Monnier; San Simon; Simon; Stern
+tramwayselectriquesoran,Tramways électriques d'Oran,Algérie,executive,34,5,0.1471,1,1,2,1,high,Chapsal; Fernand Chapsal; Georges Berthoulat; Guillon; SAINT-GERMAIN
+transportsafrique,Compagnie Générale de transports en Afrique,Afrique équatoriale française,executive,25,5,0.2000,1,1,0,0,high,Antoine BLANC; Jacques-Marie-Joseph Delorme; Joseph Vadier; Marcel Bénard; Pierre Robert
+unionelectriquerurale,Union électrique rurale,,executive,21,5,0.2381,1,1,2,2,high,Edmond Largier; Jacques DUBOIN; Jean de Ganay; Paul Bénazet; Yves le Trocquer
+unionindustriellecredit,Union industrielle de crédit,Indochine,executive,57,5,0.0877,1,1,0,0,high,Alexandre Celier; Charles Sergent; Clément Moret; Jean Maroger; Émile Level
+unionmines,Union des mines,Algérie,executive,73,5,0.0685,1,1,2,2,high,Alexandre Celier; Emmanuel Rousseau; François Pietri; Henri de Peyerimhoff; Jean Plichon
+affreteursreunis,Affréteurs réunis,Afrique occidentale française,executive,44,4,0.0909,1,0,0,0,high,Giraud; Jean Sthul; Philibert; Stern
+alfa,L'Alfa,Algérie,executive,39,4,0.1026,1,1,3,2,high,Adolphe-Marie Messimy; Georges Berthoulat; Pierre Desforges; Victor Blanchet
+algerienneeclairageforce,Société Algérienne d'éclairage et de force,Algérie,executive,20,4,0.2000,1,1,0,0,high,F. Bouscasse; Gustave Mercier; Pierre Caillaux; Xavier Loisy
+asiatiquenavigation,Compagnie Asiatique de navigation,Chine,executive,17,4,0.2353,1,1,1,0,high,Doumer; Paul Doumer; Pierre Guesde; René Robin
+ateliersvaucanson,Ateliers Vaucanson,,executive,17,4,0.2353,1,1,0,0,high,Garnier; Malon; Meunier; Pierre Guesde
+banquefonciereegyptelandbankegyptalexandrie,"Banque foncière d'Égypte Land Bank of Egypt, Alexandrie",Égypte,executive,36,4,0.1111,1,0,2,0,high,Camille Krantz; Jules Charles-Roux; Saïd Pacha; Édouard Bourre
+banqueinterets,Banque des intérêts français,Indochine,executive,15,4,0.2667,1,1,2,1,high,Camille Lapeyre; Charles Michel; Michel; Étienne Riche
+banquemaroc,Banque française du Maroc,Indochine,executive,14,4,0.2857,1,1,1,1,high,Claudius Petit; Maurice Bouilloux-Laffont; Maurice Bouilloux-Lafont; Pierre Guesde
+banquepaysorient,Banque française des pays d’Orient,Empire ottoman/Turquie,executive,20,4,0.2000,1,1,0,0,high,Claudius Petit; Léon Orosdi; Paul Dutasta; Émile Level
+banquesenegal,Banque du Sénégal,Sénégal,executive,19,4,0.2105,1,0,0,0,low,Chanel; Gaillard; Hervé; Michaux
+benardjarislovsky,"Bénard et Jarislovsky, puis Bénard frères et Cie",,executive,32,4,0.1250,1,0,0,0,high,François Milan; Frédéric FRANÇOIS-MARSAL; Georges Privat-Deschanel; Lévy
+boiscoloniaux,Compagnie générale des Bois coloniaux,Afrique équatoriale française,executive,31,4,0.1290,1,0,1,0,high,Ernest Carnot; Jean Weber; Vincent; Édouard Picanon
+cafesindochine,Société des Cafés de l’Indochine,Afrique occidentale française,executive,13,4,0.3077,1,1,0,0,high,Combes; Jules Lionel-Marie; Jules-Maurice Gourbeil; Pierre Guesde
+candlot,Candlot,,executive,60,4,0.0667,1,0,1,0,low,Charles Michel; Julien Bessonneau; Letellier; Prat
+caoutchoucsmekong,Cie des CAOUTCHOUCS du MÉKONG,Indochine,executive,27,4,0.1481,1,1,1,0,high,Baudoin; Ernest Outrey; Fournier; René Goutès
+caoutchoucspadang,Compagnie des Caoutchoucs de Padang,Indochine,executive,49,4,0.0816,1,0,1,0,high,André Berthelot; Charles Poirson; Jean de Beaumont; René Sonnery
+chalandage,CHALANDAGE,Indochine,executive,16,4,0.2500,1,1,2,0,high,André Ballande; Henry Loste; Paul Simoni; Pierre Guesde
+chauxcimentsmateriauxconstructionmaroc,"Chaux, ciments et matériaux de construction au Maroc",Maroc,executive,45,4,0.0889,1,1,1,1,high,Barthélémy Robaglia; Demonque; Duboin; Jacques DUBOIN
+cheminsferindochineyunnan,Compagnie française des Chemins de fer de l'Indochine et du Yunnan,Indochine,executive,52,4,0.0769,1,0,0,0,medium,Adolphe Bourgeois; Bourgeois; Paul; San Simon
+cimentsportlandartificielsindochine,Ciments Portland artificiels de l'Indochine,Algérie,executive,38,4,0.1053,1,1,2,2,high,Fernand Pila; Louis Marchegay; Paul Baudoin; Robert Thoumyre
+colonialebambao,"Société Coloniale de Bambao, puis Comores-Bambao",Comores,executive,20,4,0.2000,1,1,2,1,high,Charles Dumont; Ernest Carnot; François Carnot; Georges Chiris
+coteivoire,Compagnie Française de la Côte d'Ivoire,Afrique occidentale française,executive,21,4,0.1905,1,1,0,0,high,Bordes; Hostains; Jules Carde; Magnin
+creditfonciermarocain,Crédit foncier marocain,Maroc,executive,29,4,0.1379,1,0,1,1,high,Bouilloux-Lafont; Claudius Petit; Delpech; Maurice Bouilloux-Lafont
+creditfonciertunisie,Crédit foncier de Tunisie,Tunisie,executive,16,4,0.2500,1,0,0,0,low,Henri CHAVOIX; Labbé; Legrand; Morel
+creditfrancomarocaincommerceexterieur,Crédit franco-marocain du commerce extérieur,Maroc,executive,16,4,0.2500,1,0,1,1,high,Bouilloux-Lafont; Claudius Petit; Delpech; Maurice Bouilloux-Lafont
+culturesbananeraieskinsan,Société des Cultures et bananeraies du Kin-San,Afrique occidentale française,executive,16,4,0.2500,1,1,0,0,low,Lefèvre; Mahé; Michel; Petitjean
+distilleriesiindochine,Société française des Distilleries de I'Indochine,Indochine,executive,21,4,0.1905,1,1,0,0,high,Chapsal; Marcel Borduge; Maurice Le Gallen; Pierre Guesde
+domainesaintcharlesboufarik,"Domaine Saint-Charles, Boufarik",Algérie,executive,8,4,0.5000,1,1,1,0,high,Froger; Frédéric Altairac; Henri Borgeaud; Léon Deyron
+ekelakadeisangha,Ékéla-Kadeï-Sangha,Afrique équatoriale française,executive,26,4,0.1538,1,1,0,0,medium,Josse; Léon Mougeot; Noguès; Trarieux
+etablissementsdelignon,Société anon. des Établissements L. Delignon,Indochine,executive,20,4,0.2000,1,1,1,0,high,Fernand Chapsal; Gustave-Adolphe Thierry-Mieg; Paul Ristelhueber; Paul Simoni
+etainscammon,Société des Étains du Cammon,Indochine,executive,28,4,0.1429,1,1,3,2,high,FRANÇOIS DE WENDEL; François Wendel; Jacques-Achille Bardoux; Paul Baudouin
+etainsindochine,"Société des Étains de l'Indo-Chine, puis Étains de l'Indochine, Pak-Hin-Boun",Afrique occidentale française,executive,29,4,0.1379,1,1,1,0,high,Félix Renaud; Maurice Le Gallen; Victor Lesaché; Yves le Trocquer
+etainswolframtonkin,"Étains et wolfram du Tonkin, puis Compagnie immobilière et financière Ewoto",Indochine,executive,44,4,0.0909,1,1,3,3,high,FRANÇOIS DE WENDEL; François Wendel; Jacques-Achille Bardoux; Paul Baudouin
+etsgomenouaco,"Éts Gomen-Ouaco, puis Société de Ouaco",Nouvelle-Calédonie (Mélanésie),executive,13,4,0.3077,1,1,0,0,high,Charles Prevet; Jules PREVET; Lang; Noël Pardon
+etudescommercemaroc,Société d'Études et de commerce au Maroc,Maroc,executive,21,4,0.1905,1,1,0,0,high,Delpech; Ernest Roume; Jules Borel; Roume
+etudesculturecotonindochine,Société d'études pour la Culture du coton en Indochine .,Indochine,executive,12,4,0.3333,1,1,0,0,high,Lionel-Marie; Maspero; Pierre Guesde; René Bouvier
+etudesouenza,Société d'Études de l'Ouenza,Algérie,executive,8,4,0.5000,1,0,0,0,medium,Bertagna; Clemenceau; FalIières; Raymond Poincaré
+exploitationetablissementsbrossardmopin,Société d'exploitation des Établissements Brossard-Mopin,Indochine,executive,12,4,0.3333,1,1,0,0,high,Albert Ernest Duval; Armand Rousseau; Georges Maspero; Rousseau
+exploitationselectriques,"Exploitations électriques, puis Exploitations électriques et industrielles",,executive,57,4,0.0702,1,1,0,0,high,Chapsal; Damour; Guillon; Jean Maroger
+fasielectricite,Compagnie Fasi d'Électricité,Algérie,executive,39,4,0.1026,1,0,0,0,high,Bonfils; Paul Jordan; Victor Blanchet; Viénot
+forgesatelierschantiersindochine,"Forges, ateliers et chantiers d'Indochine",Indochine,executive,26,4,0.1538,1,1,0,0,low,Cazenave; Fouque; Guesde; Rocca
+ghmumm,G.-H. Mumm,Indochine,executive,39,4,0.1026,1,1,3,1,high,Jean Raymond Schwob; Lederlin; Paul Lederlin; Philippe Livry-Level
+grandecomore,Grande-Comore,Comores,executive,12,4,0.3333,1,1,1,0,high,Ernest Carnot; Garnier; Georges Chiris; Émile Girard
+guet,"Guët & Cie, puis Guët, Raffard & Cie",,executive,52,4,0.0769,1,1,1,1,low,Dubief; Laurent; Lederlin; Levêque
+hautesangha,Société de la Haute-Sangha,Afrique équatoriale française,executive,24,4,0.1667,1,1,0,0,medium,Henry; Léon Mougeot; Mougeot; Noguès
+immobilierefinanciereafricaine,Société Immobilière et financière africaine,Afrique occidentale française,executive,22,4,0.1818,1,1,1,0,high,Charles Furiet; Henry Loste; Pierre Gaulle; René Bouvier
+immobilierefoncierefranceindochine,Cie Immobilière et Foncière France-Indochine,Indochine,executive,21,4,0.1905,1,0,0,0,medium,Boy-Landry; Darricau; Gauthier; Jean Boy Landry
+imperialecheminsferethiopiens,Compagnie Impériale des Chemins de fer éthiopiens,Djibouti,executive,45,4,0.0889,1,1,0,0,low,Crozier; Devès; Loubet; Moulin
+indochinoisemines,Compagnie Indochinoise des Mines,Indochine,executive,12,4,0.3333,1,1,0,0,high,Angoulvant; Georges Boussenot; [Édouard] Picanon; Édouard Picanon
+indochinoiseplantationsheveas,Société indochinoise de plantations d'hévéas,Indochine,executive,22,4,0.1818,1,1,1,0,high,Charles Furiet; Paul Baudouin; René Gigon-Papin; René Thion de la Chaume
+indochinoisetransports,Société Indochinoise de Transports,Indochine,executive,27,4,0.1481,1,1,0,0,high,Joseph Thierry; Jules Bosc; Nicolas Truong Vinh Tong; Pierre Pagès
+industriellemaritime,Compagnie Industrielle maritime,,executive,39,4,0.1026,1,0,1,0,high,Amaury de la Grange; Bourgeois; Denis; Pierre Schneiter
+kouango,"Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français",Afrique équatoriale française,executive,38,4,0.1053,1,1,0,0,high,Jean Weber; Josse; Maurice Superville; René Millet
+malfidano,Malfidano,,executive,27,4,0.1481,1,0,1,1,low,Bourgeois; Fournier; Giolitti; Émile Mauger
+manufacturesindochinoisescigarettes,Manufactures indochinoises de cigarettes,Indochine,executive,39,4,0.1026,1,1,0,0,high,Jean Rheims; Pierre Guesde; Saint-Ange; Sébastien Foy
+manutentionmarocaine,La Manutention marocaine,Algérie,executive,48,4,0.0833,1,1,0,0,high,Alexis Charmeil; Denis Pérouse; Duréault; Henri Duréault
+marseillaisenavigationvapeurfraissinet,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,,executive,37,4,0.1081,1,0,0,0,low,Goujon; Lacaze; Lebon; Meunier
+merinosmarocain,Le Mérinos marocain,Maroc,executive,17,4,0.2353,1,1,0,0,medium,Alfred Lacaze; Faure; Joseph-Honoré Ricard; Ricard
+mineraisgrandeile,Société des Minerais de la Grande-Île,Madagascar,executive,25,4,0.1600,1,1,0,0,high,Bouvier; Henri Saurin; Piquet; René Bouvier
+minesetainhauttonkin,Société des Mines d'étain du Haut-Tonkin,Indochine,executive,32,4,0.1250,1,1,0,0,high,Klein; Maurice Monguillot; Monguillot; Vincenti
+molybdene,Le Molybdène,Maroc,executive,30,4,0.1333,1,1,0,0,high,Baillet; Bousquet; Gonzague de Bellescize; Henry Simon
+ngokosangha,"N’goko-Sangha, puis Société française Congo-Cameroun",Afrique équatoriale française,executive,13,4,0.3077,1,0,0,0,medium,Berteaux; Fallières; Jean Weber; Mimerel
+nordafricaincommercial,Nord-africain commercial,Algérie,executive,14,4,0.2857,1,0,0,0,high,Frédéric Barbedette; Henri Borgeaud; Lucien Borgeaud; Léonard
+patronagelaiquecochinchinois,Patronage laïque cochinchinois,Indochine,executive,9,4,0.4444,1,0,0,0,medium,AUGUSTE THOLANCE; Faure; Lebrun; [Georges] Le Bret
+plantationskratiecambodge,Société des plantations de Kratié au Cambodge,Indochine,executive,18,4,0.2222,1,1,0,0,high,Briand; Delanney; François Baudoin; Marcel Delanney
+rizindochinedenisfreres,Riz d'Indochine Denis frères,Indochine,executive,34,4,0.1176,1,1,2,0,high,ARDIN; Charles Michel; Denis; Joseph Thierry
+saigonnaisenavigationtransport,Compagnie Saïgonnaise de navigation et de transport,Indochine,executive,23,4,0.1739,1,1,0,0,high,Camille Lejeune; Paul Blanchard de la Brosse; Pierre Guesde; Saint-Ange
+saintelie,Saint-Élie,Guyane française,executive,38,4,0.1053,1,0,0,0,medium,Adolphe Vincent; David Levat; Dujardin-Beaumetz; Vincent
+salinesdjiboutisfaxmadagascar,"Salines de Djibouti, Sfax et Madagascar",Djibouti,executive,19,4,0.2105,1,1,0,0,high,Léon Radziwill; Paul Baudoin; Pierre Guesde; René Bouvier
+senegalcoteoccidentaleafrique,Compagnie du Sénégal et de la Côte occidentale d’Afrique,Afrique occidentale française,executive,15,4,0.2667,1,0,0,0,medium,Bohn; Delpech; Hesse; Jules Le Cesne
+silicocalcaireafricaine,La Silico-Calcaire africaine,Afrique occidentale française,executive,18,4,0.2222,1,1,1,1,high,Adolphe-Marie Messimy; Lucien Fourneau; Maurice Superville; Émile Laffon
+unionelectriqueindochine,Union électrique d’Indochine,Indochine,executive,27,4,0.1481,1,1,1,1,high,Charles Furiet; Ernest Outrey; Georges Maspero; Pierre Guesde
+unionfabriquesengraisproduitschimiquessuperphosphates,"Union française de fabriques d'engrais, de produits chimiques et de superphosphates, puis Union française d'engrais et de produits chimiques",Algérie,executive,25,4,0.1600,1,0,1,0,high,André Berthelot; Louis Dubois; Paul Chautard; Paul Jordan
+verreriesextremeorient,Verreries d’Extrême-Orient,Indochine,executive,25,4,0.1600,1,0,1,1,high,Bouvier; Edmond Giscard d'Estaing; René Bouvier; du Vivier de Streel
+administration,Administration,Algérie,executive,14,3,0.2143,1,1,0,0,high,Gaston Duvernoy; Gaston Fourn; Pierre Guesde
+africaineliegealgerhusseindeyazazga,"Compagnie Africaine du Liège, Alger, Hussein-Dey, Azazga",Algérie,executive,7,3,0.4286,1,0,0,0,medium,Brun; Charles Brun; Gustave Mercier
+agricoleindustrielleminieremadagascar,"Compagnie Agricole, Industrielle et Minière de Madagascar",Madagascar,executive,9,3,0.3333,1,0,0,0,high,Frot; Léon Orosdi; Paul Lavigne
+agricoleminierenouvelleshebrides,Compagnie Agricole et minière des Nouvelles-Hébrides,Afrique occidentale française,executive,15,3,0.2000,1,1,0,0,medium,Charles Revel; Laurent; Édouard Picanon
+agricolethescafeskontum,Compagnie agricole des thés et cafés du Kontum,Indochine,executive,15,3,0.2000,1,1,0,0,high,Gaston Fourn; Georges Maspero; Maspero
+agricolethescafeskontumannam,Compagnie agricole des Thés et Cafés du Kontum-Annam,Indochine,executive,18,3,0.1667,1,1,0,0,high,Gaston Fourn; Georges Maspero; Maurice Le Gallen
+associationminiere,Association minière,Afrique occidentale française,executive,63,3,0.0476,1,0,0,0,medium,Bousquet; Charles Poirson; Paul Faure
+auxiliaireentreprisescolonialesminieresindustrielles,"Cie Auxiliaire d'Entreprises coloniales, minieres et industrielles",Afrique occidentale française,executive,17,3,0.1765,1,1,0,0,medium,George Moulaert; Michaux; Yves le Trocquer
+banqueafriqueoccidentalebao,Banque de l’Afrique occidentale (BAO),,executive,14,3,0.2143,1,0,0,0,high,F. Reste; Georges Keller; Georges Spitz
+banquecentrale,Banque centrale française,,executive,13,3,0.2308,1,1,0,0,medium,Charles Victor; Joseph Vidal; Émile Henry
+banquefrance,Banque de France,Afrique occidentale française,executive,22,3,0.1364,1,1,1,1,high,André Ballande; Charles Laurent; Wilfrid Baumgartner
+banquefrancochinoise,La Banque franco-chinoise,Chine,executive,19,3,0.1579,1,1,1,1,high,Alfred-Léon Bouchet; Ernest Outrey; Grandjean
+banqueproduitsalimentairescoloniaux,Banque des produits alimentaires et coloniaux,,executive,19,3,0.1579,1,0,1,0,high,Claudius Petit; René-Victor Manaut; Édouard Labouchère
+banqueunionparisienne,Banque de l'Union Parisienne,Afrique occidentale française,executive,11,3,0.2727,1,1,0,0,medium,Charles Poirson; Charles Sergent; Frédéric FRANÇOIS-MARSAL
+bouthaleb,Bou-Thaleb,Algérie,executive,18,3,0.1667,1,1,0,0,low,Augustin Marchis; Rollin; SAINT-GERMAIN
+brasseriesouestafricain,Société des Brasseries de l'Ouest Africain,Afrique occidentale française,executive,30,3,0.1000,1,1,0,0,high,Gaston Gradis; Paul Guieysse; Watier
+briqueteriesbamako,Briqueteries de Bamako,Afrique occidentale française,executive,14,3,0.2143,1,1,0,0,high,Joël Daroussin; Paul Guieysse; You
+caisseagricoletlemcen,Caisse agricole de Tlemcen,Algérie,executive,6,3,0.5000,1,0,0,0,low,Cazenave; Léonard; Nogaro
+caissehypothecaireegypte,Caisse hypothécaire d'Égypte,Maroc,executive,34,3,0.0882,1,0,1,0,high,Achille Adam; Claudius Petit; Van Eetvelde
+caissepretsimmobiliersmaroc,Caisse de prêts immobiliers du Maroc,Maroc,executive,26,3,0.1154,1,1,0,0,medium,Andrieux; Robert de Caix; Édouard Picanon
+caledonia,Calédonia,Indochine,executive,21,3,0.1429,1,1,2,0,high,André Ballande; Henry Loste; Paul Baudouin
+caoutchoucsphuochoa,Les Caoutchoucs de Phuôc-Hoà,Indochine,executive,29,3,0.1034,1,1,2,2,high,Ernest Outrey; Maspero; René Thion de la Chaume
+caoutchoutieregianhanoucaoutchoutieregianhan,Cie caoutchoutière de Gia-nhan ou Caoutchoutière de Gia-Nhan,Indochine,executive,11,3,0.2727,1,0,0,0,low,Durand; Josse; Étienne
+carbonelorraine,Carbone-Lorraine,,executive,12,3,0.2500,1,1,0,0,high,Marcel Borduge; Marcel Fleury; Wintrebert
+cdfcharbonnagesfrance,CDF-Charbonnages de France,,executive,41,3,0.0732,1,0,1,0,high,Gauthier; Georges Bret; Meyer
+cellulosesafriquenord,Société des Celluloses de l'Afrique française du Nord,Algérie,executive,18,3,0.1667,1,0,0,0,low,Frédéric Barbedette; Gautier; Philibert
+chalandageremorquageindochine,Chalandage et remorquage de l’Indochine,Indochine,executive,26,3,0.1154,1,1,1,0,high,Edmond Giscard d'Estaing; Paul Simoni; Pierre Guesde
+charbonnagesbeeringen,Charbonnages de Beeringen,,executive,14,3,0.2143,1,1,3,0,high,Albert Lebrun; Guy Wendel; Guy de Wendel
+charbonnagesdongtrieu,Charbonnages du Dông-Triêu,Indochine,executive,28,3,0.1071,1,1,1,0,high,Adolphe Vincent; Joseph Chailley; Paul Blanchard de la Brosse
+chauxcimentsportlandhautrhinaltkirch,Chaux et ciments portland du Haut-Rhin (Altkirch),,executive,10,3,0.3000,1,0,1,0,high,Albert Ernest Duval; Paul Anquetil; Paul Jourdain
+cheminferdakarstlouis,Cie du chemin de fer de Dakar à St-Louis,Afrique occidentale française,executive,8,3,0.3750,1,0,1,0,high,Paul Devès; Étienne; Étienne Ganderax
+cherifiennepetroles,Société Chérifienne des Pétroles,Maroc,executive,48,3,0.0625,1,1,1,0,high,J. Noulens; Louis Rollin; Yves le Trocquer
+colonialeagricolecommercialeindustriellesucreriescoloniales,"Société coloniale, agricole, commerciale et industrielle Sucreries coloniales",La Réunion,executive,52,3,0.0577,1,1,0,0,low,Giraud; Léon Boulloche; Émile Level
+colonialebambaobambao,"Société coloniale de Bambao, BAMBAO",Comores,executive,10,3,0.3000,1,1,1,0,high,Charles Dumont; Ernest Carnot; Georges Chiris
+commercialeouestafricain,Société Commerciale de l'Ouest-Africain,Afrique occidentale française,executive,50,3,0.0600,1,1,0,0,low,Angoulvant; Frédéric FRANÇOIS-MARSAL; Léonard Fontaine
+concessionnaireouenza,Société concessionnaire d'Ouenza,Algérie,executive,13,3,0.2308,1,1,0,0,high,Alexis Baptifaut; Alfred Ferlet; Jules Carde
+constructions,Société de constructions,,executive,44,3,0.0682,1,0,1,1,high,Gaston Duvernoy; Henry Paté; Paul Faure
+corvinomenny,CORVINO et MENNY,Algérie,executive,17,3,0.1765,1,1,0,0,high,Eugène Regnault; Robert de Caix; Xavier Loisy
+cotesomalis,Compagnie française de la Côte des Somalis,Djibouti,executive,16,3,0.1875,1,0,0,0,low,Besson; Charles Michel-Côte; Tardieu
+cotoncolonial,Compagnie Française du Coton colonial,,executive,14,3,0.2143,1,0,0,0,low,Roy; Siegfried; Waddington
+cotonniereequatoriale,Cie cotonnière équatoriale française,Afrique équatoriale française,executive,41,3,0.0732,1,1,0,0,high,Charles Meunier; Georges Boussenot; Jules-Maurice Gourbeil
+courses,Société des courses,Indochine,executive,11,3,0.2727,1,0,0,0,low,Bocquet; Boucher; Nicolaï
+creditalgerien,"Crédit algérien, puis Crédit privé",Afrique équatoriale française,executive,63,3,0.0476,1,0,0,0,high,Briand; Emmanuel Rousseau; Maurice Tinardon
+creditfoncieregyptien,Crédit foncier égyptien,Afrique occidentale française,executive,83,3,0.0361,1,1,1,1,high,Alexandre Celier; Joseph Caillaux; Léon Garnier
+creditfoncierfrance,Crédit foncier de France,Afrique occidentale française,executive,33,3,0.0909,1,1,1,1,high,Julien Rouland; Marcel Delanney; Pierre Marraud
+creditfonciermadagascarcreditfonciermadagascarreunion,"Crédit foncier de Madagascar, Crédit foncier de Madagascar et de la Réunion",Madagascar,executive,18,3,0.1667,1,1,0,0,high,Charles Michel-Côte; Henri Michel; Xavier Loisy
+creditmobilierindochinoisexploitationmonts,"Crédit mobilier indochinois, Société d'exploitation des Monts-de",Indochine,executive,10,3,0.3000,1,1,0,0,high,Guillaume de Tarde; Nouailhetas; Pierre Guesde
+culturesdiakandape,Cultures de Diakandapé,Afrique occidentale française,executive,30,3,0.1000,1,1,1,0,high,Chaumet; Gaston Gradis; Paul Devès
+dahomey,Société Française du Dahomey,Afrique occidentale française,executive,19,3,0.1579,1,0,1,1,high,Blaise Diagne; Calary de Lamazière; Raoul Marie Louis Calary de Lamazière
+delignon,DELIGNON,Indochine,executive,9,3,0.3333,1,1,1,1,high,Fernand Chapsal; Gustave-Adolphe Thierry-Mieg; Paul Simoni
+domainehabramacta,Société du domaine de l'Habra et de la Macta,Algérie,executive,9,3,0.3333,1,1,1,1,high,Devès; Paul Devès; Sazerac de Forge
+electriquelilleroubaixtourcoing,L’Électrique Lille-Roubaix-Tourcoing,,executive,11,3,0.2727,1,0,2,1,high,Armand Guillon; Paul Hayez; René-Victor Manaut
+electroentreprise,L'Électro-Entreprise,Algérie,executive,38,3,0.0789,1,1,1,0,high,Lebon; Pierre Lebon; Xavier Loisy
+electrometallurgiedives,Société d'Électro-Métallurgie de Dives,,executive,41,3,0.0732,1,0,1,1,high,Baudouin; Germain; Louis Nicolle
+etablissements1807deveschaumetbordeauxdakar,"Établissements, 1807 Devès et Chaumet, Bordeaux-Dakar",,executive,19,3,0.1579,1,1,1,0,high,Chaumet; Gaston Gradis; Paul Devès
+financierecoloniale,"Société financière française et coloniale, puis Société financière pour la France et les pays d'Outre-mer SFFC-SOFFO",Indochine,executive,12,3,0.2500,1,1,1,1,high,Charles Aubert; Edmond Giscard d'Estaing; René Bouvier
+financiereexploitationsindustrielles,Société Financière d'exploitations industrielles,,executive,17,3,0.1765,1,1,1,1,high,Olivier Bascou; Sébastien Foy; Vial
+foncieremarocaine,Société Foncière Marocaine,Maroc,executive,9,3,0.3333,1,1,0,0,low,Delpech; Lacaze; Paul Valayer
+foncieremediterranee,Compagnie Foncière de la Méditerranée,Algérie,executive,18,3,0.1667,1,0,1,0,high,Frédéric Altairac; Pierre Lebon; Robert David
+foncieretonkinannam,Société Foncière du Tonkin et de l'Annam,Indochine,executive,32,3,0.0938,1,1,1,0,high,Lesterlin; Maurice LANGLOIS; Raoul Berger
+francomalgacheentreprises,Cie Franco-Malgache d'Entreprises,Madagascar,executive,35,3,0.0857,1,0,0,0,medium,Boucher; Combes; Roger Trousselle
+golfclubsaigonnais,Golf-Club saïgonnais,Indochine,executive,9,3,0.3333,1,0,0,0,low,Eutrope; Lacaze; Renault
+grandsmoulinspantinparis,Grands Moulins de Pantin-Paris,,executive,12,3,0.2500,1,0,0,0,high,Claudius Petit; Michel Diebolt-Weber; René Mayer
+hautbascongo,Compagnie française du Haut et Bas-Congo,Afrique équatoriale française,executive,31,3,0.0968,1,1,0,0,medium,Joseph Vidal; Joseph-Honoré Ricard; Marcel Bénard
+havraisepeninsulairenavigatonvapeur,Compagnie Havraise Péninsulaire de Navigaton à vapeur,,executive,27,3,0.1111,1,0,0,0,low,Baillet; Brindeau; Périer
+heraclee,Société d'Héraclée,Algérie,executive,43,3,0.0698,1,1,0,0,low,Brière; Fournier; Georges Génébrias de Fredaigue
+heveastayninh,Société des hévéas de Tayninh,Indochine,executive,35,3,0.0857,1,1,1,1,high,Ernest Outrey; Joël Daroussin; Maurel
+huileriesrizeriesouestafricaines,Société des Huileries et rizeries ouest-africaines,Sénégal,executive,13,3,0.2308,1,1,0,0,high,Camille Guy; Lucien Fourneau; Xavier Loisy
+huileriesrizeriesouestafricainesh,Société des huileries et rizeries ouest-africaines (S.H,Afrique occidentale française,executive,17,3,0.1765,1,1,0,0,high,Camille Guy; Lucien Fourneau; Xavier Loisy
+imperialeottomaneroutebeyrouthdamas,Compagnie impériale ottomane de la Route de Beyrouth à Damas,Syrie-Liban,executive,11,3,0.2727,1,1,0,0,low,Baudin; Léonce Mahoû; Passy
+inaugurationcanalrachgiahatienhistoriquedragagescochinchineparalbertpouyannephotos,Inauguration du canal Rachgia-Hatiên. — Historique des dragages de la Cochinchine par Albert Pouyanne . 27 photos.,Indochine,executive,4,3,0.7500,1,0,0,0,low,ARDIN; Maillard; Rivoal
+industrielleforestiereindochine,Société industrielle et forestière de l'Indochine,Indochine,executive,9,3,0.3333,1,1,0,0,high,Louis DUVAL-ARNOULD; Paul Simoni; Pierre Arnould
+magasinsgenerauxwarrantsmaroc,Société des Magasins généraux et warrants du Maroc,Maroc,executive,16,3,0.1875,1,1,1,0,high,Michel; Pierre Lebon; Xavier Loisy
+malgachecultures,Société Malgache de Cultures,Madagascar,executive,15,3,0.2000,1,1,1,1,high,Edmond Giscard d'Estaing; Henri Saurin; René Bouvier
+malon,Malon et Compagnie,Indochine,executive,5,3,0.6000,1,0,0,0,low,Auvergne; Malon; Morel
+marocainemagasinsgeneraux,Société marocaine de magasins généraux,Maroc,executive,13,3,0.2308,1,1,1,0,high,Achille Villey; Pierre Lebon; Robert de Caix
+marocimmobilier,Maroc Immobilier,Maroc,executive,14,3,0.2143,1,1,0,0,low,Antoine Auguste Joseph Coggia; Charles Lutaud; Larousse
+marseillaisecredit,Marseillaise de crédit,Algérie,executive,21,3,0.1429,1,0,2,1,high,Camille Krantz; Louis Aubert; Léon Baréty
+messageriesantillaises,Messageries antillaises,Guadeloupe et Martinique,executive,14,3,0.2143,1,1,0,0,high,Eugène LECOCQ; Georges Boussenot; Pierre Brun
+meunierelevantdamasjaffa,"Société Meunière du Levant, Damas, Jaffa",Syrie-Liban,executive,16,3,0.1875,1,0,3,2,high,Auguste Sabatier; Guy de Wendel; Marcel Donon
+minesbaliakaraidin,Mines de Balia-Karaïdin,Empire ottoman/Turquie,executive,28,3,0.1071,1,1,0,0,high,Arsène Henry; François Urruty; ROBIN
+mineschabetkohol,Compagnie des mines de Chabet-Kohol,Algérie,executive,20,3,0.1500,1,0,1,0,high,Carnot; Ernest Carnot; Raynaud
+mineschellala,Société des mines du Chellala,Algérie,executive,9,3,0.3333,1,0,1,0,high,François Urruty; Léon Meyer; Meyer
+minesfaleme,Mines de Falémé,Sénégal,executive,21,3,0.1429,1,1,2,2,high,Henry Roulleaux-Dugage; Merlin; Pierre Duchesne-Fournet
+minesfermiliana,Société française des mines de fer Miliana,Algérie,executive,12,3,0.2500,1,1,0,0,low,François Urruty; Lippens; Rivaud
+minieredjebellorbeus,Compagnie minière du Djebel-Lorbeus,Tunisie,executive,25,3,0.1200,1,1,1,1,medium,Amédée Damour; Charles Michel; Pierre Desforges
+minieredjendli,Compagnie minière du Djendli,Algérie,executive,24,3,0.1250,1,0,1,1,low,Boisset; Charles Michel; François Urruty
+moteursautomobileslorraine,Moteurs et automobiles Lorraine,,executive,10,3,0.3000,1,0,1,1,high,Bouvier; Edmond Giscard d'Estaing; Marcel Dassault
+moulinsmaghreb,Société des Moulins du Maghreb,Afrique occidentale française,executive,52,3,0.0577,1,1,0,0,high,Charles Flory; Jules Brisac; Jules Morel
+nordlorraine,NORD et LORRAINE,,executive,20,3,0.1500,1,0,0,0,low,Chatel; Métayer; THOMAS
+olivier,Olivier & Cie,Algérie,executive,11,3,0.2727,1,1,0,0,high,Charles Furiet; Olivier; Rivaud
+omniumnordafricain,Omnium nord-africain,Maroc,executive,44,3,0.0682,1,0,1,0,high,Albert-Pierre Peyronnet; Laurent; Toussaint
+oubanguiombella,Compagnie Française de l'Oubangui-Ombella,Oubangui-Chari (Centrafrique),executive,13,3,0.2308,1,1,0,0,low,Laroche; ROBIN; Trarieux
+papeteriesindochine,Papeteries de l’Indochine,Afrique occidentale française,executive,30,3,0.1000,1,0,0,0,high,Marcel Delaune; René Bouvier; Vincent
+parisiennecomptoirscoloniaux,Compagnie Parisienne des Comptoirs coloniaux,Maroc,executive,15,3,0.2000,1,1,0,0,medium,Jean Vacquié; Léon Fortoul; Varenne
+phosphatesmzaita,"Compagnie des Phosphates du M'Zaïta, puis",Algérie,executive,20,3,0.1500,1,1,0,0,high,Jean Dupuy; Maurice Dior; Rivaud
+plantationsheveasxuanloc,Société des plantations d'hévéas de Xuan-Loc,Indochine,executive,27,3,0.1111,1,1,1,1,high,Ernest Outrey; Joël Daroussin; Paul Chassaing
+plantationskantroioukantroy,Plantations de Kantroï ou Kantroy,Indochine,executive,14,3,0.2143,1,1,0,0,high,Camille Lejeune; Jean Rheims; Pierre Guesde
+quaisdocksentrepotsconstantinople,"Société des Quais, docks et entrepôts de Constantinople",Empire ottoman/Turquie,executive,12,3,0.2500,1,0,1,0,high,Arsène Henry; Berger; Félix Granet
+rizeriesextremeorient,Rizeries d'Extrême-Orient,Algérie,executive,44,3,0.0682,1,1,1,0,high,Charles Michel; Pierre Guesde; Rocca
+sacric,SACRIC,Indochine,executive,13,3,0.2308,1,1,1,1,high,Edmond Giscard d'Estaing; Paul Simoni; Pierre Guesde
+salinesdjiboutimadagascar,Salines de Djibouti et de Madagascar,Tunisie,executive,17,3,0.1765,1,1,0,0,high,Paul Baudouin; Pierre Guesde; René Bouvier
+senegalaisevoieseconomiques,Compagnie Sénégalaise de voies économiques,Afrique occidentale française,executive,30,3,0.1000,1,0,0,0,high,Eugène Schneider; Giraud; Pierre Sicamois
+sidibouaouane,Sidi-Bou-Aouane,Tunisie,executive,16,3,0.1875,1,1,0,0,low,Bousquet; Gonzague de Bellescize; Lippens
+socplantesparfumsmadagascar,Soc. des PLANTES à PARFUMS de MADAGASCAR,Madagascar,executive,7,3,0.4286,1,1,1,0,high,Bouvier; Joseph Thierry; Rocca
+soieriesfducharne,Soieries F.Ducharne,,executive,26,3,0.1154,1,0,0,0,high,Gaillard; Lacombe; René Bouvier
+sucreriesraffineriesindochine,Sucreries et raffineries de l'Indochine,Indochine,executive,26,3,0.1154,1,1,1,1,high,Edmond Giscard d'Estaing; Pierre Guesde; René Bouvier
+tabacsmaroc,Tabacs au Maroc,Maroc,executive,26,3,0.1154,1,0,1,1,high,André MAGINOT; Gaston Guiot; Maurice Tinardon
+tahiti,Compagnie Française de Tahiti,Tahiti (Polynésie),executive,17,3,0.1765,1,1,0,0,high,Georges Chiris; Lévy; René Mayer
+theodore,Cie. L. Théodore,Guyane française,executive,5,3,0.6000,1,1,0,0,low,Brière; Guérin; Laurent
+transportsouhamenana,Compagnie de Transports Cie française de l'Ouhame et de la Nana,Afrique équatoriale française,executive,6,3,0.5000,1,0,0,0,medium,Edmond du Vivier de Streel; F. Reste; Maurice Superville
+tunisiennepetroles,Société Tunisienne des Petroles,Tunisie,executive,17,3,0.1765,1,0,0,0,medium,Legrand; Mahieu; Pierre Legrand
+unionelectriquegaziereafriquenord,Union électrique et gazière de l'Afrique du Nord,Algérie,executive,32,3,0.0938,1,1,1,0,medium,Alfred Louis Tirman; Fontaine; Victor Rault
+unionfinanciereextremeorient,Union financière d'Extrême-Orient,Indochine,executive,29,3,0.1034,1,1,0,0,high,Auguste Brunet; Nouailhetas; Xavier Loisy
+unionminiereindochinoise,Union minière indochinoise,Indochine,executive,38,3,0.0789,1,1,0,0,high,Charles Furiet; Merlin; Pichon
+unionovineafriquenord,Union ovine de l'Afrique du Nord,Maroc,executive,36,3,0.0833,1,0,0,0,low,Billet; Deligne; Frédéric FRANÇOIS-MARSAL
+unionovinecoloniale,Union ovine coloniale,Syrie-Liban,executive,13,3,0.2308,1,1,0,0,high,Frédéric FRANÇOIS-MARSAL; Henri Saurin; Saurin
+voyageshotelsnordafricains,Société des voyages et hôtels nord-africains,Algérie,executive,23,3,0.1304,1,1,1,0,high,Joseph-Honoré Ricard; Marie; Robert David
+agavesagadir,Société des agaves d'Agadir,Maroc,executive,6,2,0.3333,1,0,0,0,low,Gabriel Jouneau; Toussaint
+agencecoloniale,Agence coloniale française,Indochine,executive,9,2,0.2222,1,1,1,1,high,Barthélémy Robaglia; Paul Simoni
+agricolecommercialeindustriellelefini,Cie agricole commerciale et industrielle de la Léfini,Congo-Brazzaville ou Moyen-Congo,executive,15,2,0.1333,1,0,0,0,low,Bourgier; Bouvier
+agricolecommercialesettecama,Société Agricole et Commerciale du Setté Cama,Gabon,executive,8,2,0.2500,1,1,0,0,low,Bousquet; Devès
+agricoleindustriellebencui,Société agricole et industrielle de Bên-Cui,Indochine,executive,14,2,0.1429,1,1,0,0,high,Charles Furiet; Jules Lionel-Marie
+agricolekontum,Société Agricole du Kontum,Indochine,executive,5,2,0.4000,1,0,0,0,low,Benquey; Jules Lionel-Marie
+agricolemadagascar,Société Agricole de Madagascar,Madagascar,executive,10,2,0.2000,1,1,0,0,low,Duvaux; Léon Boulloche
+agricolesongray,Société Agricole du Sông-Ray,Indochine,executive,15,2,0.1333,1,1,0,0,medium,Charles Revel; Jules Lionel-Marie
+agricoletroisrivieres,Cie agricole des Trois-Rivières,Guadeloupe et Martinique,executive,6,2,0.3333,1,0,1,1,low,CLÉMENT; Lederlin
+airafriquetransafricaineaviation,"Air Afrique, Compagnie transafricaine d'aviation, puis Régie Air Afrique",,executive,4,2,0.5000,1,0,0,0,high,Louis Steeg; Lucien Hubert
+airliquide,L'Air liquide,Algérie,executive,24,2,0.0833,1,0,0,0,low,Jacques-Marie-Joseph Delorme; Élie Cornut
+algeriennemeunerie,Compagnie Algérienne de Meunerie,Algérie,executive,4,2,0.5000,1,0,0,0,low,Duroux; Narbonne
+allianceafricaineassurancesreassurances,"Alliance africaine, Compagnie française d'assurances et de réassurances",Algérie,executive,10,2,0.2000,1,0,0,0,medium,Joseph Hernandez; Laffont
+amiral,L'Amiral,Indochine,executive,2,2,1.0000,1,1,0,0,low,Lacaze; Lucien Lacaze
+antarpetrolesatlantique,Antar-Pétroles de l’Atlantique,,executive,10,2,0.2000,1,0,1,0,high,Bourgeois; Charles Lambert
+asphaltespetroleslattaquie,Asphaltes et pétroles de Lattaquié,Syrie-Liban,executive,17,2,0.1176,1,1,1,1,high,Louis Rollin; Paul Jordan
+associationfonciereimmobiliere,Association foncière et immobilière,,executive,6,2,0.3333,1,0,1,0,low,Ch. Ruellan; Georges Privat-Deschanel
+automobilescoteafrique,Société des automobiles de la Côte d'Afrique,Afrique occidentale française,executive,6,2,0.3333,1,1,0,0,high,Joël Daroussin; Paul Guieysse
+banquealgerietunisie,Banque de l’Algérie et de la Tunisie,,executive,21,2,0.0952,1,1,0,0,medium,Martial Sicard; Wilfrid Baumgartner
+banquecochinchine,Banque de Cochinchine,Indochine,executive,20,2,0.1000,1,1,0,0,low,Fernand Saintenoy; Noël Pardon
+banquecommercialefrancobelge,Banque commerciale franco-belge,Indochine,executive,34,2,0.0588,1,1,1,0,high,Briand; Maurice Raynaud
+banquehypothecairefrancoegyptienne,Banque hypothécaire franco-égyptienne,Afrique occidentale française,executive,12,2,0.1667,1,0,1,1,high,Maurice Dutreil; Maxime-Alexandre Ficatier
+banquenationalecommerceindustrie,Banque nationale pour le commerce et l'industrie,Algérie,executive,13,2,0.1538,1,0,0,0,low,Guillaume de Tarde; Gustave Mercier
+banquesyrieliban,Banque de Syrie et du Liban,Algérie,executive,37,2,0.0541,1,0,0,0,medium,Jean Boissonnas; Raymond Poincaré
+boissassandra,Société des Bois de Sassandra,Côte d'Ivoire,executive,4,2,0.5000,1,0,0,0,low,Klotz; Morel
+bongolalokundji,Bongola-Lokundji,Cameroun,executive,6,2,0.3333,1,1,1,0,high,Adrien Artaud; Honoré Tissot
+bongolalokundjinyong,Bongola-Lokundji-Nyong,Afrique équatoriale française,executive,11,2,0.1818,1,1,1,0,high,Adrien Artaud; Honoré Tissot
+bordeaux,Compagnie de Bordeaux,,executive,4,2,0.5000,1,1,0,0,low,Chaumet; Gaston Gradis
+brasseriesouestafricainsoboa,Brasseries de l’ouest africain (SOBOA),,executive,11,2,0.1818,1,1,0,0,high,Gaston Gradis; Paul Guieysse
+caissepretsimmobiliers,Caisse de prêts immobiliers,Maroc,executive,7,2,0.2857,1,0,0,0,low,Andrieux; Édouard Picanon
+caledonickel,Calédonickel,Nouvelle-Calédonie (Mélanésie),executive,10,2,0.2000,1,1,0,0,high,Ernest Roume; Paul Baudouin
+camausportingclub,Camau sporting club,Indochine,executive,10,2,0.2000,1,1,0,0,high,Ernest Roume; Paul Baudouin
+cambodge,Compagnie du Cambodge,Indochine,executive,24,2,0.0833,1,1,1,1,high,Barthou; Ernest Outrey
+caoutchoucindochine,CAOUTCHOUC de l'INDO-CHINE,Indochine,executive,6,2,0.3333,1,0,0,0,high,Josse; René Bouvier
+caoutchoucsextremeorient,Caoutchoucs d'Extrême-Orient,Indochine,executive,5,2,0.4000,1,0,1,0,high,Edmond Giscard d'Estaing; René Bouvier
+caoutchoucsgabon,Société des Caoutchoucs du Gabon,Gabon,executive,8,2,0.2500,1,1,0,0,low,Paul Simoni; Émile Girard
+carelfouche,Carel Fouché & Compagnie,,executive,11,2,0.1818,1,0,0,0,high,André Lorgère; Georges Bidault
+ccneo,CCNEO,Indochine,executive,26,2,0.0769,1,1,1,0,high,Jacques-Achille Bardoux; Émile Girard
+charbonnagesninhbinh,Société des Charbonnages de Ninh-Binh,Indochine,executive,7,2,0.2857,1,1,0,0,medium,Fontaine; Yves le Trocquer
+chargeurs,Chargeurs français,,executive,37,2,0.0541,1,1,0,0,high,Duréault; Henri Duréault
+cheminsferalgeriens,"Société des Chemins de fer algériens, puis SNCFA",Algérie,executive,9,2,0.2222,1,1,1,0,high,Ferdinand Barrot; Petitjean
+cheminsferdahomeyoucentraldahomeen,Compagnie française de Chemins de fer au Dahomey ou Central-Dahoméen,Dahomey (Bénin),executive,32,2,0.0625,1,0,0,0,low,Lebon; Renouard
+cheminsfermediterraneeniger,Chemins de fer de la Méditerranée au Niger,Afrique occidentale française,executive,10,2,0.2000,1,1,0,0,low,Beau; Surleau
+cheminsfertunisiens,Chemins de fer tunisiens,Algérie,executive,26,2,0.0769,1,1,0,0,high,Alexandre Conty; Xavier Loisy
+cherifiennearmement,Cie chérifienne d'armement,Maroc,executive,11,2,0.1818,1,0,1,0,high,Adolphe Bourgeois; Albert-Pierre Peyronnet
+cherifienneetudescharbonnagestirkou,Société chérifienne d'études des charbonnages de Tirkou,Maroc,executive,5,2,0.4000,1,1,1,1,high,J. Noulens; Jean Plichon
+cherifiennehivernage,Société Chérifienne d'hivernage,Maroc,executive,14,2,0.1429,1,1,0,0,low,Regnault; Ricard
+colonialeetablissementsnhagen,Compagnie coloniale des Établissements N. Hagen,Nouvelles-Hébrides (Mélanésie),executive,10,2,0.2000,1,0,0,0,low,Renault; Édouard Picanon
+colonialeilesbanks,Compagnie Coloniale des îles Banks,Nouvelle-Calédonie (Mélanésie),executive,22,2,0.0909,1,0,0,0,low,Magnin; Édouard Picanon
+colonialemines,Société Coloniale de mines,Maroc,executive,15,2,0.1333,1,1,0,0,low,Lemaire; Robert Surcouf
+colonialevate,Compagnie Coloniale de Vaté,Nouvelles-Hébrides (Mélanésie),executive,11,2,0.1818,1,1,0,0,medium,Charles Revel; Édouard Picanon
+colonialtrust,Colonial Trust,,executive,6,2,0.3333,1,1,0,0,low,Combes; Monguillot
+comitedirection,Comité de direction,Nouvelle-Calédonie (Mélanésie),executive,10,2,0.2000,1,1,0,0,medium,Laurent; Paul Baudouin
+commercialeafriqueequatoriale,"Compagnie Commerciale de l'Afrique équatoriale française, puis Commerciale, agricole et forestière",Afrique équatoriale française,executive,21,2,0.0952,1,0,1,0,medium,Ch. Ruellan; Maurice Superville
+commercialeindustriellefrancoannamite,Société Commerciale et Industrielle Franco-Annamite,Indochine,executive,14,2,0.1429,1,1,0,0,low,Jules Lionel-Marie; Lionel-Marie
+commercialetunisienne,Société Commerciale Tunisienne,Afrique occidentale française,executive,22,2,0.0909,1,1,0,0,high,Eugène Regnault; Xavier Loisy
+comptoirminesgrandstravauxmaroc,Comptoir des mines et des grands travaux du Maroc,Maroc,executive,17,2,0.1176,1,0,1,1,high,Charles Michel; Henri Monti de Rézé
+comptoirsafricains,Compagnie Générale des Comptoirs africains,Afrique occidentale française,executive,21,2,0.0952,1,0,0,0,low,Armand; Frot
+comptoirsfrancoafricains,Société générale des Comptoirs franco-africains,Afrique occidentale française,executive,8,2,0.2500,1,0,0,0,high,Boussenot; Georges Boussenot
+comptoirssenegalais,Comptoirs sénégalais,Afrique occidentale française,executive,20,2,0.1000,1,1,0,0,high,Angoulvant; René Bouvier
+comptoirtonkin,Comptoir français du Tonkin,Indochine,executive,15,2,0.1333,1,0,0,0,low,Fontaine; Léonard Fontaine
+conferencesinternationalesopium,Conférences internationales de l'opium,Indochine,executive,3,2,0.6667,1,1,0,0,low,Daladier; Guesde
+consortiumminiercongoniari,Consortium minier Congo-Niari,Congo-Brazzaville ou Moyen-Congo,executive,8,2,0.2500,1,1,0,0,medium,Gaston Fourn; Paul Tirard
+constructionsgeneralesafrique,Compagnie de Constructions générales en Afrique française,Afrique occidentale française,executive,13,2,0.1538,1,0,0,0,high,Klein; René Bouvier
+continentalemaroc,Cie continentale du Maroc,Maroc,executive,5,2,0.4000,1,1,1,0,medium,Adolphe-Marie Messimy; Lucien Lang
+cooperativemeunieremarocaine,Coopérative meunière marocaine,Maroc,executive,9,2,0.2222,1,0,1,1,high,Eugène Lautier; Lévy
+cotonnierehautoubangui,Cie cotonnière du Haut-Oubangui,Afrique équatoriale française,executive,14,2,0.1429,1,0,0,0,high,André Lorgère; Fernand Lavit
+cotonnieretonkinnamdinh,"Cotonnière du Tonkin, Nam-Dinh, puis Cotonnière transocéanique",Indochine,executive,9,2,0.2222,1,0,0,0,high,Bérenger; Gaston Le Provost de Launay
+creditcentraldeveloppementminoterieindustriecommerce,"Crédit central pour le développement de la minoterie, de l'industrie et du commerce",,executive,3,2,0.6667,1,0,1,1,high,Donon; Marcel Donon
+creditfonciercommunalalsacelorrainestrasbourg,"Crédit foncier et communal d’Alsace et de Lorraine, Strasbourg",,executive,9,2,0.2222,1,1,0,0,medium,Frédéric FRANÇOIS-MARSAL; Émile Henry
+creditfoncierorient,Crédit foncier d'Orient,Algérie,executive,48,2,0.0417,1,0,0,0,high,Claudius Petit; Van Eetvelde
+creditinternationalcolonialfrance,Crédit international et colonial de France,,executive,17,2,0.1176,1,1,0,0,high,Antonin Frézouls; Frézouls
+distilleriesalgerie,Distilleries d’Algerie,Algérie,executive,5,2,0.4000,1,0,0,0,medium,Jean Dupuy; Lucien Borgeaud
+distributionenergieelectrique,Compagnie Générale de Distribution d'énergie électrique,Algérie,executive,23,2,0.0870,1,0,0,0,low,Bousquet; Guillain
+dragagestravauxpublicsdtpsntpnationaletravauxpublics,Dragages et travaux publics (DTP) > SNTP (Société nationale de travaux publics) < Compagnie,,executive,7,2,0.2857,1,1,0,0,high,Guillaume de Tarde; Paul Guieysse
+eauxelectriciteindochine,Compagnie des Eaux et d'électricité de l'Indochine,Indochine,executive,47,2,0.0426,1,1,0,0,high,Paul Baudoin; Paul Baudouin
+eauxhanoi,Compagnie des Eaux de Hanoï,Indochine,executive,25,2,0.0800,1,0,1,0,high,FRANÇOIS DE WENDEL; Paul Baudoin
+eieditionsdocumentairesindustrielles,"S. É. D. I., Société d'éditions documentaires industrielles",,executive,12,2,0.1667,1,1,0,0,medium,Chapsal; Gaston Duvernoy
+electrificationindustrielle,L’Électrification industrielle,,executive,15,2,0.1333,1,1,0,0,high,Antoine Auguste Joseph Coggia; Claudius Petit
+entrepotsfrigorifiquesafriquenord,Société des Entrepôts frigorifiques de l'Afrique du Nord,Maroc,executive,28,2,0.0714,1,0,0,0,low,Fould; Parisot
+entrepotsfrigorifiqueshallesparis,Entrepôts frigorifiques des halles de Paris,,executive,7,2,0.2857,1,1,2,0,high,Albert Lebrun; Joseph DENAIS
+entreprisesdragagestravauxpublics,Société française d'entreprises de dragages et de travaux publics,Indochine,executive,23,2,0.0870,1,1,1,0,medium,Jules Aubrun; Paul Baudouin
+entreprisestravaux,Entreprises et travaux,Congo-Brazzaville ou Moyen-Congo,executive,11,2,0.1818,1,1,0,0,high,Gaston Raynal; Georges Boussenot

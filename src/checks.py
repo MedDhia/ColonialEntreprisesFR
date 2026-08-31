@@ -1296,6 +1296,162 @@ def check_legislative_layer() -> None:
            parts, n)
 
 
+def check_offices() -> None:
+    """Stage 3i: offices of state, and the reference trap."""
+    import parse_offices as O
+
+    print("office parser", file=sys.stderr)
+
+    def one(text):
+        return list(O.mentions(text))
+
+    got = one("de M. Guesde, résident général, ancien commissaire")
+    eq("  apposition yields subject and class",
+       [(g[1], g[2]) for g in got][:1],
+       [("Guesde", "colonial_governor")])
+
+    # The reference trap: the office named without its holder.
+    for ref in ("autorisée par arrêté du gouverneur général du 14 mars 1923",
+                "concession accordée par le ministre des Colonies",
+                "Le Gouverneur général de l'Algérie à monsieur Treille"):
+        check(f"  not attributed: {ref[:34]}", not one(ref), str(one(ref)))
+
+    # Collisions where one word is two offices.
+    eq("  a company director is not a colonial administrator",
+       one("M. Dupont, administrateur délégué de la Société X"), [])
+    got = one("M. James Leclerc, gouverneur du Crédit foncier, à la tête")
+    eq("  a bank governorship is not a colonial one",
+       [g[2] for g in got][:1], ["state_bank"])
+    got = one("M. Regnault, ambassadeur de France, ancien ministre")
+    eq("  a diplomatic post is not a cabinet seat",
+       [g[2] for g in got][:1], ["senior_state"])
+    eq("  a bishop is not a prefect",
+       one("M. Dupont, préfet apostolique de Dakar"), [])
+    eq("  military rank is not an office of state",
+       one("M. Dupont, général de brigade, administrateur"), [])
+    check("  a foreign cabinet is not read",
+          not one("avec sir Joseph Maclay, ministre du Shipping, l'accord"),
+          str(one("avec sir Joseph Maclay, ministre du Shipping, l'accord")))
+
+    # `former`, before and after the office.
+    eq("  ancien before the office",
+       [g[5] for g in one("M. Pion, ancien conseiller d'État, marié")][:1],
+       [True])
+    eq("  honoraire after the office",
+       [g[5] for g in
+        one("M. Léon Boulloche, gouverneur général honoraire des colonies,")][:1],
+       [True])
+    eq("  en retraite after the office",
+       [g[5] for g in
+        one("M. Jeandin, administrateur en chef des colonies, en retraite, a")][:1],
+       [True])
+
+    # The portfolio is swallowed whole, or it leaks into the jurisdiction.
+    got = one("M. André Tardieu, ministre des Travaux publics. Au préalable")
+    eq("  a ministerial portfolio is read whole",
+       [g[3] for g in got][:1], ["ministre des Travaux publics"])
+    eq("  a portfolio does not become a jurisdiction",
+       [g[4] for g in got][:1], [""])
+    # The `(?i)`-flag bug: a case-insensitive [A-Z] class matched lower case.
+    eq("  a lower-case word is not a jurisdiction",
+       O.jurisdiction(" de la République française par intérim en Syrie"), "")
+    eq("  a real jurisdiction is read",
+       O.jurisdiction(" de l'Algérie à la date du treize mars"), "Algérie")
+
+    path = os.path.join(PROC_DIR, "person_offices.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("person_offices.csv")
+    check("  produced mentions", len(rows) > 3000, str(len(rows)))
+    eq("  every class is mapped",
+       {r["office_class"] for r in rows} - set(
+           __import__("code_political_connections").OFFICE_TO_CLASS), set())
+    bad = [r for r in rows if not r["person_key"] or not r["evidence"]]
+    check("  every row is auditable", not bad, str(len(bad)))
+    eq("  former is binary", {r["former"] for r in rows}, {"0", "1"})
+
+
+def check_political_coding() -> None:
+    """Stage 16: the company-level political-connection variable."""
+    import code_political_connections as C
+
+    print("political connections", file=sys.stderr)
+
+    eq("  the tier is the highest class on the board",
+       max(C.TIER[k] for k in ("legislature", "local")), 3)
+    eq("  every connection class has a tier", set(C.CLASSES), set(C.TIER))
+    eq("  every office class maps to a connection class",
+       set(C.OFFICE_TO_CLASS.values()) - set(C.CLASSES), set())
+
+    # Confidence is driven by the evidence, not by the office.
+    p = C.Person("Jean Dupont")
+    p.add("legislature", False, "entry_header")
+    eq("  a footnote-only connection is low confidence", p.confidence(), "low")
+    p.add("executive", False, "apposition")
+    eq("  a second register raises it", p.confidence(), "high")
+    q = C.Person("Dupont")
+    q.ambiguous = True
+    q.add("legislature", False, "roster", roster=True)
+    eq("  a surname-only key stays low", q.confidence(), "low")
+    r = C.Person("Marie Martin")
+    r.add("executive", True, "apposition")
+    eq("  one apposition is medium", r.confidence(), "medium")
+    eq("  former and sitting are kept apart", (r.former, r.sitting),
+       ({"executive"}, set()))
+
+    path = os.path.join(PROC_DIR, "company_political.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("company_political.csv")
+    check("  coded every firm with a board", len(rows) > 5000, str(len(rows)))
+    bad = [r for r in rows if int(r["n_connected"]) > int(r["n_directors"])]
+    check("  connected never exceeds the board", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if int(r["n_concurrent"]) > int(r["n_testable"])]
+    check("  concurrent never exceeds testable", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if int(r["n_testable"]) > int(r["n_connected"])]
+    check("  testable never exceeds connected", not bad, str(len(bad)))
+    # The tier must be reproducible from the flags, or the file contradicts
+    # its own rules document.
+    bad = []
+    for r in rows:
+        want = max((C.TIER[k] for k in C.CLASSES if r[f"has_{k}"] == "1"),
+                   default=0)
+        if want != int(r["connection_tier"]):
+            bad.append(r["company_id"])
+    check("  the tier is reproducible from the flags", not bad, str(bad[:3]))
+    bad = [r for r in rows if (int(r["connection_tier"]) == 0)
+           != (int(r["n_connected"]) == 0)]
+    check("  tier 0 is exactly no connected director", not bad, str(len(bad)))
+    bad = [r for r in rows if r["indirect_only"] == "1"
+           and (int(r["n_connected"]) or not int(r["n_connected_neighbours"]))]
+    check("  indirect_only means no direct and some indirect", not bad,
+          str(len(bad)))
+    eq("  confidence is one of four values",
+       {r["confidence"] for r in rows}, {"", "high", "medium", "low"})
+    bad = [r for r in rows if int(r["connection_tier"]) > 0
+           and not r["confidence"]]
+    check("  every connected firm carries a confidence", not bad,
+          str(len(bad)))
+
+    # The rules document is part of the deliverable, not optional.
+    rules = os.path.join(ROOT, "data", "reference",
+                         "political_connection_rules.md")
+    check("  the rules document exists", os.path.exists(rules))
+    if os.path.exists(rules):
+        text = open(rules, encoding="utf-8").read()
+        for needed in ("connection_tier", "sitting", "former", "concurrent",
+                       "rejected", "cannot"):
+            check(f"  the rules document covers {needed}", needed in text)
+
+    terr = load("political_connections_by_territory.csv")
+    bad = [t for t in terr
+           if sum(int(t[f"n_tier_{k}"]) for k in (4, 3, 2, 1, 0))
+           != int(t["n_firms"])]
+    check("  every territory's tiers sum to its firms", not bad, str(len(bad)))
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -1839,7 +1995,9 @@ def main() -> None:
         check_biographies()
         check_mandates()
         check_rosters()
+        check_offices()
         check_legislative_layer()
+        check_political_coding()
         check_geocoding()
         check_figures()
 

@@ -890,6 +890,73 @@ Parliament, left his boards, or simply not been found by the compiler. The
 1936 → 1954 collapse spans a war and a change of republic as well as a change
 of author.
 
+## Political connection
+
+### `person_offices.csv` — offices of state, corpus-wide (5,642 rows)
+
+Written by `src/parse_offices.py` (stage 3i). 2,415 people across 1,525
+documents; 844 of them are in the affiliation network. Same shape as
+`person_mandates.csv`. **This is not a list of office-holders**: one row is one
+*mention*, so aggregate before using. See METHODOLOGY §4k.
+
+| Variable | Description |
+|---|---|
+| `office_class` | `colonial_governor` (2,144), `minister` (1,116), `senior_state` (919), `colonial_admin` (719), `local_elected` (641), `head_of_state` (39), `colonial_council` (36), `state_bank` (28). |
+| `office_raw` | The office as printed, up to 60 characters — `gouverneur général`, `ministre des Travaux publics`, `administrateur en chef des colonies`. |
+| `jurisdiction` | The territory or department the office was held over, where stated. Empty for ministers, whose portfolio is not a jurisdiction. |
+| `former` | 1 for the **764** mentions the source marks `ancien`, `ex-`, `ci-devant`, `honoraire`, `en retraite` or `démissionnaire`. A floor, not a measurement: the compiler omits `ancien` far more often than he omits the office. |
+| `pattern` | `apposition` (4,575), `entry_header` (877), `bracket` (106), `title_first` (84). |
+| `evidence` | ±80 characters of source text. Every row is hand-checkable. |
+| `in_network`, `person_id` | Whether the person is in the affiliation network, and the key they resolved to. |
+
+`OFFICE_RE` matches 46,344 times in the corpus and this file holds 5,642 rows.
+The other seven-eighths name an office without naming its holder — `par arrêté
+du gouverneur général` — and are deliberately not attributed to anyone.
+
+### `company_political.csv` — the connection coding (6,454 rows)
+
+Written by `src/code_political_connections.py` (stage 16), one row per firm with
+at least one observed board seat. **Read
+`data/reference/political_connection_rules.md` first** — it states the
+definition, why the tier ordering is an assumption, the offices that were
+rejected, and the four things the coding cannot do.
+
+| Variable | Description |
+|---|---|
+| `company_id`, `name` | Firm, matching `companies.csv`. |
+| `territory` | First listed in `countries`, which is the convention the rest of the pipeline uses. Arbitrary for a transversal firm, so `n_territories` and `all_territories` sit beside it. |
+| `n_directors`, `n_connected`, `share_connected` | Board members observed, how many are politically connected, and the ratio. `n_directors` is cumulative over the whole period — **not the size of the board in any one year**. |
+| `connection_tier`, `connection_tier_name` | 4 `executive`, 3 `legislature`, 2 `administration`, 1 `local_or_proxy`, 0 `none`. Set by the highest class on the board. Reproducible from the `has_*` flags in one line, and `checks.py` asserts that it is. |
+| `has_executive`, `has_legislature`, `has_administration`, `has_local`, `has_proxy` | The flags the tier is derived from. Use these if you disagree with the ordering. |
+| `n_executive`, `n_legislature`, `n_administration`, `n_local`, `n_proxy` | Connected directors per class. A director in two classes counts in both. |
+| `has_sitting`, `has_former`, `n_sitting`, `n_former` | **Never summed.** A sitting office-holder is a conflict of interest; a former one is a revolving door. In the `executive` tier 473 of 884 firms carry a former holder; in the `legislature` tier only 35 of 713. `n_former` is a floor and `n_sitting` a ceiling. |
+| `n_testable`, `n_concurrent` | Director–firm pairs where both the tie year and the office span are known (688 of 4,212), and how many overlap (326). **Quote `n_concurrent` only with `n_testable`.** |
+| `n_connected_neighbours`, `indirect_only` | Firms sharing a director with this one that are themselves connected; `indirect_only = 1` for the 3,254 firms with a connected neighbour and no connected director. Deliberately outside the tier. |
+| `first_connection_year`, `last_connection_year` | Range of observed tie years for the connected directors. Empty where no tie carries a year. |
+| `confidence` | `high` (roster evidence or ≥ 2 independent mentions), `medium` (one apposition or bracket), `low` (forenameless key, or footnote career line only). Of 2,243 connected firms: 1,052 / 349 / 842. **`low` is 38% of the connected set — not a residue.** |
+| `connected_directors` | Up to eight names, for auditing. |
+
+Headline: **2,243 of 6,454 firms (34.8%) are politically connected.** Do not
+read that as a rate across territories or across `source_genre` — coverage is
+uneven, and the roster genre exists precisely to record political connection, so
+firms with roster evidence are connected at a higher rate by construction.
+
+### `political_connections_by_territory.csv` (54 rows)
+
+`territory`, `n_firms`, `n_connected`, `share_connected`, `n_tier_4` … `n_tier_0`,
+`n_sitting`, `n_former`, `n_indirect_only`, `mean_share_connected`. The tier
+counts sum to `n_firms`, and `checks.py` asserts it. Territories with few firms
+produce unstable shares; fig 42 draws only those with 25 or more and prints the
+denominator beside each bar.
+
+### `political_connections_review.csv` (400 rows)
+
+The 400 most strongly connected firms, tier-ordered, for hand-checking. Same
+columns as the main file minus the counts, plus `connected_directors`. The top
+rows are the Banque de l'Indochine, the Banque de l'Afrique occidentale, the
+Messageries maritimes and the Crédit foncier colonial, which is the face-validity
+check this file exists for.
+
 ### `data/reference/`
 
 `places.txt` (174 place names) and `forenames.txt` (~330 forenames) are

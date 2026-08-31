@@ -253,6 +253,10 @@ NOT_A_SUBJECT_RE = re.compile(
     r"propri[eé]taire|colon|planteur|docteur|m[eé]decin|"
     r"pr[eé]sident|vice-pr[eé]sident|administrateur|directeur|g[eé]rant|"
     r"gouverneur|r[eé]sident|pr[eé]fet|maire|ministre|s[eé]nateur|d[eé]put[eé]|"
+    # An office title read as a name produces a "director" called Ambassadeur
+    # de France, who then counts as a politically connected board member.
+    r"ambassadeur|consul|inspecteur|secr[eé]taire|commissaire|censeur|"
+    r"tr[eé]sorier|receveur|percepteur|intendant|delegue|d[eé]l[eé]gu[eé]|"
     r"paris|alger|oran|tunis|rabat|saigon|sa[iï]gon|hano[iï]|dakar)$")
 
 # The footnote header: a mixed-case name, life dates, a colon. This is the only
@@ -438,37 +442,47 @@ def mentions(text: str):
             flat[max(0, m.start() - 60):m.end() + TAIL_CHARS]))
         ev = flatten(flat[max(0, m.start() - 80):m.end() + 80])
 
-        pattern, subject = "", ""
-        # (1) apposition, and (2) the compiler's bracket, which is the same
-        # backward look once the bracket run is stripped.
-        if back.rstrip().endswith(",") or back.rstrip().endswith("["):
-            subject = _subject_before(back.rstrip().rstrip(",["))
-            pattern = "bracket" if back.rstrip().endswith("[") else "apposition"
-        if not subject and "[" in back[-BRACKET_CHARS:]:
-            cut = back.rfind("[")
-            if "]" not in back[cut:]:
-                subject = _subject_before(back[:cut])
-                pattern = "bracket"
-        # (3) title first: "le senateur Ernest Feray". Only a recognised
-        # forename opens the name, or "depute de la Cochinchine" reads as one.
-        if not subject:
-            ftail = flatten(tail)
-            fwd = re.match(rf"\s+(?:M\.\s*)?(?P<name>{_NAME})", ftail)
-            if fwd and re.search(r"(?i)\b(?:le|du|au|ce|notre)\s*$",
-                                 flatten(back)[-12:].rstrip(" anciec.")):
-                head = fwd.group("name").split()[0].strip(".")
-                if strip_accents(head).lower() in FORENAMES:
-                    subject, pattern = fwd.group("name").strip(), "title_first"
-                    place, years, spans = read_tail(ftail[fwd.end():])
-        # (4) the enclosing entry header, for career prose under a footnote or
-        # a dictionary entry.
-        if not subject:
-            h = _head_for(heads, m.start(), flat)
-            if h:
-                subject, pattern = h, "entry_header"
+        pattern, subject, retail = subject_of(flat, back, tail, m.start(), heads)
         if not subject:
             continue
+        if retail is not None:
+            place, years, spans = read_tail(retail)
         yield pattern, subject, chamber, place, years, spans, minister, ev
+
+
+def subject_of(flat: str, back: str, tail: str, pos: int, heads):
+    """`(pattern, subject, retail)` — whose title this is, in four registers.
+
+    Shared by stage 3g and stage 3i, because "who does this title belong to" is
+    the same question whether the title is `depute` or `gouverneur general`, and
+    the four registers the compiler writes in do not vary by office. `retail` is
+    a re-cut tail when the register consumed part of it, and `None` otherwise.
+    """
+    # (1) apposition, and (2) the compiler's bracket, which is the same
+    # backward look once the bracket run is stripped.
+    if back.rstrip().endswith(",") or back.rstrip().endswith("["):
+        subject = _subject_before(back.rstrip().rstrip(",["))
+        if subject:
+            return ("bracket" if back.rstrip().endswith("[")
+                    else "apposition"), subject, None
+    if "[" in back[-BRACKET_CHARS:]:
+        cut = back.rfind("[")
+        if "]" not in back[cut:]:
+            subject = _subject_before(back[:cut])
+            if subject:
+                return "bracket", subject, None
+    # (3) title first: "le senateur Ernest Feray". Only a recognised forename
+    # opens the name, or "depute de la Cochinchine" reads as one.
+    ftail = flatten(tail)
+    fwd = re.match(rf"\s+(?:M\.\s*)?(?P<name>{_NAME})", ftail)
+    if fwd and re.search(r"(?i)\b(?:le|du|au|ce|notre)\s*$",
+                         flatten(back)[-12:].rstrip(" anciec.")):
+        head = fwd.group("name").split()[0].strip(".")
+        if strip_accents(head).lower() in FORENAMES:
+            return "title_first", fwd.group("name").strip(), ftail[fwd.end():]
+    # (4) the enclosing entry header, for career prose under a footnote.
+    h = _head_for(heads, pos, flat)
+    return ("entry_header", h, None) if h else ("", "", None)
 
 
 def _entry_heads(flat: str) -> list[tuple[int, int, str]]:
