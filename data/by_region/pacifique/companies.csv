@@ -2,6 +2,7 @@ company_id,name,sectors,n_ties,n_directors,first_year,last_year
 nickel,Société Le Nickel,Documentation générale (par ordre chronologique); Mines et métallurgie,150,66,1882,1953
 kerrmy,Société Kerr-My,Documentation générale (par ordre chronologique),45,44,1932,1932
 phosphatesoceanie,Compagnie française des Phosphates de l'Océanie,Documents généraux; Sociétés,167,37,1921,1953
+ilespacifique,Société Française des îles du Pacifique,Documentation générale (par ordre chronologique); Entreprises diverses; Sociétés,38,24,1907,1951
 nouvelleshebrides,Société française des Nouvelles-Hébrides,Documentation générale (par ordre chronologique); Entreprises diverses,34,24,1922,1959
 colonialeilesbanks,Compagnie Coloniale des îles Banks,Documentation générale (par ordre chronologique); Entreprises diverses,43,22,1928,1953
 comptoirsnouvelleshebrides,Comptoirs français des Nouvelles-Hébrides,Documentation générale (par ordre chronologique); Entreprises diverses,43,21,1924,1951
@@ -13,14 +14,13 @@ petrolesshellilesfrancaisespacifique,Société des pétroles Shell des îles fra
 comptoirsoceanie,Comptoirs français d’Océanie,Documents généraux; Sociétés,38,18,1918,1926
 francotahitienne,Compagnie Franco-Tahitienne,Documents généraux; Sociétés,45,17,1922,1926
 ouaco,Sté de Ouaco,Autres sociétés; Documentation générale (par ordre chronologique),35,17,1922,1951
+chrome,Société Le Chrome,Documentation générale (par ordre chronologique); Mines et métallurgie,31,17,1902,1951
 tahiti,Compagnie Française de Tahiti,Documents généraux; Sociétés,36,15,1914,1951
 ballandefils,Ballande et fils,Autres sociétés,23,14,1922,1933
 havraisecaledonienne,Sté havraise calédonienne,Documentation générale (par ordre chronologique),18,14,1922,1926
-chrome,Société Le Chrome,Documentation générale (par ordre chronologique); Mines et métallurgie,26,12,1932,1951
 agricoleminierenouvelleshebrides,Compagnie Agricole et minière des Nouvelles-Hébrides,Entreprises diverses,19,12,1926,1926
 nouvelleshebridesgeneralitesnouvelleshebrides,Société Française des Nouvelles-Hébrides . — Généralités sur les Nouvelles-Hébrides,Entreprises diverses,12,12,1901,1911
 etsgomenouaco,"Éts Gomen-Ouaco, puis Société de Ouaco",Autres sociétés,12,12,1898,1919
-ilespacifique,Société Française des îles du Pacifique,Documentation générale (par ordre chronologique); Entreprises diverses,25,11,1930,1951
 immobiliereagricoleoceanie,Compagnie Immobilière et Agricole de l'Océanie,Sociétés,15,11,1928,1938
 colonialevate,Compagnie Coloniale de Vaté,Entreprises diverses,12,11,1927,1927
 oceanie,Société générale de l’Océanie française,Autres sociétés,11,11,1901,1901
@@ -42,30 +42,35 @@ immobilierenouvelleshebrides,Compagnie Française immobilière des Nouvelles-Hé
 francohebridaise,Compagnie Générale Franco-hébridaise,Entreprises diverses,9,9,1927,1927
 usinestaohydroelectriquetaometallurgiquetao,"Usines de Tao, Société hydro-électrique de Tao, Société métallurgique de Tao",Mines et métallurgie,9,8,1912,1919
 commissionnairecorrespondant,Commissionnaire-correspondant,Documentation générale (par ordre chronologique),13,7,1937,1951
-gueraultlemarinier,Guérault et Lemarinier,Autres sociétés,13,7,1924,1925
 oregon,L'Orégon,Documentation générale (par ordre chronologique),7,7,1937,1937
+cafeiereselevagescanalathio,"Compagnie française des Caféières et élevages de Canala et Thio, puis Compagnie agricole et commerciale de la Nouvelle-Calédonie",Autres sociétés,7,7,1902,1909
+cobalt,Le Cobalt,Mines et métallurgie,7,7,1891,1891
+gueraultlemarinier,Guérault et Lemarinier,Autres sociétés,13,6,1924,1925
 exploitationminieremetallurgiquecaledonie,Société d'Exploitation minière et métallurgique en Nouvelle-Calédonie,Mines et métallurgie,7,6,1913,1914
 burnsphilpcoltd,"Burns, Philp & Co Ltd",Documentation générale (par ordre chronologique),6,6,1922,1922
 andeville,ANDEVILLE,Documentation générale (par ordre chronologique),6,6,1926,1926
 unionelectriquecoloniale,"Union électrique coloniale, puis Union électrique d’outre-mer",Documentation générale (par ordre chronologique),6,6,1951,1951
+marquises,Les Marquises,Sociétés,6,6,1927,1927
 nickelcorporationcompanyltd,"Nickel Corporation Company, Ltd",Mines et métallurgie,6,6,1901,1901
+exploitationscoloniales,"Société Générale d’Exploitations coloniales, puis Générale d’Exploitations coloniales, industrielles et minières",Mines et métallurgie,6,6,1898,1909
 soufrieresvanualavailesbanks,"Société française des Soufrières de Vanua-Lava, îles Banks",Entreprises diverses,6,6,,
 metallurgiquetao,Sté métallurgique de Tao,Documentation générale (par ordre chronologique),8,5,1922,1937
 burnsphilpco35crutchedfriarslondresec,"Burns, Philp and Co 35, Crutched Friars, LONDRES E.C",Documentation générale (par ordre chronologique),5,5,1926,1926
 portpapeeteetudes,"Port de Papeete (Société d'études, puis concessionnaire du)",Sociétés,5,5,1910,1910
-minierecoloniale,Compagnie Minière coloniale,Documentation générale (par ordre chronologique); Mines et métallurgie,9,4,1920,1922
 maisonbarrau,Maison Barrau,Documentation générale (par ordre chronologique),5,4,1926,1926
 consolidatednickelcyltd,Consolidated Nickel Cy Ltd,Mines et métallurgie,4,4,1903,1903
 minesmontdo,Société des Mines du Mont-Dô,Mines et métallurgie,4,4,1910,1910
+minierecoloniale,Compagnie Minière coloniale,Documentation générale (par ordre chronologique); Mines et métallurgie,9,3,1920,1922
 vapeurstahitiens,Cie des vapeurs tahitiens,Documents généraux,3,3,1922,1922
 frigorifiquecaledonienne,Sté frigorifique calédonienne,Documentation générale (par ordre chronologique),3,3,1926,1926
+agricoleindustriellecommercialecaledoniecaledonie,"Société agricole, industrielle et commerciale de la Nouvelle-Calédonie La Calédonie",Autres sociétés,3,3,1909,1909
 bienvenue,La Bienvenue,Mines et métallurgie,3,3,1920,1920
-exploitationscoloniales,"Société Générale d’Exploitations coloniales, puis Générale d’Exploitations coloniales, industrielles et minières",Mines et métallurgie,3,3,1898,1898
+exploitationminesnickelcaledonie,Société d'Exploitation de mines de nickel en Nouvelle-Calédonie,Mines et métallurgie,3,3,1891,1891
 minieremetallurgiqueoceanie,Société Minière et Métallurgique de l'Océanie,Documentation générale (par ordre chronologique); Mines et métallurgie,8,2,1936,1951
 commercialeilespacifique,Société commerciale française des îles du Pacifique,Documents généraux,3,2,1937,1937
-cafeiereselevagescanalathio,"Compagnie française des Caféières et élevages de Canala et Thio, puis Compagnie agricole et commerciale de la Nouvelle-Calédonie",Autres sociétés,2,2,1909,1909
 nickelcaledonie,"Le Nickel de la Nouvelle-Calédonie, puis La Garniérite",Mines et métallurgie,2,2,1910,1910
 minesnickeliferesminesmontdoreunies,Société des Mines nickelifères — et des mines du Mont-Dô réunies,Mines et métallurgie,2,2,1912,1912
 tiebaghipaagoumene,Société de la Tiébaghi à Paagoumène,Mines et métallurgie,2,1,1911,1912
 caledoniennenouvelleshebrides,Compagnie Calédonienne des Nouvelles-Hébrides,Entreprises diverses,1,1,1882,1882
+minescaledonie,Société Générale des Mines de la Nouvelle-Calédonie,Mines et métallurgie,1,1,1889,1889
 caledoniennemines,Société Calédonienne des Mines,Mines et métallurgie,1,0,1907,1907

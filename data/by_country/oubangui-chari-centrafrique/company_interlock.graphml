@@ -12,6 +12,12 @@
       <data key="n_n_directors">5</data>
       <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
     </node>
+    <node id="commercialecolonialemamberesangha">
+      <data key="n_label">Cie commerciale et coloniale de la Mambéré-Sangha</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
     <node id="commercialecolonisationcongo">
       <data key="n_label">Compagnie Commerciale de Colonisation du Congo français</data>
       <data key="n_sectors">mines et industries</data>
@@ -30,6 +36,12 @@
       <data key="n_n_directors">5</data>
       <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
     </node>
+    <node id="hautesangha">
+      <data key="n_label">Société de la Haute-Sangha</data>
+      <data key="n_sectors">mines et industries</data>
+      <data key="n_n_directors">11</data>
+      <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
+    </node>
     <node id="kotto">
       <data key="n_label">La Kotto</data>
       <data key="n_sectors">mines et industries</data>
@@ -39,13 +51,13 @@
     <node id="kouango">
       <data key="n_label">Compagnie du Kouango français, puis Compagnie nouvelle du Kouango français</data>
       <data key="n_sectors">mines et industries</data>
-      <data key="n_n_directors">21</data>
+      <data key="n_n_directors">26</data>
       <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
     </node>
     <node id="miniereintercoloniale">
       <data key="n_label">Société minière intercoloniale</data>
       <data key="n_sectors">mines et industries</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">7</data>
       <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
     </node>
     <node id="miniereogouelobayeberberati">
@@ -57,20 +69,20 @@
     <node id="ouhamenana">
       <data key="n_label">Compagnie française de l'Ouhamé et de la Nana</data>
       <data key="n_sectors">mines et industries</data>
-      <data key="n_n_directors">10</data>
+      <data key="n_n_directors">16</data>
       <data key="n_territory">Oubangui-Chari (Centrafrique)</data>
     </node>
-    <edge id="e0" source="miniereintercoloniale" target="miniereogouelobayeberberati">
+    <edge id="e0" source="congolaisecaoutchouc" target="kouango">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e1" source="congolaisecaoutchouc" target="kouango">
-      <data key="e_weight">3</data>
+    <edge id="e1" source="commercialecolonisationcongo" target="ouhamenana">
+      <data key="e_weight">4</data>
     </edge>
-    <edge id="e2" source="commercialecotonniereouhamenanacomouna" target="ouhamenana">
-      <data key="e_weight">3</data>
+    <edge id="e2" source="miniereintercoloniale" target="miniereogouelobayeberberati">
+      <data key="e_weight">4</data>
     </edge>
-    <edge id="e3" source="commercialecolonisationcongo" target="ouhamenana">
-      <data key="e_weight">2</data>
+    <edge id="e3" source="commercialecotonniereouhamenanacomouna" target="ouhamenana">
+      <data key="e_weight">3</data>
     </edge>
     <edge id="e4" source="kotto" target="kouango">
       <data key="e_weight">2</data>
@@ -79,6 +91,12 @@
       <data key="e_weight">1</data>
     </edge>
     <edge id="e6" source="agricoleindustrielleafriqueequatoriale" target="kouango">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e7" source="congolaisecaoutchouc" target="kotto">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e8" source="commercialecolonialemamberesangha" target="hautesangha">
       <data key="e_weight">1</data>
     </edge>
   </graph>

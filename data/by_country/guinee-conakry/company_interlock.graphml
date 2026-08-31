@@ -18,6 +18,12 @@
       <data key="n_n_directors">15</data>
       <data key="n_territory">Guinée Conakry</data>
     </node>
+    <node id="dragagesauriferestinkisso">
+      <data key="n_label">Société des Dragages aurifères du Tinkisso</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Guinée Conakry</data>
+    </node>
     <node id="exploitationsminieresafriqueoccidentale">
       <data key="n_label">Exploitations minières en Afrique Occidentale</data>
       <data key="n_sectors">Mines</data>
@@ -45,7 +51,7 @@
     <node id="minessiguiri">
       <data key="n_label">Compagnie des Mines de Siguiri</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">14</data>
       <data key="n_territory">Guinée Conakry</data>
     </node>
     <node id="miniereguinee">
@@ -57,31 +63,37 @@
     <node id="minierekobabalato">
       <data key="n_label">Société Minière du Koba de Balato</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">14</data>
       <data key="n_territory">Guinée Conakry</data>
     </node>
     <edge id="e0" source="mineshauteguinee" target="minierekobabalato">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e1" source="exploitationsminieresafriqueoccidentale" target="guineennerecherchesexploitationsminieres">
+    <edge id="e1" source="dragagesauriferestinkisso" target="minierekobabalato">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e2" source="bananeriesafricaines" target="culturesbananeraieskinsan">
+    <edge id="e2" source="exploitationsminieresafriqueoccidentale" target="guineennerecherchesexploitationsminieres">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e3" source="minessiguiri" target="miniereguinee">
+      <data key="e_weight">3</data>
+    </edge>
+    <edge id="e4" source="bananeriesafricaines" target="culturesbananeraieskinsan">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e3" source="lyonnaisegisementsauriferesguinee" target="minierekobabalato">
+    <edge id="e5" source="lyonnaisegisementsauriferesguinee" target="minierekobabalato">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e4" source="minessiguiri" target="miniereguinee">
+    <edge id="e6" source="minessiguiri" target="minierekobabalato">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e5" source="lyonnaisegisementsauriferesguinee" target="mineshauteguinee">
+    <edge id="e7" source="dragagesauriferestinkisso" target="mineshauteguinee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e6" source="mineshauteguinee" target="minessiguiri">
+    <edge id="e8" source="lyonnaisegisementsauriferesguinee" target="mineshauteguinee">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e7" source="minessiguiri" target="minierekobabalato">
+    <edge id="e9" source="mineshauteguinee" target="minessiguiri">
       <data key="e_weight">1</data>
     </edge>
   </graph>

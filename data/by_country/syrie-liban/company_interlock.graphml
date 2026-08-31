@@ -45,7 +45,7 @@
     <node id="cheminferdamashamahprolongements">
       <data key="n_label">Chemin de fer Damas-Hamah et prolongements</data>
       <data key="n_sectors">Transports terrestres</data>
-      <data key="n_n_directors">39</data>
+      <data key="n_n_directors">40</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="cheminferottomanjaffajerusalemprolongements">
@@ -81,7 +81,7 @@
     <node id="exploitaitoncheminfercilicie">
       <data key="n_label">Société d'exploitaiton Chemin de fer de Cilicie</data>
       <data key="n_sectors">Transports terrestres</data>
-      <data key="n_n_directors">11</data>
+      <data key="n_n_directors">10</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="foncieresyrie">
@@ -159,7 +159,7 @@
     <node id="ottomanetramwayseclairageelectriquesdamas">
       <data key="n_label">Société ottomane des Tramways et éclairage électriques de Damas, puis Tramways et électricité de Damas</data>
       <data key="n_sectors">Transports terrestres</data>
-      <data key="n_n_directors">18</data>
+      <data key="n_n_directors">19</data>
       <data key="n_territory">Syrie-Liban</data>
     </node>
     <node id="port">
@@ -399,34 +399,40 @@
     <edge id="e62" source="electricitealep" target="grandshotelslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e63" source="electricitealep" target="meunierelevantdamasjaffa">
+    <edge id="e63" source="electricitealep" target="libanosyriennetabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e64" source="francemediterranee1920" target="grandshotelslevant">
+    <edge id="e64" source="grandshotelslevant" target="libanosyriennetabacs">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e65" source="francemediterranee1920" target="industrielleetatslevant">
+    <edge id="e65" source="electricitealep" target="meunierelevantdamasjaffa">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e66" source="francemediterranee1920" target="radioorient">
+    <edge id="e66" source="francemediterranee1920" target="grandshotelslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e67" source="grandshotelslevant" target="industrielleetatslevant">
+    <edge id="e67" source="francemediterranee1920" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e68" source="grandshotelslevant" target="radioorient">
+    <edge id="e68" source="francemediterranee1920" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e69" source="industrielleetatslevant" target="radioorient">
+    <edge id="e69" source="grandshotelslevant" target="industrielleetatslevant">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e70" source="industrielleetatslevant" target="tramwayselectricite">
+    <edge id="e70" source="grandshotelslevant" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e71" source="imperialeottomaneroutebeyrouthdamas" target="port">
+    <edge id="e71" source="industrielleetatslevant" target="radioorient">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e72" source="port" target="portquaisentrepotsbeyrouth">
+    <edge id="e72" source="industrielleetatslevant" target="tramwayselectricite">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e73" source="imperialeottomaneroutebeyrouthdamas" target="port">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e74" source="port" target="portquaisentrepotsbeyrouth">
       <data key="e_weight">1</data>
     </edge>
   </graph>

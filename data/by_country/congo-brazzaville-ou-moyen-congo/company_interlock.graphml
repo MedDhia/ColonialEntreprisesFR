@@ -33,7 +33,13 @@
     <node id="agricolecommercialeindustriellelefini">
       <data key="n_label">Cie agricole commerciale et industrielle de la Léfini</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">13</data>
+      <data key="n_n_directors">14</data>
+      <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
+    </node>
+    <node id="agricolekouilou">
+      <data key="n_label">Compagnie Agricole du Kouilou</data>
+      <data key="n_sectors">Agro-alimentaire</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="alima">
@@ -54,6 +60,12 @@
       <data key="n_n_directors">6</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
+    <node id="caoutchoucsproduitslobay">
+      <data key="n_label">Cie des Caoutchoucs et produits de la Lobay</data>
+      <data key="n_sectors">Sociétés commerciales</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
+    </node>
     <node id="colonialebaniembe">
       <data key="n_label">Société Coloniale du Baniembé</data>
       <data key="n_sectors">Sociétés commerciales</data>
@@ -63,13 +75,13 @@
     <node id="commercialecolonialekadeisangha">
       <data key="n_label">Compagnie Commerciale et Coloniale de la Kadeï-Sangha</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">8</data>
+      <data key="n_n_directors">12</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="congo">
       <data key="n_label">Compagnie Française du Congo</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">11</data>
+      <data key="n_n_directors">13</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="congomines">
@@ -81,7 +93,7 @@
     <node id="consortiumminiercongoniari">
       <data key="n_label">Consortium minier Congo-Niari</data>
       <data key="n_sectors">Mines</data>
-      <data key="n_n_directors">9</data>
+      <data key="n_n_directors">8</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="ekelakadeisangha">
@@ -102,6 +114,12 @@
       <data key="n_n_directors">10</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
+    <node id="etudesminieresboumba">
+      <data key="n_label">Société d'Études minières de Boumba</data>
+      <data key="n_sectors">Mines</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
+    </node>
     <node id="explorationminiereequatoriale">
       <data key="n_label">Société d'Exploration minière équatoriale</data>
       <data key="n_sectors">Mines</data>
@@ -117,7 +135,7 @@
     <node id="hautcongo">
       <data key="n_label">Compagnie Française du Haut-Congo</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">21</data>
+      <data key="n_n_directors">20</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="huileriesmoyencongo">
@@ -129,12 +147,18 @@
     <node id="ibenga">
       <data key="n_label">Ibenga</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">14</data>
+      <data key="n_n_directors">21</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="immobilierecongolaise">
       <data key="n_label">Société Immobilière Congolaise</data>
       <data key="n_sectors">Sociétés diverses</data>
+      <data key="n_n_directors">5</data>
+      <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
+    </node>
+    <node id="kadeisangha">
+      <data key="n_label">Compagnie de la Kadéï-Sangha</data>
+      <data key="n_sectors">Sociétés commerciales</data>
       <data key="n_n_directors">5</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
@@ -153,7 +177,7 @@
     <node id="mobaye">
       <data key="n_label">La Mobaye</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">6</data>
+      <data key="n_n_directors">9</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="mpokoetablissementscongolaisgratry">
@@ -162,16 +186,34 @@
       <data key="n_n_directors">9</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
+    <node id="ngokoouesso">
+      <data key="n_label">Compagnie de la N'goko Ouesso</data>
+      <data key="n_sectors">Sociétés commerciales</data>
+      <data key="n_n_directors">8</data>
+      <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
+    </node>
     <node id="nkemenkeni">
       <data key="n_label">Compagnie de l’N’Kémé et de l’N’Kéni</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">7</data>
+      <data key="n_n_directors">9</data>
+      <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
+    </node>
+    <node id="ongomo">
+      <data key="n_label">L'Ongomo</data>
+      <data key="n_sectors">Sociétés commerciales</data>
+      <data key="n_n_directors">18</data>
+      <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
+    </node>
+    <node id="produitssanghalipaouesso">
+      <data key="n_label">Compagnie des Produits de la Sangha « Lipa Ouesso »</data>
+      <data key="n_sectors">Sociétés commerciales</data>
+      <data key="n_n_directors">4</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="proprietairekouilouniari">
       <data key="n_label">Compagnie Propriétaire du Kouilou-Niari</data>
       <data key="n_sectors">Sociétés commerciales</data>
-      <data key="n_n_directors">30</data>
+      <data key="n_n_directors">32</data>
       <data key="n_territory">Congo-Brazzaville ou Moyen-Congo</data>
     </node>
     <node id="sanghalikouala">
@@ -201,10 +243,10 @@
     <edge id="e4" source="afrique" target="huileriesmoyencongo">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e5" source="alima" target="colonialebaniembe">
-      <data key="e_weight">3</data>
+    <edge id="e5" source="agricolecommercialeindustriellelefini" target="nkemenkeni">
+      <data key="e_weight">4</data>
     </edge>
-    <edge id="e6" source="agricolecommercialeindustriellelefini" target="nkemenkeni">
+    <edge id="e6" source="alima" target="colonialebaniembe">
       <data key="e_weight">3</data>
     </edge>
     <edge id="e7" source="huileriesmoyencongo" target="sargosfreres">
@@ -213,94 +255,145 @@
     <edge id="e8" source="congo" target="nkemenkeni">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e9" source="ekelasangha" target="proprietairekouilouniari">
+    <edge id="e9" source="congomines" target="minierecongo">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e10" source="afriqueequatoriale" target="agricolecommercialeindustriellelefini">
+    <edge id="e10" source="alimaienne" target="etudesminieresboumba">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e11" source="agricolecommercialeindustriellelefini" target="mpokoetablissementscongolaisgratry">
+    <edge id="e11" source="ekelasangha" target="proprietairekouilouniari">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e12" source="afriqueequatoriale" target="agricolecommercialealima">
+    <edge id="e12" source="afriqueequatoriale" target="agricolecommercialeindustriellelefini">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e13" source="agricolecommercialeindustriellelefini" target="mpokoetablissementscongolaisgratry">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e14" source="afriqueequatoriale" target="agricolecommercialealima">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e13" source="afriqueequatoriale" target="alima">
+    <edge id="e15" source="afriqueequatoriale" target="alima">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e14" source="afriqueequatoriale" target="colonialebaniembe">
+    <edge id="e16" source="afriqueequatoriale" target="colonialebaniembe">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e15" source="entreprisestravaux" target="huileriesmoyencongo">
+    <edge id="e17" source="entreprisestravaux" target="huileriesmoyencongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e16" source="agricolecommercialeindustriellelefini" target="congo">
+    <edge id="e18" source="caoutchoucsproduitslobay" target="ekelakadeisangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e17" source="afriqueequatoriale" target="congo">
+    <edge id="e19" source="caoutchoucsproduitslobay" target="proprietairekouilouniari">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e18" source="consortiumminiercongoniari" target="minierecongo">
+    <edge id="e20" source="ekelakadeisangha" target="proprietairekouilouniari">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e19" source="congomines" target="minierecongo">
+    <edge id="e21" source="agricolekouilou" target="ekelasangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e20" source="ibenga" target="minierecongo">
+    <edge id="e22" source="agricolekouilou" target="proprietairekouilouniari">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e21" source="alimaienne" target="commercialecolonialekadeisangha">
+    <edge id="e23" source="agricolekouilou" target="kadeisangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e22" source="commercialecolonialekadeisangha" target="mobaye">
+    <edge id="e24" source="agricolekouilou" target="ngokoouesso">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e23" source="congomines" target="explorationminiereequatoriale">
+    <edge id="e25" source="kadeisangha" target="ngokoouesso">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e24" source="alimaienne" target="ekelakadeisangha">
+    <edge id="e26" source="agricolecommercialeindustriellelefini" target="congo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e25" source="alimaienne" target="ekelasangha">
+    <edge id="e27" source="afriqueequatoriale" target="congo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e26" source="alimaienne" target="ibenga">
+    <edge id="e28" source="consortiumminiercongoniari" target="minierecongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e27" source="ekelakadeisangha" target="ekelasangha">
+    <edge id="e29" source="congomines" target="etudesminieresboumba">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e28" source="ekelakadeisangha" target="ibenga">
+    <edge id="e30" source="etudesminieresboumba" target="minierecongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e29" source="ekelasangha" target="ibenga">
+    <edge id="e31" source="ibenga" target="minierecongo">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e30" source="ekelakadeisangha" target="proprietairekouilouniari">
+    <edge id="e32" source="alimaienne" target="commercialecolonialekadeisangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e31" source="bascongo" target="immobilierecongolaise">
+    <edge id="e33" source="commercialecolonialekadeisangha" target="etudesminieresboumba">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e32" source="hautcongo" target="immobilierecongolaise">
+    <edge id="e34" source="commercialecolonialekadeisangha" target="mobaye">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e33" source="africaineentreprises" target="gabonniari">
+    <edge id="e35" source="congomines" target="explorationminiereequatoriale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e34" source="africaineentreprises" target="sanghalikouala">
+    <edge id="e36" source="alimaienne" target="ekelakadeisangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e35" source="afriqueequatoriale" target="nkemenkeni">
+    <edge id="e37" source="alimaienne" target="ekelasangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e36" source="minesdjouecuivre" target="proprietairekouilouniari">
+    <edge id="e38" source="alimaienne" target="ibenga">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e37" source="mpokoetablissementscongolaisgratry" target="proprietairekouilouniari">
+    <edge id="e39" source="alimaienne" target="kadeisangha">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e38" source="nkemenkeni" target="proprietairekouilouniari">
+    <edge id="e40" source="ekelakadeisangha" target="ekelasangha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e41" source="ekelakadeisangha" target="ibenga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e42" source="ekelakadeisangha" target="kadeisangha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e43" source="ekelasangha" target="ibenga">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e44" source="ekelasangha" target="kadeisangha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e45" source="ibenga" target="kadeisangha">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e46" source="bascongo" target="immobilierecongolaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e47" source="hautcongo" target="immobilierecongolaise">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e48" source="africaineentreprises" target="gabonniari">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e49" source="africaineentreprises" target="sanghalikouala">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e50" source="ongomo" target="proprietairekouilouniari">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e51" source="afriqueequatoriale" target="nkemenkeni">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e52" source="minesdjouecuivre" target="proprietairekouilouniari">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e53" source="mpokoetablissementscongolaisgratry" target="proprietairekouilouniari">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e54" source="ngokoouesso" target="produitssanghalipaouesso">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e55" source="nkemenkeni" target="proprietairekouilouniari">
       <data key="e_weight">1</data>
     </edge>
   </graph>

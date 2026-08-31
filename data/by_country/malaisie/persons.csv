@@ -1,13 +1,15 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
-grisar-a,Grisar,Alfred GRISAR; Alfred Grisar,3,3,4,administrateur,1920,1935,Sociétés françaises ou à participation française
+grisar-a-alfred,Grisar,Alfred GRISAR; Alfred Grisar,3,3,4,administrateur,1920,1935,Sociétés françaises ou à participation française
 chaubet-j,Chaubet,Chaubet; J. Chaubet,2,2,11,administrateur,1910,1948,Sociétés françaises ou à participation française
-prevet-j,Prevet,J. Prevet; J. Prevet. 9; Jules Prevet,2,2,8,administrateur,1910,1937,Sociétés françaises ou à participation française
-many-p,Many,P. Many; Pierre Many,2,2,3,administrateur,1910,1925,Sociétés françaises ou à participation française
+prevet-j,Prévet,J. Prevet; Jules Prevet; Jules Prévet,2,2,10,administrateur,1886,1938,Sociétés françaises ou à participation française
+nebout-f,Nebout,F. Nebout,2,2,9,administrateur,1923,1953,Sociétés françaises ou à participation française
+many-p,Many,P. Many; Pierre Many,2,2,4,administrateur,1886,1925,Sociétés françaises ou à participation française
 collette-p,Collette,P. Collette; Pierre Collette,2,2,3,president,1924,1940,Sociétés françaises ou à participation française
+manthes-p,Manthès,Manthès; Paul Manthès,2,2,2,administrateur,1886,1886,Sociétés françaises ou à participation française
 salathe-a,Salathé,Auguste Salathé,2,2,2,president,1924,1938,Sociétés françaises ou à participation française
+thierry-mieg-r,Thierry- Mieg,Robert Thierry- Mieg; Robert Thierry-Mieg,2,2,2,administrateur_delegue,1924,1938,Sociétés françaises ou à participation française
 lyon-y,Lyon,Y. Lyon; Yves Lyon,1,1,9,administrateur,1927,1948,Sociétés françaises ou à participation française
 wattinne-g,Wattinne,G. Wattinne; Georges Wattinne,1,1,8,administrateur,1927,1953,Sociétés françaises ou à participation française
-nebout-f,Nebout,F. Nebout,1,1,8,administrateur,1923,1953,Sociétés françaises ou à participation française
 cavadia-j,Cavadia,J. Cavadia; Jean Cavadia,1,1,7,administrateur,1927,1953,Sociétés françaises ou à participation française
 mitaranga,Mitaranga,Mitaranga,1,1,7,administrateur,1927,1953,Sociétés françaises ou à participation française
 courteaux-l,Courteaux,L. Courteaux,1,1,7,administrateur,1931,1948,Sociétés françaises ou à participation française
@@ -18,7 +20,7 @@ salathe,Salathé,Salathé,1,1,5,administrateur,1925,1933,Sociétés françaises 
 thierry-mieg,Thierry-Mieg,Thierry-Mieg,1,1,5,administrateur,1925,1933,Sociétés françaises ou à participation française
 kirch-a,Kirch,A. Kirch; Alfred Kirch,1,1,5,administrateur,1931,1940,Sociétés françaises ou à participation française
 lafon-g,Lafon,G. Lafon,1,1,5,administrateur,1920,1933,Sociétés françaises ou à participation française
-branet-j,Branet. 1,J. Branet; J. Branet. 1,1,1,5,administrateur,1920,1940,Sociétés françaises ou à participation française
+branet-j,Branet,J. Branet,1,1,5,administrateur,1920,1940,Sociétés françaises ou à participation française
 derivaud-j,Derivaud,J. Derivaud,1,1,5,administrateur,1933,1953,Sociétés françaises ou à participation française
 blanchy-b,Blanchy,B. Blanchy,1,1,5,administrateur,1933,1953,Sociétés françaises ou à participation française
 gorgeu,Gorgeu,Gorgeu,1,1,4,administrateur,1927,1933,Sociétés françaises ou à participation française
@@ -64,7 +66,6 @@ gorgeu-s,Gorgeu,Serge Gorgeu,1,1,1,administrateur,1948,1948,Sociétés français
 youngs,Youngs,Youngs,1,1,1,administrateur,1948,1948,Sociétés françaises ou à participation française
 bouneau-j,Bouneau,J.-E. Bouneau,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
 proyart-e,Proyart,E. Proyart,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
-et-f-nebout,et F. Nebout,et F. Nebout,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
 via-lanfranchi,via Lanfranchi,via Lanfranchi,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 de-chasseloup-laubat-l,de Chasseloup-Laubat,Louis de Chasseloup-Laubat,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 garcin-f,Garcin,Félix Garcin,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
@@ -73,21 +74,24 @@ lunet-de-lajonquiere-e,Lunet de Lajonquière,Étienne-Edmond Lunet de Lajonquiè
 commune-de-saint-sigismond-de-clermont,commune de Saint-Sigismond-de-Clermont,commune de Saint-Sigismond-de-Clermont,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 poulou-i,Poulou,Isidore Poulou,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 commune-de-riscle,commune de Riscle,commune de Riscle,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
-et-henry-de-saluces,et Henry de Saluces,et Henry de Saluces,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
+de-saluces-h,de Saluces,Henry de Saluces,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 commune-de-saint-mary,commune de Saint-Mary,commune de Saint-Mary,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 poutou-i,Poutou,I. Poutou,1,1,1,vice_president,1936,1936,Sociétés françaises ou à participation française
 poutou-l,Poutou,L. Poutou,1,1,1,vice_president,1940,1940,Sociétés françaises ou à participation française
 poulou-l,Poulou,L. Poulou,1,1,1,president_directeur_general,1945,1945,Sociétés françaises ou à participation française
 scharpf-en-remplacement-de-gollion-j,Scharpf en remplacement de Gollion,J. Scharpf en remplacement de Gollion,1,1,1,administrateur,1953,1953,Sociétés françaises ou à participation française
+elysee-descombes,1° Élysée Descombes,1° Élysée Descombes,1,1,1,administrateur,1886,1886,Sociétés françaises ou à participation française
+chauvelot-a,Chauvelot,Alfred Chauvelot,1,1,1,administrateur,1886,1886,Sociétés françaises ou à participation française
+dreyfus-n,Dreyfus,Nestor Dreyfus,1,1,1,administrateur,1886,1886,Sociétés françaises ou à participation française
+robert-e,Robert,Émile Robert,1,1,1,administrateur,1886,1886,Sociétés françaises ou à participation française
+fouquet-c,Fouquet,Charles Fouquet,1,1,1,administrateur,1886,1886,Sociétés françaises ou à participation française
+dernier-x,Dernier,Xavier Dernier,1,1,1,administrateur,1886,1886,Sociétés françaises ou à participation française
+daumesnil-g,Daumesnil,Georges Daumesnil,1,1,1,administrateur,1886,1886,Sociétés françaises ou à participation française
 colette-p,Colette,Pierre Colette,1,1,1,vice_president,1938,1938,Sociétés françaises ou à participation française
-et-jules-prevet,et Jules Prevet,et Jules Prevet,1,1,1,vice_president,1938,1938,Sociétés françaises ou à participation française
-thierry-mieg-r,Thierry- Mieg,Robert Thierry- Mieg,1,1,1,administrateur_delegue,1938,1938,Sociétés françaises ou à participation française
 milagou-a,Milagou,A. Milagou,1,1,1,administrateur,1948,1948,Sociétés françaises ou à participation française
 barbier-l-leon,Barbier,Léon Barbier,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
 chaubet-j-jules,Chaubet,Jules Chaubet,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
 lyon-e,Lyon,Edmond Lyon,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
-et-robert-thierry-mieg,et Robert Thierry-Mieg,et Robert Thierry-Mieg,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
-manthes,Manthès,Manthès,1,1,1,administrateur_delegue,,,Sociétés françaises ou à participation française
 belime,Bélime,Bélime,1,1,1,administrateur,,,Sociétés françaises ou à participation française
 brau-de-saint-pol-lias,Brau de Saint Pol-Lias,Brau de Saint Pol-Lias,1,1,1,administrateur,,,Sociétés françaises ou à participation française
 descombes,Descombes,Descombes,1,1,1,administrateur,,,Sociétés françaises ou à participation française
@@ -111,7 +115,7 @@ english-m,English,Marc Claude English,1,1,1,administrateur,1929,1929,Sociétés 
 grisar-e-emile,Grisar,Émile Grisar,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française
 hankar-r,Hankar,Robert Hankar,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française
 maus-f,Maus,Frédéric Maus,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française
-van-regemorter-m,van Regemorter1,Maurice van Regemorter1,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française
+van-regemorter-m,van Regemorter,Maurice van Regemorter,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française
 fritz-weise-o,Fritz Weise,Otto Fritz Weise,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française
 rene-havenith,—. René Havenith,—. René Havenith,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française
 krelinger-o,Krelinger,Oscar Krelinger,1,1,1,administrateur,1929,1929,Sociétés françaises ou à participation française

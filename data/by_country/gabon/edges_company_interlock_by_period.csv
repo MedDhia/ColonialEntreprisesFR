@@ -1,15 +1,15 @@
 company_id_1,company_id_2,period,weight,shared_directors
 commercialeindustrielleagricolehautogooue,hautogooue,1914_1929,6,barre-o; coquelle-f; denfert-rochereau-a; enjalbert-p; halphen-j-julien; terquem-e-edmond
-africaine,equatoriale,1914_1929,5,et-alfred-de-lenfernat-de-la-mothe; gillet-a; lefevre-c; pecqueur-w; videau-j
+africaine,equatoriale,1914_1929,5,de-lenfernat-de-la-mothe-a; gillet-a; lefevre-c; pecqueur-w; videau-j
+exploitationsforestieresafricaines,plantationspalmeraiesogooue,1914_1929,4,meyer-a-alfred; michenot-e; weber-j; zafiropulo-d
 colonialecommerceindustrie,exploitationsforestieresafricaines,1914_1929,3,fondere; fondere-a-alphonse; weber-j
-exploitationsforestieresafricaines,plantationspalmeraiesogooue,1914_1929,3,meyer-a-alfred; michenot-e; weber-j
+forestiereabanga,unionforestiereafricaine,1914_1929,3,mizraki-m; schmidt-m; vigneras-j
 frsecongocameroun,ngokosangha,1914_1929,3,cruchet-l; de-jessaint; henrotte
 colonialecommerceindustrie,ngokosangha,1914_1929,2,gaboriaud-l; weber-j
 exploitationsforestieresafricaines,plantationsogooue,1914_1929,2,guynet-w; meyer-a-alfred
 agricoleforestiereindustrielleafrique,hautengounie,1914_1929,2,du-vivier-de-streel-e; gerdret-g
 hautengounie,hautengounle,1914_1929,2,debionne-e; vergnes-a
 forestiereabanga,plantationspalmeraiesogooue,1914_1929,2,levy-g; mizraki-m
-forestiereabanga,unionforestiereafricaine,1914_1929,2,mizraki-m; schmidt-m
 africaine,commercialeafriqueequatoriale,1914_1929,1,de-caplane-p-pierre
 agricoleforestiereindustrielleafrique,commercialeafriqueequatoriale,1914_1929,1,superville-m
 agricoleforestiereindustrielleafrique,plantationsogooue,1914_1929,1,superville-m
@@ -35,7 +35,10 @@ africaineplacagesportgentil,plantationspalmeraiesogooue,1945_1962,2,dessombs-p; 
 africaineplacagesportgentil,exploitationsforestieresafricaines,1945_1962,1,hauser-e
 agricolegabon,unionforestiereafricaine,1945_1962,1,vacheret-c
 multiplex,plantationspalmeraiesogooue,1945_1962,1,lavril-m
-agricolecommercialebasogoue,colonialegabon,pre_1914,2,carimantrand; mallet
+agricolebatah,agricolenkogo,pre_1914,2,beraud-m; muller-e-edouard
+gabon,littoralbavili,pre_1914,2,du-vivier-de-streel-e; duvignau-de-lanneau-l
+agricolecommercialebasogoue,colonialegabon,pre_1914,2,carimantrand-j; mallet
 colonialegabon,fermiereogoue,pre_1914,1,braillard-e
 agricoleforestiereindustrielleafrique,gabon,pre_1914,1,fondere
 agricolecommercialesettecama,hautengounie,pre_1914,1,deves
+colonialeogoouengounie,explorationscoloniales,pre_1914,1,mols-a

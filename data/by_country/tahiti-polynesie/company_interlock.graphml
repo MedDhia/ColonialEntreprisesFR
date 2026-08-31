@@ -48,6 +48,12 @@
       <data key="n_n_directors">9</data>
       <data key="n_territory">Tahiti (Polynésie)</data>
     </node>
+    <node id="ilespacifique">
+      <data key="n_label">Société Française des îles du Pacifique</data>
+      <data key="n_sectors">Sociétés</data>
+      <data key="n_n_directors">13</data>
+      <data key="n_territory">Tahiti (Polynésie)</data>
+    </node>
     <node id="immobiliereagricoleoceanie">
       <data key="n_label">Compagnie Immobilière et Agricole de l'Océanie</data>
       <data key="n_sectors">Sociétés</data>
@@ -138,46 +144,55 @@
     <edge id="e19" source="concessionnaireportpapeete" target="ilesmarquises">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e20" source="agricolemopelia" target="tahiti">
+    <edge id="e20" source="ilespacifique" target="phosphatesoceanie">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e21" source="concessionnaireportpapeete" target="navaleoceanie">
+    <edge id="e21" source="agricolemopelia" target="tahiti">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e22" source="concessionnaireportpapeete" target="navaleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e22" source="comptoirsoceanie" target="frsephosphatesoceanie">
+    <edge id="e23" source="comptoirsoceanie" target="frsephosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e23" source="comptoirsoceanie" target="phosphatesoceanie">
+    <edge id="e24" source="comptoirsoceanie" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e24" source="cotonniereetablissementsoceanie" target="frsephosphatesoceanie">
+    <edge id="e25" source="cotonniereetablissementsoceanie" target="frsephosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e25" source="cotonniereetablissementsoceanie" target="phosphatesoceanie">
+    <edge id="e26" source="cotonniereetablissementsoceanie" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e26" source="francotahitienne" target="frsephosphatesoceanie">
+    <edge id="e27" source="francotahitienne" target="frsephosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e27" source="francotahitienne" target="phosphatesoceanie">
+    <edge id="e28" source="francotahitienne" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e28" source="frsephosphatesoceanie" target="ilesmarquises">
+    <edge id="e29" source="frsephosphatesoceanie" target="ilesmarquises">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e29" source="ilesmarquises" target="phosphatesoceanie">
+    <edge id="e30" source="ilesmarquises" target="phosphatesoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e30" source="concessionnaireportpapeete" target="immobiliereagricoleoceanie">
+    <edge id="e31" source="concessionnaireportpapeete" target="immobiliereagricoleoceanie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e31" source="agricolemopelia" target="ilesmarquises">
+    <edge id="e32" source="concessionnaireportpapeete" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e32" source="frsephosphatesoceanie" target="immobiliereagricoleoceanie">
+    <edge id="e33" source="agricolemopelia" target="ilesmarquises">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e33" source="immobiliereagricoleoceanie" target="phosphatesoceanie">
+    <edge id="e34" source="frsephosphatesoceanie" target="immobiliereagricoleoceanie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e35" source="immobiliereagricoleoceanie" target="phosphatesoceanie">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e36" source="frsephosphatesoceanie" target="ilespacifique">
       <data key="e_weight">1</data>
     </edge>
   </graph>

@@ -12,6 +12,18 @@
       <data key="n_n_directors">5</data>
       <data key="n_territory">Venezuela</data>
     </node>
+    <node id="caoutchoucscaroni">
+      <data key="n_label">Société des Caoutchoucs du Caroni</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Venezuela</data>
+    </node>
+    <node id="caoutchoucsorenoque">
+      <data key="n_label">Compagnie des Caoutchoucs de l’Orénoque</data>
+      <data key="n_sectors"></data>
+      <data key="n_n_directors">7</data>
+      <data key="n_territory">Venezuela</data>
+    </node>
     <node id="mocupia">
       <data key="n_label">Compagnie française de la Mocupia, puis Mocupia</data>
       <data key="n_sectors"></data>
@@ -20,6 +32,9 @@
     </node>
     <edge id="e0" source="barthelemyrobaglia" target="mocupia">
       <data key="e_weight">5</data>
+    </edge>
+    <edge id="e1" source="caoutchoucscaroni" target="caoutchoucsorenoque">
+      <data key="e_weight">2</data>
     </edge>
   </graph>
 </graphml>

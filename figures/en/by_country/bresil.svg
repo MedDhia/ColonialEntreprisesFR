@@ -1,13 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 288" width="1120" height="288" role="img" aria-label="Brazil interlock network"><title>Brazil interlock network</title><rect width="1120" height="288" fill="#fcfcfb"/><g stroke="#c9c8c2" fill="none">
-<path d="M521.9 220.0L598.1 30.0" stroke-width="0.60" stroke-opacity="0.160"/>
+<path d="M521.3 55.8L509.5 127.3M521.3 55.8L594.6 103.3M509.5 127.3L594.6 103.3M594.6 103.3L597.1 179.7" stroke-width="1.16" stroke-opacity="0.400"/>
+<path d="M521.3 55.8L597.1 179.7M509.5 127.3L597.1 179.7M594.6 103.3L660.5 30.0" stroke-width="0.88" stroke-opacity="0.280"/>
+<path d="M521.3 55.8L459.5 220.0M521.3 55.8L660.5 30.0M509.5 127.3L459.5 220.0M509.5 127.3L660.5 30.0M594.6 103.3L459.5 220.0M597.1 179.7L459.5 220.0M597.1 179.7L660.5 30.0" stroke-width="0.60" stroke-opacity="0.160"/>
 </g>
 <g>
-<circle class="nd" data-id="sucreriesbresiliennes" cx="521.9" cy="220.0" r="6.65" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
-<circle class="nd" data-id="sucrerievillaraffard" cx="598.1" cy="30.0" r="6.65" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="sucrerielorena" cx="521.3" cy="55.8" r="16.31" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="sucrerieportofeliz" cx="509.5" cy="127.3" r="16.31" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="sucreriesbresiliennes" cx="594.6" cy="103.3" r="18.15" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="sucrerievillaraffard" cx="597.1" cy="179.7" r="15.27" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="sucreriepiracicaba" cx="660.5" cy="30.0" r="9.26" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle class="nd" data-id="exploitationagricoleitapeva" cx="459.5" cy="220.0" r="4.40" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
 </g>
-<line x1="218.0" y1="121.6" x2="514.2" y2="220.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
-<line x1="902.0" y1="121.6" x2="605.8" y2="30.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="218.0" y1="104.6" x2="504.0" y2="55.8" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="218.0" y1="121.6" x2="492.2" y2="127.3" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="218.0" y1="138.6" x2="454.1" y2="220.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="902.0" y1="104.6" x2="670.8" y2="30.0" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="902.0" y1="121.6" x2="613.8" y2="103.3" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
+<line x1="902.0" y1="138.6" x2="613.4" y2="179.7" stroke="#8a8983" stroke-width="0.6" stroke-opacity="0.55"/>
 <g font-size="10.5" font-family="ui-sans-serif,system-ui,sans-serif" fill="#0b0b0b">
-<text x="222.0" y="125.0" text-anchor="end">Sucreries brésiliennes</text>
-<text x="898.0" y="125.0" text-anchor="start">Sucrerie de Villa-Raffard</text>
-</g><g font-size="11.5" font-family="ui-sans-serif,system-ui,sans-serif" fill="#8a8983"><text x="0" y="265.5">2 firms, 1 interlock, 1 component (largest 2). Node area is weighted degree; every firm is labelled. The other 3 firms in this territory&#x27;s bundle share no director with another and so</text><text x="0" y="280.5">have no place in an interlock network.</text></g></svg>
+<text x="222.0" y="108.0" text-anchor="end">Sucrerie de Lorena</text>
+<text x="222.0" y="125.0" text-anchor="end">Sucrerie de Porto-Feliz</text>
+<text x="222.0" y="142.0" text-anchor="end">Exploitation agricole d’Itapeva</text>
+<text x="898.0" y="108.0" text-anchor="start">Sucrerie de Piracicaba</text>
+<text x="898.0" y="125.0" text-anchor="start">Sucreries brésiliennes</text>
+<text x="898.0" y="142.0" text-anchor="start">Sucrerie de Villa-Raffard</text>
+</g><g font-size="11.5" font-family="ui-sans-serif,system-ui,sans-serif" fill="#8a8983"><text x="0" y="265.5">6 firms, 14 interlocks, 1 component (largest 6). Node area is weighted degree; every firm is labelled. The other 4 firms in this territory&#x27;s bundle share no director with another and</text><text x="0" y="280.5">so have no place in an interlock network.</text></g></svg>

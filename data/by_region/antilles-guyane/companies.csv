@@ -1,11 +1,11 @@
 company_id,name,sectors,n_ties,n_directors,first_year,last_year
-saintelie,Saint-Élie,Mines et placers,72,34,1878,1912
+saintelie,Saint-Élie,Mines et placers,70,32,1878,1912
+industrielleagricolepointepitre,Société Industrielle et Agricole de La Pointe-à-Pitre,Divers,92,31,1907,1950
 forestiereguyane,Société Forestière de la Guyane française,Divers; Documentation générale,46,31,1919,1951
-mineshuaron,Compagnie des Mines de Huaron,,92,30,1910,1953
-industrielleagricolepointepitre,Société Industrielle et Agricole de La Pointe-à-Pitre,Divers,82,28,1913,1950
+mineshuaron,Compagnie des Mines de Huaron,,90,28,1910,1953
+sucreriesbresiliennes,Sucreries brésiliennes,,86,28,1912,1959
 minesorguyanehollandaise,Compagnie des Mines d'or de la Guyane hollandaise,Documentation générale,36,25,1895,1938
-sucreriesbresiliennes,Sucreries brésiliennes,,79,24,1912,1953
-minescuivrenaltagua,Mines de cuivre de Naltagua,,33,20,1912,1938
+minescuivrenaltagua,Mines de cuivre de Naltagua,,38,22,1912,1938
 minesorguyane,Compagnie des Mines d'or de la Guyane française,Documentation générale; Mines et placers,24,16,1927,1937
 mocupia,"Compagnie française de la Mocupia, puis Mocupia",,32,14,1926,1948
 commercialeantillesfrancaisesftanon,Cie commerciale des Antilles françaises F. Tanon et Cie,Divers; Documentation générale,30,13,1924,1951
@@ -14,12 +14,12 @@ messageriesantillaises,Messageries antillaises,Divers,19,13,1912,1912
 sucriereagricoleguyane,Société Sucrière et agricole de la Guyane française,Divers; Documentation générale,18,13,1927,1937
 consortiummoruefrance,Consortium de la morue en France,Documentation générale,16,13,1926,1937
 creditfoncierbresilameriquesud,Crédit foncier du Brésil et de l'Amérique du Sud,,13,13,1917,1917
-transportsaeriensguyanais,Transports aériens guyanais,Divers; Documentation générale,19,12,1919,1922
 banqueauxiliairecoloniale,Banque auxiliaire coloniale,Documentation générale,13,12,1922,1922
 entreprisemaritimecommerciale,L'Entreprise maritime et commerciale,Documentation générale,12,12,1922,1922
 exploitationsminieresinini,Société d'Exploitations minières de l'Inini,Documentation générale; Mines et placers,24,11,1951,1953
-forestierecommercialemaroni,Compagnie Forestière et Commerciale du Maroni,Divers,18,10,1923,1923
+transportsaeriensguyanais,Transports aériens guyanais,Divers; Documentation générale,19,11,1919,1922
 commercialeantillesfrancaisesfredtanon,Compagnie Commerciale des Antilles françaises Fréd. Tanon et Cie,Divers,10,10,1930,1930
+forestierecommercialemaroni,Compagnie Forestière et Commerciale du Maroni,Divers,18,9,1923,1923
 theresia,« La Thérésia »,Documentation générale,11,9,1937,1937
 etablissementsdarboussierindustrielleagricolepointepitre,Établissements Darboussier Sté industrielle et agricole de la Pointe-à-Pitre,Documentation générale,9,9,1927,1927
 representationcoloniale,Représentation coloniale,Documentation générale,9,9,1937,1951
@@ -30,13 +30,16 @@ guadeloupeennedistributionenergieelectrique,Compagnie Guadeloupéenne de distrib
 terre,TERRE,Documentation générale,8,8,1937,1937
 felixhubert,Félix Hubert,Documentation générale,8,8,1937,1937
 mataroni,"Cie Française du Mataroni, puis Cie des mines d'or de la Guyane française",Documentation générale; Mines et placers,18,7,1912,1922
+comptoirshesse,Comptoirs Hesse et Cie,Commerce; Documentation générale,14,7,1911,1955
 usinesbeauport,Usines de Beauport,Divers; Documentation générale,13,7,1907,1962
+caoutchoucscaroni,Société des Caoutchoucs du Caroni,,9,7,1901,1901
 naltagua,Naltagua,,9,7,1940,1945
 banqueguyane,Banque de la Guyane,Documentation générale,7,7,1922,1922
 moruesecheriesfecamp,Morue française et sécheries de Fécamp,Documentation générale,7,7,1926,1926
 planteursantillaisreunis,Planteurs Antillais Réunis,Documentation générale,7,7,1937,1937
 martiniquaisedistributionenergieelectriquejardin,"Cie martiniquaise de distribution d'énergie électrique, Jardin",Documentation générale,7,7,1937,1937
 industrielleagricolepointepitreetablissements,Société industrielle et agricole de la Pointe-à-Pitre (Établissements,Documentation générale,7,7,1937,1937
+caoutchoucsorenoque,Compagnie des Caoutchoucs de l’Orénoque,,7,7,1900,1900
 huanchacabolivie,Compagnie Huanchaca de Bolivie,,7,7,1901,1901
 gisementsorsaintelie,Gisements d'or de Saint-Élie,Mines et placers,15,6,1914,1920
 antillaiseculturecommerce,Société de Antillaise de Culture et de commerce,Divers,11,6,1920,1920
@@ -45,9 +48,9 @@ desirade,Sté de la Désirade,Documentation générale,6,6,1922,1922
 banqueguadeloupe,Banque de la Guadeloupe,Documentation générale,6,6,1922,1922
 agricoletroisrivieres,Cie agricole des Trois-Rivières,Documentation générale,6,6,1927,1927
 agricoleguyanomarocaine,Société agricole Guyano-Marocaine,Documentation générale,6,6,1951,1951
+agricolecommercialebasamazone,Compagnie Agricole et Commerciale du Bas-Amazone,,6,6,1907,1907
 forestiereagricolemaroni,Société Forestière et Agricole du Maroni,Divers,6,6,1882,1882
 southamericangoldfieldslimitedsalisbury,"The South American Goldfields Limited, Salisbury",Mines et placers,6,6,1908,1908
-comptoirshesse,Comptoirs Hesse et Cie,Commerce; Documentation générale,10,5,1922,1955
 colonialeagricoleminiere,Société Coloniale Agricole et Minière,Documentation générale; Mines et placers,10,5,1951,1951
 unionminierehautemana,Union minière de la Haute-Mana,Documentation générale; Mines et placers,10,5,1951,1951
 banquemartinique,Banque de la Martinique,Documentation générale,5,5,1927,1927
@@ -55,37 +58,45 @@ francocanadiennepechesfrigorifiques,Cie franco-canadienne des pêches et frigori
 electricitefortfrance,Cie d'Électricité de Fort-de-France,Documentation générale,5,5,1937,1937
 unionbananiereguyanecayenne,Union bananière de la Guyane CAYENNE,Documentation générale,5,5,1937,1937
 agencecentraleparis,Agence centrale à PARIS,Documentation générale,5,5,1920,1920
+electriqueguyane,Compagnie Électrique de la Guyane française,Divers,5,5,1903,1903
+sucriereantilles,Compagnie Sucrière des Antilles,Divers,5,5,1889,1889
 gisementsordieumerci,Société des Gisements d'or de Dieu-Merci,Mines et placers,5,5,1881,1881
 huanchaca,Huanchaca,,5,5,1910,1910
 barthelemyrobaglia,Barthélémy Robaglia,,5,5,1933,1933
-navigationguadeloupe,Compagnie générale Navigation de la Guadeloupe,Divers,5,5,1928,1928
+sucrerielorena,Sucrerie de Lorena,,5,5,1922,1922
 stelieadieuvat,Société nouvelle de St-Élie et Adieu-Vat,Documentation générale; Mines et placers,8,4,1951,1951
 miniereroura,Compagnie Minière de Roura,Documentation générale; Mines et placers,7,4,1929,1937
 unionbananieremartiniquaise,Union bananière martiniquaise,Documentation générale,4,4,1937,1937
 entreprisetransportdistributionelectricite,"Entreprise, transport et distribution d'électricité",Documentation générale,4,4,1937,1937
 unioncommercialebasseterre,Union commerciale de Basse-Terre,Documentation générale,4,4,1937,1937
 antillaiseconstructionsciviles,Cie Antillaise de constructions civiles,Documentation générale,4,4,1937,1937
-caoutchoucscaroni,Société des Caoutchoucs du Caroni,,4,4,1901,1901
 groupebouillouxlafontcreditfoncierbresil,groupe Bouilloux-Lafont Crédit foncier du Brésil,,4,4,1911,1913
 marseillaisesucreriecoloniale,Cie Marseillaise de SUCRERIE COLONIALE,Divers,4,4,1925,1925
+minesorelysee,Société des Mines d'or de l'Élysée,Mines et placers,4,4,1902,1902
+minesoryaoni,Société des Mines d’or du Yaoni,Mines et placers,4,4,1897,1897
 minieredragagesguyane,Compagnie Minière et de Dragages de Guyane,Mines et placers,4,4,1909,1909
+navigationguadeloupe,Compagnie générale Navigation de la Guadeloupe,Divers,4,4,1928,1928
+sucrerieportofeliz,Sucrerie de Porto-Feliz,,4,4,1901,1901
+sucreriesmoule,Société des Sucreries du Moule,Divers,4,4,1902,1902
 chouanard,CHOUANARD,Documentation générale,18,3,,
 franceguyane,Société France-Guyane,Divers; Documentation générale,8,3,1931,1937
 colonialetonnellerie,Compagnie Coloniale de Tonnellerie,Divers,5,3,1928,1931
 colonialeproduitstannants,Compagnie Coloniale des Produits tannants,Divers,5,3,1929,1933
+sucrerievillaraffard,Sucrerie de Villa-Raffard,,4,3,1899,1911
 antillaise,Cie Antillaise,Documentation générale,3,3,1927,1927
 fonciereantillesfrancaises,Société foncière des Antilles françaises,Documentation générale,3,3,1937,1937
 cotonniereguyane,Société cotonnière de la Guyane,Documentation générale,3,3,1937,1937
 immobilierecolonialepetroles,Société immobilière coloniale des pétroles,Documentation générale,3,3,1951,1951
 miniereorapu,Cie minière de l'Orapu,Documentation générale,3,3,1951,1951
 commercialefactoreriesguyanes,Société Commerciale des Factoreries des Guyanes,Commerce,3,3,1909,1909
+sucreriepiracicaba,Sucrerie de Piracicaba,,3,3,1899,1899
 minesoradieuvatbonneaventure,Société des mines d'or d'Adieu-Vat et Bonne-Aventure,Mines et placers,2,2,1906,1906
 commissionavecantilles,Société générale de commission avec les Antilles,Documentation générale,2,2,1937,1937
 saintelieadieuvat,Société nouvelle Saint-Élie et Adieu-Vat,Documentation générale,2,2,1937,1937
+exploitationagricoleitapeva,Exploitation agricole d’Itapeva,,2,2,1901,1901
 marseillaisesucreriecolonialeusineblanchetmorneeau,"Compagnie Marseillaise de sucrerie coloniale, usine du Blanchet, Morne-à-l'Eau",Divers,2,2,1920,1920
 navigationtransportsguyaneclanistanon,"Société Française de Navigation et de transports de la Guyane, Clanis, Tanon & Cie",Divers,2,2,1930,1930
 francocolonialeantillaise,Sté franco-coloniale antillaise,Documentation générale,1,1,1927,1927
-sucrerievillaraffard,Sucrerie de Villa-Raffard,,1,1,1911,1911
 placerbief,« Le Placer Bief »,Documentation générale,7,0,1937,1937
-felixiphigenie,Félix Iphigénie et Cie,Documentation générale,3,0,1937,1937
 sucreriecupim,Sucrerie de Cupim,,2,0,1900,1900
+felixiphigenie,Félix Iphigénie et Cie,Documentation générale,1,0,1937,1937

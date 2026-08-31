@@ -45,13 +45,19 @@
     <node id="cotesomalis">
       <data key="n_label">Compagnie française de la Côte des Somalis</data>
       <data key="n_sectors">Sociétés</data>
-      <data key="n_n_directors">17</data>
+      <data key="n_n_directors">16</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="creditindustrielafricain">
       <data key="n_label">Crédit industriel africain</data>
       <data key="n_sectors">Documents généraux</data>
       <data key="n_n_directors">1</data>
+      <data key="n_territory">Djibouti</data>
+    </node>
+    <node id="imperialecheminsferethiopiens">
+      <data key="n_label">Compagnie Impériale des Chemins de fer éthiopiens</data>
+      <data key="n_sectors">Sociétés</data>
+      <data key="n_n_directors">27</data>
       <data key="n_territory">Djibouti</data>
     </node>
     <node id="industrielledjibouti">
@@ -99,118 +105,124 @@
     <edge id="e0" source="approvisionnementsgenerauxdjibouti" target="maritimeafriqueorientale">
       <data key="e_weight">6</data>
     </edge>
-    <edge id="e1" source="afriqueorientale" target="afriqueorientalemaritimecommerciale">
+    <edge id="e1" source="afriqueorientale" target="navigationmerrouge">
       <data key="e_weight">5</data>
     </edge>
-    <edge id="e2" source="afriqueorientale" target="approvisionnementsgenerauxdjibouti">
+    <edge id="e2" source="afriqueorientale" target="afriqueorientalemaritimecommerciale">
+      <data key="e_weight">5</data>
+    </edge>
+    <edge id="e3" source="afriqueorientale" target="approvisionnementsgenerauxdjibouti">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e3" source="afriqueorientale" target="maritimeafriqueorientale">
+    <edge id="e4" source="afriqueorientale" target="cotesomalis">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e4" source="afriqueorientale" target="navigationmerrouge">
+    <edge id="e5" source="afriqueorientale" target="maritimeafriqueorientale">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e5" source="industrielledjibouti" target="salinesdjibouti">
+    <edge id="e6" source="approvisionnementsgenerauxdjibouti" target="cotesomalis">
       <data key="e_weight">4</data>
     </edge>
-    <edge id="e6" source="afriqueorientale" target="cotesomalis">
+    <edge id="e7" source="industrielledjibouti" target="salinesdjibouti">
+      <data key="e_weight">4</data>
+    </edge>
+    <edge id="e8" source="approvisionnementsgenerauxdjibouti" target="navigationmerrouge">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e7" source="approvisionnementsgenerauxdjibouti" target="cotesomalis">
+    <edge id="e9" source="cotesomalis" target="maritimeafriqueorientale">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e8" source="cotesomalis" target="maritimeafriqueorientale">
+    <edge id="e10" source="cotesomalis" target="navigationmerrouge">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e9" source="cotesomalis" target="navigationmerrouge">
+    <edge id="e11" source="maritimeafriqueorientale" target="navigationmerrouge">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e10" source="maritimeafriqueorientale" target="navigationmerrouge">
+    <edge id="e12" source="afriqueorientalemaritimecommerciale" target="approvisionnementsgenerauxdjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e11" source="afriqueorientalemaritimecommerciale" target="approvisionnementsgenerauxdjibouti">
+    <edge id="e13" source="afriqueorientalemaritimecommerciale" target="cotesomalis">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e12" source="afriqueorientale" target="industrielledjibouti">
+    <edge id="e14" source="afriqueorientale" target="industrielledjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e13" source="afriqueorientalemaritimecommerciale" target="industrielledjibouti">
+    <edge id="e15" source="afriqueorientalemaritimecommerciale" target="industrielledjibouti">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e14" source="salinesdjibouti" target="salinesdjiboutisfaxmadagascar">
+    <edge id="e16" source="salinesdjibouti" target="salinesdjiboutisfaxmadagascar">
       <data key="e_weight">3</data>
     </edge>
-    <edge id="e15" source="approvisionnementsgenerauxdjibouti" target="navigationmerrouge">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e16" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="commercialeabyssinie">
-      <data key="e_weight">2</data>
-    </edge>
-    <edge id="e17" source="afriqueorientalemaritimecommerciale" target="cotesomalis">
+    <edge id="e17" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="commercialeabyssinie">
       <data key="e_weight">2</data>
     </edge>
     <edge id="e18" source="afriqueorientalemaritimecommerciale" target="maritimeafriqueorientale">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e19" source="approvisionnementsgenerauxdjibouti" target="industrielledjibouti">
+    <edge id="e19" source="afriqueorientalemaritimecommerciale" target="navigationmerrouge">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e20" source="industrielledjibouti" target="salinesdjiboutisfaxmadagascar">
+    <edge id="e20" source="approvisionnementsgenerauxdjibouti" target="industrielledjibouti">
       <data key="e_weight">2</data>
     </edge>
-    <edge id="e21" source="afriqueorientale" target="cheminferfrancoethiopiendjiboutiaddisabeba">
+    <edge id="e21" source="cotesomalis" target="industrielledjibouti">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e22" source="industrielledjibouti" target="salinesdjiboutisfaxmadagascar">
+      <data key="e_weight">2</data>
+    </edge>
+    <edge id="e23" source="afriqueorientale" target="cheminferfrancoethiopiendjiboutiaddisabeba">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e22" source="afriqueorientale" target="commercialeabyssinie">
+    <edge id="e24" source="afriqueorientale" target="commercialeabyssinie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e23" source="approvisionnementsgenerauxdjibouti" target="cheminferfrancoethiopiendjiboutiaddisabeba">
+    <edge id="e25" source="approvisionnementsgenerauxdjibouti" target="cheminferfrancoethiopiendjiboutiaddisabeba">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e24" source="approvisionnementsgenerauxdjibouti" target="commercialeabyssinie">
+    <edge id="e26" source="approvisionnementsgenerauxdjibouti" target="commercialeabyssinie">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e25" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="cotesomalis">
+    <edge id="e27" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="cotesomalis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e26" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="maritimeafriqueorientale">
+    <edge id="e28" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="maritimeafriqueorientale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e27" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="navigationmerrouge">
+    <edge id="e29" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="navigationmerrouge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e28" source="commercialeabyssinie" target="cotesomalis">
+    <edge id="e30" source="commercialeabyssinie" target="cotesomalis">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e29" source="commercialeabyssinie" target="maritimeafriqueorientale">
+    <edge id="e31" source="commercialeabyssinie" target="maritimeafriqueorientale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e30" source="commercialeabyssinie" target="navigationmerrouge">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e31" source="afriqueorientalemaritimecommerciale" target="navigationmerrouge">
-      <data key="e_weight">1</data>
-    </edge>
-    <edge id="e32" source="cotesomalis" target="industrielledjibouti">
+    <edge id="e32" source="commercialeabyssinie" target="navigationmerrouge">
       <data key="e_weight">1</data>
     </edge>
     <edge id="e33" source="industrielledjibouti" target="maritimeafriqueorientale">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e34" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="industrielledjibouti">
+    <edge id="e34" source="industrielledjibouti" target="navigationmerrouge">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e35" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="salinesdjibouti">
+    <edge id="e35" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="industrielledjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e36" source="creditindustrielafricain" target="salinsmidisalinesdjibouti">
+    <edge id="e36" source="cheminferfrancoethiopiendjiboutiaddisabeba" target="salinesdjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e37" source="africainecommercerepresentation" target="salinsmidisalinesdjibouti">
+    <edge id="e37" source="creditindustrielafricain" target="salinsmidisalinesdjibouti">
       <data key="e_weight">1</data>
     </edge>
-    <edge id="e38" source="africainecommercerepresentation" target="minassian">
+    <edge id="e38" source="africainecommercerepresentation" target="salinsmidisalinesdjibouti">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e39" source="africainecommercerepresentation" target="minassian">
+      <data key="e_weight">1</data>
+    </edge>
+    <edge id="e40" source="imperialecheminsferethiopiens" target="industrielledjibouti">
       <data key="e_weight">1</data>
     </edge>
   </graph>

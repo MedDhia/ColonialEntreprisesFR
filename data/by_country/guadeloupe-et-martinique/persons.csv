@@ -1,23 +1,24 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 munich-p,Munich,Paul Munich,5,5,8,vice_president,1931,1937,Divers; Documentation générale
 munich-j,Munich,Jean Munich,5,5,7,administrateur_delegue,1931,1937,Divers; Documentation générale
-weiss-p-paul,Weiss,Paul Weiss; Paul Weiss. 4,5,5,6,president,1931,1937,Divers; Documentation générale
+weiss-p-paul,Weiss,Paul Weiss,5,5,6,president,1931,1937,Divers; Documentation générale
 de-bondeli-e,de Bondeli,Édouard de Bondeli,4,4,6,administrateur,1931,1937,Divers; Documentation générale
 derouet-m,Derouet,Maurice Derouet,4,4,6,administrateur,1931,1937,Divers; Documentation générale
+micard-j,Micard,J. Micard; Jean Micard,3,3,8,administrateur,1889,1931,Divers; Documentation générale
 micard-e,Micard,E. Micard; Étienne Micard,3,3,8,administrateur,1920,1940,Divers; Documentation générale
 raoul-duval-e,Raoul-Duval,E. Raoul-Duval,2,2,11,administrateur,1913,1950,Divers; Documentation générale
 durand-smet-j,Durand-Smet,Durand-Smet; J. Durand-Smet; Joseph Durand- Smet,2,2,8,administrateur,1931,1950,Divers; Documentation générale
 micard-g,Micard,G. Micard; Gaston Micard,2,2,7,administrateur,1913,1933,Divers; Documentation générale
-micard-j,Micard,J. Micard; Jean Micard,2,2,6,administrateur,1913,1931,Divers; Documentation générale
-kapferer-c,Kapferer,C. Kapferer; Ch. Kapferer; Charles Kapferer,2,2,5,administrateur,1913,1927,Divers; Documentation générale
+kapferer-c,Kapferer,C. Kapferer; Ch. Kapferer; Charles Kapferer,2,2,6,administrateur,1907,1927,Divers; Documentation générale
+robert-g-gustave,Robert,Gustave Robert,2,2,5,administrateur,1907,1927,Divers; Documentation générale
 chapuy-p,Chapuy,P. Chapuy; Paul Chapuy,2,2,4,administrateur,1920,1931,Divers; Documentation générale
-robert-g-gustave,Robert,Gustave Robert,2,2,4,administrateur,1913,1927,Divers; Documentation générale
 fay-j,Faÿ,Jacques Faÿ,2,2,4,administrateur,1931,1937,Divers; Documentation générale
 bertin,Bertin,Bertin,2,2,3,administrateur,1920,1922,Divers; Documentation générale
 jacquesson-r,Jacquesson,Jacquesson,2,2,3,administrateur,1920,1922,Divers; Documentation générale
 hanhart-t,Hanhart,Hanhart,2,2,3,administrateur,1920,1922,Divers; Documentation générale
 pfister-b,Pfister,Pfister,2,2,3,administrateur,1920,1922,Divers; Documentation générale
 unne,Unné,Unné,2,2,3,administrateur,1920,1922,Divers; Documentation générale
+besson-l-leon,Besson,Léon Besson,2,2,3,administrateur,1907,1927,Divers; Documentation générale
 representee-par-m-jacques-fay,représentée par M. Jacques Faÿ,représentée par M. Jacques Faÿ,2,2,3,administrateur,1937,1937,Divers; Documentation générale
 le-quesne-r,Le Quesne,Raymond Le Quesne,2,2,3,administrateur,1931,1937,Divers; Documentation générale
 tanon-a-albert,Tanon,Albert Tanon,2,2,2,vice_president,1922,1937,Documentation générale
@@ -25,7 +26,6 @@ walther,Walther,Walther,2,2,2,administrateur,1920,1922,Divers; Documentation gé
 papin-beaufond-t,Papin-Beaufond,Tomy Papin-Beaufond,2,2,2,president,1922,1922,Documentation générale
 picard-j,Picard,Jacques Picard,2,2,2,administrateur,1922,1922,Documentation générale
 dain-c,Dain,Camille Dain,2,2,2,administrateur,1922,1922,Documentation générale
-besson-l-leon,Besson,Léon Besson,2,2,2,administrateur,1913,1927,Divers; Documentation générale
 schnegg-j,Schnegg,Jacques Daniel Schnegg; Schnegg,2,2,2,administrateur,1927,1927,Documentation générale
 reisser-e,Reisser,Edmond Reisser,2,2,2,president,1930,1937,Divers; Documentation générale
 roy-m,Roy,Marc Roy,2,2,2,president,1930,1937,Divers; Documentation générale
@@ -47,6 +47,9 @@ pelissier-tanon-c,Pelissier-Tanon,Charles Pelissier-Tanon; Charles Pélissier-Ta
 monsen-c,Monsen,Christian Monsen,1,1,2,administrateur,1924,1937,Divers; Documentation générale
 besse-j,Besse,Joseph Besse,1,1,2,administrateur_delegue,1937,1937,Divers; Documentation générale
 du-perron-g,du Perron,Gabriel du Perron,1,1,2,administrateur,1937,1937,Divers; Documentation générale
+gras-a,Gras,Achille Gras,1,1,2,administrateur,1907,1913,Divers
+humbert-lavalley-e,Humbert-Lavalley,E. Humbert-Lavalley; Edmond Humbert-Lavalley,1,1,2,administrateur,1907,1913,Divers
+souques-m,Souques,Maurice Souques,1,1,2,administrateur,1907,1913,Divers
 brugiere,Brugière,Brugière,1,1,2,administrateur,1937,1940,Divers
 smet-micard,Smet-Micard,Smet-Micard,1,1,2,administrateur,1948,1950,Divers
 lecocq-e,Lecocq,Eugène Lecocq,1,1,2,administrateur,1912,1912,Divers
@@ -136,6 +139,10 @@ huyghues-despointes-a,Huyghues-Despointes,André Huyghues-Despointes,1,1,1,admin
 de-lucy-de-fossarieu-p,de Lucy de Fossarieu,Paul de Lucy de Fossarieu,1,1,1,administrateur,1937,1937,Documentation générale
 yang-ting-l,Yang-Ting,Louis Yang-Ting,1,1,1,administrateur,1937,1937,Documentation générale
 crocquet-g,Crocquet,Gaston Crocquet,1,1,1,administrateur,1937,1937,Documentation générale
+siegfried-j-jacques,Siegfried,Jacques Siegfried,1,1,1,administrateur,1889,1889,Divers
+avisse-e,Avisse,Edmond Avisse,1,1,1,administrateur,1889,1889,Divers
+fabry-p,Fabry,Pol Fabry,1,1,1,administrateur,1889,1889,Divers
+halphen-g,Halphen,Germain Halphen,1,1,1,administrateur,1889,1889,Divers
 benard-g,Bénard,Georges Bénard,1,1,1,president,1930,1930,Divers
 weissweiller-j,Weissweiller,Jacques Weissweiller,1,1,1,vice_president,1930,1930,Divers
 clanis-g,Clanis,Gaston Clanis,1,1,1,vice_president,1930,1930,Divers
@@ -149,9 +156,9 @@ j-laurent-gheerbrandt,J.- Laurent Gheerbrandt,J.- Laurent Gheerbrandt,1,1,1,admi
 tanon-c,Tanon,Claude Tanon,1,1,1,administrateur,1924,1924,Divers
 tanon-r,Tanon,Raoul Tanon,1,1,1,administrateur,1924,1924,Divers
 rivierez-m,Rivierez,Maurice Rivierez,1,1,1,administrateur,1924,1924,Divers
-gras-a,Gras,Achille Gras,1,1,1,administrateur,1913,1913,Divers
-humbert-lavalley-e,Humbert-Lavalley,E. Humbert-Lavalley,1,1,1,administrateur,1913,1913,Divers
-souques-m,Souques,Maurice Souques,1,1,1,administrateur,1913,1913,Divers
+raoul-duval-e-edmond,Raoul-Duval,Edmond Raoul-Duval,1,1,1,administrateur,1907,1907,Divers
+souques-e,Souques,Ernest Souques,1,1,1,administrateur,1907,1907,Divers
+de-traz-a,de Traz,André de Traz,1,1,1,administrateur,1907,1907,Divers
 chanove-g,Chanove,G. Chanove,1,1,1,administrateur,1917,1917,Divers
 roul-duval-e,Roul-Duval,E. Roul-Duval,1,1,1,administrateur,1917,1917,Divers
 x-g,[†],Gustave Robert [†],1,1,1,administrateur,1927,1927,Divers
@@ -164,7 +171,7 @@ paris-rodez,Paris-Rodez,Paris-Rodez,1,1,1,administrateur,1920,1920,Divers
 brugnon-m,Brugnon,Maurice Brugnon,1,1,1,president,1925,1925,Divers
 roederer,Roederer,Roederer,1,1,1,president,1925,1925,Divers
 monnerot-j,Monnerot,Monnerot,1,1,1,president,1925,1925,Divers
-trabaud,Trabaud2,Trabaud2,1,1,1,president,1925,1925,Divers
+trabaud,Trabaud,Trabaud,1,1,1,president,1925,1925,Divers
 forestiere-a-douala,forestière à Douala,forestière à Douala,1,1,1,administrateur,1931,1931,Divers
 cameroun,Cameroun,Cameroun,1,1,1,administrateur,1931,1931,Divers
 legrand-a-andre,Legrand,André Legrand,1,1,1,administrateur,1931,1931,Divers
@@ -183,10 +190,11 @@ mesuard,Mesuard,Mesuard,1,1,1,administrateur,1928,1928,Divers
 chenet,Chenet,Chenet,1,1,1,administrateur,1928,1928,Divers
 robiche,Robiche,Robiche,1,1,1,administrateur,1928,1928,Divers
 gedeon,Gédéon,Gédéon,1,1,1,administrateur,1928,1928,Divers
-a-j,A,J. S. D. F. P. A,1,1,1,administrateur,1928,1928,Divers
 dubosc,Dubosc,Dubosc,1,1,1,president,1937,1937,Divers
+delamarre-h,Delamarre,Hubert Delamarre,1,1,1,administrateur,1902,1902,Divers
+prive-g,Privé 3,Georges Privé 3,1,1,1,administrateur,1902,1902,Divers
+roederer-p,Roederer,Pierre-Louis Roederer,1,1,1,administrateur,1902,1902,Divers
+deville-j,Deville,Jules Deville,1,1,1,administrateur,1902,1902,Divers
 bree-e,Brée,E. Brée,1,0,1,directeur,1922,1922,Documentation générale
 petit-bourg,Petit-Bourg,Petit-Bourg,1,0,1,gerant,1937,1937,Documentation générale
-basseterre,BasseTerre,BasseTerre,1,0,1,gerant,1937,1937,Documentation générale
-saint-claude,Saint-Claude,Saint-Claude,1,0,1,gerant,1937,1937,Documentation générale
 filloux,Filloux,Filloux,1,0,1,directeur,1962,1962,Divers

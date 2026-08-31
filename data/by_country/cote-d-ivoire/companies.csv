@@ -2,8 +2,8 @@ company_id,name,sectors,n_ties,n_directors,first_year,last_year
 scieriesafricaines,Compagnie des Scieries africaines,Industries,36,32,1922,1951
 importationboisexotiques,Société d'Importation de bois exotiques,Industries,43,25,1922,1953
 occidentaleafricaine,L'Occidentale Africaine,Commerce,27,24,1921,1951
-kong,Compagnie française de Kong,Industries,33,22,1901,1961
 minierefoncierebandama,Société minière et foncière du Bandama,Mines,65,21,1920,1931
+kong,Compagnie française de Kong,Industries,33,21,1901,1961
 uniontropicaleplantations,Union tropicale de plantations,"Agro-alimentaire, cultures industrielles",49,20,1931,1951
 plantationstanoe,Société des plantations de la Tanoé,"Agro-alimentaire, cultures industrielles",47,19,1925,1953
 plantationselimacafeiersaboisso,"Société des Plantations d'Élima, caféiers à Aboisso","Agro-alimentaire, cultures industrielles",29,17,1927,1945
@@ -16,7 +16,7 @@ forestiereindenie,Compagnie Forestière de l'Indénié,Industries,27,15,1924,195
 huileriesafricaines,Huileries africaines,"Agro-alimentaire, cultures industrielles",25,14,1922,1925
 plantationsafriqueoccidentaleeloka,Plantations de l'Afrique occidentale à Éloka,"Agro-alimentaire, cultures industrielles",23,14,1928,1940
 colonialecoteguinee,Société Coloniale française de la Côte de Guinée,Commerce,17,14,1891,1908
-commercialeafricaineexportationimportation,Société Commerciale Africaine d'Exportation et d'importation,Commerce,21,13,1920,1925
+commercialeafricaineexportationimportation,Société Commerciale Africaine d'Exportation et d'importation,Commerce,21,12,1920,1925
 commerceinternationalcolonial,Cie française de commerce international et colonial,Documents généraux (par ordre chronologique),17,12,1926,1926
 constructionsgeneralesafrique,Compagnie de Constructions générales en Afrique française,Industries,15,12,1935,1953
 plantationselima,Plantations d'Élima,"Agro-alimentaire, cultures industrielles",14,12,1940,1951
@@ -29,6 +29,7 @@ forestiereequatoriale,Compagnie Forestière équatoriale,Industries,10,10,1951,1
 huileriesplantationscoteivoire,Société française des Huileries et plantations de la Côte-d’Ivoire,"Agro-alimentaire, cultures industrielles",10,10,1911,1911
 commercialeindustriellepalmeraiesafricaines,Société commerciale et industrielle des palmeraies africaines,"Agro-alimentaire, cultures industrielles",10,10,1922,1922
 agricoleafricaine,Société Agricole Africaine,"Agro-alimentaire, cultures industrielles",10,10,1930,1930
+minierecoteivoire,Société Minière de la Côte-d'Ivoire,Mines,12,9,1902,1911
 plantationssorotona,Société des Plantations de Sorotona,"Agro-alimentaire, cultures industrielles",12,9,1928,1938
 morosini,MOROSINI,Industries,11,9,1925,1930
 consolidatedgoldfieldsivorycoast,The Consolidated Goldfields of the Ivory Coast,Mines,10,9,1903,1903
@@ -53,12 +54,12 @@ industrielleagricolecommercialeafriqueoccidentaleafriquemetropole,"Société Ind
 etablissementsrobertgonfreville,Établissements Robert Gonfreville,Industries,10,6,1950,1952
 miniereafriqueoccidentale,Société Minière de l'Afrique occidentale,Mines,9,6,1901,1903
 plantationshuileriesbingerville,Société des Plantations et huileries de Bingerville,"Agro-alimentaire, cultures industrielles",9,6,1933,1937
-minierecoteivoire,Société Minière de la Côte-d'Ivoire,Mines,8,6,1902,1903
 explorationcoloniale,Société Française d'Exploration coloniale,Mines,8,6,1889,1903
 domainekokumbo,Compagnie du Domaine de Kokumbo,Mines,7,6,1942,1942
 exploitationproduitscoloniaux,Société d'Exploitation de produits coloniaux,Industries,7,6,1900,1900
 minesorindenie,Société des Mines d’or de l'Indénié,Mines,6,6,1903,1903
 cafesproduitscoloniauxcapro,« Cafés et produits coloniaux français » CAPRO,"Agro-alimentaire, cultures industrielles",6,6,1951,1951
+explorationafricaine,Société Française d'Exploration africaine,Mines,6,6,1901,1903
 africainefinanciereagricole,Société africaine financière et agricole,"Agro-alimentaire, cultures industrielles",6,6,1951,1951
 theodorejvieyra,Théodore J. Vieyra,Documents généraux (par ordre chronologique),50,5,1951,1951
 plantationsexploitationscolonialesbingerville,"Société de Plantations et d'exploitations coloniales, Bingerville","Agro-alimentaire, cultures industrielles",15,5,1919,1930
@@ -68,17 +69,24 @@ unionentreprisescoloniales,Union d'entreprises coloniales,Industries,6,5,1927,19
 agricolecoteivoire,Société Agricole de la Côte d'Ivoire,"Agro-alimentaire, cultures industrielles",5,5,1919,1919
 etablissementscharlesperinaud,Établissements Charles Périnaud,Commerce,5,5,1951,1951
 colonialecoteivoire,Compagnie Coloniale de la Côte-d’Ivoire,Commerce,5,5,1925,1925
+minierebassanwicoteivoire,Compagnie Minière du Bas-Sanwi et de la Côte-d’Ivoire,Mines,5,5,1903,1912
 commercialeindustrielleagricolepalmeraiesafricaines,"Société commerciale, industrielle et agricole des Palmeraies africaines","Agro-alimentaire, cultures industrielles",5,5,1920,1920
 etablissementsrouxbaudrandfreres,Établissements Roux-Baudrand frères,Industries,5,5,1922,1922
 culturesextremeorientafrique,"Cie française des Cultures d'Extrême-Orient et d'Afrique, puis Compagnie générale africaine","Agro-alimentaire, cultures industrielles",5,5,1935,1935
 comptoirafriqueoccidentale,Comptoir général français de l'Afrique Occidentale,Commerce,7,4,1921,1925
 francocolonialebois,Franco-Coloniale des Bois,Industries,5,4,1950,1950
+miniereindeniecoteivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,Mines,5,4,1903,1903
+minierebondoukoucoteivoire,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,Mines,5,4,1903,1966
 pecheriescoteivoire,Société française des Pêcheries de la Côte-d'Ivoire,"Agro-alimentaire, cultures industrielles",5,4,1914,1914
 syndicatouestafricain,Syndicat Ouest-Africain,Mines,5,4,1902,1934
 agricolecommercialeafriqueoccidentale,Agricole et Commerciale de l'Afrique occidentale française,Commerce,4,4,1928,1928
 ivorycoastgoldfields,Ivory Coast Goldfields,Mines,4,4,1903,1903
 jeanweber,Jean Weber,"Agro-alimentaire, cultures industrielles",4,4,1927,1927
 recherchesetudesminieresafriquecentrale,Société de Recherches et d'études minières pour l'Afrique centrale,Mines,4,4,1948,1948
+minierealangouacoteivoire,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,Mines,5,3,1890,1903
+minieresanwicoteivoire,Société Minière du Sanwi et de la Côte-d'Ivoire,Mines,5,3,1903,1934
+prospectioncoteivoire,Société de Prospection de la Côte-d’Ivoire,Mines,5,3,1902,1903
+gisementsauriferescomoeaffluents,Compagnie française des Gisements aurifères du Comoé et affluents,Mines,4,3,1908,1935
 coteivoireadulessacompanyltd,The Côte-d'Ivoire and Adulessa Company Ltd,Mines,3,3,1903,1903
 boissassandra,Société des Bois de Sassandra,Industries,3,3,1939,1939
 colonialecoteivoirehautevolta,Société Coloniale de la Côte-d’Ivoire et de la Haute-Volta,Commerce,3,3,1926,1926
@@ -90,15 +98,7 @@ etudescoloniesfrancaises,Société d'Études des colonies françaises,Mines,3,3,
 anyama,Société d'Anyama,Industries,3,3,1909,1909
 forestierebandama,Société Forestière du Bandama,Industries,4,2,1923,1933
 explorationouestafricain,Société d'Exploration de l'Ouest-Africain français,Mines,2,2,1903,1903
-gisementsauriferescomoeaffluents,Compagnie française des Gisements aurifères du Comoé et affluents,Mines,2,2,1935,1935
 minesorplacersbiano,Mines d’or et placers de Biano,Mines,2,2,1903,1903
-minierebassanwicoteivoire,Compagnie Minière du Bas-Sanwi et de la Côte-d’Ivoire,Mines,2,2,1903,1903
-minierealangouacoteivoire,Compagnie Minière de l’Alangoua et de la Côte-d’Ivoire,Mines,2,2,1903,1903
-miniereindeniecoteivoire,Compagnie Minière de l’Indénié et de la Côte-d’Ivoire,Mines,2,2,1903,1903
-minierebondoukoucoteivoire,Compagnie Minière du Bondoukou et de la Côte-d'Ivoire,Mines,2,2,1903,1903
-minieresanwicoteivoire,Société Minière du Sanwi et de la Côte-d'Ivoire,Mines,2,2,1934,1934
-prospectioncoteivoire,Société de Prospection de la Côte-d’Ivoire,Mines,2,2,1903,1903
 explorationexploitationminieresafrique,"Société d'Exploration et d'exploitation minières de l’Afrique française, puis Essika",Mines,2,2,1903,1903
-explorationafricaine,Société Française d'Exploration africaine,Mines,2,2,1903,1903
 fabricationbeurrecacaoabidjandimbroko,"Fabrication du beurre de cacao, Abidjan-Dimbroko","Agro-alimentaire, cultures industrielles",1,1,,
 minesoryaourebouafle,Société des Mines d'or de Yaouré à Bouaflé,Mines,4,0,1935,1935

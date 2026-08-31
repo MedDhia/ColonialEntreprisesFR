@@ -1,6 +1,6 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
 berthelot-a,Berthelot,A. Berthelot; André Berthelot,3,3,5,administrateur,1914,1920,Sociétés françaises ou à participation française
-francqui-e,Francqui,E. Francqui; E. Francqui. 9; Émile Francqui,3,3,4,administrateur,1906,1931,Sociétés françaises ou à participation française
+francqui-e,Francqui,E. Francqui; Émile Francqui,3,3,5,administrateur,1906,1931,Sociétés françaises ou à participation française
 woodroffe-c,Woodroffe,C.-R. Woodroffe,2,2,8,administrateur,1929,1953,Sociétés françaises ou à participation française
 arnavon-j,Arnavon,J. Arnavon,2,2,6,administrateur,1931,1948,Sociétés françaises ou à participation française
 nathan-w,Nathan,W.-S. Nathan,2,2,4,administrateur,1927,1933,Sociétés françaises ou à participation française
@@ -28,6 +28,8 @@ yung-ming-c,Yung Ming,Chien Yung Ming,1,1,4,president,1940,1948,Sociétés fran�
 atthalin-a,Atthalin,A. Atthalin; André ATTHALIN,1,1,4,president,1940,1947,Sociétés françaises ou à participation française
 pannetier,Pannetier,Pannetier,1,1,4,administrateur,1940,1948,Sociétés françaises ou à participation française
 soong-t,Soong,T. V. Soong; T.A. Soong,1,1,4,administrateur,1940,1948,Sociétés françaises ou à participation française
+wehrung-c,Wehrung,C. Wehrung; Ch. Wehrung,1,1,4,administrateur,1906,1931,Sociétés françaises ou à participation française
+lienart-p,Liénart,P. Liénart; Pierre Liénart,1,1,4,administrateur,1906,1931,Sociétés françaises ou à participation française
 luquet-a,Luquet,A. Luquet,1,1,4,administrateur,1937,1948,Sociétés françaises ou à participation française
 e-p-laurent-j,E. P. Laurent,Jean E. P. Laurent,1,1,3,administrateur,1940,1948,Sociétés françaises ou à participation française
 yu-ying-l,Yu Ying,Li Yu Ying,1,1,3,administrateur,1940,1948,Sociétés françaises ou à participation française
@@ -38,8 +40,6 @@ fitzgerald-c-b-b,Fitzgerald C. B,B.-J.-H. Fitzgerald C. B; B.J.H. Fitzgerald C. 
 heybourn-p,Heybourn,P. F. Heybourn; P.-F. Heybourn,1,1,3,administrateur,1923,1927,Sociétés françaises ou à participation française
 of-rothes-e,of Rothes,Earl of Rothes,1,1,3,administrateur,1933,1945,Sociétés françaises ou à participation française
 jadot-j,Jadot,J. Jadot,1,1,3,administrateur,1937,1945,Sociétés françaises ou à participation française
-wehrung-c,Wehrung,C. Wehrung; Ch. Wehrung,1,1,3,administrateur,1906,1931,Sociétés françaises ou à participation française
-lienart-p,Liénart,P. Liénart,1,1,3,administrateur,1906,1931,Sociétés françaises ou à participation française
 courcelle-j,Courcelle,J. Courcelle,1,1,3,administrateur,1925,1937,Sociétés françaises ou à participation française
 baudouin-p,Baudouin,P. Baudouin,1,1,3,administrateur,1937,1945,Sociétés françaises ou à participation française
 baviere-p,Bavière,P. Bavière,1,1,3,president,1940,1948,Sociétés françaises ou à participation française
@@ -60,6 +60,7 @@ engel-a,Engel,A. Engel; Albert Engel,1,1,2,administrateur,1924,1924,Sociétés f
 furiet-c,Furiet,C. Furiet; Charles Furiet,1,1,2,administrateur,1924,1924,Sociétés françaises ou à participation française
 szarvady-g,Szarvady,G. Szarvady; Geza Szarvady,1,1,2,administrateur,1924,1924,Sociétés françaises ou à participation française
 vigne-j,Vigne,J. Vigne; Joseph Vigne,1,1,2,administrateur,1924,1924,Sociétés françaises ou à participation française
+gimon-c,Gimon,Charles Gimon,1,1,2,administrateur,1925,1940,Sociétés françaises ou à participation française
 davis-awdry-r,Davis Awdry,R. Davis Awdry,1,1,2,administrateur,1912,1914,Sociétés françaises ou à participation française
 anstruther-h,Anstruther,H.T. Anstruther,1,1,2,administrateur,1912,1914,Sociétés françaises ou à participation française
 inchbald-c,Inchbald,Chantrey Inchbald,1,1,2,administrateur,1912,1914,Sociétés françaises ou à participation française
@@ -67,6 +68,9 @@ kenrick-j,Kenrick,J. P. Kenrick,1,1,2,administrateur,1923,1925,Sociétés franç
 fleming-p,Fleming,P.-L. Fleming,1,1,2,administrateur,1948,1953,Sociétés françaises ou à participation française
 hedges-k,Hedges,K. M. F. Hedges,1,1,2,administrateur,1948,1953,Sociétés françaises ou à participation française
 boucard-m,Boucard,Boucard; Max Boucard,1,1,2,administrateur,1906,1922,Sociétés françaises ou à participation française
+brousseaud-c,Brousseaud,C. Brousseaud; Camille Brousseaud,1,1,2,administrateur,1906,1906,Sociétés françaises ou à participation française
+martin-g,Martin,G. Martin; Georges Martin,1,1,2,administrateur,1906,1906,Sociétés françaises ou à participation française
+michelot-l,Michelot,L. Michelot; Lucien Michelot,1,1,2,administrateur,1906,1906,Sociétés françaises ou à participation française
 hermenier-g,Hermenier,G. Hermenier,1,1,2,administrateur,1925,1931,Sociétés françaises ou à participation française
 le-buf-h,Le Bœuf,H.L. Le Bœuf,1,1,2,administrateur,1925,1931,Sociétés françaises ou à participation française
 bougenot-a,Bougenot,A. Bougenot,1,1,2,administrateur,1937,1940,Sociétés françaises ou à participation française
@@ -92,7 +96,7 @@ robert-l-leon,ROBERT,Léon ROBERT,1,1,1,administrateur,1943,1943,Sociétés fran
 laurent-j-jean,LAURENT,Jean LAURENT,1,1,1,administrateur,1943,1943,Sociétés françaises ou à participation française
 d-interet-cumulatif-aux-actions-p,% d'intérêt cumulatif aux actions P,% d'intérêt cumulatif aux actions P,1,1,1,administrateur,1943,1943,Sociétés françaises ou à participation française
 d-interet-non-cumulatif-aux-actions-p,% d'intérêt non cumulatif aux actions P,% d'intérêt non cumulatif aux actions P,1,1,1,administrateur,1943,1943,Sociétés françaises ou à participation française
-alexis-soulet,… Alexis Soulet …,… Alexis Soulet …,1,1,1,administrateur,1951,1951,Sociétés françaises ou à participation française
+soulet-a,Soulet,Alexis Soulet,1,1,1,administrateur,1951,1951,Sociétés françaises ou à participation française
 canard-g,Canard,G. Canard,1,1,1,administrateur,1915,1915,Sociétés françaises ou à participation française
 aux-prescriptions-des-articles-c,aux prescriptions des articles 35,Conformément aux prescriptions des articles 35,1,1,1,administrateur,1919,1919,Sociétés françaises ou à participation française
 particulierement-pour-la-france,particulièrement pour la France,particulièrement pour la France,1,1,1,administrateur,1919,1919,Sociétés françaises ou à participation française
@@ -110,7 +114,7 @@ lindeboom-a,Lindeboom,Alfred Lindeboom,1,1,1,administrateur,1920,1920,Sociétés
 de-marchena-a,de Marchena,Albert de Marchena,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 marie-g,Marie,Gabriel Marie,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 oppermann-a,Oppermann,Alfred Oppermann,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
-et-joseph-de-villeneuve-bargemont,et Joseph de Villeneuve-Bargemont,et Joseph de Villeneuve-Bargemont,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
+de-villeneuve-bargemont-j,de Villeneuve-Bargemont,Joseph de Villeneuve-Bargemont,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 raval-e,Raval,Raval,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 jarousse-de-sillac,Jarousse de Sillac,Jarousse de Sillac,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 levy,Lévy,Lévy,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
@@ -119,7 +123,7 @@ peixotto-p,Peixotto,Peixotto,1,1,1,administrateur,1920,1920,Sociétés français
 acieries-de-la-marine,Aciéries de la Marine,Aciéries de la Marine,1,1,1,administrateur,1920,1920,Sociétés françaises ou à participation française
 de-la-b-i-c,DE LA B. I. C,DE LA B. I. C,1,1,1,administrateur,1922,1922,Sociétés françaises ou à participation française
 espivent-de-la-viliesboisnet,Espivent de la VilIesboisnet,Espivent de la VilIesboisnet,1,1,1,administrateur,1923,1923,Sociétés françaises ou à participation française
-et-m-zuccoli,et M. Zuccoli,et M. Zuccoli,1,1,1,administrateur,1923,1923,Sociétés françaises ou à participation française
+zuccoli,Zuccoli,Zuccoli,1,1,1,administrateur,1923,1923,Sociétés françaises ou à participation française
 favareille-r,Favareille,René Favareille,1,1,1,administrateur,1923,1923,Sociétés françaises ou à participation française
 ballu,Ballu,Ballu,1,1,1,administrateur,1923,1923,Sociétés françaises ou à participation française
 zuccoli-g,Zuccoli,G. Zuccoli,1,1,1,administrateur,1923,1923,Sociétés françaises ou à participation française
@@ -145,12 +149,10 @@ audinet-j,Audinet,Audinet,1,1,1,administrateur,1920,1920,Sociétés françaises 
 kahn,Kahn,Kahn,1,1,1,administrateur,1919,1919,Sociétés françaises ou à participation française
 de-larrard-j,de Larrard,Jean-Henri-Louis de Larrard,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
 olivier-m-marcel,Olivier,Marcel Olivier,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
-charles-gimon,… Charles Gimon,… Charles Gimon,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
 de-lafaulotte-a-alexandre,de Lafaulotte,Alexandre de Lafaulotte,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
-lionel-marie,… Lionel-Marie …,… Lionel-Marie …,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
-henri-bourboulon,… Henri Bourboulon,… Henri Bourboulon,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
+lionel-marie-j,Lionel-Marie,Jules Lionel-Marie,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
+bourboulon-h,Bourboulon,Henri Bourboulon,1,1,1,administrateur,1924,1924,Sociétés françaises ou à participation française
 belemans-a,Belemans,Arthur Belemans,1,1,1,administrateur,1940,1940,Sociétés françaises ou à participation française
-gimon-c,Gimon,Charles Gimon,1,1,1,administrateur,1940,1940,Sociétés françaises ou à participation française
 levallois-perret,Levallois-Perret,Levallois-Perret,1,1,1,administrateur,1940,1940,Sociétés françaises ou à participation française
 marchal-a-albert,Marchal,Albert Marchal,1,1,1,president,1940,1940,Sociétés françaises ou à participation française
 gilbert-boucher,Gilbert-Boucher,Gilbert-Boucher,1,1,1,administrateur,1914,1914,Sociétés françaises ou à participation française
@@ -163,11 +165,10 @@ franqui-e,Franqui,E. Franqui,1,1,1,administrateur,1933,1933,Sociétés français
 getten,Getten,Getten,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
 lion,Lion,Lion,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
 revel-c,Revel,Revel,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
-freynet-c,Freynet. 3,Freynet. 3,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
+freynet-c,Freynet,Freynet,1,1,1,administrateur,1925,1925,Sociétés françaises ou à participation française
 ackerman-g,Ackerman,G. Ackerman,1,1,1,administrateur,1906,1906,Sociétés françaises ou à participation française
-brousseaud-c,Brousseaud,C. Brousseaud,1,1,1,administrateur,1906,1906,Sociétés françaises ou à participation française
-martin-g,Martin,G. Martin,1,1,1,administrateur,1906,1906,Sociétés françaises ou à participation française
-michelot-l,Michelot,L. Michelot,1,1,1,administrateur,1906,1906,Sociétés françaises ou à participation française
+ackermann-g,Ackermann,Georges Ackermann,1,1,1,administrateur,1906,1906,Sociétés françaises ou à participation française
+boucarddemeurant-a-paris-m,Boucard.demeurant à Paris,Max Boucard.demeurant à Paris,1,1,1,administrateur,1906,1906,Sociétés françaises ou à participation française
 tirard-p,Tirard,P. Tirard,1,1,1,administrateur,1931,1931,Sociétés françaises ou à participation française
 kohly-f,Kohly,Franz Kohly,1,0,1,directeur,1920,1920,Sociétés françaises ou à participation française
 baillieux-j,Baillieux,Jules Baillieux,1,0,1,directeur,1940,1940,Sociétés françaises ou à participation française

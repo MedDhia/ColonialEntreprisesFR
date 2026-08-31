@@ -18,8 +18,8 @@ network can be sliced by period rather than collapsed into one static graph.
 >
 > **Extraction coverage.** Of 5,863 documents carrying usable text — the
 > 5,867 that extract cleanly, less four holding under 200 characters —
-> **3,642 (62%) yield at least one tie** — up from 42% before the prose, annotation and
-> biographical parsers were added. The remaining 2,221 hold 26% of the
+> **3,679 (62%) yield at least one tie** — up from 42% before the prose, annotation and
+> biographical parsers were added. The remaining 2,184 hold 26% of the
 > extracted characters and contribute nothing: mostly genres no parser reads
 > (honours lists, tariff schedules, balance-sheet-only extracts) plus real
 > misses. §2b of the methodology quantifies what is left on the table. Absence
@@ -33,11 +33,11 @@ network can be sliced by period rather than collapsed into one static graph.
 >
 > | Genre | Ties | Precision | What it reads |
 > |---|---|---|---|
-> | `dossier` | 62,295 | highest | board lists under a firm heading |
+> | `dossier` | 63,765 | highest | board lists under a firm heading |
 > | `person_index` | 15,621 | ~97% agreement with the source's own gloss | numbered annuaire indexes |
-> | `prose` | 11,641 | ~90% | board changes reported in sentences |
-> | `annotation` | 1,642 | ~94% | the compiler's inline notes |
-> | `biographical` | 1,563 | ~93% | biographical dictionaries (**undated**) |
+> | `prose` | 11,625 | ~90% | board changes reported in sentences |
+> | `annotation` | 1,621 | ~94% | the compiler's inline notes |
+> | `biographical` | 1,557 | ~93% | biographical dictionaries (**undated**) |
 >
 > Precision figures come from hand-checking random samples against source
 > context. They locate an order of magnitude, not a second decimal.
@@ -59,14 +59,14 @@ network can be sliced by period rather than collapsed into one static graph.
 | Documents with text extracted | **5,874 (99.2%)** — 46 are dead links on the site |
 | Territories | **62** countries / 13 index-page regions (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
 | Economic sectors | 108, as classified by the source |
-| Person → company ties | **100,763** — 62,295 from firm dossiers, 15,621 from the annuaire indexes, 11,641 from prose, 1,642 from annotations, 1,563 from biographies |
-| Two-mode edge rows | **92,762**, 97.3% carrying a year |
-| Distinct people | **34,104** |
-| Companies | **10,406** (including firms known only from a directory or annuaire entry) |
-| Company interlock edges | **76,875** pooled, 50,286 within period |
+| Person → company ties | **102,315** — 63,765 from firm dossiers, 15,621 from the annuaire indexes, 11,625 from prose, 1,621 from annotations, 1,557 from biographies |
+| Two-mode edge rows | **94,189**, 97.4% carrying a year |
+| Distinct people | **34,447** |
+| Companies | **10,373** (including firms known only from a directory or annuaire entry) |
+| Company interlock edges | **78,530** pooled, 51,174 within period |
 | Extraction genres | 5, all merged; `source_genre` on every observation and edge |
-| Attribution | 86.8% of parsed ties resolve to a firm; `attribution` records how |
-| Corporate directorships | 3,218 directed company → company edges |
+| Attribution | 86.9% of parsed ties resolve to a firm; `attribution` records how |
+| Corporate directorships | 3,138 directed company → company edges |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
 `data/processed/network_stats.csv` holds these figures per period. The
@@ -125,9 +125,9 @@ G   = nx.read_graphml("data/by_country/madagascar/company_interlock.graphml")
 
 > **A bundle is defined by the source document, not by the firm.**
 > `by_country/tunisie/` holds every firm with a tie read from a document filed
-> on the site's Tunisia index page — **186 firms**. It is *not* "the Tunisian
-> companies": **522 firms carry `Tunisie` in `companies.csv`'s `countries`
-> field, and 397 of those are in the interlock graph.** The gap is firms whose
+> on the site's Tunisia index page — **198 firms**. It is *not* "the Tunisian
+> companies": **519 firms carry `Tunisie` in `companies.csv`'s `countries`
+> field, and 402 of those are in the interlock graph.** The gap is firms whose
 > Tunisian connection was recorded in a document filed elsewhere — a Paris
 > holding company's dossier, an annuaire, a biography.
 >
@@ -181,8 +181,8 @@ Ottoman and Egyptian ones, since neither fits the binary. The evidence is the
 name plus the territory — onomastic inference, good for aggregate composition
 and **not** for claims about named individuals.
 
-The headline result is stark and is the point of the variable: of 34,104
-people, **220 (0.6%) carry an indigenous name**. By territory, board members
+The headline result is stark and is the point of the variable: of 34,447
+people, **219 (0.6%) carry an indigenous name**. By territory, board members
 with an indigenous name run at 1.0% in Morocco and Indochina, 0.4% in Algeria,
 and **0.0% in French Equatorial Africa, Gabon, Congo-Brazzaville and New
 Caledonia**. All 304 non-European codings are listed in
@@ -259,7 +259,7 @@ are small enough to name every firm and follow every edge.
 
 | | |
 |---|---|
-| `fig7_city_network.svg` | Firms placed at their **city**, not their colony, in true coordinates; an edge joins two cities when a director sat on a board in each. 111 cities, 1,974 firms. |
+| `fig7_city_network.svg` | Firms placed at their **city**, not their colony, in true coordinates; an edge joins two cities when a director sat on a board in each. 111 cities, 2,009 firms. |
 
 The finding is stark: **37% of the placeable firms in the interlock graph were
 run from Paris** — more than the next eleven cities combined — and the heavy
@@ -273,7 +273,7 @@ single city cannot be drawn as edges and are in the table instead.
 
 | | |
 |---|---|
-| `fig4_empire_network.svg` | **Every** firm sharing a director: 5,900 firms, 76,875 interlocks, nothing subsetted. Colour is territory. |
+| `fig4_empire_network.svg` | **Every** firm sharing a director: 5,959 firms, 78,530 interlocks, nothing subsetted. Colour is territory. |
 | `fig5_territory_matrix.svg` | The empire as a network of territories — 54 × 54 cells, each the number of directors sitting on boards in both. |
 | `by_country/<slug>.svg` | 42 figures, one per territory with an interlock, each that territory's complete graph — `algerie`, `tunisie`, `madagascar`, `indochine`, `senegal`, … |
 
@@ -437,7 +437,7 @@ rules govern them, and they are worth knowing before you trust a number:
   similarity threshold.
 - **A coverage gap beats a fabricated attribution.** Where the parser cannot
   determine which firm a board belongs to, the tie is left unattributed and
-  excluded from the network — **9,942 of 75,335 parsed ties, 13.2%** — instead
+  excluded from the network — **10,102 of 77,080 parsed ties, 13.1%** — instead
   of being credited to the previous firm in the document. They stay in
   `affiliations.csv` with an empty `company_key`, so the gap is inspectable
   rather than hidden.

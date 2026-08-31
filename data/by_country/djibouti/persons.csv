@@ -1,8 +1,8 @@
 person_id,surname,name_variants,n_companies,n_board_companies,n_observations,top_role,first_year,last_year,sectors
-michel-cote-c,Michel-Côte,Ch. Michel-Cote; Ch. Michel-Côte; Ch. Michel-Côte. 2; Charles Michel-Cote,7,7,35,president,1917,1953,Documents généraux; Sociétés
+michel-cote-c,Michel-Côte,Ch. Michel-Cote; Ch. Michel-Côte; Charles Michel-Cote,7,7,35,president,1917,1953,Documents généraux; Sociétés
 gimon-c,Gimon,Ch. Gimon; Charles Gimon; Charles Gimon 2,6,6,21,administrateur,1914,1951,Documents généraux; Sociétés
+hachette-r-rene,Hachette,René Hachette,7,6,17,administrateur,1919,1937,Documents généraux; Sociétés
 gorchs-chacou-f,Gorchs-Chacou,F. Gorchs-Chacou; Félix Gorchs-Chacou,6,6,10,administrateur,1919,1926,Documents généraux; Sociétés
-hachette-r-rene,Hachette,René Hachette; René Hachette1,5,4,15,administrateur,1920,1937,Documents généraux; Sociétés
 homberg-o,Homberg,O. Homberg; Octave Homberg,3,3,13,administrateur,1912,1933,Documents généraux; Sociétés
 bouffe-g,Bouffé,G. Bouffé; Gaston Bouffé,3,3,7,administrateur,1920,1937,Documents généraux; Sociétés
 moulin-p,Moulin,P. Moulin,3,3,7,administrateur,1920,1926,Documents généraux; Sociétés
@@ -19,7 +19,7 @@ guesde-p,Guesde,P. Guesde; Pierre Guesde,2,2,2,administrateur,1926,1937,Document
 rousset-bert-h,Rousset-Bert,Henri Rousset-Bert; Henry Rousset-Bert,2,2,2,administrateur,1937,1951,Documents généraux
 lemaignen-r,Lemaignen,Robert Lemaignen,2,2,2,administrateur,1937,1951,Documents généraux
 savon-l,Savon,L. Savon,2,2,2,administrateur,1926,1937,Documents généraux
-et-rene-hachette,et René Hachette,et René Hachette,2,2,2,administrateur,1919,1924,Sociétés
+duparchy-j,Duparchy,Duparchy; Jean Duparchy,2,2,2,administrateur,1896,1899,Sociétés
 naud-j,Naud,J. Naud; Joseph Naud,1,1,17,administrateur,1920,1953,Documents généraux; Sociétés
 dugardin-m,Dugardin,Dugardin,1,1,14,administrateur,1925,1953,Documents généraux; Sociétés
 berthelier-f,Berthelier,F. Berthelier; Ferdinand Berthelier,1,1,12,administrateur,1914,1937,Documents généraux; Sociétés
@@ -37,17 +37,21 @@ lallemand-c,Lallemand,Ch. Lallemand; Charles Lallemand,1,1,5,administrateur,1929
 leclerc-du-sablon-j,Leclerc du Sablon,J. Leclerc du Sablon; Leclerc du Sablon,1,1,5,administrateur_delegue,1945,1953,Documents généraux; Sociétés
 haile-mariam,Haile-Mariam,Haile-Mariam,1,1,5,administrateur,1912,1925,Sociétés
 tagagne-t,Tagagne,Tasfaë Tagagne,1,1,5,administrateur,1933,1948,Sociétés
+lacarriere-h,Lacarrière,H. Lacarrière; Henri Lacarrière; Lacarrière,1,1,5,administrateur,1896,1907,Sociétés
 boucard-m,Boucard,Boucard,1,1,4,administrateur,1917,1922,Documents généraux; Sociétés
+guerindon-e,Guérindon,E. Guérindon,1,1,4,administrateur,1921,1937,Documents généraux; Sociétés
 bodin-a,Bodin,A. Bodin,1,1,4,administrateur,1948,1953,Documents généraux; Sociétés
 minost-e,Minost,E. Minost,1,1,4,administrateur,1948,1953,Documents généraux; Sociétés
 meunier,Meunier,Meunier,1,1,4,administrateur,1912,1920,Sociétés
+ilg-a,Ilg,A. Ilg; Ilg,1,1,4,administrateur,1896,1907,Sociétés
 poggioli-a,Poggioli,Ange Poggioli,1,1,3,administrateur,1921,1926,Documents généraux; Sociétés
 boussac,Boussac,Boussac,1,1,3,administrateur,1920,1922,Documents généraux; Sociétés
 dewavrin-h,Dewavrin,Dewavrin,1,1,3,administrateur,1920,1922,Documents généraux; Sociétés
-guerindon-e,Guérindon,E. Guérindon; E. Guérindon. 6,1,1,3,administrateur,1921,1937,Documents généraux; Sociétés
 fassica-apte-mikael-a,Fassica Apte Mikael,Ato Fassica Apte Mikael; Atto Fassica Apte Mikael,1,1,3,administrateur,1925,1931,Sociétés
+denisane-r,Denisane,Denisane; Raoul Denisane,1,1,3,administrateur,1896,1901,Sociétés
 chefneux,Chefneux,Chefneux,1,1,3,administrateur,1898,1906,Sociétés
-lacarriere-h,Lacarrière,H. Lacarrière; Henri Lacarrière; Lacarrière,1,1,3,administrateur,1898,1906,Sociétés
+dubost,Dubost,Dubost,1,1,3,administrateur,1906,1907,Sociétés
+duros-h,Duros,Duros,1,1,3,administrateur,1906,1907,Sociétés
 estrine-l,Estrine,Estrine; Lucien Estrine,1,1,3,administrateur,1919,1925,Sociétés
 semana-j,Semana,J. Semana; Joseph Semana; Semana,1,1,3,administrateur,1919,1925,Sociétés
 van-luppen-j,Van Luppen,Joseph Van Luppen,1,1,2,president,1922,1926,Documents généraux
@@ -74,9 +78,9 @@ meyer-a,Meyer,A. Meyer,1,1,2,administrateur,1937,1940,Sociétés
 bevierre-h,Bevierre,H. Bevierre,1,1,2,administrateur,1937,1940,Sociétés
 wescat-g,Wescat,G. P. Wescat,1,1,2,administrateur,1945,1948,Sociétés
 baudouy-r,Baudouy,René Baudouy,1,1,2,administrateur,1898,1906,Sociétés
-denisane-r,Denisane,Denisane; Raoul Denisane,1,1,2,administrateur,1898,1901,Sociétés
-ilg-a,Ilg,A. Ilg,1,1,2,administrateur,1901,1906,Sociétés
 teillard-h,Teillard,H. Teillard,1,1,2,administrateur,1901,1906,Sociétés
+ponsignon,Ponsignon,Ponsignon,1,1,2,administrateur,1907,1907,Sociétés
+seyrig,Seyrig,Seyrig,1,1,2,administrateur,1907,1907,Sociétés
 barthelemy-l,Barthélémy,L. Barthélemy; Louis Barthélémy,1,1,2,administrateur,1899,1925,Sociétés
 roubaud-p,Roubaud,P. Roubaud; Paul Roubaud,1,1,2,administrateur,1919,1925,Sociétés
 tardieu-l,Tardieu,L. Tardieu; Léon Tardieu,1,1,2,administrateur,1919,1925,Sociétés
@@ -158,17 +162,21 @@ thibault-a,Thibault,Alphonse Thibault,1,1,1,administrateur,1901,1901,Sociétés
 suais-est-directeur-general-a,Suais est directeur général,Abel Suais est directeur général,1,1,1,administrateur,1901,1901,Sociétés
 le-ballastage,64. Le ballastage,64. Le ballastage,1,1,1,administrateur,1905,1905,Sociétés
 l-installation-des-ateliers-de-reparation-de-dire-,l'installation des ateliers de réparation de Diré-Daoua,l'installation des ateliers de réparation de Diré-Daoua,1,1,1,administrateur,1905,1905,Sociétés
+baudouy,Baudouy,Baudouy,1,1,1,administrateur,1907,1907,Sociétés
+crozier,Crozier,Crozier,1,1,1,administrateur,1912,1912,Sociétés
 galuld,Galuld,Galuld,1,1,1,administrateur,1920,1920,Sociétés
 guigniony-g,Guigniony,Guigniony,1,1,1,administrateur,1920,1920,Sociétés
 lorthiois,Lorthiois,Lorthiois,1,1,1,administrateur,1920,1920,Sociétés
 kahn,Kahn,Kahn,1,1,1,administrateur,1920,1920,Sociétés
 ruyters,Ruyters,Ruyters,1,1,1,administrateur,1920,1920,Sociétés
 sommer-e,Sommer,E. Sommer,1,1,1,administrateur,1928,1928,Sociétés
-levi-g,Lévi,Gaston Lévi,1,1,1,administrateur,1928,1928,Sociétés
+levi-g-gaston,Lévi,Gaston Lévi,1,1,1,administrateur,1928,1928,Sociétés
 gompel-r-robert,Gompel,Robert Gompel,1,1,1,administrateur,1928,1928,Sociétés
 levi-a,Lévi,Abel Lévi,1,1,1,administrateur,1928,1928,Sociétés
 meunier-r,Meunier,René Meunier,1,1,1,administrateur,1928,1928,Sociétés
 delompre-m,Delompré,Delompré,1,1,1,administrateur,1928,1928,Sociétés
+barthelemy,Barthelemy,Barthelemy,1,1,1,administrateur,1899,1899,Sociétés
+carriere,Carrière,Carrière,1,1,1,administrateur,1899,1899,Sociétés
 defrance-e,Defrance,Edmond Defrance,1,1,1,administrateur,1899,1899,Sociétés
 de-la-colonie,DE LA COLONIE,DE LA COLONIE,1,1,1,administrateur,1913,1913,Sociétés
 costa-de-beauregard-g,Costa de Beauregard,Gonzague Costa de Beauregard,1,1,1,president,1925,1925,Sociétés
@@ -180,9 +188,7 @@ tardieu,Tardieu,Tardieu,1,1,1,administrateur,1919,1919,Sociétés
 michel-cote,Michel-Cote,Michel-Cote,1,1,1,administrateur,1919,1919,Sociétés
 gimon,Gimon,Gimon,1,1,1,administrateur,1919,1919,Sociétés
 gorchs-chacou,Gorchs-Chacou,Gorchs-Chacou,1,1,1,administrateur,1919,1919,Sociétés
-ann-parisiennes,Ann. Parisiennes,Ann. Parisiennes,1,1,1,administrateur,1919,1919,Sociétés
 besson-l-leonce,Besson,Léonce Besson,1,1,1,administrateur,1925,1925,Sociétés
-duparchy,Duparchy,Duparchy,1,1,1,administrateur,1899,1899,Sociétés
 vigouroux,Vigouroux,Vigouroux,1,1,1,administrateur,1899,1899,Sociétés
 senevez,] Senevez,] Senevez,1,1,1,administrateur,1899,1899,Sociétés
 senevoz-e,Senevoz,E. Senevoz,1,1,1,administrateur_delegue,1899,1899,Sociétés
@@ -202,6 +208,4 @@ henrion,Henrion,Henrion,1,0,1,commissaire_aux_comptes,1933,1933,Sociétés
 besson-h,Besson,H. Besson,1,0,1,commissaire_aux_comptes,1933,1933,Sociétés
 de-ganay,de Ganay,de Ganay,1,0,1,directeur,1906,1906,Sociétés
 ponsignon-a,Ponsignon,Arthur Ponsignon,1,0,1,directeur,1906,1906,Sociétés
-dubost,Dubost,Dubost,1,0,1,directeur,1906,1906,Sociétés
-duros-h,Duros,Duros,1,0,1,directeur,1906,1906,Sociétés
 ed-aubert,Ed. Aubert,Ed. Aubert,1,0,1,commissaire_aux_comptes,1899,1899,Sociétés

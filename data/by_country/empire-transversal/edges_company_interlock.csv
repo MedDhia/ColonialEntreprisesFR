@@ -27,6 +27,7 @@ exploitationsminieresindustrielles,usinesmetallurgiqueshainautcouillet,Société
 forgesacieriesnordest,usinesmetallurgiqueshainautcouillet,Forges et aciéries du Nord et de l'Est,"Usines métallurgiques du Hainaut, Couillet",6,acieries-du-nord; bernard-j-jules; goudchaux-m-mathieu; griolet-g; metayer-m; villain-f
 centraleenergieelectriquerouenchateauroux,centraleindustrieelectrique,"Cie Centrale d'énergie électrique, Rouen, Châteauroux","Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",6,boulle-l; heineman-d; homberg-o; oliven-o; poirier-h; walch-e
 cheminsfertramwaysvargard,tramway,Société des Chemins de fer et tramways du Var et du Gard,Compagnie générale française des Tramway,6,ancion; boulle-l; goury-du-roslan-l; guary-l; pavie-g; renaud
+consortiumnord,financierecimentsindustrie,Consortium du Nord,"Financière des Ciments et de l'industrie, puis Compagnie industrielle des ciments",6,baudon-r; chausson-l; devilder-j; dupleix-p; flipo-p; york-j
 bateauxvapeurnord,saga,Cie des Bateaux à vapeur du Nord,SAGA,5,bourgeois-a; cangardel-h; javary-f; masset-e; mory-g
 navigationpaquet,transportsmaritimesvapeur,Compagnie de navigation Paquet,Société générale de transports maritimes à vapeur,5,brenier-g; daher-p; desbief-p; giraud-h-hubert; nunzi-a
 navigationsudatlantique,transportsmaritimesvapeur,Compagnie de Navigation Sud-Atlantique,Société générale de transports maritimes à vapeur,5,breton-g; giraud; giraud-h-hubert; robert; robert-m-max
@@ -43,11 +44,14 @@ cheminsfertramwaysvargard,tramwayssaintquentin,Société des Chemins de fer et t
 centraleenergieelectrique,centraleindustrieelectrique,Centrale d'Énergie électrique,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",5,boulle-l; homberg-o; lorain-m; poirier-h; walch-e
 forgesacieriesnordest,unionmines,Forges et aciéries du Nord et de l'Est,Union des mines,5,cuvelette-e; descamps-a; esteve-h; le-blan-j; thouzellier-e
 eieditionsdocumentairesindustrielles,eieditionsdocumentairesindustriellessoccap,"S. É. D. I., Société d'éditions documentaires industrielles","S. É. D. I., Société d'Éditions Documentaires Industrielles, Soc. an. au cap. de",5,bancel-h; lamey-f; pernet-g; poire-a; walter-j-jean
+banquetransatlantique,messageriesmaritimes,Banque transatlantique,Société des Messageries maritimes,5,gavini-de-campile-d; gery-c; guerin-de-litteau-e; halfon-s; pereire-e
 mineraisferkrivoirog,mineraisfermagnetiquesmoktaelhadid,Société des Minerais de fer de Krivoï-Rog,Cie des minerais de fer magnétiques de Mokta-el-Hadid,5,beigbeder-d; cambefort-j; de-nervo; homberg-o; parran-a
 acomptedividendeimpot,tramway,Acompte sur dividende et impôt,Compagnie générale française des Tramway,5,boulle-l; goury-du-roslan-l; guary-l; pavie-g; rostand-j-jules
 centraleindustrieelectrique,tramways,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",Compagnie Générale Française de Tramways,5,boulle-l; burrell-c; carle-v; hecker-r; pavie-g
 gerancearmement,saga,Société de Gérance et d'armement,SAGA,4,bourgeois-a; javary-f; masset-e; mory-g
 commercialeindustriellecoteafrique,fraissinetmarseillaisenavigationvapeur,Société Commerciale et Industrielle de la Côte d'Afrique,"Compagnie FRAISSINET, Cie Marseillaise de Navigation à vapeur",4,chabrieres-m-maurice; fraissinet-a-albert; fraissinet-a-alfred; fraissinet-j
+produitselectrochimiquesmetallurgiquespyreneesarreau,universelleexplosifsproduitschimiques,"Société de Produits électro-chimiques et métallurgiques des Pyrénées, Arreau","Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",4,bonnet-j; bouchayer-h; corbin-p-paul; girard-c
+etablissementsmaurelhprom,maurelprom,Etablissements MAUREL et H. PROM,Maurel et Prom,4,maurel-j-jean; maurel-j-joseph; maurel-l-lucien; prom-l
 auxiliaireafricaine,colonies,Société Auxiliaire africaine,Compagnie Générale des colonies,4,delmas; delmas-p-philippe; josse-a-adrien; maurel-l-lucien
 etablissementsmaurelprom,maurelprom,Établissements Maurel et Prom,Maurel et Prom,4,jehan-de-lastic-saint-jal; lavigne-d; maurel-j-joseph; maurel-l-lucien
 fiduciaireindochine,unionfinanciereextremeorient,"Société fiduciaire d'Indochine, Anct Société indochinoise de contrôle et",Union financière d'Extrême-Orient,4,agabriel-l; boudon-r-robert; denis-e-etienne; hadengue-y
@@ -72,36 +76,34 @@ minesblaymard,minesblaymardbleymard,MINES DU BLAYMARD,"Mines du Blaymard, Le Ble
 centraleenergieelectriquerouenchateauroux,industrieelectrique,"Cie Centrale d'énergie électrique, Rouen, Châteauroux",INDUSTRIE ÉLECTRIQUE,4,boulle-l; heineman-d; poirier-h; walch-e
 creditfonciercolonial,creditfonciercolonialbanque,Crédit foncier colonial,Société de Crédit foncier colonial et de banque,4,buzon-j; de-margerie-j; devies-m; harth-g
 betonarme,grandstravauxbetonarme,BÉTON ARMÉ,Société des Grands Travaux en béton armé,4,michel-c; rebuffel-c; tricon; tricon-j
+cheddites,explosifs,CHEDDITES,Société générale d'explosifs,4,bouchayer-h; clemenceau-p; le-play-p; level-j
 francowyomingoilcy,huelvacoppersulfurminesltd,Franco-Wyoming Oil Cy,"Huelva Copper and Sulfur Mines, Ltd",4,bondonneau-h; chopy-e; fontaine-e; gaillochet-h
 industrielle,pyreneenneenergieelectrique,Compagnie générale industrielle,Société Pyrénéenne d'Énergie électrique,4,de-solages-c; reille; reille-a; reille-x
+malfidano,minesmalfidano,Malfidano,MINES DE MALFIDANO,4,bavelier-l; demenge-e; fournier-r-raymond; monvoisin-f
 constructions,eieditionsdocumentairesindustrielles,Société de constructions,"S. É. D. I., Société d'éditions documentaires industrielles",4,bancel-h; duvernoy-g; poire-a; walter-j-jean
 benardjarislovsky,minesminerais,"Bénard et Jarislovsky, puis Bénard frères et Cie",Compagnie de Mines et minerais,4,baszanger-j; deschars-l; strauss-a; strauss-e
-banquetransatlantique,messageriesmaritimes,Banque transatlantique,Société des Messageries maritimes,4,gavini-de-campile-d; gery-c; halfon-s; pereire-e
 acomptedividendeimpot,cheminsfertramwaysvargard,Acompte sur dividende et impôt,Société des Chemins de fer et tramways du Var et du Gard,4,boulle-l; goury-du-roslan-l; guary-l; pavie-g
 tramways,tramwayssaintquentin,Compagnie Générale Française de Tramways,Compagnie des Tramways de Saint-Quentin,4,autin-j; delavergnas-l; mechin-a; pinson-v
 decauvilleaine,etablissementsdecauvilleaine,DECAUVILLE aîné,Société Nouvelle des Établissements Decauville aîné,4,baguenault-de-puchesse-a; boyer-h; freynet-c; witzig-a
 alexisgabrielrenethibaultsolagespresident,industrielle,"Alexis-Gabriel-René Thibault de SOLAGES, président",Compagnie générale industrielle,4,boemare-l; cochard; lacaze-p; pereire
+trustimmobilierfrance,uniontrust,Trust immobilier de France,Union Trust,4,barth-e; boemare-l; siaume-a; stockhammer-a
 bazacle,rototype,BAZACLE,ROTOTYPE,4,cavallier-c; keller; lamasse-j; thouzellier-e
-consortiumnord,financierecimentsindustrie,Consortium du Nord,"Financière des Ciments et de l'industrie, puis Compagnie industrielle des ciments",4,baudon-r; chausson-l; devilder-j; dupleix-p
-cheddites,explosifs,CHEDDITES,Société générale d'explosifs,4,bouchayer-h; clemenceau-p; le-play-p; level-j
 ancetablissementsjosephparis,entreprisetravauxpublicsouest,Anc. Établissements Joseph Paris,Entreprise de travaux publics de l’Ouest,4,alliot-p; bolo-f; caldagues-j; tardy-l
-malfidano,minesmalfidano,Malfidano,MINES DE MALFIDANO,4,bavelier-l; demenge-e; fournier-r-raymond; monvoisin-f
 halleboissaintcloud,immobilieresaintcloud,"Halle aux bois, Saint-Cloud, puis Société immobilière de Saint-Cloud",SOCIÉTÉ IMMOBILIÈRE DE SAINT-CLOUD,4,aubert; martin-j; maurice-a; vives
 havraisepeninsulairenavigationvapeur,havraisepeninsulairenavigatonvapeur,Cie havraise péninsulaire de NAVIGATION A VAPEUR,Compagnie Havraise Péninsulaire de Navigaton à vapeur,4,bernard-r; latham-e; perier-f; tricot-l
 mineraisfermagnetiquesmoktaelhadid,transportsmaritimesvapeur,Cie des minerais de fer magnétiques de Mokta-el-Hadid,Société générale de transports maritimes à vapeur,4,am-a; deniere; fere-v; parran-a
 charbonnages,produitschimiquescharbonnages,CHARBONNAGES,Société de produits chimiques et de charbonnages,4,audy-p; bonnet-e; gaudet-r; mauselin-a
+armement,bateauxvapeurnord,ARMEMENT,Cie des Bateaux à vapeur du Nord,3,kahn-e; peyronnet-a; waage-n
 navigationpaquet,tronquegauche,Compagnie de navigation Paquet,Tronqué à gauche,3,brenier-g; daher-p; nunzi-a
+miniereribeira,minierevalburatmarignac,Compagnie minière de la Ribeira,"Compagnie Minière du Val-de-Burat, Marignac",3,achalme-j; achalme-p; benard-l
 coteafrique,fraissinetmarseillaisenavigationvapeur,CÔTE D'AFRIQUE,"Compagnie FRAISSINET, Cie Marseillaise de Navigation à vapeur",3,fraissinet-a-albert; fraissinet-a-alfred; fraissinet-j
 coteafrique,marseillaisenavigationvapeurfraissinet,CÔTE D'AFRIQUE,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,3,fraissinet-a-albert; fraissinet-a-alfred; fraissinet-j
 fraissinetmarseillaisenavigationvapeur,servicescontractuelsmessageriesmaritimes,"Compagnie FRAISSINET, Cie Marseillaise de Navigation à vapeur",Société des Services contractuels des messageries maritimes,3,fraissinet-a-alfred; fraissinet-j; philippar-g
 marseillaisenavigationvapeurfraissinet,servicescontractuelsmessageriesmaritimes,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,Société des Services contractuels des messageries maritimes,3,fraissinet-a-alfred; fraissinet-j; philippar-g
 marseillaisenavigationvapeurfraissinet,navigationfraissinet,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,Cie de navigation Fraissinet,3,chabrieres; fraissinet; fraissinet-j
-charbonnages,universelleexplosifsproduitschimiques,CHARBONNAGES,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",3,corbin-p-paul; gaudet-r; mauselin-a
 forcesmotricesusinesarve,produitselectrochimiquesmetallurgiquespyreneesarreau,Société des Forces motrices et usines de l'Arve,"Société de Produits électro-chimiques et métallurgiques des Pyrénées, Arreau",3,bonnet-j; corbin-p-paul; girard-c
-produitselectrochimiquesmetallurgiquespyreneesarreau,universelleexplosifsproduitschimiques,"Société de Produits électro-chimiques et métallurgiques des Pyrénées, Arreau","Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",3,bonnet-j; corbin-p-paul; girard-c
 auxiliaireafricaine,maurelprom,Société Auxiliaire africaine,Maurel et Prom,3,frere-m; maurel-l-lucien; prom
 auxiliaireafricainedeveloppementcommerce,colonies,"Société auxiliaire africaine pour le développement du commerce, de",Compagnie Générale des colonies,3,josse-a-adrien; maurel-l-lucien; ph-delmas
-etablissementsmaurelhprom,maurelprom,Etablissements MAUREL et H. PROM,Maurel et Prom,3,maurel-j-jean; maurel-j-joseph; maurel-l-lucien
 forgesacieriesnordlorraine,usinesmetallurgiqueshainautcouillet,Forges et aciéries de Nord et Lorraine,"Usines métallurgiques du Hainaut, Couillet",3,bernard-j-jules; metayer-m; villain-f
 usinesmetallurgiquesbasseloire,usinesmetallurgiqueshainautcouillet,Usines métallurgiques de la BASSE-LOIRE,"Usines métallurgiques du Hainaut, Couillet",3,bernard-j-jules; goudchaux-m-mathieu; metayer-m
 forgesacieriesnordest,industriellematerieltransportcimt,Forges et aciéries du Nord et de l'Est,"Cie industrielle de MATÉRIEL de TRANSPORT, C.I.M.T",3,goudchaux-m-mathieu; joubert-j-jean; metayer-m
@@ -112,6 +114,7 @@ chargeursreunis,transportsmaritimesafriqueoccidentale,Chargeurs réunis,Compagni
 banquemadagascar,creditfonciermadagascar,Banque de Madagascar,Crédit foncier de Madagascar,3,bourdariat-a; michel-cote-c; philippar-g
 creditfonciermadagascar,messageriesmaritimes,Crédit foncier de Madagascar,Société des Messageries maritimes,3,lacaze-l; loisy-x; philippar-g
 creditfonciermadagascar,servicescontractuelsmessageriesmaritimes,Crédit foncier de Madagascar,Société des Services contractuels des messageries maritimes,3,lacaze-l; le-gallen-m; philippar-g
+centraleindustrieelectrique,unionindustriellecredit,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",Union industrielle de crédit,3,boyer-j; level-e; wibratte-l
 colonies,unionindustriellecredit,Compagnie Générale des colonies,Union industrielle de crédit,3,beaupere-l; bouis; level-e
 marseillaisecreditindustrielcommercialdepots,transportsmaritimesvapeur,Société Marseillaise de Crédit industriel et commercial et de dépôts,Société générale de transports maritimes à vapeur,3,bazin-j; bergasse-a; oppermann-a
 banqueindochine,creditcolonial,Banque de l’Indochine,Crédit colonial,3,baudouin-p; borduge-m; celier-a
@@ -124,9 +127,13 @@ creditmobilierindochinoisexploitationmonts,fiduciaireindochine,"Crédit mobilier
 comptoirpichotrennecon,comptoirspichotrennecon,Comptoir Pichot et Renneçon,Comptoirs Pichot & Renneçon,3,blanc-p; pichot-c; rennecon-p
 grandemaisonblanc,rouff,Grande Maison de Blanc,Société L. Rouff,3,bloch-m; katz-m; worms-e
 credit,tabacs,Crédit français,Compagnie Générale des Tabacs,3,bouilloux-lafont; bouilloux-lafont-m-marcel; reille-a
+etudesentreprisescoloniales,guet,Compagnie française d'Études et entreprises coloniales,"Guët & Cie, puis Guët, Raffard & Cie",3,dhe-p; guet-g; sautter
+explosifs,universelleexplosifsproduitschimiques,Société générale d'explosifs,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",3,bouchayer; bouchayer-h; corbin
+auxiliairecredit,banquecentrale,Société Auxiliaire de crédit,Banque centrale française,3,de-montreuil-l; van-veerssen-b; victor-c
 azote,explosifsminelite,L'Azote français,"Explosifs Minélite, puis La Kinsite",3,bouchardy-f; gros-f; heidelberg-p
 energieelectrique,industrielle,ÉNERGIE ELECTRIQUE,Compagnie générale industrielle,3,de-solages-c; reille; reille-x
 constructions,mwalteradministrateurdelegue,Société de constructions,"M. Walter, administrateur-délégué",3,bancel-h; brice-a; walter-j-jean
+magasinsmodernesfilialecommunenouvellesgaleriesparisfrance,parisfrance,"Magasins modernes, filiale commune des Nouvelles Galeries et de Paris-France",Paris-France,3,canlorbe-a; demoge-l; gompel-r-robert
 centraleapplicationselectriques,centraleenergieelectrique,"Société Centrale d'applications électriques, puis Centrale d'applications et de particiaptions industrielles",Centrale d'Énergie électrique,3,boulle-l; homberg-o; rosenwald-g
 centraleapplicationselectriques,centraleenergieelectriquerouenchateauroux,"Société Centrale d'applications électriques, puis Centrale d'applications et de particiaptions industrielles","Cie Centrale d'énergie électrique, Rouen, Châteauroux",3,boulle-l; homberg-o; rosenwald-g
 centraleenergieelectrique,tramways,Centrale d'Énergie électrique,Compagnie Générale Française de Tramways,3,boulle-l; caillaux-p; toche-c
@@ -134,17 +141,15 @@ centraleindustrieelectrique,tramway,"Société Centrale pour l'industrie électr
 cheminsfertramwaysvargard,tramwayscambraisaintquentin,Société des Chemins de fer et tramways du Var et du Gard,Compagnie des Tramways de Cambrai et de Saint-Quentin,3,boulle-l; gregoire; guiffart-a
 centraleindustrieelectrique,financiereelectrique,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",Société Financière Électrique,3,hecker-r; pavie-g; pesson-didion-m
 entreprisesgrandstravauxhydrauliques,materiauxindustriels,Entreprises de grands travaux hydrauliques,Cie des MATÉRIAUX INDUSTRIELS,3,blazeix-h; clos-j; ledoux-e
-trustimmobilierfrance,uniontrust,Trust immobilier de France,Union Trust,3,barth-e; boemare-l; stockhammer-a
 bazacle,unionmines,BAZACLE,Union des mines,3,le-normand-p; thouzellier-e; weiss-p-paul
 descourscabaud,descourscabaudproduitsmetallurgiques,Descours et Cabaud,"DESCOURS et CABAUD, PRODUITS MÉTALLURGIQUES",3,baguenault-de-puchesse-a; de-grandry-r; de-vaux-p
-explosifs,universelleexplosifsproduitschimiques,Société générale d'explosifs,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",3,bouchayer; bouchayer-h; corbin
 energieindustrielle,portefeuille,L'Énergie industrielle,Société française de portefeuille,3,palliez-a; siaume-a; stockhammer-a
+portefeuille,uniontrust,Société française de portefeuille,Union Trust,3,schaller-j; siaume-a; stockhammer-a
 etsorosdiback,orosdiback,Éts Orosdi-Back,Orosdi-Back,3,back-de-surany-h; hohl-l; orosdi-l
 orosdiback,tabacsorientoutremer,Orosdi-Back,Société des Tabacs d'Orient et d'Outremer,3,bonnier-f; dutasta-p; ricois-e
-produitschimiquescharbonnages,universelleexplosifsproduitschimiques,Société de produits chimiques et de charbonnages,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",3,audy; gaudet-r; mauselin-a
-armement,bateauxvapeurnord,ARMEMENT,Cie des Bateaux à vapeur du Nord,2,kahn-e; peyronnet-a
+produitschimiquescharbonnages,universelleexplosifsproduitschimiques,Société de produits chimiques et de charbonnages,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",3,audy; gaudet; mauselin-a
+armement,gerancearmement,ARMEMENT,Société de Gérance et d'armement,2,peyronnet-a; waage-n
 bateauxvapeurnord,navaleouest,Cie des Bateaux à vapeur du Nord,Société Navale de l'Ouest,2,cangardel-h; peyronnet-a
-miniereribeira,minierevalburatmarignac,Compagnie minière de la Ribeira,"Compagnie Minière du Val-de-Burat, Marignac",2,achalme-j; achalme-p
 miniereribeira,outremer,Compagnie minière de la Ribeira,Compagnie Générale d'Outre-mer,2,achalme-j; achalme-p
 minierevalburatmarignac,outremer,"Compagnie Minière du Val-de-Burat, Marignac",Compagnie Générale d'Outre-mer,2,achalme-j; achalme-p
 commercialeindustriellecoteafrique,servicescontractuelsmessageriesmaritimes,Société Commerciale et Industrielle de la Côte d'Afrique,Société des Services contractuels des messageries maritimes,2,fraissinet-a-alfred; fraissinet-j
@@ -152,11 +157,13 @@ coteafrique,servicescontractuelsmessageriesmaritimes,CÔTE D'AFRIQUE,Société d
 navigationfraissinet,servicescontractuelsmessageriesmaritimes,Cie de navigation Fraissinet,Société des Services contractuels des messageries maritimes,2,fraissinet-j; lacaze-l
 comptoirsdufaygigandet,comptoirsdufaygigandetmarseillesuccursalehavreparticipationsindochinemadagascarafriquenoire,COMPTOIRS DUFAY et GIGANDET,"Comptoirs Dufay & Gigandet, Marseille. Succursale au Havre. Participations en Indochine, à Madagascar et en Afrique noire",2,dufay-c; gigandet
 navigationsudatlantique,navigationvapeur,Compagnie de Navigation Sud-Atlantique,Cie générale de navigation à vapeur,2,dreyfus-d; fabre-l
+charbonnages,universelleexplosifsproduitschimiques,CHARBONNAGES,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",2,corbin-p-paul; mauselin-a
 industriellegrandepecheportetienne,unionelectriquecoloniale,"Société Industrielle de la Grande Pêche, Port-Étienne","Union électrique coloniale, puis Union électrique d’outre-mer",2,barris-p; lessault-s
 maurelprom,transportsmaritimesvapeur,Maurel et Prom,Société générale de transports maritimes à vapeur,2,armand; maurel
 auxiliaireafricainedeveloppementcommerce,maurelprom,"Société auxiliaire africaine pour le développement du commerce, de",Maurel et Prom,2,frere-m; maurel-l-lucien
 auxiliaireafricaine,bordeaux,Société Auxiliaire africaine,Compagnie de Bordeaux,2,maurel-l-lucien; prom
 bordeaux,maurelprom,Compagnie de Bordeaux,Maurel et Prom,2,maurel-l-lucien; prom
+maurelprom,navigationsudatlantique,Maurel et Prom,Compagnie de Navigation Sud-Atlantique,2,prom; prom-l
 auxiliaireafricaine,banqueafriqueoccidentale,Société Auxiliaire africaine,Banque de l'Afrique occidentale,2,maurel-l-lucien; nouvion-h
 auxiliaireafricainedeveloppementcommerce,banqueafriqueoccidentale,"Société auxiliaire africaine pour le développement du commerce, de",Banque de l'Afrique occidentale,2,maurel-l-lucien; nouvion-h
 banqueafriqueoccidentale,bordeaux,Banque de l'Afrique occidentale,Compagnie de Bordeaux,2,gradis-g; maurel-l-lucien
@@ -193,7 +200,6 @@ colonies,industriellefonciere,Compagnie Générale des colonies,"L'Industrielle 
 creditfoncieralgerietunisie,industriellefonciere,Crédit foncier d'Algérie-Tunisie,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",2,delarue-j; lebon-a-andre
 creditfoncieralgerietunisie,messageriesmaritimes,Crédit foncier d'Algérie-Tunisie,Société des Messageries maritimes,2,lebon-a-andre; loisy-x
 centraleindustrieelectrique,maritimenationale,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",Société maritime nationale,2,brizon-g; level-e
-centraleindustrieelectrique,unionindustriellecredit,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",Union industrielle de crédit,2,boyer-j; level-e
 industrieelectrique,maritimenationale,INDUSTRIE ÉLECTRIQUE,Société maritime nationale,2,brizon-g; level-e
 africaineculturesindustrielles,messageriesafricaines,Compagnie Africaine de cultures industrielles,Messageries africaines,2,cahen-fuzier-e; hirsch-h
 colonialegeranceetudes,etablissements1807deveschaumetbordeauxdakar,Société Coloniale de gérance et d'études,"Établissements, 1807 Devès et Chaumet, Bordeaux-Dakar",2,begouen-m; de-lestapis-r
@@ -249,23 +255,29 @@ auxiliaireafricaine,delmassuccessivementphilippelafarguephilippelafarguejosephla
 auxiliaireafricainedeveloppementcommerce,delmassuccessivementphilippelafarguephilippelafarguejosephlarrieuphilippelafarguejeananselmedelmasdelmasclastresphilippedelmas,"Société auxiliaire africaine pour le développement du commerce, de","Delmas et Cie (successivement Philippe Lafargue, Philippe Lafargue et Joseph Larrieu, Philippe Lafargue et Jean-Anselme Delmas, Delmas et Clastres, Philippe Delmas)",2,delmas-p-pierre; o-quin-p
 banquecolonialeetudesentreprisesmutuellesditebanquecoloniale,unioncolonialefinanciereprivee,Banque coloniale d'études et d'entreprises mutuelles dite Banque coloniale,Union coloniale et financière privée,2,froment-guieysse-g; lemoigne-e
 grandemaisonblanc,grandstravauxbetonarme,Grande Maison de Blanc,Société des Grands Travaux en béton armé,2,michel-c; worms-e
-etudesentreprisescoloniales,guet,Compagnie française d'Études et entreprises coloniales,"Guët & Cie, puis Guët, Raffard & Cie",2,dhe-p; sautter
+constructions,minieregundafa,Société de constructions,Société minière des Gundafa,2,berger-h; berger-v
+entrepriseshydrauliquestravauxpublics,explosifs,Compagnie d'Entreprises hydrauliques et de travaux publics,Société générale d'explosifs,2,bouchayer; bouchayer-h
+entrepriseshydrauliquestravauxpublics,universelleexplosifsproduitschimiques,Compagnie d'Entreprises hydrauliques et de travaux publics,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",2,bouchayer; bouchayer-h
 associationminiere,etudesentreprisescoloniales,Association minière,Compagnie française d'Études et entreprises coloniales,2,robellaz; robellaz-f
 associationminiere,mineslaurium,Association minière,Compagnie française des Mines du Laurium,2,merigeault-e; talis-r
 associationminiere,baronnervopdtdirgen,Association minière,"Baron L. de Nervo, pdt-dir. gén",2,boissonnas-r; lafond-h
 anciensetablissementslamazierebunzliateliersvaucanson,ateliersvaucanson,Anciens Établissements Lamazière et Bünzli Ateliers Vaucanson,Ateliers Vaucanson,2,lamaziere-l; malon-j
-auxiliairecredit,banquecentrale,Société Auxiliaire de crédit,Banque centrale française,2,van-veerssen-b; victor-c
 aerienne,phosphatescierp,Compagnie Aérienne française,Compagnie des Phosphates de Cierp,2,gros; gros-f
 electroentreprise,phosphatescierp,L'Électro-Entreprise,Compagnie des Phosphates de Cierp,2,gros-f; guerin-p-pierre
 aguilas,internationaleminiereindustrielleestanera,Compagnie d'Aguilas,Cie internationale minière et industrielle Estañera,2,benazet-p; guillet-l
+banquepriveecoloniale,parisiennecomptoirscoloniaux,Banque privée coloniale,Compagnie Parisienne des Comptoirs coloniaux,2,blond-h; vacquie-g
+mineslaurium,minesmalfidano,Compagnie française des Mines du Laurium,MINES DE MALFIDANO,2,monvoisin-f; urruty-f
 eieditionsdocumentairesindustrielles,mwalteradministrateurdelegue,"S. É. D. I., Société d'éditions documentaires industrielles","M. Walter, administrateur-délégué",2,bancel-h; walter-j-jean
 eieditionsdocumentairesindustriellessoccap,mwalteradministrateurdelegue,"S. É. D. I., Société d'Éditions Documentaires Industrielles, Soc. an. au cap. de","M. Walter, administrateur-délégué",2,bancel-h; walter-j-jean
-guet,industriellefonciere,"Guët & Cie, puis Guët, Raffard & Cie","L'Industrielle Foncière, puis Industrielle Foncière et Routière",2,laurent; loi
 geranceparisienneprivee,hautsfourneauxchiers,Gérance parisienne privée,Hauts Fourneaux de la Chiers,2,rosenstock-p; ullmann
 banquecommercialeindustrielle,malfidano,Banque commerciale et industrielle,Malfidano,2,bourgeois; mauger-e
+colonialeindustrielle,comptoirindustrielcolonial,Compagnie Française Coloniale et Industrielle,Comptoir industriel et colonial,2,mellier-l; siegfried-e
 banquetransatlantique,mineslucette,Banque transatlantique,Société nouvelle des mines de La Lucette,2,faure; faure-j
 banquetransatlantique,colonies,Banque transatlantique,Compagnie Générale des colonies,2,bloch; bloch-m
 colonies,navigationsudatlantique,Compagnie Générale des colonies,Compagnie de Navigation Sud-Atlantique,2,bloch; gaston-f
+caissecommercialeindustrielleparis,tabacs,Caisse commerciale et industrielle de Paris,Compagnie Générale des Tabacs,2,bouilloux-lafont-m-marcel; grosselin-p
+candlot,navigationsudatlantique,Candlot,Compagnie de Navigation Sud-Atlantique,2,edouard; emile
+navaleouest,navigationsudatlantique,Société Navale de l'Ouest,Compagnie de Navigation Sud-Atlantique,2,edouard; leon
 candlot,forgesacieriesnordlorraine,Candlot,Forges et aciéries de Nord et Lorraine,2,bessonneau-j; frappier-a
 centraleapplicationselectriques,centraleindustrieelectrique,"Société Centrale d'applications électriques, puis Centrale d'applications et de particiaptions industrielles","Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",2,boulle-l; homberg-o
 centraleenergieelectrique,soieriesfducharne,Centrale d'Énergie électrique,Soieries F.Ducharne,2,homberg-o; toche-c
@@ -281,43 +293,42 @@ industrieelectrique,tramways,INDUSTRIE ÉLECTRIQUE,Compagnie Générale Françai
 financiereelectrique,tramways,Société Financière Électrique,Compagnie Générale Française de Tramways,2,hecker-r; pavie-g
 financiereelectrique,industrieelectrique,Société Financière Électrique,INDUSTRIE ÉLECTRIQUE,2,hecker-r; pesson-didion-m
 mineslaurium,tramways,Compagnie française des Mines du Laurium,Compagnie Générale Française de Tramways,2,carle-v; rostand-j-jules
+decauvilleaineetablissements,etudesentreprisescoloniales,"Decauville aîné, Société, Société nouvelle des Établissements)",Compagnie française d'Études et entreprises coloniales,2,boyer; denis
+acomptedividendeimpot,creditcolonial,Acompte sur dividende et impôt,Crédit colonial,2,camargue; froges
 entreprisesgrandstravauxhydrauliques,industriellefonciere,Entreprises de grands travaux hydrauliques,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",2,blazeix-h; clos-j
 bazacle,omniumentreprises,BAZACLE,Omnium d'entreprises,2,cavallier-c; nancy
 bazacle,energieelectrique,BAZACLE,ÉNERGIE ELECTRIQUE,2,keller; lacretelle-g
 bazacle,pyreneenneenergieelectrique,BAZACLE,Société Pyrénéenne d'Énergie électrique,2,houel-j; lacretelle-g
+acierieslongwy,credit,Société des Aciéries de Longwy,Crédit français,2,superville-m; weiss-p-paul
 credit,unionmines,Crédit français,Union des mines,2,weiss-p; weiss-p-paul
-decauvilleaineetablissements,etudesentreprisescoloniales,"Decauville aîné, Société, Société nouvelle des Établissements)",Compagnie française d'Études et entreprises coloniales,2,boyer; denis
 etudesentreprisescoloniales,fraissinetmarseillaisenavigationvapeur,Compagnie française d'Études et entreprises coloniales,"Compagnie FRAISSINET, Cie Marseillaise de Navigation à vapeur",2,dal-piaz-j; devise-f
 etudesentreprisescoloniales,marseillaisenavigationvapeurfraissinet,Compagnie française d'Études et entreprises coloniales,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,2,dal-piaz-j; devise-f
 cotoncolonial,etudesentreprisescoloniales,Compagnie Française du Coton colonial,Compagnie française d'Études et entreprises coloniales,2,devise-f; raverat
 marseillaisenavigationvapeurfraissinet,mineslaurium,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,Compagnie française des Mines du Laurium,2,homberg; rodocanachi
 aguilas,minesproduitschimiques,Compagnie d'Aguilas,Société de Mines et de produits chimiques,2,drappier-g; muller-nico-g
-colonialeindustrielle,comptoirindustrielcolonial,Compagnie Française Coloniale et Industrielle,Comptoir industriel et colonial,2,mellier-l; siegfried-e
 colonialeindustrielle,etudesentreprisescoloniales,Compagnie Française Coloniale et Industrielle,Compagnie française d'Études et entreprises coloniales,2,raverat-g; siegfried-e
 consortiumnord,polietchausson,Consortium du Nord,Poliet et Chausson,2,chausson-l; prouvost-eloy-e
 redevancesminieresparticipations,roumanobelgepetrole,Société de Redevances minières et de participations,Roumano-Belge de Pétrole,2,lippens-e; lippens-h
-entrepriseshydrauliquestravauxpublics,explosifs,Compagnie d'Entreprises hydrauliques et de travaux publics,Société générale d'explosifs,2,bouchayer; bouchayer-h
-entrepriseshydrauliquestravauxpublics,universelleexplosifsproduitschimiques,Compagnie d'Entreprises hydrauliques et de travaux publics,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",2,bouchayer; bouchayer-h
+energieindustrielle,trustimmobilierfrance,L'Énergie industrielle,Trust immobilier de France,2,siaume-a; stockhammer-a
 energieindustrielle,uniontrust,L'Énergie industrielle,Union Trust,2,siaume-a; stockhammer-a
 omniumlyonnais,trustimmobilierfrance,Omnium lyonnais,Trust immobilier de France,2,barth-e; stockhammer-a
 omniumlyonnais,uniontrust,Omnium lyonnais,Union Trust,2,barth-e; stockhammer-a
-portefeuille,uniontrust,Société française de portefeuille,Union Trust,2,siaume-a; stockhammer-a
+portefeuille,trustimmobilierfrance,Société française de portefeuille,Trust immobilier de France,2,siaume-a; stockhammer-a
 etablissementsbeccatdoulaincourtmusseycorbiebonneville,travauxhydrauliquesentreprisesgenerales,"Établissements Beccat, Doulaincourt et Mussey, Corbie, Bonneville",Travaux hydrauliques et entreprises générales,2,castel; jordan
+caoutchoucs,cotoncolonial,Société française des caoutchoucs,Compagnie Française du Coton colonial,2,raverat; siegfried
 baronnervopdtdirgen,mineraisfermagnetiquesmoktaelhadid,"Baron L. de Nervo, pdt-dir. gén",Cie des minerais de fer magnétiques de Mokta-el-Hadid,2,bouruet-aubertot-h; cambefort-o
 baronnervopdtdirgen,moktaelhadid,"Baron L. de Nervo, pdt-dir. gén",MOKTA-EL-HADID,2,bouruet-aubertot-h; cambefort-o
 forgesacieriesnordest,unionindustriellecredit,Forges et aciéries du Nord et de l'Est,Union industrielle de crédit,2,bigo-o; descamps-a
-mineslaurium,minesmalfidano,Compagnie française des Mines du Laurium,MINES DE MALFIDANO,2,monvoisin-f; urruty-f
 francowyomingoilcy,huelvacoppersulfurmines,Franco-Wyoming Oil Cy,Huelva copper and sulfur mines,2,bondonneau-h; gaillochet-h
 commercesudafricain,etsorosdiback,Société française du commerce du Sud-Africain,Éts Orosdi-Back,2,back-de-surany-h; orosdi-l
 commercesudafricain,orosdiback,Société française du commerce du Sud-Africain,Orosdi-Back,2,back-de-surany-h; orosdi-l
 grandshotelsmarocains,holdingcoloniale,Les Grands Hôtels marocains,La Holding coloniale,2,chauffour-j; nenard-r
-constructions,minieregundafa,Société de constructions,Société minière des Gundafa,2,berger-h; berger-v
 lorraine,lorraineluneville,"Lorraine des Anciens Éts de Dietrich, Lunéville, Argenteuil, Bagnères-de-Bigorre",Lorraine-Lunéville,2,barbarou-m; nicaise-c
-magasinsmodernesfilialecommunenouvellesgaleriesparisfrance,parisfrance,"Magasins modernes, filiale commune des Nouvelles Galeries et de Paris-France",Paris-France,2,demoge-l; gompel-r-robert
+minesliatpyreneesespagnols,minesvalaranpyreneesespagnols,"Société française des Mines du Liat, Pyrénées espagnols","Société française des Mines du Val d'Aran, Pyrénées espagnols",2,picquet-m; thiriaux-a
 omniumlyonnais,unionmines,Omnium lyonnais,Union des mines,2,jouasset-g; quesnot-l
+atelierslegrandseguin,poudressurete,Ateliers LEGRAND et SEGUIN,Société française des Poudres de sûreté,2,barthelemy-l; schmerber-h
 unionindustriellecreditreconstitution,unionmines,Union industrielle de crédit pour la reconstitution,Union des mines,2,courtin; descamps
 unionindustriellecredit,unionindustriellecreditreconstitution,Union industrielle de crédit,Union industrielle de crédit pour la reconstitution,2,griffiths-t; lorthiois-j
-armement,gerancearmement,ARMEMENT,Société de Gérance et d'armement,1,peyronnet-a
 armement,navaleouest,ARMEMENT,Société Navale de l'Ouest,1,peyronnet-a
 gerancearmement,navaleouest,Société de Gérance et d'armement,Société Navale de l'Ouest,1,peyronnet-a
 bateauxvapeurnord,havraisepeninsulairenavigation,Cie des Bateaux à vapeur du Nord,Nouvelle Cie Havraise Péninsulaire de navigation,1,cangardel-h
@@ -375,10 +386,13 @@ grandepeche,produitselectrochimiquesmetallurgiquespyreneesarreau,GRANDE-PÊCHE,"
 grandepeche,universelleexplosifsproduitschimiques,GRANDE-PÊCHE,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",1,corbin-p-paul
 industriellegrandepecheportetienne,produitselectrochimiquesmetallurgiquespyreneesarreau,"Société Industrielle de la Grande Pêche, Port-Étienne","Société de Produits électro-chimiques et métallurgiques des Pyrénées, Arreau",1,corbin-p-paul
 industriellegrandepecheportetienne,universelleexplosifsproduitschimiques,"Société Industrielle de la Grande Pêche, Port-Étienne","Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",1,corbin-p-paul
+maurelprom,roumanobelgepetrole,Maurel et Prom,Roumano-Belge de Pétrole,1,maugue-j
 auxiliaireafricaine,navigationsudatlantique,Société Auxiliaire africaine,Compagnie de Navigation Sud-Atlantique,1,prom
 bordeaux,navigationsudatlantique,Compagnie de Bordeaux,Compagnie de Navigation Sud-Atlantique,1,prom
-maurelprom,navigationsudatlantique,Maurel et Prom,Compagnie de Navigation Sud-Atlantique,1,prom
-banqueluc,maurelprom,Banque A. Luc & Cie,Maurel et Prom,1,x-p
+etablissementsefeuillette,etablissementsmaurelhprom,Société des Établissements E. Feuillette,Etablissements MAUREL et H. PROM,1,prom-l
+etablissementsefeuillette,maurelprom,Société des Établissements E. Feuillette,Maurel et Prom,1,prom-l
+etablissementsefeuillette,navigationsudatlantique,Société des Établissements E. Feuillette,Compagnie de Navigation Sud-Atlantique,1,prom-l
+etablissementsmaurelhprom,navigationsudatlantique,Etablissements MAUREL et H. PROM,Compagnie de Navigation Sud-Atlantique,1,prom-l
 auxiliaireafricaine,etablissementsmaurelhprom,Société Auxiliaire africaine,Etablissements MAUREL et H. PROM,1,maurel-l-lucien
 auxiliaireafricaine,etablissementsmaurelprom,Société Auxiliaire africaine,Établissements Maurel et Prom,1,maurel-l-lucien
 auxiliaireafricainedeveloppementcommerce,bordeaux,"Société auxiliaire africaine pour le développement du commerce, de",Compagnie de Bordeaux,1,maurel-l-lucien
@@ -391,9 +405,6 @@ bordeaux,etablissementsmaurelhprom,Compagnie de Bordeaux,Etablissements MAUREL e
 colonies,etablissementsmaurelhprom,Compagnie Générale des colonies,Etablissements MAUREL et H. PROM,1,maurel-l-lucien
 colonies,etablissementsmaurelprom,Compagnie Générale des colonies,Établissements Maurel et Prom,1,maurel-l-lucien
 colonies,maurelprom,Compagnie Générale des colonies,Maurel et Prom,1,maurel-l-lucien
-etablissementsefeuillette,etablissementsmaurelhprom,Société des Établissements E. Feuillette,Etablissements MAUREL et H. PROM,1,prom-l
-etablissementsefeuillette,navigationsudatlantique,Société des Établissements E. Feuillette,Compagnie de Navigation Sud-Atlantique,1,prom-l
-etablissementsmaurelhprom,navigationsudatlantique,Etablissements MAUREL et H. PROM,Compagnie de Navigation Sud-Atlantique,1,prom-l
 etablissementsmaurelprom,navigationsudatlantique,Établissements Maurel et Prom,Compagnie de Navigation Sud-Atlantique,1,maurel-l
 assurancefrancecolonies,etablissementsmaurelprom,L'Assurance France-Colonies,Établissements Maurel et Prom,1,oudot-l
 assurancefrancecolonies,intercoloniale,L'Assurance France-Colonies,Compagnie Intercoloniale,1,oudot-l
@@ -544,14 +555,21 @@ indochinoisenavigation,maritimenationale,Compagnie Indochinoise de Navigation,So
 airfrance,banquemadagascar,Air France,Banque de Madagascar,1,lebon-a-andre
 airfrance,creditfonciersyrie,Air France,Crédit foncier de Syrie,1,lebon-a-andre
 airfrance,industriellefonciere,Air France,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,lebon-a-andre
+airfrance,industrielleplatine,Air France,Cie industrielle du platine,1,lebon-a-andre
 airfrance,messageriesmaritimes,Air France,Société des Messageries maritimes,1,lebon-a-andre
 banquemadagascar,creditfoncieralgerietunisie,Banque de Madagascar,Crédit foncier d'Algérie-Tunisie,1,lebon-a-andre
 banquemadagascar,creditfonciersyrie,Banque de Madagascar,Crédit foncier de Syrie,1,lebon-a-andre
 banquemadagascar,industriellefonciere,Banque de Madagascar,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,lebon-a-andre
+banquemadagascar,industrielleplatine,Banque de Madagascar,Cie industrielle du platine,1,lebon-a-andre
 colonies,creditfonciersyrie,Compagnie Générale des colonies,Crédit foncier de Syrie,1,lebon-a-andre
+colonies,industrielleplatine,Compagnie Générale des colonies,Cie industrielle du platine,1,lebon-a-andre
+creditfoncieralgerietunisie,industrielleplatine,Crédit foncier d'Algérie-Tunisie,Cie industrielle du platine,1,lebon-a-andre
 creditfonciersyrie,industriellefonciere,Crédit foncier de Syrie,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,lebon-a-andre
+creditfonciersyrie,industrielleplatine,Crédit foncier de Syrie,Cie industrielle du platine,1,lebon-a-andre
 creditfonciersyrie,messageriesmaritimes,Crédit foncier de Syrie,Société des Messageries maritimes,1,lebon-a-andre
+industriellefonciere,industrielleplatine,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",Cie industrielle du platine,1,lebon-a-andre
 industriellefonciere,messageriesmaritimes,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",Société des Messageries maritimes,1,lebon-a-andre
+industrielleplatine,messageriesmaritimes,Cie industrielle du platine,Société des Messageries maritimes,1,lebon-a-andre
 banquemadagascar,fraissinetmarseillaisenavigationvapeur,Banque de Madagascar,"Compagnie FRAISSINET, Cie Marseillaise de Navigation à vapeur",1,philippar-g
 banquemadagascar,marseillaisenavigationvapeurfraissinet,Banque de Madagascar,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,1,philippar-g
 banquemadagascar,servicescontractuelsmessageriesmaritimes,Banque de Madagascar,Société des Services contractuels des messageries maritimes,1,philippar-g
@@ -606,10 +624,14 @@ acierieslongwy,marseillaisecreditindustrielcommercialdepots,Société des Aciér
 acierieslongwy,transportsmaritimesvapeur,Société des Aciéries de Longwy,Société générale de transports maritimes à vapeur,1,oppermann-a
 acierieslongwy,tronquegauche,Société des Aciéries de Longwy,Tronqué à gauche,1,oppermann-a
 banqueatlas,entreprisesindustriellesminieres,Banque Atlas,Entreprises industrielles et minieres,1,zafiropulo-d
+banqueatlas,industriellepetroles,Banque Atlas,Compagnie Industrielle des Pétroles,1,zafiropulo-d
 banqueatlas,maritimenationale,Banque Atlas,Société maritime nationale,1,zafiropulo-d
 banqueatlas,transportsmaritimesvapeur,Banque Atlas,Société générale de transports maritimes à vapeur,1,zafiropulo-d
+entreprisesindustriellesminieres,industriellepetroles,Entreprises industrielles et minieres,Compagnie Industrielle des Pétroles,1,zafiropulo-d
 entreprisesindustriellesminieres,maritimenationale,Entreprises industrielles et minieres,Société maritime nationale,1,zafiropulo-d
 entreprisesindustriellesminieres,transportsmaritimesvapeur,Entreprises industrielles et minieres,Société générale de transports maritimes à vapeur,1,zafiropulo-d
+industriellepetroles,maritimenationale,Compagnie Industrielle des Pétroles,Société maritime nationale,1,zafiropulo-d
+industriellepetroles,transportsmaritimesvapeur,Compagnie Industrielle des Pétroles,Société générale de transports maritimes à vapeur,1,zafiropulo-d
 maritimenationale,transportsmaritimesvapeur,Société maritime nationale,Société générale de transports maritimes à vapeur,1,zafiropulo-d
 creditcolonial,maritimenationale,Crédit colonial,Société maritime nationale,1,brizon-g
 banquenationalecommerceexterieur,maritimenationale,Banque nationale française du commerce extérieur,Société maritime nationale,1,delpech-j
@@ -751,13 +773,18 @@ banqueindustrielleafriquenord,minesblaymard,Banque industrielle de l'Afrique du 
 banqueindustrielleafriquenord,minesblaymardbleymard,Banque industrielle de l'Afrique du Nord,"Mines du Blaymard, Le Bleymard",1,benard-l
 banqueindustrielleafriquenord,miniereindustrielleetainwolframarsenic,Banque industrielle de l'Afrique du Nord,"Société Minière et Industrielle de l’Étain, du wolfram et de l’arsenic",1,benard-l
 banqueindustrielleafriquenord,miniereribeira,Banque industrielle de l'Afrique du Nord,Compagnie minière de la Ribeira,1,benard-l
+banqueindustrielleafriquenord,minierevalburatmarignac,Banque industrielle de l'Afrique du Nord,"Compagnie Minière du Val-de-Burat, Marignac",1,benard-l
 creditfonciercolonial,minesblaymard,Crédit foncier colonial,MINES DU BLAYMARD,1,benard-l
 creditfonciercolonial,minesblaymardbleymard,Crédit foncier colonial,"Mines du Blaymard, Le Bleymard",1,benard-l
 creditfonciercolonial,miniereindustrielleetainwolframarsenic,Crédit foncier colonial,"Société Minière et Industrielle de l’Étain, du wolfram et de l’arsenic",1,benard-l
 creditfonciercolonial,miniereribeira,Crédit foncier colonial,Compagnie minière de la Ribeira,1,benard-l
+creditfonciercolonial,minierevalburatmarignac,Crédit foncier colonial,"Compagnie Minière du Val-de-Burat, Marignac",1,benard-l
 minesblaymard,miniereribeira,MINES DU BLAYMARD,Compagnie minière de la Ribeira,1,benard-l
+minesblaymard,minierevalburatmarignac,MINES DU BLAYMARD,"Compagnie Minière du Val-de-Burat, Marignac",1,benard-l
 minesblaymardbleymard,miniereribeira,"Mines du Blaymard, Le Bleymard",Compagnie minière de la Ribeira,1,benard-l
+minesblaymardbleymard,minierevalburatmarignac,"Mines du Blaymard, Le Bleymard","Compagnie Minière du Val-de-Burat, Marignac",1,benard-l
 miniereindustrielleetainwolframarsenic,miniereribeira,"Société Minière et Industrielle de l’Étain, du wolfram et de l’arsenic",Compagnie minière de la Ribeira,1,benard-l
+miniereindustrielleetainwolframarsenic,minierevalburatmarignac,"Société Minière et Industrielle de l’Étain, du wolfram et de l’arsenic","Compagnie Minière du Val-de-Burat, Marignac",1,benard-l
 banqueparisiennemaroc,transportsmaritimesvapeur,Banque parisienne pour le Maroc,Société générale de transports maritimes à vapeur,1,machavoine-g
 banquetunisie,financierefrancobelgecolonisation,Banque de Tunisie,Société Financière Franco-Belge de Colonisation,1,despret-g
 caissepretsimmobiliersmaroc,creditfoncieralgerietunisie,Caisse de prêts immobiliers du Maroc,Crédit foncier d'Algérie-Tunisie,1,jourdanne-a
@@ -819,6 +846,8 @@ creditfonciercolonial,industrieminessuite,Crédit foncier colonial,Société Fra
 creditfonciercolonialbanque,industrieminessuite,Société de Crédit foncier colonial et de banque,Société Française pour l'Industrie et les Mines et suite,1,harth-g
 banqueindustriellechine,commerceaveccoloniesetranger,La Banque industrielle de Chine,"Sociéte française pour le commerce avec les colonies et l’étranger, puis Sociéte française pour le commerce avec l'outre-mer",1,mazet-e
 creditcolonial,creditfoncierindochine,Crédit colonial,Crédit foncier de l’Indochine,1,thion-de-la-chaume-r-rene
+creditcolonial,manufacturetapiscouvertures,Crédit colonial,Manufacture française de tapis et couvertures,1,thion-de-la-chaume-r-rene
+creditfoncierindochine,manufacturetapiscouvertures,Crédit foncier de l’Indochine,Manufacture française de tapis et couvertures,1,thion-de-la-chaume-r-rene
 creditfoncierindochine,financierecoloniale,Crédit foncier de l’Indochine,"Société financière française et coloniale, puis Société financière pour la France et les pays d'Outre-mer SFFC-SOFFO",1,giscard-d-estaing-e
 creditfoncierindochine,lorraineluneville,Crédit foncier de l’Indochine,Lorraine-Lunéville,1,giscard-d-estaing-e
 creditfoncierindochine,moteursautomobileslorraine,Crédit foncier de l’Indochine,Moteurs et automobiles Lorraine,1,giscard-d-estaing-e
@@ -863,8 +892,9 @@ banquenationalecommerceexterieur,charbonnagesfaulquemont,Banque nationale franç
 banquenationalecommerceexterieur,rateaudirectionbureaux,Banque nationale française du commerce extérieur,Société RATEAU. Direction et bureaux,1,champin-m
 charbonnagesfaulquemont,rateaudirectionbureaux,Société des Charbonnages de Faulquemont,Société RATEAU. Direction et bureaux,1,champin-m
 banquenationalecommerceexterieur,outremer,Banque nationale française du commerce extérieur,Compagnie Générale d'Outre-mer,1,clementel-g
+banquenationalecommerceexterieur,pagescamus,Banque nationale française du commerce extérieur,"Pagès, Camus et Cie, puis Camus, Duchemin et Cie",1,duchemin-r
 associationcotonnierecoloniale,banquenationalecommerceexterieur,L'Association cotonnière coloniale,Banque nationale française du commerce extérieur,1,schlumberger-p
-banqueproduitsalimentairescoloniaux,colonies,Banque des produits alimentaires et coloniaux,Compagnie Générale des colonies,1,bertaux-e
+banqueproduitsalimentairescoloniaux,colonies,Banque des produits alimentaires et coloniaux,Compagnie Générale des colonies,1,bertaux-e-edouard
 banqueproduitsalimentairescoloniaux,bonmarche,Banque des produits alimentaires et coloniaux,Au Bon Marché,1,dru-p
 francocolonialeentreprises,unionfrancocolonialepaysoutremer,Compagnie Franco-Coloniale d'Entreprises,Union franco-coloniale et des pays d'outre-mer,1,joubert-a
 betonarme,colonies,BÉTON ARMÉ,Compagnie Générale des colonies,1,rebuffel-c
@@ -905,12 +935,21 @@ aeropostale,etudesentreprisescoloniales,Compagnie générale Aéropostale,Compag
 aeropostale,guet,Compagnie générale Aéropostale,"Guët & Cie, puis Guët, Raffard & Cie",1,dhe-p
 aeropostale,navigationsudatlantique,Compagnie générale Aéropostale,Compagnie de Navigation Sud-Atlantique,1,fortoul-a
 affreteurs,chargeurs,Affréteurs français,Chargeurs français,1,dureault-h
+affreteursreunis,vapeurs,Affréteurs réunis,Vapeurs français,1,corbeto-j
 affreteursreunis,consortiumnord,Affréteurs réunis,Consortium du Nord,1,deros-p
 affreteursreunis,tabacs,Affréteurs réunis,Compagnie Générale des Tabacs,1,bonnasse-j
 affreteursreunis,grandstravauxbetonarme,Affréteurs réunis,Société des Grands Travaux en béton armé,1,dreyfus-g
 affreteursreunis,colonies,Affréteurs réunis,Compagnie Générale des colonies,1,boucard-m
 airunion,banquemobiliereprivee,Air Union,"Banque mobilière privée, puis Banque industrielle et mobilière privée",1,arene-l
 africaineagricoleminiere,industrielleplatine,Compagnie africaine agricole et minière,Cie industrielle du platine,1,schiff-giorgini-g
+africaineagricoleminiere,africaineentreprisesbp,Compagnie africaine agricole et minière,"Société africaine d'entreprises, B. P",1,modiano-a
+africaineagricoleminiere,constructions,Compagnie africaine agricole et minière,Société de constructions,1,berger-h
+africaineagricoleminiere,minieregundafa,Compagnie africaine agricole et minière,Société minière des Gundafa,1,berger-h
+cheddites,entrepriseshydrauliquestravauxpublics,CHEDDITES,Compagnie d'Entreprises hydrauliques et de travaux publics,1,bouchayer-h
+cheddites,produitselectrochimiquesmetallurgiquespyreneesarreau,CHEDDITES,"Société de Produits électro-chimiques et métallurgiques des Pyrénées, Arreau",1,bouchayer-h
+cheddites,universelleexplosifsproduitschimiques,CHEDDITES,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",1,bouchayer-h
+entrepriseshydrauliquestravauxpublics,produitselectrochimiquesmetallurgiquespyreneesarreau,Compagnie d'Entreprises hydrauliques et de travaux publics,"Société de Produits électro-chimiques et métallurgiques des Pyrénées, Arreau",1,bouchayer-h
+explosifs,produitselectrochimiquesmetallurgiquespyreneesarreau,Société générale d'explosifs,"Société de Produits électro-chimiques et métallurgiques des Pyrénées, Arreau",1,bouchayer-h
 associationcotonnierecoloniale,auxiliaireafricaine,L'Association cotonnière coloniale,Société Auxiliaire africaine,1,delmas
 associationcotonnierecoloniale,benardjarislovsky,L'Association cotonnière coloniale,"Bénard et Jarislovsky, puis Bénard frères et Cie",1,delmas
 associationcotonnierecoloniale,colonies,L'Association cotonnière coloniale,Compagnie Générale des colonies,1,delmas
@@ -932,6 +971,7 @@ associationminiere,navigationsudatlantique,Association minière,Compagnie de Nav
 constructions,mobiliereparisiennecoloniale,Société de constructions,Compagnie Mobilière Parisienne et Coloniale,1,bousquet-h
 constructions,navigationsudatlantique,Société de constructions,Compagnie de Navigation Sud-Atlantique,1,bousquet-h
 mobiliereparisiennecoloniale,navigationsudatlantique,Compagnie Mobilière Parisienne et Coloniale,Compagnie de Navigation Sud-Atlantique,1,bousquet-h
+associationminiere,benardjarislovsky,Association minière,"Bénard et Jarislovsky, puis Bénard frères et Cie",1,jarislowsky-s
 associationminiere,financierecaoutchoucs,Association minière,Financière des Caoutchoucs,1,poirson-c
 associationminiere,tabacsorientoutremer,Association minière,Société des Tabacs d'Orient et d'Outremer,1,pissard-l
 associationminiere,navaleouest,Association minière,Société Navale de l'Ouest,1,mayer-p
@@ -961,9 +1001,11 @@ auxiliaireafricaine,commercialeouestafricain,Société Auxiliaire africaine,Soci
 auxiliaireafricainedeveloppementcommerce,banqueatlas,"Société auxiliaire africaine pour le développement du commerce, de",Banque Atlas,1,seguin-g-gaston
 auxiliaireafricainedeveloppementcommerce,commercialeouestafricain,"Société auxiliaire africaine pour le développement du commerce, de",Société Commerciale de l'Ouest-Africain,1,seguin-g-gaston
 banqueatlas,commercialeouestafricain,Banque Atlas,Société Commerciale de l'Ouest-Africain,1,seguin-g-gaston
+aerienne,banquealsacienneparis,Compagnie Aérienne française,Banque alsacienne de Paris,1,renard
 banquealsacienneparis,francowyomingoilcy,Banque alsacienne de Paris,Franco-Wyoming Oil Cy,1,fontaine-e
 banquealsacienneparis,huelvacoppersulfurminesltd,Banque alsacienne de Paris,"Huelva Copper and Sulfur Mines, Ltd",1,fontaine-e
-banquealsacienneparis,etudesentreprisescoloniales,Banque alsacienne de Paris,Compagnie française d'Études et entreprises coloniales,1,fontaine-de-laveleye-e
+banquecommercialefrancobelge,industrielleplatine,Banque commerciale franco-belge,Cie industrielle du platine,1,collignon
+banquecommercialefrancobelge,chargeursreunis,Banque commerciale franco-belge,Chargeurs réunis,1,fould-l
 aguilas,banquecommercialefrancobelge,Compagnie d'Aguilas,Banque commerciale franco-belge,1,guillet-l
 aguilas,eieditionsdocumentairesindustrielles,Compagnie d'Aguilas,"S. É. D. I., Société d'éditions documentaires industrielles",1,guillet-l
 aguilas,minesminerais,Compagnie d'Aguilas,Compagnie de Mines et minerais,1,guillet-l
@@ -978,32 +1020,33 @@ banqueinterets,unionmines,Banque des intérêts français,Union des mines,1,fevr
 banqueinterets,usinesmetallurgiquesbasseloireantecedents,Banque des intérêts français,Usines métallurgiques de la Basse-Loire et antécédents,1,fevre
 unionmines,usinesmetallurgiquesbasseloireantecedents,Union des mines,Usines métallurgiques de la Basse-Loire et antécédents,1,fevre
 banqueinterets,benardjarislovsky,Banque des intérêts français,"Bénard et Jarislovsky, puis Bénard frères et Cie",1,a-j
-banqueinterets,commercialeinteroceaniquehavrepariscoteivoiremadagascar,Banque des intérêts français,"Société Commerciale Interoceanique, Le Havre, Paris, Côte-d'Ivoire, Madagascar",1,a-j
-banqueinterets,constructionafricaine,Banque des intérêts français,La Construction africaine,1,a-j
 banqueinterets,procedesindustrielscharbonsactifs,Banque des intérêts français,Procédés industriels et charbons actifs,1,a-j
-benardjarislovsky,commercialeinteroceaniquehavrepariscoteivoiremadagascar,"Bénard et Jarislovsky, puis Bénard frères et Cie","Société Commerciale Interoceanique, Le Havre, Paris, Côte-d'Ivoire, Madagascar",1,a-j
-benardjarislovsky,constructionafricaine,"Bénard et Jarislovsky, puis Bénard frères et Cie",La Construction africaine,1,a-j
 benardjarislovsky,procedesindustrielscharbonsactifs,"Bénard et Jarislovsky, puis Bénard frères et Cie",Procédés industriels et charbons actifs,1,a-j
-commercialeinteroceaniquehavrepariscoteivoiremadagascar,constructionafricaine,"Société Commerciale Interoceanique, Le Havre, Paris, Côte-d'Ivoire, Madagascar",La Construction africaine,1,a-j
-commercialeinteroceaniquehavrepariscoteivoiremadagascar,procedesindustrielscharbonsactifs,"Société Commerciale Interoceanique, Le Havre, Paris, Côte-d'Ivoire, Madagascar",Procédés industriels et charbons actifs,1,a-j
-constructionafricaine,procedesindustrielscharbonsactifs,La Construction africaine,Procédés industriels et charbons actifs,1,a-j
 banquemarcelaubert,orosdiback,Banque Marcel Aubert,Orosdi-Back,1,esders-h
 banquemarcelaubert,travauxhydrauliquesentreprisesgenerales,Banque Marcel Aubert,Travaux hydrauliques et entreprises générales,1,suisse
+banquemutuelleetudes,cartoucherie,"Banque mutuelle d'études, puis Banque mutuelle d'études et de crédit",Cartoucherie française,1,parent-h
 banquemutuelleetudes,grandstravauxbetonarme,"Banque mutuelle d'études, puis Banque mutuelle d'études et de crédit",Société des Grands Travaux en béton armé,1,parent-h
+cartoucherie,grandstravauxbetonarme,Cartoucherie française,Société des Grands Travaux en béton armé,1,parent-h
 banquemutuelleetudes,industriellemaritime,"Banque mutuelle d'études, puis Banque mutuelle d'études et de crédit",Compagnie Industrielle maritime,1,normand-g
-banquepriveecoloniale,parisiennecomptoirscoloniaux,Banque privée coloniale,Compagnie Parisienne des Comptoirs coloniaux,1,blond-h
-banqueprivee,banquepriveeindustriellecommercialecolonialelyonmarseille,Banque privée,"Banque privée industrielle, commerciale et coloniale Lyon-Marseille",1,pradel
 banqueprivee,socgenetsbergougnan,Banque privée,Soc. gén. Éts Bergougnan,1,pradel
-banquepriveeindustriellecommercialecolonialelyonmarseille,socgenetsbergougnan,"Banque privée industrielle, commerciale et coloniale Lyon-Marseille",Soc. gén. Éts Bergougnan,1,pradel
 banqueprivee,energieelectrique,Banque privée,ÉNERGIE ELECTRIQUE,1,reille-x
 banqueprivee,industrielle,Banque privée,Compagnie générale industrielle,1,reille-x
 banqueprivee,pyreneenneenergieelectrique,Banque privée,Société Pyrénéenne d'Énergie électrique,1,reille-x
 banqueprivee,navigationsudatlantique,Banque privée,Compagnie de Navigation Sud-Atlantique,1,fould-a
+banqueprivee,commercialeouestafricain,Banque privée,Société Commerciale de l'Ouest-Africain,1,frachon-r
 banqueregionalecoloniale,colonialefrancoallemande,Banque régionale et coloniale,Société Coloniale Franco-Allemande,1,fribourg-p
+mineraisfermagnetiquesmoktaelhadid,usinesmetallurgiquesbasseloireantecedents,Cie des minerais de fer magnétiques de Mokta-el-Hadid,Usines métallurgiques de la Basse-Loire et antécédents,1,talabot-p
 tramways,usinesmetallurgiquesbasseloireantecedents,Compagnie Générale Française de Tramways,Usines métallurgiques de la Basse-Loire et antécédents,1,dreyfus-m
-minierecoloniale,tabacsorientoutremer,Compagnie Minière coloniale,Société des Tabacs d'Orient et d'Outremer,1,paris
-minierecoloniale,usinesmetallurgiquesbasseloireantecedents,Compagnie Minière coloniale,Usines métallurgiques de la Basse-Loire et antécédents,1,paris
+exploitationsminieresindustrielles,financiereexploitationsindustrielles,Société d'Exploitations minières et industrielles,Société Financière d'exploitations industrielles,1,goudchaux-m-mathieu
+financiereexploitationsindustrielles,forgesacieriesnordest,Société Financière d'exploitations industrielles,Forges et aciéries du Nord et de l'Est,1,goudchaux-m-mathieu
+financiereexploitationsindustrielles,industriellematerieltransportcimt,Société Financière d'exploitations industrielles,"Cie industrielle de MATÉRIEL de TRANSPORT, C.I.M.T",1,goudchaux-m-mathieu
+financiereexploitationsindustrielles,usinesmetallurgiquesbasseloire,Société Financière d'exploitations industrielles,Usines métallurgiques de la BASSE-LOIRE,1,goudchaux-m-mathieu
+financiereexploitationsindustrielles,usinesmetallurgiquesbasseloireantecedents,Société Financière d'exploitations industrielles,Usines métallurgiques de la Basse-Loire et antécédents,1,goudchaux-m-mathieu
+financiereexploitationsindustrielles,usinesmetallurgiqueshainautcouillet,Société Financière d'exploitations industrielles,"Usines métallurgiques du Hainaut, Couillet",1,goudchaux-m-mathieu
 tabacsorientoutremer,usinesmetallurgiquesbasseloireantecedents,Société des Tabacs d'Orient et d'Outremer,Usines métallurgiques de la Basse-Loire et antécédents,1,paris
+etudesentreprisescoloniales,exploitationsminieresindustrielles,Compagnie française d'Études et entreprises coloniales,Société d'Exploitations minières et industrielles,1,progneaux-e
+etudesentreprisescoloniales,usinesmetallurgiquesbasseloire,Compagnie française d'Études et entreprises coloniales,Usines métallurgiques de la BASSE-LOIRE,1,progneaux-e
+etudesentreprisescoloniales,usinesmetallurgiquesbasseloireantecedents,Compagnie française d'Études et entreprises coloniales,Usines métallurgiques de la Basse-Loire et antécédents,1,progneaux-e
 commercialeexportateursimportateursreunis,usinesmetallurgiquesbasseloireantecedents,Compagnie Commerciale d’Exportateurs et d’importateurs réunis,Usines métallurgiques de la Basse-Loire et antécédents,1,savy-l
 candlot,credit,Candlot,Crédit français,1,bernard
 candlot,havraisepeninsulairenavigatonvapeur,Candlot,Compagnie Havraise Péninsulaire de Navigaton à vapeur,1,bernard
@@ -1013,25 +1056,15 @@ credit,usinesmetallurgiquesbasseloireantecedents,Crédit français,Usines métal
 havraisepeninsulairenavigatonvapeur,usinesmetallurgiquesbasseloireantecedents,Compagnie Havraise Péninsulaire de Navigaton à vapeur,Usines métallurgiques de la Basse-Loire et antécédents,1,bernard
 grandemaisonblanc,usinesmetallurgiquesbasseloire,Grande Maison de Blanc,Usines métallurgiques de la BASSE-LOIRE,1,bernard-l-louis
 banquecolonialeetudesentreprisesmutuelles,banquecolonialeetudesentreprisesmutuellesditebanquecoloniale,Banque coloniale d'études et d'entreprises mutuelles,Banque coloniale d'études et d'entreprises mutuelles dite Banque coloniale,1,guieysse-m
+benardjarislovsky,malfidano,"Bénard et Jarislovsky, puis Bénard frères et Cie",Malfidano,1,monvoisin-f
+benardjarislovsky,mineslaurium,"Bénard et Jarislovsky, puis Bénard frères et Cie",Compagnie française des Mines du Laurium,1,monvoisin-f
+benardjarislovsky,minesmalfidano,"Bénard et Jarislovsky, puis Bénard frères et Cie",MINES DE MALFIDANO,1,monvoisin-f
+malfidano,mineslaurium,Malfidano,Compagnie française des Mines du Laurium,1,monvoisin-f
 benardjarislovsky,commercialeouestafricain,"Bénard et Jarislovsky, puis Bénard frères et Cie",Société Commerciale de l'Ouest-Africain,1,francois-marsal-f
 benardjarislovsky,constructions,"Bénard et Jarislovsky, puis Bénard frères et Cie",Société de constructions,1,bancel-h
 benardjarislovsky,eieditionsdocumentairesindustrielles,"Bénard et Jarislovsky, puis Bénard frères et Cie","S. É. D. I., Société d'éditions documentaires industrielles",1,bancel-h
 benardjarislovsky,eieditionsdocumentairesindustriellessoccap,"Bénard et Jarislovsky, puis Bénard frères et Cie","S. É. D. I., Société d'Éditions Documentaires Industrielles, Soc. an. au cap. de",1,bancel-h
 benardjarislovsky,mwalteradministrateurdelegue,"Bénard et Jarislovsky, puis Bénard frères et Cie","M. Walter, administrateur-délégué",1,bancel-h
-benardjarislovsky,candlot,"Bénard et Jarislovsky, puis Bénard frères et Cie",Candlot,1,loi
-benardjarislovsky,etsquillery,"Bénard et Jarislovsky, puis Bénard frères et Cie",Éts Quillery,1,loi
-benardjarislovsky,etudestechniquesfinancieres,"Bénard et Jarislovsky, puis Bénard frères et Cie",Société d'Études techniques et financières,1,loi
-benardjarislovsky,guet,"Bénard et Jarislovsky, puis Bénard frères et Cie","Guët & Cie, puis Guët, Raffard & Cie",1,loi
-benardjarislovsky,industriellefonciere,"Bénard et Jarislovsky, puis Bénard frères et Cie","L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,loi
-candlot,etsquillery,Candlot,Éts Quillery,1,loi
-candlot,etudestechniquesfinancieres,Candlot,Société d'Études techniques et financières,1,loi
-candlot,guet,Candlot,"Guët & Cie, puis Guët, Raffard & Cie",1,loi
-candlot,industriellefonciere,Candlot,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,loi
-etsquillery,etudestechniquesfinancieres,Éts Quillery,Société d'Études techniques et financières,1,loi
-etsquillery,guet,Éts Quillery,"Guët & Cie, puis Guët, Raffard & Cie",1,loi
-etsquillery,industriellefonciere,Éts Quillery,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,loi
-etudestechniquesfinancieres,guet,Société d'Études techniques et financières,"Guët & Cie, puis Guët, Raffard & Cie",1,loi
-etudestechniquesfinancieres,industriellefonciere,Société d'Études techniques et financières,"L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,loi
 benardjarislovsky,unionfinanciereprivee,"Bénard et Jarislovsky, puis Bénard frères et Cie",Union financière privée,1,deschars-l
 minesminerais,unionfinanciereprivee,Compagnie de Mines et minerais,Union financière privée,1,deschars-l
 banquefoncieremetropolitaineoutremer,mobiliereparisiennecoloniale,Banque foncière métropolitaine et d’outre-mer,Compagnie Mobilière Parisienne et Coloniale,1,fabri-c
@@ -1041,7 +1074,10 @@ industriellemaritime,malfidano,Compagnie Industrielle maritime,Malfidano,1,bourg
 banqueeuropeennebruxellesparistentativereprisedomainesagricolesconcessionramassagealfafrancoalgerienne,comptoirindustrielfrancecolonies,"Banque européenne, Bruxelles, Paris. Tentative de reprise des domaines agricoles et de la concession de ramassage d'alfa de la Compagnie franco-algérienne",Comptoir industriel de France et des colonies,1,brelay-e
 banqueeuropeennebruxellesparistentativereprisedomainesagricolesconcessionramassagealfafrancoalgerienne,malfidano,"Banque européenne, Bruxelles, Paris. Tentative de reprise des domaines agricoles et de la concession de ramassage d'alfa de la Compagnie franco-algérienne",Malfidano,1,debrousse-j
 banqueeuropeennebruxellesparistentativereprisedomainesagricolesconcessionramassagealfafrancoalgerienne,navigationsudatlantique,"Banque européenne, Bruxelles, Paris. Tentative de reprise des domaines agricoles et de la concession de ramassage d'alfa de la Compagnie franco-algérienne",Compagnie de Navigation Sud-Atlantique,1,hubert
+banqueindustriellecolonialeparisruetaitbout23,colonialeindustrielle,"Banque industrielle et coloniale, Paris, rue Taitbout, 23",Compagnie Française Coloniale et Industrielle,1,mellier-l
+banqueindustriellecolonialeparisruetaitbout23,comptoirindustrielcolonial,"Banque industrielle et coloniale, Paris, rue Taitbout, 23",Comptoir industriel et colonial,1,mellier-l
 banquesuisse,electriqueindustrielle,Banque suisse et française,Société Générale Électrique et Industrielle,1,salles-a
+banquesuisse,colonialeindustrielle,Banque suisse et française,Compagnie Française Coloniale et Industrielle,1,meja-e
 banquesuisse,centraleenergieelectriquerouenchateauroux,Banque suisse et française,"Cie Centrale d'énergie électrique, Rouen, Châteauroux",1,bachelier-e
 banquetransatlantique,minesfermouriere,Banque transatlantique,Société des Mines de fer de La Mourière,1,halfon-s
 messageriesmaritimes,minesfermouriere,Société des Messageries maritimes,Société des Mines de fer de La Mourière,1,halfon-s
@@ -1065,14 +1101,22 @@ banquetransatlantique,creditfonciercolonial,Banque transatlantique,Crédit fonci
 banquetransatlantique,unionelectriquerurale,Banque transatlantique,Union électrique rurale,1,bloch-h
 auxiliaireentreprisescolonialesminieresindustrielles,unionelectriquerurale,"Cie Auxiliaire d'Entreprises coloniales, minieres et industrielles",Union électrique rurale,1,le-trocquer-y
 caissecommercialeindustrielleparis,credit,Caisse commerciale et industrielle de Paris,Crédit français,1,bouilloux-lafont-m-marcel
-caissecommercialeindustrielleparis,tabacs,Caisse commerciale et industrielle de Paris,Compagnie Générale des Tabacs,1,bouilloux-lafont-m-marcel
+candlot,polietchausson,Candlot,Poliet et Chausson,1,candlot-e
+candlot,magasinsmodernesfilialecommunenouvellesgaleriesparisfrance,Candlot,"Magasins modernes, filiale commune des Nouvelles Galeries et de Paris-France",1,demoge-l
+candlot,parisfrance,Candlot,Paris-France,1,demoge-l
+candlot,industrielleplatine,Candlot,Cie industrielle du platine,1,de-barteneff-j
+candlot,minierecoloniale,Candlot,Compagnie Minière coloniale,1,edouard
+candlot,navaleouest,Candlot,Société Navale de l'Ouest,1,edouard
+minierecoloniale,navaleouest,Compagnie Minière coloniale,Société Navale de l'Ouest,1,edouard
+minierecoloniale,navigationsudatlantique,Compagnie Minière coloniale,Compagnie de Navigation Sud-Atlantique,1,edouard
+candlot,salrem,Candlot,"Salrem, puis Salrep",1,emile
+navigationsudatlantique,salrem,Compagnie de Navigation Sud-Atlantique,"Salrem, puis Salrep",1,emile
 candlot,cargos,Candlot,Cargos français,1,bessonneau-j
 cargos,forgesacieriesnordlorraine,Cargos français,Forges et aciéries de Nord et Lorraine,1,bessonneau-j
 betonarme,candlot,BÉTON ARMÉ,Candlot,1,michel-c
 betonarme,grandemaisonblanc,BÉTON ARMÉ,Grande Maison de Blanc,1,michel-c
 candlot,grandemaisonblanc,Candlot,Grande Maison de Blanc,1,michel-c
 candlot,grandstravauxbetonarme,Candlot,Société des Grands Travaux en béton armé,1,michel-c
-candlot,polietchausson,Candlot,Poliet et Chausson,1,candlot-e
 caoutchoucindustriel,moteursautomobileslorraine,Le Caoutchouc industriel,Moteurs et automobiles Lorraine,1,bouvier
 caoutchoucindustriel,centraleapplicationselectriques,Le Caoutchouc industriel,"Société Centrale d'applications électriques, puis Centrale d'applications et de particiaptions industrielles",1,homberg-o
 caoutchoucindustriel,centraleenergieelectrique,Le Caoutchouc industriel,Centrale d'Énergie électrique,1,homberg-o
@@ -1121,6 +1165,8 @@ mineraisfermagnetiquesmoktaelhadid,papeterievaldorfontainevaucluse,Cie des miner
 mineraisfermagnetiquesmoktaelhadid,soieriesfducharne,Cie des minerais de fer magnétiques de Mokta-el-Hadid,Soieries F.Ducharne,1,homberg-o
 papeterievaldorfontainevaucluse,soieriesfducharne,"Société nouvelle Papeterie du Valdor, Fontaine-de-Vaucluse",Soieries F.Ducharne,1,homberg-o
 cartoucherie,transportsmaritimesvapeur,Cartoucherie française,Société générale de transports maritimes à vapeur,1,marbeau-f
+centraleallumettes,electrometallurgiedives,Société Centrale des Allumettes,Société d'Électro-Métallurgie de Dives,1,salzedo-n
+centraleallumettes,huelvacoppersulfurmines,Société Centrale des Allumettes,Huelva copper and sulfur mines,1,duchanoy-m
 belgeentrepriseselectriques,centraleenergieelectriquerouenchateauroux,Société Générale Belge d'Entreprises électriques,"Cie Centrale d'énergie électrique, Rouen, Châteauroux",1,oliven-o
 belgeentrepriseselectriques,centraleindustrieelectrique,Société Générale Belge d'Entreprises électriques,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",1,oliven-o
 acomptedividendeimpot,centraleapplicationselectriques,Acompte sur dividende et impôt,"Société Centrale d'applications électriques, puis Centrale d'applications et de particiaptions industrielles",1,boulle-l
@@ -1157,6 +1203,14 @@ financiereelectrique,tramway,Société Financière Électrique,Compagnie génér
 financiereelectrique,francobelgematerielcheminsfer,Société Financière Électrique,Société FRANCO-BELGE de MATÉRIEL de CHEMINS de FER,1,hecker-r
 centraleindustrieelectrique,tabacs,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",Compagnie Générale des Tabacs,1,weyl-e
 centraleindustrieelectrique,mineslaurium,"Société Centrale pour l'industrie électrique, puis Centrale pour l'industrie . Participations en France, Algérie, Tunisie, Indochine, etc.",Compagnie française des Mines du Laurium,1,carle-v
+energieindustrielle,exploitationselectriques,L'Énergie industrielle,"Exploitations électriques, puis Exploitations électriques et industrielles",1,durand-b
+energieindustrielle,exploitationtramwayscheminsfer,L'Énergie industrielle,Compagnie d’Exploitation de tramways et chemins de fer,1,durand-b
+exploitationselectriques,exploitationtramwayscheminsfer,"Exploitations électriques, puis Exploitations électriques et industrielles",Compagnie d’Exploitation de tramways et chemins de fer,1,durand-b
+decauvilleaine,decauvilleaineetablissements,DECAUVILLE aîné,"Decauville aîné, Société, Société nouvelle des Établissements)",1,boyer
+decauvilleaine,etudesentreprisescoloniales,DECAUVILLE aîné,Compagnie française d'Études et entreprises coloniales,1,boyer
+decauvilleaine,exploitationtramwayscheminsfer,DECAUVILLE aîné,Compagnie d’Exploitation de tramways et chemins de fer,1,boyer
+decauvilleaineetablissements,exploitationtramwayscheminsfer,"Decauville aîné, Société, Société nouvelle des Établissements)",Compagnie d’Exploitation de tramways et chemins de fer,1,boyer
+etudesentreprisescoloniales,exploitationtramwayscheminsfer,Compagnie française d'Études et entreprises coloniales,Compagnie d’Exploitation de tramways et chemins de fer,1,boyer
 mineraisfermagnetiquesmoktaelhadid,tramways,Cie des minerais de fer magnétiques de Mokta-el-Hadid,Compagnie Générale Française de Tramways,1,breittmayer-e
 decauvilleaineetablissements,tramways,"Decauville aîné, Société, Société nouvelle des Établissements)",Compagnie Générale Française de Tramways,1,clerc-e
 acomptedividendeimpot,mineslaurium,Acompte sur dividende et impôt,Compagnie française des Mines du Laurium,1,rostand-j-jules
@@ -1170,8 +1224,12 @@ belgeentrepriseselectriques,tramways,Société Générale Belge d'Entreprises é
 charbonnagesfaulquemont,etudesentreprisescoloniales,Société des Charbonnages de Faulquemont,Compagnie française d'Études et entreprises coloniales,1,fonderies-de-pont-a-mousson
 charbonnagesfaulquemont,salrem,Société des Charbonnages de Faulquemont,"Salrem, puis Salrep",1,fonderies-de-pont-a-mousson
 etudesentreprisescoloniales,salrem,Compagnie française d'Études et entreprises coloniales,"Salrem, puis Salrep",1,fonderies-de-pont-a-mousson
+charbonnageslaviana,creditminierindustrielsuiteaventuresrochette,Les Charbonnages de Laviana,Société générale du Crédit minier et industriel et suite des aventures de Rochette,1,charet-de-la-fremoire-a
+charbonnageslaviana,minesliatpyreneesespagnols,Les Charbonnages de Laviana,"Société française des Mines du Liat, Pyrénées espagnols",1,charet-de-la-fremoire-a
+creditminierindustrielsuiteaventuresrochette,minesliatpyreneesespagnols,Société générale du Crédit minier et industriel et suite des aventures de Rochette,"Société française des Mines du Liat, Pyrénées espagnols",1,charet-de-la-fremoire-a
 chargeurs,credit,Chargeurs français,Crédit français,1,dupont
 chargeurs,miniereribeira,Chargeurs français,Compagnie minière de la Ribeira,1,berry
+chargeurs,grandstravauxbetonarme,Chargeurs français,Société des Grands Travaux en béton armé,1,petit
 chargeursreunis,havraisepeninsulairenavigatonvapeur,Chargeurs réunis,Compagnie Havraise Péninsulaire de Navigaton à vapeur,1,fould-h
 chargeursreunis,mineraisfermagnetiquesmoktaelhadid,Chargeurs réunis,Cie des minerais de fer magnétiques de Mokta-el-Hadid,1,mirabaud-p
 chargeursreunis,omniumlyonnaischeminsfertramways,Chargeurs réunis,"Omnium lyonnais de chemins de fer et de tramways, puis Omnium lyonnais",1,de-billy-e
@@ -1185,6 +1243,7 @@ agricoleminoterie,chargeursreunis,Compagnie Agricole de minoterie,Chargeurs réu
 aerienne,vautheretgroslaforge,Compagnie Aérienne française,"VAUTHERET, GROS et LAFORGE",1,gros
 phosphatescierp,vautheretgroslaforge,Compagnie des Phosphates de Cierp,"VAUTHERET, GROS et LAFORGE",1,gros
 agricoleminoterie,electrometallurgiedives,Compagnie Agricole de minoterie,Société d'Électro-Métallurgie de Dives,1,bethmont-d
+agricoleminoterie,tabacs,Compagnie Agricole de minoterie,Compagnie Générale des Tabacs,1,guerin-g
 agricoleminoterie,decauvilleaine,Compagnie Agricole de minoterie,DECAUVILLE aîné,1,witzig-a
 agricoleminoterie,etablissementsdecauvilleaine,Compagnie Agricole de minoterie,Société Nouvelle des Établissements Decauville aîné,1,witzig-a
 commerciale,commercialeexportateursimportateursreunis,Compagnie commerciale française,Compagnie Commerciale d’Exportateurs et d’importateurs réunis,1,van-minden-a
@@ -1217,6 +1276,8 @@ rototype,unionmines,ROTOTYPE,Union des mines,1,thouzellier-e
 bazacle,etablissementspolietchausson,BAZACLE,Établissements POLIET et CHAUSSON,1,maroger-j
 bazacle,unionindustriellecredit,BAZACLE,Union industrielle de crédit,1,maroger-j
 etablissementspolietchausson,unionindustriellecredit,Établissements POLIET et CHAUSSON,Union industrielle de crédit,1,maroger-j
+acierieslongwy,bazacle,Société des Aciéries de Longwy,BAZACLE,1,weiss-p-paul
+acierieslongwy,unionmines,Société des Aciéries de Longwy,Union des mines,1,weiss-p-paul
 bazacle,credit,BAZACLE,Crédit français,1,weiss-p-paul
 bazacle,centraleapplicationselectriques,BAZACLE,"Société Centrale d'applications électriques, puis Centrale d'applications et de particiaptions industrielles",1,eschwege-p
 bazacle,legrandmunich,BAZACLE,Legrand et Munich,1,munich-p
@@ -1226,14 +1287,12 @@ decauvilleaineetablissements,navigationsudatlantique,"Decauville aîné, Sociét
 etudesentreprisescoloniales,industriellemaritime,Compagnie française d'Études et entreprises coloniales,Compagnie Industrielle maritime,1,denis
 etudesentreprisescoloniales,navigationsudatlantique,Compagnie française d'Études et entreprises coloniales,Compagnie de Navigation Sud-Atlantique,1,denis
 industriellemaritime,navigationsudatlantique,Compagnie Industrielle maritime,Compagnie de Navigation Sud-Atlantique,1,denis
-minierecoloniale,navigationsudatlantique,Compagnie Minière coloniale,Compagnie de Navigation Sud-Atlantique,1,edouard
 electroentreprise,nationalenavigation,L'Électro-Entreprise,Compagnie Nationale de Navigation,1,guerin-p
 cotoncolonial,fraissinetmarseillaisenavigationvapeur,Compagnie Française du Coton colonial,"Compagnie FRAISSINET, Cie Marseillaise de Navigation à vapeur",1,devise-f
 cotoncolonial,marseillaisenavigationvapeurfraissinet,Compagnie Française du Coton colonial,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,1,devise-f
 marseillaisenavigationvapeurfraissinet,soieriesfducharne,Compagnie marseillaise de navigation à vapeur Fraissinet et Cie,Soieries F.Ducharne,1,homberg
 mineslaurium,soieriesfducharne,Compagnie française des Mines du Laurium,Soieries F.Ducharne,1,homberg
 immobilierefoncierefranceindochine,soieriesfducharne,Cie Immobilière et Foncière France-Indochine,Soieries F.Ducharne,1,laurens-p
-entreprisesgrandstravauxhydrauliques,immobilierefoncierefranceindochine,Entreprises de grands travaux hydrauliques,Cie Immobilière et Foncière France-Indochine,1,leroy-g
 industriellematerieltransportcimt,minesblaymard,"Cie industrielle de MATÉRIEL de TRANSPORT, C.I.M.T",MINES DU BLAYMARD,1,carpentier
 industriellematerieltransportcimt,minesblaymardbleymard,"Cie industrielle de MATÉRIEL de TRANSPORT, C.I.M.T","Mines du Blaymard, Le Bleymard",1,carpentier
 eieditionsdocumentairesindustrielles,industriellematerieltransportcimt,"S. É. D. I., Société d'éditions documentaires industrielles","Cie industrielle de MATÉRIEL de TRANSPORT, C.I.M.T",1,ing-ecp
@@ -1255,6 +1314,8 @@ centraleeclairagepargaz,electroentreprise,"Compagnie Centrale d'Éclairage par l
 centraleeclairagepargaz,lebon,"Compagnie Centrale d'Éclairage par le gaz, puis Compagnie Lebon",LEBON et Cie,1,lebon-p
 electroentreprise,lebon,L'Électro-Entreprise,LEBON et Cie,1,lebon-p
 comptoirindustrielcolonial,etudesentreprisescoloniales,Comptoir industriel et colonial,Compagnie française d'Études et entreprises coloniales,1,siegfried-e
+acierieslongwy,comptoirprive,Société des Aciéries de Longwy,le Comptoir privé,1,schweitzer-j-jacques
+caoutchoucs,comptoirproduitscoloniaux,Société française des caoutchoucs,Comptoir des produits coloniaux,1,mols-a
 consortiumnord,exploitationselectriques,Consortium du Nord,"Exploitations électriques, puis Exploitations électriques et industrielles",1,prouvost-eloy-e
 exploitationselectriques,polietchausson,"Exploitations électriques, puis Exploitations électriques et industrielles",Poliet et Chausson,1,prouvost-eloy-e
 financierecimentsindustrie,polietchausson,"Financière des Ciments et de l'industrie, puis Compagnie industrielle des ciments",Poliet et Chausson,1,chausson-l
@@ -1275,14 +1336,27 @@ credit,navigationsudatlantique,Crédit français,Compagnie de Navigation Sud-Atl
 credit,josephdanon,Crédit français,Joseph Danon et Cie,1,danon
 credit,redevancesminieresparticipations,Crédit français,Société de Redevances minières et de participations,1,lippens-h
 credit,roumanobelgepetrole,Crédit français,Roumano-Belge de Pétrole,1,lippens-h
-acierieslongwy,credit,Société des Aciéries de Longwy,Crédit français,1,superville-m
 acierieslongwy,unionminierefinancierecoloniale,Société des Aciéries de Longwy,Union minière et financière coloniale,1,superville-m
 credit,unionminierefinancierecoloniale,Crédit français,Union minière et financière coloniale,1,superville-m
 credit,electroentreprise,Crédit français,L'Électro-Entreprise,1,lacaille-p
 creditmobilier,polietchausson,Crédit mobilier français,Poliet et Chausson,1,piala-a
 creditmobilier,navigationsudatlantique,Crédit mobilier français,Compagnie de Navigation Sud-Atlantique,1,breton
-decauvilleaine,decauvilleaineetablissements,DECAUVILLE aîné,"Decauville aîné, Société, Société nouvelle des Établissements)",1,boyer
-decauvilleaine,etudesentreprisescoloniales,DECAUVILLE aîné,Compagnie française d'Études et entreprises coloniales,1,boyer
+creditprovincialcreditprovincial,lyonnaiseexplorationetudes,Crédit provincial et Nouveau Crédit provincial,"Compagnie Lyonnaise d'exploration et d’études, puis Compagnie lyonnaise d'exploration et de banque",1,dambmann-g
+creditprovincialcreditprovincial,guet,Crédit provincial et Nouveau Crédit provincial,"Guët & Cie, puis Guët, Raffard & Cie",1,robert
+creditprovincialcreditprovincial,navigationsudatlantique,Crédit provincial et Nouveau Crédit provincial,Compagnie de Navigation Sud-Atlantique,1,robert
+creditprovincialcreditprovincial,omniumlyonnais,Crédit provincial et Nouveau Crédit provincial,Omnium lyonnais,1,robert
+creditprovincialcreditprovincial,transportsmaritimesvapeur,Crédit provincial et Nouveau Crédit provincial,Société générale de transports maritimes à vapeur,1,robert
+creditprovincialcreditprovincial,tronquegauche,Crédit provincial et Nouveau Crédit provincial,Tronqué à gauche,1,robert
+guet,navigationsudatlantique,"Guët & Cie, puis Guët, Raffard & Cie",Compagnie de Navigation Sud-Atlantique,1,robert
+guet,omniumlyonnais,"Guët & Cie, puis Guët, Raffard & Cie",Omnium lyonnais,1,robert
+guet,transportsmaritimesvapeur,"Guët & Cie, puis Guët, Raffard & Cie",Société générale de transports maritimes à vapeur,1,robert
+guet,tronquegauche,"Guët & Cie, puis Guët, Raffard & Cie",Tronqué à gauche,1,robert
+navigationsudatlantique,omniumlyonnais,Compagnie de Navigation Sud-Atlantique,Omnium lyonnais,1,robert
+omniumlyonnais,transportsmaritimesvapeur,Omnium lyonnais,Société générale de transports maritimes à vapeur,1,robert
+omniumlyonnais,tronquegauche,Omnium lyonnais,Tronqué à gauche,1,robert
+commercesudafricain,decauvilleaineetablissements,Société française du commerce du Sud-Africain,"Decauville aîné, Société, Société nouvelle des Établissements)",1,chalupt-c
+commercesudafricain,electrometallurgiedives,Société française du commerce du Sud-Africain,Société d'Électro-Métallurgie de Dives,1,chalupt-c
+decauvilleaineetablissements,electrometallurgiedives,"Decauville aîné, Société, Société nouvelle des Établissements)",Société d'Électro-Métallurgie de Dives,1,chalupt-c
 decauvilleaine,electriqueindustrielle,DECAUVILLE aîné,Société Générale Électrique et Industrielle,1,boyer-h
 electriqueindustrielle,etablissementsdecauvilleaine,Société Générale Électrique et Industrielle,Société Nouvelle des Établissements Decauville aîné,1,boyer-h
 decauvilleaine,descourscabaud,DECAUVILLE aîné,Descours et Cabaud,1,baguenault-de-puchesse-a
@@ -1302,21 +1376,17 @@ descourscabaud,exploitationselectriques,Descours et Cabaud,"Exploitations élect
 etablissements1807deveschaumetbordeauxdakar,marcuardkraussmarcuardmarcuardmeyerborelmarcuardmeyerborelsorbemeyerborelsorbesorbeganaybanquiersparis,"Établissements, 1807 Devès et Chaumet, Bordeaux-Dakar","Marcuard, Krauss et Cie, Marcuard et Cie, Marcuard, Meyer-Borel et Cie, Marcuard, Meyer-Borel, Sorbé et Cie, Meyer-Borel, Sorbé et Cie, Sorbé, Ganay et Cie, banquiers à Paris",1,sorbe-e
 comptoirsdufaygigandet,transportsmaritimesvapeur,COMPTOIRS DUFAY et GIGANDET,Société générale de transports maritimes à vapeur,1,dufay-h
 comptoirsdufaygigandet,tronquegauche,COMPTOIRS DUFAY et GIGANDET,Tronqué à gauche,1,dufay-h
-cheddites,entrepriseshydrauliquestravauxpublics,CHEDDITES,Compagnie d'Entreprises hydrauliques et de travaux publics,1,bouchayer-h
-cheddites,universelleexplosifsproduitschimiques,CHEDDITES,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",1,bouchayer-h
 electrometallurgiedives,industrieminessuite,Société d'Électro-Métallurgie de Dives,Société Française pour l'Industrie et les Mines et suite,1,de-boissieu-p
 ateliersreparationsmaritimesbeliardcrighton,electrometallurgiedives,"ATELIERS DE RÉPARATIONS MARITIMES BELIARD, CRIGHTON et Cie",Société d'Électro-Métallurgie de Dives,1,laminoirs-du-havre
 electroentreprise,energieelectrique,L'Électro-Entreprise,ÉNERGIE ELECTRIQUE,1,moulun
 electroentreprise,nationaleexplosifs,L'Électro-Entreprise,Société nationale des explosifs,1,mascart-l
-energieindustrielle,exploitationselectriques,L'Énergie industrielle,"Exploitations électriques, puis Exploitations électriques et industrielles",1,durand-b
 energieindustrielle,lillebonnierescolombes,L'Énergie industrielle,Lille-Bonnières et Colombes,1,palliez-a
 lillebonnierescolombes,portefeuille,Lille-Bonnières et Colombes,Société française de portefeuille,1,palliez-a
 energieindustrielle,omniumlyonnais,L'Énergie industrielle,Omnium lyonnais,1,stockhammer-a
-energieindustrielle,trustimmobilierfrance,L'Énergie industrielle,Trust immobilier de France,1,stockhammer-a
 omniumlyonnais,portefeuille,Omnium lyonnais,Société française de portefeuille,1,stockhammer-a
-portefeuille,trustimmobilierfrance,Société française de portefeuille,Trust immobilier de France,1,stockhammer-a
 energieindustrielle,unionsyndicalefinanciere,L'Énergie industrielle,"Union syndicale financière, puis Compagnie d'exploitations industrielles, électriques et immobilières",1,siaume-a
 portefeuille,unionsyndicalefinanciere,Société française de portefeuille,"Union syndicale financière, puis Compagnie d'exploitations industrielles, électriques et immobilières",1,siaume-a
+trustimmobilierfrance,unionsyndicalefinanciere,Trust immobilier de France,"Union syndicale financière, puis Compagnie d'exploitations industrielles, électriques et immobilières",1,siaume-a
 unionsyndicalefinanciere,uniontrust,"Union syndicale financière, puis Compagnie d'exploitations industrielles, électriques et immobilières",Union Trust,1,siaume-a
 entreprisesindustriellesminieres,etudesentreprisescoloniales,Entreprises industrielles et minieres,Compagnie française d'Études et entreprises coloniales,1,sautter-r
 electriqueindustrielle,etablissementsbeccatdoulaincourtmusseycorbiebonneville,Société Générale Électrique et Industrielle,"Établissements Beccat, Doulaincourt et Mussey, Corbie, Bonneville",1,cornudet-l
@@ -1324,6 +1394,7 @@ etablissementsefeuillette,unionelectriquerurale,Société des Établissements E.
 etsquillery,lorraineluneville,Éts Quillery,Lorraine-Lunéville,1,decazes-v
 etudesentreprisescoloniales,financierepalmeraies,Compagnie française d'Études et entreprises coloniales,Société Financière des Palmeraies,1,devisscher-j
 etudesentreprisescoloniales,forgesacieriesnordest,Compagnie française d'Études et entreprises coloniales,Forges et aciéries du Nord et de l'Est,1,laurent-t
+caoutchoucs,etudesentreprisescoloniales,Société française des caoutchoucs,Compagnie française d'Études et entreprises coloniales,1,raverat
 etudesentreprisescoloniales,tabacs,Compagnie française d'Études et entreprises coloniales,Compagnie Générale des Tabacs,1,d-anthouard-a
 baronnervopdtdirgen,exploitationselectriques,"Baron L. de Nervo, pdt-dir. gén","Exploitations électriques, puis Exploitations électriques et industrielles",1,cambefort-o
 exploitationselectriques,mineraisfermagnetiquesmoktaelhadid,"Exploitations électriques, puis Exploitations électriques et industrielles",Cie des minerais de fer magnétiques de Mokta-el-Hadid,1,cambefort-o
@@ -1351,7 +1422,6 @@ mineslaurium,unionbanquebanquedepotsgarantis,Compagnie française des Mines du L
 mineslaurium,navigationsudatlantique,Compagnie française des Mines du Laurium,Compagnie de Navigation Sud-Atlantique,1,joseph
 minesferfillols,mineslaurium,Mines de fer de Fillols,Compagnie française des Mines du Laurium,1,baguenault-de-puchesse-g
 mineslaurium,minesproduitschimiques,Compagnie française des Mines du Laurium,Société de Mines et de produits chimiques,1,thiebaut-v
-malfidano,mineslaurium,Malfidano,Compagnie française des Mines du Laurium,1,monvoisin-f
 electriqueindustrielle,mineslaurium,Société Générale Électrique et Industrielle,Compagnie française des Mines du Laurium,1,urruty-f
 electriqueindustrielle,minesmalfidano,Société Générale Électrique et Industrielle,MINES DE MALFIDANO,1,urruty-f
 mineslaurium,tabacs,Compagnie française des Mines du Laurium,Compagnie Générale des Tabacs,1,tupin-g
@@ -1359,9 +1429,11 @@ francowyomingoilcy,leonorosdi,Franco-Wyoming Oil Cy,Léon Orosdi,1,bondonneau-h
 huelvacoppersulfurmines,leonorosdi,Huelva copper and sulfur mines,Léon Orosdi,1,bondonneau-h
 huelvacoppersulfurminesltd,leonorosdi,"Huelva Copper and Sulfur Mines, Ltd",Léon Orosdi,1,bondonneau-h
 colonialeindustrielle,colonies,Compagnie Française Coloniale et Industrielle,Compagnie Générale des colonies,1,josse-v
+commercesudafricain,fonderiesemailleriesdonchery,Société française du commerce du Sud-Africain,FONDERIES et ÉMAILLERIES de DONCHERY,1,orosdi
 commercesudafricain,industriellepetroles,Société française du commerce du Sud-Africain,Compagnie Industrielle des Pétroles,1,orosdi-l
 etsorosdiback,industriellepetroles,Éts Orosdi-Back,Compagnie Industrielle des Pétroles,1,orosdi-l
 industriellepetroles,orosdiback,Compagnie Industrielle des Pétroles,Orosdi-Back,1,orosdi-l
+allumettes,peninsulaireetains,Société Française des Allumettes,Compagnie péninsulaire des étains,1,guillemard-r-raoul
 cotoncolonial,unionindustriellecreditreconstitution,Compagnie Française du Coton colonial,Union industrielle de crédit pour la reconstitution,1,laederich
 industriellebasogooue,unionindustriellecredit,Société Industrielle du Bas-Ogooué,Union industrielle de crédit,1,louppe-a
 colonies,commercialeouestafricain,Compagnie Générale des colonies,Société Commerciale de l'Ouest-Africain,1,angoulvant-g-gabriel
@@ -1370,15 +1442,10 @@ explosifs,importationexploitationproduitscoloniaux,Société générale d'explos
 explosifs,produitschimiquescharbonnages,Société générale d'explosifs,Société de produits chimiques et de charbonnages,1,bonnet
 importationexploitationproduitscoloniaux,produitschimiquescharbonnages,Société française d'Importation et d'exploitation de produits coloniaux,Société de produits chimiques et de charbonnages,1,bonnet
 commercialeouestafricain,saga,Société Commerciale de l'Ouest-Africain,SAGA,1,retail-l
+grandstravauxbetonarme,marcuardkraussmarcuardmarcuardmeyerborelmarcuardmeyerborelsorbemeyerborelsorbesorbeganaybanquiersparis,Société des Grands Travaux en béton armé,"Marcuard, Krauss et Cie, Marcuard et Cie, Marcuard, Meyer-Borel et Cie, Marcuard, Meyer-Borel, Sorbé et Cie, Meyer-Borel, Sorbé et Cie, Sorbé, Ganay et Cie, banquiers à Paris",1,meyer-c-charles
 deville,guet,Deville & Cie,"Guët & Cie, puis Guët, Raffard & Cie",1,jaunez-m
+guet,industriellefonciere,"Guët & Cie, puis Guët, Raffard & Cie","L'Industrielle Foncière, puis Industrielle Foncière et Routière",1,laurent
 guet,industrielleplatine,"Guët & Cie, puis Guët, Raffard & Cie",Cie industrielle du platine,1,delaire-de-cambaceres
-guet,navigationsudatlantique,"Guët & Cie, puis Guët, Raffard & Cie",Compagnie de Navigation Sud-Atlantique,1,robert
-guet,omniumlyonnais,"Guët & Cie, puis Guët, Raffard & Cie",Omnium lyonnais,1,robert
-guet,transportsmaritimesvapeur,"Guët & Cie, puis Guët, Raffard & Cie",Société générale de transports maritimes à vapeur,1,robert
-guet,tronquegauche,"Guët & Cie, puis Guët, Raffard & Cie",Tronqué à gauche,1,robert
-navigationsudatlantique,omniumlyonnais,Compagnie de Navigation Sud-Atlantique,Omnium lyonnais,1,robert
-omniumlyonnais,transportsmaritimesvapeur,Omnium lyonnais,Société générale de transports maritimes à vapeur,1,robert
-omniumlyonnais,tronquegauche,Omnium lyonnais,Tronqué à gauche,1,robert
 halleboissaintcloud,minesproduitschimiques,"Halle aux bois, Saint-Cloud, puis Société immobilière de Saint-Cloud",Société de Mines et de produits chimiques,1,aubert
 immobilieresaintcloud,minesproduitschimiques,SOCIÉTÉ IMMOBILIÈRE DE SAINT-CLOUD,Société de Mines et de produits chimiques,1,aubert
 havraisepeninsulairenavigationvapeur,malfidano,Cie havraise péninsulaire de NAVIGATION A VAPEUR,Malfidano,1,perier-f
@@ -1420,6 +1487,7 @@ mineslucette,unionmines,Société nouvelle des mines de La Lucette,Union des min
 malfidano,mineslucette,Malfidano,Société nouvelle des mines de La Lucette,1,raymond
 mineslucette,transportsmaritimesvapeur,Société nouvelle des mines de La Lucette,Société générale de transports maritimes à vapeur,1,biver
 minesminerais,salrem,Compagnie de Mines et minerais,"Salrem, puis Salrep",1,lambert-e
+minesproduitschimiques,trustimmobilierfrance,Société de Mines et de produits chimiques,Trust immobilier de France,1,lecuyer-h
 etablissementspolietchausson,minesfermouriere,Établissements POLIET et CHAUSSON,Société des Mines de fer de La Mourière,1,aguillon-j
 etablissementspolietchausson,unionmines,Établissements POLIET et CHAUSSON,Union des mines,1,aguillon-j
 minesfermouriere,unionmines,Société des Mines de fer de La Mourière,Union des mines,1,aguillon-j
@@ -1432,12 +1500,13 @@ commercialeouestafricain,navigationsudatlantique,Société Commerciale de l'Oues
 omniumentreprises,universelleexplosifsproduitschimiques,Omnium d'entreprises,"Société Universelle d'Explosifs et de produits chimiques, puis Universelle des Explosifs",1,marchal-c
 electriqueindustrielle,omniumlyonnaischeminsfertramways,Société Générale Électrique et Industrielle,"Omnium lyonnais de chemins de fer et de tramways, puis Omnium lyonnais",1,duval-m
 omniumlyonnais,unionindustriellecredit,Omnium lyonnais,Union industrielle de crédit,1,couture-c
+josephpaganonfigurecommeingenieurchimiste,navaleouest,Joseph Paganon figure comme ingénieur chimiste,Société Navale de l'Ouest,1,henri
 etablissementspolietchausson,polietchausson,Établissements POLIET et CHAUSSON,Poliet et Chausson,1,lapareille-p
-atelierslegrandseguin,poudressurete,Ateliers LEGRAND et SEGUIN,Société française des Poudres de sûreté,1,schmerber-h
 poudressurete,unionelectriquerurale,Société française des Poudres de sûreté,Union électrique rurale,1,costa-de-beauregard
 etudestechniquesfinancieres,poudressurete,Société d'Études techniques et financières,Société française des Poudres de sûreté,1,massenet-m
 pyreneenneenergieelectrique,unionpapeteries,Société Pyrénéenne d'Énergie électrique,Union française de papeteries,1,vadon-j
 portefeuille,salrem,Société française de portefeuille,"Salrem, puis Salrep",1,schaller-j
+salrem,uniontrust,"Salrem, puis Salrep",Union Trust,1,schaller-j
 moteursautomobileslorraine,soieriesfducharne,Moteurs et automobiles Lorraine,Soieries F.Ducharne,1,gregoire-a
 auxiliaireafricaine,unionindustriellecredit,Société Auxiliaire africaine,Union industrielle de crédit,1,mathon-e
 electriqueindustrielle,unionmines,Société Générale Électrique et Industrielle,Union des mines,1,dejardin-verkinder-p
