@@ -313,6 +313,7 @@ See [METHODOLOGY §5n](docs/METHODOLOGY.md).
 | | |
 |---|---|
 | `fig53_full_network_map.svg` | **The full network, geographically.** Every placed firm at its own point, spread through a disc whose area is proportional to the firms in it, and all 43,164 drawable ties — including the **9,025 that never leave a single place**, which a map of cities cannot draw at all. Colour is placement precision, not geography: position already carries geography. |
+| | Basemap: Natural Earth `ne_50m_land`, simplified into [`data/reference/world_land.geojson`](data/reference/world_land.geojson) by `fetch_basemap.py` and checked in. Land only — a modern border over a corpus running from the 1870s to the 1970s would be an anachronism. Robinson projection, fixed window, shared with figure 7 so the two are comparable. |
 | `fig54_paris_or_not.svg` | The same coordinates twice: the ties that touch Paris, then the ties that do not. **Paris holds 19.5% of the placed firms and touches 45.2% of the drawable ties.** The first panel is a fan; the second is a lattice between colonies. |
 | `fig55_tie_geography.svg` | The drawable ties by their two endpoints, with the share that never leaves one place drawn inside the bar. Colony–colony leads at 47.1% — but 10,222 of those 20,341 ties stay inside one territory, so read it as a ceiling. The median tie that does travel spans **3,083 km**. |
 | `fig56_finance_on_the_map.svg` | Finance on the map: 9.5% of the placed firms, **27.3% of the drawable ties**, 41% of them in Paris. Second on Paris share behind the transcolonial-groups residual, and first among sectors above a hundred firms — what is distinctive about finance is its position in the graph, not its geography. |
@@ -330,7 +331,7 @@ See [METHODOLOGY §5n](docs/METHODOLOGY.md).
 
 | | |
 |---|---|
-| `fig7_city_network.svg` | Firms placed at their **city**, not their colony, in true coordinates; an edge joins two cities when a director sat on a board in each. 111 cities, 2,009 firms. |
+| `fig7_city_network.svg` | Firms placed at their **city**, not their colony, in true coordinates on a Robinson projection over the Natural Earth coastline; an edge joins two cities when a director sat on a board in each. 111 cities, 2,009 firms. |
 
 The finding is stark: **37% of the placeable firms in the interlock graph were
 run from Paris** — more than the next eleven cities combined — and the heavy
@@ -459,6 +460,7 @@ examples/
 python3 src/crawl_catalogue.py                # ~1 min
 python3 src/fetch_extract.py                  # ~1.5 h, ~21 GB transferred, resumable
 python3 src/fetch_extract.py --retry-failed   # sweep transient network errors
+python3 src/fetch_basemap.py                  # once: the Natural Earth coastline
 python3 src/parse_ties.py                     # ~6 min
 python3 src/parse_person_index.py             # ~1 min, person-indexed annuaires
 python3 src/parse_prose.py                    # ~4 min, prose-reported boards

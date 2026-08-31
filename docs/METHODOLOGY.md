@@ -32,12 +32,15 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Twenty-two stages, each resumable, each writing its own outputs:
+Twenty-three stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
 2. **`fetch_extract.py`** — each PDF → gzipped plain text in `data/text/`,
    plus `text_extraction.csv`.
+2b. **`fetch_basemap.py`** — Natural Earth's `ne_50m_land` shapefile → the
+   simplified coastline in `data/reference/world_land.geojson` (§5o). Run once;
+   the result is checked in, so no later stage touches the network.
 3. **`parse_ties.py`** — text → `affiliations.csv`, `org_affiliations.csv`,
    `company_attributes.csv`, `doc_references.csv`.
 3b. **`parse_person_index.py`** — inverted indexes → person → company ties
@@ -1944,6 +1947,78 @@ ranking rather than asserting it, because an earlier draft called finance the
 most geographically concentrated sector and mining is three points behind it.
 What is distinctive about finance is its position in the graph, not its
 geography.
+
+## 5o. The basemap, and why the maps had none
+
+Until stage 21 was written the map figures carried their geography on a
+graticule alone, on the stated grounds that no basemap shipped with the
+repository. That was a constraint inherited from figure 7 rather than a
+reasoned one, and it was the wrong call: a world map without coastlines is a
+scatter plot wearing a compass, and a reader cannot tell whether a dot at
+11°N 43°E is Djibouti or open sea.
+
+`src/fetch_basemap.py` (stage 0b) fetches Natural Earth's `ne_50m_land` once,
+simplifies it, and writes `data/reference/world_land.geojson`. The result is
+**checked in**, so every later run is offline and every figure draws the same
+land. Natural Earth is public domain and is the canonical basemap at this
+scale.
+
+**The shapefile is read directly.** `pyshp`, `geopandas` and `fiona` are not
+installed and are not worth adding for one layer of polygons: `.shp` is a
+documented sequence of little-endian doubles and forty lines read it. The
+alternative — trusting a third party's GeoJSON conversion of the same data —
+swaps a small amount of code for an unverifiable provenance chain. `checks.py`
+tests the reader against a shapefile it builds itself, so the test does not
+depend on what Natural Earth happens to ship.
+
+**Land only, and no borders.** The corpus runs from the 1870s to the 1970s, and
+a modern border drawn across it would be an anachronism — the whole point of
+these figures is that Dakar and Brazzaville were administered from Paris.
+Rivers and lakes are omitted too: they carry nothing about the interlock
+network and would compete with the edges.
+
+### The bug the simplifier's tolerance had to avoid
+
+Douglas-Peucker at a flat tolerance is what a first pass does, and at 0.12
+degrees it **deletes the empire**. Tahiti, Guadeloupe and Saint-Pierre are each
+smaller than that tolerance, so the algorithm reduces them to two points and
+they disappear, leaving an anchor disc and a label floating on blank ocean. The
+tolerance is therefore per ring, `min(0.12, 0.2 * sqrt(area))`: continents are
+simplified hard, an island in proportion to itself. Rings below 0.008 square
+degrees — about a third of a pixel at these sizes — are dropped instead, 246 of
+them. `checks.py` asserts both halves: that a flat tolerance would eat a small
+island, and that the per-ring one keeps it.
+
+### The projection is Robinson
+
+Plate carrée, which the first version of figure 7 used, is the projection you
+get by not choosing one. It stretches Scandinavia to the width of the Sahara,
+and because that figure *derived* its canvas from the latitude span of the
+firms that happened to have an address, adding one firm in Reykjavik would have
+restretched the whole map and made it incomparable with the firm-level maps.
+
+`basemap.Robinson` fixes the projection and the window for every map in the
+repository: latitudes −54 to 70, longitudes uncropped. The latitude window is
+the honest crop — the corpus reaches −46 and +61, and drawing Antarctica and
+the Canadian Arctic at full height would spend a third of the canvas on ice.
+Longitude is never cropped, because the network reaches from Tahiti to
+Shanghai.
+
+Two consequences worth stating. Distances are **not** measured on the
+projection: `place_on_map.haversine` works on the sphere, so the kilometre
+figures in the captions are independent of how the map is drawn. And the
+degree labels sit in a fixed column outside the frame rather than on their own
+parallel — on Robinson a parallel is shorter than the equator, so a label
+pinned to its left end drifts inward as latitude rises and ends up in the
+middle of Canada.
+
+### Edges are bowed
+
+Both map stages draw an edge as a quadratic curve bowed to a consistent side,
+at 9% of the chord. Straight lines that share a corridor — and on this map
+almost every corridor starts in Paris — collapse into one grey smear; bowed,
+the bundles separate and the map reads as routes. The bow carries no
+information and is stated in the docstring so that nobody reads it as one.
 
 ## 6. Validity — read this before using the data
 

@@ -645,8 +645,8 @@ variant spellings the sources use — 74 of them, e.g. `Saigon` and `Sài Gòn`
 for `Saïgon`. It is an **input**: edit it and rerun stage 6c.
 
 **Figure 7 — the empire on the map.** `fig7_city_network.svg` and
-`city_network.html`. Cities in true position (plate carrée, no coastline —
-none ships with this repo, so a graticule carries the geography), node area
+`city_network.html`. Cities in true position on a Robinson projection, over
+the Natural Earth coastline in `data/reference/world_land.geojson`, node area
 by firms based there, edge weight by interlocks between the pair, colour by
 sovereignty group. 111 cities, 2,009 firms, 1,100 drawn ties. See METHODOLOGY
 §5f for the coverage limits and for why a head office is not an operation.
@@ -1121,6 +1121,30 @@ The denominators, so a claim can state its population: `n_graph_firms` (5,989),
 `paris_edges_to_unplaced` to that numerator and keeping the drawable
 denominator gives 63.7% — a ratio across two different populations, and the
 first version of this row made exactly that mistake.
+
+### `data/reference/world_land.geojson`
+
+The basemap: Natural Earth `ne_50m_land`, simplified and checked in by
+`src/fetch_basemap.py` (stage 0b), so drawing a map needs no network. One
+GeoJSON `Feature` holding a `MultiPolygon` of 1,175 polygons and 14,361 points,
+down from 60,669 in the shapefile. Its `properties` record the provenance and
+every parameter used: `source`, `scale`, `simplified_degrees`,
+`min_area_sq_degrees`, `precision_decimals`, `polygons`, `points`,
+`points_before_simplification`, `rings_dropped_as_subpixel`.
+
+**Land only — no borders, no rivers, no lakes.** A modern border drawn over a
+corpus running from the 1870s to the 1970s would be an anachronism, and the
+whole point of the map figures is that Dakar and Brazzaville were administered
+from Paris. Coastlines have barely moved at this scale, so the coastline is
+safe.
+
+Natural Earth is in the **public domain**. Rebuild with
+`python3 src/fetch_basemap.py`; `--scale 110m` gives a coarser cut and
+`--tolerance` a blunter one. Simplification uses a **per-ring** tolerance,
+`min(0.12, 0.2 * sqrt(area))` degrees: a flat tolerance chosen for Eurasia is
+larger than Tahiti, Guadeloupe or Saint-Pierre and deletes them, which would
+leave an anchor disc and a label floating on blank ocean. `checks.py` asserts
+that each of those places still has land under it.
 
 ### `data/reference/`
 

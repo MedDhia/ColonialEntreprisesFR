@@ -69,6 +69,13 @@ PALETTE = {
         "series": ["#2a78d6", "#eb6834", "#1baf7a"],
         "other": "#a9a8a2",
         "edge": "#c9c8c2",
+        # Substrate, not data. The basemap's land, coastline and graticule are
+        # not a categorical scale and are deliberately weaker than `hairline`,
+        # so that a 1.25px node sitting on land still reads as the darkest
+        # thing at that point.
+        "land": "#f1f0ec",
+        "coast": "#d5d4ce",
+        "graticule": "#e9e8e4",
     },
     "dark": {
         "surface": "#1a1a19",
@@ -79,6 +86,9 @@ PALETTE = {
         "series": ["#3987e5", "#d95926", "#199e70"],
         "other": "#6f6e69",
         "edge": "#3d3d39",
+        "land": "#242423",
+        "coast": "#403f3a",
+        "graticule": "#2b2b28",
     },
 }
 
@@ -97,6 +107,9 @@ PALETTE["vars"] = {
     "series": ["var(--s1)", "var(--s2)", "var(--s3)"],
     "other": "var(--other)",
     "edge": "var(--edge)",
+    "land": "var(--land)",
+    "coast": "var(--coast)",
+    "graticule": "var(--graticule)",
 }
 
 

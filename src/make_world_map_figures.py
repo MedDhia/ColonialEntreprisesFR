@@ -49,6 +49,7 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import basemap as BM  # noqa: E402
 import draw  # noqa: E402
 from common import ensure_dir  # noqa: E402
 from labels import LANGS, localise  # noqa: E402
@@ -60,10 +61,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROC = os.path.join(ROOT, "data", "processed")
 
 W = 1560.0
-PAD = 44.0
-MAP_H = 560.0           # target height for one map panel, before the aspect fit
-SPREAD = 2.35           # px per firm-slot inside an anchor disc; sets disc area
-NODE_R = 1.25
+PAD = 44.0              # also the gutter the graticule's degree labels sit in
+LAT_MIN, LAT_MAX = -54.0, 70.0   # the corpus reaches -46 and +61
+SPREAD = 2.2            # px per firm-slot inside an anchor disc; sets disc area
+NODE_R = 1.2
+BOW = 0.09              # of the chord: how far an edge bends off the straight
 GOLDEN = 2.399963229728653   # radians; the sunflower angle
 EDGE_BANDS = 3          # weight bands, one <path> each — see _edge_paths
 
@@ -113,20 +115,12 @@ def gather() -> dict:
         })
         a["firms"].append(r["company_id"])
 
-    lats = [a["lat"] for a in anchors.values()]
-    lons = [a["lon"] for a in anchors.values()]
-    lat0, lat1 = min(lats), max(lats)
-    lon0, lon1 = min(lons), max(lons)
-    s = (W - 2 * PAD) / max(lon1 - lon0, 1e-6)
-    height = (lat1 - lat0) * s + 2 * PAD
-    box = (lat0, lat1, lon0, lon1, s, PAD, PAD)
-
-    def to_px(lat, lon):
-        return PAD + (lon - lon0) * s, PAD + (lat1 - lat) * s
+    proj = BM.Robinson(W, pad=PAD, lat_min=LAT_MIN, lat_max=LAT_MAX)
+    height = proj.height
 
     pos: dict[str, tuple[float, float]] = {}
     for a in anchors.values():
-        cx, cy = to_px(a["lat"], a["lon"])
+        cx, cy = proj.project(a["lat"], a["lon"])
         a["x"], a["y"] = cx, cy
         n = len(a["firms"])
         a["r"] = SPREAD * math.sqrt(n / math.pi) if n > 1 else 0.0
@@ -138,41 +132,13 @@ def gather() -> dict:
              if a in pos and b in pos]
     return {
         "rows": rows, "by_id": by_id, "anchors": anchors, "pos": pos,
-        "box": box, "height": height, "G": G, "edges": edges,
+        "proj": proj, "height": height, "G": G, "edges": edges,
         "ties": load("map_tie_geography.csv"),
         "base": (load("map_geography_baseline.csv") or [{}])[0],
     }
 
 
-def graticule(box, mode, height, y0=0.0):
-    """A lat/lon grid: no basemap ships with this repo, so this is the geography."""
-    lat0, lat1, lon0, lon1, s, ox, oy = box
-    p = PALETTE[mode]
-    out = [f'<g stroke="{p["hairline"]}" stroke-width="0.8" fill="none">']
-    labels = []
-    for lon in range(int(math.floor(lon0 / 30) * 30), int(lon1) + 31, 30):
-        x = ox + (lon - lon0) * s
-        if -2 <= x <= W + 2:
-            out.append(f'<line x1="{x:.1f}" y1="{y0:.1f}" x2="{x:.1f}" '
-                       f'y2="{y0 + height:.1f}"/>')
-            labels.append((x, y0 + height - 6,
-                           f"{abs(lon)}°{'E' if lon > 0 else ('W' if lon < 0 else '')}"))
-    for lat in range(int(math.floor(lat0 / 20) * 20), int(lat1) + 21, 20):
-        y = y0 + oy + (lat1 - lat) * s
-        if y0 - 2 <= y <= y0 + height + 2:
-            out.append(f'<line x1="0" y1="{y:.1f}" x2="{W:.0f}" y2="{y:.1f}"/>')
-            labels.append((4, y - 4,
-                           f"{abs(lat)}°{'N' if lat > 0 else ('S' if lat < 0 else '')}"))
-    out.append("</g>")
-    out.append(f'<g font-size="9.5" font-family="ui-sans-serif,system-ui,sans-serif" '
-               f'fill="{p["text_muted"]}">')
-    for x, y, t in labels:
-        out.append(f'<text x="{x + 3:.1f}" y="{y:.1f}">{t}</text>')
-    out.append("</g>")
-    return "".join(out)
-
-
-def _edge_paths(edges, pos, mode, dy=0.0, base_op=0.055):
+def _edge_paths(edges, pos, mode, dy=0.0, base_op=0.055, bow=BOW):
     """Every edge, as `EDGE_BANDS` paths instead of tens of thousands of lines.
 
     43,164 `<line>` elements with their own stroke attributes is a four-megabyte
@@ -188,7 +154,14 @@ def _edge_paths(edges, pos, mode, dy=0.0, base_op=0.055):
     for a, b, w in edges:
         i = min(EDGE_BANDS - 1, int(EDGE_BANDS * math.sqrt((w - 1) / max(hi - 1, 1))))
         (x1, y1), (x2, y2) = pos[a], pos[b]
-        bands[i].append(f"M{x1:.1f} {y1 + dy:.1f}L{x2:.1f} {y2 + dy:.1f}")
+        y1, y2 = y1 + dy, y2 + dy
+        # A gentle bow, always to the same side of a→b. Straight lines between
+        # a few dozen anchors collapse into one grey smear where they share a
+        # corridor; bowed, the bundles separate and the map reads as routes.
+        dx, dyy = x2 - x1, y2 - y1
+        cx = (x1 + x2) / 2 - dyy * bow
+        cy = (y1 + y2) / 2 + dx * bow
+        bands[i].append(f"M{x1:.1f} {y1:.1f}Q{cx:.1f} {cy:.1f} {x2:.1f} {y2:.1f}")
     out = []
     for i, segs in enumerate(bands):
         if not segs:
@@ -211,7 +184,9 @@ def _nodes(ids, d, mode, colour_of, dy=0.0, r=NODE_R, radius_of=None):
         by_colour[colour_of(cid)].append(f'<circle cx="{x:.1f}" cy="{y + dy:.1f}" '
                                          f'r="{rr:.2f}"/>')
     # One <g> per colour, so the fill is written once rather than 3,910 times.
-    return "".join(f'<g fill="{c}">{"".join(v)}</g>'
+    # A hair of transparency, so a 700-firm disc reads as a mass of firms with
+    # the coastline faintly under it rather than as an opaque plate.
+    return "".join(f'<g fill="{c}" fill-opacity="0.92">{"".join(v)}</g>'
                    for c, v in sorted(by_colour.items(), key=lambda kv: -len(kv[1])))
 
 
@@ -258,20 +233,30 @@ def _anchor_labels(d, mode, top, dy=0.0, height=None):
                        and t[1] < box[3] for t in taken)
 
     for rank, a in enumerate(ranked):
-        text = trim_to_width(f"{a['anchor']} {len(a['firms']):,}", font, 250)
+        name = trim_to_width(a["anchor"], font, 200)
+        count = f"{len(a['firms']):,}"
+        text = f"{name} {count}"
         tw, th = _text_width(text, font), font * 1.15
-        rr = max(a["r"], 2.0) + 4
+        rr = max(a["r"], 2.0) + 4.5
         for dx, dyy, anch in ((rr, font * 0.36, "start"), (-rr, font * 0.36, "end"),
-                              (0, -rr, "middle"), (0, rr + th * 0.8, "middle")):
+                              (0, -rr - 1, "middle"), (0, rr + th * 0.8, "middle")):
             x, y = a["x"] + dx, a["y"] + dy + dyy
             x0 = x if anch == "start" else (x - tw if anch == "end" else x - tw / 2)
             box = (x0 - 2, y - th, x0 + tw + 2, y + 3)
             if free(box):
                 taken.append(box)
-                out.append(draw.halo_text(
-                    mode, x, y, text, anch, font=font,
-                    weight="600" if rank < 3 else "400",
-                    fill=p["text_primary"]))
+                # The count is a second-order fact about the label, so it
+                # wears the muted ink rather than the same weight as the name.
+                out.append(
+                    f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anch}" '
+                    f'font-size="{font:.1f}" '
+                    f'font-weight="{"600" if rank < 3 else "500"}" '
+                    f'font-family="ui-sans-serif,system-ui,sans-serif" '
+                    f'fill="{p["text_primary"]}" stroke="{p["surface"]}" '
+                    f'stroke-width="2.8" stroke-linejoin="round" '
+                    f'paint-order="stroke">{esc(name)} '
+                    f'<tspan fill="{p["text_muted"]}" font-weight="400">'
+                    f'{esc(count)}</tspan></text>')
                 break
     return "".join(out)
 
@@ -292,7 +277,7 @@ def fig_full_map(d, mode, lang):
     lvl = {cid: d["by_id"][cid]["placement_level"] for cid in d["pos"]}
     colour = {"city": p["series"][0], "territory": p["series"][1]}
 
-    body = [graticule(d["box"], mode, h),
+    body = [BM.basemap_svg(d["proj"], p, "clip53"),
             _edge_paths(d["edges"], d["pos"], mode),
             _discs(d, mode),
             _nodes(d["pos"], d, mode, lambda cid: colour[lvl[cid]]),
@@ -315,7 +300,9 @@ def fig_full_map(d, mode, lang):
                f"là où deux lieux sont proches — un anneau marque le bord de "
                f"chacun. {int(b['n_unplaced']):,} "
                f"entreprises et leurs liens ne sont pas sur la carte. Projection "
-               f"plate carrée ; pas de fond de carte, la graticule porte la géographie."),
+               f"de Robinson ; trait de côte Natural Earth 1:50 M, sans "
+               f"frontières — une frontière moderne sur ce corpus serait un "
+               f"anachronisme."),
         "en": (f"The {placed:,} firms the source can place, each at its own point, and "
                f"the {int(b['n_drawable_edges']):,} ties among them — "
                f"{int(b['n_same_anchor_edges']):,} of which never leave a single place "
@@ -326,8 +313,9 @@ def fig_full_map(d, mode, lang):
                f"fact about the catalogue. Discs overlap where two places are close, "
                f"so a hairline ring marks the edge of each. "
                f"{int(b['n_unplaced']):,} firms and their ties "
-               f"are not on this map. Plate carrée; no basemap ships with this repo, so "
-               f"the graticule carries the geography."),
+               f"are not on this map. Robinson projection; coastline from Natural "
+               f"Earth 1:50 M, land only — a modern border drawn over this corpus "
+               f"would be an anachronism."),
     }[lang]
     legend = [(colour["city"], f"{LEVEL_LABEL[lang]['city']} ({n_city:,})"),
               (colour["territory"], f"{LEVEL_LABEL[lang]['territory']} ({n_terr:,})")]
@@ -369,7 +357,7 @@ def fig_paris(d, mode, lang):
     body = []
     for i, (edges, label) in enumerate(zip((touch, rest), panels)):
         dy = i * (h + gap)
-        body.append(graticule(d["box"], mode, h, dy))
+        body.append(BM.basemap_svg(d["proj"], p, f"clip54_{i}", dy))
         body.append(_edge_paths(edges, d["pos"], mode, dy, base_op=0.07))
         body.append(_discs(d, mode, dy))
         body.append(_nodes(d["pos"], d, mode, colour_of, dy))
@@ -523,7 +511,7 @@ def fig_finance_map(d, mode, lang):
     def colour_of(cid):
         return p["series"][0] if cid in fin else p["other"]
 
-    body = [graticule(d["box"], mode, h),
+    body = [BM.basemap_svg(d["proj"], p, "clip56"),
             _edge_paths(edges, d["pos"], mode, base_op=0.07),
             _discs(d, mode),
             _nodes(d["pos"], d, mode, colour_of,

@@ -1633,6 +1633,131 @@ def check_sector_centrality() -> None:
        int(base["n_cross_sector_edges"]))
 
 
+def check_basemap() -> None:
+    """The shapefile reader, the simplifier and the Robinson projection."""
+    import json
+    import struct
+
+    import basemap as BM
+    import fetch_basemap as FB
+
+    print("basemap", file=sys.stderr)
+
+    # A shapefile built here, so the reader is tested against a known answer
+    # rather than against whatever Natural Earth happens to ship.
+    square = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0), (0.0, 0.0)]
+    body = struct.pack("<i", 5) + struct.pack("<4d", 0, 0, 10, 10)
+    body += struct.pack("<ii", 1, len(square)) + struct.pack("<i", 0)
+    for x, y in square:
+        body += struct.pack("<2d", x, y)
+    blob = (struct.pack(">i", 9994) + b"\0" * 20
+            + struct.pack(">i", (100 + 8 + len(body)) // 2)
+            + struct.pack("<i", 1000) + struct.pack("<i", 5) + b"\0" * 64
+            + struct.pack(">ii", 1, len(body) // 2) + body)
+    got = FB.read_shp_polygons(blob)
+    eq("  the reader finds one polygon", len(got), 1)
+    eq("  with one ring", len(got[0]), 1)
+    eq("  and the right corners", [tuple(p) for p in got[0][0]], square)
+    eq("  the ring area is the shoelace area", FB.ring_area(square), 100.0)
+
+    # The simplifier.
+    line = [(0.0, 0.0), (1.0, 0.0), (2.0, 0.0), (3.0, 0.0)]
+    eq("  a straight line keeps its ends only", FB.simplify(line, 0.01),
+       [(0.0, 0.0), (3.0, 0.0)])
+    spike = [(0.0, 0.0), (1.5, 1.0), (3.0, 0.0)]
+    eq("  a spike above the tolerance is kept", FB.simplify(spike, 0.5), spike)
+    eq("  and below it is not", FB.simplify(spike, 2.0),
+       [(0.0, 0.0), (3.0, 0.0)])
+    check("  a tighter tolerance never keeps fewer points",
+          len(FB.simplify(line + [(3.0, 0.4)], 0.1))
+          >= len(FB.simplify(line + [(3.0, 0.4)], 1.0)), "not monotone")
+
+    # The bug the per-ring tolerance exists to prevent: a flat tolerance
+    # deletes an island smaller than itself, and several of those islands are
+    # French colonies with firms on this map.
+    tahiti = [(-149.60, -17.70), (-149.46, -17.70), (-149.46, -17.62),
+              (-149.60, -17.62), (-149.60, -17.70)]
+    flat = FB.simplify(tahiti, 0.12)
+    adaptive = FB.simplify(
+        tahiti, min(0.12, FB.RING_FRACTION * math.sqrt(FB.ring_area(tahiti))))
+    check("  a flat tolerance deletes a small island", len(flat) < 4,
+          str(len(flat)))
+    check("  the per-ring tolerance keeps it", len(adaptive) >= 4,
+          str(len(adaptive)))
+
+    # Robinson, against its own definition.
+    proj = BM.Robinson(1000.0, pad=0.0, lat_min=-50.0, lat_max=50.0)
+    x0, y0 = proj.project(0.0, -180.0)
+    x1, y1 = proj.project(0.0, 180.0)
+    check("  the equator spans the canvas", abs(x0) < 0.01
+          and abs(x1 - 1000.0) < 0.01, f"{x0:.2f}..{x1:.2f}")
+    eq("  the equator is flat", round(y0, 6), round(y1, 6))
+    mid_x, _ = proj.project(0.0, 0.0)
+    check("  the prime meridian is the middle", abs(mid_x - 500.0) < 0.01,
+          f"{mid_x:.2f}")
+    n = proj.project(30.0, 0.0)[1]
+    ss = proj.project(-30.0, 0.0)[1]
+    check("  north and south are symmetric about the equator",
+          abs((y0 - n) - (ss - y0)) < 0.01, f"{n:.2f}/{ss:.2f}")
+    ys = [proj.project(lat, 0.0)[1] for lat in range(-50, 51, 10)]
+    check("  y falls monotonically with latitude",
+          all(a > b for a, b in zip(ys, ys[1:])), str(ys[:3]))
+    # The property that makes it Robinson rather than plate carree: a parallel
+    # is shorter than the equator, so the meridians curve.
+    w_eq = proj.project(0.0, 180.0)[0] - proj.project(0.0, -180.0)[0]
+    w_60 = proj.project(60.0, 180.0)[0] - proj.project(60.0, -180.0)[0]
+    check("  a parallel is shorter than the equator", w_60 < w_eq * 0.85,
+          f"{w_60:.0f} vs {w_eq:.0f}")
+    check("  the window sets the height",
+          abs(proj.height - (proj.project(-50.0, 0.0)[1]
+                             - proj.project(50.0, 0.0)[1])) < 0.01,
+          f"{proj.height:.1f}")
+
+    # The checked-in land.
+    if not os.path.exists(BM.LAND):
+        return
+    with open(BM.LAND, encoding="utf-8") as fh:
+        feat = json.load(fh)
+    eq("  the basemap is a MultiPolygon", feat["geometry"]["type"],
+       "MultiPolygon")
+    props = feat["properties"]
+    check("  it says where it came from", "Natural Earth" in props["source"],
+          props["source"])
+    rings = [r for poly in feat["geometry"]["coordinates"] for r in poly]
+    eq("  the polygon count matches the properties",
+       len(feat["geometry"]["coordinates"]), props["polygons"])
+    eq("  the point count matches the properties",
+       sum(len(r) for r in rings), props["points"])
+    bad = [r for r in rings if r[0] != r[-1]]
+    check("  every ring is closed", not bad, str(len(bad)))
+    bad = [r for r in rings if len(r) < FB.MIN_RING]
+    check("  no ring is degenerate", not bad, str(len(bad)))
+    bad = [(x, y) for r in rings for x, y in r
+           if not (-180.1 <= x <= 180.1 and -90.1 <= y <= 90.1)]
+    check("  every coordinate is on the globe", not bad, str(bad[:2]))
+    # The floor is applied to each ring's area *before* simplification, and
+    # simplification only ever removes area, so a ring that passed the filter
+    # can land below it afterwards. What must not survive is a ring an order of
+    # magnitude below the floor.
+    bad = [r for r in rings
+           if FB.ring_area(r) < props["min_area_sq_degrees"] * 0.1]
+    check("  no ring an order of magnitude below the floor survived", not bad,
+          str(len(bad)))
+
+    # The places the corpus needs: an anchor with no land under it is the
+    # failure mode the per-ring tolerance was written for.
+    want = {"Tahiti": (-17.6, -149.4), "Réunion": (-21.1, 55.5),
+            "Guadeloupe": (16.2, -61.5), "Nouvelle-Calédonie": (-21.3, 165.5),
+            "Saint-Pierre": (46.8, -56.2), "Comores": (-11.7, 43.3)}
+    missing = []
+    for name, (lat, lon) in want.items():
+        if not any(abs(x - lon) < 2.0 and abs(y - lat) < 2.0
+                   for r in rings for x, y in r):
+            missing.append(name)
+    check("  every small colony still has land under it", not missing,
+          str(missing))
+
+
 def check_map_placement() -> None:
     """Stage 20: the placement ladder, and the arithmetic that must close."""
     import collections
@@ -2101,9 +2226,13 @@ def check_figures() -> None:
         from make_descriptive_figures import EXTRA_SERIES
         from make_territory_figures import SEQ
 
+        # `land`, `coast` and `graticule` are substrate, not a categorical
+        # scale: they are the basemap the map figures draw the data on. They
+        # are allowed here and nowhere near a data mark, which is why they are
+        # weaker than `hairline` and why nothing selects them by value.
         allowed = set(PALETTE["light"]["series"]) | {
             PALETTE["light"]["other"], PALETTE["light"]["surface"],
-            PALETTE["light"]["edge"], "none",
+            PALETTE["light"]["edge"], PALETTE["light"]["land"], "none",
         }
         stack_allowed = allowed | set(EXTRA_SERIES["light"])
         # Fill is inherited, and the map figures set it once on a <g> holding
@@ -2131,6 +2260,7 @@ def check_figures() -> None:
         stroke_allowed = stack_allowed | {
             PALETTE["light"]["hairline"], PALETTE["light"]["text_muted"],
             PALETTE["light"]["text_primary"], PALETTE["light"]["text_secondary"],
+            PALETTE["light"]["coast"], PALETTE["light"]["graticule"],
         }
         extra_s = set()
         for tag in ("path", "line", "circle", "rect", "text"):
@@ -2139,7 +2269,18 @@ def check_figures() -> None:
         check(f"  {name}: no stroke colour outside the palette", not extra_s,
               str(sorted(extra_s)[:3]))
 
-        extra_r = ({r.get("fill") for r in root.iter(f"{ns}rect")}
+        # Same inheritance as the circles above, plus one exclusion: a rect
+        # inside a <clipPath> is geometry, never a mark, and has no fill to
+        # read. The map figures clip the basemap to the frame with one.
+        def in_clip(el):
+            while el is not None:
+                if el.tag == f"{ns}clipPath":
+                    return True
+                el = parent.get(el)
+            return False
+
+        extra_r = ({fill_of(r) for r in root.iter(f"{ns}rect")
+                    if not in_clip(r)}
                    - stack_allowed - set(SEQ["light"]))
         check(f"  {name}: no rect colour outside the palette", not extra_r,
               str(sorted(x for x in extra_r if x)[:3]))
@@ -2413,6 +2554,7 @@ def main() -> None:
         check_sectors()
         check_political_coding()
         check_sector_centrality()
+        check_basemap()
         check_map_placement()
         check_world_map_figures()
         check_geocoding()
