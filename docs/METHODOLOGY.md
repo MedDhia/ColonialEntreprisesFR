@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Seventeen stages, each resumable, each writing its own outputs:
+Eighteen stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -74,10 +74,13 @@ Seventeen stages, each resumable, each writing its own outputs:
 14. **`make_legislative_layer.py`** — mandates × the company network →
     `legislators.csv`, the legislator interlocks, the roster continuity (§5j).
 15. **`make_legislative_figures.py`** — figures 34–39 (§5j).
+15b. **`sectors.py --sync`** — the source's 109 sector labels → the
+    19-group mapping in `data/reference/sector_groups.csv` (§5l).
 16. **`code_political_connections.py`** — offices × boards →
     `company_political.csv` and its two summaries (§5k). The rules are in
-    `data/reference/political_connection_rules.md`.
-17. **`make_political_figures.py`** — figures 40–44 (§5k).
+    `data/reference/political_connection_rules.md`, and the sector
+    cross-tab (§5l).
+17. **`make_political_figures.py`** — figures 40–46 (§5k, §5l).
 
 Figure stages 7, 8, 11–13, 15 and 17 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
@@ -1662,6 +1665,96 @@ with its firms. And it **cannot be compared across `source_genre` without
 holding it constant**: the roster genre (§4i) exists precisely to record
 political connection, so firms with roster evidence are connected at a far
 higher rate by construction.
+
+## 5l. Political connection by sector, and why the raw cross-tab misleads
+
+Crossing the connection coding with sector needed two pieces of work before it
+could be tabulated at all, and then a third before it could be read.
+
+### The sector field is not an analysable variable as it stands
+
+`companies.csv`'s `sectors` column is the site's own filing vocabulary, taken as
+printed: **109 distinct labels**. Three problems, all fixed by
+`src/sectors.py` and the reviewable mapping in
+`data/reference/sector_groups.csv`:
+
+1. **The modal value is not a sector.** `Documents généraux (par ordre
+   chronologique)` covers 5,397 firms — the chronological clipping dump.
+   With its variants, **2,949 of the 6,454 firms with a board carry no other
+   sector at all**. Every sector figure is therefore computed on **3,505
+   firms**, and says so.
+2. **The field carries the site's own navigation text.** Among the 109 labels
+   are `Alain LÉGER, créateur du site …, a publié`, `Pour une utilisation
+   optimale de nos liens, téléchargez nos pdf`, `Messages personnels` and
+   `documents`. These are mapped to `not_a_sector` and excluded, not counted.
+3. **One sector is spelled up to six ways.** Six labels are mining (`Mines`,
+   `Mines et carrières`, `Groupes miniers transcoloniaux`, `Mines et
+   métallurgie`, `Mines et placers`, `mines et industries`); six are banking;
+   five are agri-food, two of them differing only in case. Tabulating the raw
+   labels splits every real sector into fragments and puts none of them at the
+   top.
+
+The mapping groups all 109 into **19 sectors plus two residuals**, and the two
+residuals are deliberately distinct: `unclassified` is the *source's own*
+economic residue (`Divers`, `Industries diverses`), which is information and is
+kept; `not_a_sector` has no economic content and is dropped. `sector_of` takes
+the first **non-filing** label rather than the first listed, so a firm filed
+under `Documents généraux; Mines` is a mining firm. `checks.py` asserts every
+label in the data appears in the committed mapping, so a new label cannot
+silently become `unmapped`.
+
+### The raw cross-tab is a board-size artefact
+
+Read naively, `political_connections_by_sector.csv` says finance is the most
+connected sector (56.0%) and mining second (44.8%). Both have large boards —
+median 10 and 7 — and **a board of ten has ten chances to contain a connected
+director where a board of two has two.** Metallurgy (median board 2) and health
+and education (median 1) sit at the bottom for the same mechanical reason.
+
+The benchmark is the simplest defensible one. Let *p* be the corpus-wide
+seat-level rate — connected director-seats over all director-seats. Under a null
+where each seat is independently connected with probability *p*, a firm with *k*
+directors holds at least one with probability 1 − (1 − *p*)^*k*, and a sector's
+expected share is the mean of that over its firms. `excess_share` is observed
+minus expected.
+
+**The adjustment reorders the table completely:**
+
+| Sector | firms | observed | expected | excess | median board |
+|---|---|---|---|---|---|
+| Press, printing and communications | 57 | 42.1% | 20.4% | **+21.7** | 1 |
+| Hotels and tourism | 50 | 44.0% | 23.2% | **+20.8** | 2 |
+| Health, education and research | 54 | 25.9% | 15.4% | **+10.5** | 1 |
+| Transcolonial and diversified groups | 97 | 56.7% | 48.8% | +7.9 | 8 |
+| Transport, ports and docks | 310 | 47.1% | 41.4% | +5.7 | 7 |
+| Banking, finance and insurance | 557 | 56.0% | 51.8% | **+4.2** | 10 |
+| Mining and quarrying | 565 | 44.8% | 43.2% | **+1.6** | 7 |
+| Food processing, livestock, fishing | 461 | 40.8% | 42.0% | −1.2 | 7 |
+| Metallurgy and engineering | 28 | 21.4% | 26.1% | −4.7 | 2 |
+| Construction and building materials | 138 | 37.7% | 43.5% | **−5.8** | 6 |
+
+Finance and mining, the two sectors the raw shares put on top, are within a few
+points of what their board sizes already predict. The sectors genuinely
+connected beyond board size are **press and printing, and hotels and tourism**
+— both with median boards of one or two, where a single connected director is
+the whole board. Construction is the one sector materially *less* connected than
+its boards predict.
+
+Three cautions on that table. The three sectors at the top have **50–57 firms**
+each, so their excess is volatile in a way the 557-firm finance row is not; the
+figures print every denominator for this reason. The null **treats seats as
+exchangeable**, which they are not, and ignores correlation among a firm's
+directors — it is a yardstick for reading the raw shares, not a model. And the
+`not_a_sector` residue is *less* connected (21.4%) than the sectored firms,
+which is most likely an evidence artefact: a firm known only from a press
+clipping offers less text in which an office could be observed.
+
+### The figures
+
+`fig45` is the cross-tabulation proper — sector × tier as a heatmap, rows
+summing to 100%, with the sequential ramp applied **within each row** because
+one ramp across the table would be dominated by the `none` tier. `fig46` is the
+board-size adjustment, observed against expected, ordered by excess.
 
 ## 6. Validity — read this before using the data
 

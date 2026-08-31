@@ -46,6 +46,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import sectors  # noqa: E402
 from build_network import BOARD_ROLES, read_csv, write_csv  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -184,6 +185,7 @@ def main() -> None:
     keys = resolver()
     people = build_people(keys)
     companies = {c["company_id"]: c for c in read_csv("companies.csv")}
+    sector_map = sectors.load_map()
 
     # Board seats only: a firm mentioned in a director's biography is not a
     # firm he sat on, and `is_board_seat` is what draws that line.
@@ -207,6 +209,14 @@ def main() -> None:
     for firm, members in board.items():
         for person in members:
             firms_of[person].add(firm)
+
+    _sector_cache: dict[str, tuple[str, str, str]] = {}
+
+    def sector_of(rec):
+        key = rec.get("company_id", "")
+        if key not in _sector_cache:
+            _sector_cache[key] = sectors.sector_of(rec, sector_map)
+        return _sector_cache[key]
 
     rows = []
     for firm in sorted(board):
@@ -260,7 +270,14 @@ def main() -> None:
             "n_territories": len([t for t in (rec.get("countries") or "")
                                   .split("; ") if t]),
             "all_territories": rec.get("countries", ""),
+            # `sector` keeps the raw first-listed label for continuity with
+            # the rest of the pipeline. `sector_group` is the analysable one:
+            # the first label that is not a filing category, mapped through
+            # data/reference/sector_groups.csv. See METHODOLOGY §5l.
             "sector": (rec.get("sectors") or "").split("; ")[0],
+            "sector_group": sector_of(rec)[0],
+            "sector_group_en": sector_of(rec)[1],
+            "sector_raw": sector_of(rec)[2],
             "n_directors": len(members),
             "n_connected": len(connected),
             "share_connected": (f"{len(connected) / len(members):.4f}"
@@ -287,6 +304,33 @@ def main() -> None:
     write_csv("company_political.csv", rows, list(rows[0].keys()) if rows
               else ["company_id"])
 
+    # --- the board-size null ---------------------------------------------
+    # Share of firms with a connected director is partly a board-size
+    # artefact: a board of ten has ten chances to contain one, a board of two
+    # has two. Finance's median board is 10 and metallurgy's is 2, so the raw
+    # shares are not comparable as they stand.
+    #
+    # The benchmark is the simplest defensible one. Let p be the corpus-wide
+    # seat-level rate — connected director-seats over all director-seats.
+    # Under a null where each seat is independently connected with
+    # probability p, a firm with k directors has probability 1 - (1 - p)^k of
+    # holding at least one, and a sector's expected share is the mean of that
+    # over its firms. `excess_share` is observed minus expected: it is the part
+    # of a sector's connection that its board sizes do not already predict.
+    #
+    # The null is deliberately crude. It assumes seats are exchangeable, which
+    # they are not, and it ignores that a firm's directors are correlated with
+    # each other. It is a yardstick for reading the raw shares, not a model.
+    total_seats = sum(int(r["n_directors"]) for r in rows)
+    total_conn_seats = sum(int(r["n_connected"]) for r in rows)
+    seat_rate = (total_conn_seats / total_seats) if total_seats else 0.0
+
+    def expected_share(group) -> float:
+        if not group:
+            return 0.0
+        return sum(1.0 - (1.0 - seat_rate) ** int(x["n_directors"])
+                   for x in group) / len(group)
+
     # --- by territory ----------------------------------------------------
     by_terr: dict[str, list[dict]] = collections.defaultdict(list)
     for r in rows:
@@ -310,9 +354,56 @@ def main() -> None:
                                    if g["indirect_only"] == "1"),
             "mean_share_connected": (
                 f"{sum(float(g['share_connected'] or 0) for g in group) / n:.4f}"),
+            "n_seats": sum(int(g["n_directors"]) for g in group),
+            "expected_share_connected": f"{expected_share(group):.4f}",
+            "excess_share": (
+                f"{len(conn) / n - expected_share(group):+.4f}"),
         })
     write_csv("political_connections_by_territory.csv", summary,
               list(summary[0].keys()) if summary else ["territory"])
+
+    # --- by sector -------------------------------------------------------
+    # Firms whose only sector label is a filing category carry no sector, and
+    # are reported as their own row rather than dropped without trace: they are
+    # 46% of the coded firms and their absence is the first thing a reader of
+    # this table needs to know.
+    by_sec: dict[str, list[dict]] = collections.defaultdict(list)
+    english: dict[str, str] = {}
+    for r in rows:
+        by_sec[r["sector_group"]].append(r)
+        english[r["sector_group"]] = r["sector_group_en"]
+    sec_summary = []
+    for group, g in sorted(by_sec.items(), key=lambda kv: -len(kv[1])):
+        n = len(g)
+        conn = [x for x in g if int(x["connection_tier"]) > 0]
+        sec_summary.append({
+            "sector_group": group,
+            "sector_group_en": english.get(group, group),
+            "n_firms": n,
+            "n_connected": len(conn),
+            "share_connected": f"{len(conn) / n:.4f}",
+            **{f"n_tier_{t}": sum(1 for x in g
+                                  if int(x["connection_tier"]) == t)
+               for t in (4, 3, 2, 1, 0)},
+            **{f"share_tier_{t}": f"{sum(1 for x in g if int(x['connection_tier']) == t) / n:.4f}"
+               for t in (4, 3, 2, 1, 0)},
+            **{f"n_{k}": sum(1 for x in g if x[f"has_{k}"] == "1")
+               for k in CLASSES},
+            "n_sitting": sum(1 for x in g if x["has_sitting"] == "1"),
+            "n_former": sum(1 for x in g if x["has_former"] == "1"),
+            "n_indirect_only": sum(1 for x in g if x["indirect_only"] == "1"),
+            "mean_share_connected": (
+                f"{sum(float(x['share_connected'] or 0) for x in g) / n:.4f}"),
+            "median_board_size": sorted(int(x["n_directors"]) for x in g)[n // 2],
+            "n_seats": sum(int(x["n_directors"]) for x in g),
+            "director_rate": (
+                f"{sum(int(x['n_connected']) for x in g) / max(sum(int(x['n_directors']) for x in g), 1):.4f}"),
+            "expected_share_connected": f"{expected_share(g):.4f}",
+            "excess_share": (
+                f"{len(conn) / n - expected_share(g):+.4f}"),
+        })
+    write_csv("political_connections_by_sector.csv", sec_summary,
+              list(sec_summary[0].keys()) if sec_summary else ["sector_group"])
 
     # --- the review set --------------------------------------------------
     review = sorted((r for r in rows if int(r["connection_tier"]) > 0),
@@ -343,6 +434,10 @@ def main() -> None:
     print(f"  indirect only: "
           f"{sum(1 for r in rows if r['indirect_only'] == '1'):,}",
           file=sys.stderr)
+    coded = [r for r in rows if r["sector_group"] != "not_a_sector"]
+    print(f"  with an economic sector: {len(coded):,} "
+          f"({len(coded) / len(rows):.1%}); the rest carry only a filing "
+          f"category", file=sys.stderr)
     print(f"  confidence: "
           f"{collections.Counter(r['confidence'] for r in conn).most_common()}",
           file=sys.stderr)

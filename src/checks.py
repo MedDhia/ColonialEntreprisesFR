@@ -1452,6 +1452,100 @@ def check_political_coding() -> None:
     check("  every territory's tiers sum to its firms", not bad, str(len(bad)))
 
 
+def check_sectors() -> None:
+    """The sector grouping, and the three problems it exists to fix."""
+    import sectors as S
+
+    print("sector grouping", file=sys.stderr)
+
+    eq("  a filing category is not a sector",
+       S.classify("Documents généraux (par ordre chronologique)")[0],
+       "not_a_sector")
+    eq("  site chrome is not a sector",
+       S.classify("Alain LÉGER, créateur du site www.entreprises-coloniales.fr, a publié")[0],
+       "not_a_sector")
+    eq("  the source's own residual is kept, not discarded",
+       S.classify("Industries diverses")[0], "unclassified")
+
+    # The fragmentation the grouping exists to fix.
+    for label in ("Mines", "Mines et carrières", "Groupes miniers transcoloniaux",
+                  "Mines et métallurgie", "Mines et placers", "mines et industries"):
+        eq(f"  mining: {label[:34]}", S.classify(label)[0], "mining")
+    for label in ("Banques et groupes financiers, assurances",
+                  "Banque, gérance, assurances…", "Banques et groupes financiers",
+                  "Banques, groupes financiers, assureurs",
+                  "Banques et sociétés financières", "Groupes financiers transcoloniaux"):
+        eq(f"  finance: {label[:34]}", S.classify(label)[0], "finance")
+    # Case is not a distinction; the source spells one label two ways.
+    eq("  case is not a sector distinction",
+       S.classify("industries agro-alimentaires")[0],
+       S.classify("Industries agro-alimentaires")[0])
+
+    mapping = S.load_map()
+    check("  the mapping is committed", bool(mapping), str(len(mapping)))
+    if not mapping:
+        return
+    check("  nothing is left unmapped",
+          not [k for k, v in mapping.items() if v[0] == "unmapped"],
+          str([k for k, v in mapping.items() if v[0] == "unmapped"][:3]))
+    # Every label the data actually carries must be in the committed mapping,
+    # or a new sector silently becomes `unmapped` at read time.
+    missing = sorted(set(S.raw_labels()) - set(mapping))
+    check("  every label in companies.csv is mapped", not missing,
+          str(missing[:3]))
+    # Group names must agree between the patterns and the CSV.
+    groups = {g for g, _, _ in S.RULES} | {"unmapped"}
+    stray = sorted({v[0] for v in mapping.values()} - groups)
+    check("  the CSV uses no group the rules do not define", not stray,
+          str(stray))
+
+    # `sector_of` takes the first *non-filing* label, not the first listed.
+    eq("  a filing label does not win over a real one",
+       S.sector_of({"sectors": "Documents généraux; Mines"}, mapping)[0],
+       "mining")
+    eq("  a firm with only filing labels has no sector",
+       S.sector_of({"sectors": "Documents généraux"}, mapping)[0],
+       "not_a_sector")
+    eq("  a firm with no sectors at all is handled",
+       S.sector_of({"sectors": ""}, mapping)[0], "not_a_sector")
+
+    path = os.path.join(PROC_DIR, "political_connections_by_sector.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("political_connections_by_sector.csv")
+    bad = [r for r in rows
+           if sum(int(r[f"n_tier_{t}"]) for t in (4, 3, 2, 1, 0))
+           != int(r["n_firms"])]
+    check("  every sector's tiers sum to its firms", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if abs(sum(float(r[f"share_tier_{t}"]) for t in (4, 3, 2, 1, 0)) - 1)
+           > 0.005]
+    check("  every sector's tier shares sum to 1", not bad, str(len(bad)))
+    # The board-size null: excess must be observed minus expected, exactly.
+    bad = [r["sector_group"] for r in rows
+           if abs((float(r["share_connected"])
+                   - float(r["expected_share_connected"]))
+                  - float(r["excess_share"])) > 0.0002]
+    check("  excess_share is observed minus expected", not bad, str(bad[:3]))
+    bad = [r for r in rows if not 0.0 <= float(r["expected_share_connected"]) <= 1.0]
+    check("  the expected share is a probability", not bad, str(len(bad)))
+    # The null must be monotone in board size *per firm* — that is the
+    # invariant. Asserting it on the sector means was wrong: the mean of
+    # 1-(1-p)^k over a sector's firms need not track that sector's median
+    # board, and a median-3 sector with many 1-director firms legitimately
+    # sits below a median-2 sector with none.
+    total_seats = sum(int(r["n_seats"]) for r in rows)
+    total_conn = sum(int(r["n_connected"]) for r in rows)
+    p_seat = total_conn / total_seats if total_seats else 0.0
+    check("  the seat rate is a probability", 0.0 < p_seat < 1.0, f"{p_seat}")
+    curve = [1.0 - (1.0 - p_seat) ** k for k in range(1, 30)]
+    check("  the null is monotone in board size",
+          all(b > a for a, b in zip(curve, curve[1:])), f"p={p_seat:.4f}")
+    # And a one-director firm's expected share is exactly the seat rate.
+    check("  a board of one expects the seat rate",
+          abs(curve[0] - p_seat) < 1e-12, f"{curve[0]} vs {p_seat}")
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -1997,6 +2091,7 @@ def main() -> None:
         check_rosters()
         check_offices()
         check_legislative_layer()
+        check_sectors()
         check_political_coding()
         check_geocoding()
         check_figures()

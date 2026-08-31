@@ -42,6 +42,7 @@ from make_descriptive_figures import (PAGE_CSS, _axis_text, _fmt,  # noqa: E402
                                       _table_html, hbars)
 from make_figures import (PALETTE, FIG_DIR, esc, svg_document,  # noqa: E402
                           trim_to_width)
+from make_territory_figures import SEQ  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROC = os.path.join(ROOT, "data", "processed")
@@ -64,7 +65,8 @@ def load(name):
 
 def gather():
     return {"firms": load("company_political.csv"),
-            "terr": load("political_connections_by_territory.csv")}
+            "terr": load("political_connections_by_territory.csv"),
+            "sector": load("political_connections_by_sector.csv")}
 
 
 TIER_LABEL = {
@@ -405,12 +407,213 @@ def fig_concurrency(d, mode, lang):
     return body, 280.0, title, None, caption, table
 
 
+MIN_SECTOR_FIRMS = 25   # below this a share is noise; the figure says so
+
+
+def _sector_rows(d):
+    """Sectors big enough to carry a share, excluding the filing residue."""
+    rows = [r for r in d["sector"]
+            if r["sector_group"] != "not_a_sector"
+            and int(r["n_firms"]) >= MIN_SECTOR_FIRMS]
+    return rows
+
+
+# --- fig45: the cross-tabulation ------------------------------------------
+def fig_sector_tiers(d, mode, lang):
+    """Sector x tier, as a heatmap. This is the cross-tab itself."""
+    p = PALETTE[mode]
+    seq = SEQ[mode]
+    rows = _sector_rows(d)
+    if not rows:
+        return "", 40.0, "", None, "", None
+    rows.sort(key=lambda r: -float(r["share_connected"]))
+    cols = [4, 3, 2, 1, 0]
+    # The gutter carries two right-aligned fields: the sector name ending
+    # at label_w - 56, and the firm count ending at label_w - 10. Drawing
+    # the count anchored `start` at label_w - 6 put it under the first cell.
+    label_w, cell_w, cell_h, top = 362.0, 128.0, 26.0, 44.0
+    name_end, count_end = label_w - 58, label_w - 12
+    height = top + len(rows) * cell_h + 30.0
+    parts = []
+    for j, t in enumerate(cols):
+        parts.append(_axis_text(mode, label_w + cell_w * (j + 0.5), top - 12,
+                                _tier(t, lang), "middle", AXIS_FONT))
+    # The ramp is applied to the share within a row, so a row reads as a
+    # composition. A single ramp over the whole table would be dominated by
+    # tier 0 and every other cell would sit in the palest step.
+    for i, r in enumerate(rows):
+        y = top + i * cell_h
+        cy = y + cell_h / 2
+        parts.append(_axis_text(
+            mode, name_end, cy + 3.6,
+            trim_to_width(r["sector_group_en"], AXIS_FONT, name_end - 8),
+            "end"))
+        parts.append(_axis_text(mode, count_end, cy + 3.6,
+                                f"({int(r['n_firms']):,})", "end",
+                                AXIS_FONT, muted=True))
+        for j, t in enumerate(cols):
+            share = float(r[f"share_tier_{t}"])
+            step = min(len(seq) - 1, int(share * len(seq) / 0.72))
+            x = label_w + cell_w * j
+            n = int(r[f"n_tier_{t}"])
+            parts.append(
+                f'<g class="mk"><title>{esc(r["sector_group_en"])} — '
+                f'{esc(_tier(t, lang))}: {n:,} / {int(r["n_firms"]):,} '
+                f'({share:.0%})</title>'
+                f'<rect x="{x + 1:.1f}" y="{y + 1:.1f}" '
+                f'width="{cell_w - 3:.1f}" height="{cell_h - 3:.1f}" rx="3" '
+                f'fill="{seq[step]}"/></g>')
+            # Value ink is a text token, never the cell colour; the label
+            # flips to the light end once the cell is dark enough to need it.
+            parts.append(
+                f'<text x="{x + cell_w / 2:.1f}" y="{cy + 3.6:.1f}" '
+                f'text-anchor="middle" font-size="{AXIS_FONT}" '
+                f'font-family="ui-sans-serif,system-ui,sans-serif" '
+                f'fill="{p["surface"] if step >= 5 else p["text_primary"]}">'
+                f'{share:.0%}</text>')
+    title = {"fr": "fig. 45 — Connexion politique × secteur",
+             "en": "fig. 45 — Political connection × sector"}[lang]
+    caption = {
+        "fr": (f"Part des sociétés de chaque secteur dans chaque degré ; les "
+               f"lignes somment à 100%. Nombre de sociétés entre parenthèses. "
+               f"Secteurs de moins de {MIN_SECTOR_FIRMS} sociétés écartés, "
+               f"ainsi que les {sum(1 for r in d['firms'] if r['sector_group'] == 'not_a_sector'):,} "
+               f"sociétés dont la seule étiquette est une catégorie de "
+               f"classement documentaire et non un secteur. La rampe est "
+               f"appliquée ligne par ligne : une rampe unique sur tout le "
+               f"tableau serait dominée par le degré « aucune »."),
+        "en": (f"Share of each sector's firms in each tier; rows sum to 100%. "
+               f"Firm count in brackets. Sectors below "
+               f"{MIN_SECTOR_FIRMS} firms are dropped, as are the "
+               f"{sum(1 for r in d['firms'] if r['sector_group'] == 'not_a_sector'):,} "
+               f"firms whose only label is a document-filing category rather "
+               f"than a sector. The ramp is applied within each row: one ramp "
+               f"across the whole table would be dominated by the `none` "
+               f"tier and every other cell would sit in the palest step."),
+    }[lang]
+    table = ([{"fr": "Secteur", "en": "Sector"}[lang],
+              {"fr": "Sociétés", "en": "Firms"}[lang]]
+             + [_tier(t, lang) for t in cols],
+             [[r["sector_group_en"], r["n_firms"]]
+              + [f"{float(r[f'share_tier_{t}']):.0%}" for t in cols]
+              for r in rows])
+    return "".join(parts), height, title, None, caption, table
+
+
+# --- fig46: the board-size adjustment -------------------------------------
+def fig_sector_excess(d, mode, lang):
+    """Observed against expected share, by sector. The finding."""
+    p = PALETTE[mode]
+    rows = _sector_rows(d)
+    if not rows:
+        return "", 40.0, "", None, "", None
+    rows.sort(key=lambda r: -float(r["excess_share"]))
+    label_w, right, row_h, top = 362.0, 132.0, 27.0, 40.0
+    name_end, count_end = label_w - 58, label_w - 12
+    plot_w = W - label_w - right
+    hi = max(max(float(r["share_connected"]),
+                 float(r["expected_share_connected"])) for r in rows)
+    hi = min(1.0, hi * 1.08)
+    height = top + len(rows) * row_h + 34.0
+
+    def x_of(v):
+        return label_w + plot_w * v / hi
+
+    parts = []
+    for v in (0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6):
+        if v > hi:
+            continue
+        gx = x_of(v)
+        parts.append(f'<line x1="{gx:.1f}" y1="{top - 10:.1f}" x2="{gx:.1f}" '
+                     f'y2="{height - 30:.1f}" stroke="{p["hairline"]}" '
+                     f'stroke-width="1"/>')
+        parts.append(_axis_text(mode, gx, height - 14, f"{v:.0%}", "middle",
+                                AXIS_FONT, muted=True))
+    for i, r in enumerate(rows):
+        y = top + i * row_h
+        cy = y + row_h / 2
+        obs = float(r["share_connected"])
+        exp = float(r["expected_share_connected"])
+        exc = float(r["excess_share"])
+        parts.append(_axis_text(
+            mode, name_end, cy + 3.6,
+            trim_to_width(r["sector_group_en"], AXIS_FONT, name_end - 8),
+            "end"))
+        parts.append(_axis_text(mode, count_end, cy + 3.6,
+                                f"({int(r['n_firms']):,})", "end",
+                                AXIS_FONT, muted=True))
+        # The connector carries the sign; the two ends carry the values.
+        parts.append(
+            f'<g class="mk"><title>{esc(r["sector_group_en"])}: '
+            f'{obs:.0%} '
+            + ("observé" if lang == "fr" else "observed")
+            + f", {exp:.0%} "
+            + ("attendu" if lang == "fr" else "expected")
+            + f" ({exc:+.1%})</title>"
+            f'<line x1="{x_of(min(obs, exp)):.1f}" y1="{cy:.1f}" '
+            f'x2="{x_of(max(obs, exp)):.1f}" y2="{cy:.1f}" '
+            f'stroke="{p["series"][0] if exc >= 0 else p["series"][1]}" '
+            f'stroke-width="3" stroke-linecap="round" stroke-opacity="0.5"/>'
+            f'<circle cx="{x_of(exp):.1f}" cy="{cy:.1f}" r="5" '
+            f'fill="{p["other"]}" stroke="{p["surface"]}" stroke-width="1.6"/>'
+            f'<circle cx="{x_of(obs):.1f}" cy="{cy:.1f}" r="5.6" '
+            f'fill="{p["series"][0] if exc >= 0 else p["series"][1]}" '
+            f'stroke="{p["surface"]}" stroke-width="1.6"/></g>')
+        parts.append(_axis_text(
+            mode, W - right + 14, cy + 3.6,
+            f"{exc * 100:+.1f} pts".replace("-", "\u2212"),
+            "start", AXIS_FONT))
+    title = {"fr": "fig. 46 — Au-delà de la taille du conseil",
+             "en": "fig. 46 — Beyond board size"}[lang]
+    caption = {
+        "fr": ("La part observée de sociétés connectées, contre la part "
+               "attendue si chaque siège était connecté indépendamment au taux "
+               "d'ensemble. Un conseil de dix a dix chances d'en compter un ; "
+               "un conseil de deux en a deux, et la banque (conseil médian 10) "
+               "paraît connectée pour cette raison autant que pour une autre. "
+               "L'écart réordonne le tableau : la presse et l'hôtellerie, "
+               "conseils médians de 1 et 2, sont les secteurs les plus "
+               "connectés une fois la taille neutralisée. Le modèle nul est "
+               "volontairement grossier — il suppose les sièges "
+               "interchangeables — et sert d'étalon de lecture, non de modèle."),
+        "en": ("Observed share of connected firms against the share expected "
+               "if every seat were independently connected at the corpus-wide "
+               "rate. A board of ten has ten chances to hold one; a board of "
+               "two has two, and banking (median board 10) looks connected "
+               "partly for that reason. The gap reorders the table: press and "
+               "hospitality, median boards of 1 and 2, are the most connected "
+               "sectors once size is netted out. The null is deliberately "
+               "crude — it treats seats as exchangeable — and is a yardstick "
+               "for reading the raw shares, not a model."),
+    }[lang]
+    legend = [(p["series"][0], {"fr": "observé, au-dessus de l'attendu",
+                               "en": "observed, above expected"}[lang]),
+              (p["series"][1], {"fr": "observé, en dessous",
+                                "en": "observed, below"}[lang]),
+              (p["other"], {"fr": "attendu (taille du conseil)",
+                            "en": "expected (board size)"}[lang])]
+    table = ([{"fr": "Secteur", "en": "Sector"}[lang],
+              {"fr": "Sociétés", "en": "Firms"}[lang],
+              {"fr": "Observé", "en": "Observed"}[lang],
+              {"fr": "Attendu", "en": "Expected"}[lang],
+              {"fr": "Écart", "en": "Excess"}[lang],
+              {"fr": "Conseil médian", "en": "Median board"}[lang]],
+             [(r["sector_group_en"], r["n_firms"],
+               f"{float(r['share_connected']):.1%}",
+               f"{float(r['expected_share_connected']):.1%}",
+               f"{float(r['excess_share']):+.1%}",
+               r["median_board_size"]) for r in rows])
+    return "".join(parts), height, title, legend, caption, table
+
+
 FIGURES = [
     ("fig40_connection_tiers", fig_tiers),
     ("fig41_sitting_or_former", fig_revolving),
     ("fig42_connection_by_territory", fig_territory),
     ("fig43_connected_boards", fig_boards),
     ("fig44_concurrency", fig_concurrency),
+    ("fig45_sector_tiers", fig_sector_tiers),
+    ("fig46_sector_excess", fig_sector_excess),
 ]
 
 

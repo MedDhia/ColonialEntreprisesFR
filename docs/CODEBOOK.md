@@ -39,7 +39,7 @@ frame for the whole collection.
 | `birth_year`, `death_year` | Life dates, for `entry_type = person`. Blank where the source gives `?` or omits them. |
 | `region` | Canonical territory index page the document is filed under (13 values). |
 | `country` | Territory heading within that page — 62 values (`Madagascar`, `Sénégal`, `Syrie-Liban`, `Chine`…). Pages covering several territories mark the first with `premierTitrePays` and the rest with `titrePays`; both are read. |
-| `sector` | Economic sector heading (108 distinct values, in French, as printed). |
+| `sector` | Economic sector heading, in French, as printed. **109 distinct values across the catalogue, and not analysable as they stand** — the modal value is a document-filing category, some are the site's navigation text, and one sector is spelled up to six ways. Use `sector_group` in `company_political.csv`, or map through `data/reference/sector_groups.csv`. See METHODOLOGY §5l. |
 | `group_path` | Corporate group or lineage from the nested-list hierarchy, `parent > child`. Blank for most entries. |
 | `group_depth` | Nesting depth (0 = not inside a group). |
 | `all_regions`, `all_sectors` | All classifications across every listing of this document. A firm active in several territories is listed more than once. |
@@ -934,6 +934,8 @@ rejected, and the four things the coding cannot do.
 | `n_connected_neighbours`, `indirect_only` | Firms sharing a director with this one that are themselves connected; `indirect_only = 1` for the 3,254 firms with a connected neighbour and no connected director. Deliberately outside the tier. |
 | `first_connection_year`, `last_connection_year` | Range of observed tie years for the connected directors. Empty where no tie carries a year. |
 | `confidence` | `high` (roster evidence or ≥ 2 independent mentions), `medium` (one apposition or bracket), `low` (forenameless key, or footnote career line only). Of 2,243 connected firms: 1,052 / 349 / 842. **`low` is 38% of the connected set — not a residue.** |
+| `sector_group`, `sector_group_en`, `sector_raw` | The grouped sector, and the raw label it came from. The **first non-filing** label wins, so a firm filed `Documents généraux; Mines` is mining. `not_a_sector` for the 2,949 firms with no economic label. |
+| `n_territories`, `all_territories` | How many territories the firm is filed under, and all of them — `territory` is only the first. |
 | `connected_directors` | Up to eight names, for auditing. |
 
 Headline: **2,243 of 6,454 firms (34.8%) are politically connected.** Do not
@@ -948,6 +950,48 @@ firms with roster evidence are connected at a higher rate by construction.
 counts sum to `n_firms`, and `checks.py` asserts it. Territories with few firms
 produce unstable shares; fig 42 draws only those with 25 or more and prints the
 denominator beside each bar.
+
+### `political_connections_by_sector.csv` (20 rows)
+
+The cross-tabulation. One row per sector group, including the two residuals.
+**Computed on the 3,505 firms that carry an economic sector**; the other 2,949
+carry only a document-filing category and appear as the `not_a_sector` row.
+See METHODOLOGY §5l.
+
+| Variable | Description |
+|---|---|
+| `sector_group`, `sector_group_en` | The grouped sector, from `data/reference/sector_groups.csv`. 19 real groups plus `unclassified` (the source's own economic residue, kept) and `not_a_sector` (filing categories and site chrome, excluded from every rate). |
+| `n_firms`, `n_connected`, `share_connected` | Firms in the sector, how many are connected, and the ratio. **Do not read `share_connected` across sectors without `expected_share_connected`** — see below. |
+| `n_tier_4` … `n_tier_0`, `share_tier_4` … `share_tier_0` | The cross-tab cells. Counts sum to `n_firms` and shares to 1; `checks.py` asserts both. |
+| `n_executive`, `n_legislature`, `n_administration`, `n_local`, `n_proxy` | Firms with at least one director in each class. A firm counts in several. |
+| `n_sitting`, `n_former` | Firms with a sitting and with a former office-holder. Never summed. |
+| `n_seats`, `median_board_size` | Total director-seats in the sector, and the median board. The second is why the raw shares are not comparable. |
+| `director_rate` | Connected directors ÷ director-seats. The seat-level rate, which is board-size-neutral by construction. |
+| `expected_share_connected` | Share of firms expected to hold at least one connected director if every seat were independently connected at the corpus-wide seat rate *p*: the mean of 1 − (1 − *p*)^*k* over the sector's firms. |
+| `excess_share` | `share_connected − expected_share_connected`. **This is the column to compare across sectors.** |
+| `mean_share_connected` | Mean over firms of connected ÷ board size. A second, simpler size normalisation. |
+
+The adjustment matters. Raw shares put finance (56.0%) and mining (44.8%) on
+top; both have large boards and both are within a few points of what board size
+already predicts. On `excess_share` the leaders are press and printing
+(**+21.7**) and hotels and tourism (**+20.8**), median boards of 1 and 2, and
+construction is the one sector materially below its benchmark (**−5.8**).
+
+The null treats seats as exchangeable and ignores correlation among a firm's
+directors. It is a yardstick, not a model, and the three top sectors have 50–57
+firms each, so their excess is volatile where the 557-firm finance row is not.
+
+`political_connections_by_territory.csv` carries `n_seats`,
+`expected_share_connected` and `excess_share` on the same definitions.
+
+### `data/reference/sector_groups.csv` (109 rows)
+
+The sector mapping, one row per raw label: `raw`, `group`, `group_en`,
+`n_companies`. Regenerate with `python3 src/sectors.py --sync`; inspect with
+`--report`. **A hand edit to this file wins over the pattern table** in
+`src/sectors.py` and survives the next sync — except `unmapped`, which is the
+absence of a decision rather than one. `checks.py` asserts nothing is left
+unmapped and that every label the data carries appears here.
 
 ### `political_connections_review.csv` (400 rows)
 

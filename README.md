@@ -71,6 +71,7 @@ network can be sliced by period rather than collapsed into one static graph.
 | Attribution | 86.9% of parsed ties resolve to a firm; `attribution` records how |
 | Corporate directorships | 3,138 directed company → company edges |
 | Politically connected firms | **2,243 of 6,454 with an observed board (34.8%)** — coded in `company_political.csv`, argued in `data/reference/political_connection_rules.md` |
+| Sector vocabulary | 109 source labels grouped into **19 sectors** (`data/reference/sector_groups.csv`); 2,949 firms carry only a filing category and no sector |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
 `data/processed/network_stats.csv` holds these figures per period. The
@@ -282,6 +283,8 @@ the offices rejected and the four things the coding cannot do are in
 | `fig42_connection_by_territory.svg` | Share connected by territory, with the denominator printed beside every bar. Tracks documentary coverage first — not a rate. |
 | `fig43_connected_boards.svg` | The most connected boards: connected directors against total board membership observed. Banque de l'Indochine, Banque industrielle de Chine, Messageries maritimes. |
 | `fig44_concurrency.svg` | The honest denominator. Of 4,212 connected director–firm pairs, **688 can be tested for simultaneity and 326 overlap** — fewer than one in five is testable at all. |
+| `fig45_sector_tiers.svg` | **The cross-tabulation**: sector × tier as a heatmap, rows summing to 100%, ramp applied within each row. Computed on the 3,505 firms carrying an economic sector — the other 2,949 have only a document-filing category. |
+| `fig46_sector_excess.svg` | Observed against expected share by sector, under a board-size null. **The adjustment reorders the table**: finance (+4.2) and mining (+1.6) are near their benchmark, while press and printing (+21.7) and hotels (+20.8) — median boards of 1 and 2 — are the genuinely connected sectors. |
 
 **`figures/interlock_network.html`** — the core of the network.
 
@@ -443,6 +446,7 @@ python3 src/make_geo_figure.py --lang en
 python3 src/parse_mandates.py                 # ~4 min, deputies and senators
 python3 src/parse_offices.py                  # ~4 min, offices of state
 python3 src/make_legislative_layer.py         # the legislative join
+python3 src/sectors.py --sync                 # sector label -> group mapping
 python3 src/code_political_connections.py     # company-level connection coding
 python3 src/make_political_figures.py         # figs 40-44
 python3 src/make_political_figures.py --lang en
