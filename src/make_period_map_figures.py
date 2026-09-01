@@ -17,19 +17,19 @@ same pixel in all five, so a difference between panels is a difference in the
 data and never a difference in layout.
 
 A firm appears in a period when it has an interlock *dated* to that period.
-`edges_company_interlock_by_period.csv` carries 51,658 of the graph's 79,072
+`edges_company_interlock_by_period.csv` carries 51,818 of the graph's 79,575
 edges; the rest are undated and appear in no panel. Add the placement ladder on
-top and 27,419 ties are drawable somewhere in the series.
+top and 24,570 distinct pairs are drawable somewhere in the series.
 
 **The finding, and the thing that could be an artefact of it.** Paris's share
-of the drawable ties falls in every period: 63.4%, 51.5%, 40.8%, 36.8%, 26.1%.
+of the drawable ties falls in every period: 63.5%, 51.5%, 40.7%, 36.9%, 26.2%.
 That trend is not an artefact of the territory rung, because it survives being
-recomputed on the firms with a real street address alone - 82.7%, 66.0%, 62.4%,
+recomputed on the firms with a real street address alone - 82.6%, 65.9%, 62.4%,
 60.2%, 42.1%.
 
 But the 1945-1962 panel is thin for a reason that has nothing to do with the
-empire. Only **36.1%** of the firms active in it can be placed at all, against
-84-87% in every other period, because **1,485 of its 1,486 unplaceable firms are
+empire. Only **36.2%** of the firms active in it can be placed at all, against
+81-86% in every other period, because **1,483 of its 1,484 unplaceable firms are
 filed under the transversal *Empire* rubric with no country at all**. That is a
 change in how Mennevée catalogued after the war, and it is why fig58 draws the
 coverage beside the trend rather than in a footnote: the fourth panel is a
@@ -264,7 +264,7 @@ def fig_small_multiples(d, mode, lang):
                f"tombe de {100 * float(first['paris_share']):.1f} % à "
                f"{100 * float(last['paris_share']):.1f} %. Attention au panneau "
                f"1945–1962 : seules {100 * float(d['stats'][3]['share_firms_placed']):.1f} % "
-               f"de ses entreprises peuvent être situées, contre 84–87 % ailleurs, "
+               f"de ses entreprises peuvent être situées, contre {_other_cover(d)} ailleurs, "
                f"parce que {d['stats'][3]['n_no_country_firms']:,} d'entre elles sont "
                f"classées sous la rubrique transversale *Empire* sans aucun pays. "
                f"Voir la figure 58."),
@@ -273,12 +273,23 @@ def fig_small_multiples(d, mode, lang):
                f"the drawable ties falls from {100 * float(first['paris_share']):.1f}% to "
                f"{100 * float(last['paris_share']):.1f}%. Read the 1945–1962 panel with "
                f"care: only {100 * float(d['stats'][3]['share_firms_placed']):.1f}% of its "
-               f"firms can be placed, against 84–87% in every other period, because "
+               f"firms can be placed, against {_other_cover(d)} in every other period, because "
                f"{d['stats'][3]['n_no_country_firms']:,} of them are filed under the "
                f"transversal *Empire* rubric with no country at all. See figure 58."),
     }[lang]
     table = _summary_table(d, lang)
     return "".join(body), height, title, _legend(mode, lang), caption, table
+
+
+def _other_cover(d, worst="1945_1962") -> str:
+    """The coverage band of every period but the thin one, as `81–86%`.
+
+    Written out rather than hardcoded: this range has moved with every rebuild
+    of the graph, and a caption should not carry a number a rerun falsifies.
+    """
+    vs = [float(s["share_firms_placed"]) for s in d["stats"]
+          if s["period"] != worst]
+    return f"{min(vs) * 100:.0f}–{max(vs) * 100:.0f}%"
 
 
 def _coverage_note(d, mode, lang, ox, oy, width):

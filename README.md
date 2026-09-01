@@ -25,7 +25,7 @@ network can be sliced by period rather than collapsed into one static graph.
 > misses. §2b of the methodology quantifies what is left on the table. Absence
 > of a firm from the network is not evidence that it had no board.
 >
-> **Six extraction genres, all merged, all separable.** Every genre is in the
+> **Seven extraction genres, all merged, all separable.** Every genre is in the
 > default network and every observation and two-mode edge carries
 > `source_genre`, so filtering to the structured evidence never needs a
 > rebuild (`--no-prose`, `--no-annotations`, `--no-biographical`,
@@ -62,15 +62,15 @@ network can be sliced by period rather than collapsed into one static graph.
 | Documents with text extracted | **5,874 (99.2%)** — 46 are dead links on the site |
 | Territories | **62** countries / 13 index-page regions (Maghreb, AOF, AEF, Indochina, Madagascar, Pacific, Antilles, Levant, French India) |
 | Economic sectors | 108, as classified by the source |
-| Person → company ties | **102,871** — 63,820 from firm dossiers, 15,632 from the annuaire indexes, 12,535 from prose, 1,621 from annotations, 1,558 from biographies, 536 from the parliamentary rosters |
-| Two-mode edge rows | **94,728**, 97.4% carrying a year |
-| Distinct people | **34,518** |
+| Person → company ties | **103,021** — 63,820 from firm dossiers, 15,632 from the annuaire indexes, 12,535 from prose, 1,621 from annotations, 1,558 from biographies, 536 from the parliamentary rosters, 150 from the person dossiers |
+| Two-mode edge rows | **94,863**, 97.3% carrying a year |
+| Distinct people | **34,539** |
 | Companies | **10,373** (including firms known only from a directory or annuaire entry) |
-| Company interlock edges | **79,072** pooled, 51,658 within period |
-| Extraction genres | 6, all merged; `source_genre` on every observation and edge |
+| Company interlock edges | **79,575** pooled, 51,818 within period |
+| Extraction genres | 7, all merged; `source_genre` on every observation and edge |
 | Attribution | 86.9% of parsed ties resolve to a firm; `attribution` records how |
 | Corporate directorships | 3,138 directed company → company edges |
-| Politically connected firms | **2,243 of 6,454 with an observed board (34.8%)** — coded in `company_political.csv`, argued in `data/reference/political_connection_rules.md` |
+| Politically connected firms | **2,247 of 6,471 with an observed board (34.7%)** — coded in `company_political.csv`, argued in `data/reference/political_connection_rules.md` |
 | Sector vocabulary | 109 source labels grouped into **19 sectors** (`data/reference/sector_groups.csv`); 2,949 firms carry only a filing category and no sector |
 | Period covered | 1830s–1970s, densest 1914–1944 |
 
@@ -270,8 +270,8 @@ board; 111 sat in both chambers.**
 **`figures/political.html`** — companies coded by political connection. A firm
 is connected when one of its directors is attested holding an office of state:
 deputy, senator, minister, governor-general, résident, colonial administrator,
-prefect, or a named relative of a parliamentarian. **2,243 of 6,454 firms with
-an observed board (34.8%) are connected.** The definition, the tier ordering,
+prefect, or a named relative of a parliamentarian. **2,247 of 6,471 firms with
+an observed board (34.7%) are connected.** The definition, the tier ordering,
 the offices rejected and the four things the coding cannot do are in
 [`data/reference/political_connection_rules.md`](data/reference/political_connection_rules.md)
 — read it before citing the number.
@@ -290,15 +290,15 @@ the offices rejected and the four things the coding cannot do are in
 can see it. Six operationalisations of "central" disagree, and the one that
 survives a **size-matched** null is the removal test: finance and mining are
 533 and 530 firms, so no count can separate them, but deleting finance costs
-the giant component **z = +4.08 (p = 0.000)** against mining's **−0.35
-(p = 0.65)**. No sector's removal fragments the graph; the cost shows up as
+the giant component **z = +2.88 (p = 0.000)** against mining's **−0.30
+(p = 0.62)**. No sector's removal fragments the graph; the cost shows up as
 distance instead. See [METHODOLOGY §5m](docs/METHODOLOGY.md).
 
 | | |
 |---|---|
 | `fig51_steps_from_finance.svg` | The network as **shells outward from finance**, and from mining beside it, each shell an annulus whose area is proportional to the firms in it. **One step from finance reaches 70.4% of the graph; one step from mining, 57.5%.** |
 | `fig52_core_by_centrality.svg` | The 170 core firms placed with **radius = betweenness rank**, so the centre of the picture is the centre of the network and position is measured rather than force-directed. **23 of the core's 40 most-between firms are finance firms**; finance's mean rank is 54.4 against mining's 90.8. |
-| `fig47_sector_graph.svg` | The sector graph itself — 16 groups, edge weight = interlocks between them. Finance–mining alone carries 2,866. |
+| `fig47_sector_graph.svg` | The sector graph itself — 16 groups, edge weight = interlocks between them. Finance–mining alone carries 2,892. |
 | `fig48_core_spotlight.svg` | The interlock core by sector, on the core's own layout. |
 | `fig49_removal_cost.svg` | The removal test drawn. Note the inversion it exposes: inside the core, removing finance takes 632 edges against 682 for 47 randomly drawn *core* firms — because the core is the top 170 by weighted degree, so a random draw inside it is a draw of hubs. The z-score in the CSV draws its null from the whole graph. |
 | `fig50_hub_or_broker.svg` | Hub against broker, firm by firm. The highest-betweenness finance firms have gaps near zero: they are not brokers *instead* of hubs. |
@@ -306,29 +306,29 @@ distance instead. See [METHODOLOGY §5m](docs/METHODOLOGY.md).
 **`figures/world_map.html`** — the whole network on the world map. Figure 7
 maps *cities*, one dot each; these map **firms**. The placement ladder of stage
 20 gives an address to 2,014 firms, a filing-country anchor to 1,896 more, and
-nothing to 2,079 — so **3,910 of 5,989 firms (65%)** and **43,164 of 79,072
+nothing to 2,080 — so **3,926 of 6,006 firms (65%)** and **43,575 of 79,575
 ties (55%)** are on the map, and every node records which rung it stands on.
 See [METHODOLOGY §5n](docs/METHODOLOGY.md).
 
 | | |
 |---|---|
-| `fig53_full_network_map.svg` | **The full network, geographically.** Every placed firm at its own point, spread through a disc whose area is proportional to the firms in it, and all 43,164 drawable ties — including the **9,025 that never leave a single place**, which a map of cities cannot draw at all. Colour is placement precision, not geography: position already carries geography. |
+| `fig53_full_network_map.svg` | **The full network, geographically.** Every placed firm at its own point, spread through a disc whose area is proportional to the firms in it, and all 43,575 drawable ties — including the **9,117 that never leave a single place**, which a map of cities cannot draw at all. Colour is placement precision, not geography: position already carries geography. |
 | | Basemap: Natural Earth `ne_50m_land`, simplified into [`data/reference/world_land.geojson`](data/reference/world_land.geojson) by `fetch_basemap.py` and checked in. Land only — a modern border over a corpus running from the 1870s to the 1970s would be an anachronism. Robinson projection, fixed window, shared with figure 7 so the two are comparable. |
 | `fig54_paris_or_not.svg` | The same coordinates twice: the ties that touch Paris, then the ties that do not. **Paris holds 19.5% of the placed firms and touches 45.2% of the drawable ties.** The first panel is a fan; the second is a lattice between colonies. |
-| `fig55_tie_geography.svg` | The drawable ties by their two endpoints, with the share that never leaves one place drawn inside the bar. Colony–colony leads at 47.1% — but 10,222 of those 20,341 ties stay inside one territory, so read it as a ceiling. The median tie that does travel spans **3,083 km**. |
+| `fig55_tie_geography.svg` | The drawable ties by their two endpoints, with the share that never leaves one place drawn inside the bar. Colony–colony leads at 47.2% — but 10,384 of those 20,546 ties stay inside one territory, so read it as a ceiling. The median tie that does travel spans **3,083 km**. |
 | `fig56_finance_on_the_map.svg` | Finance on the map: 9.5% of the placed firms, **27.3% of the drawable ties**, 41% of them in Paris. Second on Paris share behind the transcolonial-groups residual, and first among sectors above a hundred firms — what is distinctive about finance is its position in the graph, not its geography. |
 
 **`figures/period_maps.html`** — the same map, split on the five periods of
 figure 2, on one shared layout. **Paris's share of the drawable ties falls in
-every period: 63.4% → 51.5% → 40.8% → 36.9% → 26.1%** — and it survives being
-recomputed on firms with a street address alone (82.7% → 42.1%), so it is not
+every period: 63.5% → 51.5% → 40.7% → 36.9% → 26.2%** — and it survives being
+recomputed on firms with a street address alone (82.6% → 42.1%), so it is not
 an artefact of placing firms at their filing country. See
 [METHODOLOGY §5p](docs/METHODOLOGY.md).
 
 | | |
 |---|---|
 | `fig57_map_by_period.svg` | The five as small multiples. A firm holds the same pixel in all five, so a difference between panels is a difference in the data; firms with no dated tie in a period stay in grey. |
-| `fig58_paris_by_period.svg` | The trend, and the caveat beside it rather than under it: **coverage collapses to 36.1% in 1945–1962**, because 1,486 of that period's firms are filed under the transversal *Empire* rubric with no country. That panel is a thinner sample, not a thinner network. |
+| `fig58_paris_by_period.svg` | The trend, and the caveat beside it rather than under it: **coverage collapses to 36.2% in 1945–1962**, because 1,484 of that period's firms are filed under the transversal *Empire* rubric with no country. That panel is a thinner sample, not a thinner network. |
 | `by_period/map_<period>.svg` | Five full-width maps, one per period, each with its own counts. |
 
 **`figures/interlock_network.html`** — the core of the network.
@@ -482,6 +482,7 @@ python3 src/parse_prose.py                    # ~4 min, prose-reported boards
 python3 src/resolve_annotations.py            # after stage 4; inline notes
 python3 src/parse_biographies.py              # after stage 4; Qui êtes-vous ?, etc.
 python3 src/parse_rosters.py                  # after stage 4; the parliamentary directories
+python3 src/parse_person_dossiers.py          # after stage 4; the dossiers on individuals
 python3 src/build_network.py                  # ~3 min
 python3 src/split_by_country.py               # ~2 min, per-territory bundles
 python3 src/code_positionality.py             # ~1 min, positionality coding

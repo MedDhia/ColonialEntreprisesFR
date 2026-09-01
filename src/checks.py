@@ -1593,9 +1593,15 @@ def check_sector_centrality() -> None:
     for r in rows:
         if not r["giant_drop_z"] or not float(r["giant_drop_null_sd"]):
             continue
-        want = ((float(r["giant_drop"]) - float(r["giant_drop_null_mean"]))
-                / float(r["giant_drop_null_sd"]))
-        if abs(want - float(r["giant_drop_z"])) > 0.02:
+        sd = float(r["giant_drop_null_sd"])
+        z = float(r["giant_drop_z"])
+        want = (float(r["giant_drop"]) - float(r["giant_drop_null_mean"])) / sd
+        # The tolerance has to follow the file's own precision, not a constant.
+        # drop, mean and sd are stored to five decimals, so where sd is itself
+        # ~3e-4 — hospitality — half an ulp on each input moves the recomputed
+        # z by more than 0.02 and a fixed tolerance fails on rounding alone.
+        tol = 0.02 + 1e-5 / sd + abs(z) * 5e-6 / sd
+        if abs(want - z) > tol:
             bad.append(r["sector_group"])
     check("  z is reproducible from drop, null mean and null sd", not bad,
           str(bad[:3]))
@@ -2078,6 +2084,118 @@ def check_period_maps() -> None:
                if r["paris_share"] != stats[r["period"]]["paris_share"]]
         check("  the summary matches what the figures compute", not bad,
               str(bad))
+
+
+def check_person_dossiers() -> None:
+    """Stage 3j: the person-anchored dossiers, and the three rules that guard them."""
+    import collections
+
+    import parse_person_dossiers as PD
+
+    print("person dossiers", file=sys.stderr)
+
+    # The subject comes from the catalogue title, so the title parser is the
+    # whole safety of the genre.
+    ok = PD.subject_of({"name_listed": "Noël (Octave)(1846-1918)"})
+    check("  a dated person entry gives a subject", bool(ok), "none")
+    if ok:
+        eq("  with the surname", ok["surname"], "Noël")
+        check("  and the forename", "Octave" in ok["name_clean"], ok["name_clean"])
+    ok = PD.subject_of({"name_listed": "Gorgeu (Maurice)(1862-1935), banquier"})
+    check("  the compiler's gloss is stripped", bool(ok) and "banquier" not in ok["name_clean"],
+          ok["name_clean"] if ok else "none")
+    ok = PD.subject_of({"name_listed": "Jourdan (Adolphe)(1846-1916), Alger"})
+    check("  a forename outside the 330-name list is still a forename",
+          bool(ok), "refused")
+
+    for bad in ("Jacques Menasché & Cie (1926-1933), Paris",
+                "Tramways de Tunis (S.A. des)(1888-1901)",
+                "Chaux hydrauliques et ciments d'Algérie (S.A. des)(1891)",
+                "Bureau d'organisation économique (B.O.E.)",
+                "Office colonial (1899)",
+                "Comité de l'Afrique française"):
+        eq(f"  refused as a subject: {bad[:34]}", PD.subject_of({"name_listed": bad}), None)
+    eq("  an empty title has no subject", PD.subject_of({"name_listed": ""}), None)
+
+    # Offices are not directorships, and this genre is full of them.
+    for tail in ("5e classe des colonies (8 février 1898)",
+                 "l'Office colonial par décret du ministre",
+                 "la chambre de commerce de Tahiti",
+                 "conseil de protectorat", "Affaires indigènes et politiques"):
+        check(f"  office refused: {tail[:32]}", bool(PD.OFFICE_TAIL_RE.match(tail)),
+              "not matched")
+    for tail in ("la Banque suisse et française (1899)",
+                 "Charbonnages du Tonkin (1895-1898)",
+                 "la Société agricole du Kontum"):
+        check(f"  company kept: {tail[:32]}", not PD.OFFICE_TAIL_RE.match(tail),
+              "wrongly refused")
+
+    # The name/date split.
+    eq("  a trailing date is cut off the name",
+       PD.split_tail("la Banque suisse et française (1899),"),
+       ("la Banque suisse et française", "1899"))
+    eq("  a range keeps its first year",
+       PD.split_tail("Charbonnages du Tonkin (1895-1898).")[1], "1895")
+    eq("  a month-and-year date still yields the year",
+       PD.split_tail("comité de Paris de la Banque de Tunisie (mai 1886).")[1], "1886")
+    eq("  no date is no year",
+       PD.split_tail("la Société agricole du Kontum")[1], "")
+    check("  a successor clause ends the name",
+          PD.split_tail("la Société X, puis la Société Y")[0] == "la Société X",
+          PD.split_tail("la Société X, puis la Société Y")[0])
+
+    # The two rules that keep a relative's seat off the subject.
+    check("  a kinship word is seen in the lookback",
+          bool(PD.KINSHIP_RE.search("fils de Paul-Adolphe Chalamel (1839-1909)")),
+          "not matched")
+    check("  and an ordinary sentence is not",
+          not PD.KINSHIP_RE.search("Administrateur de la Banque de Tunisie"),
+          "false positive")
+    check("  a line running into new prose is caught",
+          bool(PD.NEW_SENTENCE_RE.search(". Voir encadré. Remariée à Saïgon, le 14 octobre")),
+          "not matched")
+    check("  a trailing date is not new prose",
+          not PD.NEW_SENTENCE_RE.search(" (1895-1898)."), "false positive")
+
+    path = os.path.join(PROC_DIR, "affiliations_person_dossiers.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_person_dossiers.csv")
+    check("  the stage produced ties", len(rows) > 80, str(len(rows)))
+    eq("  every row is tagged with its genre",
+       {r["source_genre"] for r in rows}, {"person_dossier"})
+
+    companies = {c["company_id"] for c in load("companies.csv")}
+    bad = [r for r in rows if r["company_key"] not in companies]
+    check("  every company resolves to a real firm", not bad,
+          str([r["company_key"] for r in bad[:3]]))
+    bad = [r for r in rows if not r["person_key"] or not r["name_clean"]]
+    check("  every row names a person", not bad, str(len(bad)))
+    known = {k for k, _p in PD.ROLE_WORDS}
+    bad = [r for r in rows if r["role"] not in known]
+    check("  every role is one of the declared ones", not bad,
+          str({r["role"] for r in bad}))
+    bad = [r for r in rows if r["year"] and not plausible_year(r["year"])]
+    check("  every year is plausible", not bad, str(len(bad)))
+    seen = Counter((r["doc_id"], r["person_key"], r["company_key"]) for r in rows)
+    bad = [k for k, n in seen.items() if n > 1]
+    check("  no tie is recorded twice in one dossier", not bad, str(bad[:2]))
+    # The genre's own claim: the subject is free, so a dossier's rows are all
+    # about one person.
+    per_doc = collections.defaultdict(set)
+    for r in rows:
+        per_doc[r["doc_id"]].add(r["person_key"])
+    bad = [d for d, ppl in per_doc.items() if len(ppl) > 1]
+    check("  one dossier, one subject", not bad, str(bad[:2]))
+    check("  a third of the ties are dated",
+          sum(1 for r in rows if r["year"]) / len(rows) > 0.25,
+          f"{sum(1 for r in rows if r['year'])}/{len(rows)}")
+
+    # And it reached the network.
+    edges = load("edges_person_company.csv")
+    if edges and "source_genre" in edges[0]:
+        got = sum(1 for e in edges if "person_dossier" in e["source_genre"])
+        check("  the genre is merged into the network", got > 50, str(got))
 
 
 def check_geocoding() -> None:
@@ -2657,6 +2775,7 @@ def main() -> None:
         check_sectors()
         check_political_coding()
         check_sector_centrality()
+        check_person_dossiers()
         check_basemap()
         check_map_placement()
         check_world_map_figures()

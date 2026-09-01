@@ -397,7 +397,7 @@ asserts the file agrees with the graph it describes.
 
 | `measure` | Value | What it is |
 |---|---|---|
-| `n_firms`, `n_interlocks` | 5,989 / 79,072 | Size of the interlock graph. |
+| `n_firms`, `n_interlocks` | 6,006 / 79,575 | Size of the interlock graph. |
 | `n_components`, `giant_share` | 42 / 0.9858 | One giant component, 37 dyads and 4 triads. |
 | `giant_share_w2` | 0.4879 | The same at weight ≥ 2. **Half the connectedness is single-name edges** — see fig21. |
 | `max_degree`, `max_degree_w2` | 497 / 162 | Highest degree at each threshold. |
@@ -913,7 +913,7 @@ documents; 844 of them are in the affiliation network. Same shape as
 The other seven-eighths name an office without naming its holder — `par arrêté
 du gouverneur général` — and are deliberately not attributed to anyone.
 
-### `company_political.csv` — the connection coding (6,454 rows)
+### `company_political.csv` — the connection coding (6,471 rows)
 
 Written by `src/code_political_connections.py` (stage 16), one row per firm with
 at least one observed board seat. **Read
@@ -933,12 +933,12 @@ rejected, and the four things the coding cannot do.
 | `n_testable`, `n_concurrent` | Director–firm pairs where both the tie year and the office span are known (688 of 4,212), and how many overlap (326). **Quote `n_concurrent` only with `n_testable`.** |
 | `n_connected_neighbours`, `indirect_only` | Firms sharing a director with this one that are themselves connected; `indirect_only = 1` for the 3,254 firms with a connected neighbour and no connected director. Deliberately outside the tier. |
 | `first_connection_year`, `last_connection_year` | Range of observed tie years for the connected directors. Empty where no tie carries a year. |
-| `confidence` | `high` (roster evidence or ≥ 2 independent mentions), `medium` (one apposition or bracket), `low` (forenameless key, or footnote career line only). Of 2,243 connected firms: 1,052 / 349 / 842. **`low` is 38% of the connected set — not a residue.** |
+| `confidence` | `high` (roster evidence or ≥ 2 independent mentions), `medium` (one apposition or bracket), `low` (forenameless key, or footnote career line only). Of 2,247 connected firms: 1,054 / 349 / 844. **`low` is 38% of the connected set — not a residue.** |
 | `sector_group`, `sector_group_en`, `sector_raw` | The grouped sector, and the raw label it came from. The **first non-filing** label wins, so a firm filed `Documents généraux; Mines` is mining. `not_a_sector` for the 2,949 firms with no economic label. |
 | `n_territories`, `all_territories` | How many territories the firm is filed under, and all of them — `territory` is only the first. |
 | `connected_directors` | Up to eight names, for auditing. |
 
-Headline: **2,243 of 6,454 firms (34.8%) are politically connected.** Do not
+Headline: **2,247 of 6,471 firms (34.7%) are politically connected.** Do not
 read that as a rate across territories or across `source_genre` — coverage is
 uneven, and the roster genre exists precisely to record political connection, so
 firms with roster evidence are connected at a higher rate by construction.
@@ -1017,7 +1017,7 @@ group `unclassified` is kept and appears as a row; `not_a_sector` never does.
 | Variable | Description |
 |---|---|
 | `sector_group`, `sector_group_en` | The grouped sector, from `data/reference/sector_groups.csv`. |
-| `n_firms`, `n_seats` | Firms of this sector in the interlock graph, and the board seats they hold. `n_seats` is the size confound in one number: finance 15,399, mining 9,646. |
+| `n_firms`, `n_seats` | Firms of this sector in the interlock graph, and the board seats they hold. `n_seats` is the size confound in one number: finance 15,977, mining 9,290. |
 | `mean_degree`, `median_degree` | Interlock partners per firm. A raw count — reflects sector size and board size as much as position. |
 | `deg_per_seat` | `mean_degree` ÷ mean board size. Board-size-neutral, but noisy for small sectors with large boards. |
 | `sum_betweenness`, `mean_betweenness`, `btw_per_seat` | Betweenness from `centrality.py`, summed, averaged, and per seat. |
@@ -1028,7 +1028,7 @@ group `unclassified` is kept and appears as a row; `not_a_sector` never does.
 | `n_deep_core` | Firms of this sector in the graph's maximum k-core (k = 71, 72 firms). |
 | `giant_drop` | Fall in the giant-component share when the sector's firms are deleted. |
 | `giant_drop_null_mean`, `giant_drop_null_sd` | The same statistic over `null_sims` deletions of the same *number* of firms drawn at random. |
-| `giant_drop_z`, `giant_drop_p` | The size-matched removal test. **This is the column that answers the question**, because it is the only one a sector cannot lead by being large: finance +4.08 (p = 0.000), mining −0.35 (p = 0.65). `giant_drop_p` is the one-sided share of null draws at or above the observed drop, so it is granular to 1/`null_sims` and reads 0.000 or 1.000 at the extremes. |
+| `giant_drop_z`, `giant_drop_p` | The size-matched removal test. **This is the column that answers the question**, because it is the only one a sector cannot lead by being large: finance +2.88 (p = 0.000), mining −0.30 (p = 0.62). `giant_drop_p` is the one-sided share of null draws at or above the observed drop, so it is granular to 1/`null_sims` and reads 0.000 or 1.000 at the extremes. |
 | `path_after`, `path_change` | Mean shortest-path length after deleting the sector, and the change from the baseline 3.25, on the same fixed 120-source sample. Where the cost of removal actually shows: finance +0.26. |
 
 Removal is a descriptive operation on the observed graph, **not a
@@ -1043,16 +1043,16 @@ that share at least one interlock: `sector_a`, `sector_b`, `sector_a_en`,
 joining the two. Within-sector edges are in `n_edges_within` above, not here.
 This file is **not** restricted to the 16 groups of `sector_centrality.csv`:
 all 19 groups that appear on an interlocked firm are here, because an edge to
-a small sector is still an edge. Finance–mining is the heaviest pair at 2,866.
+a small sector is still an edge. Finance–mining is the heaviest pair at 2,892.
 
 ### `sector_centrality_baseline.csv` (1 row)
 
 The graph the sector rows are measured against, so a claim can state its
-denominator: `n_firms` (5,989), `n_edges` (79,072), `giant_share` (0.9858),
-`mean_path_length` (3.2528), `path_sources` (120), `path_seed` (11),
+denominator: `n_firms` (6,006), `n_edges` (79,575), `giant_share` (0.9858),
+`mean_path_length` (3.3371), `path_sources` (120), `path_seed` (11),
 `null_sims` (60), `null_seed` (17), `max_core_number` (71), `max_core_size`
-(72), `cross_territory_share` (0.4501), `n_cross_sector_edges` (33,852),
-`n_within_sector_edges` (19,514). The two seeds are fixed, so every number in
+(72), `cross_territory_share` (0.4504), `n_cross_sector_edges` (34,383),
+`n_within_sector_edges` (19,537). The two seeds are fixed, so every number in
 `sector_centrality.csv` is reproducible exactly.
 
 ## The network on the world map
@@ -1061,7 +1061,7 @@ Stages 20 and 21, `src/place_on_map.py` and `src/make_world_map_figures.py`.
 Figure 7 maps cities; these map firms. See METHODOLOGY §5n, and read
 `placement_level` before reading any position.
 
-### `company_map_positions.csv` (5,989 rows)
+### `company_map_positions.csv` (6,006 rows)
 
 **One row per firm in the interlock graph, placed or not** — the file is a
 census, not a subset, so it documents exactly which firms are missing from the
@@ -1070,7 +1070,7 @@ map and why.
 | Variable | Description |
 |---|---|
 | `company_id`, `name` | The firm. |
-| `placement_level` | `city` (2,014 — an address, from `geocode.py`), `territory` (1,896 — no address, but exactly one filing country, so the position is a fact about the catalogue) or `unplaced` (2,079). **This column governs how much weight a position can carry.** |
+| `placement_level` | `city` (2,025 — an address, from `geocode.py`), `territory` (1,901 — no address, but exactly one filing country, so the position is a fact about the catalogue) or `unplaced` (2,080). **This column governs how much weight a position can carry.** |
 | `anchor` | The place the firm is pinned to: a city name, or a territory name at the `territory` rung. 154 distinct anchors. |
 | `anchor_territory` | The territory the anchor is in. Equal to `anchor` at the `territory` rung. |
 | `group` | `metropole`, `empire` or `foreign`, from the gazetteer. Empty when unplaced. |
@@ -1099,28 +1099,52 @@ not drawable.
 |---|---|
 | `tie_class` | `colony only`, `metropole-colony`, `metropole only`, `with foreign`, `unplaced`. |
 | `n_edges`, `n_interlocks` | Firm pairs, and the shared directorships behind them. |
-| `share_of_drawable` | Share of the 43,164 drawable ties. Empty on the `unplaced` row, which is outside that denominator. |
+| `share_of_drawable` | Share of the 43,575 drawable ties. Empty on the `unplaced` row, which is outside that denominator. |
 | `n_same_anchor` | Ties whose two firms sit in the same place. Zero on `metropole-colony` by construction. |
 | `n_same_territory` | Ties within one territory. Always at least `n_same_anchor`. |
 
-Colony–colony leads at 47.1%, but **10,222 of its 20,341 ties stay inside a
+Colony–colony leads at 47.2%, but **10,384 of its 20,546 ties stay inside a
 single territory** and the firms involved are disproportionately those placed
 by filing country: read that rank as a ceiling, not as evidence of a lattice.
 
 ### `map_geography_baseline.csv` (1 row)
 
-The denominators, so a claim can state its population: `n_graph_firms` (5,989),
-`n_edges` (79,072), `n_placed_city` (2,014), `n_placed_territory` (1,896),
-`n_unplaced` (2,079), `n_anchors` (154), `n_drawable_edges` (43,164),
-`n_same_anchor_edges` (9,025), `median_tie_km` (3,082.6), `mean_tie_km`,
-`paris_firms` (762), `paris_cross_edges` (15,430), `paris_within_edges`
-(4,077), `paris_edges_to_unplaced` (8,005).
+The denominators, so a claim can state its population: `n_graph_firms` (6,006),
+`n_edges` (79,575), `n_placed_city` (2,025), `n_placed_territory` (1,901),
+`n_unplaced` (2,080), `n_anchors` (154), `n_drawable_edges` (43,575),
+`n_same_anchor_edges` (9,117), `median_tie_km` (3,082.6), `mean_tie_km`,
+`paris_firms` (764), `paris_cross_edges` (15,596), `paris_within_edges`
+(4,108), `paris_edges_to_unplaced` (8,029).
 
 **The three Paris columns are deliberately separate.** Paris touches
-15,430 + 4,077 = 19,507 drawable ties, 45.2% of the drawable total. Adding
+15,596 + 4,108 = 19,704 drawable ties, 45.2% of the drawable total. Adding
 `paris_edges_to_unplaced` to that numerator and keeping the drawable
 denominator gives 63.7% — a ratio across two different populations, and the
 first version of this row made exactly that mistake.
+
+### `affiliations_person_dossiers.csv` (149 rows)
+
+Stage 3j. The catalogue's entries on *individuals*, read from the person's
+side: the subject comes from the entry's own title, the body supplies the
+seats. `source_genre = "person_dossier"`, merged by default, dropped with
+`build_network.py --no-person-dossier`. See METHODOLOGY §4l.
+
+| Variable | Description |
+|---|---|
+| `doc_id` | The person entry the tie was read from. **One dossier has one subject**, and `checks.py` asserts it. |
+| `company_key`, `company_name` | The firm, resolved against `companies.csv` by stage 3d's matcher. **A line whose company does not resolve is not emitted** — 252 were dropped — so every row here joins the graph. |
+| `person_key`, `name_clean`, `surname`, `given` | The subject, from `name_listed` with the dates and the compiler's gloss stripped, parsed by the shared `names.parse_person_name`. |
+| `role` | One of eleven declared role words, from the head of the line: `administrateur`, `administrateur_delegue`, `president`, `president_dg`, `vice_president`, `directeur`, `directeur_general`, `gerant`, `censeur`, `commissaire`, `membre_conseil`. |
+| `is_former` | `1` when the line opens `Ancien` or `Ex-`. |
+| `year` | First plausible year in the parenthetical after the company. **67 of 149 rows carry one** — the highest rate of any genre, because the compiler dates a seat when he is writing a career. A range keeps its first year. |
+| `source_ref` | The catalogue title the subject was read from, so the attribution is auditable without opening the PDF. |
+| `match_method` | How the company resolved: `prefix`, `prefix_exact_length`, `exact_single_token`. |
+| `company_raw`, `line_raw` | The company name as written and the whole matched line. **The audit columns** — every claim in this file can be checked against these two without leaving the CSV. |
+| `annotation`, `region`, `country`, `sector`, `anchor_type` | Carried for schema compatibility with the other genre files. `anchor_type` is always `person_entry`. |
+
+Measured **precision 19 of 20** against source context. The genre's own failure
+mode is crediting a relative's seat to the subject; two rules guard it
+(METHODOLOGY §4l) and the residue is one questionable row in twenty.
 
 ### `map_period_summary.csv` (5 rows)
 
@@ -1134,8 +1158,8 @@ METHODOLOGY §5p.
 | `n_dated_edges` | Interlocks dated to this period, before the placement filter. |
 | `n_drawable_edges`, `n_interlocks` | Of those, the ones with both firms placed, and the shared directorships behind them. |
 | `n_firms_drawn`, `n_anchors` | Firms with at least one drawable tie here, and the places they sit in. |
-| `n_active_firms`, `n_placed_firms`, `share_firms_placed` | **The coverage columns.** Firms with a dated tie in the period, how many of them can be placed at all, and the ratio. 84–87% everywhere except 1945–1962, at 36.1%. |
-| `n_no_country_firms` | Active firms with no country listed at all — the transversal *Empire* filing. 1,486 in 1945–1962, which is that period's whole coverage problem. |
+| `n_active_firms`, `n_placed_firms`, `share_firms_placed` | **The coverage columns.** Firms with a dated tie in the period, how many of them can be placed at all, and the ratio. 81–86% everywhere except 1945–1962, at 36.2%. |
+| `n_no_country_firms` | Active firms with no country listed at all — the transversal *Empire* filing. 1,484 in 1945–1962, which is that period's whole coverage problem. |
 | `n_paris_firms`, `n_paris_edges`, `paris_share` | Paris firms drawn, drawable ties touching one, and the share. |
 | `n_address_edges`, `n_address_paris_edges`, `paris_share_address_only` | The same share on ties whose **both** firms have a street address. **This is the column that shows the Paris trend is not an artefact of the territory rung** — a territory-placed firm is by construction not in Paris. |
 | `top_anchors` | The five largest places in the period, with counts. |

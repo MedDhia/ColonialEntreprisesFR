@@ -1,42 +1,43 @@
 raw,group,group_en,n_companies
 Documents généraux (par ordre chronologique),not_a_sector,Not a sector,5397
-Mines,mining,Mining and quarrying,585
-Commerce,trade,Trade and commerce,522
+Mines,mining,Mining and quarrying,586
+Commerce,trade,Trade and commerce,528
+Groupes financiers transcoloniaux,finance,"Banking, finance and insurance",457
 Industries agro-alimentaires,food_processing,"Food processing, livestock and fishing",435
-Groupes financiers transcoloniaux,finance,"Banking, finance and insurance",432
-Héveas et caoutchouc,plantations,Plantations and commodity crops,230
+Héveas et caoutchouc,plantations,Plantations and commodity crops,236
 Mines et carrières,mining,Mining and quarrying,219
 Documents généraux,not_a_sector,Not a sector,203
 "Hôtellerie, tourisme",hospitality,Hotels and tourism,161
+"Café, thé, épices, coco, quinquina, vanille",plantations,Plantations and commodity crops,145
 Groupes industriels transcoloniaux,conglomerate,Transcolonial and diversified groups,145
-"Café, thé, épices, coco, quinquina, vanille",plantations,Plantations and commodity crops,144
-"Banques et groupes financiers, assurances",finance,"Banking, finance and insurance",128
-Transports terrestres et garages,transport,"Transport, ports and docks",122
-"Banque, gérance, assurances…",finance,"Banking, finance and insurance",119
+"Banques et groupes financiers, assurances",finance,"Banking, finance and insurance",129
+"Bâtiment-travaux publics, matériaux de construction, céramiques",construction,Construction and building materials,127
+Transports terrestres et garages,transport,"Transport, ports and docks",123
+Autres industries alimentaires,food_processing,"Food processing, livestock and fishing",121
+"Banque, gérance, assurances…",finance,"Banking, finance and insurance",121
 "Bâtiment et travaux publics, matériaux de construction, céramique",construction,Construction and building materials,119
-"Transports fluviaux, maritimes et aériens. Ports, phares",transport,"Transport, ports and docks",118
-Autres industries alimentaires,food_processing,"Food processing, livestock and fishing",117
-"Bâtiment-travaux publics, matériaux de construction, céramiques",construction,Construction and building materials,115
-Groupes miniers transcoloniaux,mining,Mining and quarrying,115
+"Transports fluviaux, maritimes et aériens. Ports, phares",transport,"Transport, ports and docks",119
+Groupes miniers transcoloniaux,mining,Mining and quarrying,118
+Santé,health_education,"Health, education and research",114
 Sociétés foncières et immobilières,real_estate,Land and real estate,112
-Santé,health_education,"Health, education and research",111
 "Transports fluviaux, maritimes et aériens",transport,"Transport, ports and docks",110
 "Transports terrestres, garages automobiles et agricoles",transport,"Transport, ports and docks",107
 Cuirs et textiles,textiles_leather,Textiles and leather,102
+"Imprimerie, presse, édition",media_print,"Press, printing and communications",98
 Industries alimentaires,food_processing,"Food processing, livestock and fishing",98
 Banques et groupes financiers,finance,"Banking, finance and insurance",97
+"Rizières, rizeries, négoce de riz et autres céréales",plantations,Plantations and commodity crops,97
 "Bois, meubles, papier, allumettes",wood_paper,"Wood, furniture and paper",96
-"Rizières, rizeries, négoce de riz et autres céréales",plantations,Plantations and commodity crops,96
-"Imprimerie, presse, édition",media_print,"Press, printing and communications",94
 Industrie,unclassified,Unclassified,94
 Transports maritimes et aériens,transport,"Transport, ports and docks",91
 "Banques, groupes financiers, assureurs",finance,"Banking, finance and insurance",87
-Sociétés commerciales transcoloniales,trade,Trade and commerce,82
+Sociétés commerciales transcoloniales,trade,Trade and commerce,87
 Documentation générale,not_a_sector,Not a sector,81
 Industries diverses,unclassified,Unclassified,78
-Industries,unclassified,Unclassified,76
+Industries,unclassified,Unclassified,77
 "Filière bois : exploitation forestière, liège, meubles, cellulose, papier…",wood_paper,"Wood, furniture and paper",75
 Cinémas et théâtres de l'Indochine (du nord au sud),media_print,"Press, printing and communications",73
+Groupes indochinois et dirigeants d'affaires diverses,conglomerate,Transcolonial and diversified groups,73
 Agro-alimentaire,food_processing,"Food processing, livestock and fishing",70
 Banques et sociétés financières,finance,"Banking, finance and insurance",70
 "Eau, gaz, électricité (Utilities)",utilities,"Water, gas and electricity",70
@@ -46,16 +47,15 @@ Sociétés commerciales,trade,Trade and commerce,63
 Transports maritimes,transport,"Transport, ports and docks",63
 Sociétés,unclassified,Unclassified,62
 Sociétés diverses,unclassified,Unclassified,61
+Bâtiment et travaux publics,construction,Construction and building materials,59
 Sociétés françaises ou à participation française,unclassified,Unclassified,58
 "Agro-alimentaire, cultures industrielles",food_processing,"Food processing, livestock and fishing",56
-Bâtiment et travaux publics,construction,Construction and building materials,56
 Mines et métallurgie,mining,Mining and quarrying,54
 Transports terrestres,transport,"Transport, ports and docks",52
 Transports,transport,"Transport, ports and docks",50
 "Métallurgie, constructions mécaniques, électriques, navales",metals_engineering,Metallurgy and engineering,49
 "Transports maritimes, fluviaux et aériens",transport,"Transport, ports and docks",47
-"Eau et assainissement, électricité (Utilities)",utilities,"Water, gas and electricity",43
-Groupes indochinois et dirigeants d'affaires diverses,conglomerate,Transcolonial and diversified groups,43
+"Eau et assainissement, électricité (Utilities)",utilities,"Water, gas and electricity",44
 Plantations à participation française,plantations,Plantations and commodity crops,40
 industries agro-alimentaires,food_processing,"Food processing, livestock and fishing",40
 "Métallurgie, constructions navales",metals_engineering,Metallurgy and engineering,37
@@ -66,7 +66,7 @@ Pétrole et gaz,mining,Mining and quarrying,32
 Entreprises diverses,unclassified,Unclassified,31
 Industries chimiques,chemicals,Chemicals and pharmaceuticals,30
 mines et industries,mining,Mining and quarrying,30
-Sports,transport,"Transport, ports and docks",28
+Sports,transport,"Transport, ports and docks",29
 "Artistes peintres, sculpteurs et galeries",culture_leisure,"Culture, sport and leisure",24
 Foncières et immobilières,real_estate,Land and real estate,22
 Autres sociétés,unclassified,Unclassified,21
@@ -97,10 +97,10 @@ Loisirs,culture_leisure,"Culture, sport and leisure",5
 industrie,unclassified,Unclassified,5
 Industries pharmaceutiques et parachimie,chemicals,Chemicals and pharmaceuticals,4
 Agriculture,plantations,Plantations and commodity crops,3
+Artistes peintres coloniaux. — Collectionneurs d'arts exotiques,culture_leisure,"Culture, sport and leisure",3
 Autres loisirs,culture_leisure,"Culture, sport and leisure",3
 Messages personnels,not_a_sector,Not a sector,3
 "Pour une utilisation optimale de nos liens, téléchargez nos pdf. Évitez certaines versions de Firefox.",not_a_sector,Not a sector,3
-Artistes peintres coloniaux. — Collectionneurs d'arts exotiques,culture_leisure,"Culture, sport and leisure",2
 Enseignement,health_education,"Health, education and research",2
 Généralités,not_a_sector,Not a sector,2
 Presse coloniale métropolitaine,media_print,"Press, printing and communications",2
