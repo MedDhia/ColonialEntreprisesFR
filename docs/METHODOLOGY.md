@@ -32,12 +32,15 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Thirteen stages, each resumable, each writing its own outputs:
+Twenty-six stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
 2. **`fetch_extract.py`** — each PDF → gzipped plain text in `data/text/`,
    plus `text_extraction.csv`.
+2b. **`fetch_basemap.py`** — Natural Earth's `ne_50m_land` shapefile → the
+   simplified coastline in `data/reference/world_land.geojson` (§5o). Run once;
+   the result is checked in, so no later stage touches the network.
 3. **`parse_ties.py`** — text → `affiliations.csv`, `org_affiliations.csv`,
    `company_attributes.csv`, `doc_references.csv`.
 3b. **`parse_person_index.py`** — inverted indexes → person → company ties
@@ -48,9 +51,19 @@ Thirteen stages, each resumable, each writing its own outputs:
    after a first pass of stage 4.
 3e. **`parse_biographies.py`** — biographical dictionaries (§4f). Also runs
    after a first pass of stage 4.
+3g. **`parse_mandates.py`** — deputies and senators named anywhere in the
+   corpus (§4j). Adds no ties; writes `person_mandates.csv`.
+3h. **`parse_rosters.py`** — the compiler's five parliamentary directories
+   (§4i). Also runs after a first pass of stage 4.
+3i. **`parse_offices.py`** — offices of state and the colonial administration
+   (§4k). Adds no ties; writes `person_offices.csv`.
+3j. **`parse_person_dossiers.py`** — the catalogue's 240 entries on
+   *individuals*, read from the person's side (§4l). Also runs after a first
+   pass of stage 4, because it resolves companies against `companies.csv`.
 4. **`build_network.py`** — observations → nodes, edges, projections, GraphML.
-   All five genres are merged by default; `--no-person-index`, `--no-prose`,
-   `--no-annotations` and `--no-biographical` drop one each.
+   All seven genres are merged by default; `--no-person-index`, `--no-prose`,
+   `--no-annotations`, `--no-biographical`, `--no-roster` and
+   `--no-person-dossier` drop one each.
 5. **`split_by_country.py`** — dataset → per-territory bundles (§5b).
 6. **`code_positionality.py`** — people → colonial/native coding (§5c).
 6b. **`centrality.py`** — interlock graph → exact betweenness per firm (§5e).
@@ -65,8 +78,32 @@ Thirteen stages, each resumable, each writing its own outputs:
     `network_measures.csv` (§5h).
 13. **`make_node_figures.py`** — the six node-level figures, on the drawing
     primitives in `draw.py` (§5i).
+14. **`make_legislative_layer.py`** — mandates × the company network →
+    `legislators.csv`, the legislator interlocks, the roster continuity (§5j).
+15. **`make_legislative_figures.py`** — figures 34–39 (§5j).
+15b. **`sectors.py --sync`** — the source's 109 sector labels → the
+    19-group mapping in `data/reference/sector_groups.csv` (§5l).
+16. **`code_political_connections.py`** — offices × boards →
+    `company_political.csv` and its two summaries (§5k). The rules are in
+    `data/reference/political_connection_rules.md`, and the sector
+    cross-tab (§5l).
+17. **`make_political_figures.py`** — figures 40–46 (§5k, §5l).
+18. **`code_sector_centrality.py`** — the interlock graph × the sector
+    grouping → `sector_centrality.csv`, `edges_sector_interlock.csv`,
+    `sector_centrality_baseline.csv` (§5m).
+19. **`make_sector_network_figures.py`** — figures 47–52 (§5m).
+20. **`place_on_map.py`** — the placement ladder →
+    `company_map_positions.csv`, `territory_anchors.csv`,
+    `map_tie_geography.csv`, `map_geography_baseline.csv` (§5n).
+21. **`make_world_map_figures.py`** — figures 53–56 (§5n).
+22. **`make_period_map_figures.py`** — the map split on the five periods:
+    figures 57–58, five full-width maps in `figures/by_period/`, and
+    `map_period_summary.csv` (§5p).
+23. **`audit_coverage.py`** — a diagnostic: what the documents that yield
+    nothing actually are, sorted by register and by territory (§4m). Adds no
+    ties and changes no network file.
 
-Figure stages 7 and 8 take `--lang en`, which writes a parallel `figures/en/`
+Figure stages 7, 8, 11–13, 15, 17, 19, 21 and 22 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
 names are left in French throughout: a company's name is a legal name rather
 than a description, and an English rendering of it would be a string that
@@ -85,13 +122,13 @@ Four denominators are easy to confuse, so they are stated once here and used
 consistently: **5,920** documents are catalogued, **5,874** have a text file,
 **5,867** extract cleanly, and **5,863** carry usable text — the four that fall
 out hold under 200 characters, a header and nothing else. Tie coverage is
-measured against that last figure. **3,679 of the 5,863 (62%) yield at least
-one tie**; the other 2,184 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
+measured against that last figure. **3,686 of the 5,863 (63%) yield at least
+one tie**; the other 2,177 hold 26% of the extracted characters. When only the dossier parser existed those figures were 2,482
 (42%) and 47% — stages 3b–3e, below, are what closed the gap. This section
 says what is still in the residue, because a reader is otherwise entitled to
 assume the pipeline saw everything.
 
-Sorting the 2,184 zero-tie documents by how much board vocabulary they
+Sorting the 2,177 zero-tie documents by how much board vocabulary they
 contain (the same counting rule as before, so the rows are comparable):
 
 | Role words in the text | Documents | Was | Reading |
@@ -118,6 +155,46 @@ The last row is the real gap, and it is not one thing:
 One further gap is quantified elsewhere: **9,942 parsed ties (13.1%)** are
 dropped for want of an identifiable firm (§5). The compiler's annotation leads
 are now resolved as far as they go (§4e).
+
+### A genre measured and left out: the compiler's footnotes
+
+One further register was built, measured, and **deliberately not merged**. The
+compiler footnotes the men he knows about, in a fixed shape — the name, life
+dates in parentheses, a colon, then the career in prose:
+
+    Paul Bayard (1852-1931) : polytechnicien, ingénieur aux forges de Pompey,
+    directeur des Forges et clouteries réunies à Charleville …
+
+There are 8,872 such headers across the corpus and none of the six shipped
+parsers can read them: the heading is a person and the text is prose, so the
+dossier parser has no firm to hang a list on; the prose parser needs an inline
+`M.` marker the footnote never repeats; the biographical parser wants the
+dictionary header form (capitalised surname, parenthesised forename) and three
+bracketed role blocks before it will look at a document. `src/parse_footnotes.py`
+supplies the header pattern and borrows stage 3e's machinery for everything
+else. It yields **5,172 ties, 1,690 people, 1,511 firms**.
+
+It is in the repository, it is not in the network, and it is not switched on by
+any flag. A 15-row hand audit against source text put precision at **8–9 of 15
+(≈55–60%)**, against the 90–97% the shipped genres measure. Two failure classes
+account for it:
+
+- **Non-person headers with the footnote's shape.** `À l'origine du Comptoir
+  technique algérien (1917) :` is a narrative sentence; `Conseiller du commerce
+  extérieur (1932) :` is an office. Both parse as a surname. The module's
+  `NOT_A_PERSON_RE` rejects decorations ("Chevalier de la Légion d'honneur
+  (1911) :") and misses these.
+- **Role words and institutions resolved as firms.** The company resolver
+  matches on content words, so the bare role `président` found a firm literally
+  named *Président*, and `l'observatoire de Phu-Liên` resolved to the
+  *Observatoire central magnétique*. A `PUBLIC_OFFICE_RE` already drops 175
+  phrases of this kind per run; it is not enough.
+
+Both are fixable and neither is fixed here. The rule this project holds itself
+to is that a genre ships when its measured precision sits in the band the
+others occupy, and this one does not, so the honest record is the module, the
+number, and the two named defects — not 5,172 ties of unknown quality folded
+into a dataset whose error rate is published.
 
 ### The extraction trap
 
@@ -651,6 +728,443 @@ which is better evidence than any name match in this pipeline. The *person*
 does not: recovering them needs footnote-scoped segmentation, and attributing
 a directorship to the wrong man is a worse outcome than not extracting it.
 Left unbuilt deliberately.
+
+## 4i. The parliamentary rosters
+
+`src/parse_rosters.py` reads eight documents, and they are the only eight in
+the corpus that are *about* the overlap between the legislature and the company
+boards. The compiler filed them himself, under a group heading of his own
+making: *Parlementaires intéressés directement ou par des proches à des
+entreprises privées*. Five are Roger Mennevée's directory *Parlementaires et
+financiers*, for 1924, 1930, 1932, 1936 and 1954; the others are a press survey
+of the 1893 intake, *Les squales coloniaux* (1922), and one on the Belgian
+parliament.
+
+**They were almost unread.** The 1924 volume is 89,259 characters and yielded
+**4 ties**; the 1954 volume is 46,229 characters and yielded **1**. The cause
+is a comma. Stage 3e segments entries on `SURNAME (Forename)` and Mennevée
+writes `SURNAME, Forename`:
+
+    D'ANDIGNÉ, Geoffroy (Comte)[1858-1932]
+    Député de Maine-et-Loire [1924-1932]
+    Adresse : Hôtel d'Orsay, 9, quai d'Orsay, à Paris (VIIe).
+    Administrateur :
+    Compagnie parisienne de garages automobiles (nommé à l'assemblée du 7
+    juillet 1922).
+
+So every entry in three of the five directories fell through, and the
+`Administrateur :` block under it with them. This stage adds a header rule that
+covers both that fielded form and the running-prose form the 1924 and 1954
+volumes use, and the discriminator in both cases is the same: a chamber word
+within 200 characters of the name. That word is what makes a capitalised line a
+roster entry rather than a headline, and it is *also the mandate*, which makes
+this the only genre that yields a seat and a directorship together.
+
+Result: **1,096 entries, 995 with a constituency, 541 with a term**, and **587
+ties** to firms the catalogue holds. The 2,393 company phrases that do not
+resolve are mostly real firms that are simply not colonial — *Sucreries et
+raffineries d'Erstein*, *Chaux et Ciments de Chanaz* — and are correctly
+absent.
+
+**"ou par des proches" is in the group's title, and it is the precision
+problem.** Mennevée tracks the proxy holding as carefully as the direct one, so
+an entry is part career and part genealogy, and the companies in the genealogy
+are not the parliamentarian's:
+
+    Frère cadet de Paul-Jonas et Gaston Hesse, gérants des Comptoirs Hesse
+    belle-mère de Lucien Bach, administrateur de la Société générale foncière
+    Père de François André-Hesse, administrateur de la Société générale foncière
+
+Reading those as the deputy's own directorships would manufacture exactly the
+interlocks the source is careful to distinguish. Every role phrase is therefore
+tested against the *clause* it sits in — back to the nearest `.`, `;` or
+bracket edge, not the whole note — and a kinship word there redirects the tie:
+`held_by` becomes `relative`, the person becomes the relative, and `related_to`
+records the parliamentarian it was reached through. Clause scoping is what lets
+`[ép. Potin. Anc. député de la Nièvre]` through, because Heuzey married a Potin
+*and* sat for the Nièvre and the full stop says so. **31 of the 587 ties are
+proxy holdings**, and `build_network.py` excludes them: they are counted in the
+legislative layer, where the prête-nom structure is the object of study, and
+kept out of the main network, where they would assert a seat the source places
+one step away.
+
+**Precision.** Two audits, because two things can go wrong independently.
+Attribution — is the company phrase inside the entry of the man it was credited
+to — measured **30 of 30** on a random sample checked against each holder's own
+entry body. Resolution — is the resolved firm the firm the phrase named —
+measured **23 of 25**, both failures being catalogue *section headings* matched
+as if they were companies (`Société générale d'armement` → `ARMEMENT`,
+`charbonnages` → `CHARBONNAGES`), which a rule now rejects. Getting there took
+five iterations, and the defects are worth naming because each was a whole
+class rather than a one-off:
+
+- **Missed headers donate their boards upward.** `De WENDEL, François` went
+  undetected because the particle is capitalised and the pattern was
+  lower-case-only, so de Wendel's entire board was credited to Georges Weill,
+  the entry above his. Albert Lebrun's 1936 entry names no chamber at all — by
+  then he was President of the Republic — so it now ends the entry above it
+  without opening one of its own.
+- **Non-person headers.** `Paris, le 11 juillet 1924.` is where a letter was
+  written; `Caoutchoucs de Phuoc-Hoa (1927)` is a firm; `Nos Députés` is a
+  section heading whose own word is the chamber word that confirmed it;
+  `Succursale : … Lille (Nord).` parsed as a man called Nord Lille.
+- **A comma inside a company name.** `Association industrielle, commerciale et
+  financière` became a firm called *commerciale et financière*, which resolved
+  to a bank. A new board never starts with a lower-case word, so a fragment
+  that does is glued back on.
+- **The block that would not end.** Bounding an `Administrateur :` list only at
+  the role labels this stage keeps let Raymond Patenôtre's run on through
+  `Propriétaire des journaux : Le Petit Niçois, Le Petit Var, La Sarthe` and
+  make him a director of three newspapers and of a company called Sarthe. Any
+  `Label :` now ends the block — and the label's own spacing is the compiler's
+  typesetting, non-breaking spaces included, which is why that rule took two
+  attempts.
+- **The relative is the last name in the clause, not the first.** "Sa fille
+  Lina a épousé en 1930 le banquier Jean Rheims, administrateur des
+  Manufactures indochinoises de cigarettes" is Rheims's directorship, and the
+  first pass gave it to Lina.
+
+The Belgian volume is excluded. The men are real and the boards are real, but a
+seat in the Chambre des représentants is not a seat in the body that legislated
+for the French empire, and the column would silently mean two things.
+
+## 4j. Mandates, everywhere else in the corpus
+
+The rosters are eight documents. Deputies and senators are named **9,692 times
+across 1,415 of the other 5,855**, and not one of those mentions is a tie, so
+no affiliation parser records any of them. `src/parse_mandates.py` reads them
+into `person_mandates.csv` — **2,444 mentions, 1,117 people** — and changes the
+affiliation network not at all. A directorship held by a sitting
+parliamentarian is a different object from one held by an engineer, and the
+mandate is what tells them apart.
+
+Four registers carry a mandate, and they differ in where the subject sits
+relative to the title: apposition (`M. Ernest Outrey, député de la
+Cochinchine`), the compiler's bracket (`Camille Krantz* [député d'Épinal
+1891-1910, CNEP]`), title-first (`le sénateur Ernest Feray`), and the career
+clause of a footnote whose header is the person (`Jules Bozérian (1825-1893) :
+avocat, député (1871-1876), puis sénateur (1876-1893) du Loir-et-Cher`).
+
+**The kinship trap is the whole precision problem, again.** The compiler is a
+genealogist as much as a company historian, and the mandate beside a name is
+very often not that man's:
+
+    Maurice Piot [fils de Léon Piot (1845-1922), député de l'Aude 1876-1877]
+    Ch. Riotteau [fils du sénateur-maire de Granville Émile Riotteau]
+    Marié à Geneviève Mérillon, fille d'un député de la Gironde
+
+Reading these would seat three men in a chamber none of them entered. The same
+clause-scoped kinship test as §4i handles them, and one more rule joins it: the
+compiler's own disclaimers. `R. Carcassonne : probablement à distinguer de
+l'avocat Roger Carcassonne, sénateur socialiste (1946-1971)` asserts precisely
+what a naive read would deny.
+
+Four further rejections earn their place:
+
+- **`député` also means "delegate".** `G. L. (député), député au convent
+  1930-1931 de la Loge L'Étoile flamboyante` is a masonic lodge.
+- **Foreign chambers.** `le commandeur docteur Enrico Scalini, sénateur du
+  Royaume` sat in the Italian Senate.
+- **A year near a title usually dates something else** — the clipping it
+  appears in, the budget under debate, the election the man lost: `député, sur
+  le budget du ministère de la marine pour 1889`; `CHAGNAUD Léon, sénateur de
+  la Creuse, non réélu en 1929`. A term of office is written as a term of
+  office: bracketed after the title, or as a span. A bare single year is not
+  read, which loses `Élu député de la Corrèze en 1893` and is the right trade.
+- **The constituency slot is anchored, not searched.** `député, vice-président
+  de la Commission des Colonies` is not a deputy for the Commission des
+  Colonies, and `sénateur du Nord` followed by the article title *L'Afrique
+  Équatoriale Française* is not a seat called Nord L'Afrique.
+
+**Precision: 18 of 18 correct on person and chamber** in the final audit round,
+with every constituency also correct; an earlier round measured 19 of 20 on the
+same criterion, the exception being a name that had absorbed the end of the
+preceding sentence (`26, rue d'Athènes. Ferdinand Buisson, ancien député`).
+
+Two things this file is not. It is not a parliamentary roster: a man who sat for
+twenty years may appear once or forty times, so every consumer aggregates it.
+And it is not checked against the Assemblée nationale's own biographical
+dictionary — the constituency and the years are the compiler's, with his errors
+intact.
+
+## 4k. Offices of state, and the colonial administration
+
+Stage 3g reads the legislature. `src/parse_offices.py` (stage 3i) reads the
+executive, which in a colonial dataset is the larger half. The corpus names a
+*gouverneur général* 15,595 times across 1,653 documents, a *résident
+supérieur* 5,770 times, a *ministre des Colonies* 3,088 times. A board holding
+a retired governor-general of French West Africa is connected to the colonial
+state in a way no parliamentary mandate captures: in the territory the company
+operated in, the governor-general **was** the state — he signed its
+concessions, set the labour regime it recruited under, and allocated the land
+it planted.
+
+The subject-resolution machinery is stage 3g's, imported rather than copied.
+"Whose title is this" has the same four registers — apposition, the compiler's
+bracket, title-first, the footnote career line — whether the title is `député`
+or `gouverneur général`, so `parse_mandates.subject_of` now serves both and the
+kinship and disclaimer discipline of §4j applies unchanged.
+
+**The reference trap is the new problem, and it is far worse than for a
+mandate.** A chamber is almost only ever named as an attribute of a man. An
+office is named overwhelmingly as an *institution*:
+
+    autorisée par arrêté du gouverneur général du 14 mars 1923
+    concession accordée par le ministre des Colonies
+    Le Gouverneur général de l'Algérie à monsieur Treille, député, Paris
+
+None of those attributes the office to anybody, and all three are the ordinary
+way the corpus mentions it. The defence is that a row is emitted only when
+`subject_of` finds a named subject, which requires a name-and-comma immediately
+before the title, a bracket, or a recognised forename immediately after it. A
+bare `par le gouverneur général` has none.
+
+That is measurable, and it is the honest headline for this stage: `OFFICE_RE`
+matches **46,344** times across the corpus and the stage emits **5,642 rows**
+— **12.2%**. The other seven-eighths name an office without naming its holder.
+Result: **2,415 people, 844 of them in the affiliation network**, across eight
+office classes.
+
+Four collisions needed rules of their own, because one word is two offices:
+
+- **`administrateur`** alone is a company director, which is the rest of this
+  dataset. Only `administrateur des colonies` and `administrateur des services
+  civils` are the civil-service rank, so the qualifier is required and
+  `administrateur délégué` never matches.
+- **`gouverneur`** governs the Banque de France as well as Madagascar. A bank
+  governorship is a state appointment but not a colonial one, so it is coded
+  `state_bank`.
+- **`ministre de France à Tanger`** and `ministre plénipotentiaire` are
+  diplomatic posts, not cabinet seats, and are routed to `senior_state` by a
+  negative lookahead on the minister pattern.
+- **`préfet apostolique`** is a bishop. **Military rank** — `général`,
+  `colonel`, `capitaine` — is not read at all: in this corpus those words are
+  honorifics attached to hundreds of directors and would swamp every class.
+
+Two defects worth recording because both were silent:
+
+- **`(?i)` on a pattern containing `[A-Z]`.** The flag applies to the whole
+  pattern, so the jurisdiction's capital-letter class matched lower case too,
+  and `haut-commissaire de la République française par intérim` yielded the
+  jurisdiction *République française par*. The flag is gone and the lower-case
+  prefix words are spelled out.
+- **A ministerial portfolio read as one letter.** `ministre des T` matched, and
+  *ravaux publics et des* went into the jurisdiction column. The portfolio is
+  now consumed whole, and its continuation is restricted to a capitalised word
+  or one of the handful of lower-case portfolio adjectives — otherwise
+  `ministre des Colonies a déclaré que` swallows the sentence.
+
+**Precision: 20 of 20** on person and office class in the final audit round,
+against source context. The one row a stricter reading would reject was a real
+office correctly attributed to the right man — `sir Joseph Maclay, ministre du
+Shipping` — but a *British* cabinet seat, which is a scope error rather than an
+extraction error. A foreign-honorific guard now drops it.
+
+`former` is read from the source's own wording, before the office (`ancien`,
+`ex-`, `ci-devant`) and after it (`honoraire`, `en retraite`,
+`démissionnaire`). **764 of 5,642 mentions** are former office-holders. Since
+the compiler omits `ancien` far more often than he omits an office, that is a
+floor.
+
+## 4l. The dossiers on people, which are written inside out
+
+Every reader described so far is **company-anchored**: find a board heading,
+read the members under it. The catalogue also holds 240 entries whose subject
+is a person — `entry_type = person` — and those are written the other way
+round. The man is named once, in the entry's own title, and the body lists what
+he sat on:
+
+```
+Administrateur de la Banque auxiliaire, Union parisienne et provinciale
+Administrateur du comité de Paris de la Banque de Tunisie (mai 1886).
+Administrateur délégué des Charbonnages du Tonkin (1895-1898).
+```
+
+Nothing was reading that shape, and the measurement is unambiguous: **a company
+dossier yields a tie 67.2% of the time, a person dossier 21.3%**. The gap was
+not that the documents were empty but that they were inside out.
+
+This seam was found by disbelieving a claim in an earlier draft of this
+document. §4g had brought Tunisia from the worst-covered territory to above the
+corpus average, and the residue that still yielded nothing was written off as
+books and honours lists. It is not: two of the silent Tunisian documents are
+career blocks of exactly the shape above, and following that up corpus-wide
+found the genre rather than the territory.
+
+### The subject is free, which is what makes this genre cheap and safe
+
+`parse_mandates` (§4j) and `parse_offices` (§4k) spend most of their code
+deciding *whose* title a phrase is, because an office is named as an
+institution far more often than as a man. Here the catalogue answers it: the
+subject is the entry's `name_listed`, parsed by the same
+`names.parse_person_name` every other stage uses, after the dates and the
+compiler's gloss (`, banquier à Angers`) are stripped. A role line in the body
+needs no subject resolution at all.
+
+Two classes of entry the subject rule must refuse, and one test that did not
+work:
+
+- **Firms filed as people.** `Jacques Menasché & Cie (1926-1933), Paris` and
+  `Tramways de Tunis (S.A. des)(1888-1901)` are `entry_type = person`.
+  `names.looks_like_org` rejects them.
+- **Institutions.** It does *not* reject `Bureau d'organisation économique
+  (B.O.E.)`, which is tuned to company names — and that entry duly acquired a
+  directorship of the Ciments libanais, `Bureau` having been read as a surname
+  and `organisation économique` as a forename. `INSTITUTION_HEAD_RE` refuses a
+  title beginning `Bureau`, `Office`, `Comité`, `Syndicat` and the rest.
+- **The forename test could not be a list.** The obvious fix is to require the
+  forename to be in `data/reference/forenames.txt`, and it fails: that list
+  holds ~330 names and contains neither *Adolphe* nor *Adrien*. Requiring it
+  refused 222 of 240 entries. The test is shape instead — a forename is one to
+  three capitalised tokens — which refuses `organisation économique` and keeps
+  `Adolphe`. A legal form in the forename slot is refused outright, which is
+  what `Chaux hydrauliques et ciments d'Algérie (S.A. des)` is.
+
+### The bug the checks caught, which nothing else would have
+
+The catalogue writes `SURNAME (Forename)`, and `names.parse_person_name` reads
+the **first** token as the forename: `parse_person_name("Noël (Octave)")`
+returns `given = Noël`, `surname = (Octave)`, `person_key = octave-n`. The
+first version of this stage passed the title straight in, so **every one of its
+149 rows carried an inverted person key** — and the ties still merged, still
+counted, and still drew, because an inverted key is a perfectly well-formed
+key. Nothing in the output looked wrong.
+
+`checks.py` asserts `subject_of("Noël (Octave)(1846-1918)")` has the surname
+*Noël*, and that is what caught it. The title is now reordered into
+`Forename Surname` before the parser sees it, exactly as §4g reorders
+`ASSIS (Henri)`; the dates and the compiler's gloss are stripped first, so
+`Brizon (Alexandre)(ca 1851-ca 1933)` and `Ogliastro (Antoine)(1875), puis
+Louis Ogliastro` both resolve.
+
+### The company side is stage 3d's resolver, not a new one
+
+A role line names its company in the compiler's abbreviated register, so
+`resolve_annotations.resolve` does the matching: prefix-in-order against
+`companies.csv`, ambiguity dropped rather than guessed, place names refused.
+**A line whose company does not resolve is not emitted** — 262 of them. That is
+a deliberate recall sacrifice: an unresolved company name is a node the graph
+cannot join to anything, so keeping it would raise the tie count without
+connecting a single pair of firms.
+
+### Two rules against crediting the wrong man
+
+A dossier is biography, so it names the subject's family and the family's seats
+in the same paragraph. The first version credited Eugène Haffner with the
+Plantations Hallet on this passage:
+
+```
+… fils de Paul-Adolphe Chalamel (1839-1909),
+administrateur du Palais Luxembourg. Directeur du Lycée franco-chinois de
+Cholon, puis directeur général des Plantations Hallet. Voir encadré.
+Remariée à Saïgon, le 14 octobre …
+```
+
+The seat is his son-in-law's. Two rules catch it, and both are needed because
+the sentence containing the role names nobody:
+
+- **`KINSHIP_RE` within 200 characters before the match** — the same rejection
+  the roster parser makes in §4i, scoped by distance rather than by clause
+  because these lines wrap mid-sentence. 54 rows removed.
+- **`NEW_SENTENCE_RE` after the company on the same line** — a date or a short
+  gloss is fine; a new sentence with prose in it (`. Voir encadré. Remariée à
+  Saïgon…`) means the line was flowing biography. 22 rows removed.
+
+### What it yields, and what it is worth
+
+**170 ties, 71 people, 158 companies, 71 dossiers brought from zero**, and
+**76 of the 170 carry a year** — a rate no other genre approaches, because the
+compiler dates a seat when he is writing a career.
+
+**Precision 19 of 20** on a random sample checked against source context, which
+is the band §4c–4g occupy. The one questionable row sits under a death notice
+listing the subject's family; the kinship guard did not fire because the notice
+uses `enfants` and `petits-enfants` across a rule separator.
+
+Merged as `source_genre = "person_dossier"`, excluded by
+`build_network.py --no-person-dossier`.
+
+## 4m. What the unread documents are, and why that had to be measured
+
+§4l exists because a claim in this document was wrong. The Tunisian residue was
+written off as books and honours lists; it was not, and following it up found a
+genre. That is a warning about the *method* of the claim, not about Tunisia:
+**"the rest is unreadable" is an assertion, and this repository states
+assertions with a file behind them.**
+
+`src/audit_coverage.py` (stage 23) is that file. It reads every document with
+usable text that yields no tie — 2,129 of them — and files each under the
+**register** it is written in, meaning the shape a parser would have to
+recognise. It adds no ties and touches no network output.
+
+| Register | Documents | Characters | What it is |
+|---|---|---|---|
+| `press` | 1,151 (54.1%) | 22.2 M | Newspaper cuttings: arrival notices, tender results, election counts |
+| `no_signal` | 292 (13.7%) | 4.9 M | Nothing matched |
+| `person_career` | 282 (13.2%) | 30.1 M | The person-anchored register of §4l |
+| `deed` | 170 (8.0%) | 3.0 M | Notarial: `Aux termes d'un acte reçu par Me Bérenger, notaire à Saïgon` |
+| `apposition` | 127 (6.0%) | 7.3 M | `M. Honoré Dejean, directeur de la Société agricole de My-Duc` |
+| `certificate` | 77 (3.6%) | 1.3 M | The caption under a reproduced share certificate |
+| `board_list` | 30 (1.4%) | 1.6 M | **A board heading in a document the parser read as empty** |
+
+These are the counts *after* the two fixes below, which the audit itself
+prompted: three of the `board_list` documents now speak and are no longer in
+the table.
+
+Registers are tested in order and the first match files the document, so a
+board list inside a press compilation counts as a board list; every register's
+match count is kept, so the file can be re-sorted on any of them.
+
+### The finding is a negative one, and it is the useful kind
+
+**Indochina is 60% of the silent set** — 1,282 documents holding 48.2 M
+characters, 68% of all unread text in the corpus, at 47.4% coverage against
+the corpus's 63.7%. It looked like the Tunisian case at twenty times the
+scale, and 826 of its 1,011 silent *company* dossiers carry `MM.` name lists —
+19,933 of them.
+
+They are not boards. `MM.` is French for *Messrs*, and in these documents it
+introduces the bidders at an abattoir tender, the count in a chamber-of-commerce
+election, and the three veterinary inspectors on the jury of a cattle show. A
+parser that read `MM.` lists as board lists would manufacture thousands of
+false ties out of a livestock competition. The Indochina residue is a
+compilation of newspaper cuttings, deeds and council minutes — a different kind
+of document, not an unread board list.
+
+That is worth having measured in both directions. It says where not to spend
+effort, and the two small rows say where a little still pays.
+
+### Two defects the audit found
+
+**`LINE_MEMBER_RE` read only half of its own register.** The §4g line register
+was written for `ASSIS (Henri), à Oran ;` — a comma after the parenthetical.
+The same annuaire also prints
+
+```
+REY (Antonio)\x00; président\x00;
+MESSA (Silvio)\x00; adm. délégué\x00;
+```
+
+with a **semicolon**, and with whatever the extractor emitted for a thin space
+sitting in the gap — a NUL, which `\s` does not match. Both had to be fixed
+together: allowing the semicolon alone still matched nothing. Corpus-wide the
+fix adds 104 member lines and brings three silent documents to speech. Small,
+but the register was being read at half its reach, and NUL characters occur in
+**8.4% of the corpus and 13.3% of the silent set** — over-represented exactly
+where extraction fails.
+
+**§4l refused men whose surname begins with an article.** `looks_like_org` was
+applied to the catalogue form, `Le Gac de Lansalut (Charles)`, where the
+leading *Le* reads as a company name. It is now applied to the reordered form,
+`Charles Le Gac de Lansalut`, which it passes — while `Georges Taupin & Cie`,
+a partnership, is still refused. Stage 3j went from 150 ties to 170.
+
+A hypothesis that did **not** survive testing is worth recording too: the NUL
+characters looked like the single cause, since `parse_ties` uses `\x00` as its
+own internal sentinel for protecting annotations, and a source NUL colliding
+with it is a real hazard. Stripping control characters at load recovered
+nothing on its own. The separator class was the cause; the NUL was only half
+of the gap.
 
 ## 5. Dating and attributing ties
 
@@ -1227,6 +1741,562 @@ landed in the same places but their path segments were emitted in a different
 order and the committed SVG changed on a re-run of unchanged data. This is the
 same hazard §5d describes, in a place the existing guard did not reach;
 `ordered_subgraph` fixes it and `checks.py` now probes for it.
+
+## 5j. The legislative layer, and three kinds of continuity
+
+`src/make_legislative_layer.py` joins the two mandate readings (§4i, §4j) to
+each other and to the company network, and writes three files: `legislators.csv`
+(one row per parliamentarian), `edges_legislator_interlock.csv` (two
+parliamentarians, one board), and `legislative_continuity.csv` (the roster
+snapshots as transitions). `src/make_legislative_figures.py` draws figs 34–39.
+
+**1,448 parliamentarians are named in the corpus; 574 of them sat on a colonial
+company board; 111 sat in both chambers.** Those are the headline numbers, and
+the second is the one to be careful with — see below.
+
+The word "continuity" hides three different measurements, and conflating them
+is the easy mistake here:
+
+1. **Continuity of tenure** — one man's own run, `first_year` to `last_year`.
+   fig34 draws it.
+2. **Continuity of presence** — whether the *same* man is in the compiler's next
+   directory. This is what `legislative_continuity.csv` measures, as
+   entered/stayed/left between consecutive snapshots, because a roster is a
+   census and the interesting number is the turnover between two of them. fig35
+   draws it, and the result is stark: carryover runs **0.471 → 0.794 → 0.568**
+   across 1930, 1932 and 1936, and then **0.009** into 1954. Two of 232 men
+   cross that gap. A war and a republic fall inside it.
+3. **Continuity of position** — whether a *board* keeps a parliamentarian across
+   snapshots, which is the firm's access rather than any career. fig37 ranks the
+   boards but deliberately does not separate continuous access from rapid
+   succession, and says so.
+
+A firm can hold parliamentary access continuously for thirty years while never
+keeping the same parliamentarian for two consecutive volumes. The reverse also
+happens. Neither is visible in a single number.
+
+**Two men on one board may never have met.** An interlock edge here carries
+`mandates_overlap`: `1` where the two known terms intersect, `0` where they do
+not, and *empty* where at least one term is unknown — which is **277 of 404
+pairs**. That column is stated rather than filled: an analysis that reads every
+shared board as a live connection overstates the network, and one that demands
+a proven overlap understates it by the size of the unknown column. The figure
+caption carries both numbers for the same reason.
+
+**`key_ambiguous`, and why a headline number needs it.** A person key with no
+forename attested is a surname bucket rather than a man. Joining `paris` to a
+34,500-person network returned 34 companies belonging to several different
+people, and the node was the largest in the first draft of fig36. The mandate is
+still real — the corpus does name a senator by surname alone — so the row stays
+and is flagged, and every company-side figure and the interlock graph drop it.
+That is why the interlock count is 404 rather than the 831 an unfiltered join
+gives, and the 574 "on a colonial board" should be read as an upper bound whose
+ambiguous share is in the column.
+
+**Two figure decisions worth stating.** No sankey, no bump chart, no chord
+diagram: all three encode flow between ordered categories, and what the
+snapshots record is presence in a census whose gaps are as often the compiler's
+silence as a man's departure. A ribbon between 1936 and 1954 would assert a
+continuous quantity across an eighteen-year hole. The presence grid states what
+is known — present, absent — and lets the reader see the break. And fig34 drops
+any span longer than 55 years along with every surname-only key, because the
+first draft gave René Hachette a 78-year term: no one sat that long, so a bar
+saying so is two men.
+
+## 5k. Coding companies by political connection
+
+`src/code_political_connections.py` (stage 16) turns the person-level office
+evidence into a company-level variable, and
+`data/reference/political_connection_rules.md` is the argument for it — the
+definition, the tier ordering, the offices considered and rejected, and the
+four things the coding cannot do. **Read that file before using the variable.**
+This section records what came out and the three design decisions a reviewer
+would challenge first.
+
+A firm is coded connected when someone holding a board seat in it is attested
+holding an office of state. That is the standard definition in the
+political-economy literature — Faccio's is a member of parliament, a minister
+or a head of state, or a close relation of one — with the extension the setting
+requires: the colonial executive counts, for the reason given in §4k.
+
+Of **6,454 firms with at least one observed board seat, 2,243 (34.8%) are
+connected**:
+
+| Tier | | Firms | Share |
+|---|---|---|---|
+| 4 | `executive` — minister, head of state, colonial governor | 884 | 13.7% |
+| 3 | `legislature` — deputy, senator | 713 | 11.0% |
+| 2 | `administration` — colonial administrator, conseiller d'État, prefect, consul | 501 | 7.8% |
+| 1 | `local_or_proxy` — municipal office only, or through a relative | 145 | 2.2% |
+| 0 | `none` | 4,211 | 65.2% |
+
+**The tier ordering is an assumption, not a finding.** Ranking a minister above
+a deputy follows Faccio. Ranking a governor-general *with* a minister rather
+than below him is a judgement specific to the colonial setting. Both are argued
+in the rules file, and the six `has_*` flags and six `n_*` counts are all in
+the output, so the tier is reproducible from them in one line and replaceable
+in one more.
+
+**Sitting against former is the finding.** The two are never summed, and the
+split runs opposite ways in the two top tiers:
+
+| Tier | firms with a *sitting* holder | with a *former* one |
+|---|---|---|
+| `executive` | 859 | **473** |
+| `legislature` | 713 | **35** |
+| `administration` | 452 | 115 |
+
+Ministers and governors join boards *after* leaving office; deputies sit on
+boards *while* serving. That is two different mechanisms — a revolving door and
+a live conflict of interest — and a single "politically connected" dummy would
+average them into one meaningless number. Because `former` is read from the
+compiler's own `ancien` / `honoraire`, which he omits far more often than he
+omits an office, `n_former` is a floor and `n_sitting` a ceiling.
+
+**Concurrency is reported with its denominator, or not at all.** A tie observed
+in 1950 and a mandate held 1919–1932 are both attached to the firm, and the
+base coding does not require them to overlap. Where both the tie year and the
+office span are known, `n_concurrent` counts the director–firm pairs that
+actually overlap: **326 of 688 testable pairs, out of 4,212 connected pairs
+in total**. Fewer than one pair in five can be tested at all. `n_concurrent`
+is therefore not a corrected `n_connected` but a much smaller, much
+better-evidenced subset, and `n_testable` sits beside it in the file and in
+fig 44 so it cannot be quoted without its denominator.
+
+**Indirect connection is kept out of the tier.** `n_connected_neighbours`
+counts the firms sharing a director with this one that are themselves
+connected, and `indirect_only` marks the 3,254 firms — most of tier 0 — with a
+connected neighbour and no connected director of their own. Folding that into
+the tier would let the variable inflate without limit as the network grows, and
+one interlock from a minister's board is a different construct from having the
+minister on yours.
+
+**Confidence, and why `low` is not droppable.** `high` where the connection
+rests on a roster entry or two independent mentions, `medium` on one apposition
+or bracket, `low` where the connecting person's key has no forename attested or
+the only evidence is a footnote career line. Of the 2,243 connected firms:
+**1,052 high, 349 medium, 842 low**. `low` is 38% of the connected set, not a
+residue. Report what happens to your result when you exclude it.
+
+Two limits carried over from elsewhere in this document and worth repeating
+here, because this variable invites both mistakes. It **cannot be read as a
+rate** across territories: coverage is uneven (§6), and a territory the
+compiler read closely looks more connected for reasons that have nothing to do
+with its firms. And it **cannot be compared across `source_genre` without
+holding it constant**: the roster genre (§4i) exists precisely to record
+political connection, so firms with roster evidence are connected at a far
+higher rate by construction.
+
+## 5l. Political connection by sector, and why the raw cross-tab misleads
+
+Crossing the connection coding with sector needed two pieces of work before it
+could be tabulated at all, and then a third before it could be read.
+
+### The sector field is not an analysable variable as it stands
+
+`companies.csv`'s `sectors` column is the site's own filing vocabulary, taken as
+printed: **109 distinct labels**. Three problems, all fixed by
+`src/sectors.py` and the reviewable mapping in
+`data/reference/sector_groups.csv`:
+
+1. **The modal value is not a sector.** `Documents généraux (par ordre
+   chronologique)` covers 5,397 firms — the chronological clipping dump.
+   With its variants, **2,949 of the 6,454 firms with a board carry no other
+   sector at all**. Every sector figure is therefore computed on **3,505
+   firms**, and says so.
+2. **The field carries the site's own navigation text.** Among the 109 labels
+   are `Alain LÉGER, créateur du site …, a publié`, `Pour une utilisation
+   optimale de nos liens, téléchargez nos pdf`, `Messages personnels` and
+   `documents`. These are mapped to `not_a_sector` and excluded, not counted.
+3. **One sector is spelled up to six ways.** Six labels are mining (`Mines`,
+   `Mines et carrières`, `Groupes miniers transcoloniaux`, `Mines et
+   métallurgie`, `Mines et placers`, `mines et industries`); six are banking;
+   five are agri-food, two of them differing only in case. Tabulating the raw
+   labels splits every real sector into fragments and puts none of them at the
+   top.
+
+The mapping groups all 109 into **19 sectors plus two residuals**, and the two
+residuals are deliberately distinct: `unclassified` is the *source's own*
+economic residue (`Divers`, `Industries diverses`), which is information and is
+kept; `not_a_sector` has no economic content and is dropped. `sector_of` takes
+the first **non-filing** label rather than the first listed, so a firm filed
+under `Documents généraux; Mines` is a mining firm. `checks.py` asserts every
+label in the data appears in the committed mapping, so a new label cannot
+silently become `unmapped`.
+
+### The raw cross-tab is a board-size artefact
+
+Read naively, `political_connections_by_sector.csv` says finance is the most
+connected sector (55.7%) and mining second (44.1%). Both have large boards —
+median 10 and 7 — and **a board of ten has ten chances to contain a connected
+director where a board of two has two.** Metallurgy (median board 2) and health
+and education (median 1) sit at the bottom for the same mechanical reason.
+
+The benchmark is the simplest defensible one. Let *p* be the corpus-wide
+seat-level rate — connected director-seats over all director-seats. Under a null
+where each seat is independently connected with probability *p*, a firm with *k*
+directors holds at least one with probability 1 − (1 − *p*)^*k*, and a sector's
+expected share is the mean of that over its firms. `excess_share` is observed
+minus expected.
+
+**The adjustment reorders the table completely:**
+
+| Sector | firms | observed | expected | excess | median board |
+|---|---|---|---|---|---|
+| Culture, sport and leisure | **12** | 58.3% | 20.1% | +38.2 | 3 |
+| Press, printing and communications | 56 | 44.6% | 20.9% | **+23.8** | 1 |
+| Hotels and tourism | 49 | 42.9% | 22.9% | **+20.0** | 2 |
+| Health, education and research | 54 | 25.9% | 15.5% | **+10.4** | 1 |
+| Transcolonial and diversified groups | 120 | 55.8% | 46.5% | +9.4 | 8 |
+| Transport, ports and docks | 305 | 46.9% | 41.2% | +5.7 | 7 |
+| Banking, finance and insurance | 576 | 55.7% | 51.9% | **+3.8** | 10 |
+| Mining and quarrying | 555 | 44.1% | 42.6% | **+1.6** | 7 |
+| Food processing, livestock and fishing | 461 | 41.6% | 42.3% | −0.6 | 7 |
+| Metallurgy and engineering | 28 | 21.4% | 26.1% | −4.7 | 2 |
+| Construction and building materials | 148 | 39.2% | 44.3% | **−5.1** | 7 |
+
+Finance and mining, the two sectors the raw shares put on top, are within a few
+points of what their board sizes already predict. The sectors genuinely
+connected beyond board size are **press and printing, and hotels and tourism**
+— both with median boards of one or two, where a single connected director is
+the whole board. Culture and leisure scores higher than either, on **twelve
+firms**, which is the row to read as noise rather than as the finding. Construction is the one sector materially *less* connected than
+its boards predict.
+
+Three cautions on that table. The three sectors at the top have **50–57 firms**
+each, so their excess is volatile in a way the 557-firm finance row is not; the
+figures print every denominator for this reason. The null **treats seats as
+exchangeable**, which they are not, and ignores correlation among a firm's
+directors — it is a yardstick for reading the raw shares, not a model. And the
+`not_a_sector` residue is *less* connected (21.4%) than the sectored firms,
+which is most likely an evidence artefact: a firm known only from a press
+clipping offers less text in which an office could be observed.
+
+### The figures
+
+`fig45` is the cross-tabulation proper — sector × tier as a heatmap, rows
+summing to 100%, with the sequential ramp applied **within each row** because
+one ramp across the table would be dominated by the `none` tier. `fig46` is the
+board-size adjustment, observed against expected, ordered by excess.
+
+## 5m. Which sector is central, and six answers that disagree
+
+`src/code_sector_centrality.py` (stage 18) exists because the question "which
+sector is most central to the empire network?" has at least six defensible
+operationalisations and they do not rank the sectors the same way. The file
+carries all six as columns so that a claim can name the one it rests on, and
+the figures cite the file rather than recomputing.
+
+The graph is the firm-level interlock projection: 6,011 firms, 79,636 edges,
+a giant component holding **98.6%** of the nodes and a mean shortest path of
+**3.27** between them. Sectors come from the 19-group mapping of §5l, and a
+group is measured only at 25 firms or more — below that the measures are noise.
+
+### The size confound is the whole problem
+
+A sector with more firms and larger boards has more edges for reasons that
+have nothing to do with position. Finance holds **15,980 board seats** against
+mining's **9,130**, so any raw count — degree, edge share, summed betweenness —
+puts finance first before position is considered at all. Three families of
+column exist only to strip that out:
+
+- **Per-seat normalisation.** `deg_per_seat` and `btw_per_seat` divide by board
+  seats rather than by firm count. On `deg_per_seat` finance (1.73) falls
+  *below* plantations (2.21), textiles (2.70) and press and printing (2.93) —
+  the last of which is an artefact of the opposite kind, since 40 firms with a
+  mean of 5.9 seats each will show a high ratio on very little evidence.
+- **A size-matched removal null.** Delete the sector's firms, then delete the
+  same *number* of firms drawn at random, 60 times (`--sims` raises it), and
+  report the loss as a z-score. This is the column that separates finance from
+  mining, which at 553 and 520 firms are within 6% of the same size and so
+  cannot be separated by any count: **finance z = +3.35 (p = 0.000), mining
+  z = −0.11 (p = 0.58)**. Removing finance costs the giant component more than removing
+  an equally large random slice; removing mining costs exactly what its size
+  predicts.
+- **Path length after removal.** Fragmentation measures nothing here — no
+  sector's removal breaks the giant component, which is the substantive
+  finding and not a null result. The cost of removal appears as **distance**
+  instead: mean path rises from 3.27 to **3.56** without finance (+0.30),
+  against +0.09 for mining and +0.02 for food processing. That ordering is
+  the finding; the magnitudes move by a few hundredths with every rebuild of
+  the graph, and on one earlier build mining's change was negative.
+
+### What the removal test does not license
+
+Deleting a sector from an observed graph is a descriptive operation on this
+dataset, not a counterfactual about the empire. It says the network *as
+recorded* routes more of its connectivity through finance than through an
+equally large random slice of firms. It does not say the colonial economy
+would have been less connected without banks: those firms would not have
+existed, their directors would have sat elsewhere, and the compiler's coverage
+is itself uneven by sector. The same caution applies to `path_change`.
+
+### Hub and broker are different things
+
+`mean_broker_gap` is the mean of `degree_rank − betweenness_rank` across a
+sector's firms. Negative means the sector's firms rank better on betweenness
+than on degree — they broker more than their connection count would suggest;
+positive means the reverse. Utilities (−328.0) and plantations (−262.3) are
+the strongest brokers relative to their degree, textiles (+282.5) and health
+and education (+247.6) the strongest hubs. Finance is at −121.3, and mining at
+−127.0 is beside it: on this measure the two are indistinguishable, which is
+why the removal null and not the gap is the column that separates them. Finance
+is both hub and broker,
+which is why it leads on the raw counts *and* survives the null.
+
+### The figures
+
+`src/make_sector_network_figures.py` (stage 19) draws six, and the first two
+answer a different question from the last four. Figures 51 and 52 are asked to
+*show* the position — to make finance's centrality visible as geometry rather
+than stated as a coefficient — and both place nodes by a measured quantity so
+that position is never the output of a force algorithm:
+
+- **fig51** — multi-source BFS shells outward from all finance firms in one
+  panel and all mining firms in the other, with each shell drawn as an annulus
+  whose **area is proportional to the number of firms in it**. One step from
+  finance reaches **70.9%** of the graph; one step from mining reaches
+  **56.6%**. An earlier draft placed each shell on a ring *line*, which packed
+  3,709 nodes onto one pixel of radius and made the two panels look identical:
+  the finding was real and the encoding hid it.
+- **fig52** — the 170 core firms with **radius = betweenness rank**, so the
+  centre of the picture is the centre of the network. **23 of the core's 40
+  most-between firms are finance firms**, and finance's mean rank is 54.4
+  against mining's 90.8. The angle is a golden spiral and means nothing; it
+  only spreads the nodes apart.
+- **fig47** — the sector graph itself: 16 groups, edge weight = interlocks
+  between them. Finance–mining alone carries 2,823.
+- **fig48** — the interlock core by sector, on the core's own layout.
+- **fig49** — the removal test drawn: observed loss against the size-matched
+  null. Note the inversion it makes visible — removing finance takes 652 of
+  the core's 1,388 edges against 666 for the same number of randomly drawn
+  *core* firms, because the core is by
+  construction the top 170 by weighted degree, so a random draw inside it is a
+  draw of hubs. The null in the CSV is drawn from the whole graph, which is
+  the comparison the z-score reports.
+- **fig50** — hub against broker, per firm, by sector. The finance firms with
+  the highest betweenness have gaps near zero: they are not brokers *instead*
+  of hubs.
+
+## 5n. The whole network on the world map
+
+Figure 7 (§5f) already puts the network on the map, but it maps **cities**: it
+collapses each city to one node, so 762 Paris firms are a single dot and the
+ties *inside* a city are a number in a table rather than lines on the map.
+`src/place_on_map.py` (stage 20) and `src/make_world_map_figures.py` (stage 21)
+map the **firm**. Doing that means answering, for each of the 6,011 firms in the
+interlock graph, "where was it?" — and for a third of them the honest answer is
+that the source does not say.
+
+### The placement ladder
+
+Three rungs, and every row of `company_map_positions.csv` records which one it
+landed on, because the rungs do not mean the same thing:
+
+| Rung | Firms | What position means |
+|---|---|---|
+| `city` | 2,028 | An address. `geocode.py` recovered a city from the listed place or the observed head office. A fact about the firm. |
+| `territory` | 1,903 | A filing category. No address, but the catalogue files the firm under exactly **one** country, so it sits at that territory's anchor point. A fact about the *catalogue*. |
+| `unplaced` | 2,080 | No address and no single country: 1,650 firms with no country at all (most filed only under the transversal *Empire* rubric), 420 filed under several at once, and 9 whose single country — Macedonia, Russia, the Antarctic territories — has no city in the gazetteer. |
+
+That places **3,931 firms (65.4%)** and makes **43,623 of the 79,636 ties
+(54.8%)** drawable, against figure 7's 2,028 firms and its between-city ties
+only.
+
+**Multi-country firms are deliberately not placed.** `companies.csv` stores
+`countries` as a sorted list, so taking the first element — which is what
+`territory_of` does for the colour of every other figure — would place a firm
+filed under nine territories at whichever sorts first alphabetically. That is a
+coin flip dressed as a coordinate, and the firms it would misplace are the
+largest and most interlocked in the corpus. They stay off the map with a
+`reason` recorded.
+
+Territory anchors are the unweighted mean of that territory's cities in
+`data/reference/places_geo.csv`. It is a label anchor, not a centroid of
+anything real. The two federations (AOF, AEF) have no city of their own in the
+gazetteer and take the mean over their member territories, which are listed in
+`FEDERATIONS` in the module.
+
+### What a firm-level map can draw that a city-level one cannot
+
+Firms at one anchor are spread through a disc by a deterministic golden-angle
+rule, with the disc's **radius as the square root of the firm count** so its
+area is proportional to how many firms are there. Two consequences: the
+**9,124 ties that never leave a single place** become short lines inside a disc
+instead of a footnote, and blob size is a quantity. Where two places are close
+and one is large its disc swallows the other — Brussels, Lyon and Marseille all
+fall inside Paris's — so a hairline ring marks each disc's edge and the small
+anchors are painted last.
+
+### Paris
+
+**Paris holds 764 of the 3,931 placed firms (19.4%) and touches 19,732 of the
+43,623 drawable ties (45.2%).** Figure 54 draws that as two panels on one set
+of coordinates: the ties that touch Paris, which are a fan, and the ties that
+do not, which are a lattice between colonies.
+
+The three Paris counts are kept apart in `map_geography_baseline.csv`
+(`paris_cross_edges`, `paris_within_edges`, `paris_edges_to_unplaced`) because
+the first version of that row mixed them. It counted Paris's ties to *unplaced*
+firms in the numerator and divided by the drawable total, which put Paris's
+reach at 63.7% instead of 45.2%. A ratio whose numerator and denominator come
+from different populations is the easiest error to make here and the hardest to
+see.
+
+### The geography of a tie, and why colony–colony is a ceiling
+
+Classified by the two endpoints, the drawable ties are 47.1% colony–colony,
+36.3% metropole–colony, 11.5% metropole–metropole and 5.0% involving a foreign
+country; the median tie that leaves its place spans **3,083 km**. Colony–colony
+leading is not a licence to call the network a lattice rather than a hub:
+**10,402 of those 20,567 ties stay inside a single territory**, and the firms
+involved are disproportionately the ones placed by filing country for want of
+an address — exactly the firms that may in truth have been run from Paris. Read
+that rank as a ceiling.
+
+### Finance on the map
+
+Figure 56 is where §5m and this section meet. The 388 placeable finance firms
+are 9.9% of the placed firms and touch **28.0% of the drawable ties**, and
+**41% of them are in Paris**. But finance is *second* on Paris share, behind
+the 73-firm transcolonial-groups residual at 44%, and first only among the
+sectors with more than a hundred placed firms. The caption computes that
+ranking rather than asserting it, because an earlier draft called finance the
+most geographically concentrated sector and mining is three points behind it.
+What is distinctive about finance is its position in the graph, not its
+geography.
+
+## 5o. The basemap, and why the maps had none
+
+Until stage 21 was written the map figures carried their geography on a
+graticule alone, on the stated grounds that no basemap shipped with the
+repository. That was a constraint inherited from figure 7 rather than a
+reasoned one, and it was the wrong call: a world map without coastlines is a
+scatter plot wearing a compass, and a reader cannot tell whether a dot at
+11°N 43°E is Djibouti or open sea.
+
+`src/fetch_basemap.py` (stage 0b) fetches Natural Earth's `ne_50m_land` once,
+simplifies it, and writes `data/reference/world_land.geojson`. The result is
+**checked in**, so every later run is offline and every figure draws the same
+land. Natural Earth is public domain and is the canonical basemap at this
+scale.
+
+**The shapefile is read directly.** `pyshp`, `geopandas` and `fiona` are not
+installed and are not worth adding for one layer of polygons: `.shp` is a
+documented sequence of little-endian doubles and forty lines read it. The
+alternative — trusting a third party's GeoJSON conversion of the same data —
+swaps a small amount of code for an unverifiable provenance chain. `checks.py`
+tests the reader against a shapefile it builds itself, so the test does not
+depend on what Natural Earth happens to ship.
+
+**Land only, and no borders.** The corpus runs from the 1870s to the 1970s, and
+a modern border drawn across it would be an anachronism — the whole point of
+these figures is that Dakar and Brazzaville were administered from Paris.
+Rivers and lakes are omitted too: they carry nothing about the interlock
+network and would compete with the edges.
+
+### The bug the simplifier's tolerance had to avoid
+
+Douglas-Peucker at a flat tolerance is what a first pass does, and at 0.12
+degrees it **deletes the empire**. Tahiti, Guadeloupe and Saint-Pierre are each
+smaller than that tolerance, so the algorithm reduces them to two points and
+they disappear, leaving an anchor disc and a label floating on blank ocean. The
+tolerance is therefore per ring, `min(0.12, 0.2 * sqrt(area))`: continents are
+simplified hard, an island in proportion to itself. Rings below 0.008 square
+degrees — about a third of a pixel at these sizes — are dropped instead, 246 of
+them. `checks.py` asserts both halves: that a flat tolerance would eat a small
+island, and that the per-ring one keeps it.
+
+### The projection is Robinson
+
+Plate carrée, which the first version of figure 7 used, is the projection you
+get by not choosing one. It stretches Scandinavia to the width of the Sahara,
+and because that figure *derived* its canvas from the latitude span of the
+firms that happened to have an address, adding one firm in Reykjavik would have
+restretched the whole map and made it incomparable with the firm-level maps.
+
+`basemap.Robinson` fixes the projection and the window for every map in the
+repository: latitudes −54 to 70, longitudes uncropped. The latitude window is
+the honest crop — the corpus reaches −46 and +61, and drawing Antarctica and
+the Canadian Arctic at full height would spend a third of the canvas on ice.
+Longitude is never cropped, because the network reaches from Tahiti to
+Shanghai.
+
+Two consequences worth stating. Distances are **not** measured on the
+projection: `place_on_map.haversine` works on the sphere, so the kilometre
+figures in the captions are independent of how the map is drawn. And the
+degree labels sit in a fixed column outside the frame rather than on their own
+parallel — on Robinson a parallel is shorter than the equator, so a label
+pinned to its left end drifts inward as latitude rises and ends up in the
+middle of Canada.
+
+### Edges are bowed
+
+Both map stages draw an edge as a quadratic curve bowed to a consistent side,
+at 9% of the chord. Straight lines that share a corridor — and on this map
+almost every corridor starts in Paris — collapse into one grey smear; bowed,
+the bundles separate and the map reads as routes. The bow carries no
+information and is stated in the docstring so that nobody reads it as one.
+
+## 5p. The map, split by period
+
+Figure 53 draws every drawable tie at once, which flattens forty years into one
+picture. `src/make_period_map_figures.py` (stage 22) splits it on
+`build_network.PERIODS` — the same five periods figure 2 uses, so the two are
+comparable — into five full-width maps in `figures/by_period/`, a
+small-multiple overview (fig57) and the trend that reads them (fig58).
+
+**Every panel is drawn on one set of coordinates.** `gather()` imports stage
+21's layout rather than recomputing it, so a firm holds the same pixel in all
+five panels and a difference between panels is a difference in the data. In the
+small multiples the coordinates are *rescaled*, not relaid out: a Robinson
+fitted to the panel width is the full-width one scaled linearly, so the
+basemap and the rescaled firm positions agree by construction.
+
+A firm enters a period when it has an interlock **dated** to it.
+`edges_company_interlock_by_period.csv` carries 51,818 of the graph's 79,575
+edges; the rest are undated and appear in no panel. Firms with no dated tie in
+a period stay on the map in grey at a smaller radius — a firm the record has
+paused on is not the same as a place with no firms in it, and a blank would
+conflate them.
+
+### Paris recedes, and the trend is not an artefact of the placement ladder
+
+Paris's share of the drawable ties falls in every period:
+
+| Period | Drawable ties | Paris share | Paris share, address-only firms | Coverage |
+|---|---|---|---|---|
+| pre-1914 | 3,322 | 63.5% | **82.6%** | 86.0% |
+| 1914–1929 | 11,502 | 51.4% | **65.9%** | 86.4% |
+| 1930–1944 | 8,203 | 40.7% | **62.4%** | 84.2% |
+| 1945–1962 | 3,969 | 36.9% | **60.2%** | **36.2%** |
+| post-1962 | 568 | 26.2% | **42.1%** | 81.3% |
+
+The obvious objection is that the fall is an artefact of the territory rung of
+§5n: a firm placed at its filing country is by construction *not* in Paris, so
+if later periods carry more territory-placed firms the Paris share must fall
+whatever happened. The third column answers it. Recomputed on the firms with a
+**street address alone** — where position is a fact about the firm rather than
+about the catalogue — the trend survives, from 82.6% to 42.1%. Both series are
+monotone and `checks.py` asserts it.
+
+### The 1945–1962 panel is a thinner sample, not a thinner network
+
+Coverage sits at 81–86% in every period but one. In 1945–1962 only **36.2%** of
+the active firms can be placed at all, because **1,483 of its 1,484
+unplaceable firms are filed under the transversal *Empire* rubric with no
+country**. That is a change in how Mennevée catalogued after the war, not a
+change in the empire, and it is why fig58 draws coverage beside the trend
+rather than mentioning it in a footnote: a reader comparing panel four with
+panel two is comparing two different sampling regimes.
+
+### What these maps are of
+
+They are maps of a **record**. A firm leaves a panel when the compiler stopped
+writing about it, which is not the same event as the firm closing, and the
+volume of coverage is itself uneven across the five periods — 11,502 drawable
+ties in 1914–1929 against 568 after 1962. Read the shares, which have a
+denominator inside each period, rather than the densities, which do not.
 
 ## 6. Validity — read this before using the data
 

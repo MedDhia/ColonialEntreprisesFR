@@ -26,16 +26,18 @@ Three things this figure is honest about, because each could mislead:
   dot. They are the largest single category and are reported as a number
   instead of being quietly dropped.
 
-There is no coastline: no basemap ships with this repo and none is fetched, so
-the geography is carried by a graticule and by the city labels. The projection
-is plate carrée with equal degrees per pixel on both axes.
+The basemap is Natural Earth's 1:50 M coastline, built once into
+`data/reference/world_land.geojson` by `fetch_basemap.py` and shared with the
+firm-level maps of stage 21, so the two agree about where land is. Land only —
+a modern border drawn across a corpus that runs from the 1870s to the 1970s
+would be an anachronism. The projection is Robinson, which is what `basemap.py`
+gives every map in the repository.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
-import html
 import json
 import math
 import os
@@ -44,7 +46,7 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from build_network import read_csv  # noqa: E402
+import basemap as BM  # noqa: E402
 from common import ensure_dir  # noqa: E402
 from labels import LANGS, localise  # noqa: E402
 from make_figures import (  # noqa: E402
@@ -54,6 +56,8 @@ from make_figures import (  # noqa: E402
 
 W = 1560.0
 PAD = 46.0
+LAT_MIN, LAT_MAX = -54.0, 70.0   # the same window as stage 21, so the two agree
+BOW = 0.09              # of the chord: how far an edge bends off the straight
 EDGES_OUT = os.path.join(ROOT, "data", "processed", "edges_city_interlock.csv")
 
 # Three slots, which is the all-pairs cap for a node-link form. The split is
@@ -117,48 +121,18 @@ def build(min_weight: int = 1):
 
 
 def project(meta, width, pad):
-    """Plate carrée with equal degrees per pixel on both axes.
+    """Robinson, from `basemap.py`, on the window every map in the repo uses.
 
-    The canvas height is *derived* from the latitude span rather than fixed.
-    Equal scaling on a 330-degree longitude span and an 85-degree latitude span
-    means a fixed square-ish canvas is two thirds empty sky and sea; deriving
-    the height gives the map the aspect the data actually has.
+    The first version of this figure derived the canvas from the data's own
+    latitude span under plate carrée. That made the figure's geometry a
+    function of which firms happened to have an address, so adding one firm in
+    Reykjavik would have restretched the whole map — and it could not be
+    compared with the firm-level maps of stage 21. A fixed projection and a
+    fixed window fix both.
     """
-    lats = [m["lat"] for m in meta.values()]
-    lons = [m["lon"] for m in meta.values()]
-    lat0, lat1 = min(lats), max(lats)
-    lon0, lon1 = min(lons), max(lons)
-    s = (width - 2 * pad) / max(lon1 - lon0, 1e-6)
-    height = (lat1 - lat0) * s + 2 * pad
-    ox, oy = pad, pad
-    pos = {c: (ox + (m["lon"] - lon0) * s, oy + (lat1 - m["lat"]) * s)
-           for c, m in meta.items()}
-    return pos, (lat0, lat1, lon0, lon1, s, ox, oy), height
-
-
-def graticule(box, mode, width, height):
-    """A lat/lon grid, since there is no coastline to carry the geography."""
-    lat0, lat1, lon0, lon1, s, ox, oy = box
-    p = PALETTE[mode]
-    out = [f'<g stroke="{p["hairline"]}" stroke-width="0.8" fill="none">']
-    labels = []
-    for lon in range(int(math.floor(lon0 / 30) * 30), int(lon1) + 31, 30):
-        x = ox + (lon - lon0) * s
-        if -2 <= x <= width + 2:
-            out.append(f'<line x1="{x:.1f}" y1="0" x2="{x:.1f}" y2="{height:.0f}"/>')
-            labels.append((x, height - 6, f"{abs(lon)}°{'E' if lon > 0 else ('W' if lon < 0 else '')}"))
-    for lat in range(int(math.floor(lat0 / 20) * 20), int(lat1) + 21, 20):
-        y = oy + (lat1 - lat) * s
-        if -2 <= y <= height + 2:
-            out.append(f'<line x1="0" y1="{y:.1f}" x2="{width:.0f}" y2="{y:.1f}"/>')
-            labels.append((4, y - 4, f"{abs(lat)}°{'N' if lat > 0 else ('S' if lat < 0 else '')}"))
-    out.append("</g>")
-    out.append(f'<g font-size="9.5" font-family="ui-sans-serif,system-ui,sans-serif" '
-               f'fill="{p["text_muted"]}">')
-    for x, y, t in labels:
-        out.append(f'<text x="{x + 3:.1f}" y="{y:.1f}">{t}</text>')
-    out.append("</g>")
-    return "\n".join(out)
+    proj = BM.Robinson(width, pad=pad, lat_min=LAT_MIN, lat_max=LAT_MAX)
+    pos = {c: proj.project(m["lat"], m["lon"]) for c, m in meta.items()}
+    return pos, proj, proj.height
 
 
 def place_labels(nodes, font, width, height, top):
@@ -198,20 +172,27 @@ def place_labels(nodes, font, width, height, top):
     return out
 
 
-def draw(meta, between, pos, box, height, mode, lang, label_top=34):
+def draw(meta, between, pos, proj, height, mode, lang, label_top=34):
     p = PALETTE[mode]
     slot = {g: i for i, (g, _) in enumerate(GROUPS)}
     wmax = max(between.values()) if between else 1
     fmax = max(m["n_firms"] for m in meta.values())
     fmin = min(m["n_firms"] for m in meta.values())
 
-    out = [graticule(box, mode, W, height)]
+    # The id carries the mode: the HTML page embeds the light and the dark
+    # body in one document, and two clip paths called clip7 is one clip path.
+    out = [BM.basemap_svg(proj, p, f"clip7_{mode}")]
     out.append(f'<g stroke="{p["edge"]}" fill="none">')
     for (a, b), w in sorted(between.items(), key=lambda kv: kv[1]):
         (x1, y1), (x2, y2) = pos[a], pos[b]
         t = w / wmax
+        # Bowed, always to the same side of a→b, and for the same reason as on
+        # the firm-level maps: straight lines sharing a corridor — and almost
+        # every corridor here starts in Paris — collapse into one grey smear.
+        dx, dy = x2 - x1, y2 - y1
+        cx, cy = (x1 + x2) / 2 - dy * BOW, (y1 + y2) / 2 + dx * BOW
         out.append(
-            f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" '
+            f'<path d="M{x1:.1f} {y1:.1f}Q{cx:.1f} {cy:.1f} {x2:.1f} {y2:.1f}" '
             f'stroke-width="{0.5 + 3.4 * math.sqrt(t):.2f}" '
             f'stroke-opacity="{0.14 + 0.55 * math.sqrt(t):.3f}"/>')
     out.append("</g>")
@@ -340,8 +321,8 @@ def render_page(nodes, stats, body_light, body_dark, lang, height) -> str:
 <body class="viz-root">
 <h1>Where the empire's boards met</h1>
 <p class="sub">Every other figure in this repository places a firm by whom it
-is connected to. This one places it by <b>where it was</b> — city coordinates,
-plate carrée — and draws an edge between two cities when a director sat on a
+is connected to. This one places it by <b>where it was</b> — city coordinates
+on a Robinson projection — and draws an edge between two cities when a director sat on a
 board in each. The unit is the city rather than the colony, because filing a
 firm under <i>Indochine</i> hides that Saigon and Hanoi were largely separate
 business worlds, and filing it under <i>Maroc</i> hides that its board met in
@@ -426,10 +407,10 @@ def main() -> None:
         raise SystemExit("no placed firms; run python3 src/geocode.py first")
     write_edges(between, meta)
 
-    pos, box, height = project(meta, W, PAD)
-    body_light, nodes = draw(meta, between, pos, box, height, "light", args.lang,
+    pos, proj, height = project(meta, W, PAD)
+    body_light, nodes = draw(meta, between, pos, proj, height, "light", args.lang,
                              args.label_top)
-    body_dark, _ = draw(meta, between, pos, box, height, "dark", args.lang,
+    body_dark, _ = draw(meta, between, pos, proj, height, "dark", args.lang,
                         args.label_top)
 
     ranked = sorted(meta.items(), key=lambda kv: -kv[1]["n_firms"])
@@ -456,8 +437,8 @@ def main() -> None:
             f"({100 * stats['n_placed'] / stats['n_graph']:.0f}% have a recoverable "
             f"address). Node area is firms based there; line weight is interlocks "
             f"between the two cities. {stats['n_within']:,} further ties fall "
-            f"within a single city and cannot be drawn as edges. Plate carrée; "
-            f"no coastline, so the graticule carries the geography."))
+            f"within a single city and cannot be drawn as edges. Robinson "
+            f"projection; coastline from Natural Earth 1:50 M, land only."))
     print(f"wrote {os.path.relpath(path, ROOT)}", file=sys.stderr)
 
     page = render_page(nodes, stats, body_light, body_dark, args.lang, height)

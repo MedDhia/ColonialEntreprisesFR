@@ -212,7 +212,11 @@ LINE_MEMBER_RE = re.compile(
     r"[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ0-9'’\-]*"
     rf"(?:[ ](?:{_LINE_PARTICLE}|[A-ZÉÈÀÂÎÔÛÇ][A-ZÉÈÀÂÎÔÛÇ'’\-]*)){{0,4}})"
     r"[ \t]*\((?P<given>[^)\n]{1,44})\)"
-    r"[ \t\xa0]*,(?P<tail>[^\n]*)$"
+    # The separator is a comma *or a semicolon* — the Annuaire uses both, and
+    # reading only the comma left whole boards unread. The gap before it holds
+    # whatever the extractor emitted for a thin space: `REY (Antonio)\x00;
+    # président` is a real member line, and a NUL is not whitespace to `\s`.
+    r"[ \t\xa0\x00-\x08\x0b\x0e-\x1f]*[,;](?P<tail>[^\n]*)$"
 )
 # What may sit inside the parentheses. A place, a date or a pure number there
 # means the line is a cross-reference or a table row, not a member.

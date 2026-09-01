@@ -1,0 +1,164 @@
+sector_a,sector_b,sector_a_en,sector_b_en,n_interlocks
+finance,mining,"Banking, finance and insurance",Mining and quarrying,2823
+finance,food_processing,"Banking, finance and insurance","Food processing, livestock and fishing",2272
+finance,transport,"Banking, finance and insurance","Transport, ports and docks",1739
+finance,unclassified,"Banking, finance and insurance",Unclassified,1660
+finance,trade,"Banking, finance and insurance",Trade and commerce,1361
+food_processing,mining,"Food processing, livestock and fishing",Mining and quarrying,1052
+finance,plantations,"Banking, finance and insurance",Plantations and commodity crops,994
+food_processing,unclassified,"Food processing, livestock and fishing",Unclassified,932
+food_processing,trade,"Food processing, livestock and fishing",Trade and commerce,851
+mining,unclassified,Mining and quarrying,Unclassified,847
+food_processing,transport,"Food processing, livestock and fishing","Transport, ports and docks",790
+mining,transport,Mining and quarrying,"Transport, ports and docks",788
+finance,utilities,"Banking, finance and insurance","Water, gas and electricity",750
+construction,finance,Construction and building materials,"Banking, finance and insurance",747
+conglomerate,finance,Transcolonial and diversified groups,"Banking, finance and insurance",710
+transport,unclassified,"Transport, ports and docks",Unclassified,678
+mining,trade,Mining and quarrying,Trade and commerce,656
+food_processing,plantations,"Food processing, livestock and fishing",Plantations and commodity crops,613
+mining,plantations,Mining and quarrying,Plantations and commodity crops,603
+trade,unclassified,Trade and commerce,Unclassified,538
+conglomerate,mining,Transcolonial and diversified groups,Mining and quarrying,483
+trade,transport,Trade and commerce,"Transport, ports and docks",455
+construction,food_processing,Construction and building materials,"Food processing, livestock and fishing",453
+construction,mining,Construction and building materials,Mining and quarrying,435
+mining,utilities,Mining and quarrying,"Water, gas and electricity",432
+transport,utilities,"Transport, ports and docks","Water, gas and electricity",418
+plantations,trade,Plantations and commodity crops,Trade and commerce,402
+plantations,unclassified,Plantations and commodity crops,Unclassified,398
+finance,wood_paper,"Banking, finance and insurance","Wood, furniture and paper",371
+plantations,transport,Plantations and commodity crops,"Transport, ports and docks",370
+construction,transport,Construction and building materials,"Transport, ports and docks",353
+conglomerate,food_processing,Transcolonial and diversified groups,"Food processing, livestock and fishing",331
+food_processing,utilities,"Food processing, livestock and fishing","Water, gas and electricity",330
+finance,real_estate,"Banking, finance and insurance",Land and real estate,311
+conglomerate,plantations,Transcolonial and diversified groups,Plantations and commodity crops,300
+conglomerate,unclassified,Transcolonial and diversified groups,Unclassified,262
+conglomerate,transport,Transcolonial and diversified groups,"Transport, ports and docks",252
+construction,unclassified,Construction and building materials,Unclassified,252
+unclassified,utilities,Unclassified,"Water, gas and electricity",242
+food_processing,wood_paper,"Food processing, livestock and fishing","Wood, furniture and paper",223
+construction,utilities,Construction and building materials,"Water, gas and electricity",213
+mining,wood_paper,Mining and quarrying,"Wood, furniture and paper",193
+construction,trade,Construction and building materials,Trade and commerce,191
+real_estate,transport,Land and real estate,"Transport, ports and docks",191
+conglomerate,trade,Transcolonial and diversified groups,Trade and commerce,186
+food_processing,real_estate,"Food processing, livestock and fishing",Land and real estate,182
+plantations,wood_paper,Plantations and commodity crops,"Wood, furniture and paper",169
+finance,textiles_leather,"Banking, finance and insurance",Textiles and leather,161
+construction,plantations,Construction and building materials,Plantations and commodity crops,160
+plantations,utilities,Plantations and commodity crops,"Water, gas and electricity",160
+mining,real_estate,Mining and quarrying,Land and real estate,154
+real_estate,unclassified,Land and real estate,Unclassified,142
+trade,utilities,Trade and commerce,"Water, gas and electricity",140
+transport,wood_paper,"Transport, ports and docks","Wood, furniture and paper",137
+conglomerate,utilities,Transcolonial and diversified groups,"Water, gas and electricity",135
+conglomerate,construction,Transcolonial and diversified groups,Construction and building materials,133
+real_estate,trade,Land and real estate,Trade and commerce,119
+plantations,real_estate,Plantations and commodity crops,Land and real estate,115
+finance,media_print,"Banking, finance and insurance","Press, printing and communications",114
+chemicals,finance,Chemicals and pharmaceuticals,"Banking, finance and insurance",110
+unclassified,wood_paper,Unclassified,"Wood, furniture and paper",105
+trade,wood_paper,Trade and commerce,"Wood, furniture and paper",101
+construction,wood_paper,Construction and building materials,"Wood, furniture and paper",100
+conglomerate,wood_paper,Transcolonial and diversified groups,"Wood, furniture and paper",93
+chemicals,mining,Chemicals and pharmaceuticals,Mining and quarrying,86
+construction,real_estate,Construction and building materials,Land and real estate,86
+plantations,textiles_leather,Plantations and commodity crops,Textiles and leather,82
+finance,hospitality,"Banking, finance and insurance",Hotels and tourism,81
+mining,textiles_leather,Mining and quarrying,Textiles and leather,81
+utilities,wood_paper,"Water, gas and electricity","Wood, furniture and paper",79
+food_processing,textiles_leather,"Food processing, livestock and fishing",Textiles and leather,77
+real_estate,utilities,Land and real estate,"Water, gas and electricity",67
+chemicals,food_processing,Chemicals and pharmaceuticals,"Food processing, livestock and fishing",64
+textiles_leather,transport,Textiles and leather,"Transport, ports and docks",64
+hospitality,transport,Hotels and tourism,"Transport, ports and docks",61
+chemicals,transport,Chemicals and pharmaceuticals,"Transport, ports and docks",57
+media_print,plantations,"Press, printing and communications",Plantations and commodity crops,55
+media_print,mining,"Press, printing and communications",Mining and quarrying,50
+textiles_leather,unclassified,Textiles and leather,Unclassified,50
+media_print,transport,"Press, printing and communications","Transport, ports and docks",49
+chemicals,unclassified,Chemicals and pharmaceuticals,Unclassified,48
+finance,health_education,"Banking, finance and insurance","Health, education and research",48
+finance,metals_engineering,"Banking, finance and insurance",Metallurgy and engineering,48
+conglomerate,textiles_leather,Transcolonial and diversified groups,Textiles and leather,46
+textiles_leather,trade,Textiles and leather,Trade and commerce,45
+food_processing,hospitality,"Food processing, livestock and fishing",Hotels and tourism,44
+food_processing,media_print,"Food processing, livestock and fishing","Press, printing and communications",42
+hospitality,mining,Hotels and tourism,Mining and quarrying,42
+construction,textiles_leather,Construction and building materials,Textiles and leather,41
+food_processing,metals_engineering,"Food processing, livestock and fishing",Metallurgy and engineering,39
+textiles_leather,utilities,Textiles and leather,"Water, gas and electricity",39
+hospitality,trade,Hotels and tourism,Trade and commerce,38
+real_estate,wood_paper,Land and real estate,"Wood, furniture and paper",38
+conglomerate,real_estate,Transcolonial and diversified groups,Land and real estate,37
+metals_engineering,transport,Metallurgy and engineering,"Transport, ports and docks",36
+hospitality,unclassified,Hotels and tourism,Unclassified,35
+hospitality,plantations,Hotels and tourism,Plantations and commodity crops,34
+metals_engineering,plantations,Metallurgy and engineering,Plantations and commodity crops,34
+media_print,trade,"Press, printing and communications",Trade and commerce,33
+metals_engineering,trade,Metallurgy and engineering,Trade and commerce,30
+chemicals,trade,Chemicals and pharmaceuticals,Trade and commerce,28
+textiles_leather,wood_paper,Textiles and leather,"Wood, furniture and paper",26
+construction,hospitality,Construction and building materials,Hotels and tourism,25
+health_education,transport,"Health, education and research","Transport, ports and docks",25
+metals_engineering,mining,Metallurgy and engineering,Mining and quarrying,25
+media_print,utilities,"Press, printing and communications","Water, gas and electricity",24
+health_education,mining,"Health, education and research",Mining and quarrying,22
+media_print,unclassified,"Press, printing and communications",Unclassified,22
+metals_engineering,unclassified,Metallurgy and engineering,Unclassified,22
+conglomerate,media_print,Transcolonial and diversified groups,"Press, printing and communications",20
+chemicals,construction,Chemicals and pharmaceuticals,Construction and building materials,18
+health_education,plantations,"Health, education and research",Plantations and commodity crops,17
+chemicals,conglomerate,Chemicals and pharmaceuticals,Transcolonial and diversified groups,16
+chemicals,utilities,Chemicals and pharmaceuticals,"Water, gas and electricity",16
+construction,metals_engineering,Construction and building materials,Metallurgy and engineering,16
+hospitality,real_estate,Hotels and tourism,Land and real estate,16
+construction,media_print,Construction and building materials,"Press, printing and communications",15
+health_education,unclassified,"Health, education and research",Unclassified,15
+health_education,trade,"Health, education and research",Trade and commerce,13
+media_print,real_estate,"Press, printing and communications",Land and real estate,13
+conglomerate,metals_engineering,Transcolonial and diversified groups,Metallurgy and engineering,12
+media_print,wood_paper,"Press, printing and communications","Wood, furniture and paper",11
+hospitality,utilities,Hotels and tourism,"Water, gas and electricity",10
+metals_engineering,real_estate,Metallurgy and engineering,Land and real estate,10
+real_estate,textiles_leather,Land and real estate,Textiles and leather,10
+chemicals,real_estate,Chemicals and pharmaceuticals,Land and real estate,9
+chemicals,wood_paper,Chemicals and pharmaceuticals,"Wood, furniture and paper",9
+construction,health_education,Construction and building materials,"Health, education and research",9
+culture_leisure,finance,"Culture, sport and leisure","Banking, finance and insurance",9
+culture_leisure,mining,"Culture, sport and leisure",Mining and quarrying,9
+food_processing,health_education,"Food processing, livestock and fishing","Health, education and research",9
+hospitality,wood_paper,Hotels and tourism,"Wood, furniture and paper",9
+chemicals,plantations,Chemicals and pharmaceuticals,Plantations and commodity crops,8
+hospitality,media_print,Hotels and tourism,"Press, printing and communications",8
+health_education,wood_paper,"Health, education and research","Wood, furniture and paper",7
+metals_engineering,utilities,Metallurgy and engineering,"Water, gas and electricity",7
+metals_engineering,wood_paper,Metallurgy and engineering,"Wood, furniture and paper",7
+conglomerate,health_education,Transcolonial and diversified groups,"Health, education and research",6
+conglomerate,hospitality,Transcolonial and diversified groups,Hotels and tourism,6
+health_education,utilities,"Health, education and research","Water, gas and electricity",6
+hospitality,metals_engineering,Hotels and tourism,Metallurgy and engineering,6
+hospitality,textiles_leather,Hotels and tourism,Textiles and leather,6
+construction,culture_leisure,Construction and building materials,"Culture, sport and leisure",5
+culture_leisure,food_processing,"Culture, sport and leisure","Food processing, livestock and fishing",5
+culture_leisure,hospitality,"Culture, sport and leisure",Hotels and tourism,5
+culture_leisure,wood_paper,"Culture, sport and leisure","Wood, furniture and paper",5
+culture_leisure,transport,"Culture, sport and leisure","Transport, ports and docks",4
+health_education,hospitality,"Health, education and research",Hotels and tourism,4
+health_education,textiles_leather,"Health, education and research",Textiles and leather,4
+metals_engineering,textiles_leather,Metallurgy and engineering,Textiles and leather,4
+culture_leisure,plantations,"Culture, sport and leisure",Plantations and commodity crops,3
+health_education,media_print,"Health, education and research","Press, printing and communications",3
+health_education,real_estate,"Health, education and research",Land and real estate,3
+media_print,textiles_leather,"Press, printing and communications",Textiles and leather,3
+culture_leisure,health_education,"Culture, sport and leisure","Health, education and research",2
+culture_leisure,metals_engineering,"Culture, sport and leisure",Metallurgy and engineering,2
+culture_leisure,utilities,"Culture, sport and leisure","Water, gas and electricity",2
+chemicals,hospitality,Chemicals and pharmaceuticals,Hotels and tourism,1
+chemicals,media_print,Chemicals and pharmaceuticals,"Press, printing and communications",1
+culture_leisure,media_print,"Culture, sport and leisure","Press, printing and communications",1
+culture_leisure,textiles_leather,"Culture, sport and leisure",Textiles and leather,1
+culture_leisure,trade,"Culture, sport and leisure",Trade and commerce,1
+health_education,metals_engineering,"Health, education and research",Metallurgy and engineering,1

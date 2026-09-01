@@ -1097,6 +1097,1189 @@ def check_biographies() -> None:
     eq("  biographical ties carry no year", {r["year"] for r in rows}, {""})
 
 
+def check_mandates() -> None:
+    """Stage 3g: deputies and senators named anywhere in the corpus."""
+    import parse_mandates as M
+
+    print("mandate parser", file=sys.stderr)
+
+    def one(text):
+        return list(M.mentions(text))
+
+    got = one("M. Ernest Outrey, député de la Cochinchine, a fait")
+    eq("  apposition yields the subject and the seat",
+       [(g[1], g[2], g[3]) for g in got],
+       [("Ernest Outrey", "Chamber of Deputies", "Cochinchine")])
+
+    # The kinship trap, which is the whole precision problem for this stage.
+    check("  a relative's mandate is not the subject's",
+          not one("Maurice Piot [fils de Léon Piot (1845-1922), "
+                  "député de l'Aude 1876-1877]"),
+          str(one("Maurice Piot [fils de Léon Piot, député de l'Aude]")))
+    # ... but clause scoping must not reject a man who married *and* sat.
+    check("  a kinship clause ended by a full stop does not reject",
+          any(g[2] == "Chamber of Deputies" for g in
+              one("Ch. Heuzey [ép. Potin. Anc. député de la Nièvre]")),
+          str(one("Ch. Heuzey [ép. Potin. Anc. député de la Nièvre]")))
+    check("  the compiler's own disclaimer is honoured",
+          not one("R. Carcassonne : probablement à distinguer de l'avocat "
+                  "Roger Carcassonne, sénateur socialiste (1946-1971)"))
+    check("  a lodge delegate is not a member of the Chamber",
+          not one("G. L. (député), député au convent 1930-1931 de la Loge"))
+    check("  a foreign upper house is not the Senate",
+          not one("le commandeur docteur Enrico Scalini, sénateur du Royaume"))
+
+    # A year beside a title usually dates something other than the mandate.
+    eq("  a term in brackets is read",
+       M.read_tail(" [1914-1932] et CG Aisne")[2], [(1914, 1932)])
+    eq("  a budget year is not a term",
+       M.read_tail(", sur le budget du ministère de la marine pour 1889")[2],
+       [])
+    eq("  a clipping's date is not a term",
+       M.read_tail(" de l'Indre (Les Annales coloniales, 2 janvier 1913)")[2],
+       [])
+    eq("  the seat slot is anchored, not searched",
+       M.read_tail(", vice-président de la Commission des Colonies")[0], "")
+    eq("  a department abbreviation is expanded",
+       M.normalise_seat("Hte- Saône"), "Haute-Saône")
+
+    path = os.path.join(PROC_DIR, "person_mandates.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("person_mandates.csv")
+    check("  produced mentions", len(rows) > 1500, str(len(rows)))
+    eq("  every row names a chamber",
+       {r["chamber"] for r in rows},
+       {"Chamber of Deputies", "Senate"})
+    bad = [r for r in rows if not r["person_key"] or not r["evidence"]]
+    check("  every row is auditable", not bad, str(len(bad)))
+    # A span is only ever a span.
+    bad = [r for r in rows if r["year_start"] and r["year_end"]
+           and int(r["year_end"]) < int(r["year_start"])]
+    check("  no term ends before it starts", not bad, str(len(bad)))
+
+
+def check_rosters() -> None:
+    """Stage 3h: the parliamentary directories."""
+    import parse_rosters as R
+
+    print("roster parser", file=sys.stderr)
+
+    doc = ("D'ANDIGNÉ, Geoffroy (Comte)[1858-1932]\n"
+           "Député de Maine-et-Loire [1924-1932]\n"
+           "Adresse : Hôtel d'Orsay, 9, quai d'Orsay, à Paris (VIIe).\n"
+           "Administrateur : Compagnie parisienne de garages automobiles.\n"
+           "De WENDEL, François\n"
+           "Sénateur de Meurthe-et-Moselle\n"
+           "Administrateur : Société métallurgique de Knutange.\n")
+    got = list(R.entries(doc))
+    eq("  reads the comma-separated header form",
+       [n for n, _ in got], ["Geoffroy d’Andigné", "François de Wendel"])
+    # The bug that gave de Wendel's whole board to the entry above his.
+    check("  a capitalised particle does not hide a header",
+          "Société métallurgique de Knutange" in got[1][1]
+          and "Knutange" not in got[0][1])
+    eq("  the chamber line yields the mandate",
+       R.mandate_of(got[0][1]),
+       ("Chamber of Deputies", "Maine-et-Loire", "1924-1932"))
+
+    # A non-person header with the roster's shape.
+    for line in ("Paris, le 11 juillet 1924.",
+                 "Caoutchoucs de Phuoc-Hoa (1927), administrateur des",
+                 "Nos Députés, en 1893",
+                 "Succursale : 27 bis, rue du Vieux-Faubourg, Lille (Nord)."):
+        text = line + "\nDéputé de la Seine\nAdministrateur : Banque X.\n"
+        check(f"  not a header: {line[:28]}", not list(R.entries(text)),
+              str(list(R.entries(text))))
+
+    # A comma inside a company name is not a list separator.
+    eq("  a lower-case fragment continues the previous name",
+       R._rejoin(["Association industrielle", "commerciale et financière",
+                  "Association nationale"]),
+       ["Association industrielle, commerciale et financière",
+        "Association nationale"])
+    eq("  an article opens a new name",
+       R._rejoin(["de la Société X", "de l’Avenir-Publicité"]),
+       ["de la Société X", "de l’Avenir-Publicité"])
+
+    # The block ends at the next label, whatever the label is.
+    body = ("PATENÔTRE, Raymond\nDéputé de Seine-et-Oise\n"
+            "Administrateur\xa0 : Société française des métaux.\n"
+            "Propriétaire des journaux\xa0 : Le Petit Niçois, La Sarthe.\n")
+    firms = [c for _, c, _, _ in R.affiliations_in(body)]
+    check("  a role block stops at the next fielded label",
+          not any("Sarthe" in f or "Niçois" in f for f in firms), str(firms))
+
+    # The relative is the last name in the clause, not the first.
+    kin, who = R._kinship_at(
+        "Sa fille Lina a épousé en 1930 le banquier Jean Rheims, "
+        "administrateur des Manufactures indochinoises", 68)
+    eq("  the proxy holder is the apposed name", who, "Jean Rheims")
+
+    # Territory is never a droppable word in this catalogue.
+    check("  a territory mismatch rejects the match",
+          not R.firm_plausible("Crédit mobilier indochinois",
+                               "Crédit mobilier français"))
+    check("  a catalogue section heading is not a firm",
+          not R.firm_plausible("Société générale d'armement", "ARMEMENT"))
+    check("  a good match survives both guards",
+          R.firm_plausible("Société minière des Terres-Rouges",
+                           "Minière des Terres rouges"))
+
+    path = os.path.join(PROC_DIR, "affiliations_roster.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_roster.csv")
+    check("  produced ties", len(rows) > 400, str(len(rows)))
+    eq("  every row is tagged", {r["source_genre"] for r in rows}, {"roster"})
+    eq("  held_by is one of two values",
+       {r["held_by"] for r in rows}, {"self", "relative"})
+    # A proxy row must name both ends of the proxy, or it asserts nothing.
+    bad = [r for r in rows if r["held_by"] == "relative"
+           and not (r["kinship"] and r["related_to"])]
+    check("  every proxy row names the kinship and the principal", not bad,
+          str(len(bad)))
+    bad = [r for r in rows if r["held_by"] == "self" and r["related_to"]]
+    check("  a direct row names no principal", not bad, str(len(bad)))
+    # These ties are dated by the volume they came from.
+    eq("  every tie carries its volume's year",
+       {r["year"] for r in rows if not r["year"]}, set())
+    check("  the Belgian volume is excluded",
+          not any("belge" in r["doc_id"] for r in rows))
+
+
+def check_legislative_layer() -> None:
+    """Stage 14: the join, and the three continuities it keeps apart."""
+    print("legislative layer", file=sys.stderr)
+
+    from make_legislative_layer import overlap
+    eq("  two known spans that meet overlap", overlap((1920, 1930), (1928, 1936)), "1")
+    eq("  two known spans that miss do not", overlap((1900, 1910), (1920, 1930)), "0")
+    eq("  an unknown span is unknown, not false",
+       overlap((1920, 1930), (None, None)), "")
+
+    path = os.path.join(PROC_DIR, "legislators.csv")
+    if not os.path.exists(path):
+        return
+    legs = load("legislators.csv")
+    check("  produced legislators", len(legs) > 800, str(len(legs)))
+    eq("  key_ambiguous is exactly the forenameless keys",
+       {r["key_ambiguous"] for r in legs}, {"0", "1"})
+    bad = [r for r in legs if (len(r["name_clean"].split()) < 2)
+           != (r["key_ambiguous"] == "1")]
+    check("  key_ambiguous agrees with the name", not bad, str(len(bad)))
+    bad = [r for r in legs if r["in_network"] == "1" and r["n_companies"] == "0"]
+    check("  in_network implies a company", not bad, str(len(bad)))
+    bad = [r for r in legs if r["first_year"] and r["last_year"]
+           and int(r["last_year"]) < int(r["first_year"])]
+    check("  no tenure ends before it starts", not bad, str(len(bad)))
+
+    edges = load("edges_legislator_interlock.csv")
+    ambiguous = {r["person_id"] for r in legs if r["key_ambiguous"] == "1"}
+    bad = [e for e in edges
+           if e["source"] in ambiguous or e["target"] in ambiguous]
+    check("  no interlock edge rests on a surname bucket", not bad,
+          str(len(bad)))
+    bad = [e for e in edges if e["source"] >= e["target"]]
+    check("  every edge is stored in one direction only", not bad,
+          str(len(bad)))
+    eq("  mandates_overlap keeps unknown as unknown",
+       {e["mandates_overlap"] for e in edges}, {"", "0", "1"})
+
+    cont = load("legislative_continuity.csv")
+    eq("  one row per snapshot", len(cont), 5)
+    for row in cont:
+        n = int(row["n_present"])
+        parts = int(row["n_entered"]) + int(row["n_stayed"]) \
+            + int(row["n_returned"])
+        eq(f"  {row['snapshot_year']}: entered + stayed + returned = present",
+           parts, n)
+
+
+def check_offices() -> None:
+    """Stage 3i: offices of state, and the reference trap."""
+    import parse_offices as O
+
+    print("office parser", file=sys.stderr)
+
+    def one(text):
+        return list(O.mentions(text))
+
+    got = one("de M. Guesde, résident général, ancien commissaire")
+    eq("  apposition yields subject and class",
+       [(g[1], g[2]) for g in got][:1],
+       [("Guesde", "colonial_governor")])
+
+    # The reference trap: the office named without its holder.
+    for ref in ("autorisée par arrêté du gouverneur général du 14 mars 1923",
+                "concession accordée par le ministre des Colonies",
+                "Le Gouverneur général de l'Algérie à monsieur Treille"):
+        check(f"  not attributed: {ref[:34]}", not one(ref), str(one(ref)))
+
+    # Collisions where one word is two offices.
+    eq("  a company director is not a colonial administrator",
+       one("M. Dupont, administrateur délégué de la Société X"), [])
+    got = one("M. James Leclerc, gouverneur du Crédit foncier, à la tête")
+    eq("  a bank governorship is not a colonial one",
+       [g[2] for g in got][:1], ["state_bank"])
+    got = one("M. Regnault, ambassadeur de France, ancien ministre")
+    eq("  a diplomatic post is not a cabinet seat",
+       [g[2] for g in got][:1], ["senior_state"])
+    eq("  a bishop is not a prefect",
+       one("M. Dupont, préfet apostolique de Dakar"), [])
+    eq("  military rank is not an office of state",
+       one("M. Dupont, général de brigade, administrateur"), [])
+    check("  a foreign cabinet is not read",
+          not one("avec sir Joseph Maclay, ministre du Shipping, l'accord"),
+          str(one("avec sir Joseph Maclay, ministre du Shipping, l'accord")))
+
+    # `former`, before and after the office.
+    eq("  ancien before the office",
+       [g[5] for g in one("M. Pion, ancien conseiller d'État, marié")][:1],
+       [True])
+    eq("  honoraire after the office",
+       [g[5] for g in
+        one("M. Léon Boulloche, gouverneur général honoraire des colonies,")][:1],
+       [True])
+    eq("  en retraite after the office",
+       [g[5] for g in
+        one("M. Jeandin, administrateur en chef des colonies, en retraite, a")][:1],
+       [True])
+
+    # The portfolio is swallowed whole, or it leaks into the jurisdiction.
+    got = one("M. André Tardieu, ministre des Travaux publics. Au préalable")
+    eq("  a ministerial portfolio is read whole",
+       [g[3] for g in got][:1], ["ministre des Travaux publics"])
+    eq("  a portfolio does not become a jurisdiction",
+       [g[4] for g in got][:1], [""])
+    # The `(?i)`-flag bug: a case-insensitive [A-Z] class matched lower case.
+    eq("  a lower-case word is not a jurisdiction",
+       O.jurisdiction(" de la République française par intérim en Syrie"), "")
+    eq("  a real jurisdiction is read",
+       O.jurisdiction(" de l'Algérie à la date du treize mars"), "Algérie")
+
+    path = os.path.join(PROC_DIR, "person_offices.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("person_offices.csv")
+    check("  produced mentions", len(rows) > 3000, str(len(rows)))
+    eq("  every class is mapped",
+       {r["office_class"] for r in rows} - set(
+           __import__("code_political_connections").OFFICE_TO_CLASS), set())
+    bad = [r for r in rows if not r["person_key"] or not r["evidence"]]
+    check("  every row is auditable", not bad, str(len(bad)))
+    eq("  former is binary", {r["former"] for r in rows}, {"0", "1"})
+
+
+def check_political_coding() -> None:
+    """Stage 16: the company-level political-connection variable."""
+    import code_political_connections as C
+
+    print("political connections", file=sys.stderr)
+
+    eq("  the tier is the highest class on the board",
+       max(C.TIER[k] for k in ("legislature", "local")), 3)
+    eq("  every connection class has a tier", set(C.CLASSES), set(C.TIER))
+    eq("  every office class maps to a connection class",
+       set(C.OFFICE_TO_CLASS.values()) - set(C.CLASSES), set())
+
+    # Confidence is driven by the evidence, not by the office.
+    p = C.Person("Jean Dupont")
+    p.add("legislature", False, "entry_header")
+    eq("  a footnote-only connection is low confidence", p.confidence(), "low")
+    p.add("executive", False, "apposition")
+    eq("  a second register raises it", p.confidence(), "high")
+    q = C.Person("Dupont")
+    q.ambiguous = True
+    q.add("legislature", False, "roster", roster=True)
+    eq("  a surname-only key stays low", q.confidence(), "low")
+    r = C.Person("Marie Martin")
+    r.add("executive", True, "apposition")
+    eq("  one apposition is medium", r.confidence(), "medium")
+    eq("  former and sitting are kept apart", (r.former, r.sitting),
+       ({"executive"}, set()))
+
+    path = os.path.join(PROC_DIR, "company_political.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("company_political.csv")
+    check("  coded every firm with a board", len(rows) > 5000, str(len(rows)))
+    bad = [r for r in rows if int(r["n_connected"]) > int(r["n_directors"])]
+    check("  connected never exceeds the board", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if int(r["n_concurrent"]) > int(r["n_testable"])]
+    check("  concurrent never exceeds testable", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if int(r["n_testable"]) > int(r["n_connected"])]
+    check("  testable never exceeds connected", not bad, str(len(bad)))
+    # The tier must be reproducible from the flags, or the file contradicts
+    # its own rules document.
+    bad = []
+    for r in rows:
+        want = max((C.TIER[k] for k in C.CLASSES if r[f"has_{k}"] == "1"),
+                   default=0)
+        if want != int(r["connection_tier"]):
+            bad.append(r["company_id"])
+    check("  the tier is reproducible from the flags", not bad, str(bad[:3]))
+    bad = [r for r in rows if (int(r["connection_tier"]) == 0)
+           != (int(r["n_connected"]) == 0)]
+    check("  tier 0 is exactly no connected director", not bad, str(len(bad)))
+    bad = [r for r in rows if r["indirect_only"] == "1"
+           and (int(r["n_connected"]) or not int(r["n_connected_neighbours"]))]
+    check("  indirect_only means no direct and some indirect", not bad,
+          str(len(bad)))
+    eq("  confidence is one of four values",
+       {r["confidence"] for r in rows}, {"", "high", "medium", "low"})
+    bad = [r for r in rows if int(r["connection_tier"]) > 0
+           and not r["confidence"]]
+    check("  every connected firm carries a confidence", not bad,
+          str(len(bad)))
+
+    # The rules document is part of the deliverable, not optional.
+    rules = os.path.join(ROOT, "data", "reference",
+                         "political_connection_rules.md")
+    check("  the rules document exists", os.path.exists(rules))
+    if os.path.exists(rules):
+        text = open(rules, encoding="utf-8").read()
+        for needed in ("connection_tier", "sitting", "former", "concurrent",
+                       "rejected", "cannot"):
+            check(f"  the rules document covers {needed}", needed in text)
+
+    terr = load("political_connections_by_territory.csv")
+    bad = [t for t in terr
+           if sum(int(t[f"n_tier_{k}"]) for k in (4, 3, 2, 1, 0))
+           != int(t["n_firms"])]
+    check("  every territory's tiers sum to its firms", not bad, str(len(bad)))
+
+
+def check_sectors() -> None:
+    """The sector grouping, and the three problems it exists to fix."""
+    import sectors as S
+
+    print("sector grouping", file=sys.stderr)
+
+    eq("  a filing category is not a sector",
+       S.classify("Documents généraux (par ordre chronologique)")[0],
+       "not_a_sector")
+    eq("  site chrome is not a sector",
+       S.classify("Alain LÉGER, créateur du site www.entreprises-coloniales.fr, a publié")[0],
+       "not_a_sector")
+    eq("  the source's own residual is kept, not discarded",
+       S.classify("Industries diverses")[0], "unclassified")
+
+    # The fragmentation the grouping exists to fix.
+    for label in ("Mines", "Mines et carrières", "Groupes miniers transcoloniaux",
+                  "Mines et métallurgie", "Mines et placers", "mines et industries"):
+        eq(f"  mining: {label[:34]}", S.classify(label)[0], "mining")
+    for label in ("Banques et groupes financiers, assurances",
+                  "Banque, gérance, assurances…", "Banques et groupes financiers",
+                  "Banques, groupes financiers, assureurs",
+                  "Banques et sociétés financières", "Groupes financiers transcoloniaux"):
+        eq(f"  finance: {label[:34]}", S.classify(label)[0], "finance")
+    # Case is not a distinction; the source spells one label two ways.
+    eq("  case is not a sector distinction",
+       S.classify("industries agro-alimentaires")[0],
+       S.classify("Industries agro-alimentaires")[0])
+
+    mapping = S.load_map()
+    check("  the mapping is committed", bool(mapping), str(len(mapping)))
+    if not mapping:
+        return
+    check("  nothing is left unmapped",
+          not [k for k, v in mapping.items() if v[0] == "unmapped"],
+          str([k for k, v in mapping.items() if v[0] == "unmapped"][:3]))
+    # Every label the data actually carries must be in the committed mapping,
+    # or a new sector silently becomes `unmapped` at read time.
+    missing = sorted(set(S.raw_labels()) - set(mapping))
+    check("  every label in companies.csv is mapped", not missing,
+          str(missing[:3]))
+    # Group names must agree between the patterns and the CSV.
+    groups = {g for g, _, _ in S.RULES} | {"unmapped"}
+    stray = sorted({v[0] for v in mapping.values()} - groups)
+    check("  the CSV uses no group the rules do not define", not stray,
+          str(stray))
+
+    # `sector_of` takes the first *non-filing* label, not the first listed.
+    eq("  a filing label does not win over a real one",
+       S.sector_of({"sectors": "Documents généraux; Mines"}, mapping)[0],
+       "mining")
+    eq("  a firm with only filing labels has no sector",
+       S.sector_of({"sectors": "Documents généraux"}, mapping)[0],
+       "not_a_sector")
+    eq("  a firm with no sectors at all is handled",
+       S.sector_of({"sectors": ""}, mapping)[0], "not_a_sector")
+
+    path = os.path.join(PROC_DIR, "political_connections_by_sector.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("political_connections_by_sector.csv")
+    bad = [r for r in rows
+           if sum(int(r[f"n_tier_{t}"]) for t in (4, 3, 2, 1, 0))
+           != int(r["n_firms"])]
+    check("  every sector's tiers sum to its firms", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if abs(sum(float(r[f"share_tier_{t}"]) for t in (4, 3, 2, 1, 0)) - 1)
+           > 0.005]
+    check("  every sector's tier shares sum to 1", not bad, str(len(bad)))
+    # The board-size null: excess must be observed minus expected, exactly.
+    bad = [r["sector_group"] for r in rows
+           if abs((float(r["share_connected"])
+                   - float(r["expected_share_connected"]))
+                  - float(r["excess_share"])) > 0.0002]
+    check("  excess_share is observed minus expected", not bad, str(bad[:3]))
+    bad = [r for r in rows if not 0.0 <= float(r["expected_share_connected"]) <= 1.0]
+    check("  the expected share is a probability", not bad, str(len(bad)))
+    # The null must be monotone in board size *per firm* — that is the
+    # invariant. Asserting it on the sector means was wrong: the mean of
+    # 1-(1-p)^k over a sector's firms need not track that sector's median
+    # board, and a median-3 sector with many 1-director firms legitimately
+    # sits below a median-2 sector with none.
+    total_seats = sum(int(r["n_seats"]) for r in rows)
+    total_conn = sum(int(r["n_connected"]) for r in rows)
+    p_seat = total_conn / total_seats if total_seats else 0.0
+    check("  the seat rate is a probability", 0.0 < p_seat < 1.0, f"{p_seat}")
+    curve = [1.0 - (1.0 - p_seat) ** k for k in range(1, 30)]
+    check("  the null is monotone in board size",
+          all(b > a for a, b in zip(curve, curve[1:])), f"p={p_seat:.4f}")
+    # And a one-director firm's expected share is exactly the seat rate.
+    check("  a board of one expects the seat rate",
+          abs(curve[0] - p_seat) < 1e-12, f"{curve[0]} vs {p_seat}")
+
+
+def check_sector_centrality() -> None:
+    """Stage 18: sector centrality, and the size control that carries it."""
+    import code_sector_centrality as C
+
+    print("sector centrality", file=sys.stderr)
+    import networkx as nx
+
+    # `mean_path` on a known graph: a path of 4 nodes has mean distance 5/3.
+    P = nx.path_graph(4)
+    eq("  mean path on a 4-path", round(C.mean_path(P, k=4), 4),
+       round((1 + 2 + 3 + 1 + 2 + 1) * 2 / 12, 4))
+    eq("  giant share of a connected graph", C.giant_share(P), 1.0)
+    D = nx.Graph([(0, 1), (2, 3), (3, 4)])
+    eq("  giant share of a split graph", round(C.giant_share(D), 4),
+       round(3 / 5, 4))
+    eq("  an empty graph has no giant", C.giant_share(nx.Graph()), 0.0)
+
+    path = os.path.join(PROC_DIR, "sector_centrality.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("sector_centrality.csv")
+    base = load("sector_centrality_baseline.csv")[0]
+    check("  coded the sectors", len(rows) >= 10, str(len(rows)))
+    eq("  the filing residue is excluded",
+       [r for r in rows if r["sector_group"] == "not_a_sector"], [])
+    bad = [r for r in rows if int(r["n_firms"]) < C.MIN_FIRMS]
+    check("  no sector below the floor", not bad, str(len(bad)))
+
+    # A share is a share.
+    bad = [r for r in rows if not 0.0 <= float(r["edge_share"]) <= 1.0]
+    check("  edge_share is a share", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if not 0.0 <= float(r["cross_territory_share"]) <= 1.0]
+    check("  cross_territory_share is a share", not bad, str(len(bad)))
+    # Incident edges cannot exceed the graph, and within cannot exceed incident.
+    n_edges = int(base["n_edges"])
+    bad = [r for r in rows if int(r["n_edges_incident"]) > n_edges]
+    check("  incident edges fit in the graph", not bad, str(len(bad)))
+    bad = [r for r in rows
+           if int(r["n_edges_within"]) > int(r["n_edges_incident"])]
+    check("  within-sector edges are a subset of incident", not bad,
+          str(len(bad)))
+    # z must agree with the drop, the null mean and the null sd it is built from.
+    bad = []
+    for r in rows:
+        if not r["giant_drop_z"] or not float(r["giant_drop_null_sd"]):
+            continue
+        sd = float(r["giant_drop_null_sd"])
+        z = float(r["giant_drop_z"])
+        want = (float(r["giant_drop"]) - float(r["giant_drop_null_mean"])) / sd
+        # The tolerance has to follow the file's own precision, not a constant.
+        # drop, mean and sd are stored to five decimals, so where sd is itself
+        # ~3e-4 — hospitality — half an ulp on each input moves the recomputed
+        # z by more than 0.02 and a fixed tolerance fails on rounding alone.
+        tol = 0.02 + 1e-5 / sd + abs(z) * 5e-6 / sd
+        if abs(want - z) > tol:
+            bad.append(r["sector_group"])
+    check("  z is reproducible from drop, null mean and null sd", not bad,
+          str(bad[:3]))
+    bad = [r for r in rows if not 0.0 <= float(r["giant_drop_p"]) <= 1.0]
+    check("  p is a proportion", not bad, str(len(bad)))
+    # Removing nodes cannot lengthen nothing and cannot shorten the graph's
+    # own giant share beyond 1.
+    bad = [r for r in rows if float(r["giant_drop"]) > float(base["giant_share"])]
+    check("  a drop cannot exceed the baseline", not bad, str(len(bad)))
+
+    # The headline claim: finance separates from the null, mining does not.
+    fin = next((r for r in rows if r["sector_group"] == "finance"), None)
+    mine = next((r for r in rows if r["sector_group"] == "mining"), None)
+    if fin and mine:
+        # Relative, not absolute. "Size-matched" means neither can lead on a
+        # raw count by being bigger; an absolute threshold of 30 firms is a
+        # number that happened to be true on one build and broke on the next.
+        a, b = int(fin["n_firms"]), int(mine["n_firms"])
+        check("  finance and mining are size-matched",
+              abs(a - b) / max(a, b) < 0.10,
+              f"{a} vs {b} ({100 * abs(a - b) / max(a, b):.1f}%)")
+        check("  finance beats its size-matched null",
+              float(fin["giant_drop_z"]) > 2.0, fin["giant_drop_z"])
+        check("  mining does not", abs(float(mine["giant_drop_z"])) < 2.0,
+              mine["giant_drop_z"])
+        check("  finance leads on edge share",
+              float(fin["edge_share"]) == max(float(r["edge_share"])
+                                              for r in rows),
+              fin["edge_share"])
+
+    pairs = load("edges_sector_interlock.csv")
+    check("  produced sector pairs", len(pairs) > 50, str(len(pairs)))
+    bad = [r for r in pairs if r["sector_a"] == r["sector_b"]]
+    check("  a pair joins two different sectors", not bad, str(len(bad)))
+    bad = [r for r in pairs if r["sector_a"] > r["sector_b"]]
+    check("  every pair is stored in one direction", not bad, str(len(bad)))
+    eq("  the pair total matches the baseline",
+       sum(int(r["n_interlocks"]) for r in pairs),
+       int(base["n_cross_sector_edges"]))
+
+
+def check_basemap() -> None:
+    """The shapefile reader, the simplifier and the Robinson projection."""
+    import json
+    import struct
+
+    import basemap as BM
+    import fetch_basemap as FB
+
+    print("basemap", file=sys.stderr)
+
+    # A shapefile built here, so the reader is tested against a known answer
+    # rather than against whatever Natural Earth happens to ship.
+    square = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0), (0.0, 0.0)]
+    body = struct.pack("<i", 5) + struct.pack("<4d", 0, 0, 10, 10)
+    body += struct.pack("<ii", 1, len(square)) + struct.pack("<i", 0)
+    for x, y in square:
+        body += struct.pack("<2d", x, y)
+    blob = (struct.pack(">i", 9994) + b"\0" * 20
+            + struct.pack(">i", (100 + 8 + len(body)) // 2)
+            + struct.pack("<i", 1000) + struct.pack("<i", 5) + b"\0" * 64
+            + struct.pack(">ii", 1, len(body) // 2) + body)
+    got = FB.read_shp_polygons(blob)
+    eq("  the reader finds one polygon", len(got), 1)
+    eq("  with one ring", len(got[0]), 1)
+    eq("  and the right corners", [tuple(p) for p in got[0][0]], square)
+    eq("  the ring area is the shoelace area", FB.ring_area(square), 100.0)
+
+    # The simplifier.
+    line = [(0.0, 0.0), (1.0, 0.0), (2.0, 0.0), (3.0, 0.0)]
+    eq("  a straight line keeps its ends only", FB.simplify(line, 0.01),
+       [(0.0, 0.0), (3.0, 0.0)])
+    spike = [(0.0, 0.0), (1.5, 1.0), (3.0, 0.0)]
+    eq("  a spike above the tolerance is kept", FB.simplify(spike, 0.5), spike)
+    eq("  and below it is not", FB.simplify(spike, 2.0),
+       [(0.0, 0.0), (3.0, 0.0)])
+    check("  a tighter tolerance never keeps fewer points",
+          len(FB.simplify(line + [(3.0, 0.4)], 0.1))
+          >= len(FB.simplify(line + [(3.0, 0.4)], 1.0)), "not monotone")
+
+    # The bug the per-ring tolerance exists to prevent: a flat tolerance
+    # deletes an island smaller than itself, and several of those islands are
+    # French colonies with firms on this map.
+    tahiti = [(-149.60, -17.70), (-149.46, -17.70), (-149.46, -17.62),
+              (-149.60, -17.62), (-149.60, -17.70)]
+    flat = FB.simplify(tahiti, 0.12)
+    adaptive = FB.simplify(
+        tahiti, min(0.12, FB.RING_FRACTION * math.sqrt(FB.ring_area(tahiti))))
+    check("  a flat tolerance deletes a small island", len(flat) < 4,
+          str(len(flat)))
+    check("  the per-ring tolerance keeps it", len(adaptive) >= 4,
+          str(len(adaptive)))
+
+    # Robinson, against its own definition.
+    proj = BM.Robinson(1000.0, pad=0.0, lat_min=-50.0, lat_max=50.0)
+    x0, y0 = proj.project(0.0, -180.0)
+    x1, y1 = proj.project(0.0, 180.0)
+    check("  the equator spans the canvas", abs(x0) < 0.01
+          and abs(x1 - 1000.0) < 0.01, f"{x0:.2f}..{x1:.2f}")
+    eq("  the equator is flat", round(y0, 6), round(y1, 6))
+    mid_x, _ = proj.project(0.0, 0.0)
+    check("  the prime meridian is the middle", abs(mid_x - 500.0) < 0.01,
+          f"{mid_x:.2f}")
+    n = proj.project(30.0, 0.0)[1]
+    ss = proj.project(-30.0, 0.0)[1]
+    check("  north and south are symmetric about the equator",
+          abs((y0 - n) - (ss - y0)) < 0.01, f"{n:.2f}/{ss:.2f}")
+    ys = [proj.project(lat, 0.0)[1] for lat in range(-50, 51, 10)]
+    check("  y falls monotonically with latitude",
+          all(a > b for a, b in zip(ys, ys[1:])), str(ys[:3]))
+    # The property that makes it Robinson rather than plate carree: a parallel
+    # is shorter than the equator, so the meridians curve.
+    w_eq = proj.project(0.0, 180.0)[0] - proj.project(0.0, -180.0)[0]
+    w_60 = proj.project(60.0, 180.0)[0] - proj.project(60.0, -180.0)[0]
+    check("  a parallel is shorter than the equator", w_60 < w_eq * 0.85,
+          f"{w_60:.0f} vs {w_eq:.0f}")
+    check("  the window sets the height",
+          abs(proj.height - (proj.project(-50.0, 0.0)[1]
+                             - proj.project(50.0, 0.0)[1])) < 0.01,
+          f"{proj.height:.1f}")
+
+    # The checked-in land.
+    if not os.path.exists(BM.LAND):
+        return
+    with open(BM.LAND, encoding="utf-8") as fh:
+        feat = json.load(fh)
+    eq("  the basemap is a MultiPolygon", feat["geometry"]["type"],
+       "MultiPolygon")
+    props = feat["properties"]
+    check("  it says where it came from", "Natural Earth" in props["source"],
+          props["source"])
+    rings = [r for poly in feat["geometry"]["coordinates"] for r in poly]
+    eq("  the polygon count matches the properties",
+       len(feat["geometry"]["coordinates"]), props["polygons"])
+    eq("  the point count matches the properties",
+       sum(len(r) for r in rings), props["points"])
+    bad = [r for r in rings if r[0] != r[-1]]
+    check("  every ring is closed", not bad, str(len(bad)))
+    bad = [r for r in rings if len(r) < FB.MIN_RING]
+    check("  no ring is degenerate", not bad, str(len(bad)))
+    bad = [(x, y) for r in rings for x, y in r
+           if not (-180.1 <= x <= 180.1 and -90.1 <= y <= 90.1)]
+    check("  every coordinate is on the globe", not bad, str(bad[:2]))
+    # The floor is applied to each ring's area *before* simplification, and
+    # simplification only ever removes area, so a ring that passed the filter
+    # can land below it afterwards. What must not survive is a ring an order of
+    # magnitude below the floor.
+    bad = [r for r in rings
+           if FB.ring_area(r) < props["min_area_sq_degrees"] * 0.1]
+    check("  no ring an order of magnitude below the floor survived", not bad,
+          str(len(bad)))
+
+    # The places the corpus needs: an anchor with no land under it is the
+    # failure mode the per-ring tolerance was written for.
+    want = {"Tahiti": (-17.6, -149.4), "Réunion": (-21.1, 55.5),
+            "Guadeloupe": (16.2, -61.5), "Nouvelle-Calédonie": (-21.3, 165.5),
+            "Saint-Pierre": (46.8, -56.2), "Comores": (-11.7, 43.3)}
+    missing = []
+    for name, (lat, lon) in want.items():
+        if not any(abs(x - lon) < 2.0 and abs(y - lat) < 2.0
+                   for r in rings for x, y in r):
+            missing.append(name)
+    check("  every small colony still has land under it", not missing,
+          str(missing))
+
+
+def check_map_placement() -> None:
+    """Stage 20: the placement ladder, and the arithmetic that must close."""
+    import collections
+
+    import place_on_map as M
+    from build_network import read_csv
+
+    print("map placement", file=sys.stderr)
+
+    # Haversine against two known distances.
+    eq("  haversine of a point to itself", round(M.haversine(48.9, 2.4, 48.9, 2.4), 3),
+       0.0)
+    d = M.haversine(48.857, 2.352, 10.776, 106.701)   # Paris - Saigon
+    check("  Paris to Saigon is about 10,200 km", 9900 < d < 10500, f"{d:.0f}")
+    d = M.haversine(0.0, 0.0, 0.0, 90.0)
+    # A quarter of a great circle on the sphere the module uses: pi*R/2.
+    check("  a quarter of the equator",
+          abs(d - math.pi * M.EARTH_KM / 2) < 0.5, f"{d:.1f}")
+
+    # Every fold target and every federation member must exist in the gazetteer,
+    # or a firm silently fails to place.
+    anchors = M.territory_anchors()
+    bad = [v for v in M.TERRITORY_FOLD.values() if v not in anchors]
+    check("  every fold target is a gazetteer territory", not bad, str(bad))
+    gaz = {r["territory"] for r in read_csv(
+        os.path.join(ROOT, "data", "reference", "places_geo.csv"))}
+    bad = [m for ms in M.FEDERATIONS.values() for m in ms if m not in gaz]
+    check("  every federation member is a gazetteer territory", not bad, str(bad))
+    for fed in M.FEDERATIONS:
+        a = anchors.get(fed)
+        check(f"  {fed} has an anchor", bool(a), "missing")
+        if a:
+            eq(f"  {fed}'s anchor is a federation mean", a["source"],
+               "federation mean")
+    bad = [t for t, a in anchors.items()
+           if not (-90 <= a["lat"] <= 90 and -180 <= a["lon"] <= 180)]
+    check("  every anchor is on the globe", not bad, str(bad[:3]))
+
+    # `tie_class` is a total function of the two groups, and symmetric.
+    groups = ["metropole", "empire", "foreign"]
+    for ga in groups:
+        for gb in groups:
+            a, b = {"group": ga}, {"group": gb}
+            eq(f"  tie_class is symmetric for {ga}/{gb}",
+               M.tie_class(a, b), M.tie_class(b, a))
+            check(f"  tie_class is known for {ga}/{gb}",
+                  M.tie_class(a, b) in M.TIE_CLASSES, M.tie_class(a, b))
+    eq("  metropole and metropole", M.tie_class({"group": "metropole"},
+                                                {"group": "metropole"}),
+       "metropole only")
+    eq("  metropole and colony", M.tie_class({"group": "metropole"},
+                                             {"group": "empire"}),
+       "metropole-colony")
+    eq("  a foreign end wins", M.tie_class({"group": "foreign"},
+                                           {"group": "metropole"}),
+       "with foreign")
+
+    path = os.path.join(PROC_DIR, "company_map_positions.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("company_map_positions.csv")
+    base = load("map_geography_baseline.csv")[0]
+    ties = load("map_tie_geography.csv")
+
+    eq("  one row per firm in the graph", len(rows), int(base["n_graph_firms"]))
+    ids = [r["company_id"] for r in rows]
+    eq("  no firm is placed twice", len(set(ids)), len(ids))
+    lvl = collections.Counter(r["placement_level"] for r in rows)
+    bad = set(lvl) - {"city", "territory", "unplaced"}
+    check("  placement_level is one of three rungs", not bad, str(bad))
+    eq("  the city count matches the baseline", lvl["city"],
+       int(base["n_placed_city"]))
+    eq("  the territory count matches the baseline", lvl["territory"],
+       int(base["n_placed_territory"]))
+    eq("  the unplaced count matches the baseline", lvl["unplaced"],
+       int(base["n_unplaced"]))
+    eq("  the three rungs sum to the graph", sum(lvl.values()),
+       int(base["n_graph_firms"]))
+
+    # A placed row has coordinates; an unplaced one has none and says why.
+    bad = [r for r in rows if (r["placement_level"] == "unplaced") != (not r["lat"])]
+    check("  coordinates iff placed", not bad, str(len(bad)))
+    bad = [r for r in rows if r["placement_level"] == "unplaced" and not r["reason"]]
+    check("  every unplaced firm gives a reason", not bad, str(len(bad)))
+    bad = [r for r in rows if r["lat"]
+           and not (-90 <= float(r["lat"]) <= 90 and -180 <= float(r["lon"]) <= 180)]
+    check("  every placed firm is on the globe", not bad, str(len(bad)))
+    bad = [r for r in rows if r["lat"] and r["group"] not in
+           ("metropole", "empire", "foreign")]
+    check("  every placed firm has a known group", not bad, str(len(bad)))
+
+    # The rule that makes the territory rung defensible: one filing country.
+    bad = [r for r in rows if r["placement_level"] == "territory"
+           and int(r["n_countries_listed"]) != 1]
+    check("  a territory placement rests on exactly one filing country",
+          not bad, str(len(bad)))
+    multi = [r for r in rows if int(r["n_countries_listed"]) > 1
+             and r["placement_level"] == "territory"]
+    check("  no multi-country firm is placed by filing", not multi, str(len(multi)))
+
+    # Firms at one anchor share one coordinate, because the spread is drawn and
+    # not stored.
+    by_anchor = collections.defaultdict(set)
+    for r in rows:
+        if r["lat"]:
+            by_anchor[r["anchor"]].add((r["lat"], r["lon"]))
+    bad = [a for a, xs in by_anchor.items() if len(xs) != 1]
+    check("  one anchor, one coordinate", not bad, str(bad[:3]))
+    eq("  the anchor count matches the baseline", len(by_anchor),
+       int(base["n_anchors"]))
+
+    # The tie table has to close against the graph.
+    eq("  the tie classes are the declared ones",
+       [r["tie_class"] for r in ties], M.TIE_CLASSES)
+    drawable = sum(int(r["n_edges"]) for r in ties if r["tie_class"] != "unplaced")
+    eq("  drawable ties match the baseline", drawable,
+       int(base["n_drawable_edges"]))
+    unplaced = next(r for r in ties if r["tie_class"] == "unplaced")
+    eq("  drawable plus unplaced is the whole graph",
+       drawable + int(unplaced["n_edges"]), int(base["n_edges"]))
+    bad = [r for r in ties if int(r["n_interlocks"]) < int(r["n_edges"])]
+    check("  an edge carries at least one interlock", not bad, str(len(bad)))
+    bad = [r for r in ties if int(r["n_same_anchor"]) > int(r["n_same_territory"])]
+    check("  same place implies same territory", not bad, str(len(bad)))
+    bad = [r for r in ties if int(r["n_same_territory"]) > int(r["n_edges"])]
+    check("  same-territory ties are a subset of the class", not bad, str(len(bad)))
+    # A metropole-colony tie cannot sit inside one place, by construction.
+    mc = next(r for r in ties if r["tie_class"] == "metropole-colony")
+    eq("  a metropole-colony tie spans two places", int(mc["n_same_anchor"]), 0)
+    shares = [float(r["share_of_drawable"]) for r in ties
+              if r["share_of_drawable"]]
+    check("  the drawable shares sum to 1", abs(sum(shares) - 1.0) < 0.002,
+          f"{sum(shares):.4f}")
+    eq("  same-anchor ties match the baseline",
+       sum(int(r["n_same_anchor"]) for r in ties),
+       int(base["n_same_anchor_edges"]))
+
+    # Paris: the three buckets must not be mixed, which is what the first
+    # version of the baseline did — it divided ties to unplaced firms by the
+    # drawable total and overstated Paris's reach by twenty points.
+    paris = {r["company_id"] for r in rows if r["anchor"] == "Paris"}
+    eq("  the Paris firm count matches the baseline", len(paris),
+       int(base["paris_firms"]))
+    touch = int(base["paris_cross_edges"]) + int(base["paris_within_edges"])
+    check("  Paris's drawable ties fit inside the drawable total",
+          touch <= int(base["n_drawable_edges"]),
+          f"{touch} vs {base['n_drawable_edges']}")
+    check("  Paris touches most of the drawable network",
+          0.4 <= touch / int(base["n_drawable_edges"]) <= 0.55,
+          f"{touch / int(base['n_drawable_edges']):.3f}")
+    check("  the median tie is a plausible distance",
+          1000 < float(base["median_tie_km"]) < 8000, base["median_tie_km"])
+
+
+def check_world_map_figures() -> None:
+    """Stage 21: one set of coordinates, and the discs hung off the anchors."""
+    import make_world_map_figures as M
+
+    print("world map figures", file=sys.stderr)
+
+    # `_disc` is uniform by area and deterministic.
+    pts = M._disc(400, 0.0, 0.0, 10.0)
+    eq("  a disc places every point", len(pts), 400)
+    bad = [xy for xy in pts if math.hypot(*xy) > 10.001]
+    check("  no point escapes the disc", not bad, str(len(bad)))
+    inner = sum(1 for x, y in pts if math.hypot(x, y) <= 10.0 / math.sqrt(2))
+    check("  half the points fall in half the area",
+          abs(inner - 200) <= 3, str(inner))
+    eq("  a disc of one is its centre", M._disc(1, 3.0, 4.0, 9.0), [(3.0, 4.0)])
+    eq("  the same disc twice", M._disc(50, 1.0, 2.0, 5.0),
+       M._disc(50, 1.0, 2.0, 5.0))
+
+    if not os.path.exists(os.path.join(PROC_DIR, "company_map_positions.csv")):
+        return
+    d = M.gather()
+    placed = [r for r in d["rows"] if r["lat"]]
+    eq("  every placed firm gets a pixel", len(d["pos"]), len(placed))
+    # Disc area proportional to firm count is the figure's whole claim about
+    # blob size, so it has to hold between any two anchors.
+    big = sorted(d["anchors"].values(), key=lambda a: -len(a["firms"]))[:8]
+    bad = []
+    for a in big:
+        for b in big:
+            if len(a["firms"]) < 2 or len(b["firms"]) < 2:
+                continue
+            want = math.sqrt(len(a["firms"]) / len(b["firms"]))
+            if abs(a["r"] / b["r"] - want) > 0.01:
+                bad.append((a["anchor"], b["anchor"]))
+    check("  disc radius goes as the square root of the count", not bad,
+          str(bad[:3]))
+    # Every firm sits inside its own anchor's disc.
+    bad = []
+    for cid, (x, y) in d["pos"].items():
+        a = d["anchors"][d["by_id"][cid]["anchor"]]
+        if math.hypot(x - a["x"], y - a["y"]) > a["r"] + 0.01:
+            bad.append(cid)
+    check("  no firm escapes its anchor's disc", not bad, str(bad[:3]))
+    # The drawn edges are exactly the drawable ones.
+    base = load("map_geography_baseline.csv")[0]
+    eq("  the figures draw every drawable tie", len(d["edges"]),
+       int(base["n_drawable_edges"]))
+    # One layout for every panel: gather() hands out a single pos dict, so a
+    # second call must reproduce it exactly.
+    again = M.gather()
+    eq("  the layout is deterministic", d["pos"], again["pos"])
+    # The Paris ranking the fig56 caption asserts.
+    rank = M._paris_ranking(d)
+    check("  the Paris ranking is ordered", rank == sorted(rank, reverse=True),
+          str(rank[:2]))
+    fin = next((r for r in rank if r[2] == "finance"), None)
+    check("  finance is in the Paris ranking", fin is not None, "missing")
+    if fin:
+        check("  finance leads the sectors above a hundred firms",
+              [r for r in rank if r[3] >= 100][0][2] == "finance",
+              [r for r in rank if r[3] >= 100][0][2])
+        check("  but it does not lead outright", rank[0][2] != "finance",
+              rank[0][2])
+
+
+def check_period_maps() -> None:
+    """Stage 22: the map split by period, and the coverage that qualifies it."""
+    import make_period_map_figures as P
+
+    print("period maps", file=sys.stderr)
+
+    eq("  every period has a label",
+       [p for p in P.ORDER if p not in P.PERIOD_LABEL or p not in P.PERIOD_FR],
+       [])
+    eq("  the periods are build_network's",
+       P.ORDER, [n for n, _lo, _hi in __import__("build_network").PERIODS])
+    eq("  wrapping keeps every word",
+       " ".join(P._wrap("one two three four five six", 9)).split(),
+       "one two three four five six".split())
+    bad = [ln for ln in P._wrap("aa bb cc dd ee ff gg hh", 8) if len(ln) > 8]
+    check("  no wrapped line exceeds the width", not bad, str(bad))
+
+    if not os.path.exists(os.path.join(PROC_DIR, "company_map_positions.csv")):
+        return
+    d = P.gather()
+    pos = d["pos"]
+
+    eq("  one bucket per period", sorted(d["by_period"]), sorted(P.ORDER))
+    bad = [p for p, es in d["by_period"].items()
+           for a, b, _w in es if a not in pos or b not in pos]
+    check("  every drawn edge has two placed ends", not bad, str(bad[:3]))
+    # Each period's drawable edges must be a subset of the whole map's.
+    whole = {frozenset((a, b)) for a, b, _w in d["edges"]}
+    bad = [p for p, es in d["by_period"].items()
+           for a, b, _w in es if frozenset((a, b)) not in whole]
+    check("  a period edge is one of figure 53's edges", not bad, str(bad[:3]))
+
+    stats = {s["period"]: s for s in d["stats"]}
+    eq("  one row per period", sorted(stats), sorted(P.ORDER))
+    for p, st in stats.items():
+        n_dr = int(st["n_drawable_edges"])
+        check(f"  {p}: drawable fits inside dated",
+              n_dr <= int(st["n_dated_edges"]),
+              f"{n_dr} vs {st['n_dated_edges']}")
+        check(f"  {p}: Paris ties fit inside drawable",
+              int(st["n_paris_edges"]) <= n_dr, st["n_paris_edges"])
+        check(f"  {p}: address ties fit inside drawable",
+              int(st["n_address_edges"]) <= n_dr, st["n_address_edges"])
+        check(f"  {p}: Paris address ties fit inside address ties",
+              int(st["n_address_paris_edges"]) <= int(st["n_address_edges"]),
+              st["n_address_paris_edges"])
+        check(f"  {p}: placed firms fit inside active firms",
+              int(st["n_placed_firms"]) <= int(st["n_active_firms"]),
+              f"{st['n_placed_firms']} vs {st['n_active_firms']}")
+        check(f"  {p}: interlocks are at least edges",
+              int(st["n_interlocks"]) >= n_dr, st["n_interlocks"])
+        for key in ("paris_share", "paris_share_address_only",
+                    "share_firms_placed"):
+            v = float(st[key])
+            check(f"  {p}: {key} is a share", 0.0 <= v <= 1.0, str(v))
+        want = int(st["n_paris_edges"]) / max(n_dr, 1)
+        check(f"  {p}: paris_share is reproducible",
+              abs(want - float(st["paris_share"])) < 0.001,
+              f"{want:.4f} vs {st['paris_share']}")
+
+    # The headline both figures rest on, and the caveat that qualifies it.
+    shares = [float(stats[p]["paris_share"]) for p in P.ORDER]
+    check("  Paris's share falls in every period",
+          all(a > b for a, b in zip(shares, shares[1:])),
+          str([round(x, 3) for x in shares]))
+    addr = [float(stats[p]["paris_share_address_only"]) for p in P.ORDER]
+    check("  and falls on address-only firms too",
+          all(a > b for a, b in zip(addr, addr[1:])),
+          str([round(x, 3) for x in addr]))
+    check("  the address-only share is the higher of the two",
+          all(a >= b for a, b in zip(addr, shares)), "not above")
+    cover = {p: float(stats[p]["share_firms_placed"]) for p in P.ORDER}
+    low = [p for p, v in cover.items() if v < 0.5]
+    eq("  exactly one period has coverage below half", low, ["1945_1962"])
+    check("  and the rest are above 80%",
+          all(v > 0.8 for p, v in cover.items() if p != "1945_1962"),
+          str({p: round(v, 3) for p, v in cover.items()}))
+    check("  the thin period is thin because of transversal filing",
+          int(stats["1945_1962"]["n_no_country_firms"]) > 1000,
+          stats["1945_1962"]["n_no_country_firms"])
+
+    # The small multiples must stay inside their own cell — the first version
+    # read the coordinates from the shared layout and stacked all five panels
+    # on top of each other in the middle of the canvas.
+    panel_w = (P.W - P.SMALL_GAP * (P.SMALL_COLS - 1)) / P.SMALL_COLS
+    scale = panel_w / P.W
+    for i, period in enumerate(P.ORDER):
+        ox = (i % P.SMALL_COLS) * (panel_w + P.SMALL_GAP)
+        xs = [ox + x * scale for x, _y in pos.values()]
+        check(f"  {period}: the panel stays in its column",
+              min(xs) >= ox - 1 and max(xs) <= ox + panel_w + 1,
+              f"{min(xs):.0f}..{max(xs):.0f} vs {ox:.0f}..{ox + panel_w:.0f}")
+
+    if os.path.exists(P.SUMMARY):
+        rows = load("map_period_summary.csv")
+        eq("  the summary file has one row per period",
+           [r["period"] for r in rows], P.ORDER)
+        bad = [r["period"] for r in rows
+               if r["paris_share"] != stats[r["period"]]["paris_share"]]
+        check("  the summary matches what the figures compute", not bad,
+              str(bad))
+
+
+def check_person_dossiers() -> None:
+    """Stage 3j: the person-anchored dossiers, and the three rules that guard them."""
+    import collections
+
+    import parse_person_dossiers as PD
+
+    print("person dossiers", file=sys.stderr)
+
+    # The subject comes from the catalogue title, so the title parser is the
+    # whole safety of the genre.
+    ok = PD.subject_of({"name_listed": "Noël (Octave)(1846-1918)"})
+    check("  a dated person entry gives a subject", bool(ok), "none")
+    if ok:
+        eq("  with the surname", ok["surname"], "Noël")
+        check("  and the forename", "Octave" in ok["name_clean"], ok["name_clean"])
+    ok = PD.subject_of({"name_listed": "Gorgeu (Maurice)(1862-1935), banquier"})
+    check("  the compiler's gloss is stripped", bool(ok) and "banquier" not in ok["name_clean"],
+          ok["name_clean"] if ok else "none")
+    ok = PD.subject_of({"name_listed": "Jourdan (Adolphe)(1846-1916), Alger"})
+    check("  a forename outside the 330-name list is still a forename",
+          bool(ok), "refused")
+
+    for bad in ("Jacques Menasché & Cie (1926-1933), Paris",
+                "Tramways de Tunis (S.A. des)(1888-1901)",
+                "Chaux hydrauliques et ciments d'Algérie (S.A. des)(1891)",
+                "Bureau d'organisation économique (B.O.E.)",
+                "Office colonial (1899)",
+                "Comité de l'Afrique française"):
+        eq(f"  refused as a subject: {bad[:34]}", PD.subject_of({"name_listed": bad}), None)
+    eq("  an empty title has no subject", PD.subject_of({"name_listed": ""}), None)
+
+    # Offices are not directorships, and this genre is full of them.
+    for tail in ("5e classe des colonies (8 février 1898)",
+                 "l'Office colonial par décret du ministre",
+                 "la chambre de commerce de Tahiti",
+                 "conseil de protectorat", "Affaires indigènes et politiques"):
+        check(f"  office refused: {tail[:32]}", bool(PD.OFFICE_TAIL_RE.match(tail)),
+              "not matched")
+    for tail in ("la Banque suisse et française (1899)",
+                 "Charbonnages du Tonkin (1895-1898)",
+                 "la Société agricole du Kontum"):
+        check(f"  company kept: {tail[:32]}", not PD.OFFICE_TAIL_RE.match(tail),
+              "wrongly refused")
+
+    # The name/date split.
+    eq("  a trailing date is cut off the name",
+       PD.split_tail("la Banque suisse et française (1899),"),
+       ("la Banque suisse et française", "1899"))
+    eq("  a range keeps its first year",
+       PD.split_tail("Charbonnages du Tonkin (1895-1898).")[1], "1895")
+    eq("  a month-and-year date still yields the year",
+       PD.split_tail("comité de Paris de la Banque de Tunisie (mai 1886).")[1], "1886")
+    eq("  no date is no year",
+       PD.split_tail("la Société agricole du Kontum")[1], "")
+    check("  a successor clause ends the name",
+          PD.split_tail("la Société X, puis la Société Y")[0] == "la Société X",
+          PD.split_tail("la Société X, puis la Société Y")[0])
+
+    # The two rules that keep a relative's seat off the subject.
+    check("  a kinship word is seen in the lookback",
+          bool(PD.KINSHIP_RE.search("fils de Paul-Adolphe Chalamel (1839-1909)")),
+          "not matched")
+    check("  and an ordinary sentence is not",
+          not PD.KINSHIP_RE.search("Administrateur de la Banque de Tunisie"),
+          "false positive")
+    check("  a line running into new prose is caught",
+          bool(PD.NEW_SENTENCE_RE.search(". Voir encadré. Remariée à Saïgon, le 14 octobre")),
+          "not matched")
+    check("  a trailing date is not new prose",
+          not PD.NEW_SENTENCE_RE.search(" (1895-1898)."), "false positive")
+
+    path = os.path.join(PROC_DIR, "affiliations_person_dossiers.csv")
+    if not os.path.exists(path):
+        return
+    rows = load("affiliations_person_dossiers.csv")
+    check("  the stage produced ties", len(rows) > 80, str(len(rows)))
+    eq("  every row is tagged with its genre",
+       {r["source_genre"] for r in rows}, {"person_dossier"})
+
+    companies = {c["company_id"] for c in load("companies.csv")}
+    bad = [r for r in rows if r["company_key"] not in companies]
+    check("  every company resolves to a real firm", not bad,
+          str([r["company_key"] for r in bad[:3]]))
+    bad = [r for r in rows if not r["person_key"] or not r["name_clean"]]
+    check("  every row names a person", not bad, str(len(bad)))
+    known = {k for k, _p in PD.ROLE_WORDS}
+    bad = [r for r in rows if r["role"] not in known]
+    check("  every role is one of the declared ones", not bad,
+          str({r["role"] for r in bad}))
+    bad = [r for r in rows if r["year"] and not plausible_year(r["year"])]
+    check("  every year is plausible", not bad, str(len(bad)))
+    seen = Counter((r["doc_id"], r["person_key"], r["company_key"]) for r in rows)
+    bad = [k for k, n in seen.items() if n > 1]
+    check("  no tie is recorded twice in one dossier", not bad, str(bad[:2]))
+    # The genre's own claim: the subject is free, so a dossier's rows are all
+    # about one person.
+    per_doc = collections.defaultdict(set)
+    for r in rows:
+        per_doc[r["doc_id"]].add(r["person_key"])
+    bad = [d for d, ppl in per_doc.items() if len(ppl) > 1]
+    check("  one dossier, one subject", not bad, str(bad[:2]))
+    check("  a third of the ties are dated",
+          sum(1 for r in rows if r["year"]) / len(rows) > 0.25,
+          f"{sum(1 for r in rows if r['year'])}/{len(rows)}")
+
+    # And it reached the network.
+    edges = load("edges_person_company.csv")
+    if edges and "source_genre" in edges[0]:
+        got = sum(1 for e in edges if "person_dossier" in e["source_genre"])
+        check("  the genre is merged into the network", got > 50, str(got))
+
+
+def check_coverage_audit() -> None:
+    """Stage 23: the audit of what the unread documents are."""
+    import audit_coverage as A
+
+    print("coverage audit", file=sys.stderr)
+
+    # The register classifier, against text written here.
+    cases = [
+        ("CONSEIL D'ADMINISTRATION\nREY (Antonio); président;", "board_list"),
+        ("Conseil d’administration\nDupont (Jean), Paris ;", "board_list"),
+        ("Administrateur de la Banque de Tunisie (mai 1886).", "person_career"),
+        ("M. Honoré Dejean, directeur de la Société agricole de My-Duc",
+         "apposition"),
+        ("Un administrateur (à gauche) : Eugène Fournier", "certificate"),
+        ("Aux termes d'un acte reçu par Me Bérenger, notaire à Saïgon",
+         "deed"),
+        ("HAÏPHONG (L’Avenir du Tonkin, 19 janvier 1898) 17 janvier.", "press"),
+        ("Le capital social est de 750.000 francs.", "no_signal"),
+    ]
+    for text, want in cases:
+        got, _counts = A.classify(text)
+        eq(f"  classify: {text[:34]}", got, want)
+
+    # Order is the point of the classifier: board evidence outranks the press
+    # compilation it usually sits inside.
+    both = ("HAÏPHONG (L’Avenir du Tonkin, 19 janvier 1898)\n"
+            "CONSEIL D'ADMINISTRATION\nREY (Antonio); président;")
+    eq("  a board list inside a press compilation files as board_list",
+       A.classify(both)[0], "board_list")
+    got, counts = A.classify(both)
+    check("  and the press match is still counted", counts["press"] >= 1,
+          str(counts))
+
+    path = os.path.join(PROC_DIR, "coverage_by_territory.csv")
+    if not os.path.exists(path):
+        return
+    terr = load("coverage_by_territory.csv")
+    silent = load("coverage_silent_documents.csv")
+
+    check("  every territory is audited", len(terr) > 40, str(len(terr)))
+    bad = [r for r in terr
+           if int(r["n_with_tie"]) + int(r["n_silent"]) != int(r["n_documents"])]
+    check("  with-tie plus silent is every document", not bad,
+          str([r["territory"] for r in bad[:3]]))
+    bad = [r for r in terr if not 0.0 <= float(r["share_with_tie"]) <= 1.0]
+    check("  the coverage share is a share", not bad, str(len(bad)))
+    eq("  the silent file holds every silent document",
+       len(silent), sum(int(r["n_silent"]) for r in terr))
+    known = {n for n, _rx in A.REGISTERS} | {"no_signal"}
+    bad = [r for r in silent if r["register"] not in known]
+    check("  every document is filed under a known register", not bad,
+          str({r["register"] for r in bad}))
+    bad = [r for r in silent if int(r["n_chars"]) < A.MIN_CHARS]
+    check("  a stub is not counted as a silent document", not bad,
+          str(len(bad)))
+    # The register column has to agree with the per-register counts it is
+    # derived from, or the audit's headline is not reproducible from its rows.
+    bad = []
+    for r in silent:
+        first = next((n for n, _rx in A.REGISTERS if int(r[f"n_{n}"])), "no_signal")
+        if first != r["register"]:
+            bad.append(r["doc_id"])
+    check("  the register is the first one that matched", not bad,
+          str(bad[:3]))
+
+    # The audit's substantive finding, which the docs quote.
+    reg = Counter(r["register"] for r in silent)
+    check("  the residue is mostly press compilations",
+          reg["press"] > len(silent) * 0.4, f"{reg['press']}/{len(silent)}")
+    check("  and board lists are a small remainder",
+          reg["board_list"] < len(silent) * 0.05,
+          f"{reg['board_list']}/{len(silent)}")
+    worst = min(terr, key=lambda r: float(r["share_with_tie"])
+                if int(r["n_documents"]) >= 100 else 2.0)
+    eq("  Indochina is the worst-covered large territory",
+       worst["territory"], "Indochine")
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -1346,12 +2529,29 @@ def check_figures() -> None:
         from make_descriptive_figures import EXTRA_SERIES
         from make_territory_figures import SEQ
 
+        # `land`, `coast` and `graticule` are substrate, not a categorical
+        # scale: they are the basemap the map figures draw the data on. They
+        # are allowed here and nowhere near a data mark, which is why they are
+        # weaker than `hairline` and why nothing selects them by value.
         allowed = set(PALETTE["light"]["series"]) | {
             PALETTE["light"]["other"], PALETTE["light"]["surface"],
-            PALETTE["light"]["edge"], "none",
+            PALETTE["light"]["edge"], PALETTE["light"]["land"], "none",
         }
         stack_allowed = allowed | set(EXTRA_SERIES["light"])
-        extra = {c.get("fill") for c in root.iter(f"{ns}circle")} - stack_allowed
+        # Fill is inherited, and the map figures set it once on a <g> holding
+        # thousands of circles rather than on each circle — writing it 3,910
+        # times cost a megabyte. So resolve the fill the way a renderer does,
+        # up the tree, instead of reading the attribute off the circle.
+        parent = {ch: pa for pa in root.iter() for ch in pa}
+
+        def fill_of(el):
+            while el is not None:
+                if el.get("fill"):
+                    return el.get("fill")
+                el = parent.get(el)
+            return None
+
+        extra = {fill_of(c) for c in root.iter(f"{ns}circle")} - stack_allowed
         check(f"  {name}: no colour outside the validated palette", not extra,
               str(sorted(extra)[:3]))
         # Strokes are an encoding too. `draw.curved_edges` gives an edge a
@@ -1363,6 +2563,7 @@ def check_figures() -> None:
         stroke_allowed = stack_allowed | {
             PALETTE["light"]["hairline"], PALETTE["light"]["text_muted"],
             PALETTE["light"]["text_primary"], PALETTE["light"]["text_secondary"],
+            PALETTE["light"]["coast"], PALETTE["light"]["graticule"],
         }
         extra_s = set()
         for tag in ("path", "line", "circle", "rect", "text"):
@@ -1371,7 +2572,18 @@ def check_figures() -> None:
         check(f"  {name}: no stroke colour outside the palette", not extra_s,
               str(sorted(extra_s)[:3]))
 
-        extra_r = ({r.get("fill") for r in root.iter(f"{ns}rect")}
+        # Same inheritance as the circles above, plus one exclusion: a rect
+        # inside a <clipPath> is geometry, never a mark, and has no fill to
+        # read. The map figures clip the basemap to the frame with one.
+        def in_clip(el):
+            while el is not None:
+                if el.tag == f"{ns}clipPath":
+                    return True
+                el = parent.get(el)
+            return False
+
+        extra_r = ({fill_of(r) for r in root.iter(f"{ns}rect")
+                    if not in_clip(r)}
                    - stack_allowed - set(SEQ["light"]))
         check(f"  {name}: no rect colour outside the palette", not extra_r,
               str(sorted(x for x in extra_r if x)[:3]))
@@ -1638,6 +2850,19 @@ def main() -> None:
         check_prose_parser()
         check_annotation_resolver()
         check_biographies()
+        check_mandates()
+        check_rosters()
+        check_offices()
+        check_legislative_layer()
+        check_sectors()
+        check_political_coding()
+        check_sector_centrality()
+        check_person_dossiers()
+        check_coverage_audit()
+        check_basemap()
+        check_map_placement()
+        check_world_map_figures()
+        check_period_maps()
         check_geocoding()
         check_figures()
 

@@ -8,7 +8,7 @@ anciensetablissementschpeyrissaccolonialeafrique,salinscapvert,1914_1929,7,caste
 cheminferdakarsaintlouis,cheminferdakarstlouis,1914_1929,7,deves-p; ganderax-e; guilliot-c; lorieux-l; pouyer-m; roland-gosselin-j; vieuxtemps
 etablissementssalagna,socetablsalagna,1914_1929,7,allard-a; lauga-j; motelay-p; privat-a; salagna-e; soucail-p; weill-m-michel
 africaine,afriquecongo,1914_1929,6,fourneau-a; guynet-w; lutscher-f; pierre-c; vigouroux-l; weber-j
-frsekong,kong,1914_1929,6,bretigniere-m; callot-t; galula-j; katz-m; levy-g; mizraki-m
+frsekong,kong,1914_1929,6,bretigniere; callot-t; galula-j; katz-m; levy-g; mizraki-m
 huileriesrizeriesguinee,huileriesrizeriesouestafricaines,1914_1929,6,boutal-f; fourneau-l; legrand-j; legrand-r; loisy-x; oudot-l
 huileriesrizeriesguinee,huileriesrizeriesouestafricainesh,1914_1929,6,boutal-f; fourneau-l; legrand-j; legrand-r; loisy-x; oudot-l
 occidentaleafricaine,unionforestiereafricaine,1914_1929,6,bernheim-l-leon; fouque-j-jean; gast-a; haas-a; klotz-e; paillet-p
@@ -37,7 +37,7 @@ bordelaisecomptoirsafricains,comptoirsafricains,1914_1929,4,calcat-f-fernand; de
 comptoirsafricains,cotonafricain,1914_1929,4,calcat-f-fernand; delmas-p-philippe; levy-g; mizraki-m
 comptoirsafricains,kong,1914_1929,4,calcat-f-fernand; callot-t; levy-g; mizraki-m
 forestiereindenie,kong,1914_1929,4,calcat-f-fernand; callot-t; levy-g; mizraki-m
-kong,plantationselimacafeiersaboisso,1914_1929,4,bretigniere-m; calcat-f-fernand; levy-g; mizraki-m
+kong,plantationselimacafeiersaboisso,1914_1929,4,bretigniere; calcat-f-fernand; levy-g; mizraki-m
 kong,plantationsreuniesouestafricain,1914_1929,4,calcat-f-fernand; levy-g; merle-m; mizraki-m
 boiscoteivoire,forestiereindenie,1914_1929,4,levy-g; martin-e-edouard; mizraki-m; plagelat-l
 bamako,culturecotonniereniger,1914_1929,4,cahen-fuzier-e; hirsch-h; hirsch-m; villars-r
@@ -82,7 +82,7 @@ comptoirsafricains,frsekong,1914_1929,3,callot-t; levy-g; mizraki-m
 comptoirsafricains,transitgrandlahou,1914_1929,3,calcat-f; levy-g; mizraki-m
 forestiereindenie,frsekong,1914_1929,3,callot-t; levy-g; mizraki-m
 forestiereindenie,transitgrandlahou,1914_1929,3,levy-g; mizraki-m; plagelat-l
-frsekong,plantationselimacafeiersaboisso,1914_1929,3,bretigniere-m; levy-g; mizraki-m
+frsekong,plantationselimacafeiersaboisso,1914_1929,3,bretigniere; levy-g; mizraki-m
 constructionafricaine,silicocalcaireafricaine,1914_1929,3,berengier-m; legrand-r; superville-m
 huileriesrizeriesguinee,silicocalcaireafricaine,1914_1929,3,fourneau-l; legrand-j; legrand-r
 culturesdiakandape,socculturesdiakandape,1914_1929,3,begouen-m; chaumet-g; deves-p
@@ -479,8 +479,7 @@ etablissementsroucharde,rouchard,1930_1944,4,alcan; claude-a; cremieu-alcan-e; l
 automobilescoteafrique,briqueteriesbamako,1930_1944,4,daroussin-j; guieysse-p; mollard-j; you-e
 diourbel,guineennerecherchesexploitationsminieres,1930_1944,4,baer-e; bryce-doyle-d; de-breteuil-c; faye-j
 africainesisal,africainesisaloyenbamparrufisque,1930_1944,4,dutheil-de-la-rochere-m; halna-du-fretay-c; herve-le-grand; jacques-r-doumic
-aboisso,plantationselimacafeiersaboisso,1930_1944,4,beynis-e; bord; bretigniere-m; deloffre-g
-plantationselima,plantationselimacafeiersaboisso,1930_1944,4,beynis-e; bord-b; bretigniere-m; caquas-j
+plantationselima,plantationselimacafeiersaboisso,1930_1944,4,beynis-e; bord-b; bretigniere; caquas-j
 plantationsexploitationscoloniales,plantationsexploitationscolonialesbingerville,1930_1944,4,bour-a; deschamps-p-paul; pelissier-e; thibout-d
 banqueafriqueoccidentale,socbriqueteriesbamako,1930_1944,4,boyer-p; maurel-l; schwob-g; simon-s
 culturesextremeorient,culturesextremeorientafrique,1930_1944,4,ducasse-p; grivelle-g; lamarque-m; marchal-g
@@ -533,8 +532,8 @@ diogue,ilmenitediogue,1930_1944,3,leyrat; schuhmann-a; schuhmann-p
 exploitationportservicespublicsportetiennesuivirezzousportetienne,portetienne,1930_1944,3,barris-p; corbin-p-paul; robert-a
 diourbel,exploitationsminieresafriqueoccidentale,1930_1944,3,baer-e; bryce-doyle-d; de-breteuil-c
 exploitationsminieresafriqueoccidentale,guineennerecherchesexploitationsminieres,1930_1944,3,baer-e; bryce-doyle-d; de-breteuil-c
+aboisso,plantationselimacafeiersaboisso,1930_1944,3,beynis-e; bord; deloffre-g
 forestieresassandra,jcalve,1930_1944,3,calcat-f; mounier-p; vialle-j
-aboisso,plantationselima,1930_1944,3,beynis-e; bretigniere-m; guibert-g
 africainesisaloyenbamparrufisque,plantationstanoe,1930_1944,2,doumic-j; martin-s
 brulerie,plantationstanoe,1930_1944,2,doumic-j; legourd-a
 colonialerepresentation,culturecotonniereniger,1930_1944,2,hirsch-h; hirsch-p-pierre
@@ -588,7 +587,8 @@ kokumbo,miniereindustrielleimmobilierecoteivoire,1930_1944,2,berger; tezier-h
 cafescoteivoire,forestiereindenie,1930_1944,2,deloffre-g; lemaitre-r
 banqueafriqueoccidentale,scieriesafricaines,1930_1944,2,fourn-g; schwob-d-hericourt-g
 commercialeindustriellepalmeraiesafricaines,comptoirsreunisouestafricain,1930_1944,2,desouches-b; weber-j
-forestierebandama,grandlahou,1930_1944,2,noel-a-armand; noel-l
+forestierebandama,grandlahou,1930_1944,2,noel-a-armand; noel-l-lucien
+aboisso,plantationselima,1930_1944,2,beynis-e; guibert-g
 frsekong,kong,1930_1944,2,levy-g; picanon-e
 banqueafriqueoccidentale,socmessageriesafricaines,1930_1944,2,maurel-j; maurel-l
 creditfoncierouestafricain,minesfaleme,1930_1944,2,merlin; merlin-m-martial
