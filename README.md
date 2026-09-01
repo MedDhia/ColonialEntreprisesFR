@@ -18,8 +18,8 @@ network can be sliced by period rather than collapsed into one static graph.
 >
 > **Extraction coverage.** Of 5,863 documents carrying usable text — the
 > 5,867 that extract cleanly, less four holding under 200 characters —
-> **3,686 (63%) yield at least one tie** — up from 42% before the prose, annotation and
-> biographical and roster parsers were added. The remaining 2,177 hold 26% of the
+> **3,728 (64%) yield at least one tie** — up from 42% before the prose, annotation,
+> biographical, roster and person-dossier parsers were added. The remaining 2,135 hold 26% of the
 > extracted characters and contribute nothing: mostly genres no parser reads
 > (honours lists, tariff schedules, balance-sheet-only extracts) plus real
 > misses. §2b of the methodology quantifies what is left on the table. Absence
