@@ -1596,6 +1596,7 @@ muller-e-edouard,agricolebatah,1,1897,1897,administrateur,administrateur:1,1
 prince-a,agricolebatah,1,1897,1897,administrateur,administrateur:1,1
 boyaval,agricolebenbo,1,1931,1931,administrateur,administrateur:1,1
 dureteste,agricolebenbo,1,1931,1931,administrateur,administrateur:1,1
+le-roy-des-barres-a,agricolebenbo,1,,,administrateur,administrateur:1,1
 mourlan,agricolebenbo,1,1931,1931,administrateur,administrateur:1,1
 sale,agricolebenbo,1,1931,1931,administrateur,administrateur:1,1
 aug-isnard,agricoleboumais,1,1953,1953,administrateur,administrateur:1,1
@@ -1623,6 +1624,7 @@ plaut-l,agricolecherifienne,1,1926,1926,commissaire_aux_comptes,commissaire_aux_
 roussel-m,agricolecherifienne,3,1951,1952,administrateur,administrateur:3,1
 ruet-p,agricolecherifienne,7,1921,1950,administrateur,administrateur:5; administrateur_delegue:1; president:1,1
 blanc-l-leon,agricolechoganh,1,1933,1933,gerant,gerant:1,0
+le-roy-des-barres-a,agricolechoganh,1,,,administrateur_delegue,administrateur_delegue:1,1
 saissac-e,agricolechoganh,1,1933,1933,gerant,gerant:1,0
 chavatte-l,agricolecommercialeafriqueoccidentale,1,1928,1928,administrateur,administrateur:1,1
 foulon-a,agricolecommercialeafriqueoccidentale,1,1928,1928,administrateur,administrateur:1,1
@@ -2122,6 +2124,7 @@ berti-v,agricolemaroc,2,1926,1926,administrateur,administrateur:2,1
 c-a-m-piot,agricolemaroc,1,1910,1910,administrateur,administrateur:1,1
 clerc-l,agricolemaroc,1,1910,1910,administrateur,administrateur:1,1
 cte-berti,agricolemaroc,2,1915,1958,administrateur,administrateur:2,1
+de-montalembert-a,agricolemaroc,1,1926,1926,administrateur,administrateur:1,1
 de-montatembert-a,agricolemaroc,2,1915,1958,administrateur,administrateur:2,1
 de-rouvre-c,agricolemaroc,3,1915,1975,administrateur,administrateur:3,1
 guerard-h,agricolemaroc,3,1915,1958,president,president:3,1
@@ -2129,7 +2132,7 @@ hornung-j,agricolemaroc,1,1926,1926,secretaire,secretaire:1,0
 lannes-de-montebello-l,agricolemaroc,1,1910,1910,administrateur,administrateur:1,1
 lepel-cointet-g,agricolemaroc,4,1915,1958,administrateur,administrateur:4,1
 maud-huy-c,agricolemaroc,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
-philippe-r-raymond,agricolemaroc,3,1915,1958,administrateur,administrateur:3,1
+philippe-r-raymond,agricolemaroc,4,1915,1958,administrateur,administrateur:4,1
 piot-m,agricolemaroc,4,1915,1958,administrateur_delegue,administrateur_delegue:3; administrateur:1,1
 roudy-a,agricolemaroc,3,1915,1958,administrateur,administrateur:3,1
 basset-f,agricolemarocaine,5,1922,1958,administrateur,administrateur:5,1
@@ -2464,6 +2467,7 @@ fourn-g,agricolethescafeskontum,6,1937,1948,administrateur,administrateur:6,1
 grammont,agricolethescafeskontum,1,1937,1937,administrateur,administrateur:1,1
 illif,agricolethescafeskontum,3,1937,1945,commissaire_aux_comptes,commissaire_aux_comptes:3,0
 jullien,agricolethescafeskontum,2,1937,1940,commissaire_aux_comptes,commissaire_aux_comptes:2,0
+le-gallen-m,agricolethescafeskontum,1,1925,1925,president,president:1,1
 legrand-r,agricolethescafeskontum,1,1943,1943,administrateur,administrateur:1,1
 maspero,agricolethescafeskontum,1,1938,1938,administrateur,administrateur:1,1
 maspero-g,agricolethescafeskontum,2,1937,1940,administrateur,administrateur:2,1
@@ -5216,8 +5220,10 @@ pham-van-than,autoaccessoires,1,1939,1939,directeur,directeur:1,0
 bolleli,autobusamperebehagle,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 delenne-e,autobusamperebehagle,1,1926,1926,administrateur,administrateur:1,1
 gofferteau-f,autobusamperebehagle,1,1926,1926,administrateur,administrateur:1,1
+larren-e,autobusamperebehagle,1,1926,1926,administrateur,administrateur:1,1
 millet-n,autobusamperebehagle,1,1926,1926,administrateur,administrateur:1,1
-tisch-a,autobusamperebehagle,1,1926,1926,administrateur,administrateur:1,1
+roux-t,autobusamperebehagle,1,1926,1926,administrateur,administrateur:1,1
+talagrand-c,autobusamperebehagle,1,1926,1926,president,president:1,1
 beaulieu,autocircuitsnordafricains,1,1922,1922,administrateur,administrateur:1,1
 berthodat,autocircuitsnordafricains,1,1920,1920,directeur,directeur:1,0
 borg-f,autocircuitsnordafricains,1,1922,1922,president,president:1,1
@@ -5633,29 +5639,26 @@ richards-m,bancroftminesltdcuivrerhodesie,1,1956,1956,administrateur,administrat
 robins-c,bancroftminesltdcuivrerhodesie,1,1956,1956,administrateur,administrateur:1,1
 seys-j,bancroftminesltdcuivrerhodesie,2,1956,1956,administrateur,administrateur:2,1
 a-johnston-f,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
-b-edgar-c,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
+b-edgar-c,bankbritishwestafricalimited,3,1922,1926,administrateur,administrateur:3,1
 babington-smith-h,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
 beane-f,bankbritishwestafricalimited,1,1937,1937,administrateur,administrateur:1,1
 chairman,bankbritishwestafricalimited,3,1922,1937,administrateur,administrateur:3,1
-dickinson-r,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
+de-selborne,bankbritishwestafricalimited,1,1926,1926,president,president:1,1
 e-harris-a,bankbritishwestafricalimited,1,1937,1937,administrateur,administrateur:1,1
 e-lewis-a,bankbritishwestafricalimited,1,1937,1937,administrateur,administrateur:1,1
-edgar,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
 edward-harris-a,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
 eley-bart-f,bankbritishwestafricalimited,1,1937,1937,administrateur,administrateur:1,1
 eley-f,bankbritishwestafricalimited,3,1922,1926,administrateur,administrateur:3,1
-harris-w,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
+harris-a,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
 harrisson-williams-o,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
 henriques-d,bankbritishwestafricalimited,3,1922,1926,administrateur,administrateur:3,1
 kylsant,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
 moore-w,bankbritishwestafricalimited,3,1922,1926,administrateur,administrateur:3,1
-neville-g,bankbritishwestafricalimited,3,1922,1926,administrateur,administrateur:3,1
+neville-g,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
 philipps-o,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
 r-b,bankbritishwestafricalimited,1,1937,1937,administrateur,administrateur:1,1
-selborne-e,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
-stuart,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
-stuart-m,bankbritishwestafricalimited,2,1922,1922,administrateur,administrateur:2,1
-tennant,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
+stuart-m,bankbritishwestafricalimited,3,1922,1926,administrateur,administrateur:3,1
+w-neville-g,bankbritishwestafricalimited,1,1926,1926,administrateur,administrateur:1,1
 wilson-r,bankbritishwestafricalimited,1,1937,1937,administrateur,administrateur:1,1
 gannay-p,bankeastasia,1,1921,1921,directeur,directeur:1,0
 bouee-g,banque,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
@@ -6268,8 +6271,7 @@ faudon,banquecommercialeindustrielle,1,1939,1939,administrateur,administrateur:1
 faudon-l,banquecommercialeindustrielle,1,1897,1897,administrateur,administrateur:1,1
 flersheim-f,banquecommercialeindustrielle,3,1892,1906,president,president:2; administrateur:1,1
 fournier-r-raymond,banquecommercialeindustrielle,1,1890,1890,administrateur,administrateur:1,1
-gaubert,banquecommercialeindustrielle,3,1890,1890,administrateur,administrateur:3,1
-gaubert-l,banquecommercialeindustrielle,1,1894,1894,administrateur,administrateur:1,1
+gaubert-l,banquecommercialeindustrielle,4,1890,1894,administrateur,administrateur:4,1
 genty,banquecommercialeindustrielle,2,1911,1912,president,president:2,1
 guieu,banquecommercialeindustrielle,1,1908,1908,president,president:1,1
 guieu-e,banquecommercialeindustrielle,2,1892,1903,administrateur,administrateur:2,1
@@ -7597,9 +7599,10 @@ bouilloux-laffont-m,banquemaroc,1,1926,1926,administrateur,administrateur:1,1
 bouilloux-lafont-m-marcel,banquemaroc,1,1926,1926,administrateur,administrateur:1,1
 de-boissieu-j,banquemaroc,1,1926,1926,president,president:1,1
 delmas,banquemaroc,1,1926,1926,administrateur,administrateur:1,1
+delmas-j-jean,banquemaroc,1,1926,1926,administrateur,administrateur:1,1
 delpech-j-jean,banquemaroc,2,1926,1926,president,president:1; vice_president:1,1
 ferme-g,banquemaroc,2,1926,1926,administrateur,administrateur:2,1
-guesde-p,banquemaroc,2,1923,1926,administrateur,administrateur:2,1
+guesde-p,banquemaroc,3,1923,1926,administrateur,administrateur:3,1
 hecquet-g,banquemaroc,1,1926,1926,administrateur,administrateur:1,1
 jean-delpech,banquemaroc,1,1923,1923,administrateur_delegue,administrateur_delegue:1,1
 petit-c,banquemaroc,2,1926,1926,president,president:2,1
@@ -9986,7 +9989,7 @@ hommel,brasseriesglacieresindochine,6,1929,1948,administrateur,administrateur:5;
 hommel-m,brasseriesglacieresindochine,5,1887,1971,administrateur,administrateur:5,1
 imp-paris,brasseriesglacieresindochine,1,1949,1949,administrateur,administrateur:1,1
 kieffer,brasseriesglacieresindochine,1,1957,1957,administrateur,administrateur:1,1
-le-bret-j,brasseriesglacieresindochine,9,1887,1948,administrateur_delegue,administrateur_delegue:3; administrateur:3; directeur:2; president:1,1
+le-bret-j,brasseriesglacieresindochine,10,1887,1948,administrateur_delegue,administrateur_delegue:4; administrateur:3; directeur:2; president:1,1
 lepervanche,brasseriesglacieresindochine,1,1957,1957,administrateur,administrateur:1,1
 morax,brasseriesglacieresindochine,1,1951,1951,administrateur,administrateur:1,1
 palanque,brasseriesglacieresindochine,1,1929,1929,administrateur,administrateur:1,1
@@ -10041,7 +10044,7 @@ patin-de-saulcourt-g,brasseriesmaroc,2,1922,1926,commissaire_aux_comptes,commiss
 petit-p-paul,brasseriesmaroc,2,1924,1926,administrateur,administrateur:2,1
 pierre-l,brasseriesmaroc,3,1937,1969,administrateur,administrateur:3,1
 professeur-a-l-ecole-de-brasserie-de-nancy,brasseriesmaroc,1,1921,1921,administrateur,administrateur:1,1
-roudy-a,brasseriesmaroc,7,1913,1969,administrateur,administrateur:7,1
+roudy-a,brasseriesmaroc,8,1913,1969,administrateur,administrateur:8,1
 sautter,brasseriesmaroc,1,1921,1921,president,president:1,1
 sautter-r,brasseriesmaroc,5,1913,1926,president,president:3; administrateur:2,1
 sicot-l,brasseriesmaroc,3,1951,1969,administrateur,administrateur:3,1
@@ -11524,7 +11527,7 @@ hebrard-a,carolenquetecoloniale,1,1901,1901,directeur,directeur:1,0
 higginson-j,carolenquetecoloniale,1,1899,1899,administrateur,administrateur:1,1
 fortier,carrieresalgeroises,1,1931,1931,administrateur,administrateur:1,1
 gaudiani-a,carrieresalgeroises,1,1931,1931,vice_president,vice_president:1,1
-jouvet-a,carrieresalgeroises,1,1931,1931,administrateur,administrateur:1,1
+jouvet,carrieresalgeroises,1,1931,1931,administrateur,administrateur:1,1
 maury,carrieresalgeroises,1,1931,1931,administrateur,administrateur:1,1
 perchot-j,carrieresalgeroises,1,1931,1931,president,president:1,1
 vinson-j,carrieresalgeroises,1,1931,1931,vice_president,vice_president:1,1
@@ -12731,6 +12734,7 @@ guerin-f-felix,charbonnagesdongtrieu,1,,,directeur,directeur:1,0
 harth-p,charbonnagesdongtrieu,1,1890,1890,administrateur,administrateur:1,1
 hergault-e,charbonnagesdongtrieu,3,,,president,president:3,1
 lannegrace-c,charbonnagesdongtrieu,4,1937,1947,administrateur_delegue,administrateur_delegue:2; commissaire_aux_comptes:1; administrateur:1,1
+le-gac-de-lansalut-c,charbonnagesdongtrieu,1,,,administrateur,administrateur:1,1
 maljean-g,charbonnagesdongtrieu,2,1890,1915,administrateur,administrateur:2,1
 merigeault-e,charbonnagesdongtrieu,3,1890,1938,administrateur,administrateur:1; administrateur_delegue:1; president:1,1
 moreau-defarges-j,charbonnagesdongtrieu,3,1950,1971,administrateur,administrateur:2; commissaire_aux_comptes:1,1
@@ -12899,7 +12903,7 @@ chretien-a,charbonnagestuyenquang,7,1931,1971,administrateur,administrateur:6; p
 couteau,charbonnagestuyenquang,2,1937,1948,commissaire_aux_comptes,commissaire_aux_comptes:1; administrateur:1,1
 dubreuilh-c,charbonnagestuyenquang,1,1931,1931,administrateur,administrateur:1,1
 eckert-l,charbonnagestuyenquang,2,1951,1971,administrateur,administrateur:2,1
-le-roy-des-barres-a,charbonnagestuyenquang,1,1931,1931,administrateur,administrateur:1,1
+le-roy-des-barres-a,charbonnagestuyenquang,2,1931,1931,administrateur,administrateur:2,1
 mazet-c,charbonnagestuyenquang,4,1931,1945,administrateur,administrateur:4,1
 nenard-r,charbonnagestuyenquang,2,1951,1971,vice_president,vice_president:2,1
 sauvage-f,charbonnagestuyenquang,3,1931,1937,president,president:2; administrateur:1,1
@@ -15269,6 +15273,7 @@ nazelle-marquis-herard-du-cauze-de-ep-helene-eme-d,clicquotponsardinbertrandmun1
 planta-baronne-kirgener-denee-mathilde-de-cauze-de,clicquotponsardinbertrandmun1986rachatparvuitton1987fusion,1,1956,1956,administrateur,administrateur:1,1
 vogue-ctesse-bertrand-denee-simone-de-mun,clicquotponsardinbertrandmun1986rachatparvuitton1987fusion,1,1956,1956,administrateur,administrateur:1,1
 artin,cliniquesaintpaul,1,1938,1938,president,president:1,1
+le-roy-des-barres-a,cliniquesaintpaul,1,,,directeur,directeur:1,0
 l-agriculture,clossaintgeorges,1,1937,1937,gerant,gerant:1,0
 brun-buisson,clubnautiquehaiphong,1,1934,1934,president,president:1,1
 roque,clubnautiquehaiphong,1,1911,1911,president,president:1,1
@@ -17685,8 +17690,8 @@ bellia-f,comptoirescompterelizane,1,1926,1926,administrateur,administrateur:1,1
 berone-f,comptoirescompterelizane,1,1926,1926,conseil_surveillance,conseil_surveillance:1,1
 esclapez-v,comptoirescompterelizane,1,1926,1926,administrateur,administrateur:1,1
 foucard-p,comptoirescompterelizane,1,1926,1926,administrateur,administrateur:1,1
-gaubert-f,comptoirescompterelizane,1,1926,1926,administrateur,administrateur:1,1
-riviere-d,comptoirescompterelizane,1,1926,1926,administrateur,administrateur:1,1
+pralavorio-c,comptoirescompterelizane,1,1926,1926,president,president:1,1
+riviere-d,comptoirescompterelizane,1,1926,1926,president,president:1,1
 bellat-l,comptoirescomptesidibelabbes,1,1926,1926,administrateur,administrateur:1,1
 caizergues-a,comptoirescomptesidibelabbes,1,1926,1926,administrateur,administrateur:1,1
 duvivier-e,comptoirescomptesidibelabbes,1,1926,1926,administrateur,administrateur:1,1
@@ -17982,6 +17987,9 @@ monnet-g,comptoirproduitsafricains,2,1949,1953,administrateur,administrateur:2,1
 tournadour-p,comptoirproduitsafricains,2,1949,1953,administrateur,administrateur:2,1
 duplan,comptoirproduitsceramiques,1,1926,1926,administrateur,administrateur:1,1
 duplan-c,comptoirproduitsceramiques,1,1926,1926,administrateur,administrateur:1,1
+ferrando-e,comptoirproduitsceramiques,1,1926,1926,administrateur,administrateur:1,1
+ferrando-h,comptoirproduitsceramiques,1,1926,1926,administrateur,administrateur:1,1
+ferrando-m,comptoirproduitsceramiques,2,1926,1926,administrateur,administrateur:2,1
 bourdon-g,comptoirproduitscoloniaux,2,1906,1906,administrateur,administrateur:2,1
 creutz-p,comptoirproduitscoloniaux,1,,,administrateur,administrateur:1,1
 groetaers-l,comptoirproduitscoloniaux,2,1906,1906,administrateur,administrateur:2,1
@@ -17994,9 +18002,9 @@ richard-e,comptoirrepresentationsafrique,1,1975,1975,administrateur,administrate
 richard-m-marius,comptoirrepresentationsafrique,1,1975,1975,president,president:1,1
 viriville-g,comptoirrepresentationsafrique,1,1975,1975,administrateur,administrateur:1,1
 bozon-verduraz-b,comptoirsachatblesdursalgeriens,1,1926,1926,administrateur,administrateur:1,1
-delacroix-r,comptoirsachatblesdursalgeriens,1,1926,1926,administrateur,administrateur:1,1
 giry-a,comptoirsachatblesdursalgeriens,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 hunebelle-a,comptoirsachatblesdursalgeriens,1,1926,1926,administrateur,administrateur:1,1
+hunebelle-e,comptoirsachatblesdursalgeriens,1,1926,1926,administrateur,administrateur:1,1
 karsenti-m,comptoirsachatblesdursalgeriens,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 oudy-p,comptoirsachatblesdursalgeriens,1,1926,1926,administrateur,administrateur:1,1
 alquie-a,comptoirsafricains,1,1921,1921,administrateur,administrateur:1,1
@@ -18136,7 +18144,7 @@ usal-r,comptoirsgenerauxguyane,1,1927,1927,administrateur,administrateur:1,1
 association,comptoirsgenerauxindochine,1,,,president,president:1,1
 baffeleuf,comptoirsgenerauxindochine,1,1927,1927,administrateur,administrateur:1,1
 baffeleuf-a,comptoirsgenerauxindochine,1,1926,1926,administrateur,administrateur:1,1
-becker-r,comptoirsgenerauxindochine,2,1900,1951,administrateur,administrateur:2,1
+becker-r-roger,comptoirsgenerauxindochine,2,1900,1951,administrateur,administrateur:2,1
 bernard-f,comptoirsgenerauxindochine,1,1926,1926,administrateur,administrateur:1,1
 bertrand-e,comptoirsgenerauxindochine,2,1938,1938,administrateur_delegue,administrateur_delegue:2,1
 brondeau-l,comptoirsgenerauxindochine,2,1900,1951,administrateur,administrateur:2,1
@@ -18584,7 +18592,7 @@ scef,conservesfedalasardineriecascadec,1,1969,1969,administrateur,administrateur
 sfan,conservesfedalasardineriecascadec,1,1969,1969,administrateur,administrateur:1,1
 beaujon-a,conservesfedhala,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 beziers-r,conservesfedhala,2,1926,1926,administrateur,administrateur:2,1
-hersent-g-gilbert,conservesfedhala,1,1926,1926,administrateur,administrateur:1,1
+hersent-j,conservesfedhala,1,1926,1926,administrateur,administrateur:1,1
 a-s,conservesmaroc,1,1930,1930,administrateur,administrateur:1,1
 attal,conservesmaroc,1,1930,1930,administrateur,administrateur:1,1
 blanchy,conservesmaroc,1,1930,1930,administrateur,administrateur:1,1
@@ -18603,6 +18611,7 @@ descas-c,conservesmazagan,1,1926,1926,administrateur,administrateur:1,1
 descas-r,conservesmazagan,1,1926,1926,administrateur,administrateur:1,1
 ginestet-f,conservesmazagan,1,1926,1926,administrateur,administrateur:1,1
 magnaschi-e,conservesmazagan,1,1926,1926,administrateur,administrateur:1,1
+thevenot-h,conservesmazagan,1,1926,1926,administrateur,administrateur:1,1
 boucher-e,consolidatedgoldfieldsivorycoast,1,1903,1903,administrateur,administrateur:1,1
 cawston-g,consolidatedgoldfieldsivorycoast,1,1903,1903,administrateur,administrateur:1,1
 dudley-ryder-j,consolidatedgoldfieldsivorycoast,1,1903,1903,administrateur,administrateur:1,1
@@ -19361,7 +19370,9 @@ loisy,cotonniereadana,1,1920,1920,administrateur,administrateur:1,1
 regnault,cotonniereadana,1,1920,1920,administrateur,administrateur:1,1
 belleville-j,cotonniereagricoletolga,1,1926,1926,administrateur,administrateur:1,1
 buchere-e,cotonniereagricoletolga,1,1926,1926,administrateur_delegue,administrateur_delegue:1,1
+crepieux-jamin-j,cotonniereagricoletolga,1,1926,1926,president,president:1,1
 lion-c,cotonniereagricoletolga,1,1926,1926,president,president:1,1
+lucas-c,cotonniereagricoletolga,1,1926,1926,administrateur,administrateur:1,1
 brisson-g,cotonnierebonoise,1,1926,1926,administrateur,administrateur:1,1
 deyme-l,cotonnierebonoise,1,1926,1926,administrateur,administrateur:1,1
 dreux-a-antoine,cotonnierebonoise,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
@@ -20726,7 +20737,7 @@ guerin-j-jean,creditfonciermadagascar,2,1931,1932,administrateur,administrateur:
 guiraud-j-jules,creditfonciermadagascar,1,1951,1951,president,president:1,1
 l-amiral-lacaze,creditfonciermadagascar,2,1933,1933,administrateur,administrateur:2,1
 lacaze-l,creditfonciermadagascar,2,1937,1937,administrateur,administrateur:2,1
-le-gallen-m,creditfonciermadagascar,1,1937,1937,administrateur,administrateur:1,1
+le-gallen-m,creditfonciermadagascar,2,1935,1937,administrateur,administrateur:2,1
 lebon-a,creditfonciermadagascar,3,1929,1933,administrateur,administrateur:2; president:1,1
 lebon-a-andre,creditfonciermadagascar,9,1922,1933,president,president:7; administrateur:2,1
 lescot-m,creditfonciermadagascar,8,1925,1938,administrateur,administrateur:8,1
@@ -22428,6 +22439,7 @@ sigaut-e,directionchine,1,1887,1887,administrateur,administrateur:1,1
 speelman-m,directionchine,1,1887,1887,administrateur,administrateur:1,1
 aristide-v,directionsantetonkin,1,1912,1912,administrateur,administrateur:1,1
 gouzien,directionsantetonkin,1,1910,1910,directeur,directeur:1,0
+le-roy-des-barres-a,directionsantetonkin,1,,,directeur,directeur:1,0
 peralle,directionsantetonkin,1,1918,1918,directeur,directeur:1,0
 derre,disponible,1,1931,1931,administrateur,administrateur:1,1
 michel-c,disponible,1,1931,1931,administrateur,administrateur:1,1
@@ -23630,6 +23642,7 @@ jacobi-j,eauxmineralesvalsstjean,1,1956,1956,administrateur,administrateur:1,1
 pellorce-h,eauxmineralesvalsstjean,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 sauzey-m,eauxmineralesvalsstjean,1,1956,1956,administrateur,administrateur:1,1
 verreries-de-vals,eauxmineralesvalsstjean,1,1956,1956,administrateur,administrateur:1,1
+le-roy-des-barres-a,eauxmineralesvinhhao,1,,,president,president:1,1
 mimault,eauxmineralesvinhhao,1,1941,1941,gerant,gerant:1,0
 bouloumie-m,eauxmineralesvittel,1,1956,1956,president_directeur_general,president_directeur_general:1,1
 chavane-h,eauxmineralesvittel,1,1956,1956,administrateur,administrateur:1,1
@@ -23734,6 +23747,7 @@ lavedan,ecolefillesannamites,1,1910,1910,directeur,directeur:1,0
 loisy,ecolefillesannamites,1,1910,1910,directeur,directeur:1,0
 tirard,ecolefillesannamites,1,1913,1913,directeur,directeur:1,0
 capus,ecolemedecine,1,1902,1902,directeur_general,directeur_general:1,0
+le-roy-des-barres-a,ecolemedecine,1,1929,1929,directeur,directeur:1,0
 aude-r,ecoleprofessionnelle,3,1938,1939,directeur,directeur:3,0
 bouchet-a,ecoleprofessionnelle,1,1933,1933,administrateur,administrateur:1,1
 butin,ecoleprofessionnelle,3,1900,1900,directeur,directeur:3,0
@@ -26563,7 +26577,7 @@ jard-r,etainsindochine,1,1956,1956,commissaire_aux_comptes,commissaire_aux_compt
 kirch-a,etainsindochine,1,1937,1937,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 klein-v,etainsindochine,2,1937,1940,commissaire_aux_comptes,commissaire_aux_comptes:2,0
 le-dr-auguste-salathe,etainsindochine,1,1928,1928,president,president:1,1
-le-gallen-m,etainsindochine,1,1938,1938,administrateur,administrateur:1,1
+le-gallen-m,etainsindochine,2,1926,1938,administrateur,administrateur:2,1
 le-trocquer-y,etainsindochine,2,1926,1955,administrateur,administrateur:2,1
 leon-belugou,etainsindochine,2,1929,1930,president,president:2,1
 lesache-v,etainsindochine,1,1936,1936,administrateur,administrateur:1,1
@@ -27786,6 +27800,7 @@ rebuftel-c,etudesengraisazotesindochinechuteda,1,1937,1937,administrateur,admini
 arbelot-g,etudesengraisazotesindochinechutedanhim,1,1928,1928,administrateur,administrateur:1,1
 herbette-f,etudesengraisazotesindochinechutedanhim,1,1928,1928,administrateur,administrateur:1,1
 le-bret-g-gabriel,etudesengraisazotesindochinechutedanhim,1,1928,1928,administrateur,administrateur:1,1
+le-bret-j,etudesengraisazotesindochinechutedanhim,1,,,administrateur,administrateur:1,1
 rebuffel-c,etudesengraisazotesindochinechutedanhim,1,1928,1928,administrateur,administrateur:1,1
 bahier-l,etudesentreprises,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 bouisset-l,etudesentreprises,1,1956,1956,administrateur,administrateur:1,1
@@ -28154,6 +28169,7 @@ heurteau-c,etudesminieresindochine,1,1912,1912,administrateur,administrateur:1,1
 heurteau-e,etudesminieresindochine,1,1912,1912,administrateur,administrateur:1,1
 laforgue-a,etudesminieresindochine,1,1911,1911,administrateur,administrateur:1,1
 laforgue-du-boleo-cuivre-au-mexique-c,etudesminieresindochine,1,1912,1912,administrateur,administrateur:1,1
+le-bret-j,etudesminieresindochine,1,1911,1911,administrateur,administrateur:1,1
 lecocq,etudesminieresindochine,1,1906,1906,administrateur,administrateur:1,1
 re,etudesminieresindochine,1,1906,1906,administrateur,administrateur:1,1
 renard,etudesminieresindochine,1,1906,1906,administrateur,administrateur:1,1
@@ -29712,6 +29728,7 @@ perroud,filteriesindochine,1,1937,1937,administrateur,administrateur:1,1
 thiery,filteriesindochine,1,1937,1937,administrateur,administrateur:1,1
 anceret-c,filtreriefrancoalgerienne,1,1922,1922,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 avinda-fontis-pereira-de-millo,filtreriefrancoalgerienne,1,,,administrateur,administrateur:1,1
+becker-r-rene,filtreriefrancoalgerienne,1,1926,1926,administrateur,administrateur:1,1
 boiron-j,filtreriefrancoalgerienne,4,1929,1933,administrateur,administrateur:4,1
 carlos-de-vasconcellos-a,filtreriefrancoalgerienne,2,1926,1926,administrateur,administrateur:2,1
 carlos-de-vasconcellos-pereira,filtreriefrancoalgerienne,1,1922,1922,administrateur,administrateur:1,1
@@ -30065,6 +30082,7 @@ degournay-f,financieremetropolecolonies,4,1928,1932,vice_president,vice_presiden
 dejean,financieremetropolecolonies,3,1928,1932,administrateur,administrateur:2; directeur_general:1,1
 g-de-fommervault,financieremetropolecolonies,1,1928,1928,administrateur_delegue,administrateur_delegue:1,1
 gaston-pasqueron-de-fommervault,financieremetropolecolonies,1,1928,1928,president,president:1,1
+le-gallen-m,financieremetropolecolonies,1,,,administrateur,administrateur:1,1
 off-legion-d-honneur,financieremetropolecolonies,1,1928,1928,administrateur,administrateur:1,1
 de-charbonniere-g,financieremoghreb,1,1926,1926,administrateur,administrateur:1,1
 de-charbonniere-r-roger,financieremoghreb,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
@@ -30312,7 +30330,7 @@ labbe-j,foncierecambodge,2,1930,1937,administrateur,administrateur:2,1
 laborne,foncierecambodge,1,1929,1929,directeur,directeur:1,0
 lambert,foncierecambodge,2,1930,1931,directeur,directeur:2,0
 lambert-c,foncierecambodge,2,1929,1937,directeur,directeur:1; president:1,1
-le-gallen-m,foncierecambodge,1,1937,1937,administrateur,administrateur:1,1
+le-gallen-m,foncierecambodge,2,1927,1937,administrateur,administrateur:2,1
 maspero-g,foncierecambodge,3,1927,1937,administrateur,administrateur:3,1
 matton-e,foncierecambodge,3,1937,1945,commissaire_aux_comptes,commissaire_aux_comptes:3,0
 outrey-e,foncierecambodge,5,1927,1937,administrateur,administrateur:3; administrateur_delegue:2,1
@@ -33336,15 +33354,16 @@ andre,genestalafrique,1,1949,1949,gerant,gerant:1,0
 genestal-o,genestalafrique,1,1949,1949,gerant,gerant:1,0
 achard-a,genevoisecoloniessuissessetif,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 audeoud-f,genevoisecoloniessuissessetif,2,1922,1924,administrateur_delegue,administrateur_delegue:2,1
-bordier-e,genevoisecoloniessuissessetif,1,1924,1924,administrateur,administrateur:1,1
+bordier-e,genevoisecoloniessuissessetif,2,1922,1924,administrateur,administrateur:2,1
 chevallier-a,genevoisecoloniessuissessetif,1,1924,1924,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 cosset,genevoisecoloniessuissessetif,1,1921,1921,directeur,directeur:1,0
 de-marignac-a,genevoisecoloniessuissessetif,2,1922,1924,president,president:2,1
 de-marignac-c,genevoisecoloniessuissessetif,1,1924,1924,administrateur,administrateur:1,1
 decrue-d,genevoisecoloniessuissessetif,2,1922,1924,administrateur,administrateur:2,1
-dominice-f,genevoisecoloniessuissessetif,1,1924,1924,administrateur,administrateur:1,1
+dominice-f,genevoisecoloniessuissessetif,2,1922,1924,administrateur,administrateur:2,1
 fermaud-g,genevoisecoloniessuissessetif,1,1924,1924,administrateur,administrateur:1,1
 guery-a,genevoisecoloniessuissessetif,1,1924,1924,commissaire_aux_comptes,commissaire_aux_comptes:1,0
+lombard-j,genevoisecoloniessuissessetif,2,1922,1924,administrateur,administrateur:2,1
 rey-a-albert,genevoisecoloniessuissessetif,1,1889,1889,president,president:1,1
 sautter-e-edgar,genevoisecoloniessuissessetif,2,1922,1924,president,president:2,1
 guigibert-a,genin,1,1932,1932,administrateur,administrateur:1,1
@@ -36497,6 +36516,8 @@ mussard-r,immobilierebriqueterie,1,1926,1926,administrateur_delegue,administrate
 perriquet-c,immobilierebriqueterie,1,1926,1926,president,president:1,1
 waddington-r,immobilierebriqueterie,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 a-salvador-c,immobilierecasablanca,1,1926,1926,administrateur,administrateur:1,1
+alphen-salvador-c,immobilierecasablanca,1,1926,1926,administrateur,administrateur:1,1
+bassuet-m,immobilierecasablanca,1,1926,1926,administrateur,administrateur:1,1
 cointet-l,immobilierecasablanca,1,1915,1915,administrateur,administrateur:1,1
 fabre,immobilierecasablanca,1,1915,1915,administrateur,administrateur:1,1
 fribourg-p,immobilierecasablanca,1,,,administrateur,administrateur:1,1
@@ -36512,6 +36533,7 @@ piot,immobilierecasablanca,1,1915,1915,administrateur,administrateur:1,1
 piot-m,immobilierecasablanca,5,1920,1950,administrateur_delegue,administrateur_delegue:5,1
 prince-de-carini,immobilierecasablanca,2,1920,1950,administrateur,administrateur:2,1
 salvador-a,immobilierecasablanca,2,1920,1950,administrateur,administrateur:2,1
+salvador-c,immobilierecasablanca,1,1924,1924,administrateur,administrateur:1,1
 sautter,immobilierecasablanca,1,1915,1915,administrateur,administrateur:1,1
 van-den-ven-p,immobilierecasablanca,2,1926,1926,administrateur,administrateur:2,1
 braunschwig-p,immobilierecasablancamaroc,1,1935,1935,administrateur,administrateur:1,1
@@ -38077,7 +38099,7 @@ marcilhacy-j,induspfabantibiotiquessifa,1,1956,1956,administrateur,administrateu
 pitavino-martial,induspfabantibiotiquessifa,1,1956,1956,administrateur,administrateur:1,1
 arnault-de-quillacq,industriebois,1,1922,1922,president,president:1,1
 brissonnet-e-edgard,industriebois,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
-chavrondier-e,industriebois,1,1926,1926,administrateur,administrateur:1,1
+chavrondier-e,industriebois,2,1922,1926,administrateur,administrateur:2,1
 jomiau-e,industriebois,2,1922,1926,administrateur,administrateur:2,1
 lorenzi-c,industriebois,1,1922,1922,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 olivier-p-paul,industriebois,1,1922,1922,administrateur,administrateur:1,1
@@ -42084,7 +42106,7 @@ costa,manufactureopiumruepaulblanchy,1,1896,1896,directeur,directeur:1,0
 greterin,manufactureopiumruepaulblanchy,1,1889,1889,directeur,directeur:1,0
 gubiand,manufactureopiumruepaulblanchy,1,1896,1896,directeur,directeur:1,0
 becker,manufacturesindochinoisescigarettes,1,1948,1948,administrateur,administrateur:1,1
-becker-r,manufacturesindochinoisescigarettes,2,1951,1971,administrateur,administrateur:2,1
+becker-r-roger,manufacturesindochinoisescigarettes,2,1951,1971,administrateur,administrateur:2,1
 bernard-f,manufacturesindochinoisescigarettes,1,1929,1929,president,president:1,1
 biron-l,manufacturesindochinoisescigarettes,3,1948,1971,administrateur,administrateur:3,1
 brilmann-f,manufacturesindochinoisescigarettes,1,1938,1938,directeur,directeur:1,0
@@ -44807,6 +44829,7 @@ vieillot,minaspedrazziniminaspedrazzinigoldsilverminingcymexique,1,1956,1956,adm
 gaz-valendis-freres-b,minassian,1,1926,1926,administrateur,administrateur:1,1
 savon-l,minassian,1,1926,1926,administrateur,administrateur:1,1
 bernhard,minearmoriquetule,1,1931,1931,administrateur_delegue,administrateur_delegue:1,1
+le-roy-des-barres-a,minearmoriquetule,1,,,president,president:1,1
 baffeleuf-f,mineorpaclan,1,1925,1925,administrateur,administrateur:1,1
 daurelle-r,mineorpaclan,2,1925,1926,administrateur,administrateur:2,1
 rene-daurelle,mineorpaclan,1,1929,1929,administrateur,administrateur:1,1
@@ -48053,7 +48076,7 @@ ferasson-l-louis,minieremarocaine,1,1937,1937,president,president:1,1
 gendre-e,minieremarocaine,1,1937,1937,administrateur,administrateur:1,1
 gruenbalt-k,minieremarocaine,1,1937,1937,administrateur,administrateur:1,1
 salvane-l,minieremarocaine,1,1937,1937,administrateur,administrateur:1,1
-gaubert,minieremarocoriental,1,1934,1934,administrateur,administrateur:1,1
+gaubert-l,minieremarocoriental,1,1934,1934,administrateur,administrateur:1,1
 imp-jules-simon-sa,minieremarocoriental,1,1929,1929,administrateur,administrateur:1,1
 brugidou,minieremetallurgique,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 cherrier-m,minieremetallurgique,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
@@ -48091,7 +48114,7 @@ hauzeur-l,minieremetallurgiqueindochine,4,1915,1955,administrateur,administrateu
 jeancard-p,minieremetallurgiqueindochine,2,1915,1915,administrateur,administrateur:2,1
 jouffroy-h,minieremetallurgiqueindochine,2,1956,1971,administrateur,administrateur:2,1
 le-bret-ingenieur-civil-des-mines-j,minieremetallurgiqueindochine,1,1915,1915,administrateur,administrateur:1,1
-le-bret-j,minieremetallurgiqueindochine,3,1925,1955,president,president:2; administrateur:1,1
+le-bret-j,minieremetallurgiqueindochine,4,1925,1955,administrateur,administrateur:2; president:2,1
 lecuvre-f,minieremetallurgiqueindochine,4,1915,1955,administrateur,administrateur:2; president:2,1
 ledoux-f,minieremetallurgiqueindochine,5,1915,1971,president,president:5,1
 leon-h,minieremetallurgiqueindochine,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
@@ -50653,17 +50676,17 @@ miniere-bouvenberg,nordlorraine,1,1938,1938,administrateur,administrateur:1,1
 richard-a,nordlorraine,1,1938,1938,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 thomas,nordlorraine,1,1938,1938,administrateur,administrateur:1,1
 villain-f,nordlorraine,1,1938,1938,administrateur,administrateur:1,1
-ancey-c,nordmarocain,2,1913,1922,administrateur,administrateur:2,1
+ancey-c,nordmarocain,3,1913,1922,administrateur,administrateur:3,1
 ant-cauvin,nordmarocain,2,1913,1922,administrateur,administrateur:2,1
 auclaire-j,nordmarocain,2,1924,1926,commissaire_aux_comptes,commissaire_aux_comptes:2,0
 bagnis-g,nordmarocain,3,1913,1922,administrateur,administrateur:3,1
-barbecot-g,nordmarocain,2,1913,1922,administrateur,administrateur:2,1
+barbecot-g,nordmarocain,3,1913,1922,administrateur,administrateur:3,1
 berenger-e,nordmarocain,2,1922,1924,administrateur,administrateur:2,1
-brunet-e,nordmarocain,1,1924,1924,administrateur,administrateur:1,1
+brunet-e,nordmarocain,2,1922,1924,administrateur,administrateur:2,1
 cauvin-a,nordmarocain,4,1922,1926,administrateur,administrateur:3; administrateur_delegue:1,1
 charbonnel-l-louis,nordmarocain,6,1913,1937,administrateur,administrateur:6,1
 de-mari-h,nordmarocain,1,1937,1937,administrateur,administrateur:1,1
-deragne-j,nordmarocain,4,1913,1926,administrateur,administrateur:4,1
+deragne-j,nordmarocain,5,1913,1926,administrateur,administrateur:5,1
 eug-berenger,nordmarocain,3,1913,1926,administrateur,administrateur:3,1
 eug-brunet,nordmarocain,3,1913,1926,administrateur,administrateur:3,1
 giraud-j,nordmarocain,3,1922,1926,commissaire_aux_comptes,commissaire_aux_comptes:3,0
@@ -52143,7 +52166,7 @@ hersent,ouenza,2,1914,1922,administrateur,administrateur:2,1
 hersent-g,ouenza,2,1945,1948,administrateur,administrateur:2,1
 hersent-j,ouenza,3,1925,1940,president,president:2; administrateur:1,1
 j-b,ouenza,1,1914,1914,administrateur,administrateur:1,1
-jouvet-a,ouenza,1,1940,1940,administrateur,administrateur:1,1
+jouvet,ouenza,1,1940,1940,administrateur,administrateur:1,1
 kroller,ouenza,2,1914,1922,administrateur,administrateur:2,1
 kroller-a,ouenza,1,1925,1925,president,president:1,1
 lafon-gabriel,ouenza,1,1956,1956,administrateur,administrateur:1,1
@@ -53183,6 +53206,7 @@ goupillon,patronagelaiquecochinchinois,3,1929,1931,president,president:3,1
 ho-van-trung,patronagelaiquecochinchinois,1,1956,1956,president,president:1,1
 humbert-hesse,patronagelaiquecochinchinois,1,1924,1924,directeur,directeur:1,0
 lafuste,patronagelaiquecochinchinois,1,1922,1922,directeur,directeur:1,0
+le-bret-g-georges,patronagelaiquecochinchinois,1,1922,1922,president,president:1,1
 lebrun,patronagelaiquecochinchinois,1,1922,1922,administrateur,administrateur:1,1
 marquis-e,patronagelaiquecochinchinois,1,1924,1924,president,president:1,1
 nguyen-van-loi,patronagelaiquecochinchinois,1,1956,1956,directeur,directeur:1,0
@@ -57372,6 +57396,7 @@ taron-e,rizeriemoderne,1,1890,1890,administrateur_delegue,administrateur_delegue
 thesmar-j,rizeriemoderne,1,1890,1890,administrateur,administrateur:1,1
 renault,rizerienguyenchieuthongbinhdong,1,1930,1930,administrateur,administrateur:1,1
 tholance-a,rizerienguyenchieuthongbinhdong,1,1923,1923,president,president:1,1
+le-bret-j,rizeriesaigonnaise,1,1927,1927,administrateur,administrateur:1,1
 alcan-p,rizeriesannamcentral,1,1956,1956,administrateur,administrateur:1,1
 ellies-g,rizeriesannamtonkin,1,,,administrateur,administrateur:1,1
 a-gavoty-c,rizeriesextremeorient,1,1927,1927,administrateur,administrateur:1,1
@@ -57973,13 +57998,9 @@ popelin-r,sagagerancearmement,1,1956,1956,administrateur,administrateur:1,1
 retail-l,sagagerancearmement,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 sigmann-prothschild,sagagerancearmement,1,1956,1956,administrateur,administrateur:1,1
 thielland-j,sagagerancearmement,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
-benoit-p,sahella,1,1926,1926,administrateur,administrateur:1,1
-bucoskist,sahella,1,1926,1926,administrateur,administrateur:1,1
-cavalier,sahella,1,1926,1926,administrateur,administrateur:1,1
 cavelier-f,sahella,1,1926,1926,administrateur,administrateur:1,1
 guichard-v,sahella,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 painleve-a,sahella,1,1926,1926,administrateur,administrateur:1,1
-rte-du-havre,sahella,1,1926,1926,administrateur,administrateur:1,1
 canavaggio,saigon,1,1907,1907,president,president:1,1
 la-station-de-l-indo-chine,saigon,1,1879,1879,president,president:1,1
 cahuzac-a,saigondecorticageblanchissageriz,1,1880,1880,administrateur,administrateur:1,1
@@ -58060,6 +58081,8 @@ goyard-j,saintelieadieuvat,1,1928,1928,president,president:1,1
 boutrouille-a,saintelieadieuvatsn,1,1956,1956,administrateur,administrateur:1,1
 comet-p,saintelieadieuvatsn,1,1956,1956,president_directeur_general,president_directeur_general:1,1
 foissy-g,saintelieadieuvatsn,1,1956,1956,administrateur,administrateur:1,1
+messa-s,sainteolive,1,1926,1926,administrateur_delegue,administrateur_delegue:1,1
+rey-a-antonio,sainteolive,1,1926,1926,president,president:1,1
 dupont-m,saintfreres,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 garancher-h,saintfreres,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 kruer-r,saintfreres,1,1956,1956,administrateur,administrateur:1,1
@@ -62854,6 +62877,7 @@ brachanet-l,tonnelleriesmodernes,1,1922,1922,administrateur,administrateur:1,1
 de-raffin-e,tonnelleriesmodernes,1,1926,1926,administrateur,administrateur:1,1
 delbays-e,tonnelleriesmodernes,2,1922,1926,administrateur,administrateur:1; president:1,1
 delrieu-e-ernest,tonnelleriesmodernes,1,1926,1926,administrateur,administrateur:1,1
+jouvet-g,tonnelleriesmodernes,1,1926,1926,administrateur,administrateur:1,1
 lebailly-l,tonnelleriesmodernes,1,1922,1922,administrateur,administrateur:1,1
 narbonne-j,tonnelleriesmodernes,2,1922,1926,administrateur,administrateur:1; president:1,1
 parguey-v,tonnelleriesmodernes,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
@@ -66236,6 +66260,7 @@ gambero-h,usinesfrichardemboutissagechauronnerie,1,1956,1956,commissaire_aux_com
 mugnier-p,usinesfrichardemboutissagechauronnerie,1,1956,1956,administrateur,administrateur:1,1
 rose-r,usinesfrichardemboutissagechauronnerie,1,1956,1956,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 soyer-f,usinesfrichardemboutissagechauronnerie,1,1956,1956,administrateur,administrateur:1,1
+auday-m,usinesgrandsocco,1,1926,1926,administrateur,administrateur:1,1
 boffe-s,usinesgrandsocco,1,1926,1926,administrateur,administrateur:1,1
 ettedgui-i,usinesgrandsocco,1,1926,1926,administrateur,administrateur:1,1
 s-akerir-m,usinesgrandsocco,1,1926,1926,administrateur,administrateur:1,1
@@ -66949,7 +66974,7 @@ barrier-g,voyageshotelsnordafricains,2,1925,1926,administrateur,administrateur:1
 cangardel-h,voyageshotelsnordafricains,1,1937,1937,president,president:1,1
 dal-piaz-j,voyageshotelsnordafricains,2,1925,1926,administrateur,administrateur:1; president:1,1
 david-r,voyageshotelsnordafricains,1,1937,1937,administrateur,administrateur:1,1
-ferrando-h,voyageshotelsnordafricains,1,1926,1926,president,president:1,1
+ferrando,voyageshotelsnordafricains,1,1926,1926,president,president:1,1
 gilles-h,voyageshotelsnordafricains,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
 guerin-a,voyageshotelsnordafricains,1,1937,1937,administrateur,administrateur:1,1
 guerin-a-albert,voyageshotelsnordafricains,1,1926,1926,president,president:1,1
@@ -67081,6 +67106,7 @@ pinon-f,warotfreres,1,1926,1926,administrateur,administrateur:1,1
 quigneaux-a,warotfreres,1,1926,1926,administrateur,administrateur:1,1
 robert-j-joseph,warotfreres,1,1926,1926,administrateur,administrateur:1,1
 saint-eugene,warotfreres,1,1926,1926,commissaire_aux_comptes,commissaire_aux_comptes:1,0
+warot-e,warotfreres,1,1926,1926,administrateur_delegue,administrateur_delegue:1,1
 bonnaud-h,watana,1,1894,1894,administrateur,administrateur:1,1
 del-porto-a,watana,1,1894,1894,administrateur,administrateur:1,1
 jacob-h,watana,1,1894,1894,administrateur,administrateur:1,1

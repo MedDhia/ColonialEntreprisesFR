@@ -271,6 +271,7 @@ africaineateliersconstructionschwartzhautmont,omniumnordafricain,Cie africaine d
 minierebouazzergraara,omniumnordafricain,Société minière du Bou-Azzer et du Graâra,Omnium nord-africain,4,aguillon-j; epinat-j; mourgnot-p; paris-e
 manufacturecrinvegetalfedhala,transportsmazeres,Manufacture de crin végétal de Fédhala,Transports Mazères,4,alard-g; champeaux-j; danton-f; hersent-g-gilbert
 domainekorifla,domainekoriflaainelaouda,Société an. du domaine de Korifla,"Domaine de Korifla, Aïn-el-Aouda",4,descamps-p; fraenkel-r; ghion-l; godchaux-m
+chomel,conservesmazagan,Chomel et Cie,Conserves de Mazagan,4,descas-c; descas-r; ginestet-f; thevenot-h
 cherifiennearmement,marocainetransportsmaritimes,Cie chérifienne d'armement,Cie marocaine de transports maritimes,4,bourgeois-a-andre; demon-r; masset-e; mory-g
 cheminsfermarocoriental,marocaineexploitationsminieresbouarfa,Compagnie des Chemins de fer de du Maroc oriental,"Société Marocaine d'Exploitations minières, Bou-Arfa",4,delattre-l; delgua-a; ferasson-l-louis; guerin-a-albert
 cheminsfermarocoriental,marocaineexploitationsminieresbouarfaparoujda,Compagnie des Chemins de fer de du Maroc oriental,"Société marocaine d'exploitations minières, BOU-ARFA, par Oujda",4,delattre-l; delgua-a; ferasson-l-louis; guerin-a-albert
@@ -488,6 +489,7 @@ soclyonnaiseetudesmaroc,soclyonnaisesebou,Soc. lyonnaise d'ÉTUDES AU MAROC,Soc.
 directioncasablanca,marocaineexplosifscasablancamelilla,Direction à Casablanca,"Société Marocaine d'explosifs, Casablanca, Melilla",3,audy-p; massenet-m; schmerber-h
 marocaineagricolejacma,marocainescieriesatlas,Société marocaine agricole du Jacma,Société marocaine des Scieries de l'Atlas,3,bernard-j; rappel-l; riotteau-c
 agricoletadla,cherifiennecolonisation,Société Agricole du Tadla,Compagnie Chérifienne de colonisation,3,gautier-de-charnace-c; piot; van-den-ven-p
+agricoletadla,immobilierecasablanca,Société Agricole du Tadla,Société Immobilière de Casablanca,3,bassuet-m; piot; van-den-ven-p
 bonlogis,foncieremaroc,Le Bon Logis,Société Foncière Française au Maroc,3,clynans-p; hornung-j; vauthier-j
 leoncegiraud,naphtesrhrabcentral,Léonce Giraud,Sté des naphtes du Rhrab central,3,epicerie; import; tissus
 materieltravauxagricoles,mecaniqueagricolefnovembre1920,Cie de Matériel et de travaux agricoles,"Cie générale de mécanique agricole. — Sté an., f. le novembre 1920",3,cahen-d-anvers-c; fouche-c; fr-ledoux
@@ -519,7 +521,6 @@ merinosmarocain,olivettesmarocaines,Le Mérinos marocain,Les Olivettes marocaine
 merinosmarocain,olivettesnordmarocain,Le Mérinos marocain,Olivettes du Nord marocain,3,faure-c; ortal-g; paitel-g
 huileriessavonneriescherifiennes,immobiliereanfa,Huileries et savonneries chérifiennes,Société Immobilière d'Anfa,3,courtenay-lamb-f; lamb-c; worthington-w
 salinesmaroc,valdora,Salines du Maroc,Sté anon. Valdora,3,defougere-g; duchemin-c; hersent-g-gilbert
-chomel,conservesmazagan,Chomel et Cie,Conserves de Mazagan,3,descas-c; descas-r; ginestet-f
 etablissementsbeteille,etsmenagerkenitra,Établissements L. Béteille,Éts Ménager ; Kénitra,3,carle-g; gillet-p-paul; menager-h-honore
 fermessegmet,marocainevinicole,Société des fermes du Segmet,Compagnie marocaine vinicole,3,guillemet-p; restany-p; villiers-h
 liantsmateriauxmaroc,marocainebois,Liants et matériaux du Maroc,« La Marocaine des bois »,3,estors-g; freres-l; sicre-a
@@ -1091,7 +1092,6 @@ omniumentreprises,omniumtransportsmaroc,Omnium d'entreprises,Omnium de transport
 omniumtransportsmaroc,portsmarocains,Omnium de transports au Maroc,Ports marocains,2,chagnaud-l; galtier-a
 omniumtransportsmaroc,portsmarocainsmehedyakenitrarabatsale,Omnium de transports au Maroc,Société des Ports marocains de Mehedya-Kenitra et Rabat-Salé,2,chagnaud-l; galtier-a
 marocaineetablboussiron,marocaineexploitationsforestieres,Société marocaine des Établ. Boussiron,Société Marocaine d'Exploitations forestières,2,coeytaux-e; julien
-agricoletadla,immobilierecasablanca,Société Agricole du Tadla,Société Immobilière de Casablanca,2,piot; van-den-ven-p
 etudesentreprisesomniummarocain,internationaleetudestravauxmaroc,Société d'études et d'entreprises Omnium marocain,Société Internationale d'Études et de travaux au Maroc,2,bloch; gompel
 asiatiqueafricaine,foncieremarocaine,Compagnie Asiatique et africaine,Société Foncière Marocaine,2,estier-f; valayer-p
 asiatiqueafricaine,manutentionmarocaine,Compagnie Asiatique et africaine,La Manutention marocaine,2,estier-f; lyautey-p
@@ -2859,11 +2859,13 @@ cherifienneagricultureelevage,manutentionmarocaine,Société Chérifienne d'Agri
 cherifiennenavigation,manutentionmarocaine,Compagnie Chérifienne de navigation,La Manutention marocaine,1,dureault-h
 manutentionmarocaine,moulinscherifiens,La Manutention marocaine,Moulins chérifiens,1,dureault-h
 briqueteriesfedhala,conservesfedalasardineriecascadec,Briqueteries de Fedhala,Société anon. de Conserves de Fédala Sardinerie Cascadec,1,hersent-j
+briqueteriesfedhala,conservesfedhala,Briqueteries de Fedhala,Conserves de Fedhala,1,hersent-j
 briqueteriesfedhala,entrepotsfrigorifiquesafriquenord,Briqueteries de Fedhala,Société des Entrepôts frigorifiques de l'Afrique du Nord,1,hersent-j
 briqueteriesfedhala,marocainecharbonsbriquettes,Briqueteries de Fedhala,Société Marocaine de Charbons et briquettes,1,hersent-j
 briqueteriesfedhala,socmarocaineconstructionsmetalliques,Briqueteries de Fedhala,Soc. marocaine de CONSTRUCTIONS MÉTALLIQUES,1,hersent-j
 briqueteriesfedhala,stearineriemarocaine200,Briqueteries de Fedhala,Stéarinerie marocaine. — 200,1,hersent-j
 briqueteriesfedhala,valdora,Briqueteries de Fedhala,Sté anon. Valdora,1,hersent-j
+conservesfedalasardineriecascadec,conservesfedhala,Société anon. de Conserves de Fédala Sardinerie Cascadec,Conserves de Fedhala,1,hersent-j
 conservesfedalasardineriecascadec,francomarocainefedhala,Société anon. de Conserves de Fédala Sardinerie Cascadec,Compagnie Franco-Marocaine de Fedhala,1,hersent-j
 conservesfedalasardineriecascadec,marocainecharbonsbriquettes,Société anon. de Conserves de Fédala Sardinerie Cascadec,Société Marocaine de Charbons et briquettes,1,hersent-j
 conservesfedalasardineriecascadec,portfedala,Société anon. de Conserves de Fédala Sardinerie Cascadec,Cie du port de Fédala,1,hersent-j
@@ -2873,6 +2875,17 @@ conservesfedalasardineriecascadec,stearineriemarocaine200,Société anon. de Con
 conservesfedalasardineriecascadec,transportsmazeres,Société anon. de Conserves de Fédala Sardinerie Cascadec,Transports Mazères,1,hersent-j
 conservesfedalasardineriecascadec,valdora,Société anon. de Conserves de Fédala Sardinerie Cascadec,Sté anon. Valdora,1,hersent-j
 conservesfedalasardineriecascadec,vulcanisationmoderne,Société anon. de Conserves de Fédala Sardinerie Cascadec,Vulcanisation moderne,1,hersent-j
+conservesfedhala,entrepotsfrigorifiquesafriquenord,Conserves de Fedhala,Société des Entrepôts frigorifiques de l'Afrique du Nord,1,hersent-j
+conservesfedhala,francomarocainefedhala,Conserves de Fedhala,Compagnie Franco-Marocaine de Fedhala,1,hersent-j
+conservesfedhala,marocainecharbonsbriquettes,Conserves de Fedhala,Société Marocaine de Charbons et briquettes,1,hersent-j
+conservesfedhala,portfedala,Conserves de Fedhala,Cie du port de Fédala,1,hersent-j
+conservesfedhala,portfedhala,Conserves de Fedhala,Compagnie du Port de Fedhala,1,hersent-j
+conservesfedhala,salinesfedala,Conserves de Fedhala,Salines de Fédala,1,hersent-j
+conservesfedhala,socmarocaineconstructionsmetalliques,Conserves de Fedhala,Soc. marocaine de CONSTRUCTIONS MÉTALLIQUES,1,hersent-j
+conservesfedhala,stearineriemarocaine200,Conserves de Fedhala,Stéarinerie marocaine. — 200,1,hersent-j
+conservesfedhala,transportsmazeres,Conserves de Fedhala,Transports Mazères,1,hersent-j
+conservesfedhala,valdora,Conserves de Fedhala,Sté anon. Valdora,1,hersent-j
+conservesfedhala,vulcanisationmoderne,Conserves de Fedhala,Vulcanisation moderne,1,hersent-j
 entrepotsfrigorifiquesafriquenord,francomarocainefedhala,Société des Entrepôts frigorifiques de l'Afrique du Nord,Compagnie Franco-Marocaine de Fedhala,1,hersent-j
 entrepotsfrigorifiquesafriquenord,socmarocaineconstructionsmetalliques,Société des Entrepôts frigorifiques de l'Afrique du Nord,Soc. marocaine de CONSTRUCTIONS MÉTALLIQUES,1,hersent-j
 entrepotsfrigorifiquesafriquenord,stearineriemarocaine200,Société des Entrepôts frigorifiques de l'Afrique du Nord,Stéarinerie marocaine. — 200,1,hersent-j
@@ -3279,11 +3292,6 @@ internationaledeveloppementtanger,marocaineexploitationsforestieres,Société in
 magasinsgenerauxwarrantsmaroc,marocaineexploitationsforestieres,Société des Magasins généraux et warrants du Maroc,Société Marocaine d'Exploitations forestières,1,terrier-a
 marocaineexploitationsforestieres,porttanger,Société Marocaine d'Exploitations forestières,Société du Port de Tanger,1,terrier-a
 marocaineexploitationsforestieres,socporttanger,Société Marocaine d'Exploitations forestières,Soc. du PORT de TANGER,1,terrier-a
-bankbritishwestafricalimited,chaouiamaroc,Bank of British West Africa Limited,Chaouïa et Maroc,1,harris-w
-bankbritishwestafricalimited,etudes,Bank of British West Africa Limited,"Société d'études, puis Société minière du Haut-Guir",1,harris-w
-bankbritishwestafricalimited,etudeshautguir,Bank of British West Africa Limited,Sté d'études du Haut-Guir,1,harris-w
-bankbritishwestafricalimited,internationaledeveloppementtanger,Bank of British West Africa Limited,Société internationale pour le développement de Tanger,1,harris-w
-bankbritishwestafricalimited,porttanger,Bank of British West Africa Limited,Société du Port de Tanger,1,harris-w
 chaouiamaroc,internationaledeveloppementtanger,Chaouïa et Maroc,Société internationale pour le développement de Tanger,1,harris-w
 etudes,internationaledeveloppementtanger,"Société d'études, puis Société minière du Haut-Guir",Société internationale pour le développement de Tanger,1,harris-w
 etudeshautguir,internationaledeveloppementtanger,Sté d'études du Haut-Guir,Société internationale pour le développement de Tanger,1,harris-w
@@ -4103,7 +4111,6 @@ tramwaysautobuscasablanca,tramwaysautobusfes,Compagnie des Tramways et autobus d
 tramwaysautobuscasablanca,transportsmazeres,Compagnie des Tramways et autobus de Casablanca,Transports Mazères,1,fournet-j
 tramwaysautobusfes,transportsmazeres,Cie des tramways et autobus de Fès,Transports Mazères,1,fournet-j
 banquecommercialemaroc,briqueteriesfedala,Banque commerciale du Maroc,Société des briqueteries de Fédala,1,hersent-g-gilbert
-banquecommercialemaroc,conservesfedhala,Banque commerciale du Maroc,Conserves de Fedhala,1,hersent-g-gilbert
 banquecommercialemaroc,francomarocainefedala,Banque commerciale du Maroc,Cie franco-marocaine de Fédala,1,hersent-g-gilbert
 banquecommercialemaroc,manufacturecrinvegetalfedhala,Banque commerciale du Maroc,Manufacture de crin végétal de Fédhala,1,hersent-g-gilbert
 banquecommercialemaroc,portfedala,Banque commerciale du Maroc,Cie du port de Fédala,1,hersent-g-gilbert
@@ -4112,20 +4119,11 @@ banquecommercialemaroc,salinesmaroc,Banque commerciale du Maroc,Salines du Maroc
 banquecommercialemaroc,transportsmazeres,Banque commerciale du Maroc,Transports Mazères,1,hersent-g-gilbert
 banquecommercialemaroc,valdora,Banque commerciale du Maroc,Sté anon. Valdora,1,hersent-g-gilbert
 banquecommercialemaroc,vulcanisationmoderne,Banque commerciale du Maroc,Vulcanisation moderne,1,hersent-g-gilbert
-briqueteriesfedala,conservesfedhala,Société des briqueteries de Fédala,Conserves de Fedhala,1,hersent-g-gilbert
 briqueteriesfedala,manufacturecrinvegetalfedhala,Société des briqueteries de Fédala,Manufacture de crin végétal de Fédhala,1,hersent-g-gilbert
 briqueteriesfedala,salinesmaroc,Société des briqueteries de Fédala,Salines du Maroc,1,hersent-g-gilbert
 briqueteriesfedala,transportsmazeres,Société des briqueteries de Fédala,Transports Mazères,1,hersent-g-gilbert
 briqueteriesfedala,valdora,Société des briqueteries de Fédala,Sté anon. Valdora,1,hersent-g-gilbert
 briqueteriesfedala,vulcanisationmoderne,Société des briqueteries de Fédala,Vulcanisation moderne,1,hersent-g-gilbert
-conservesfedhala,francomarocainefedala,Conserves de Fedhala,Cie franco-marocaine de Fédala,1,hersent-g-gilbert
-conservesfedhala,manufacturecrinvegetalfedhala,Conserves de Fedhala,Manufacture de crin végétal de Fédhala,1,hersent-g-gilbert
-conservesfedhala,portfedala,Conserves de Fedhala,Cie du port de Fédala,1,hersent-g-gilbert
-conservesfedhala,salinesfedala,Conserves de Fedhala,Salines de Fédala,1,hersent-g-gilbert
-conservesfedhala,salinesmaroc,Conserves de Fedhala,Salines du Maroc,1,hersent-g-gilbert
-conservesfedhala,transportsmazeres,Conserves de Fedhala,Transports Mazères,1,hersent-g-gilbert
-conservesfedhala,valdora,Conserves de Fedhala,Sté anon. Valdora,1,hersent-g-gilbert
-conservesfedhala,vulcanisationmoderne,Conserves de Fedhala,Vulcanisation moderne,1,hersent-g-gilbert
 francomarocainefedala,manufacturecrinvegetalfedhala,Cie franco-marocaine de Fédala,Manufacture de crin végétal de Fédhala,1,hersent-g-gilbert
 francomarocainefedala,transportsmazeres,Cie franco-marocaine de Fédala,Transports Mazères,1,hersent-g-gilbert
 francomarocainefedala,valdora,Cie franco-marocaine de Fédala,Sté anon. Valdora,1,hersent-g-gilbert
@@ -4687,6 +4685,7 @@ mamora,sudmarocain,Compagnie de la Mamora,Compagnie du Sud-Marocain,1,clausse-r
 agricoleboumais,rabatieagriculture,Cie agricole de Bou Maïs,Société anon. Rabatie d'agriculture,1,calderon-f
 agricoleboumais,rbatieagriculture,Cie agricole de Bou Maïs,R'Batie d'Agriculture,1,calderon-f
 agricolefrancomarocaine,agricoletadla,Société agricole franco-marocaine,Société Agricole du Tadla,1,bassuet-m
+agricolefrancomarocaine,immobilierecasablanca,Société agricole franco-marocaine,Société Immobilière de Casablanca,1,bassuet-m
 culturesindustriellesmaroc,entreprisesculturesafrique,Société de Cultures industrielles au Maroc,Cie générale d'entreprises et de cultures en Afrique,1,provot-g
 culturesindustriellesmaroc,financierefes,Société de Cultures industrielles au Maroc,Société financière de Fès,1,provot-g
 culturesindustriellesmaroc,fonciereportlyauteymaroc,Société de Cultures industrielles au Maroc,Société foncière de Port-Lyautey et du Maroc,1,provot-g

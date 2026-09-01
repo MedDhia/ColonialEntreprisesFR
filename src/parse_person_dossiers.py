@@ -202,7 +202,7 @@ def subject_of(entry: dict) -> dict | None:
     head = re.split(r"\)\s*,\s*", raw)[0]
     if head != raw and not head.endswith(")"):
         head += ")"
-    if looks_like_org(head) or INSTITUTION_HEAD_RE.match(head):
+    if INSTITUTION_HEAD_RE.match(head):
         return None
     # Drop parentheticals that are only a date, so the forename slot is the
     # forename: `(1846-1918)`, `(ca 1851-ca 1933)`, `(1875)`.
@@ -223,6 +223,13 @@ def subject_of(entry: dict) -> dict | None:
             return None
         head = f"{given} {surname}"
     elif LEGAL_FORM_RE.search(head):
+        return None
+
+    # `looks_like_org` is applied to the *reordered* name, not the catalogue
+    # form. Tested on `Le Gac de Lansalut (Charles)` it fires on the leading
+    # article and refuses a man; tested on `Charles Le Gac de Lansalut` it
+    # does not, while still refusing `Georges Taupin & Cie`.
+    if looks_like_org(head):
         return None
 
     parsed = parse_person_name(head)

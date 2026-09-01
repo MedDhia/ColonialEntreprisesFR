@@ -103,6 +103,7 @@ etudesmarocainescommerceagriculturemines,pecheriesmarocaines,1914_1929,4,delcroi
 electricitemarrakech,electricitemazagan,1914_1929,4,africaine; bonfils; dreyfus-g; roudy-a
 manufacturecrinvegetalfedhala,transportsmazeres,1914_1929,4,alard-g; champeaux-j; danton-f; hersent-g-gilbert
 domainekorifla,domainekoriflaainelaouda,1914_1929,4,descamps-p; fraenkel-r; ghion-l; godchaux-m
+chomel,conservesmazagan,1914_1929,4,descas-c; descas-r; ginestet-f; thevenot-h
 abattoirsmunicipauxindustrielsmaroc,fasielectricite,1914_1929,3,atthalin-a; godard-l; jordan-p
 abattoirsmunicipauxindustrielsmaroc,sebou,1914_1929,3,atthalin-a; de-caqueray-g; godard-l
 abattoirsmunicipauxmaroc,constructioncivile,1914_1929,3,atthalin-a; braunschvig-g; godard-l
@@ -194,6 +195,7 @@ moulinsmaghreb,parisflor,1914_1929,3,massena-a; prince-charles-murat; prince-d-e
 briqueteriesfedhala,francomarocainefedhala,1914_1929,3,hersent-g-georges; hersent-j; thomas-g
 briqueteriesfedhala,portfedhala,1914_1929,3,hersent-g-georges; hersent-j; thomas-g
 agricoletadla,cherifiennecolonisation,1914_1929,3,gautier-de-charnace-c; piot; van-den-ven-p
+agricoletadla,immobilierecasablanca,1914_1929,3,bassuet-m; piot; van-den-ven-p
 marocaineminesoutat,minesaouli,1914_1929,3,ledoux-f; sluys-m; thomain-e
 marocaineainsikh,materieltravauxagricoles,1914_1929,3,gradis-g; ledoux-f; quellennec-j
 comptoirminesgrandstravauxmaroc,marocaineexplosifsaccessoiresmines,1914_1929,3,hustache-f; massenet-m; schmerber-h
@@ -214,7 +216,6 @@ cheminsfermarocoriental,minesbouarfa,1914_1929,3,le-trocquer-y; michaux-l; tallo
 agricolecherifienne,cherifienne,1914_1929,3,guynet-d; plant-a; ruet-p
 centralemarocaine,liegesmamora,1914_1929,3,cavelier-m; de-vaulchier-a; delcourt-e
 maisonlevy,maisonlevynouveautes,1914_1929,3,levy-a; levy-i; levy-m
-chomel,conservesmazagan,1914_1929,3,descas-c; descas-r; ginestet-f
 nordafricaineentreprises,socnordafricaineentreprises,1914_1929,3,bertheaume-p; gaudin-de-lagrange-l; leplus-p
 ergho,lyonmaroc,1914_1929,3,henry; jean; paul
 marocaineagricolejacma,marocainescieriesatlas,1914_1929,3,bernard-j; rappel-l; riotteau-c
@@ -488,7 +489,6 @@ domaineelmoudzine,immobilierekenitra,1914_1929,2,mussard-r; waddington-r
 immobilierekenitra,industriellecommercialeadoursebou,1914_1929,2,perriquet-c; waddington-r
 chomel,leoncegiraud,1914_1929,2,epicerie; import
 commercialeagricolemaroc,transportsmazeres,1914_1929,2,chapal-e; construct
-agricoletadla,immobilierecasablanca,1914_1929,2,piot; van-den-ven-p
 maroccommerceindustrie,minesaouli,1914_1929,2,sluys-m; van-den-ven-p
 maroccommerceindustrie,miniereafriquenord,1914_1929,2,sluys-m; van-den-ven-p
 minesaouli,mineserdouz,1914_1929,2,ledoux-f; van-den-ven-p
@@ -1367,11 +1367,6 @@ caissepretsimmobiliersmaroc,marocaineexploitationsforestieres,1914_1929,1,terrie
 internationaledeveloppementtanger,marocaineexploitationsforestieres,1914_1929,1,terrier-a
 magasinsgenerauxwarrantsmaroc,marocaineexploitationsforestieres,1914_1929,1,terrier-a
 marocaineexploitationsforestieres,porttanger,1914_1929,1,terrier-a
-bankbritishwestafricalimited,chaouiamaroc,1914_1929,1,harris-w
-bankbritishwestafricalimited,etudes,1914_1929,1,harris-w
-bankbritishwestafricalimited,etudeshautguir,1914_1929,1,harris-w
-bankbritishwestafricalimited,internationaledeveloppementtanger,1914_1929,1,harris-w
-bankbritishwestafricalimited,porttanger,1914_1929,1,harris-w
 chaouiamaroc,etudeshautguir,1914_1929,1,harris-w
 chaouiamaroc,internationaledeveloppementtanger,1914_1929,1,harris-w
 etudes,internationaledeveloppementtanger,1914_1929,1,harris-w
@@ -1475,9 +1470,16 @@ pecheriesmarocaines,stearineriemarocaine200,1914_1929,1,massena-a
 pecheriesmarocaines,superphosphatesproduitschimiquesmaroc,1914_1929,1,massena-a
 stearineriemarocaine200,superphosphatesproduitschimiquesmaroc,1914_1929,1,massena-a
 preservatricemarocaine,stearineriemarocaine200,1914_1929,1,georges
+briqueteriesfedhala,conservesfedhala,1914_1929,1,hersent-j
 briqueteriesfedhala,entrepotsfrigorifiquesafriquenord,1914_1929,1,hersent-j
 briqueteriesfedhala,marocainecharbonsbriquettes,1914_1929,1,hersent-j
 briqueteriesfedhala,stearineriemarocaine200,1914_1929,1,hersent-j
+conservesfedhala,entrepotsfrigorifiquesafriquenord,1914_1929,1,hersent-j
+conservesfedhala,francomarocainefedhala,1914_1929,1,hersent-j
+conservesfedhala,marocainecharbonsbriquettes,1914_1929,1,hersent-j
+conservesfedhala,portfedhala,1914_1929,1,hersent-j
+conservesfedhala,stearineriemarocaine200,1914_1929,1,hersent-j
+conservesfedhala,transportsmazeres,1914_1929,1,hersent-j
 entrepotsfrigorifiquesafriquenord,francomarocainefedhala,1914_1929,1,hersent-j
 entrepotsfrigorifiquesafriquenord,stearineriemarocaine200,1914_1929,1,hersent-j
 entrepotsfrigorifiquesafriquenord,transportsmazeres,1914_1929,1,hersent-j
@@ -1873,8 +1875,6 @@ marocaineexportationprimeurs,unioncommercialeindochinoiseafricaine,1914_1929,1,h
 legalfreres,mobiliereimmobilierefrancomarocaine,1914_1929,1,mahieux-h
 caissepretsimmobiliersmaroc,transportsmazeres,1914_1929,1,fournet-j
 tramwaysautobuscasablanca,transportsmazeres,1914_1929,1,fournet-j
-conservesfedhala,manufacturecrinvegetalfedhala,1914_1929,1,hersent-g-gilbert
-conservesfedhala,transportsmazeres,1914_1929,1,hersent-g-gilbert
 etudesmarocainescommerceagriculturemines,transportsmazeres,1914_1929,1,hersent-g
 immobilierebriqueterie,industriellecommercialeadoursebou,1914_1929,1,perriquet-c
 immobilierevillehaute,industriellecommercialeadoursebou,1914_1929,1,perriquet-c

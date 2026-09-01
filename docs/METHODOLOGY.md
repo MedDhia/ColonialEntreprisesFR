@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Twenty-five stages, each resumable, each writing its own outputs:
+Twenty-six stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -99,6 +99,9 @@ Twenty-five stages, each resumable, each writing its own outputs:
 22. **`make_period_map_figures.py`** — the map split on the five periods:
     figures 57–58, five full-width maps in `figures/by_period/`, and
     `map_period_summary.csv` (§5p).
+23. **`audit_coverage.py`** — a diagnostic: what the documents that yield
+    nothing actually are, sorted by register and by territory (§4m). Adds no
+    ties and changes no network file.
 
 Figure stages 7, 8, 11–13, 15, 17, 19, 21 and 22 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
@@ -1039,7 +1042,7 @@ Louis Ogliastro` both resolve.
 A role line names its company in the compiler's abbreviated register, so
 `resolve_annotations.resolve` does the matching: prefix-in-order against
 `companies.csv`, ambiguity dropped rather than guessed, place names refused.
-**A line whose company does not resolve is not emitted** — 254 of them. That is
+**A line whose company does not resolve is not emitted** — 262 of them. That is
 a deliberate recall sacrifice: an unresolved company name is a node the graph
 cannot join to anything, so keeping it would raise the tie count without
 connecting a single pair of firms.
@@ -1062,15 +1065,15 @@ the sentence containing the role names nobody:
 
 - **`KINSHIP_RE` within 200 characters before the match** — the same rejection
   the roster parser makes in §4i, scoped by distance rather than by clause
-  because these lines wrap mid-sentence. 53 rows removed.
+  because these lines wrap mid-sentence. 54 rows removed.
 - **`NEW_SENTENCE_RE` after the company on the same line** — a date or a short
   gloss is fine; a new sentence with prose in it (`. Voir encadré. Remariée à
   Saïgon…`) means the line was flowing biography. 22 rows removed.
 
 ### What it yields, and what it is worth
 
-**150 ties, 66 people, 139 companies, 66 dossiers brought from zero**, and
-**67 of the 150 carry a year** — a rate no other genre approaches, because the
+**170 ties, 71 people, 158 companies, 71 dossiers brought from zero**, and
+**76 of the 170 carry a year** — a rate no other genre approaches, because the
 compiler dates a seat when he is writing a career.
 
 **Precision 19 of 20** on a random sample checked against source context, which
@@ -1080,6 +1083,88 @@ uses `enfants` and `petits-enfants` across a rule separator.
 
 Merged as `source_genre = "person_dossier"`, excluded by
 `build_network.py --no-person-dossier`.
+
+## 4m. What the unread documents are, and why that had to be measured
+
+§4l exists because a claim in this document was wrong. The Tunisian residue was
+written off as books and honours lists; it was not, and following it up found a
+genre. That is a warning about the *method* of the claim, not about Tunisia:
+**"the rest is unreadable" is an assertion, and this repository states
+assertions with a file behind them.**
+
+`src/audit_coverage.py` (stage 23) is that file. It reads every document with
+usable text that yields no tie — 2,129 of them — and files each under the
+**register** it is written in, meaning the shape a parser would have to
+recognise. It adds no ties and touches no network output.
+
+| Register | Documents | Characters | What it is |
+|---|---|---|---|
+| `press` | 1,151 (54.1%) | 22.2 M | Newspaper cuttings: arrival notices, tender results, election counts |
+| `no_signal` | 292 (13.7%) | 4.9 M | Nothing matched |
+| `person_career` | 282 (13.2%) | 30.1 M | The person-anchored register of §4l |
+| `deed` | 170 (8.0%) | 3.0 M | Notarial: `Aux termes d'un acte reçu par Me Bérenger, notaire à Saïgon` |
+| `apposition` | 127 (6.0%) | 7.3 M | `M. Honoré Dejean, directeur de la Société agricole de My-Duc` |
+| `certificate` | 77 (3.6%) | 1.3 M | The caption under a reproduced share certificate |
+| `board_list` | 30 (1.4%) | 1.6 M | **A board heading in a document the parser read as empty** |
+
+These are the counts *after* the two fixes below, which the audit itself
+prompted: three of the `board_list` documents now speak and are no longer in
+the table.
+
+Registers are tested in order and the first match files the document, so a
+board list inside a press compilation counts as a board list; every register's
+match count is kept, so the file can be re-sorted on any of them.
+
+### The finding is a negative one, and it is the useful kind
+
+**Indochina is 60% of the silent set** — 1,282 documents holding 48.2 M
+characters, 68% of all unread text in the corpus, at 47.4% coverage against
+the corpus's 63.7%. It looked like the Tunisian case at twenty times the
+scale, and 826 of its 1,011 silent *company* dossiers carry `MM.` name lists —
+19,933 of them.
+
+They are not boards. `MM.` is French for *Messrs*, and in these documents it
+introduces the bidders at an abattoir tender, the count in a chamber-of-commerce
+election, and the three veterinary inspectors on the jury of a cattle show. A
+parser that read `MM.` lists as board lists would manufacture thousands of
+false ties out of a livestock competition. The Indochina residue is a
+compilation of newspaper cuttings, deeds and council minutes — a different kind
+of document, not an unread board list.
+
+That is worth having measured in both directions. It says where not to spend
+effort, and the two small rows say where a little still pays.
+
+### Two defects the audit found
+
+**`LINE_MEMBER_RE` read only half of its own register.** The §4g line register
+was written for `ASSIS (Henri), à Oran ;` — a comma after the parenthetical.
+The same annuaire also prints
+
+```
+REY (Antonio)\x00; président\x00;
+MESSA (Silvio)\x00; adm. délégué\x00;
+```
+
+with a **semicolon**, and with whatever the extractor emitted for a thin space
+sitting in the gap — a NUL, which `\s` does not match. Both had to be fixed
+together: allowing the semicolon alone still matched nothing. Corpus-wide the
+fix adds 104 member lines and brings three silent documents to speech. Small,
+but the register was being read at half its reach, and NUL characters occur in
+**8.4% of the corpus and 13.3% of the silent set** — over-represented exactly
+where extraction fails.
+
+**§4l refused men whose surname begins with an article.** `looks_like_org` was
+applied to the catalogue form, `Le Gac de Lansalut (Charles)`, where the
+leading *Le* reads as a company name. It is now applied to the reordered form,
+`Charles Le Gac de Lansalut`, which it passes — while `Georges Taupin & Cie`,
+a partnership, is still refused. Stage 3j went from 150 ties to 170.
+
+A hypothesis that did **not** survive testing is worth recording too: the NUL
+characters looked like the single cause, since `parse_ties` uses `\x00` as its
+own internal sentinel for protecting annotations, and a source NUL colliding
+with it is a real hazard. Stripping control characters at load recovered
+nothing on its own. The separator class was the cause; the NUL was only half
+of the gap.
 
 ## 5. Dating and attributing ties
 
@@ -1842,7 +1927,7 @@ silently become `unmapped`.
 ### The raw cross-tab is a board-size artefact
 
 Read naively, `political_connections_by_sector.csv` says finance is the most
-connected sector (55.7%) and mining second (44.5%). Both have large boards —
+connected sector (55.7%) and mining second (44.1%). Both have large boards —
 median 10 and 7 — and **a board of ten has ten chances to contain a connected
 director where a board of two has two.** Metallurgy (median board 2) and health
 and education (median 1) sit at the bottom for the same mechanical reason.
@@ -1861,12 +1946,12 @@ minus expected.
 | Culture, sport and leisure | **12** | 58.3% | 20.1% | +38.2 | 3 |
 | Press, printing and communications | 56 | 44.6% | 20.9% | **+23.8** | 1 |
 | Hotels and tourism | 49 | 42.9% | 22.9% | **+20.0** | 2 |
-| Health, education and research | 54 | 25.9% | 15.4% | **+10.5** | 1 |
-| Transcolonial and diversified groups | 114 | 53.5% | 45.7% | +7.8 | 8 |
+| Health, education and research | 54 | 25.9% | 15.5% | **+10.4** | 1 |
+| Transcolonial and diversified groups | 120 | 55.8% | 46.5% | +9.4 | 8 |
 | Transport, ports and docks | 305 | 46.9% | 41.2% | +5.7 | 7 |
 | Banking, finance and insurance | 576 | 55.7% | 51.9% | **+3.8** | 10 |
-| Mining and quarrying | 559 | 44.5% | 42.8% | **+1.7** | 7 |
-| Food processing, livestock and fishing | 460 | 41.7% | 42.2% | −0.5 | 7 |
+| Mining and quarrying | 555 | 44.1% | 42.6% | **+1.6** | 7 |
+| Food processing, livestock and fishing | 461 | 41.6% | 42.3% | −0.6 | 7 |
 | Metallurgy and engineering | 28 | 21.4% | 26.1% | −4.7 | 2 |
 | Construction and building materials | 148 | 39.2% | 44.3% | **−5.1** | 7 |
 
@@ -1902,40 +1987,39 @@ operationalisations and they do not rank the sectors the same way. The file
 carries all six as columns so that a claim can name the one it rests on, and
 the figures cite the file rather than recomputing.
 
-The graph is the firm-level interlock projection: 6,006 firms, 79,575 edges,
+The graph is the firm-level interlock projection: 6,011 firms, 79,636 edges,
 a giant component holding **98.6%** of the nodes and a mean shortest path of
-**3.34** between them. Sectors come from the 19-group mapping of §5l, and a
+**3.27** between them. Sectors come from the 19-group mapping of §5l, and a
 group is measured only at 25 firms or more — below that the measures are noise.
 
 ### The size confound is the whole problem
 
 A sector with more firms and larger boards has more edges for reasons that
-have nothing to do with position. Finance holds **15,977 board seats** against
-mining's **9,290**, so any raw count — degree, edge share, summed betweenness —
+have nothing to do with position. Finance holds **15,980 board seats** against
+mining's **9,130**, so any raw count — degree, edge share, summed betweenness —
 puts finance first before position is considered at all. Three families of
 column exist only to strip that out:
 
 - **Per-seat normalisation.** `deg_per_seat` and `btw_per_seat` divide by board
   seats rather than by firm count. On `deg_per_seat` finance (1.73) falls
-  *below* plantations (2.20), textiles (2.70) and press and printing (2.93) —
+  *below* plantations (2.21), textiles (2.70) and press and printing (2.93) —
   the last of which is an artefact of the opposite kind, since 40 firms with a
   mean of 5.9 seats each will show a high ratio on very little evidence.
 - **A size-matched removal null.** Delete the sector's firms, then delete the
   same *number* of firms drawn at random, 60 times (`--sims` raises it), and
   report the loss as a z-score. This is the column that separates finance from
-  mining, which at 553 and 524 firms are within 6% of the same size and so
-  cannot be separated by any count: **finance z = +2.88 (p = 0.000), mining
-  z = −0.30 (p = 0.62)**. Removing finance costs the giant component more than removing
+  mining, which at 553 and 520 firms are within 6% of the same size and so
+  cannot be separated by any count: **finance z = +3.35 (p = 0.000), mining
+  z = −0.11 (p = 0.58)**. Removing finance costs the giant component more than removing
   an equally large random slice; removing mining costs exactly what its size
   predicts.
 - **Path length after removal.** Fragmentation measures nothing here — no
   sector's removal breaks the giant component, which is the substantive
   finding and not a null result. The cost of removal appears as **distance**
-  instead: mean path rises from 3.34 to **3.67** without finance (+0.33).
-  Removing mining *shortens* it (−0.05), as does removing food processing
-  (−0.10): deleting a large, loosely attached set of firms can pull the
-  survivors' mean path down, which is the clearest sign that these counts
-  measure attachment rather than importance.
+  instead: mean path rises from 3.27 to **3.56** without finance (+0.30),
+  against +0.09 for mining and +0.02 for food processing. That ordering is
+  the finding; the magnitudes move by a few hundredths with every rebuild of
+  the graph, and on one earlier build mining's change was negative.
 
 ### What the removal test does not license
 
@@ -1971,8 +2055,8 @@ that position is never the output of a force algorithm:
 - **fig51** — multi-source BFS shells outward from all finance firms in one
   panel and all mining firms in the other, with each shell drawn as an annulus
   whose **area is proportional to the number of firms in it**. One step from
-  finance reaches **71.0%** of the graph; one step from mining reaches
-  **56.8%**. An earlier draft placed each shell on a ring *line*, which packed
+  finance reaches **70.9%** of the graph; one step from mining reaches
+  **56.6%**. An earlier draft placed each shell on a ring *line*, which packed
   3,709 nodes onto one pixel of radius and made the two panels look identical:
   the finding was real and the encoding hid it.
 - **fig52** — the 170 core firms with **radius = betweenness rank**, so the
@@ -1981,7 +2065,7 @@ that position is never the output of a force algorithm:
   against mining's 90.8. The angle is a golden spiral and means nothing; it
   only spreads the nodes apart.
 - **fig47** — the sector graph itself: 16 groups, edge weight = interlocks
-  between them. Finance–mining alone carries 2,892.
+  between them. Finance–mining alone carries 2,823.
 - **fig48** — the interlock core by sector, on the core's own layout.
 - **fig49** — the removal test drawn: observed loss against the size-matched
   null. Note the inversion it makes visible — removing finance takes 652 of
@@ -2000,7 +2084,7 @@ Figure 7 (§5f) already puts the network on the map, but it maps **cities**: it
 collapses each city to one node, so 762 Paris firms are a single dot and the
 ties *inside* a city are a number in a table rather than lines on the map.
 `src/place_on_map.py` (stage 20) and `src/make_world_map_figures.py` (stage 21)
-map the **firm**. Doing that means answering, for each of the 6,006 firms in the
+map the **firm**. Doing that means answering, for each of the 6,011 firms in the
 interlock graph, "where was it?" — and for a third of them the honest answer is
 that the source does not say.
 
@@ -2011,12 +2095,12 @@ landed on, because the rungs do not mean the same thing:
 
 | Rung | Firms | What position means |
 |---|---|---|
-| `city` | 2,025 | An address. `geocode.py` recovered a city from the listed place or the observed head office. A fact about the firm. |
-| `territory` | 1,901 | A filing category. No address, but the catalogue files the firm under exactly **one** country, so it sits at that territory's anchor point. A fact about the *catalogue*. |
+| `city` | 2,028 | An address. `geocode.py` recovered a city from the listed place or the observed head office. A fact about the firm. |
+| `territory` | 1,903 | A filing category. No address, but the catalogue files the firm under exactly **one** country, so it sits at that territory's anchor point. A fact about the *catalogue*. |
 | `unplaced` | 2,080 | No address and no single country: 1,650 firms with no country at all (most filed only under the transversal *Empire* rubric), 420 filed under several at once, and 9 whose single country — Macedonia, Russia, the Antarctic territories — has no city in the gazetteer. |
 
-That places **3,926 firms (65.4%)** and makes **43,575 of the 79,575 ties
-(54.8%)** drawable, against figure 7's 2,025 firms and its between-city ties
+That places **3,931 firms (65.4%)** and makes **43,623 of the 79,636 ties
+(54.8%)** drawable, against figure 7's 2,028 firms and its between-city ties
 only.
 
 **Multi-country firms are deliberately not placed.** `companies.csv` stores
@@ -2038,7 +2122,7 @@ gazetteer and take the mean over their member territories, which are listed in
 Firms at one anchor are spread through a disc by a deterministic golden-angle
 rule, with the disc's **radius as the square root of the firm count** so its
 area is proportional to how many firms are there. Two consequences: the
-**9,117 ties that never leave a single place** become short lines inside a disc
+**9,124 ties that never leave a single place** become short lines inside a disc
 instead of a footnote, and blob size is a quantity. Where two places are close
 and one is large its disc swallows the other — Brussels, Lyon and Marseille all
 fall inside Paris's — so a hairline ring marks each disc's edge and the small
@@ -2046,8 +2130,8 @@ anchors are painted last.
 
 ### Paris
 
-**Paris holds 764 of the 3,926 placed firms (19.5%) and touches 19,704 of the
-43,575 drawable ties (45.2%).** Figure 54 draws that as two panels on one set
+**Paris holds 764 of the 3,931 placed firms (19.4%) and touches 19,732 of the
+43,623 drawable ties (45.2%).** Figure 54 draws that as two panels on one set
 of coordinates: the ties that touch Paris, which are a fan, and the ties that
 do not, which are a lattice between colonies.
 
@@ -2061,11 +2145,11 @@ see.
 
 ### The geography of a tie, and why colony–colony is a ceiling
 
-Classified by the two endpoints, the drawable ties are 47.2% colony–colony,
+Classified by the two endpoints, the drawable ties are 47.1% colony–colony,
 36.3% metropole–colony, 11.5% metropole–metropole and 5.0% involving a foreign
 country; the median tie that leaves its place spans **3,083 km**. Colony–colony
 leading is not a licence to call the network a lattice rather than a hub:
-**10,384 of those 20,546 ties stay inside a single territory**, and the firms
+**10,402 of those 20,567 ties stay inside a single territory**, and the firms
 involved are disproportionately the ones placed by filing country for want of
 an address — exactly the firms that may in truth have been run from Paris. Read
 that rank as a ceiling.
@@ -2182,8 +2266,8 @@ Paris's share of the drawable ties falls in every period:
 
 | Period | Drawable ties | Paris share | Paris share, address-only firms | Coverage |
 |---|---|---|---|---|
-| pre-1914 | 3,320 | 63.5% | **82.6%** | 86.0% |
-| 1914–1929 | 11,484 | 51.5% | **65.9%** | 86.4% |
+| pre-1914 | 3,322 | 63.5% | **82.6%** | 86.0% |
+| 1914–1929 | 11,502 | 51.4% | **65.9%** | 86.4% |
 | 1930–1944 | 8,203 | 40.7% | **62.4%** | 84.2% |
 | 1945–1962 | 3,969 | 36.9% | **60.2%** | **36.2%** |
 | post-1962 | 568 | 26.2% | **42.1%** | 81.3% |
@@ -2210,7 +2294,7 @@ panel two is comparing two different sampling regimes.
 
 They are maps of a **record**. A firm leaves a panel when the compiler stopped
 writing about it, which is not the same event as the firm closing, and the
-volume of coverage is itself uneven across the five periods — 11,484 drawable
+volume of coverage is itself uneven across the five periods — 11,502 drawable
 ties in 1914–1929 against 568 after 1962. Read the shares, which have a
 denominator inside each period, rather than the densities, which do not.
 

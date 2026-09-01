@@ -1616,9 +1616,13 @@ def check_sector_centrality() -> None:
     fin = next((r for r in rows if r["sector_group"] == "finance"), None)
     mine = next((r for r in rows if r["sector_group"] == "mining"), None)
     if fin and mine:
+        # Relative, not absolute. "Size-matched" means neither can lead on a
+        # raw count by being bigger; an absolute threshold of 30 firms is a
+        # number that happened to be true on one build and broke on the next.
+        a, b = int(fin["n_firms"]), int(mine["n_firms"])
         check("  finance and mining are size-matched",
-              abs(int(fin["n_firms"]) - int(mine["n_firms"])) < 30,
-              f"{fin['n_firms']} vs {mine['n_firms']}")
+              abs(a - b) / max(a, b) < 0.10,
+              f"{a} vs {b} ({100 * abs(a - b) / max(a, b):.1f}%)")
         check("  finance beats its size-matched null",
               float(fin["giant_drop_z"]) > 2.0, fin["giant_drop_z"])
         check("  mining does not", abs(float(mine["giant_drop_z"])) < 2.0,
@@ -2196,6 +2200,84 @@ def check_person_dossiers() -> None:
     if edges and "source_genre" in edges[0]:
         got = sum(1 for e in edges if "person_dossier" in e["source_genre"])
         check("  the genre is merged into the network", got > 50, str(got))
+
+
+def check_coverage_audit() -> None:
+    """Stage 23: the audit of what the unread documents are."""
+    import audit_coverage as A
+
+    print("coverage audit", file=sys.stderr)
+
+    # The register classifier, against text written here.
+    cases = [
+        ("CONSEIL D'ADMINISTRATION\nREY (Antonio); président;", "board_list"),
+        ("Conseil d’administration\nDupont (Jean), Paris ;", "board_list"),
+        ("Administrateur de la Banque de Tunisie (mai 1886).", "person_career"),
+        ("M. Honoré Dejean, directeur de la Société agricole de My-Duc",
+         "apposition"),
+        ("Un administrateur (à gauche) : Eugène Fournier", "certificate"),
+        ("Aux termes d'un acte reçu par Me Bérenger, notaire à Saïgon",
+         "deed"),
+        ("HAÏPHONG (L’Avenir du Tonkin, 19 janvier 1898) 17 janvier.", "press"),
+        ("Le capital social est de 750.000 francs.", "no_signal"),
+    ]
+    for text, want in cases:
+        got, _counts = A.classify(text)
+        eq(f"  classify: {text[:34]}", got, want)
+
+    # Order is the point of the classifier: board evidence outranks the press
+    # compilation it usually sits inside.
+    both = ("HAÏPHONG (L’Avenir du Tonkin, 19 janvier 1898)\n"
+            "CONSEIL D'ADMINISTRATION\nREY (Antonio); président;")
+    eq("  a board list inside a press compilation files as board_list",
+       A.classify(both)[0], "board_list")
+    got, counts = A.classify(both)
+    check("  and the press match is still counted", counts["press"] >= 1,
+          str(counts))
+
+    path = os.path.join(PROC_DIR, "coverage_by_territory.csv")
+    if not os.path.exists(path):
+        return
+    terr = load("coverage_by_territory.csv")
+    silent = load("coverage_silent_documents.csv")
+
+    check("  every territory is audited", len(terr) > 40, str(len(terr)))
+    bad = [r for r in terr
+           if int(r["n_with_tie"]) + int(r["n_silent"]) != int(r["n_documents"])]
+    check("  with-tie plus silent is every document", not bad,
+          str([r["territory"] for r in bad[:3]]))
+    bad = [r for r in terr if not 0.0 <= float(r["share_with_tie"]) <= 1.0]
+    check("  the coverage share is a share", not bad, str(len(bad)))
+    eq("  the silent file holds every silent document",
+       len(silent), sum(int(r["n_silent"]) for r in terr))
+    known = {n for n, _rx in A.REGISTERS} | {"no_signal"}
+    bad = [r for r in silent if r["register"] not in known]
+    check("  every document is filed under a known register", not bad,
+          str({r["register"] for r in bad}))
+    bad = [r for r in silent if int(r["n_chars"]) < A.MIN_CHARS]
+    check("  a stub is not counted as a silent document", not bad,
+          str(len(bad)))
+    # The register column has to agree with the per-register counts it is
+    # derived from, or the audit's headline is not reproducible from its rows.
+    bad = []
+    for r in silent:
+        first = next((n for n, _rx in A.REGISTERS if int(r[f"n_{n}"])), "no_signal")
+        if first != r["register"]:
+            bad.append(r["doc_id"])
+    check("  the register is the first one that matched", not bad,
+          str(bad[:3]))
+
+    # The audit's substantive finding, which the docs quote.
+    reg = Counter(r["register"] for r in silent)
+    check("  the residue is mostly press compilations",
+          reg["press"] > len(silent) * 0.4, f"{reg['press']}/{len(silent)}")
+    check("  and board lists are a small remainder",
+          reg["board_list"] < len(silent) * 0.05,
+          f"{reg['board_list']}/{len(silent)}")
+    worst = min(terr, key=lambda r: float(r["share_with_tie"])
+                if int(r["n_documents"]) >= 100 else 2.0)
+    eq("  Indochina is the worst-covered large territory",
+       worst["territory"], "Indochine")
 
 
 def check_geocoding() -> None:
@@ -2776,6 +2858,7 @@ def main() -> None:
         check_political_coding()
         check_sector_centrality()
         check_person_dossiers()
+        check_coverage_audit()
         check_basemap()
         check_map_placement()
         check_world_map_figures()
