@@ -331,6 +331,16 @@ an artefact of placing firms at their filing country. See
 | `fig58_paris_by_period.svg` | The trend, and the caveat beside it rather than under it: **coverage collapses to 36.2% in 1945–1962**, because 1,484 of that period's firms are filed under the transversal *Empire* rubric with no country. That panel is a thinner sample, not a thinner network. |
 | `by_period/map_<period>.svg` | Five full-width maps, one per period, each with its own counts. |
 
+**`figures/paris.html`** — why Paris recedes. The trend above is
+**compositional**: a Paris firm never stops being better connected than a
+placed non-Paris one, but the record stops being mostly Parisian, and it moves
+through **entry rather than exit**. See [METHODOLOGY §5q](docs/METHODOLOGY.md).
+
+| | |
+|---|---|
+| `fig59_paris_composition.svg` | The falling shares beside the flat ratio. Paris's share of the active firms goes 36.0% → 12.1% and of the ties 63.5% → 26.2%, while the mean degree of a Paris firm over that of every other **placed** firm stays in **[1.16, 1.39] with no trend**. Two panels, not two y-axes: a share and a ratio have different denominators. |
+| `fig60_paris_entry_exit.svg` | Entry against exit, then what entry means. Leavers look like the stock they leave; **arrivals are about half as Parisian as the stock they join, at every transition**. And the share of arrivals actually *founded* in the period they arrive in collapses **81% → 2%** — early on they are new firms, at the end they are old firms the compiler is only now writing about. Shown by stratum, because the founding-year field is better kept in the metropole and the collapse has to survive that. |
+
 **`figures/interlock_network.html`** — the core of the network.
 
 | | |
@@ -440,7 +450,7 @@ src/
   draw.py              node-level drawing primitives (curved edges, halo labels)
   make_node_figures.py stage 13 graph       -> the six node-level figures
   labels.py            English labels for the French category vocabulary
-  checks.py            1,362 assertions on the parsers and the built dataset
+  checks.py            2,226 assertions on the parsers and the built dataset
 data/
   processed/           the dataset (versioned)
   by_country/          per-country bundles (54 territories)
@@ -461,6 +471,7 @@ figures/
   sector_network.html     figures 47-52, which sector is central
   world_map.html          figures 53-56, the whole network on the map
   period_maps.html        figures 57-58, the map period by period
+  paris.html              figures 59-60, why the Paris share falls
   by_period/              one SVG and one PNG per period
   fig*.svg, fig*.png      the same figures standalone, for papers
   by_country/             one SVG and one PNG per territory
@@ -512,6 +523,9 @@ python3 src/make_world_map_figures.py         # figs 53-56
 python3 src/make_world_map_figures.py --lang en
 python3 src/make_period_map_figures.py        # figs 57-58 + by_period/
 python3 src/make_period_map_figures.py --lang en
+python3 src/decompose_paris.py                # diagnostic: why the Paris share falls
+python3 src/make_paris_figures.py             # figs 59-60
+python3 src/make_paris_figures.py --lang en
 python3 src/render_png.py                     # ~90 s, PNG of every figure
 python3 src/checks.py                         # must pass
 ```

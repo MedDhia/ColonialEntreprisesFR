@@ -32,7 +32,7 @@ itself, retries with exponential backoff, and fetches each PDF once.
 
 ## 2. Pipeline
 
-Twenty-six stages, each resumable, each writing its own outputs:
+Twenty-eight stages, each resumable, each writing its own outputs:
 
 1. **`crawl_catalogue.py`** — the 13 index pages → `documents.csv`,
    `document_listings.csv`.
@@ -102,8 +102,12 @@ Twenty-six stages, each resumable, each writing its own outputs:
 23. **`audit_coverage.py`** — a diagnostic: what the documents that yield
     nothing actually are, sorted by register and by territory (§4m). Adds no
     ties and changes no network file.
+24. **`decompose_paris.py`** — a diagnostic: why the Paris share of the ties
+    falls in every period → `paris_decomposition.csv`,
+    `paris_entry_exit.csv` (§5q). Adds no ties and changes no network file.
+25. **`make_paris_figures.py`** — figures 59–60 (§5q).
 
-Figure stages 7, 8, 11–13, 15, 17, 19, 21 and 22 take `--lang en`, which writes a parallel `figures/en/`
+Figure stages 7, 8, 11–13, 15, 17, 19, 21, 22 and 25 take `--lang en`, which writes a parallel `figures/en/`
 tree with the territory, region and sector labels in English. Firm and person
 names are left in French throughout: a company's name is a legal name rather
 than a description, and an English rendering of it would be a string that
@@ -111,7 +115,7 @@ appears in no archive or authority file. The category vocabulary is a
 description and is translated, in `data/reference/labels_en.csv` — 183 rows,
 which `checks.py` asserts is complete against the data.
 
-`checks.py` validates the parsers and the built dataset (1,362 assertions).
+`checks.py` validates the parsers and the built dataset (2,226 assertions).
 
 ## 2b. What is *not* extracted
 
@@ -2297,6 +2301,93 @@ writing about it, which is not the same event as the firm closing, and the
 volume of coverage is itself uneven across the five periods — 11,502 drawable
 ties in 1914–1929 against 568 after 1962. Read the shares, which have a
 denominator inside each period, rather than the densities, which do not.
+
+## 5q. Why Paris recedes: composition, not centrality
+
+§5p left the trend unexplained. `src/decompose_paris.py` (stage 24) takes it
+apart, and `src/make_paris_figures.py` (stage 25) draws the two claims that
+survive as figures 59 and 60.
+
+A tie touches Paris when either firm is a Paris firm, so the share of ties
+touching Paris is a product of exactly two quantities: **how large a share of
+the active firms are Parisian**, and **how well connected a Paris firm is
+relative to everyone else**. Only one of them moves.
+
+| Period | Active firms | Paris firms | Paris share of ties | Mean degree, Paris | Mean degree, other | Ratio |
+|---|---|---|---|---|---|---|
+| pre-1914 | 864 | 36.0% | 63.5% | 8.84 | 7.04 | 1.25× |
+| 1914–1929 | 1,753 | 26.2% | 51.4% | 15.94 | 12.12 | 1.31× |
+| 1930–1944 | 1,463 | 19.1% | 40.7% | 14.48 | 10.45 | 1.39× |
+| 1945–1962 | 887 | 19.2% | 36.9% | 10.07 | 8.68 | 1.16× |
+| post-1962 | 265 | 12.1% | 26.2% | 5.06 | 4.18 | 1.21× |
+
+The ratio is computed inside each period's own subgraph, against the other
+**placed** firms, so a period with fewer drawable ties does not depress it. It
+never leaves [1.16, 1.39] and it has no trend. A Paris firm in the 1960s is as
+disproportionately connected as a Paris firm in the 1890s. **Paris did not stop
+being a hub; the record stopped being mostly Parisian.** That is figure 59: the
+falling shares on the left, the flat ratio on the right, and two panels rather
+than a second y-axis because a share and a ratio have different denominators.
+
+### Composition can move only through entry and exit — by construction
+
+§5n gives a firm **one anchor for all time**, because the sources give a head
+office and not a history of one. A firm that moved its seat from Marseille to
+Paris in 1925 sits at one of them in all five panels. So the geographic
+composition of a period can change only through firms entering and leaving the
+record, and the entry/exit table is the whole of the mechanism. That is a
+property of the dataset, not a finding, and it is stated here so no one reads
+the next table as evidence that firms did not relocate.
+
+| Transition | Standing stock | % Paris | Leavers | % Paris | Arrivals | % Paris |
+|---|---|---|---|---|---|---|
+| pre-1914 → 1914–1929 | 864 | 36.0% | 493 | 33.1% | 1,382 | **22.5%** |
+| 1914–1929 → 1930–1944 | 1,753 | 26.2% | 1,146 | 23.3% | 856 | **10.2%** |
+| 1930–1944 → 1945–1962 | 1,463 | 19.1% | 1,006 | 14.7% | 430 | **9.1%** |
+| 1945–1962 → post-1962 | 887 | 19.2% | 737 | 20.0% | 115 | **7.8%** |
+
+Leavers look like the stock they leave; in the first three transitions Paris
+firms are slightly *more* persistent than average. Arrivals are half as
+Parisian as the stock they join, every time. **Nothing pushes Paris out;
+something non-Parisian arrives.**
+
+### What "arriving" means changes, and that is the finding
+
+A firm enters a period when it has an interlock **dated** to it — a fact about
+when Mennevée wrote, not about when the firm was founded. Those come apart:
+
+| Transition | Arrivals with a founding year | Founded *in* that period |
+|---|---|---|
+| pre-1914 → 1914–1929 | 728 | **591 (81%)** |
+| 1914–1929 → 1930–1944 | 507 | 188 (37%) |
+| 1930–1944 → 1945–1962 | 174 | 33 (19%) |
+| 1945–1962 → post-1962 | 62 | **1 (2%)** |
+
+Early on the arrivals are genuinely new firms, and 420 of those 591 are outside
+Paris: colonial company formation outpacing metropolitan, which supports an
+economic reading of the trend. By the last two transitions the arrivals are old
+firms the compiler had not yet written about, and that reading does not hold
+for them.
+
+**The founding-year field is not evenly recorded, so the table is also cut by
+stratum.** It is present for 2,144 of 3,931 placed firms: 70.2% of metropolitan
+firms against 49.9% of empire firms, and firms carrying a year are twice as
+likely to be Parisian as firms without (25.3% against 12.4%). That bias pushes
+in the same direction as the observed trend, so it cannot be waved away — but
+it does not produce it, because the collapse holds inside each stratum
+separately: metropole 82 → 32 → 7 → 0%, empire 82 → 38 → 22 → 2%. Figure 60
+draws all three bars for exactly that reason.
+
+### What this does not settle
+
+Whether the later volumes turn to older colonial firms because Mennevée's
+interests moved, because his sources did, or because those firms became
+newsworthy, is not in the data. The claim is narrower and firmer than a story
+about decentralisation: **the geographic trend is compositional, the
+composition moves through entry rather than exit, and entry stops meaning
+*newly founded firm* after the 1930s.** A reader who wants the first reading —
+the colonial economy building its own boards — has it for the pre-1914 →
+1914–1929 transition and nowhere else.
 
 ## 6. Validity — read this before using the data
 

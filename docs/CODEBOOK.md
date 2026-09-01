@@ -1207,6 +1207,44 @@ board heading**. There is no large unread board seam. `checks.py` asserts both
 halves of that, so the claim fails loudly if a future parser change makes it
 untrue.
 
+## Why Paris recedes
+
+Stage 24, `src/decompose_paris.py`. Also a diagnostic: it adds no ties and
+changes no network file. It takes the trend §5p measured — the Paris share of
+drawable ties falling from 63.5% to 26.2% — and separates the two quantities
+that could produce it. See METHODOLOGY §5q.
+
+### `paris_decomposition.csv` (5 rows)
+
+One row per period, over the firms placed by stage 20 that carry at least one
+interlock dated to that period.
+
+| Variable | Description |
+|---|---|
+| `period` | `pre_1914` … `post_1962`, the same five bands as figure 2. |
+| `n_firms`, `n_paris_firms`, `share_paris_firms` | Placed firms active in the period, how many are anchored on Paris, and the ratio. Falls 36.0% → 12.1%. |
+| `n_edges`, `n_paris_edges`, `share_paris_edges` | Drawable ties inside the period, how many touch a Paris firm at either end, and the ratio. Falls 63.5% → 26.2%. |
+| `mean_degree_paris`, `mean_degree_other` | Mean degree inside the period's own subgraph, for Paris firms and for the other **placed** firms. Restricting the comparison to placed firms is what keeps a period with poor placement coverage from depressing the denominator. |
+| `degree_ratio` | The two means divided. **Never leaves [1.16, 1.39] and has no trend** — which is the finding: the falling share is composition, not a loss of centrality. |
+
+### `paris_entry_exit.csv` (12 rows)
+
+One row per period-to-period transition × stratum — four transitions × `all`,
+`metropole`, `empire`. A firm carries **one anchor for all time** (§5n), so
+composition can move only through entry and exit; this table is that movement.
+
+| Variable | Description |
+|---|---|
+| `from_period`, `to_period` | The transition. |
+| `stratum` | `all`, `metropole` (placed in metropolitan France), `empire` (placed in a colonial territory). The strata do not sum to `all`: firms placed abroad, and the 133 foreign-placed firms, sit outside both. `empire` holds no Paris firm by construction, so its `share_paris_*` columns are 0 — it is there for the founding-year columns. |
+| `n_base`, `share_paris_base` | The standing stock at `from_period` and its Paris share. |
+| `n_stay`, `share_paris_stay` | Firms active in both periods. |
+| `n_exit`, `share_paris_exit` | Firms that leave. **Leavers look like the stock they leave** — within 10 points at every transition. |
+| `n_enter`, `share_paris_enter` | Firms that arrive. **Arrivals are about half as Parisian as the stock they join, every time.** This column is the mechanism. |
+| `n_enter_dated` | Arrivals carrying a founding year in `year_start_listed` or `founded_date_observed`. The field is present for 2,144 of 3,931 placed firms and **not evenly**: 70.2% of metropolitan firms against 49.9% of empire ones, which is why every use of it is cut by stratum. |
+| `n_enter_founded_in_period`, `share_founded_in_period` | Of the dated arrivals, those founded inside the period they arrive in. **Collapses 81% → 2%**, and holds inside each stratum, so it is not the field's own bias. What "arriving" means changes from *newly founded firm* to *old firm the compiler is only now writing about*. |
+| `n_founded_in_period_outside_paris` | Of those, how many are not Parisian. 420 of the first transition's 591 — colonial company formation outpacing metropolitan, which is the one transition an economic reading of the trend actually fits. |
+
 ### `data/reference/world_land.geojson`
 
 The basemap: Natural Earth `ne_50m_land`, simplified and checked in by
