@@ -15,12 +15,15 @@ cannot:
   ranking hides.
 - **fig48, the core, one sector at a time.** The repository's own 170-firm core
   (figure 1's graph and figure 1's coordinates), four panels, one sector lit in
-  each. Finance holds 49 of the 170; mining, the sector closest to it in size
-  across the whole graph, holds 15.
+  each. Finance holds 48 of the 170; mining, the sector closest to it in size
+  across the whole graph, holds 16.
 - **fig49, what removal costs.** The same core at the same coordinates, three
   panels: whole, finance removed, and a size-matched random removal. The edges
   lost stay on the canvas as ghosts, because the point is how much edge mass
-  goes with the sector and a blank space cannot show that.
+  goes with the sector and a blank space cannot show that. Inside the core the
+  result inverts — a random draw of the same size costs slightly more — because
+  the core is the 170 firms of highest weighted degree, so a random draw inside
+  it is a draw of hubs. The z-score's null is drawn from the whole graph.
 - **fig50, a hub is not a broker.** Six ego networks: three finance firms with
   the highest betweenness, three firms with the highest `broker_gap`. A hub is a
   star whose neighbours already know each other; a broker is a bridge between

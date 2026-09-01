@@ -296,11 +296,11 @@ distance instead. See [METHODOLOGY §5m](docs/METHODOLOGY.md).
 
 | | |
 |---|---|
-| `fig51_steps_from_finance.svg` | The network as **shells outward from finance**, and from mining beside it, each shell an annulus whose area is proportional to the firms in it. **One step from finance reaches 70.4% of the graph; one step from mining, 57.5%.** |
+| `fig51_steps_from_finance.svg` | The network as **shells outward from finance**, and from mining beside it, each shell an annulus whose area is proportional to the firms in it. **One step from finance reaches 71.0% of the graph; one step from mining, 56.8%.** |
 | `fig52_core_by_centrality.svg` | The 170 core firms placed with **radius = betweenness rank**, so the centre of the picture is the centre of the network and position is measured rather than force-directed. **23 of the core's 40 most-between firms are finance firms**; finance's mean rank is 54.4 against mining's 90.8. |
 | `fig47_sector_graph.svg` | The sector graph itself — 16 groups, edge weight = interlocks between them. Finance–mining alone carries 2,892. |
 | `fig48_core_spotlight.svg` | The interlock core by sector, on the core's own layout. |
-| `fig49_removal_cost.svg` | The removal test drawn. Note the inversion it exposes: inside the core, removing finance takes 632 edges against 682 for 47 randomly drawn *core* firms — because the core is the top 170 by weighted degree, so a random draw inside it is a draw of hubs. The z-score in the CSV draws its null from the whole graph. |
+| `fig49_removal_cost.svg` | The removal test drawn. Note the inversion it exposes: inside the core, removing finance takes 652 of the core's 1,388 edges against 666 for the same number of randomly drawn *core* firms — because the core is the top 170 by weighted degree, so a random draw inside it is a draw of hubs. The z-score in the CSV draws its null from the whole graph. |
 | `fig50_hub_or_broker.svg` | Hub against broker, firm by firm. The highest-betweenness finance firms have gaps near zero: they are not brokers *instead* of hubs. |
 
 **`figures/world_map.html`** — the whole network on the world map. Figure 7
@@ -316,7 +316,7 @@ See [METHODOLOGY §5n](docs/METHODOLOGY.md).
 | | Basemap: Natural Earth `ne_50m_land`, simplified into [`data/reference/world_land.geojson`](data/reference/world_land.geojson) by `fetch_basemap.py` and checked in. Land only — a modern border over a corpus running from the 1870s to the 1970s would be an anachronism. Robinson projection, fixed window, shared with figure 7 so the two are comparable. |
 | `fig54_paris_or_not.svg` | The same coordinates twice: the ties that touch Paris, then the ties that do not. **Paris holds 19.5% of the placed firms and touches 45.2% of the drawable ties.** The first panel is a fan; the second is a lattice between colonies. |
 | `fig55_tie_geography.svg` | The drawable ties by their two endpoints, with the share that never leaves one place drawn inside the bar. Colony–colony leads at 47.2% — but 10,384 of those 20,546 ties stay inside one territory, so read it as a ceiling. The median tie that does travel spans **3,083 km**. |
-| `fig56_finance_on_the_map.svg` | Finance on the map: 9.5% of the placed firms, **27.3% of the drawable ties**, 41% of them in Paris. Second on Paris share behind the transcolonial-groups residual, and first among sectors above a hundred firms — what is distinctive about finance is its position in the graph, not its geography. |
+| `fig56_finance_on_the_map.svg` | Finance on the map: 9.9% of the placed firms, **28.0% of the drawable ties**, 41% of them in Paris. Second on Paris share behind the transcolonial-groups residual, and first among sectors above a hundred firms — what is distinctive about finance is its position in the graph, not its geography. |
 
 **`figures/period_maps.html`** — the same map, split on the five periods of
 figure 2, on one shared layout. **Paris's share of the drawable ties falls in

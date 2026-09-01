@@ -1971,9 +1971,9 @@ that position is never the output of a force algorithm:
 - **fig51** — multi-source BFS shells outward from all finance firms in one
   panel and all mining firms in the other, with each shell drawn as an annulus
   whose **area is proportional to the number of firms in it**. One step from
-  finance reaches **70.4%** of the graph; one step from mining reaches
-  **57.5%**. An earlier draft placed each shell on a ring *line*, which packed
-  3,684 nodes onto one pixel of radius and made the two panels look identical:
+  finance reaches **71.0%** of the graph; one step from mining reaches
+  **56.8%**. An earlier draft placed each shell on a ring *line*, which packed
+  3,709 nodes onto one pixel of radius and made the two panels look identical:
   the finding was real and the encoding hid it.
 - **fig52** — the 170 core firms with **radius = betweenness rank**, so the
   centre of the picture is the centre of the network. **23 of the core's 40
@@ -1984,8 +1984,9 @@ that position is never the output of a force algorithm:
   between them. Finance–mining alone carries 2,892.
 - **fig48** — the interlock core by sector, on the core's own layout.
 - **fig49** — the removal test drawn: observed loss against the size-matched
-  null. Note the inversion it makes visible — removing finance takes 632 core
-  edges against 682 for 47 randomly drawn *core* firms, because the core is by
+  null. Note the inversion it makes visible — removing finance takes 652 of
+  the core's 1,388 edges against 666 for the same number of randomly drawn
+  *core* firms, because the core is by
   construction the top 170 by weighted degree, so a random draw inside it is a
   draw of hubs. The null in the CSV is drawn from the whole graph, which is
   the comparison the z-score reports.
@@ -2071,10 +2072,10 @@ that rank as a ceiling.
 
 ### Finance on the map
 
-Figure 56 is where §5m and this section meet. The 372 placeable finance firms
-are 9.5% of the placed firms and touch **27.3% of the drawable ties**, and
+Figure 56 is where §5m and this section meet. The 388 placeable finance firms
+are 9.9% of the placed firms and touch **28.0% of the drawable ties**, and
 **41% of them are in Paris**. But finance is *second* on Paris share, behind
-the 57-firm transcolonial-groups residual at 53%, and first only among the
+the 73-firm transcolonial-groups residual at 44%, and first only among the
 sectors with more than a hundred placed firms. The caption computes that
 ranking rather than asserting it, because an earlier draft called finance the
 most geographically concentrated sector and mining is three points behind it.
