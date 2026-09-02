@@ -2280,6 +2280,171 @@ def check_coverage_audit() -> None:
        worst["territory"], "Indochine")
 
 
+def check_paris_decomposition() -> None:
+    """Stages 24-25: why the Paris share falls, and the two figures for it."""
+    import decompose_paris as D
+
+    print("Paris decomposition", file=sys.stderr)
+
+    # The founding-year reader, against strings written here. It has to take a
+    # year out of prose and refuse a page number or a share capital.
+    eq("  founded: a bare year", D.founded({"year_start_listed": "1902"}), 1902)
+    eq("  founded: a year inside prose",
+       D.founded({"founded_date_observed": "constituée le 4 mai 1911"}), 1911)
+    eq("  founded: the listed year wins over the observed one",
+       D.founded({"year_start_listed": "1902",
+                  "founded_date_observed": "1911"}), 1902)
+    eq("  founded: a capital figure is not a year",
+       D.founded({"year_start_listed": "750.000 francs"}), None)
+    eq("  founded: nothing recorded", D.founded({}), None)
+
+    path = os.path.join(PROC_DIR, "paris_decomposition.csv")
+    if not os.path.exists(path):
+        return
+    per = load("paris_decomposition.csv")
+    moves = load("paris_entry_exit.csv")
+
+    eq("  one row per period", len(per), 5)
+    eq("  the periods are in order", [r["period"] for r in per],
+       [n for n, _lo, _hi in __import__("build_network").PERIODS])
+    eq("  one row per transition per stratum", len(moves),
+       (len(per) - 1) * len(D.STRATA))
+
+    # The two shares the figure draws have to be the ratios they claim to be,
+    # or the falling line is a rounding artefact rather than a measurement.
+    for r in per:
+        eq(f"  {r['period']}: firm share is Paris firms over firms",
+           round(int(r["n_paris_firms"]) / int(r["n_firms"]), 3),
+           round(float(r["share_paris_firms"]), 3))
+        eq(f"  {r['period']}: tie share is Paris ties over ties",
+           round(int(r["n_paris_edges"]) / int(r["n_edges"]), 3),
+           round(float(r["share_paris_edges"]), 3))
+        # The two means are stored to 3dp, so the recomputed ratio can only be
+        # checked to the precision those roundings leave.
+        got = float(r["mean_degree_paris"]) / float(r["mean_degree_other"])
+        check(f"  {r['period']}: the degree ratio is the two means",
+              abs(got - float(r["degree_ratio"])) < 0.002,
+              f"{got:.4f} vs {r['degree_ratio']}")
+
+    # The finding, in the form the docs and the figure caption state it.
+    shares = [float(r["share_paris_firms"]) for r in per]
+    check("  the Paris firm share falls across the run",
+          shares[0] > shares[-1] and shares[0] > 0.3 and shares[-1] < 0.2,
+          f"{shares[0]:.3f} -> {shares[-1]:.3f}")
+    ties = [float(r["share_paris_edges"]) for r in per]
+    check("  the Paris tie share falls monotonically",
+          all(a > b for a, b in zip(ties, ties[1:])),
+          " > ".join(f"{v:.3f}" for v in ties))
+    ratios = [float(r["degree_ratio"]) for r in per]
+    check("  but the degree ratio does not fall with it",
+          max(ratios) - min(ratios) < 0.3 and min(ratios) > 1.0,
+          f"[{min(ratios):.2f}, {max(ratios):.2f}]")
+    check("  a Paris firm stays better connected than a placed non-Paris one",
+          all(v > 1.0 for v in ratios), str(ratios))
+
+    # Entry and exit have to account for the stock exactly, or "composition"
+    # is being asserted rather than measured.
+    for r in moves:
+        eq(f"  {r['from_period']}/{r['stratum']}: stay plus exit is the stock",
+           int(r["n_stay"]) + int(r["n_exit"]), int(r["n_base"]))
+    by_from = {}
+    for r in moves:
+        by_from.setdefault(r["from_period"], {})[r["stratum"]] = r
+    for frm, strata in by_from.items():
+        check(f"  {frm}: the two strata fit inside the whole",
+              int(strata["metropole"]["n_base"]) + int(strata["empire"]["n_base"])
+              <= int(strata["all"]["n_base"]),
+              str({k: v["n_base"] for k, v in strata.items()}))
+        eq(f"  {frm}: the empire stratum holds no Paris firm",
+           float(strata["empire"]["share_paris_base"]), 0.0)
+    stock = {r["period"]: int(r["n_firms"]) for r in per}
+    for r in (m for m in moves if m["stratum"] == "all"):
+        eq(f"  {r['from_period']}: the stock is that period's firm count",
+           int(r["n_base"]), stock[r["from_period"]])
+
+    # The mechanism: arrivals are less Parisian than the stock they join, and
+    # leavers are not. Exit cannot be what moves the composition.
+    alls = [r for r in moves if r["stratum"] == "all"]
+    bad = [r["from_period"] for r in alls
+           if float(r["share_paris_enter"]) >= float(r["share_paris_base"])]
+    check("  arrivals are less Parisian than the standing stock, every time",
+          not bad, str(bad))
+    bad = [r["from_period"] for r in alls
+           if abs(float(r["share_paris_exit"]) - float(r["share_paris_base"]))
+           > 0.1]
+    check("  leavers look like the stock they leave", not bad, str(bad))
+
+    # What an arrival *is* changes, and it changes inside both strata, so it
+    # is not the founding-year field being better kept in the metropole.
+    founded_all = [float(r["share_founded_in_period"]) for r in alls]
+    check("  the share of arrivals founded in-period collapses",
+          founded_all[0] > 0.7 and founded_all[-1] < 0.1,
+          f"{founded_all[0]:.2f} -> {founded_all[-1]:.2f}")
+    for st in ("metropole", "empire"):
+        vals = [float(r["share_founded_in_period"])
+                for r in moves if r["stratum"] == st]
+        check(f"  and inside the {st} stratum too",
+              vals[0] > 0.7 and vals[-1] < 0.1,
+              f"{vals[0]:.2f} -> {vals[-1]:.2f}")
+
+    for r in moves:
+        check(f"  {r['from_period']}/{r['stratum']}: in-period foundings are dated",
+              int(r["n_enter_founded_in_period"]) <= int(r["n_enter_dated"])
+              <= int(r["n_enter"]),
+              f"{r['n_enter_founded_in_period']}/{r['n_enter_dated']}"
+              f"/{r['n_enter']}")
+
+
+def check_paris_figures() -> None:
+    """Stage 25: the two figures, drawn from the stage-24 rows."""
+    if not os.path.exists(os.path.join(PROC_DIR, "paris_decomposition.csv")):
+        return
+    import make_paris_figures as M
+
+    print("Paris figures", file=sys.stderr)
+    d = M.gather()
+
+    for name, fn in M.FIGURES:
+        body, height, title, legend, caption, table = fn(d, "light", "en")
+        check(f"  {name}: draws something", len(body) > 2000, str(len(body)))
+        check(f"  {name}: fits its stated height", height > M.TOP + M.PLOT_H,
+              str(height))
+        check(f"  {name}: has a legend for its series", len(legend) >= 2,
+              str(len(legend)))
+        check(f"  {name}: captions itself", len(caption) > 200, str(len(caption)))
+        head, rows = table
+        bad = [r for r in rows if len(r) != len(head)]
+        check(f"  {name}: the table view is rectangular", not bad,
+              f"{len(head)} columns")
+        # Nothing may be drawn above the plot or below its baseline: both
+        # panels are drawn against the same TOP/PLOT_H frame, and a value
+        # scaled against the wrong ymax escapes it.
+        ys = [float(m) for m in re.findall(r'\bcy="([-\d.]+)"', body)]
+        ys += [float(m) for m in re.findall(r'<rect[^>]*\by="([-\d.]+)"', body)]
+        out = [y for y in ys if y < M.TOP - 1 or y > M.TOP + M.PLOT_H + 1]
+        check(f"  {name}: every mark is inside the plot frame", not out,
+              str(sorted(out)[:4]))
+
+    # The right panel of fig60 spends one hue on the bars precisely because
+    # the left panel has already spent three on stock, leavers and arrivals.
+    body, _h, _t, legend, _c, _tab = M.fig_entry_exit(d, "light", "en")
+    colours = [c for c, _lab in legend]
+    eq("  fig60: no colour carries two meanings", len(set(colours)),
+       len(colours))
+    fills = set(re.findall(r'<rect[^>]*fill="([^"]+)"', body))
+    eq("  fig60: the bars are one hue", len(fills), 1)
+
+    for lang in ("fr", "en"):
+        out_dir = os.path.join(ROOT, "figures")
+        if lang != "fr":
+            out_dir = os.path.join(out_dir, lang)
+        for name, _fn in M.FIGURES:
+            svg = os.path.join(out_dir, f"{name}.svg")
+            check(f"  {lang}/{name}.svg is on disk", os.path.exists(svg), svg)
+        page = os.path.join(out_dir, "paris.html")
+        check(f"  {lang}/paris.html is on disk", os.path.exists(page), page)
+
+
 def check_geocoding() -> None:
     """The city gazetteer and the address parser."""
     from geocode import fold, head_office_prefix, load_gazetteer, match_city
@@ -2863,6 +3028,8 @@ def main() -> None:
         check_map_placement()
         check_world_map_figures()
         check_period_maps()
+        check_paris_decomposition()
+        check_paris_figures()
         check_geocoding()
         check_figures()
 
